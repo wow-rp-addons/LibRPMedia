@@ -4,6 +4,9 @@
 -- word you can come up with that has the same overall meaning.
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
+--
+-- Client Version: --[[@ Write(version:GetClientVersion()) @]]
+-- Build Config: --[[@ Write(version:GetBuildConfig()) @]]
 local version = select(4, GetBuildInfo());
 if --[[@ WriteVersionConstraint("version") @]] then
     return;

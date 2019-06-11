@@ -146,6 +146,9 @@ Template.Render(io.stdout, templateFile, {
     maxInterfaceVersion = maxInterfaceVersion,
     productID = productID,
     region = region,
+
+    -- Include the versioning stuff so we can label the files.
+    version = version,
 });
 
 templateFile:close();

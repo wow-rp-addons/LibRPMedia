@@ -39,6 +39,11 @@ end
 function GetTemplateEnvironment(stream, data)
     local environment = {};
 
+    -- Writes a raw value to the output stream.
+    environment.Write = function(value)
+        stream:write(tostring(value));
+    end
+
     -- Properly formats any given value and writes it out.
     environment.WriteValue = function(value)
         if type(value) == "nil" then
