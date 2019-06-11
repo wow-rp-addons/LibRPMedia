@@ -8,7 +8,7 @@
 -- Client Version: 1.13.2.30682
 -- Build Config: 03bb4bfaa5800aab5602135c52b2638b
 local version = select(4, GetBuildInfo());
-if version < 13002 or version >= 20000 then
+if version < 11302 or version >= 20000 then
     return;
 end
 
