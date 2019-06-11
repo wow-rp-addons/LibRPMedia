@@ -7,4 +7,10 @@
 
 Libs\LibStub\LibStub.lua
 
-LibRPMedia-1.0.xml
+LibRPMedia-1.0.lua
+#@non-retail@
+LibRPMedia-ClassicMusic-1.0.lua
+#@end-non-retail@
+#@retail@
+LibRPMedia-RetailMusic-1.0.lua
+#@end-non-retail@

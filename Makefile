@@ -26,7 +26,7 @@ Retail_EXPORTER_OPTIONS ?=
 # Path to a Lua interpreter.
 LUA ?= lua
 
-# Path to the packager script, and a URL to fetch it from.
+# Path and URL to the packager script.
 PACKAGER_SCRIPT := .release/release.sh
 PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh
 
@@ -64,6 +64,7 @@ release: build $(PACKAGER_SCRIPT)
 	@$(PACKAGER_SCRIPT) -d -l
 	@$(PACKAGER_SCRIPT) -d -l -g 1.13.2
 
-$(PACKAGER_SCRIPT):
-	@echo Downloading packager script...
-	@curl -s $(PACKAGER_SCRIPT_URL) > $@
+$(PACKAGER_SCRIPT): .FORCE
+	@echo Fetching packager script...
+	@mkdir -p $(@D)
+	@curl -s $(PACKAGER_SCRIPT_URL) > $(@)
