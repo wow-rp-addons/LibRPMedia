@@ -9,7 +9,7 @@ REGION ?= us
 
 # CDN product IDs for version querying. Prefix these with a product name.
 Classic_PRODUCT_ID ?= wow_classic_beta
-Retail_PRODUCT_ID ?= wow
+Retail_PRODUCT_ID ?= wowt
 
 # TOC versions for file generation. Prefix these with a product name.
 Classic_INTERFACE_VERSION ?= 13002

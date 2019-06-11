@@ -4,6 +4,9 @@
 -- word you can come up with that has the same overall meaning.
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
+--
+-- Client Version: 1.13.2.30682
+-- Build Config: 03bb4bfaa5800aab5602135c52b2638b
 local version = select(4, GetBuildInfo());
 if version < 13002 or version >= 20000 then
     return;
