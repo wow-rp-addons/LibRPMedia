@@ -1,0 +1,19 @@
+---
+package-as: LibRPMedia-1.0
+enable-nolib-creation: no
+
+license-output: LICENSE
+manual-changelog:
+    filename: CHANGELOG.md
+    markup-type: markdown
+
+externals:
+    Libs/LibStub:
+        url: svn://svn.wowace.com/wow/libstub/mainline/trunk
+        tag: latest
+
+ignore:
+    - Config
+    - Exporter
+    - Templates
+    - Makefile

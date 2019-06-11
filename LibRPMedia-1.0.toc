@@ -1,0 +1,10 @@
+## Interface: 80200
+## Title: LibRPMedia-1.0
+## Notes: LibRPMedia provides a common database of in-game resources for use by RP addons.
+## Author: Daniel "Meorawr" Yates <me@meorawr.io>
+## Version: @project-version@
+## LoadOnDemand: 1
+
+Libs\LibStub\LibStub.lua
+
+LibRPMedia-1.0.xml
