@@ -49,10 +49,10 @@ LibRPMedia-$(1)$(2)-1.0.lua: .FORCE
 		$($(1)_EXPORTER_OPTIONS) > $$(@)
 endef
 
-.PHONY: build classic retail release
+.PHONY: build release $(PRODUCTS)
 .FORCE:
 
-build: classic retail
+build: $(PRODUCTS)
 
 $(foreach product,$(PRODUCTS),\
 	$(foreach database,$(DATABASES),\
