@@ -12,7 +12,7 @@ Classic_PRODUCT_ID ?= wow_classic_beta
 Retail_PRODUCT_ID ?= wowt
 
 # TOC versions for file generation. Prefix these with a product name.
-Classic_INTERFACE_VERSION ?= 13002
+Classic_INTERFACE_VERSION ?= 11302
 Retail_INTERFACE_VERSION ?= 80200
 
 # Additional options to pass to the exporter script, prefixed by their
