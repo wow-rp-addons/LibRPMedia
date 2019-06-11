@@ -1,4 +1,9 @@
+#@non-retail@
+## Interface: 11302
+#@end-non-retail@
+#@retail@
 ## Interface: 80200
+#@end-non-retail@
 ## Title: LibRPMedia-1.0
 ## Notes: LibRPMedia provides a common database of in-game resources for use by RP addons.
 ## Author: Daniel "Meorawr" Yates <me@meorawr.io>
