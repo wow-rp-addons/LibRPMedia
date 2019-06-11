@@ -80,6 +80,17 @@ for index, fileID in LibRPMedia:IterMusicFiles() do
 end
 ```
 
+## Building
+
+The build script requires a Lua interpreter (ideally 5.1) as well as the following Lua libraries:
+
+ * [Penlight](https://github.com/stevedonovan/Penlight)
+ * [LuaSocket](http://w3.impa.br/~diego/software/luasocket/)
+
+The following binaries must be present on your system:
+
+ * [curl](https://curl.haxx.se/)
+
 ## License
 
 The library is released under the terms of the [Unlicense](https://unlicense.org/), a copy of which can be found in the `LICENSE` document at the root of the repository.
