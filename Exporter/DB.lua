@@ -1,6 +1,5 @@
 #!/usr/bin/env lua
 local pl = {
-    data = require("pl.data"),
     dir = require("pl.dir"),
     path = require("pl.path"),
 };
