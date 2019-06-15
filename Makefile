@@ -13,7 +13,7 @@ Retail_PRODUCT_ID ?= wowt
 
 # TOC versions for file generation. Prefix these with a product name.
 Classic_INTERFACE_VERSION ?= 11302
-Retail_INTERFACE_VERSION ?= 80200
+Retail_INTERFACE_VERSION ?= 80100
 
 # Additional options to pass to the exporter script, prefixed by their
 # applicable product name (or no prefix to apply to both).
