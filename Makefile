@@ -59,9 +59,9 @@ $(foreach product,$(PRODUCTS),\
 	)\
 )
 
-release: build $(PACKAGER_SCRIPT)
-	@$(PACKAGER_SCRIPT) -d -l
+release: $(PACKAGER_SCRIPT)
 	@$(PACKAGER_SCRIPT) -d -l -g 1.13.2
+	@$(PACKAGER_SCRIPT) -d -l
 
 $(PACKAGER_SCRIPT): .FORCE
 	@echo Fetching packager script...
