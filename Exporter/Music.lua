@@ -68,13 +68,14 @@ function Music.WriteDatabase(file, db)
     -- Start writing out the data tables.
     file:write("data={");
     file:write("file=", Template.Serialize(db.data.file), ",");
-    file:write("name=", Template.Serialize(db.data.name));
+    file:write("name=", Template.Serialize(db.data.name), ",");
+    file:write("time=", Template.Serialize(db.data.time));
     file:write("},");
 
     -- Write out the index data.
     file:write("search=LibRPMedia:CreateHydratedTable({");
     file:write("name=", Template.SerializeGenerator(db.search.name));
-    file:write("}),");
+    file:write("})");
 
     -- Close off the database table.
     file:write("})");
