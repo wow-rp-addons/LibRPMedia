@@ -1,9 +1,4 @@
-#@non-retail@
-## Interface: 11302
-#@end-non-retail@
-#@retail@
 ## Interface: 80200
-#@end-non-retail@
 ## Title: LibRPMedia-1.0
 ## Notes: LibRPMedia provides a common database of in-game resources for use by RP addons.
 ## Author: Daniel "Meorawr" Yates <me@meorawr.io>
@@ -18,10 +13,4 @@
 
 Libs\LibStub\LibStub.lua
 
-LibRPMedia-1.0.lua
-#@non-retail@
-LibRPMedia-ClassicMusic-1.0.lua
-#@end-non-retail@
-#@retail@
-LibRPMedia-RetailMusic-1.0.lua
-#@end-non-retail@
+LibRPMedia-1.0.xml
