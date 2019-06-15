@@ -60,7 +60,7 @@ $(foreach product,$(PRODUCTS),\
 )
 
 release: $(PACKAGER_SCRIPT)
-	@$(PACKAGER_SCRIPT) -l
+	@bash $(PACKAGER_SCRIPT) -l
 
 $(PACKAGER_SCRIPT): .FORCE
 	@echo Fetching packager script...
