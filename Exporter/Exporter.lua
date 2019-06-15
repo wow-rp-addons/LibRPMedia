@@ -19,7 +19,6 @@ Options:
     -m, --max-interface-version Maximum supported interface (TOC) version.
     -p, --product-id            Product ID that we're building data for.
     -r, --region                Region to query patch information from.
-    -t, --template              Template file to render.
 ]], arg[0]);
 
 --- Utility functions
@@ -51,7 +50,6 @@ local interfaceVersion = nil;
 local maxInterfaceVersion = nil;
 local productID = nil;
 local region = CDN.DEFAULT_REGION;
-local template = nil;
 
 -- Parse the command line options.
 do
@@ -76,9 +74,6 @@ do
             argi = argi + 1;
         elseif arg == "-r" or arg == "--region" then
             region = argv[argi];
-            argi = argi + 1;
-        elseif arg == "-t" or arg == "--template" then
-            template = argv[argi];
             argi = argi + 1;
         else
             print(USAGE_TEXT);
@@ -117,38 +112,40 @@ elseif not CDN.IsValidRegion(region) then
     return os.exit(1);
 end
 
-if not template then
-    print(USAGE_TEXT);
-    print("No template file specified.");
-    return os.exit(1);
-end
-
 -- Once the options are sorted, query the CDN for product versioning.
 local version = CDN.GetProductVersion(productID, region);
 
 -- Export the requested database.
 local databaseContent;
+local databaseWriter;
 if database == "music" then
     databaseContent = Music.GetDatabase(version);
+    databaseWriter = Music.WriteDatabase;
 else
     print(USAGE_TEXT);
     printf("Selected database is not valid: %s", database);
     return os.exit(1);
 end
 
--- And then finally render the template.
-local templateFile = assert(io.open(template, "r"));
-Template.Render(io.stdout, templateFile, {
-    [database] = databaseContent,
+-- Work out an expression for the version requirement test.
+local versionRequirement = string.format("version < %d", interfaceVersion);
+if maxInterfaceVersion then
+    local bound = string.format(" or version >= %d", maxInterfaceVersion);
+    versionRequirement = versionRequirement .. bound;
+end
 
-    -- Include some of the CLI parameters too.
+-- Build a parameter table for the template.
+local templateParameters = {
+    database = database,
+    version = version,
     interfaceVersion = interfaceVersion,
     maxInterfaceVersion = maxInterfaceVersion,
+    versionRequirement = versionRequirement,
     productID = productID,
     region = region,
+};
 
-    -- Include the versioning stuff so we can label the files.
-    version = version,
-});
-
-templateFile:close();
+-- Render it all!
+Template.WriteHeader(io.stdout, templateParameters);
+databaseWriter(io.stdout, databaseContent);
+Template.WriteFooter(io.stdout, templateParameters);
