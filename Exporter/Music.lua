@@ -181,7 +181,7 @@ function GetFileNameData(fileIDs, fileHash)
     return names;
 end
 
---- Creates a search  table for the given set of files.
+--- Creates a search table for the given set of files.
 function GetFileNameSearchIndex(fileIDs, fileHash)
     -- The search table will be an ordered array of all file names, either
     -- sound kit, basename, or filename based.
