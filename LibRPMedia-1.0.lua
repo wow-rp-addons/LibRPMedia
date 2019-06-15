@@ -14,6 +14,9 @@ local min = math.min;
 local strbyte = string.byte;
 local strsub = string.sub;
 local type = type;
+local xpcall = xpcall;
+
+local CallErrorHandler = CallErrorHandler;
 
 -- Local declarations.
 local FindExactInRadixTree;
@@ -107,6 +110,71 @@ end
 function LibRPMedia:GetNumDatabaseEntries(databaseName)
     local database = self:GetDatabase(databaseName);
     return database.size;
+end
+
+do
+    -- Use a restricted environment for the lazy loading to prevent any
+    -- weird ideas taking form in the data generation layer.
+    local baseenv = { __newindex = function() end, __metatable = false };
+    local nullenv = setmetatable({}, baseenv);
+
+    local function loadstring(code)
+        local chunk, err = _G.loadstring(code);
+        if err then
+            return nil, err;
+        end
+
+        return setfenv(chunk, nullenv);
+    end
+
+    local loadenv = setmetatable({ loadstring = loadstring }, baseenv);
+
+    --- Creates a hydrated table from the given contents.
+    function LibRPMedia:CreateHydratedTable(table)
+        -- Map of functions that generate data on first access.
+        local generators = {};
+
+        -- Move any data producing functions from the table to the generators.
+        for key, value in pairs(table) do
+            if type(value) == "function" then
+                generators[key] = setfenv(value, loadenv);
+                table[key] = nil;
+            end
+        end
+
+        -- Apply a metatable that will catch hits to the fields we just nil'd.
+        local metatable = {};
+        metatable.__index = function(_, key)
+            local generator = generators[key];
+            if not generator then
+                return nil;
+            end
+
+            -- Drop the reference to the generator to let it be GC'd.
+            generators[key] = nil;
+
+            -- Generators are functions that wrap a function generated
+            -- dynamically via loadstring. That might sound insane but
+            -- there's a good reason behind it in terms of memory usage.
+            --
+            -- Basically, by lazily generating the closure that contains
+            -- the data we don't pay the cost of having all the constants
+            -- for the data loaded all the time.
+            local ok, data;
+            repeat
+                ok, data = xpcall(data or generator, CallErrorHandler);
+                if not ok then
+                    return nil;
+                end
+            until type(data) ~= "function";
+
+            -- Once we're here, we're done.
+            rawset(table, key, data);
+            return data;
+        end
+
+        return setmetatable(table, metatable);
+    end
 end
 
 --- Internal utility functions.
