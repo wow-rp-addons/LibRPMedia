@@ -1,0 +1,27 @@
+language: minimal
+
+addons:
+  apt:
+    packages:
+      - luarocks
+
+install: luarocks install --local luacheck
+
+jobs:
+  include:
+    - stage: Luacheck
+      script: /home/travis/.luarocks/bin/luacheck . -q
+
+    - stage: Package Release
+      script: echo "Packaging release..."
+      deploy:
+        provider: script
+        script: make release
+        on:
+          branch: master
+          tags: true
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
