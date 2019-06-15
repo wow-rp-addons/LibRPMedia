@@ -1,99 +1,146 @@
 #!/usr/bin/env lua
 
 -- Local declarations.
-local GetTemplateEnvironment;
+local HEADER_TEMPLATE;
 
 --- Template module.
 local Template = {};
 
---- Renders a given source template string with the supplied data, writing
---  the result to the given stream.
-function Template.Render(stream, source, data)
-    local environment = GetTemplateEnvironment(stream, data);
-
-    -- Perform replacements and render the document progressively.
-    for line in source:lines() do
-        -- We only allow single-line expression replacements for now.
-        local first, code, last = string.match(line, "^()%-%-@(.+)()$");
-        if not code or code == "" then
-            first, code, last = string.match(line, "()%-%-%[%[@(.-)@%]%]()");
-        end
-
-        stream:write(string.sub(line, 1, (first or 1) - 1));
-
-        if code and code ~= "" then
-            -- Run the code inside the environment.
-            local chunk = assert(loadstring(code));
-            setfenv(chunk, environment);
-            assert(pcall(chunk));
-        end
-
-        -- The line ending below gets normalized to your platform.
-        stream:write(string.sub(line, last or 0), "\n");
+--- Deserializes the given value, evaluating it in an empty sandbox and
+--  returning its result.
+function Template.Deserialize(value)
+    if type(value) == "string" then
+        value = setfenv(assert(loadstring("return " .. value)), {})();
     end
+
+    return value;
+end
+
+--- Serializes a given value, encoding it as something native to Lua. If the
+--  input is a string, it'll be quoted, if it's nil, it becomes a nil
+--  keyword, etc.
+function Template.Serialize(value)
+    if type(value) == "nil" then
+        return "nil";
+    elseif type(value) == "number" then
+        return tostring(value);
+    elseif type(value) == "string" then
+        return string.format("%q", value);
+    elseif type(value) == "table" then
+        local buffer = {};
+        table.insert(buffer, "{");
+
+        for i = 1, #value do
+            table.insert(buffer, Template.Serialize(value[i]));
+
+            if i < #value then
+                table.insert(buffer, ",");
+            end
+        end
+
+        for key, subvalue in pairs(value) do
+            if type(key) ~= "number" or key <= 0 or key > #value then
+                if string.find(tostring(key), "^%a[%w_]*$") then
+                    table.insert(buffer, key);
+                    table.insert(buffer, "=");
+                else
+                    table.insert(buffer, "[");
+                    table.insert(buffer, Template.Serialize(key));
+                    table.insert(buffer, "]=");
+                end
+
+                table.insert(buffer, Template.Serialize(subvalue));
+
+                if next(value, key) then
+                    table.insert(buffer, ",");
+                end
+            end
+        end
+
+        table.insert(buffer, "}");
+        return table.concat(buffer);
+    else
+        error(string.format("unsupported value type: %s", type(value)));
+    end
+end
+
+--- Wraps the input value in a function that will return a loadstring-based
+--  generator when called.
+--
+--  This provides a method in-game that lets data be lazily loaded at minimal
+--  cost to memory for complex structures.
+function Template.SerializeGenerator(value)
+    -- If the input isn't a string, we'll serialize it.
+    if type(value) ~= "string" then
+        value = Template.Serialize(value);
+    end
+
+    -- So long as a [[ or ]] is present in the input value, we'll add
+    -- another escape (=) until we can finally wrap the value in a string
+    -- expression.
+    local escapes = 0;
+    repeat
+        local found = false;
+        local pattern = "([%[%]])" .. string.rep("=", escapes) .. "([%[%]])";
+        for a, b in string.gmatch(value, pattern) do
+            if a == b then
+                escapes = escapes + 1;
+                found = true;
+                break;
+            end
+        end
+    until not found
+
+    -- Wrap the input value in a function that'll load it as a string.
+    local head = string.format("[%s[", string.rep("=", escapes));
+    local tail = string.format("]%s]", string.rep("=", escapes));
+    local expr = "function() return loadstring(%sreturn %s%s); end";
+    return string.format(expr, head, value, tail);
+end
+
+--- Writes the standard header out for a file.
+function Template.WriteHeader(file, params)
+    -- Write out our header as a format string. Replacement order is
+    -- unfortunately rather important :(
+    file:write(string.format(HEADER_TEMPLATE, unpack({
+        params.version:GetClientVersion(),
+        params.version:GetBuildConfig(),
+        params.versionRequirement,
+        params.database,
+        params.database,
+    })));
+end
+
+--- Writes the standard footer out for a file.
+function Template.WriteFooter(file, params)
+    file:write(");");
 end
 
 --- Internal API
 --  The below declarations are for internal use only.
 
-function GetTemplateEnvironment(stream, data)
-    local environment = {};
-
-    -- Writes a raw value to the output stream.
-    environment.Write = function(value)
-        stream:write(tostring(value));
-    end
-
-    -- Properly formats any given value and writes it out.
-    environment.WriteValue = function(value)
-        if type(value) == "nil" then
-            stream:write("nil");
-        elseif type(value) == "number" then
-            stream:write(tostring(value));
-        elseif type(value) == "string" then
-            stream:write(string.format("%q", value));
-        elseif type(value) == "table" then
-            stream:write("{");
-
-            for i = 1, #value do
-                environment.WriteValue(value[i]);
-
-                if i < #value then
-                    stream:write(",");
-                end
-            end
-
-            for key, subvalue in pairs(value) do
-                if type(key) ~= "number" or key <= 0 or key > #value then
-                    stream:write("[");
-                    environment.WriteValue(key);
-                    stream:write("]=");
-                    environment.WriteValue(subvalue);
-
-                    if next(value, key) then
-                        stream:write(",");
-                    end
-                end
-            end
-
-            stream:write("}");
-        else
-            error(string.format("unsupported value type: %s", type(value)));
-        end
-    end
-
-    -- Writes a version check to reject untargetted interface versions.
-    environment.WriteVersionConstraint = function(var)
-        stream:write(tostring(var), " < ", data.interfaceVersion);
-        if not data.maxInterfaceVersion then
-            return;
-        end
-
-        stream:write(" or ", tostring(var), " >= ", data.maxInterfaceVersion);
-    end
-
-    return setmetatable(environment, { __index = data });
+--- Header format string used by RenderHeader.
+HEADER_TEMPLATE = [[
+-- THIS FILE IS AUTOMATICALLY GENERATED.
+--
+-- Changes to this file will be discarded, ignored, and every other negative
+-- word you can come up with that has the same overall meaning.
+--
+-- This file is licensed under the terms expressed in the LICENSE file.
+--
+-- Client Version: %s
+-- Build Config: %s
+local version = select(4, GetBuildInfo());
+if %s then
+    return;
 end
+
+local LibRPMedia = LibStub and LibStub:GetLibrary("LibRPMedia-1.0", true);
+if not LibRPMedia or LibRPMedia:IsDatabaseRegistered(%q) then
+    return;
+end
+
+LibRPMedia:RegisterDatabase(%q, ]];
 
 -- Module exports.
 return Template;

@@ -44,7 +44,6 @@ LibRPMedia-$(1)$(2)-1.0.lua: .FORCE
 		--interface-version $($(1)_INTERFACE_VERSION) \
 		--product-id $($(1)_PRODUCT_ID) \
 		--region $(REGION) \
-		--template Templates/$(2).lua \
 		$(EXPORTER_OPTIONS) \
 		$($(1)_EXPORTER_OPTIONS) > $$(@)
 endef

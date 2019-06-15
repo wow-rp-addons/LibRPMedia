@@ -15,5 +15,4 @@ externals:
 ignore:
     - Config
     - Exporter
-    - Templates
     - Makefile
