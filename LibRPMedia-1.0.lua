@@ -10,20 +10,34 @@ if not LibRPMedia then
 end
 
 -- Upvalues.
+local error = error;
+local floor = math.floor;
 local min = math.min;
+local pairs = pairs;
+local rawset = rawset;
+local setfenv = setfenv;
+local setmetatable = setmetatable;
 local strbyte = string.byte;
-local strsub = string.sub;
+local strformat = string.format;
+local strgsub = string.gsub;
+local string = string;
+local strlower = string.lower;
 local type = type;
 local xpcall = xpcall;
 
 local CallErrorHandler = CallErrorHandler;
 
 -- Local declarations.
-local FindExactInRadixTree;
+local BinarySearch;
+local BinarySearchPrefix;
 local GetCommonPrefixLength;
+local IterMatchingMusicFiles;
+local IterMusicFiles;
+local NormalizeMusicName;
 
 -- Error constants.
 local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found.";
+local ERR_DATABASE_UNSIZED = "LibRPMedia: Database %q has no size.";
 
 --- Music Database API
 
@@ -43,13 +57,11 @@ end
 --  file path.
 --
 --  If no match is found, nil is returned.
-function LibRPMedia:GetMusicFile(musicName)
-    -- Normalize the name a bit on the way in.
-    musicName = string.lower(string.gsub(musicName, "\\", "/"));
+function LibRPMedia:GetMusicFileByName(musicName)
+    musicName = NormalizeMusicName(musicName);
 
-    local music = self:GetDatabase("music");
-    local musicIndex = FindExactInRadixTree(music.tree, musicName);
-    return music.data[musicIndex];
+    local musicIndex = self:GetMusicIndexByName(musicName);
+    return self:GetMusicFileByIndex(musicIndex);
 end
 
 --- Returns the file ID for a music file based on its index, in the range
@@ -58,16 +70,70 @@ end
 --  If no file is found, nil is returned.
 function LibRPMedia:GetMusicFileByIndex(musicIndex)
     local music = self:GetDatabase("music");
-    return music.data[musicIndex];
+    return music.data.file[musicIndex];
+end
+
+--- Returns the index of a music file from its file ID. If the given file
+--  ID is not present in the database, nil is returned.
+function LibRPMedia:GetMusicIndexByFile(musicFile)
+    local music = self:GetDatabase("music");
+    return BinarySearch(music.data.file, musicFile);
+end
+
+--- Returns the index of a music file from its name. If no matching name
+--  is found in the database, nil is returned.
+function LibRPMedia:GetMusicIndexByName(musicName)
+    musicName = NormalizeMusicName(musicName);
+
+    local music = self:GetDatabase("music");
+    local names = music.search.name;
+    return names.values[BinarySearch(names.keys, musicName)];
+end
+
+--- Returns a string name for a music file based on its index, in the range
+--  1 through GetNumMusicFiles.
+--
+--  While a music file may have multiple names in the form of sound kit
+--  names or file paths, this function will return only one predefined name.
+--
+--  If no name is found, nil is returned.
+function LibRPMedia:GetMusicNameByIndex(musicIndex)
+    local music = self:GetDatabase("music");
+    return music.data.name[musicIndex];
+end
+
+--- Returns a string name for a music file based on its file ID.
+--
+--  If no name is found, nil is returned.
+function LibRPMedia:GetMusicNameByFile(musicFile)
+    local musicIndex = self:GetMusicIndexByFile(musicFile);
+    return self:GetMusicNameByIndex(musicIndex);
+end
+
+--- Returns an iterator for accessing all music files in the database
+--  matching the given name.
+--
+--  The iterator will return triplet of file index, file ID, and file name.
+--
+--  The order of which files are returned by this iterator is not guaranteed.
+function LibRPMedia:FindMusicFiles(musicName)
+    -- If the search space is empty then everything matches; the iterator
+    -- from FindAllMusic files is *considerably* more efficient.
+    if not musicName or musicName == "" then
+        return self:FindAllMusicFiles();
+    end
+
+    local music = self:GetDatabase("music");
+    return IterMatchingMusicFiles(music, NormalizeMusicName(musicName));
 end
 
 --- Returns an iterator for accessing all music files in the database.
---  The iterator will return pair of file index, and file ID.
+--  The iterator will return triplet of file index, file ID, and file name.
 --
---  The order of files returned by the iterator is not specified.
-function LibRPMedia:IterMusicFiles()
+--  The order of which files are returned by this iterator is not guaranteed.
+function LibRPMedia:FindAllMusicFiles()
     local music = self:GetDatabase("music");
-    return ipairs(music.data);
+    return IterMusicFiles(music);
 end
 
 --- Internal API
@@ -80,7 +146,10 @@ LibRPMedia.schema = {};
 --- Registers a named database.
 function LibRPMedia:RegisterDatabase(databaseName, database)
     -- Databases must have at minimum a size field.
-    assert(database.size, "database has no size field");
+    if not database.size then
+        error(strformat(ERR_DATABASE_UNSIZED, databaseName));
+    end
+
     self.schema[databaseName] = database;
 end
 
@@ -99,7 +168,7 @@ end
 --  This function will error if the database is not present.
 function LibRPMedia:GetDatabase(databaseName)
     if not self.schema[databaseName] then
-        error(string.format(ERR_DATABASE_NOT_FOUND, databaseName), 2);
+        error(strformat(ERR_DATABASE_NOT_FOUND, databaseName), 2);
     end
 
     return self.schema[databaseName];
@@ -180,38 +249,36 @@ end
 --- Internal utility functions.
 --  Some of these are copy/pasted from the exporter, so need keeping in sync.
 
---- Returns the value associated with a key in the given radix tree, or nil
---  if no match is found.
-function FindExactInRadixTree(tree, key)
-    local keyLength = #key;
-    local nextNode = tree;
-    local node;
+--- Performs a binary search for a value inside a given value, optionally
+--  limited to the ranges i through j (defaulting to 1, #table).
+--
+--  This function will always return the index that is the closest to the
+--  given value if an exact match cannot be found.
+function BinarySearchPrefix(table, value, i, j)
+    local l = i or 1;
+    local r = j or #table;
 
-    repeat
-        node, nextNode = nextNode, nil;
-
-        for edgeIndex = 1, #node, 2 do
-            local edgeLabel = node[edgeIndex];
-            local sharedLength = GetCommonPrefixLength(key, edgeLabel);
-
-            if sharedLength == #edgeLabel then
-                -- Exact match for this label.
-                local edgeValue = node[edgeIndex + 1];
-                if type(edgeValue) == "table" then
-                    -- Exact match on label, points to a child. Recurse.
-                    nextNode = edgeValue;
-                    key = strsub(key, sharedLength + 1);
-                    keyLength = keyLength - sharedLength;
-                    break;
-                elseif sharedLength == keyLength then
-                    -- Exact match on key and label, points to a value.
-                    return edgeValue;
-                end
-            end
+    while l <= r do
+        local m = floor((l + r) / 2);
+        if table[m] < value then
+            l = m + 1;
+        elseif table[m] > value then
+            r = m - 1;
+        else
+            return m;
         end
-    until not nextNode
+    end
 
-    return nil;
+    return l;
+end
+
+--- Performs a binary search for a value inside a given table, optionally
+--  limited to the ranges i through j (defaulting to 1, #table).
+--
+--  If a match is found, the index of the value is returned. Otherwise, nil.
+function BinarySearch(table, value, i, j)
+    local index = BinarySearchPrefix(table, value, i, j);
+    return table[index] == value and index or nil;
 end
 
 --- Returns the length of the longest common prefix between two strings.
@@ -250,4 +317,72 @@ function GetCommonPrefixLength(a, b)
     end
 
     return offset - 1;
+end
+
+do
+    local function iterator(music, musicIndex)
+        musicIndex = musicIndex + 1;
+        if musicIndex > music.size then
+            return nil;
+        end
+
+        local musicFile = music.data.file[musicIndex];
+        local musicName = music.data.name[musicIndex];
+        return musicIndex, musicFile, musicName;
+    end
+
+    --- Returns an iterator that returns all music files in the database
+    --  in index-order.
+    function IterMusicFiles(music)
+        return iterator, music, 0;
+    end
+end
+
+--- Returns an iterator that returns all matching music files in the database
+--  that share a common prefix with the given search string.
+function IterMatchingMusicFiles(music, search)
+    -- Map of file indices that we've already returned.
+    local seen = {};
+
+    -- Upvalue the database and search index to minimize lookups a bit.
+    local data = music.data;
+    local names = music.search.name;
+
+    -- Begin iteration from the closest matching prefix in the key array.
+    local nameIndex = BinarySearchPrefix(names.keys, search);
+
+    local function iterator()
+        -- Loop so long as we don't run out of keys.
+        while nameIndex < #names.keys do
+            -- If the common prefix between our search string and the current
+            -- file name isn't the same as the search string, then we should
+            -- stop since we're past the "like" range of names.
+            local name = names.keys[nameIndex];
+            local shared = GetCommonPrefixLength(search, name);
+            if shared ~= #search then
+                return nil;
+            end
+
+            -- Convert the search index into a music index.
+            local musicIndex = names.values[nameIndex];
+            nameIndex = nameIndex + 1;
+
+            -- Yield the music file if we haven't reported it already.
+            if not seen[musicIndex] then
+                seen[musicIndex] = true;
+
+                local musicFile = data.file[musicIndex];
+                local musicName = data.name[musicIndex];
+                return musicIndex, musicFile, musicName;
+            end
+        end
+    end
+
+    return iterator;
+end
+
+--- Normalizes the given music name, turning it into a lowercase string
+--  with all backslashes (\) into forward slashes (/).
+function NormalizeMusicName(musicName)
+    return strlower(strgsub(musicName, "\\", "/"));
 end
