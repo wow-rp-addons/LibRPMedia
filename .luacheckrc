@@ -12,5 +12,15 @@ max_comment_line_length = 78;
 
 -- Add exceptions for external libraries.
 std = "lua51+libstub+wow"
-stds.libstub = { read_globals = {"LibStub"} };
-stds.wow = { read_globals = {"CreateFromMixins"} };
+
+stds.libstub = {
+    read_globals = {
+        "LibStub",
+    },
+};
+
+stds.wow = {
+    read_globals = {
+        "CallErrorHandler",
+    },
+};

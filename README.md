@@ -28,6 +28,7 @@ Returns `true` if the music database has been loaded. If this returns `false`, m
 
 ```lua
 print("Is music data loaded?", LibRPMedia:IsMusicDataLoaded());
+-- Example output: "Is music data loaded? true"
 ```
 
 #### `LibRPMedia:GetNumMusicFiles()`
@@ -38,9 +39,10 @@ Returns the number of music files present within the database.
 
 ```lua
 print("Number of music files:", LibRPMedia:GetNumMusicFiles());
+-- Example output: "Number of music files: 192"
 ```
 
-#### `LibRPMedia:GetMusicFile(musicName)`
+#### `LibRPMedia:GetMusicFileByName(musicName)`
 
 Returns the file ID associated with a given name or file path.
 
@@ -48,14 +50,12 @@ If using a file name, this will usually match that of a sound kit name as presen
 
 If using a file path, the database only includes entries for files within the `sound/music` directory tree. The file path should omit the `sound/music/` prefix, as well as the file extension (`.mp3`).
 
-This function will automatically normalize the input name to a lowercase string, and have any backslashes (`\\`) replaced by forward slashes (`/`).
-
 If no music file is found with the given name or path, `nil` is returned.
 
 ##### Usage
 
 ```lua
-PlaySoundFile(LibRPMedia:GetMusicFile("zone-cursedlandfelwoodfurbolg_1"), "Music");
+PlaySoundFile(LibRPMedia:GetMusicFileByName("zone-cursedlandfelwoodfurbolg_1"), "Music");
 ```
 
 #### `LibRPMedia:GetMusicFileByIndex(musicIndex)`
@@ -68,15 +68,89 @@ Returns the file ID associated with the given numeric index inside the database,
 PlaySoundFile(LibRPMedia:GetMusicFileByIndex(42), "Music");
 ```
 
-#### `LibRPMedia:IterMusicFiles()`
+#### `LibRPMedia:GetMusicIndexByFile(musicFile)`
 
-Returns an iterator for accessing the contents of the music database. The iterator will return a pair of the music index and file ID on each successive call, or `nil` at the end of the database.
+Returns the music index associated with the given file ID inside the database.
+
+If no matching file ID is found, `nil` is returned.
 
 ##### Usage
 
 ```lua
-for index, fileID in LibRPMedia:IterMusicFiles() do
-    print("Found music file: ", fileID);
+print("Music index (by file):", LibRPMedia:GetMusicIndexByFile(53183));
+-- Example output: "Music index (by file): 1"
+```
+
+#### `LibRPMedia:GetMusicIndexByName(musicName)`
+
+Returns the music index associated with the given music name inside the database.
+
+Music files may be associated with multiple names, and this function will search against all of them. If no matching name is found, `nil` is returned.
+
+##### Usage
+
+```lua
+print("Music index (by name):", LibRPMedia:GetMusicIndexByName("darnassus intro"));
+-- Example output: "Music index (by name): 1"
+```
+
+#### `LibRPMedia:GetMusicNameByIndex(musicIndex)`
+
+Returns the music name associated with the given numeric index inside the database, in the range of 1 through the result of `LibRPMedia:GetNumMusicFiles()`. Queries outside of this range will return `nil`.
+
+Music files may be associated with multiple names, however only one name will ever be returned by this function. The name returned by this function is not guaranteed to remain stable between updates to this library.
+
+##### Usage
+
+```lua
+print("Music name (by index):", LibRPMedia:GetMusicNameByIndex(1));
+-- Example output: "Music name (by index): darnassus intro"
+```
+
+#### `LibRPMedia:GetMusicNameByFile(musicFile)`
+
+Returns the music name associated with the given file ID inside the database.
+
+Music files may be associated with multiple names, however only one name will ever be returned by this function. The name returned by this function is not guaranteed to remain stable between updates to this library. If no matching name is found, `nil` is returned.
+
+##### Usage
+
+```lua
+print("Music name (by file):", LibRPMedia:GetMusicNameByFile(53183));
+-- Example output: "Music name (by file): darnassus intro"
+```
+
+#### `LibRPMedia:FindMusicFiles(musicName)`
+
+Returns an iterator for accessing the contents of the music database for music files matching the given name. The iterator will return a triplet of the music index, file ID, and music name on each successive call, or `nil` at the end of the database.
+
+Music files may be associated with multiple names, and this function will search against all of them. The music name yielded by this iterator is not guaranteed to remain stable between updates to this library.
+
+The order of files returned by this iterator is not stable between updates to this library.
+
+##### Usage
+
+```lua
+for index, file, name in LibRPMedia:FindMusicFiles("citymusic/") do
+    print("Found music file:", name, file);
+    -- Example output: "Found music file: darnassus intro, 53183"
+end
+```
+
+#### `LibRPMedia:FindAllMusicFiles()`
+
+Returns an iterator for accessing the contents of the music database. The iterator will return a triplet of the music index, file ID, and music name on each successive call, or `nil` at the end of the database.
+
+The music name yielded by this iterator is not guaranteed to remain stable between updates to this library.
+
+The order of files returned by this iterator is not stable between updates to this library.
+
+##### Usage
+
+```lua
+for index, file, name in LibRPMedia:FindAllMusicFIles() do
+    print("Found music file:", name, file);
+    -- Example output: "Found music file: darnassus intro, 53183"
 end
 ```
 
