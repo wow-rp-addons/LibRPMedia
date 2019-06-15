@@ -12,7 +12,10 @@ max_comment_line_length = 78;
 
 -- Ignore generated files.
 exclude_files = {
+    ".release",
+    "Config",
     "LibRPMedia-*-1.0.lua",
+    "Libs",
 };
 
 -- Add exceptions for external libraries.
