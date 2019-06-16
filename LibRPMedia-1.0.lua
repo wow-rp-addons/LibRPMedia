@@ -371,9 +371,11 @@ function IterMatchingMusicFiles(music, search)
             if not seen[musicIndex] then
                 seen[musicIndex] = true;
 
+                -- It's important that we yield the matched name and not
+                -- the canonical name, since the searches don't make sense
+                -- otherwise.
                 local musicFile = data.file[musicIndex];
-                local musicName = data.name[musicIndex];
-                return musicIndex, musicFile, musicName;
+                return musicIndex, musicFile, name;
             end
         end
     end
