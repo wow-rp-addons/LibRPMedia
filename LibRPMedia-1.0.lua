@@ -97,7 +97,7 @@ function LibRPMedia:GetMusicFileDuration(musicFile)
     local music = self:GetDatabase("music");
     local musicIndex = self:GetMusicIndexByFile(musicFile);
     if not musicIndex then
-        return nil;
+        return 0;
     end
 
     return music.data.time[musicIndex] or 0;
