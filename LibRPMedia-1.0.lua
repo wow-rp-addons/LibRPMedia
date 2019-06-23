@@ -362,7 +362,6 @@ do
         local b64bytes = b64bytes; -- luacheck: no redefined
         local strbyte = strbyte; -- luacheck: no redefined
         local strchar = strchar; -- luacheck: no redefined
-        local strjoin = strjoin; -- luacheck: no redefined
 
         -- Read the text in blocks of 4 bytes.
         for i = 1, #text, 4 do
@@ -394,9 +393,9 @@ do
             -- Put the three output bytes into the output table.
             n = n + 1;
             if nilNum == 0 then
-                t[n] = strjoin("", strchar(a), strchar(b), strchar(c));
+                t[n] = strchar(a, b, c);
             elseif nilNum == 1 then
-                t[n] = strjoin("", strchar(a), strchar(b));
+                t[n] = strchar(a, b);
             elseif nilNum == 2 then
                 t[n] = strchar(a);
             end
