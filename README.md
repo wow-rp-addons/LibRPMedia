@@ -68,6 +68,20 @@ Returns the file ID associated with the given numeric index inside the database,
 PlaySoundFile(LibRPMedia:GetMusicFileByIndex(42), "Music");
 ```
 
+#### `LibRPMedia:GetMusicFileDuration(musicFile)`
+
+Returns the duration of a music file by its file ID. The value returned will be in fractional seconds, if present in the database.
+
+If no duration information is found for the referenced file, `0` is returned.
+
+##### Usage
+
+```lua
+local file = LibRPMedia:GetMusicFileByName("darnassus intro");
+print("File duration (seconds):", LibRPMedia:GetMusicFileDuration(file));
+-- Example output: "File duration (seconds): 39.923125"
+```
+
 #### `LibRPMedia:GetMusicIndexByFile(musicFile)`
 
 Returns the music index associated with the given file ID inside the database.

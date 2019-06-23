@@ -73,6 +73,17 @@ function LibRPMedia:GetMusicFileByIndex(musicIndex)
     return music.data.file[musicIndex];
 end
 
+--- Returns the duration of a music file from its file ID, if known. The
+--  value returned is in fractional seconds.
+--
+--  If no file is found, or no duration information is available, this will
+--  return 0.
+function LibRPMedia:GetMusicFileDuration(musicFile)
+    local music = self:GetDatabase("music");
+    local musicIndex = self:GetMusicIndexByFile(musicFile);
+    return music.data.time[musicIndex] or 0;
+end
+
 --- Returns the index of a music file from its file ID. If the given file
 --  ID is not present in the database, nil is returned.
 function LibRPMedia:GetMusicIndexByFile(musicFile)
