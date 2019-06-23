@@ -16,6 +16,10 @@ externals:
         tag: latest
 
 ignore:
-    - Config
-    - Exporter
+    - Libs/LibDeflate/.appveyor
+    - Libs/LibDeflate/.rockspecs
+    - Libs/LibDeflate/.travis
+    - Libs/LibDeflate/docs
+    - Libs/LibDeflate/examples
+    - Libs/LibDeflate/tests
     - Makefile
