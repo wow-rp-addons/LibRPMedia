@@ -9,20 +9,27 @@ if not LibRPMedia then
     return;
 end
 
+-- Dependencies.
+local LibDeflate = LibStub:GetLibrary("LibDeflate");
+
 -- Upvalues.
 local error = error;
 local floor = math.floor;
+local loadstring = loadstring;
 local min = math.min;
+local nop = nop;
 local pairs = pairs;
 local rawset = rawset;
 local setfenv = setfenv;
 local setmetatable = setmetatable;
 local strbyte = string.byte;
+local strchar = string.char;
 local strfind = string.find;
 local strformat = string.format;
 local strgsub = string.gsub;
 local strjoin = string.join;
 local strlower = string.lower;
+local tconcat = table.concat;
 local type = type;
 local xpcall = xpcall;
 
@@ -40,6 +47,8 @@ local IterMusicFilesByPrefix;
 local NormalizeMusicName;
 
 -- Error constants.
+local ERR_DATA_DECOMPRESS_FAILED = "LibRPMedia: Error decompressing data.";
+local ERR_DATA_NOT_HYDRATABLE = "LibRPMedia: Type %s cannot be hydrated.";
 local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found.";
 local ERR_DATABASE_UNSIZED = "LibRPMedia: Database %q has no size.";
 local ERR_INVALID_ARG_TYPE = "LibRPMedia: Argument %q is %s, expected %s";
@@ -196,6 +205,18 @@ function LibRPMedia:FindAllMusicFiles()
     return IterMusicFiles(music);
 end
 
+--- Unpacks and decompresses music data within the database. This may cause
+--  a momentary lag spike in the client.
+function LibRPMedia:UnpackMusicData()
+    -- Access anything that might be compressed here.
+    local music = self:GetDatabase("music");
+    nop(music.data);
+    nop(music.index.name);
+
+    -- We'll throw in a GC for free too, thanks to the decompression.
+    collectgarbage("collect");
+end
+
 --- Internal API
 --  The below declarations are for internal use only.
 
@@ -299,27 +320,129 @@ do
     local baseenv = { __newindex = function() end, __metatable = false };
     local nullenv = setmetatable({}, baseenv);
 
-    local function loadstring(code)
-        local chunk, err = _G.loadstring(code);
-        if err then
-            return nil, err;
+    -- Lookup table of ASCII bytes (decimal) for base64 decoding.
+    --
+    -- This table is based off the standard character set defined in RFC 4648,
+    -- and used in MIME (RFC 2045) and PEM (RFC 1421).
+    local b64bytes = {
+        [ 65] =  0, [ 66] =  1, [ 67] =  2, [ 68] =  3,
+        [ 69] =  4, [ 70] =  5, [ 71] =  6, [ 72] =  7,
+        [ 73] =  8, [ 74] =  9, [ 75] = 10, [ 76] = 11,
+        [ 77] = 12, [ 78] = 13, [ 79] = 14, [ 80] = 15,
+        [ 81] = 16, [ 82] = 17, [ 83] = 18, [ 84] = 19,
+        [ 85] = 20, [ 86] = 21, [ 87] = 22, [ 88] = 23,
+        [ 89] = 24, [ 90] = 25, [ 97] = 26, [ 98] = 27,
+        [ 99] = 28, [100] = 29, [101] = 30, [102] = 31,
+        [103] = 32, [104] = 33, [105] = 34, [106] = 35,
+        [107] = 36, [108] = 37, [109] = 38, [110] = 39,
+        [111] = 40, [112] = 41, [113] = 42, [114] = 43,
+        [115] = 44, [116] = 45, [117] = 46, [118] = 47,
+        [119] = 48, [120] = 49, [121] = 50, [122] = 51,
+        [ 48] = 52, [ 49] = 53, [ 50] = 54, [ 51] = 55,
+        [ 52] = 56, [ 53] = 57, [ 54] = 58, [ 55] = 59,
+        [ 56] = 60, [ 57] = 61, [ 43] = 62, [ 47] = 63,
+    };
+
+    --- Decodes a base64 encoded text string, returning the result as a a
+    --  decoded string.
+    --
+    --  This implementation is based off LibBase64, but tuned for a bit more
+    --  performance by omitting support for padding characters and using
+    --  only one loop/table for the decode phase.
+    --
+    --  Source:  https://www.wowace.com/projects/libbase64-1-0
+    --  Credit:  ckknight (ckknight@gmail.com)
+    --  License: MIT
+    local function b64decode(text)
+        -- Create a temporary table and a local length counter.
+        local t = {};
+        local n = 0;
+
+        -- Get local references for things in the loop.
+        local b64bytes = b64bytes; -- luacheck: no redefined
+        local strbyte = strbyte; -- luacheck: no redefined
+        local strchar = strchar; -- luacheck: no redefined
+        local strjoin = strjoin; -- luacheck: no redefined
+
+        -- Read the text in blocks of 4 bytes.
+        for i = 1, #text, 4 do
+            -- Map the bytes using the lookup table.
+            local a, b, c, d = strbyte(text, i, i + 3);
+            a, b, c, d = b64bytes[a], b64bytes[b], b64bytes[c], b64bytes[d];
+
+            -- We don't support padding characters, so we'll check for the
+            -- absence of bytes. This also means we'll break if the input is
+            -- malformed, but we're not a public function.
+            local nilNum = 0;
+            if not c then
+                nilNum = 2;
+                c = 0;
+                d = 0;
+            elseif not d then
+                nilNum = 1;
+                d = 0;
+            end
+
+            -- Convert the four input bytes to three output bytes.
+            local num = (a * 2^18) + (b * 2^12) + (c * 2^6) + d;
+            c = num % 2^8;
+            num = (num - c) / 2^8;
+            b = num % 2^8;
+            num = (num - b) / 2^8;
+            a = num % 2^8;
+
+            -- Put the three output bytes into the output table.
+            n = n + 1;
+            if nilNum == 0 then
+                t[n] = strjoin("", strchar(a), strchar(b), strchar(c));
+            elseif nilNum == 1 then
+                t[n] = strjoin("", strchar(a), strchar(b));
+            elseif nilNum == 2 then
+                t[n] = strchar(a);
+            end
         end
 
-        return setfenv(chunk, nullenv);
+        -- Join the output up and we're done.
+        return tconcat(t, "");
     end
 
-    local loadenv = setmetatable({ loadstring = loadstring }, baseenv);
+    --- Hydrates the given data as a compressed string, returning a generator
+    --  that will inflate it upon being called and evaluate its contents.
+    local function HydrateDataString(data)
+        -- Create the generator that will load the data.
+        local function generator()
+            -- Decode and decompress.
+            local decoded = b64decode(data)
+            local decompressed = LibDeflate:DecompressDeflate(decoded);
 
-    --- Creates a hydrated table from the given contents.
-    function LibRPMedia:CreateHydratedTable(table)
+            -- Load the chunk.
+            local stmt = strjoin(" ", "return", decompressed);
+            local chunk, err = loadstring(stmt);
+            if err then
+                -- The error string might be super long, so we'll drop it.
+                error(ERR_DATA_DECOMPRESS_FAILED, 2);
+            end
+
+            -- Execute the chunk in an empty environment.
+            setfenv(chunk, nullenv);
+            return chunk();
+        end
+
+        -- Ensure the generator doesn't do anything weird.
+        return setfenv(generator, nullenv);
+    end
+
+    --- Hydrates the given data as a table, causing any contained generator
+    --  functions to be lazily executed on first access to the table.
+    local function HydrateDataTable(data)
         -- Map of functions that generate data on first access.
         local generators = {};
 
         -- Move any data producing functions from the table to the generators.
-        for key, value in pairs(table) do
+        for key, value in pairs(data) do
             if type(value) == "function" then
-                generators[key] = setfenv(value, loadenv);
-                table[key] = nil;
+                generators[key] = setfenv(value, nullenv);
+                data[key] = nil;
             end
         end
 
@@ -334,27 +457,40 @@ do
             -- Drop the reference to the generator to let it be GC'd.
             generators[key] = nil;
 
-            -- Generators are functions that wrap a function generated
-            -- dynamically via loadstring. That might sound insane but
-            -- there's a good reason behind it in terms of memory usage.
-            --
-            -- Basically, by lazily generating the closure that contains
-            -- the data we don't pay the cost of having all the constants
-            -- for the data loaded all the time.
-            local ok, data;
-            repeat
-                ok, data = xpcall(data or generator, CallErrorHandler);
-                if not ok then
-                    return nil;
-                end
-            until type(data) ~= "function";
+            -- Invoke the generator and get its value.
+            local ok, value = xpcall(generator, CallErrorHandler);
+            if not ok then
+                return nil;
+            end
 
-            -- Once we're here, we're done.
-            rawset(table, key, data);
-            return data;
+            -- Cache it and we're done.
+            rawset(data, key, value);
+            return value;
         end
 
-        return setmetatable(table, metatable);
+        return setmetatable(data, metatable);
+    end
+
+    --- Hydrates the given data. Depending upon the type of data given,
+    --  this will have different effects.
+    --
+    --  If a table is given, it will be wrapped in a proxy which detects
+    --  the first access to any field and lazily loads its content if the
+    --  value stored is a function.
+    --
+    --  If a string is given, it is assumed to be a base64 encoded, compressed
+    --  Lua expression that when inflated will expand out to the data. This
+    --  will be transformed into a function.
+    --
+    --  If any other type is given, an error is raised.
+    function LibRPMedia:HydrateData(data)
+        if type(data) == "table" then
+            return HydrateDataTable(data);
+        elseif type(data) == "string" then
+            return HydrateDataString(data);
+        else
+            error(strformat(ERR_DATA_NOT_HYDRATABLE, type(data)), 2);
+        end
     end
 end
 
