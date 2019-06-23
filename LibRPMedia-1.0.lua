@@ -40,6 +40,7 @@ local NormalizeMusicName;
 -- Error constants.
 local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found.";
 local ERR_DATABASE_UNSIZED = "LibRPMedia: Database %q has no size.";
+local ERR_INVALID_ARG_TYPE = "LibRPMedia: Argument %q is %s, expected %s";
 
 --- Music Database API
 
