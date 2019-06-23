@@ -1,5 +1,12 @@
 # LibRPMedia-1.0
 
+## v1.0.0
+
+ * Added support for substring and pattern searches to FindMusicFiles.
+ * Added typechecking on arguments for public functions.
+ * Regenerated data against latest retail PTR builds.
+ * Added support for loading compressed data.
+
 ## v1.0.0-beta.2
 
  * Added support for lazy loading of data to minimize memory usage when included.
