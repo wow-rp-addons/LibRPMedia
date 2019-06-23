@@ -33,14 +33,16 @@ local BinarySearch;
 local BinarySearchPrefix;
 local CheckType;
 local GetCommonPrefixLength;
-local IterMatchingMusicFiles;
 local IterMusicFiles;
+local IterMusicFilesByPattern;
+local IterMusicFilesByPrefix;
 local NormalizeMusicName;
 
 -- Error constants.
 local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found.";
 local ERR_DATABASE_UNSIZED = "LibRPMedia: Database %q has no size.";
 local ERR_INVALID_ARG_TYPE = "LibRPMedia: Argument %q is %s, expected %s";
+local ERR_INVALID_SEARCH_METHOD = "LibRPMedia: Invalid search method: %q";
 
 --- Music Database API
 
@@ -118,8 +120,8 @@ function LibRPMedia:GetMusicIndexByName(musicName)
     musicName = NormalizeMusicName(musicName);
 
     local music = self:GetDatabase("music");
-    local names = music.search.name;
-    return names.values[BinarySearch(names.keys, musicName)];
+    local names = music.index.name;
+    return names.row[BinarySearch(names.key, musicName)];
 end
 
 --- Returns a string name for a music file based on its index, in the range
@@ -156,8 +158,9 @@ end
 --  The iterator will return triplet of file index, file ID, and file name.
 --
 --  The order of which files are returned by this iterator is not guaranteed.
-function LibRPMedia:FindMusicFiles(musicName)
+function LibRPMedia:FindMusicFiles(musicName, options)
     AssertType(musicName, "musicName", "string");
+    AssertType(options, "options", "table", "nil");
 
     -- If the search space is empty then everything matches; the iterator
     -- from FindAllMusic files is *considerably* more efficient.
@@ -165,8 +168,22 @@ function LibRPMedia:FindMusicFiles(musicName)
         return self:FindAllMusicFiles();
     end
 
+    -- Default the options and extract them.
+    local optMethod = options and options.method or "prefix";
+
+    -- Grab the database and search appropriately.
     local music = self:GetDatabase("music");
-    return IterMatchingMusicFiles(music, NormalizeMusicName(musicName));
+    if optMethod == "prefix" then
+        return IterMusicFilesByPrefix(music, musicName);
+    elseif optMethod == "substring" then
+        musicName = NormalizeMusicName(musicName);
+        return IterMusicFilesByPattern(music, musicName, true);
+    elseif optMethod == "pattern" then
+        -- We won't normalize a pattern because it's a bit tricky.
+        return IterMusicFilesByPattern(music, musicName, false);
+    else
+        error(strformat(ERR_INVALID_SEARCH_METHOD, optMethod), 2);
+    end
 end
 
 --- Returns an iterator for accessing all music files in the database.
@@ -434,31 +451,32 @@ end
 
 --- Returns an iterator that returns all matching music files in the database
 --  that share a common prefix with the given search string.
-function IterMatchingMusicFiles(music, search)
+function IterMusicFilesByPrefix(music, search)
     -- Map of file indices that we've already returned.
     local seen = {};
 
     -- Upvalue the database and search index to minimize lookups a bit.
     local data = music.data;
-    local names = music.search.name;
+    local names = music.index.name;
 
     -- Begin iteration from the closest matching prefix in the key array.
-    local nameIndex = BinarySearchPrefix(names.keys, search);
+    local nameIndex = BinarySearchPrefix(names.key, search);
 
     local function iterator()
         -- Loop so long as we don't run out of keys.
-        while nameIndex < #names.keys do
+        local keyCount = #names.key;
+        while nameIndex < keyCount do
             -- If the common prefix between our search string and the current
             -- file name isn't the same as the search string, then we should
             -- stop since we're past the "like" range of names.
-            local name = names.keys[nameIndex];
+            local name = names.key[nameIndex];
             local shared = GetCommonPrefixLength(search, name);
             if shared ~= #search then
                 return nil;
             end
 
             -- Convert the search index into a music index.
-            local musicIndex = names.values[nameIndex];
+            local musicIndex = names.row[nameIndex];
             nameIndex = nameIndex + 1;
 
             -- Yield the music file if we haven't reported it already.
@@ -468,6 +486,41 @@ function IterMatchingMusicFiles(music, search)
                 -- It's important that we yield the matched name and not
                 -- the canonical name, since the searches don't make sense
                 -- otherwise.
+                local musicFile = data.file[musicIndex];
+                return musicIndex, musicFile, name;
+            end
+        end
+    end
+
+    return iterator;
+end
+
+--- Returns an iterator that returns all matching music files in the database
+--  that match a given pattern string. If plain is true, the search will not
+--  be a pattern but rather a substring test.
+function IterMusicFilesByPattern(music, search, plain)
+    -- Map of file indices that we've already returned.
+    local seen = {};
+
+    -- Upvalue the database and search index to minimize lookups a bit.
+    local data = music.data;
+    local names = music.index.name;
+
+    -- Start iteration from the beginning of the keys array.
+    local nameIndex = 1;
+
+    local function iterator()
+        local keyCount = #names.key;
+        while nameIndex < keyCount do
+            local name = names.key[nameIndex];
+            local musicIndex = names.row[nameIndex];
+            nameIndex = nameIndex + 1;
+
+            -- If we've not seen this file, test the name.
+            if not seen[musicIndex] and strfind(name, search, 1, plain) then
+                -- Got a hit.
+                seen[musicIndex] = true;
+
                 local musicFile = data.file[musicIndex];
                 return musicIndex, musicFile, name;
             end
