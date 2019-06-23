@@ -20,7 +20,7 @@ local setmetatable = setmetatable;
 local strbyte = string.byte;
 local strformat = string.format;
 local strgsub = string.gsub;
-local string = string;
+local strjoin = string.join;
 local strlower = string.lower;
 local type = type;
 local xpcall = xpcall;
@@ -28,8 +28,10 @@ local xpcall = xpcall;
 local CallErrorHandler = CallErrorHandler;
 
 -- Local declarations.
+local AssertType;
 local BinarySearch;
 local BinarySearchPrefix;
+local CheckType;
 local GetCommonPrefixLength;
 local IterMatchingMusicFiles;
 local IterMusicFiles;
@@ -38,6 +40,7 @@ local NormalizeMusicName;
 -- Error constants.
 local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found.";
 local ERR_DATABASE_UNSIZED = "LibRPMedia: Database %q has no size.";
+local ERR_INVALID_ARG_TYPE = "LibRPMedia: Argument %q is %s, expected %s";
 
 --- Music Database API
 
@@ -58,9 +61,15 @@ end
 --
 --  If no match is found, nil is returned.
 function LibRPMedia:GetMusicFileByName(musicName)
+    AssertType(musicName, "musicName", "string");
+
     musicName = NormalizeMusicName(musicName);
 
     local musicIndex = self:GetMusicIndexByName(musicName);
+    if not musicIndex then
+        return nil;
+    end
+
     return self:GetMusicFileByIndex(musicIndex);
 end
 
@@ -69,6 +78,8 @@ end
 --
 --  If no file is found, nil is returned.
 function LibRPMedia:GetMusicFileByIndex(musicIndex)
+    AssertType(musicIndex, "musicIndex", "number");
+
     local music = self:GetDatabase("music");
     return music.data.file[musicIndex];
 end
@@ -79,14 +90,22 @@ end
 --  If no file is found, or no duration information is available, this will
 --  return 0.
 function LibRPMedia:GetMusicFileDuration(musicFile)
+    AssertType(musicFile, "musicFile", "number");
+
     local music = self:GetDatabase("music");
     local musicIndex = self:GetMusicIndexByFile(musicFile);
+    if not musicIndex then
+        return nil;
+    end
+
     return music.data.time[musicIndex] or 0;
 end
 
 --- Returns the index of a music file from its file ID. If the given file
 --  ID is not present in the database, nil is returned.
 function LibRPMedia:GetMusicIndexByFile(musicFile)
+    AssertType(musicFile, "musicFile", "number");
+
     local music = self:GetDatabase("music");
     return BinarySearch(music.data.file, musicFile);
 end
@@ -94,6 +113,8 @@ end
 --- Returns the index of a music file from its name. If no matching name
 --  is found in the database, nil is returned.
 function LibRPMedia:GetMusicIndexByName(musicName)
+    AssertType(musicName, "musicName", "string");
+
     musicName = NormalizeMusicName(musicName);
 
     local music = self:GetDatabase("music");
@@ -109,6 +130,8 @@ end
 --
 --  If no name is found, nil is returned.
 function LibRPMedia:GetMusicNameByIndex(musicIndex)
+    AssertType(musicIndex, "musicIndex", "number");
+
     local music = self:GetDatabase("music");
     return music.data.name[musicIndex];
 end
@@ -117,7 +140,13 @@ end
 --
 --  If no name is found, nil is returned.
 function LibRPMedia:GetMusicNameByFile(musicFile)
+    AssertType(musicFile, "musicFile", "number");
+
     local musicIndex = self:GetMusicIndexByFile(musicFile);
+    if not musicIndex then
+        return nil;
+    end
+
     return self:GetMusicNameByIndex(musicIndex);
 end
 
@@ -128,6 +157,8 @@ end
 --
 --  The order of which files are returned by this iterator is not guaranteed.
 function LibRPMedia:FindMusicFiles(musicName)
+    AssertType(musicName, "musicName", "string");
+
     -- If the search space is empty then everything matches; the iterator
     -- from FindAllMusic files is *considerably* more efficient.
     if not musicName or musicName == "" then
@@ -190,6 +221,58 @@ end
 function LibRPMedia:GetNumDatabaseEntries(databaseName)
     local database = self:GetDatabase(databaseName);
     return database.size;
+end
+
+--- Checks the type of a given value against a list of types. If no type
+--  matches, returns nil and an error message formatted with the given
+--  parameter name.
+--
+--  On success, the value is returned as-is with a nil error message.
+function CheckType(value, name, t1, t2, ...)
+    local tv = type(value);
+
+    -- Slight unrolling; handle the common case of a one or two type check
+    -- explicitly without having to iterate over the varargs.
+    if tv == t1 then
+        return value, nil;
+    elseif t2 and tv == t2 then
+        return value, nil;
+    end
+
+    -- Otherwise consult the varargs.
+    for i = 1, select("#", ...) do
+        local tn = select(i, ...);
+        if tv == tn then
+            return value, nil;
+        end
+    end
+
+    -- Invalid parameter.
+    local types;
+    if not t2 then
+        types = t1;
+    elseif select("#", ...) == 0 then
+        types = strjoin(" or ", t1, t2);
+    else
+        types = strjoin(", ", t1, t2, ...);
+    end
+
+    return nil, strformat(ERR_INVALID_ARG_TYPE, name, tv, types);
+end
+
+--- Asserts the type of a given value as with CheckType, but raises an error
+--  if the check fails.
+--
+--  The error will be raised to occur at a stack depth 3 levels higher than
+--  this function, and so will be reported by the caller of the function that
+--  calls AssertType.
+function AssertType(...)
+    local value, err = CheckType(...);
+    if not value and err then
+        error(err, 3);
+    end
+
+    return value;
 end
 
 do

@@ -19,7 +19,7 @@ exclude_files = {
 };
 
 -- Add exceptions for external libraries.
-std = "lua51+libstub+wow"
+std = "lua51+libstub+wow+wowstd"
 
 stds.libstub = {
     read_globals = {
@@ -30,5 +30,15 @@ stds.libstub = {
 stds.wow = {
     read_globals = {
         "CallErrorHandler",
+    },
+};
+
+stds.wowstd = {
+    read_globals = {
+        string = {
+            fields = {
+                "join",
+            },
+        },
     },
 };
