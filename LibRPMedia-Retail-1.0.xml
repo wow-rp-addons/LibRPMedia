@@ -3,5 +3,5 @@
     xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
 
     <Script file="LibRPMedia-1.0.lua"/>
-    <Script file="LibRPMedia-RetailMusic-1.0.lua"/>
+    <Script file="LibRPMedia-Retail-1.0.lua"/>
 </Ui>
