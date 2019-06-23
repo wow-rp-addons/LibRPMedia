@@ -18,6 +18,7 @@ local rawset = rawset;
 local setfenv = setfenv;
 local setmetatable = setmetatable;
 local strbyte = string.byte;
+local strfind = string.find;
 local strformat = string.format;
 local strgsub = string.gsub;
 local strjoin = string.join;
