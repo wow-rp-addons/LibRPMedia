@@ -30,6 +30,7 @@ stds.libstub = {
 stds.wow = {
     read_globals = {
         "CallErrorHandler",
+        "nop",
     },
 };
 
