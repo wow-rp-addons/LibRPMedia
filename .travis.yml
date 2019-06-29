@@ -10,9 +10,9 @@ install: luarocks install --local luacheck
 jobs:
   include:
     - stage: Build
-      script: make check LUACHECK=/home/travis/.luarocks/bin/luacheck
-    - script: make test
-    - script: echo "Packaging release..."
+      script:
+        - make check LUACHECK=/home/travis/.luarocks/bin/luacheck
+        - make test
       deploy:
         provider: script
         script: make release
