@@ -44,6 +44,23 @@ end);
 
 --- Music API Tests
 
+RegisterTest("Music: Database Loaded", function()
+    -- Verify that music data is actually present.
+    local hasMusic = LibRPMedia:IsMusicDataLoaded();
+    Assertf(hasMusic, "No music data loaded in library");
+end);
+
+RegisterTest("Music: Database Size", function()
+    -- Verify we have a non-zero count of music files.
+    local numMusicFiles = LibRPMedia:GetNumMusicFiles();
+
+    AssertType(numMusicFiles, "number", "Music file count is not numeric");
+    Assertf(numMusicFiles > 0, "Invalid music file count: %d", numMusicFiles);
+
+    -- We'll log some characteristics about the database too.
+    Logf("Music database size: %d entries", LibRPMedia:GetNumMusicFiles());
+end);
+
 RegisterTest("Music: API Type Checks", function()
     -- Generate some values of each Lua type.
     local string = "";
@@ -118,20 +135,6 @@ RegisterTest("Music: API Type Checks", function()
     AssertError(LibRPMedia, "FindMusicFiles", string, boolean);
     AssertError(LibRPMedia, "FindMusicFiles", string, thread);
     AssertError(LibRPMedia, "FindMusicFiles", string, userdata);
-end);
-
-RegisterTest("Music: Database Loaded", function()
-    -- Verify that music data is actually present.
-    local hasMusic = LibRPMedia:IsMusicDataLoaded();
-    Assertf(hasMusic, "No music data loaded in library");
-end);
-
-RegisterTest("Music: Database Size", function()
-    -- Verify we have a non-zero count of music files.
-    local numMusicFiles = LibRPMedia:GetNumMusicFiles();
-
-    AssertType(numMusicFiles, "number", "Music file count is not numeric");
-    Assertf(numMusicFiles > 0, "Invalid music file count: %d", numMusicFiles);
 end);
 
 RegisterTest("Music: Name Lookup (By Index)", function()
@@ -653,6 +656,8 @@ end
 --- Runs a named test function, capturing its errors and returning a true
 --  or false value if it passes or fails.
 local function RunTest(name, func)
+    print(strjoin(" ", LOG_PREFIX_TEST, name));
+
     -- Capture execution and forward errors appropriately.
     local start = debugprofilestop();
     local ok, err = xpcall(func, HandleTestError);
@@ -675,8 +680,6 @@ end
 
 --- Runs all registered tests that optionally pass a given name filter.
 local function RunTests(filter)
-    print(strjoin(" ", LOG_PREFIX_TEST, MAJOR_NAME));
-
     -- Run all the tests in-order.
     local pass, fail, skip = 0, 0, 0;
     for _, test in ipairs(tests) do
