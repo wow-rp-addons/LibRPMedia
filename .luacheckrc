@@ -13,7 +13,6 @@ max_comment_line_length = 78;
 -- Ignore generated files.
 exclude_files = {
     ".release",
-    "Config",
     "LibRPMedia-*-1.0.lua",
     "Libs",
 };
@@ -28,9 +27,18 @@ stds.libstub = {
 };
 
 stds.wow = {
+    globals = {
+        "SLASH_LIBRPMEDIA_SLASHCMD1",
+        "SlashCmdList",
+    },
     read_globals = {
         "CallErrorHandler",
+        "debugprofilestop",
+        "debugstack",
+        "GetBuildInfo",
         "nop",
+        "tostringall",
+        "WrapTextInColorCode",
     },
 };
 
