@@ -23,8 +23,8 @@ LUACHECK ?= luacheck
 RELEASE_DIR := .release
 
 # Path and URL to the exporter binary for data generation.
-EXPORTER_BIN := $(RELEASE_DIR)/LibRPMediaExporter-v1.0.0.exe
-EXPORTER_BIN_URL := https://github.com/wow-rp-addons/LibRPMediaExporter/releases/download/v1.0.0/LibRPMediaExporter.exe
+EXPORTER_BIN := $(RELEASE_DIR)/LibRPMediaExporter-v1.1.0.exe
+EXPORTER_BIN_URL := https://github.com/wow-rp-addons/LibRPMediaExporter/releases/download/v1.1.0/LibRPMediaExporter.exe
 
 # Path and URL to the packager script.
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
@@ -53,12 +53,14 @@ test:
 
 LibRPMedia-%-1.0.lua: $(EXPORTER_BIN) .FORCE
 	@echo Generating $(@)...
-	@"$(EXPORTER_BIN)" \
+	@$(EXPORTER_BIN) \
+		--manifest LibRPMedia-$(*)-1.0.manifest \
 		--min-interface-version $($(*)_INTERFACE_VERSION) \
+		--output $(@) \
 		--product $($(*)_PRODUCT_ID) \
 		--region $(REGION) \
 		$(EXPORTER_OPTIONS) \
-		$($(*)_EXPORTER_OPTIONS) > $(@)
+		$($(*)_EXPORTER_OPTIONS)
 
 $(PACKAGER_SCRIPT): $(RELEASE_DIR) .FORCE
 	@echo Fetching packager script...
