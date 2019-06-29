@@ -23,3 +23,4 @@ ignore:
     - Libs/LibDeflate/examples
     - Libs/LibDeflate/tests
     - Makefile
+    - Tests
