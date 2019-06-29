@@ -174,7 +174,7 @@ function LibRPMedia:FindMusicFiles(musicName, options)
 
     -- If the search space is empty then everything matches; the iterator
     -- from FindAllMusic files is *considerably* more efficient.
-    if not musicName or musicName == "" then
+    if musicName == "" then
         return self:FindAllMusicFiles();
     end
 
