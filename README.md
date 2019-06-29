@@ -16,6 +16,15 @@ To load the library, include a reference to any of the following files within yo
 
 The `LibRPMedia-1.0.xml` file includes all references to databases for both Retail and Classic, whereas the other files only include script references to files specific to their targetted product. Use of the product-specific XML files is recommended when you have control of the packaging process.
 
+### Dependencies
+
+This library depends upon the following. These must be loaded *prior* to loading LibRPMedia via any of its XML files; the library will not load its embedded dependencies automatically.
+
+ * [LibStub](https://www.curseforge.com/wow/addons/libstub)
+ * [LibDeflate](https://github.com/SafeteeWoW/LibDeflate)
+
+Copies of these are present in the Libs directory as a convenience and may be used by the embedding addon.
+
 ## Usage
 
 ### Music API
