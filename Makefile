@@ -19,12 +19,15 @@ Retail_EXPORTER_OPTIONS ?=
 LUA ?= lua
 LUACHECK ?= luacheck
 
+# Directory where releases and scripts are downoaded to.
+RELEASE_DIR := .release
+
 # Path and URL to the exporter binary for data generation.
-EXPORTER_BIN := .release/LibRPMediaExporter-v1.0.0.exe
-EXPORTER_BIN_URL := https://github.com/wow-rp-addons/LibRPMediaExporter/releases/download/v1.0.0/LibRPMediaExporter.exe
+EXPORTER_BIN := $(RELEASE_DIR)/LibRPMediaExporter-v1.1.0.exe
+EXPORTER_BIN_URL := https://github.com/wow-rp-addons/LibRPMediaExporter/releases/download/v1.1.0/LibRPMediaExporter.exe
 
 # Path and URL to the packager script.
-PACKAGER_SCRIPT := .release/release.sh
+PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
 PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh
 
 .PHONY: check build classic release retail test
@@ -50,19 +53,22 @@ test:
 
 LibRPMedia-%-1.0.lua: $(EXPORTER_BIN) .FORCE
 	@echo Generating $(@)...
-	@"$(EXPORTER_BIN)" \
+	@$(EXPORTER_BIN) \
+		--manifest LibRPMedia-$(*)-1.0.manifest \
 		--min-interface-version $($(*)_INTERFACE_VERSION) \
+		--output $(@) \
 		--product $($(*)_PRODUCT_ID) \
 		--region $(REGION) \
 		$(EXPORTER_OPTIONS) \
-		$($(*)_EXPORTER_OPTIONS) > $(@)
+		$($(*)_EXPORTER_OPTIONS)
 
-$(PACKAGER_SCRIPT): .FORCE
+$(PACKAGER_SCRIPT): $(RELEASE_DIR) .FORCE
 	@echo Fetching packager script...
-	@mkdir -p $(@D)
 	@curl -Ls $(PACKAGER_SCRIPT_URL) > $(@)
 
-$(EXPORTER_BIN):
+$(EXPORTER_BIN): $(RELEASE_DIR)
 	@echo Fetching exporter binary...
-	-@mkdir $(@D)
 	@curl -Ls $(EXPORTER_BIN_URL) > $(@)
+
+$(RELEASE_DIR):
+	@mkdir $(@)

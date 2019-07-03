@@ -16,6 +16,7 @@ externals:
         tag: latest
 
 ignore:
+    - LibRPMedia-*-1.0.manifest
     - Libs/LibDeflate/.appveyor
     - Libs/LibDeflate/.rockspecs
     - Libs/LibDeflate/.travis

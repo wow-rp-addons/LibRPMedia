@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 8.2.0.30888
--- Build Config: 3731ba6e92659f1e5eb54f6e4e6a276d
+-- Client Version: 8.2.0.30948
+-- Build Config: be72420aa1d5c68accd19ac484b2f129
 local version = select(4, GetBuildInfo());
 if version < 80100 then
     return;

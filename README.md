@@ -16,6 +16,15 @@ To load the library, include a reference to any of the following files within yo
 
 The `LibRPMedia-1.0.xml` file includes all references to databases for both Retail and Classic, whereas the other files only include script references to files specific to their targetted product. Use of the product-specific XML files is recommended when you have control of the packaging process.
 
+### Dependencies
+
+This library depends upon the following. These must be loaded *prior* to loading LibRPMedia via any of its XML files; the library will not load its embedded dependencies automatically.
+
+ * [LibStub](https://www.curseforge.com/wow/addons/libstub)
+ * [LibDeflate](https://github.com/SafeteeWoW/LibDeflate)
+
+Copies of these are present in the Libs directory as a convenience and may be used by the embedding addon.
+
 ## Usage
 
 ### Music API
@@ -187,9 +196,9 @@ end
 
 ## Building
 
-The following binaries must be present on your system:
+The included Makefile will download a precompiled binary for the [exporter](https://github.com/wow-rp-addons/LibRPExporter) which will perform data generation. The download requires [cURL](https://curl.haxx.se/) be installed; otherwise you can download and install it manually into a `.release` directory.
 
- * [curl](https://curl.haxx.se/)
+Running `make` will regenerate the data for both Classic and Retail versions of the game, downloading data from the CDN and various external services and caching them the `.cache` directory. The generated databases will be stored within the `LibRPMedia-{Classic,Retail}-1.0.lua` files.
 
 ## License
 

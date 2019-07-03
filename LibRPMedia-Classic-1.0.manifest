@@ -1,0 +1,1803 @@
+
+[[Music]]
+  File = 53183
+  Name = "citymusic/darnassus/darnassus intro"
+  Duration = "39.915100544s"
+  Names = [
+    "citymusic/darnassus/darnassus intro",
+    "moment-darnassus intro_01",
+  ]
+
+[[Music]]
+  File = 53184
+  Name = "citymusic/darnassus/darnassus walking 1"
+  Duration = "1m25.002445792s"
+  Names = [
+    "citymusic/darnassus/darnassus walking 1",
+    "zone-darnassus_01",
+  ]
+
+[[Music]]
+  File = 53185
+  Name = "citymusic/darnassus/darnassus walking 2"
+  Duration = "1m9.48571168s"
+  Names = [
+    "citymusic/darnassus/darnassus walking 2",
+    "zone-darnassus_02",
+  ]
+
+[[Music]]
+  File = 53186
+  Name = "citymusic/darnassus/darnassus walking 3"
+  Duration = "1m7.631017872s"
+  Names = [
+    "citymusic/darnassus/darnassus walking 3",
+    "zone-darnassus_03",
+    "moment-darnassus walking03_01",
+  ]
+
+[[Music]]
+  File = 53187
+  Name = "citymusic/darnassus/druid grove"
+  Duration = "44.878365664s"
+  Names = [
+    "citymusic/darnassus/druid grove",
+    "moment-druidgrove_01",
+  ]
+
+[[Music]]
+  File = 53188
+  Name = "citymusic/darnassus/warrior terrace"
+  Duration = "53.446528608s"
+  Names = [
+    "citymusic/darnassus/warrior terrace",
+    "moment-warriorterrace_01",
+  ]
+
+[[Music]]
+  File = 53189
+  Name = "citymusic/gnomeragon/gnomeragon01-zone"
+  Duration = "1m4.548569008s"
+  Names = [
+    "citymusic/gnomeragon/gnomeragon01-zone",
+    "zone-gnomeragon_01",
+  ]
+
+[[Music]]
+  File = 53190
+  Name = "citymusic/gnomeragon/gnomeragon02-zone"
+  Duration = "1m4.809793488s"
+  Names = [
+    "citymusic/gnomeragon/gnomeragon02-zone",
+    "zone-gnomeragon_02",
+  ]
+
+[[Music]]
+  File = 53191
+  Name = "citymusic/ironforge/ironforge intro"
+  Duration = "1m26.151833504s"
+  Names = [
+    "citymusic/ironforge/ironforge intro",
+    "ironforge intro_01",
+    "zone-ironforge intro_01",
+  ]
+
+[[Music]]
+  File = 53192
+  Name = "citymusic/ironforge/ironforge walking 01"
+  Duration = "2m3.402444352s"
+  Names = [
+    "citymusic/ironforge/ironforge walking 01",
+    "zone-ironforge_01",
+  ]
+
+[[Music]]
+  File = 53193
+  Name = "citymusic/ironforge/ironforge walking 02"
+  Duration = "50.468569536s"
+  Names = [
+    "citymusic/ironforge/ironforge walking 02",
+    "moment-kingstheme_01",
+  ]
+
+[[Music]]
+  File = 53194
+  Name = "citymusic/ironforge/ironforge walking 03 (glenn)"
+  Duration = "1m21.188568384s"
+  Names = [
+    "citymusic/ironforge/ironforge walking 03 (glenn)",
+    "zone-ironforge_02",
+    "zone-dwarf outpost_01",
+    "moment-monestery_01",
+  ]
+
+[[Music]]
+  File = 53195
+  Name = "citymusic/ironforge/ironforge walking 04"
+  Duration = "1m10.26938512s"
+  Names = [
+    "citymusic/ironforge/ironforge walking 04",
+    "zone-ironforge_03",
+    "zone-dwarf outpost_02",
+    "moment-monestery_02",
+  ]
+
+[[Music]]
+  File = 53196
+  Name = "citymusic/ironforge/tinkertownintro_moment"
+  Duration = "51.905304176s"
+  Names = [
+    "citymusic/ironforge/tinkertownintro_moment",
+    "zone-tinkertown intro_01",
+  ]
+
+[[Music]]
+  File = 53197
+  Name = "citymusic/orgrimmar/orgrimmar01-moment"
+  Duration = "1m8.884895376s"
+  Names = [
+    "citymusic/orgrimmar/orgrimmar01-moment",
+    "zone music day orgrimmar city_01",
+    "moment-orgrimmar01_01",
+    "moment-orgrimmar_01",
+  ]
+
+[[Music]]
+  File = 53198
+  Name = "citymusic/orgrimmar/orgrimmar01-zone"
+  Duration = "1m8.884895376s"
+  Names = [
+    "citymusic/orgrimmar/orgrimmar01-zone",
+    "zone-orgrimmar_02",
+    "zone-crossroads_02",
+  ]
+
+[[Music]]
+  File = 53199
+  Name = "citymusic/orgrimmar/orgrimmar02-moment"
+  Duration = "1m2.328160928s"
+  Names = [
+    "citymusic/orgrimmar/orgrimmar02-moment",
+    "moment - orgrimmar02_01",
+    "moment-orgrimmar_02",
+  ]
+
+[[Music]]
+  File = 53200
+  Name = "citymusic/orgrimmar/orgrimmar02-zone"
+  Duration = "1m2.328160928s"
+  Names = [
+    "citymusic/orgrimmar/orgrimmar02-zone",
+    "zone-orgrimmar_01",
+    "zone - orgrimmar02_01",
+    "zone-crossroads_04",
+  ]
+
+[[Music]]
+  File = 53201
+  Name = "citymusic/orgrimmar/orgrimmar_intro-moment"
+  Duration = "40.176325024s"
+  Names = [
+    "citymusic/orgrimmar/orgrimmar_intro-moment",
+    "moment-orgrimmar intro_01",
+  ]
+
+[[Music]]
+  File = 53202
+  Name = "citymusic/stormwind/stormwind01-moment"
+  Duration = "54.804895904s"
+  Names = [
+    "citymusic/stormwind/stormwind01-moment",
+    "zone-stormwind_05",
+    "moment-stormwind01_01",
+  ]
+
+[[Music]]
+  File = 53203
+  Name = "citymusic/stormwind/stormwind02-moment"
+  Duration = "35.552651728s"
+  Names = [
+    "citymusic/stormwind/stormwind02-moment",
+    "zone-stormwind_08",
+    "moment-stormwind02_01",
+  ]
+
+[[Music]]
+  File = 53204
+  Name = "citymusic/stormwind/stormwind03-moment"
+  Duration = "1m9.903670848s"
+  Names = [
+    "citymusic/stormwind/stormwind03-moment",
+    "zone-stormwind_06",
+    "moment-stormwind03_01",
+  ]
+
+[[Music]]
+  File = 53205
+  Name = "citymusic/stormwind/stormwind04-zone"
+  Duration = "1m2.30203848s"
+  Names = [
+    "citymusic/stormwind/stormwind04-zone",
+    "zone-stormwind_07",
+    "zone-stormwindcave_01",
+  ]
+
+[[Music]]
+  File = 53206
+  Name = "citymusic/stormwind/stormwind05-zone"
+  Duration = "1m0.99591608s"
+  Names = [
+    "citymusic/stormwind/stormwind05-zone",
+    "zone-stormwind_01",
+    "zone-stormwindcave_02",
+  ]
+
+[[Music]]
+  File = 53207
+  Name = "citymusic/stormwind/stormwind06-zone"
+  Duration = "53.655508192s"
+  Names = [
+    "citymusic/stormwind/stormwind06-zone",
+    "zone-stormwind_02",
+  ]
+
+[[Music]]
+  File = 53208
+  Name = "citymusic/stormwind/stormwind07-zone"
+  Duration = "1m26.98775184s"
+  Names = [
+    "citymusic/stormwind/stormwind07-zone",
+    "zone-stormwind_03",
+    "moment-stormwind07_01",
+  ]
+
+[[Music]]
+  File = 53209
+  Name = "citymusic/stormwind/stormwind08-zone"
+  Duration = "1m17.296323632s"
+  Names = [
+    "citymusic/stormwind/stormwind08-zone",
+    "zone-stormwind_04",
+    "moment-stormwind08_01",
+  ]
+
+[[Music]]
+  File = 53210
+  Name = "citymusic/stormwind/stormwind_highseas-moment"
+  Duration = "2m13.067750112s"
+  Names = [
+    "citymusic/stormwind/stormwind_highseas-moment",
+    "moment-stormwindsouthseas_01",
+  ]
+
+[[Music]]
+  File = 53211
+  Name = "citymusic/stormwind/stormwind_intro-moment"
+  Duration = "1m6.74285464s"
+  Names = [
+    "citymusic/stormwind/stormwind_intro-moment",
+    "moment-valleyofheros intro_01",
+  ]
+
+[[Music]]
+  File = 53212
+  Name = "citymusic/thunderbluff/thunderbluff intro"
+  Duration = "46.079998272s"
+  Names = [
+    "citymusic/thunderbluff/thunderbluff intro",
+    "zone-thunderbluff intro_01",
+  ]
+
+[[Music]]
+  File = 53213
+  Name = "citymusic/thunderbluff/thunderbluff walking 01"
+  Duration = "1m57.472648656s"
+  Names = [
+    "citymusic/thunderbluff/thunderbluff walking 01",
+    "zone-thunderbluff_01",
+  ]
+
+[[Music]]
+  File = 53214
+  Name = "citymusic/thunderbluff/thunderbluff walking 02"
+  Duration = "1m56.323260944s"
+  Names = [
+    "citymusic/thunderbluff/thunderbluff walking 02",
+    "zone-thunderbluff_02",
+  ]
+
+[[Music]]
+  File = 53215
+  Name = "citymusic/thunderbluff/thunderbluff walking 03"
+  Duration = "2m1.547750544s"
+  Names = [
+    "citymusic/thunderbluff/thunderbluff walking 03",
+    "zone-thunderbluff_03",
+    "zone-crossroads_03",
+  ]
+
+[[Music]]
+  File = 53216
+  Name = "citymusic/undercity/undercity01-zone"
+  Duration = "1m7.030201568s"
+  Names = [
+    "citymusic/undercity/undercity01-zone",
+    "zone-undercity_01",
+  ]
+
+[[Music]]
+  File = 53217
+  Name = "citymusic/undercity/undercity02-zone"
+  Duration = "1m25.629384544s"
+  Names = [
+    "citymusic/undercity/undercity02-zone",
+    "zone-undercity_02",
+  ]
+
+[[Music]]
+  File = 53218
+  Name = "citymusic/undercity/undercity03-zone"
+  Duration = "1m15.415507376s"
+  Names = [
+    "citymusic/undercity/undercity03-zone",
+    "zone-undercity_03",
+  ]
+
+[[Music]]
+  File = 53219
+  Name = "citymusic/undercity/undercityintro-moment"
+  Duration = "28.839182592s"
+  Names = [
+    "citymusic/undercity/undercityintro-moment",
+    "zone - undercity intro_01",
+  ]
+
+[[Music]]
+  File = 53223
+  Name = "gluescreenmusic/wow_main_theme"
+  Duration = "2m41.279993952s"
+  Names = [
+    "gluescreenmusic/wow_main_theme",
+    "mus_1.0_maintitle_original_01",
+  ]
+
+[[Music]]
+  File = 53224
+  Name = "musical moments/angelic/angelic01"
+  Duration = "47.908569632s"
+  Names = [
+    "musical moments/angelic/angelic01",
+    "moment-angelic01_01",
+  ]
+
+[[Music]]
+  File = 53225
+  Name = "musical moments/battle/battle01"
+  Duration = "48.222039008s"
+  Names = [
+    "musical moments/battle/battle01",
+    "moment-battle02_02",
+    "moment - battle01_01",
+  ]
+
+[[Music]]
+  File = 53226
+  Name = "musical moments/battle/battle02"
+  Duration = "1m2.328160928s"
+  Names = [
+    "musical moments/battle/battle02",
+    "moment-battle02_01",
+    "moment - battle02_01",
+  ]
+
+[[Music]]
+  File = 53227
+  Name = "musical moments/battle/battle03"
+  Duration = "27.271835712s"
+  Names = [
+    "musical moments/battle/battle03",
+    "moment-battle02_03",
+    "moment - battle03_01",
+  ]
+
+[[Music]]
+  File = 53228
+  Name = "musical moments/battle/battle04"
+  Duration = "36.284080272s"
+  Names = [
+    "musical moments/battle/battle04",
+    "moment-battle02_04",
+    "moment - battle04_01",
+  ]
+
+[[Music]]
+  File = 53229
+  Name = "musical moments/battle/battle05"
+  Duration = "44.747753424s"
+  Names = [
+    "musical moments/battle/battle05",
+    "moment - battle05_01",
+  ]
+
+[[Music]]
+  File = 53230
+  Name = "musical moments/battle/battle06"
+  Duration = "1m2.406528272s"
+  Names = [
+    "musical moments/battle/battle06",
+    "moment - battle06_01",
+  ]
+
+[[Music]]
+  File = 53231
+  Name = "musical moments/gloomy/gloomy01"
+  Duration = "36.284080272s"
+  Names = [
+    "musical moments/gloomy/gloomy01",
+    "moment - gloomy01_01",
+  ]
+
+[[Music]]
+  File = 53232
+  Name = "musical moments/gloomy/gloomy02"
+  Duration = "39.70612096s"
+  Names = [
+    "musical moments/gloomy/gloomy02",
+    "moment - gloomy02_01",
+  ]
+
+[[Music]]
+  File = 53234
+  Name = "musical moments/haunted/haunted01"
+  Duration = "1m2.093058896s"
+  Names = [
+    "musical moments/haunted/haunted01",
+    "zone-haunted_01",
+    "zone-hauntedcombo_01",
+  ]
+
+[[Music]]
+  File = 53235
+  Name = "musical moments/haunted/haunted02"
+  Duration = "1m0.003263056s"
+  Names = [
+    "musical moments/haunted/haunted02",
+    "moment-haunted02_01",
+    "zone-hauntedcombo_02",
+  ]
+
+[[Music]]
+  File = 53236
+  Name = "musical moments/magic/magic01-moment"
+  Duration = "1m3.973875152s"
+  Names = [
+    "musical moments/magic/magic01-moment",
+    "moment-magic_01",
+  ]
+
+[[Music]]
+  File = 53237
+  Name = "musical moments/magic/magic01-zone1"
+  Duration = "33.227753856s"
+  Names = [
+    "musical moments/magic/magic01-zone1",
+    "zone-magic_02",
+  ]
+
+[[Music]]
+  File = 53238
+  Name = "musical moments/magic/magic01-zone2"
+  Duration = "39.340406688s"
+  Names = [
+    "musical moments/magic/magic01-zone2",
+    "zone-magic_01",
+  ]
+
+[[Music]]
+  File = 53239
+  Name = "musical moments/mystery/ahnqirajintro1"
+  Duration = "2m23.621219104s"
+  Names = [
+    "musical moments/mystery/ahnqirajintro1",
+    "moment - ahnqirajintro1_01",
+  ]
+
+[[Music]]
+  File = 53240
+  Name = "musical moments/mystery/mystery01-zone"
+  Duration = "1m0.786936496s"
+  Names = [
+    "musical moments/mystery/mystery01-zone",
+    "zone-mystery_10",
+  ]
+
+[[Music]]
+  File = 53241
+  Name = "musical moments/mystery/mystery02-zone"
+  Duration = "53.577140848s"
+  Names = [
+    "musical moments/mystery/mystery02-zone",
+    "zone-mystery_05",
+  ]
+
+[[Music]]
+  File = 53242
+  Name = "musical moments/mystery/mystery03-zone"
+  Duration = "1m0.86530384s"
+  Names = [
+    "musical moments/mystery/mystery03-zone",
+    "zone-mystery_01",
+  ]
+
+[[Music]]
+  File = 53243
+  Name = "musical moments/mystery/mystery04-zone"
+  Duration = "1m4.444079216s"
+  Names = [
+    "musical moments/mystery/mystery04-zone",
+    "zone-mystery_02",
+  ]
+
+[[Music]]
+  File = 53244
+  Name = "musical moments/mystery/mystery05-zone"
+  Duration = "1m21.789384688s"
+  Names = [
+    "musical moments/mystery/mystery05-zone",
+    "zone-mystery_04",
+  ]
+
+[[Music]]
+  File = 53245
+  Name = "musical moments/mystery/mystery06-zone"
+  Duration = "1m5.43673224s"
+  Names = [
+    "musical moments/mystery/mystery06-zone",
+    "zone-mystery_06",
+  ]
+
+[[Music]]
+  File = 53246
+  Name = "musical moments/mystery/mystery07-zone"
+  Duration = "1m23.278364224s"
+  Names = [
+    "musical moments/mystery/mystery07-zone",
+    "zone-mystery_07",
+  ]
+
+[[Music]]
+  File = 53247
+  Name = "musical moments/mystery/mystery08-zone"
+  Duration = "1m23.33060912s"
+  Names = [
+    "musical moments/mystery/mystery08-zone",
+    "zone-mystery_08",
+  ]
+
+[[Music]]
+  File = 53248
+  Name = "musical moments/mystery/mystery09-zone"
+  Duration = "1m22.02448672s"
+  Names = [
+    "musical moments/mystery/mystery09-zone",
+    "zone-mystery_09",
+  ]
+
+[[Music]]
+  File = 53249
+  Name = "musical moments/mystery/mystery10-zone"
+  Duration = "1m2.458773168s"
+  Names = [
+    "musical moments/mystery/mystery10-zone",
+    "zone-mystery_03",
+  ]
+
+[[Music]]
+  File = 53250
+  Name = "musical moments/sacred/sacred01"
+  Duration = "16.300407552s"
+  Names = [
+    "musical moments/sacred/sacred01",
+    "moment-sacred01_01",
+  ]
+
+[[Music]]
+  File = 53251
+  Name = "musical moments/sacred/sacred02"
+  Duration = "19.095509488s"
+  Names = [
+    "musical moments/sacred/sacred02",
+    "moment - sacred02_01",
+  ]
+
+[[Music]]
+  File = 53252
+  Name = "musical moments/spooky/spooky01-moment"
+  Duration = "25.835101072s"
+  Names = [
+    "musical moments/spooky/spooky01-moment",
+    "moment-spooky01_01",
+  ]
+
+[[Music]]
+  File = 53253
+  Name = "musical moments/swamp/swamp01"
+  Duration = "34.559998704s"
+  Names = [
+    "musical moments/swamp/swamp01",
+    "moment-swamp01_01",
+  ]
+
+[[Music]]
+  File = 53254
+  Name = "musical moments/zulgurubvoodoo"
+  Duration = "1m24.323262144s"
+  Names = [
+    "musical moments/zulgurubvoodoo",
+    "moment - zul gurub_01",
+  ]
+
+[[Music]]
+  File = 53256
+  Name = "worldevents/darkmoonfaire_1"
+  Duration = "28.577958112s"
+  Names = ["worldevents/darkmoonfaire_1"]
+
+[[Music]]
+  File = 53257
+  Name = "worldevents/darkmoonfaire_2"
+  Duration = "1m14.05714008s"
+  Names = [
+    "worldevents/darkmoonfaire_2",
+    "darkmoon_faire_music_01",
+  ]
+
+[[Music]]
+  File = 53258
+  Name = "worldevents/darkmoonfaire_3"
+  Duration = "58.566528416s"
+  Names = ["worldevents/darkmoonfaire_3"]
+
+[[Music]]
+  File = 53259
+  Name = "worldevents/darkmoonfaire_4"
+  Duration = "37.564080224s"
+  Names = ["worldevents/darkmoonfaire_4"]
+
+[[Music]]
+  File = 53261
+  Name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking1"
+  Duration = "1m7.448160736s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajexteriorwalking1",
+    "zone - ahnqirajexterior_01",
+  ]
+
+[[Music]]
+  File = 53262
+  Name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking2"
+  Duration = "1m24.610609072s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajexteriorwalking2",
+    "zone - ahnqirajexterior_02",
+  ]
+
+[[Music]]
+  File = 53263
+  Name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking3"
+  Duration = "57.913467216s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajexteriorwalking3",
+    "zone - ahnqirajexterior_03",
+  ]
+
+[[Music]]
+  File = 53264
+  Name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking4"
+  Duration = "59.010610032s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajexteriorwalking4",
+    "zone - ahnqirajexterior_04",
+  ]
+
+[[Music]]
+  File = 53265
+  Name = "zonemusic/ahnqiraj/ahnqirajinterior1"
+  Duration = "52.009793968s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajinterior1",
+    "zone music - ahnqirajinteriorwa_01",
+  ]
+
+[[Music]]
+  File = 53266
+  Name = "zonemusic/ahnqiraj/ahnqirajinterior2"
+  Duration = "1m21.37142552s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajinterior2",
+    "zone music - ahnqirajinteriorwa_02",
+  ]
+
+[[Music]]
+  File = 53267
+  Name = "zonemusic/ahnqiraj/ahnqirajinterior3"
+  Duration = "1m7.291426048s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajinterior3",
+    "zone music - ahnqirajinteriorwa_03",
+  ]
+
+[[Music]]
+  File = 53268
+  Name = "zonemusic/ahnqiraj/ahnqirajinteriorcenterroom1"
+  Duration = "1m9.668568816s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajinteriorcenterroom1",
+    "ahnqirajinteriorcenterroom_01",
+  ]
+
+[[Music]]
+  File = 53269
+  Name = "zonemusic/ahnqiraj/ahnqirajinteriorintromain"
+  Duration = "1m9.35509944s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajinteriorintromain",
+    "zone music - ahnqirajinteriorin_01",
+  ]
+
+[[Music]]
+  File = 53270
+  Name = "zonemusic/ahnqiraj/ahnqirajkingroom"
+  Duration = "1m13.064487056s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajkingroom",
+    "ahnqirajkingroom_01",
+  ]
+
+[[Music]]
+  File = 53271
+  Name = "zonemusic/ahnqiraj/ahnqirajtriangleroom1"
+  Duration = "23.405713408s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajtriangleroom1",
+    "ahnqirajtriangleroomwalking_01",
+  ]
+
+[[Music]]
+  File = 53272
+  Name = "zonemusic/ahnqiraj/ahnqirajtriangleroom2"
+  Duration = "17.475917712s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajtriangleroom2",
+    "ahnqirajtriangleroomwalking_02",
+  ]
+
+[[Music]]
+  File = 53273
+  Name = "zonemusic/ahnqiraj/ahnqirajtriangleroom3"
+  Duration = "15.777958592s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajtriangleroom3",
+    "ahnqirajtriangleroomwalking_03",
+  ]
+
+[[Music]]
+  File = 53274
+  Name = "zonemusic/ahnqiraj/ahnqirajtriangleroom4"
+  Duration = "19.696325792s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajtriangleroom4",
+    "ahnqirajtriangleroomwalking_04",
+  ]
+
+[[Music]]
+  File = 53275
+  Name = "zonemusic/ahnqiraj/ahnqirajtriangleroom5"
+  Duration = "31.529794736s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajtriangleroom5",
+    "ahnqirajtriangleroomwalking_05",
+  ]
+
+[[Music]]
+  File = 53276
+  Name = "zonemusic/ahnqiraj/ahnqirajtriangleroom6"
+  Duration = "20.035917616s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajtriangleroom6",
+    "ahnqirajtriangleroomwalking_06",
+  ]
+
+[[Music]]
+  File = 53277
+  Name = "zonemusic/ahnqiraj/ahnqirajtriangleroom7"
+  Duration = "17.684897296s"
+  Names = [
+    "zonemusic/ahnqiraj/ahnqirajtriangleroom7",
+    "ahnqirajtriangleroomwalking_07",
+  ]
+
+[[Music]]
+  File = 53299
+  Name = "zonemusic/barrendry/daybarrendry01"
+  Duration = "1m4.13060984s"
+  Names = [
+    "zonemusic/barrendry/daybarrendry01",
+    "zone-barrendry day_05",
+    "zone-barrendry night_06",
+  ]
+
+[[Music]]
+  File = 53300
+  Name = "zonemusic/barrendry/daybarrendry02"
+  Duration = "1m4.182854736s"
+  Names = [
+    "zonemusic/barrendry/daybarrendry02",
+    "zone-barrendry day_03",
+    "zone-barrendry night_03",
+  ]
+
+[[Music]]
+  File = 53301
+  Name = "zonemusic/barrendry/daybarrendry03"
+  Duration = "55.353467312s"
+  Names = [
+    "zonemusic/barrendry/daybarrendry03",
+    "zone-barrendry night_04",
+    "moment-orc barren_01",
+    "zone-crossroads_01",
+  ]
+
+[[Music]]
+  File = 53302
+  Name = "zonemusic/barrendry/nightbarrendry01"
+  Duration = "1m7.39591584s"
+  Names = [
+    "zonemusic/barrendry/nightbarrendry01",
+    "zone-barrendry day_01",
+    "zone-barrendry night_01",
+  ]
+
+[[Music]]
+  File = 53303
+  Name = "zonemusic/barrendry/nightbarrendry02"
+  Duration = "40.907753568s"
+  Names = [
+    "zonemusic/barrendry/nightbarrendry02",
+    "zone-barrendry day_02",
+    "zone-barrendry night_02",
+  ]
+
+[[Music]]
+  File = 53304
+  Name = "zonemusic/barrendry/nightbarrendry03"
+  Duration = "47.464488016s"
+  Names = [
+    "zonemusic/barrendry/nightbarrendry03",
+    "zone-barrendry day_04",
+    "zone-barrendry night_05",
+  ]
+
+[[Music]]
+  File = 53426
+  Name = "zonemusic/cursedland/cursedland01"
+  Duration = "54.78675s"
+  Names = [
+    "zonemusic/cursedland/cursedland01",
+    "zone-cursed land felwood_01",
+    "altervac valley_pvp_01",
+  ]
+
+[[Music]]
+  File = 53427
+  Name = "zonemusic/cursedland/cursedland02"
+  Duration = "58.749385552s"
+  Names = [
+    "zonemusic/cursedland/cursedland02",
+    "zone-cursedlandfelwoodfurbolg_01",
+    "moment-cursed land_01",
+    "altervac valley_pvp_02",
+  ]
+
+[[Music]]
+  File = 53428
+  Name = "zonemusic/cursedland/cursedland03"
+  Duration = "1m4.313466976s"
+  Names = [
+    "zonemusic/cursedland/cursedland03",
+    "zone-cursed land felwood_02",
+    "zone-cursedlandfelwoodfurbolg_02",
+    "altervac valley_pvp_03",
+  ]
+
+[[Music]]
+  File = 53429
+  Name = "zonemusic/cursedland/cursedland04"
+  Duration = "1m19.307752128s"
+  Names = [
+    "zonemusic/cursedland/cursedland04",
+    "zone - plaguelands_01",
+    "altervac valley_pvp_04",
+  ]
+
+[[Music]]
+  File = 53430
+  Name = "zonemusic/cursedland/cursedland05"
+  Duration = "1m22.468568336s"
+  Names = [
+    "zonemusic/cursedland/cursedland05",
+    "zone - plaguelands_02",
+    "moment-cursed land_02",
+    "altervac valley_pvp_05",
+  ]
+
+[[Music]]
+  File = 53431
+  Name = "zonemusic/cursedland/cursedland06"
+  Duration = "1m14.161629872s"
+  Names = [
+    "zonemusic/cursedland/cursedland06",
+    "zone - plaguelands_03",
+    "altervac valley_pvp_06",
+  ]
+
+[[Music]]
+  File = 53432
+  Name = "zonemusic/desert/daydesert01"
+  Duration = "1m5.724079168s"
+  Names = [
+    "zonemusic/desert/daydesert01",
+    "zone-desert day_01",
+  ]
+
+[[Music]]
+  File = 53433
+  Name = "zonemusic/desert/daydesert02"
+  Duration = "1m21.031833696s"
+  Names = [
+    "zonemusic/desert/daydesert02",
+    "zone-desert day_02",
+  ]
+
+[[Music]]
+  File = 53434
+  Name = "zonemusic/desert/daydesert03"
+  Duration = "54.2040796s"
+  Names = [
+    "zonemusic/desert/daydesert03",
+    "zone-desert day_03",
+    "moment-desert03_02",
+  ]
+
+[[Music]]
+  File = 53435
+  Name = "zonemusic/desert/nightdesert01"
+  Duration = "1m17.688160352s"
+  Names = [
+    "zonemusic/desert/nightdesert01",
+    "zone-desert night_01",
+    "zone-desert cave_01",
+  ]
+
+[[Music]]
+  File = 53436
+  Name = "zonemusic/desert/nightdesert02"
+  Duration = "1m2.458773168s"
+  Names = [
+    "zonemusic/desert/nightdesert02",
+    "zone-desert night_02",
+    "zone-desert cave_02",
+  ]
+
+[[Music]]
+  File = 53437
+  Name = "zonemusic/desert/nightdesert03"
+  Duration = "57.73061008s"
+  Names = [
+    "zonemusic/desert/nightdesert03",
+    "zone-desert night_03",
+    "moment-desert03_01",
+    "zone-desert cave_03",
+  ]
+
+[[Music]]
+  File = 53453
+  Name = "zonemusic/enchantedforest/enchantedforest01"
+  Duration = "49.946120576s"
+  Names = [
+    "zonemusic/enchantedforest/enchantedforest01",
+    "zone-enchantedforest day_02",
+    "zone-enchantedforest night_02",
+  ]
+
+[[Music]]
+  File = 53454
+  Name = "zonemusic/enchantedforest/enchantedforest02"
+  Duration = "1m7.00407912s"
+  Names = [
+    "zonemusic/enchantedforest/enchantedforest02",
+    "zone-enchantedforest day_04",
+    "zone-enchantedforest night_04",
+  ]
+
+[[Music]]
+  File = 53455
+  Name = "zonemusic/enchantedforest/enchantedforest03"
+  Duration = "3m54.762440176s"
+  Names = [
+    "zonemusic/enchantedforest/enchantedforest03",
+    "zone-enchantedforest day_05",
+    "zone-enchantedforest night_05",
+  ]
+
+[[Music]]
+  File = 53456
+  Name = "zonemusic/enchantedforest/enchantedforest04"
+  Duration = "1m0.708569152s"
+  Names = [
+    "zonemusic/enchantedforest/enchantedforest04",
+    "zone-enchantedforest day_03",
+    "zone-enchantedforest night_03",
+  ]
+
+[[Music]]
+  File = 53457
+  Name = "zonemusic/enchantedforest/enchantedforest05"
+  Duration = "1m10.66122184s"
+  Names = [
+    "zonemusic/enchantedforest/enchantedforest05",
+    "zone-enchantedforest day_01",
+    "zone-enchantedforest night_01",
+  ]
+
+[[Music]]
+  File = 53486
+  Name = "zonemusic/evilforest/dayevilforest01"
+  Duration = "1m10.739589184s"
+  Names = [
+    "zonemusic/evilforest/dayevilforest01",
+    "zone-evilforest day_01",
+  ]
+
+[[Music]]
+  File = 53487
+  Name = "zonemusic/evilforest/dayevilforest02"
+  Duration = "1m12.150201376s"
+  Names = [
+    "zonemusic/evilforest/dayevilforest02",
+    "zone-evilforest day_04",
+  ]
+
+[[Music]]
+  File = 53488
+  Name = "zonemusic/evilforest/dayevilforest03"
+  Duration = "1m10.66122184s"
+  Names = [
+    "zonemusic/evilforest/dayevilforest03",
+    "zone-evilforest day_02",
+  ]
+
+[[Music]]
+  File = 53489
+  Name = "zonemusic/evilforest/nightevilforest01"
+  Duration = "57.286528464s"
+  Names = [
+    "zonemusic/evilforest/nightevilforest01",
+    "zone-evilforest day_03",
+    "zone-evil forest night_01",
+  ]
+
+[[Music]]
+  File = 53490
+  Name = "zonemusic/evilforest/nightevilforest02"
+  Duration = "1m15.49387472s"
+  Names = [
+    "zonemusic/evilforest/nightevilforest02",
+    "zone-evilforest day_05",
+    "zone-evil forest night_02",
+  ]
+
+[[Music]]
+  File = 53491
+  Name = "zonemusic/evilforest/nightevilforest03"
+  Duration = "1m10.556732048s"
+  Names = [
+    "zonemusic/evilforest/nightevilforest03",
+    "zone-evilforest day_06",
+    "zone-evil forest night_03",
+    "moment-evil forest night3_01",
+  ]
+
+[[Music]]
+  File = 53492
+  Name = "zonemusic/forest/dayforest01"
+  Duration = "55.693059136s"
+  Names = [
+    "zonemusic/forest/dayforest01",
+    "zone-forest day_01",
+  ]
+
+[[Music]]
+  File = 53493
+  Name = "zonemusic/forest/dayforest02"
+  Duration = "1m12.515915648s"
+  Names = [
+    "zonemusic/forest/dayforest02",
+    "zone-forest day_02",
+  ]
+
+[[Music]]
+  File = 53494
+  Name = "zonemusic/forest/dayforest03"
+  Duration = "1m4.705303696s"
+  Names = [
+    "zonemusic/forest/dayforest03",
+    "zone-forest day_03",
+  ]
+
+[[Music]]
+  File = 53495
+  Name = "zonemusic/forest/nightforest01"
+  Duration = "53.185304128s"
+  Names = [
+    "zonemusic/forest/nightforest01",
+    "zone-night forest_01",
+    "zone-darkforest_01",
+  ]
+
+[[Music]]
+  File = 53496
+  Name = "zonemusic/forest/nightforest02"
+  Duration = "42.97142696s"
+  Names = [
+    "zonemusic/forest/nightforest02",
+    "zone-night forest_02",
+    "zone-darkforest_02",
+  ]
+
+[[Music]]
+  File = 53497
+  Name = "zonemusic/forest/nightforest03"
+  Duration = "59.324079408s"
+  Names = [
+    "zonemusic/forest/nightforest03",
+    "zone-night forest_03",
+    "zone-darkforest_03",
+  ]
+
+[[Music]]
+  File = 53498
+  Name = "zonemusic/forest/nightforest04"
+  Duration = "54.308569392s"
+  Names = [
+    "zonemusic/forest/nightforest04",
+    "zone-night forest_04",
+    "zone-darkforest_04",
+  ]
+
+[[Music]]
+  File = 53519
+  Name = "zonemusic/ghostmusic/ghostmusic03"
+  Duration = "1m2.093058896s"
+  Names = [
+    "zonemusic/ghostmusic/ghostmusic03",
+    "zone music day ghost_01",
+    "zone music night ghost_01",
+  ]
+
+[[Music]]
+  File = 53541
+  Name = "zonemusic/jungle/dayjungle01"
+  Duration = "46.132243168s"
+  Names = [
+    "zonemusic/jungle/dayjungle01",
+    "zone-jungle day_01",
+    "zone-jungle night_01",
+    "zone-junglevary_01",
+  ]
+
+[[Music]]
+  File = 53542
+  Name = "zonemusic/jungle/dayjungle02"
+  Duration = "1m38.716730992s"
+  Names = [
+    "zonemusic/jungle/dayjungle02",
+    "zone-jungle day_02",
+    "zone-jungle night_02",
+    "zone-junglevary_02",
+  ]
+
+[[Music]]
+  File = 53543
+  Name = "zonemusic/jungle/dayjungle03"
+  Duration = "48.274283904s"
+  Names = [
+    "zonemusic/jungle/dayjungle03",
+    "zone-jungle day_03",
+    "zone-jungle night_03",
+    "zone-junglevary_03",
+  ]
+
+[[Music]]
+  File = 53544
+  Name = "zonemusic/jungle/nightjungle01"
+  Duration = "54.674283664s"
+  Names = [
+    "zonemusic/jungle/nightjungle01",
+    "zone-jungle day_04",
+    "zone-jungle night_04",
+    "zone-junglevary_04",
+  ]
+
+[[Music]]
+  File = 53545
+  Name = "zonemusic/jungle/nightjungle02"
+  Duration = "53.368161264s"
+  Names = [
+    "zonemusic/jungle/nightjungle02",
+    "zone-jungle day_05",
+    "zone-jungle night_05",
+    "zone-junglevary_05",
+  ]
+
+[[Music]]
+  File = 53546
+  Name = "zonemusic/jungle/nightjungle03"
+  Duration = "1m29.129792576s"
+  Names = [
+    "zonemusic/jungle/nightjungle03",
+    "zone-jungle day_06",
+    "zone-jungle night_06",
+    "zone-junglevary_06",
+  ]
+
+[[Music]]
+  File = 53577
+  Name = "zonemusic/mountain/daymountain01"
+  Duration = "2m0.111015904s"
+  Names = [
+    "zonemusic/mountain/daymountain01",
+    "zone-mountain day_01",
+    "zone-mountain night_06",
+  ]
+
+[[Music]]
+  File = 53578
+  Name = "zonemusic/mountain/daymountain02"
+  Duration = "1m6.977956672s"
+  Names = [
+    "zonemusic/mountain/daymountain02",
+    "zone-mountain day_02",
+    "zone-mountain night_04",
+  ]
+
+[[Music]]
+  File = 53579
+  Name = "zonemusic/mountain/daymountain03"
+  Duration = "1m20.300405152s"
+  Names = [
+    "zonemusic/mountain/daymountain03",
+    "zone-mountain day_03",
+    "zone-mountain night_02",
+  ]
+
+[[Music]]
+  File = 53580
+  Name = "zonemusic/mountain/nightmountain01"
+  Duration = "1m4.339589424s"
+  Names = [
+    "zonemusic/mountain/nightmountain01",
+    "zone-mountain night_01",
+  ]
+
+[[Music]]
+  File = 53581
+  Name = "zonemusic/mountain/nightmountain02"
+  Duration = "1m3.033467024s"
+  Names = [
+    "zonemusic/mountain/nightmountain02",
+    "zone-mountain night_05",
+  ]
+
+[[Music]]
+  File = 53582
+  Name = "zonemusic/mountain/nightmountain03"
+  Duration = "1m9.172242304s"
+  Names = [
+    "zonemusic/mountain/nightmountain03",
+    "zone-mountain day_04",
+    "zone-mountain night_03",
+  ]
+
+[[Music]]
+  File = 53583
+  Name = "zonemusic/mountain/nightmountain04"
+  Duration = "1m3.973875152s"
+  Names = [
+    "zonemusic/mountain/nightmountain04",
+    "zone-mountain day_05",
+    "zone-mountain night_07",
+  ]
+
+[[Music]]
+  File = 53591
+  Name = "zonemusic/naxxramas/naxxramasabominationboss1"
+  Duration = "1m1.439997696s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasabominationboss1",
+    "zone-naxxramasabominationboss_01",
+  ]
+
+[[Music]]
+  File = 53592
+  Name = "zonemusic/naxxramas/naxxramasabominationboss2"
+  Duration = "1m7.056324016s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasabominationboss2",
+    "zone-naxxramasabominationboss_02",
+  ]
+
+[[Music]]
+  File = 53593
+  Name = "zonemusic/naxxramas/naxxramasabominationwing1"
+  Duration = "1m1.309385456s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasabominationwing1",
+    "zone-naxxramasabomination_01",
+    "zone-naxxramasabominationboss_03",
+  ]
+
+[[Music]]
+  File = 53594
+  Name = "zonemusic/naxxramas/naxxramasabominationwing2"
+  Duration = "1m6.690609744s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasabominationwing2",
+    "zone-naxxramasabomination_02",
+  ]
+
+[[Music]]
+  File = 53595
+  Name = "zonemusic/naxxramas/naxxramasabominationwing3"
+  Duration = "1m1.309385456s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasabominationwing3",
+    "zone-naxxramasabomination_03",
+  ]
+
+[[Music]]
+  File = 53596
+  Name = "zonemusic/naxxramas/naxxramasfrostwyrm1"
+  Duration = "57.913467216s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasfrostwyrm1",
+    "zone-naxxramasfrostwyrm_01",
+  ]
+
+[[Music]]
+  File = 53597
+  Name = "zonemusic/naxxramas/naxxramasfrostwyrm2"
+  Duration = "1m21.815507136s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasfrostwyrm2",
+    "zone-naxxramasfrostwyrm_02",
+  ]
+
+[[Music]]
+  File = 53598
+  Name = "zonemusic/naxxramas/naxxramasfrostwyrm3"
+  Duration = "1m1.831834416s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasfrostwyrm3",
+    "zone-naxxramasfrostwyrm_03",
+  ]
+
+[[Music]]
+  File = 53599
+  Name = "zonemusic/naxxramas/naxxramasfrostwyrm4"
+  Duration = "1m0.055507952s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasfrostwyrm4",
+    "zone-naxxramasfrostwyrm_04",
+  ]
+
+[[Music]]
+  File = 53600
+  Name = "zonemusic/naxxramas/naxxramashubbase1"
+  Duration = "1m12.594282992s"
+  Names = ["zonemusic/naxxramas/naxxramashubbase1"]
+
+[[Music]]
+  File = 53601
+  Name = "zonemusic/naxxramas/naxxramashubbase2"
+  Duration = "1m21.606527552s"
+  Names = ["zonemusic/naxxramas/naxxramashubbase2"]
+
+[[Music]]
+  File = 53602
+  Name = "zonemusic/naxxramas/naxxramaskelthuzad1"
+  Duration = "1m34.719996448s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaskelthuzad1",
+    "zone-naxxramaskelthuzad_01",
+  ]
+
+[[Music]]
+  File = 53603
+  Name = "zonemusic/naxxramas/naxxramaskelthuzad2"
+  Duration = "1m37.227751456s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaskelthuzad2",
+    "zone-naxxramaskelthuzad_02",
+  ]
+
+[[Music]]
+  File = 53604
+  Name = "zonemusic/naxxramas/naxxramaskelthuzad3"
+  Duration = "1m15.676731856s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaskelthuzad3",
+    "zone-naxxramaskelthuzad_03",
+  ]
+
+[[Music]]
+  File = 53605
+  Name = "zonemusic/naxxramas/naxxramasplagueboss1"
+  Duration = "1m26.961629392s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasplagueboss1",
+    "zone-naxxramasplagueboss_01",
+  ]
+
+[[Music]]
+  File = 53606
+  Name = "zonemusic/naxxramas/naxxramasplaguewing1"
+  Duration = "1m27.745302832s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasplaguewing1",
+    "zone-naxxramasplague_01",
+    "zone-naxxramasplagueboss_02",
+  ]
+
+[[Music]]
+  File = 53607
+  Name = "zonemusic/naxxramas/naxxramasplaguewing2"
+  Duration = "1m11.758364656s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasplaguewing2",
+    "zone-naxxramasplague_02",
+    "zone-naxxramasplagueboss_03",
+  ]
+
+[[Music]]
+  File = 53608
+  Name = "zonemusic/naxxramas/naxxramasplaguewing3"
+  Duration = "1m16.747752224s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasplaguewing3",
+    "zone-naxxramasplague_03",
+  ]
+
+[[Music]]
+  File = 53609
+  Name = "zonemusic/naxxramas/naxxramasspiderboss1"
+  Duration = "1m0.159997744s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasspiderboss1",
+    "zone-naxxramasspiderboss_01",
+  ]
+
+[[Music]]
+  File = 53610
+  Name = "zonemusic/naxxramas/naxxramasspiderboss2"
+  Duration = "1m3.973875152s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasspiderboss2",
+    "zone-naxxramasspiderboss_03",
+  ]
+
+[[Music]]
+  File = 53611
+  Name = "zonemusic/naxxramas/naxxramasspiderwing1"
+  Duration = "1m28.581221168s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasspiderwing1",
+    "zone-naxxramasspider_01",
+  ]
+
+[[Music]]
+  File = 53612
+  Name = "zonemusic/naxxramas/naxxramasspiderwing2"
+  Duration = "1m7.500405632s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasspiderwing2",
+    "zone-naxxramasspider_02",
+  ]
+
+[[Music]]
+  File = 53613
+  Name = "zonemusic/naxxramas/naxxramasspiderwing3"
+  Duration = "47.046528848s"
+  Names = [
+    "zonemusic/naxxramas/naxxramasspiderwing3",
+    "zone-naxxramasspider_03",
+    "zone-naxxramasspiderboss_02",
+  ]
+
+[[Music]]
+  File = 53614
+  Name = "zonemusic/naxxramas/naxxramaswalking1"
+  Duration = "1m41.955914544s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaswalking1",
+    "zone - naxxramsdeathknight_01",
+  ]
+
+[[Music]]
+  File = 53615
+  Name = "zonemusic/naxxramas/naxxramaswalking2"
+  Duration = "1m12.09795648s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaswalking2",
+    "zone - naxxramsdeathknight_02",
+  ]
+
+[[Music]]
+  File = 53616
+  Name = "zonemusic/naxxramas/naxxramaswalking3"
+  Duration = "1m26.961629392s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaswalking3",
+    "zone - naxxramsdeathknight_03",
+  ]
+
+[[Music]]
+  File = 53617
+  Name = "zonemusic/naxxramas/naxxramaswalking4"
+  Duration = "1m22.050609168s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaswalking4",
+    "zone - naxxramsdeathknight_04",
+  ]
+
+[[Music]]
+  File = 53618
+  Name = "zonemusic/naxxramas/naxxramaswalking5"
+  Duration = "1m39.78775136s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaswalking5",
+    "zone - naxxramsdeathknight_05",
+  ]
+
+[[Music]]
+  File = 53619
+  Name = "zonemusic/naxxramas/naxxramaswalking6"
+  Duration = "1m39.39591464s"
+  Names = [
+    "zonemusic/naxxramas/naxxramaswalking6",
+    "zone - naxxramsdeathknight_06",
+  ]
+
+[[Music]]
+  File = 53680
+  Name = "zonemusic/plains/dayplains01"
+  Duration = "53.759997984s"
+  Names = [
+    "zonemusic/plains/dayplains01",
+    "zone-plains day_04",
+    "zoneplains night_04",
+  ]
+
+[[Music]]
+  File = 53681
+  Name = "zonemusic/plains/dayplains02"
+  Duration = "1m16.53877264s"
+  Names = [
+    "zonemusic/plains/dayplains02",
+    "zone-plains day_02",
+    "zoneplains night_02",
+  ]
+
+[[Music]]
+  File = 53682
+  Name = "zonemusic/plains/nightplains01"
+  Duration = "58.38367128s"
+  Names = [
+    "zonemusic/plains/nightplains01",
+    "zone-plains day_01",
+    "zoneplains night_01",
+  ]
+
+[[Music]]
+  File = 53683
+  Name = "zonemusic/plains/nightplains02"
+  Duration = "1m8.623670896s"
+  Names = [
+    "zonemusic/plains/nightplains02",
+    "zone-plains day_03",
+    "zoneplains night_03",
+  ]
+
+[[Music]]
+  File = 53684
+  Name = "zonemusic/pvp/pvp1"
+  Duration = "46.680814576s"
+  Names = [
+    "zonemusic/pvp/pvp1",
+    "pvp-battle grounds_02",
+  ]
+
+[[Music]]
+  File = 53685
+  Name = "zonemusic/pvp/pvp2"
+  Duration = "52.558365376s"
+  Names = [
+    "zonemusic/pvp/pvp2",
+    "pvp-battle grounds_01",
+  ]
+
+[[Music]]
+  File = 53686
+  Name = "zonemusic/pvp/pvp3"
+  Duration = "40.411427056s"
+  Names = [
+    "zonemusic/pvp/pvp3",
+    "pvp-battle grounds_03",
+  ]
+
+[[Music]]
+  File = 53687
+  Name = "zonemusic/pvp/pvp4"
+  Duration = "1m2.902854784s"
+  Names = [
+    "zonemusic/pvp/pvp4",
+    "pvp-battle grounds_04",
+  ]
+
+[[Music]]
+  File = 53688
+  Name = "zonemusic/pvp/pvp5"
+  Duration = "1m1.753467072s"
+  Names = [
+    "zonemusic/pvp/pvp5",
+    "pvp-battle grounds_05",
+  ]
+
+[[Music]]
+  File = 53695
+  Name = "zonemusic/soggyplace/soggyplace-zone1"
+  Duration = "1m37.17550656s"
+  Names = [
+    "zonemusic/soggyplace/soggyplace-zone1",
+    "zone-soggy night_01",
+  ]
+
+[[Music]]
+  File = 53696
+  Name = "zonemusic/soggyplace/soggyplace-zone2"
+  Duration = "1m37.410608592s"
+  Names = [
+    "zonemusic/soggyplace/soggyplace-zone2",
+    "zone-soggy day_01",
+  ]
+
+[[Music]]
+  File = 53697
+  Name = "zonemusic/soggyplace/soggyplace-zone3"
+  Duration = "1m30.51428232s"
+  Names = [
+    "zonemusic/soggyplace/soggyplace-zone3",
+    "zone-soggy night_02",
+  ]
+
+[[Music]]
+  File = 53698
+  Name = "zonemusic/soggyplace/soggyplace-zone4"
+  Duration = "1m29.364894608s"
+  Names = [
+    "zonemusic/soggyplace/soggyplace-zone4",
+    "zone-soggy night_03",
+  ]
+
+[[Music]]
+  File = 53699
+  Name = "zonemusic/soggyplace/soggyplace-zone5"
+  Duration = "1m10.347752464s"
+  Names = [
+    "zonemusic/soggyplace/soggyplace-zone5",
+    "zone-soggy day_02",
+  ]
+
+[[Music]]
+  File = 53737
+  Name = "zonemusic/tavernalliance/tavernalliance01"
+  Duration = "47.438365568s"
+  Names = [
+    "zonemusic/tavernalliance/tavernalliance01",
+    "zone-tavernalliance_01",
+  ]
+
+[[Music]]
+  File = 53738
+  Name = "zonemusic/tavernalliance/tavernalliance02"
+  Duration = "51.435100112s"
+  Names = [
+    "zonemusic/tavernalliance/tavernalliance02",
+    "zone-tavernalliance_02",
+  ]
+
+[[Music]]
+  File = 53744
+  Name = "zonemusic/tavernhorde/tavernhorde01"
+  Duration = "48.45714104s"
+  Names = [
+    "zonemusic/tavernhorde/tavernhorde01",
+    "zone-tavernhorde_01",
+  ]
+
+[[Music]]
+  File = 53745
+  Name = "zonemusic/tavernhorde/tavernhorde02"
+  Duration = "39.340406688s"
+  Names = [
+    "zonemusic/tavernhorde/tavernhorde02",
+    "zone-tavernhorde_02",
+  ]
+
+[[Music]]
+  File = 53746
+  Name = "zonemusic/tavernhorde/tavernhorde03"
+  Duration = "47.177141088s"
+  Names = [
+    "zonemusic/tavernhorde/tavernhorde03",
+    "zone-tavernhorde01_01",
+  ]
+
+[[Music]]
+  File = 53747
+  Name = "zonemusic/tavernhorde/undead_dance"
+  Duration = "25.260407216s"
+  Names = [
+    "zonemusic/tavernhorde/undead_dance",
+    "zone-undead dance_01",
+  ]
+
+[[Music]]
+  File = 53812
+  Name = "zonemusic/volcanic/dayvolcanic01"
+  Duration = "1m12.88162992s"
+  Names = [
+    "zonemusic/volcanic/dayvolcanic01",
+    "zone-volcanic day_01",
+    "zone-volcanic night_01",
+  ]
+
+[[Music]]
+  File = 53813
+  Name = "zonemusic/volcanic/dayvolcanic02"
+  Duration = "1m27.327343664s"
+  Names = [
+    "zonemusic/volcanic/dayvolcanic02",
+    "zone-volcanic day_02",
+    "zone-volcanic night_02",
+  ]
+
+[[Music]]
+  File = 53814
+  Name = "zonemusic/volcanic/nightvolcanic01"
+  Duration = "1m11.209793248s"
+  Names = [
+    "zonemusic/volcanic/nightvolcanic01",
+    "zone-volcanic day_03",
+    "zone-volcanic night_03",
+  ]
+
+[[Music]]
+  File = 53815
+  Name = "zonemusic/volcanic/nightvolcanic02"
+  Duration = "1m4.417956768s"
+  Names = [
+    "zonemusic/volcanic/nightvolcanic02",
+    "zone-volcanic day_04",
+    "zone-volcanic night_04",
+  ]
