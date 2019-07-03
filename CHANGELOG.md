@@ -1,5 +1,9 @@
 # LibRPMedia-1.0
 
+## v1.0.1
+
+ * No outward facing changes.
+
 ## v1.0.0
 
  * Added support for substring and pattern searches to FindMusicFiles.
