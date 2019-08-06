@@ -175,5 +175,3 @@ end
 
 -- Module exports.
 return Resources;
-
-
