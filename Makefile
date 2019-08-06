@@ -22,10 +22,6 @@ LUACHECK ?= luacheck
 # Directory where releases and scripts are downoaded to.
 RELEASE_DIR := .release
 
-# Path and URL to the exporter binary for data generation.
-EXPORTER_BIN := $(RELEASE_DIR)/LibRPMediaExporter-v1.1.0.exe
-EXPORTER_BIN_URL := https://github.com/wow-rp-addons/LibRPMediaExporter/releases/download/v1.1.0/LibRPMediaExporter.exe
-
 # Path and URL to the packager script.
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
 PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh
@@ -51,9 +47,9 @@ test:
 	@echo Testing Retail database...
 	@$(LUA) Tests/Tests.lua --interface $(Retail_INTERFACE_VERSION)
 
-LibRPMedia-%-1.0.lua: $(EXPORTER_BIN) .FORCE
+LibRPMedia-%-1.0.lua: .FORCE
 	@echo Generating $(@)...
-	@$(EXPORTER_BIN) \
+	@cd Exporter && $(LUA) Exporter.lua \
 		--manifest LibRPMedia-$(*)-1.0.manifest \
 		--min-interface-version $($(*)_INTERFACE_VERSION) \
 		--output $(@) \
@@ -65,10 +61,6 @@ LibRPMedia-%-1.0.lua: $(EXPORTER_BIN) .FORCE
 $(PACKAGER_SCRIPT): $(RELEASE_DIR) .FORCE
 	@echo Fetching packager script...
 	@curl -Ls $(PACKAGER_SCRIPT_URL) > $(@)
-
-$(EXPORTER_BIN): $(RELEASE_DIR)
-	@echo Fetching exporter binary...
-	@curl -Ls $(EXPORTER_BIN_URL) > $(@)
 
 $(RELEASE_DIR):
 	@mkdir $(@)
