@@ -61,12 +61,19 @@ function Ribbit.GetProductCDNs(productName, options)
     -- Find the matching row for the specified region.
     local region = GetOptionValue(options, "region");
     for _, row in ipairs(rows) do
-        if row["name"] == region then
-            -- Do a few transforms before finishing up. The hosts and
-            -- servers are space-separated strings, so make them tables.
-            row["hosts"] = { SplitStringByPattern(row["hosts"], "%S+") };
-            row["servers"] = { SplitStringByPattern(row["servers"], "%S+") };
-            return row;
+        if row["Name"] == region then
+            -- Do a few transforms before finishing up.
+            return {
+                -- Region code.
+                region = row["Name"],
+                -- CDN URL paths.
+                path = row["Path"],
+                configPath = row["ConfigPath"],
+                -- Array of CDN server hostnames.
+                hosts = { SplitStringByPattern(row["Hosts"], "%S+") },
+                -- Array of CDN server URLs.
+                servers = { SplitStringByPattern(row["Servers"], "%S+") },
+            };
         end
     end
 end
@@ -89,8 +96,20 @@ function Ribbit.GetProductVersion(productName, options)
     -- Find the matching row for the specified region.
     local region = GetOptionValue(options, "region");
     for _, row in ipairs(rows) do
-        if row["region"] == region then
-            return row;
+        if row["Region"] == region then
+            -- Transform the data a bit to make it more usable.
+            return {
+                -- Region code.
+                region = row["Region"],
+                -- Build number.
+                buildID = row["BuildId"],
+                -- Friendly version string.
+                versionName = row["VersionsName"],
+                -- Configuration hashes.
+                buildConfig = row["BuildConfig"],
+                cdnConfig = row["CDNConfig"],
+                productConfig = row["ProductConfig"],
+            };
         end
     end
 end
@@ -256,10 +275,9 @@ function SendRequest(endpoint, options)
     return data;
 end
 
--- Fixes up a CSV header in a response, stripping type information and
--- lowercasing the string,
+-- Fixes up a CSV header in a response, stripping type information.
 function FixupCSVHeader(header)
-    return strlower(strmatch(header, "^([^!]+)"));
+    return strmatch(header, "^([^!]+)");
 end
 
 -- Removes all CSV comments from the given text block.
