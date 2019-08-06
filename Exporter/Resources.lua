@@ -22,9 +22,9 @@ local BASE_CACHE_DIR = plpath.join(lfs.currentdir(), ".cache");
 local WOW_TOOLS_SCHEME = "https";
 local WOW_TOOLS_HOST = "wow.tools";
 -- Base URL for obtaining a filelist.
-local WOW_TOOLS_FILELIST_PATH = "/casc/listfile/download/csv/build"; --?buildConfig=%s";
+local WOW_TOOLS_FILELIST_PATH = "/casc/listfile/download/csv/build";
 -- Base URL for obtaining a database dump.
-local WOW_TOOLS_DATABASE_PATH = "/api/export/"; --?name=achievement&build=8.2.5.31337";
+local WOW_TOOLS_DATABASE_PATH = "/api/export/";
 
 -- Module table.
 local Resources = {};

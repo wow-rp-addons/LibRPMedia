@@ -11,7 +11,6 @@ local strlower = string.lower;
 local strmatch = string.match;
 local tconcat = table.concat;
 local tinsert = table.insert;
-local unpack = table.unpack or unpack; -- Lua 5.1+ compat.
 
 -- Local declarations.
 local CreateLineIterator;
