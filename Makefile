@@ -5,22 +5,14 @@ REGION ?= eu
 Classic_PRODUCT_ID ?= wow_classic
 Retail_PRODUCT_ID ?= wow
 
-# TOC versions for file generation. Prefix these with a product name.
-Classic_INTERFACE_VERSION ?= 11302
-Retail_INTERFACE_VERSION ?= 80100
-
-# Additional options to pass to the exporter script, prefixed by their
-# applicable product name (or no prefix to apply to both).
-EXPORTER_OPTIONS ?= --compress=false
-Classic_EXPORTER_OPTIONS ?= --max-interface-version 20000
-Retail_EXPORTER_OPTIONS ?=
-
 # Path to a Lua interpreter.
 LUA ?= lua
 LUACHECK ?= luacheck
 
 # Directory where releases and scripts are downoaded to.
 RELEASE_DIR := .release
+# Directory where things will be cached.
+CACHE_DIR := .cache
 
 # Path and URL to the packager script.
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
@@ -47,20 +39,19 @@ test:
 	@echo Testing Retail database...
 	@$(LUA) Tests/Tests.lua --interface $(Retail_INTERFACE_VERSION)
 
-LibRPMedia-%-1.0.lua: .FORCE
+LibRPMedia-%-1.0.lua: $(CACHE_DIR) .FORCE
 	@echo Generating $(@)...
-	@cd Exporter && $(LUA) Exporter.lua \
+	@LUACASC_CACHE=$(PWD)/$(CACHE_DIR) $(LUA) Exporter/Exporter.lua \
+		--config Exporter/Config.$(*).lua \
 		--manifest LibRPMedia-$(*)-1.0.manifest \
-		--min-interface-version $($(*)_INTERFACE_VERSION) \
 		--output $(@) \
 		--product $($(*)_PRODUCT_ID) \
 		--region $(REGION) \
-		$(EXPORTER_OPTIONS) \
-		$($(*)_EXPORTER_OPTIONS)
+		--template Exporter/Template.$(*).lua
 
 $(PACKAGER_SCRIPT): $(RELEASE_DIR) .FORCE
 	@echo Fetching packager script...
 	@curl -Ls $(PACKAGER_SCRIPT_URL) > $(@)
 
-$(RELEASE_DIR):
+$(RELEASE_DIR) $(CACHE_DIR):
 	@mkdir $(@)
