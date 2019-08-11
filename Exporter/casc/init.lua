@@ -135,7 +135,7 @@ local function parseInfoData(data)
 	for e in line:gmatch("[^|]+") do
 		hn, hname[hn], htype[hn] = hn + 1, e:match("^([^!]+)!([^:]+)")
 	end
-	
+
 	for e in i,s,line do
 		local l, ln = {}, 1
 		for f in e:gmatch("|?([^|]*)") do
@@ -181,7 +181,7 @@ local function parseLocalIndexData(data, into)
 	pos = pos + ((16 - pos % 16) % 16)
 	len, pos = uint32_le(data, pos), pos + 9
 	assert(len % 18 == 0, "Index data block length parity check")
-	
+
 	for i=1, len/18 do
 		local key = sub(data, pos, pos + 8)
 		if not into[key] then
@@ -230,12 +230,12 @@ function getContent(casc, eMD5, cMD5, ctag, useOnlyLocalData)
 		cnt, err = maybeCheckMD5s(casc, eMD5, cMD5, blte.readArchive(plat.path(casc.base, "data", ("data.%03d"):format(lloc / 2^30)), lloc % 2^30, casc.keys, casc))
 		if cnt then return cnt end
 	end
-	
+
 	if casc.cdn and not useOnlyLocalData then
 		if cMD5 and casc.patchRecipes then
 			cnt, err = getPatchedContent(casc, casc.patchRecipes[toBinHash(cMD5)], ctag, cMD5)
 		end
-	
+
 		local cloc = not cnt and (casc.indexCDN and casc.indexCDN[ehash9] or eMD5)
 		if cloc then
 			local range, name = cloc:match("(%d+%-%d+):(.+)")
@@ -245,7 +245,7 @@ function getContent(casc, eMD5, cMD5, ctag, useOnlyLocalData)
 			end
 		end
 	end
-	
+
 	if cnt and lcache then
 		local ch = io.open(lcache, "wb")
 		if ch then
@@ -256,14 +256,14 @@ function getContent(casc, eMD5, cMD5, ctag, useOnlyLocalData)
 	if cnt then
 		return cnt
 	end
-	
+
 	return nil, err or ("Could not retrieve " .. eMD5 .. "/" .. (cMD5 and toHexHash(cMD5) or "?"))
 end
 local function getContentByContentHash(casc, cMD5, ctag)
 	local cMD5, chash = adjustHash(cMD5)
 	local err, cnt = "no encodings of " .. cMD5 .. " are known"
 	local keys = casc.encoding:getEncodingHash(chash)
-	
+
 	for j=1,keys and 2 or 0 do
 		for i=1,#keys do
 			cnt, err = getContent(casc, keys[i], cMD5, ctag, j == 1)
@@ -272,12 +272,12 @@ local function getContentByContentHash(casc, cMD5, ctag)
 			end
 		end
 	end
-	
+
 	return nil, err
 end
 local function getContentHashForPath(casc, path, rateFunc)
 	local rateFunc, idx, score, seen, vscore, chash = rateFunc or casc.locale, casc.index, -math.huge
-	
+
 	for _, vchash, vinfo in casc.root:getFileVariants(path) do
 		local isLocal, keys = false, idx and casc.encoding:getEncodingHash(vchash)
 		for i=1, keys and #keys or 0 do
@@ -292,7 +292,7 @@ local function getContentHashForPath(casc, path, rateFunc)
 			score, chash = vscore, vchash
 		end
 	end
-	
+
 	if not seen then
 		return nil, ("no root entries for %q exist"):format(path)
 	elseif not chash then
@@ -328,7 +328,7 @@ local indexCDN_mt = {} do
 			p = p + 4096
 		end
 	end
-	
+
 	function indexCDN_mt:__index(ehash)
 		local archives, casc, v = self._source, self._owner
 		for i=#archives, 1, -1 do
@@ -365,7 +365,7 @@ function handle:readFile(pathOrID, lang, cache)
 	if not chash then
 		return nil, err
 	end
-	
+
 	return getContentByContentHash(self, chash, cache and "file")
 end
 function handle:readFileByEncodingHash(ehash, cache)
@@ -401,7 +401,7 @@ function handle:getFileVariants(pathOrID)
 		end
 		ret[key] = langs
 	end
-	
+
 	if not next(ret) then
 		local msg = ("no variants of %s are known"):format(type(pathOrID) == "number" and "%d" or "%q")
 		return nil, msg:format(pathOrID)
@@ -455,7 +455,7 @@ local function parseOpenArgs(...)
 		assert(type(conf.cacheFiles) == 'boolean', 'casc.open: if specified, conf.cacheFiles must be a boolean')
 		assert(type(conf.zerofillEncryptedChunks) == 'boolean', 'casc.open: if specified, conf.zerofillEncryptedChunks must be a boolean')
 		assert(conf.cache == nil or type(conf.cache) == "boolean" or type(conf.cache) == "string", 'casc.open: if specified, conf.cache must be a string or a boolean')
-		
+
 		local c2 = {}
 		for k in ("base bkey cdn ckey cache verifyHashes locale buildInfo mergeInstall usePatchEntries requireRootFile cacheFiles log keys zerofillEncryptedChunks"):gmatch("%S+") do
 			c2[k] = conf[k]
@@ -463,11 +463,11 @@ local function parseOpenArgs(...)
 		c2.cache = type(c2.cache) == "string" and c2.cache or (c2.cache ~= false and os.getenv("LUACASC_CACHE")) or nil
 
 		return setmetatable(c2, handle_mt)
-		
+
 	elseif type(extra) == "string" and #extra == 32 then
 		local base, build, cdn, cdnKey, cache = ... -- pre-1.3 casc.open() syntax
 		return parseOpenArgs({base=base, bkey=build, cdn=cdn, ckey=cdnKey, cache=cache, verifyHashes=false})
-		
+
 	elseif type(conf) == "string" then
 		local base, build, cdn, cdnKey, _, info
 		if conf:match("^http://.+#.") then
@@ -507,12 +507,12 @@ function M.open(conf, ...)
 	if not casc then return nil, err end
 	casc.keys, err = blte.newKeyRing(casc.keys)
 	if not casc.keys then return nil, err end
-	
+
 	casc.log("OPEN", "Loading build configuration", casc.bkey)
 	local cdat, err = checkMD5(casc, "hash", casc.bkey, readCacheCommon(casc, "build." .. casc.bkey, "config", prefixHash(casc.bkey)))
 	if not cdat then return nil, "build configuration: " .. tostring(err) end
 	casc.conf = parseConfigData(cdat)
-	
+
 	if casc.ckey then
 		casc.log("OPEN", "Loading CDN configuration", casc.ckey)
 		local ccdat, err = checkMD5(casc, "hash", casc.ckey, readCacheCommon(casc, "cdn." .. casc.ckey, "config", prefixHash(casc.ckey)))
@@ -524,7 +524,7 @@ function M.open(conf, ...)
 		end
 		casc.indexCDN = setmetatable({_owner=casc, _source=source}, indexCDN_mt)
 	end
-	
+
 	if casc.base then
 		casc.log("OPEN", "Scanning local indices")
 		local indexFiles, index, ic, ii = {}, {}, 0, 1
@@ -551,7 +551,7 @@ function M.open(conf, ...)
 		local pcdat, err = checkMD5(casc, "hash", pckey, readCacheCommon(casc, "pconf." .. pckey, "config", prefixHash(pckey)) )
 		if not pcdat then return nil, "patch configuration: " .. tostring(err) end
 		parseConfigData(pcdat, casc.conf)
-		
+
 		local recipes, entries = {}, casc.conf["patch-entry"]
 		for i=1,entries and #entries or 0 do
 			local v = entries[i]
@@ -562,16 +562,16 @@ function M.open(conf, ...)
 				rt[rn], rt[rn+1], rt[rn+2], rn = toBinHash(v[j]), toBinHash(v[j+2]), tonumber(v[j+3]), rn + 3
 			end
 		end
-		
+
 		casc.patchRecipes = recipes
 	end
-	
+
 	local ekey = casc.conf.encoding[2]
 	casc.log("OPEN", "Loading encoding file", ekey)
 	local edat, err = getContent(casc, ekey, casc.conf.encoding[1], "encoding")
 	if not edat then return nil, "encoding file: " .. tostring(err) end
 	casc.encoding = encoding.parse(edat)
-	
+
 	local rkey = casc.conf.root[1]
 	casc.log("OPEN", "Loading root file", rkey)
 	local rdat, err = getContentByContentHash(casc, rkey, "root")
@@ -586,7 +586,7 @@ function M.open(conf, ...)
 		casc.log("FAIL", err or "Failed to load root file", rkey)
 	end
 	casc.requireRootFile = nil
-	
+
 	if casc.mergeInstall and casc.conf.install then
 		local ikey = casc.conf.install[1]
 		casc.log("OPEN", "Loading install data", ikey)
@@ -600,13 +600,13 @@ function M.open(conf, ...)
 		casc.mergeInstall = nil
 	end
 	casc.log("OPEN", "Ready")
-	
+
 	return casc
 end
 
 function M.cdnbuild(patchBase, region)
 	check_args("casc.cdnbuild", 1, patchBase, "string", "string", region, "string", "nil")
-	
+
 	local dat, err = plat.http(plat.url(patchBase, "versions"))
 	if not dat then return nil, "patch versions retrieval: " .. tostring(err) end
 	local versions = parseInfoData(dat)
@@ -614,7 +614,7 @@ function M.cdnbuild(patchBase, region)
 	dat, err = plat.http(plat.url(patchBase, "cdns"))
 	if not dat then return nil, "patch CDN retrieval: " .. tostring(err) end
 	local cdns = parseInfoData(dat)
-	
+
 	local reginfo = {}
 	for i=1,#versions do
 		local v = versions[i]
@@ -636,10 +636,10 @@ function M.cdnbuild(patchBase, region)
 end
 function M.localbuild(buildInfoPath, selectBuild)
 	check_args("casc.localbuild", 1, buildInfoPath, "string", "string", selectBuild, "function", "nil")
-	
+
 	local dat, err = readFile(buildInfoPath)
 	if not dat then return nil, err end
-	
+
 	local info = parseInfoData(dat)
 	if type(selectBuild) == "function" and info then
 		local ii = info[selectBuild(info)]
@@ -659,7 +659,7 @@ function M.localbuild(buildInfoPath, selectBuild)
 end
 function M.selectActiveBuild(buildInfo)
 	check_args("casc.selectActiveBuild", 1, buildInfo, "table", "table")
-	
+
 	for i=1,#buildInfo do
 		if buildInfo[i].Active == 1 then
 			return i
