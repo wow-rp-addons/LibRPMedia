@@ -21,7 +21,6 @@ The `LibRPMedia-1.0.xml` file includes all references to databases for both Reta
 This library depends upon the following. These must be loaded *prior* to loading LibRPMedia via any of its XML files; the library will not load its embedded dependencies automatically.
 
  * [LibStub](https://www.curseforge.com/wow/addons/libstub)
- * [LibDeflate](https://github.com/SafeteeWoW/LibDeflate)
 
 Copies of these are present in the Libs directory as a convenience and may be used by the embedding addon.
 
@@ -196,7 +195,21 @@ end
 
 ## Building
 
-The included Makefile will download a precompiled binary for the [exporter](https://github.com/wow-rp-addons/LibRPExporter) which will perform data generation. The download requires [cURL](https://curl.haxx.se/) be installed; otherwise you can download and install it manually into a `.release` directory.
+
+The included Makefile will execute the exporter script to generate the databases, and update the manifest files. The exporter script has the following dependencies:
+
+* [csv](https://luarocks.org/modules/geoffleyland/csv)
+* [etlua](https://luarocks.org/modules/leafo/etlua)
+* [LuaBitOp](https://luarocks.org/modules/luarocks/luabitop)
+* [luafilesystem](https://luarocks.org/modules/hisham/luafilesystem)
+* [luasocket](https://luarocks.org/modules/luasocket/luasocket)
+* [lzlib](https://luarocks.org/modules/hisham/lzlib)
+* [md5](https://luarocks.org/modules/tomasguisasola/md5)
+* [penlight](https://luarocks.org/modules/steved/penlight)
+
+In addition, you must ensure that [cURL](https://curl.haxx.se/) and [ffmpeg](https://ffmpeg.org/) are locally installed.
+
+The exporter script makes use of [LuaCasc](https://www.townlong-yak.com/casc/) which is included in the repository (`Exporter/casc`).
 
 Running `make` will regenerate the data for both Classic and Retail versions of the game, downloading data from the CDN and various external services and caching them the `.cache` directory. The generated databases will be stored within the `LibRPMedia-{Classic,Retail}-1.0.lua` files.
 
