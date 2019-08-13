@@ -9,31 +9,24 @@ if not LibRPMedia then
     return;
 end
 
--- Dependencies.
-local LibDeflate = LibStub:GetLibrary("LibDeflate");
-
 -- Upvalues.
 local error = error;
 local floor = math.floor;
-local loadstring = loadstring;
 local min = math.min;
-local nop = nop;
-local pairs = pairs;
-local rawset = rawset;
-local setfenv = setfenv;
+local select = select;
 local setmetatable = setmetatable;
 local strbyte = string.byte;
-local strchar = string.char;
 local strfind = string.find;
 local strformat = string.format;
 local strgsub = string.gsub;
 local strjoin = string.join;
 local strlower = string.lower;
-local tconcat = table.concat;
+local strsub = string.sub;
 local type = type;
 local xpcall = xpcall;
 
 local CallErrorHandler = CallErrorHandler;
+local Mixin = Mixin;
 
 -- Local declarations.
 local AssertType;
@@ -47,10 +40,7 @@ local IterMusicFilesByPrefix;
 local NormalizeMusicName;
 
 -- Error constants.
-local ERR_DATA_DECOMPRESS_FAILED = "LibRPMedia: Error decompressing data.";
-local ERR_DATA_NOT_HYDRATABLE = "LibRPMedia: Type %s cannot be hydrated.";
-local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found.";
-local ERR_DATABASE_UNSIZED = "LibRPMedia: Database %q has no size.";
+local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found";
 local ERR_INVALID_ARG_TYPE = "LibRPMedia: Argument %q is %s, expected %s";
 local ERR_INVALID_SEARCH_METHOD = "LibRPMedia: Invalid search method: %q";
 
@@ -74,8 +64,6 @@ end
 --  If no match is found, nil is returned.
 function LibRPMedia:GetMusicFileByName(musicName)
     AssertType(musicName, "musicName", "string");
-
-    musicName = NormalizeMusicName(musicName);
 
     local musicIndex = self:GetMusicIndexByName(musicName);
     if not musicIndex then
@@ -205,54 +193,53 @@ function LibRPMedia:FindAllMusicFiles()
     return IterMusicFiles(music);
 end
 
---- Unpacks and decompresses music data within the database. This may cause
---  a momentary lag spike in the client.
-function LibRPMedia:UnpackMusicData()
-    -- Access anything that might be compressed here.
-    local music = self:GetDatabase("music");
-    nop(music.data);
-    nop(music.index.name);
-
-    -- We'll throw in a GC for free too, thanks to the decompression.
-    collectgarbage("collect");
-end
-
 --- Internal API
 --  The below declarations are for internal use only.
 
---- Table storing all the databases. Doesn't persist across upgrades; the
---  data is baked into the library and the library assumes a lot about it.
+--- Table storing all the databases.
+--
+--  This _currently_ doesn't persist across upgrades as there's a lot of
+--  assumptions about the structure of the data, and the data is packed
+--  into the library regardless.
 LibRPMedia.schema = {};
 
---- Registers a named database.
-function LibRPMedia:RegisterDatabase(databaseName, database)
-    -- Databases must have at minimum a size field.
-    if not database.size then
-        error(strformat(ERR_DATABASE_UNSIZED, databaseName));
+--- Registers a named database with the given minor version.
+--
+--  If a database already exists with a greater or same minor version nil is
+--  returned, otherwise a table will be returned.
+--
+--  The database will be initialized with a size field (set to zero), and a
+--  version field matching the given minor version.
+function LibRPMedia:NewDatabase(databaseName, minorVersion)
+    -- Get or create a table for the database.
+    local database = self.schema[databaseName] or {};
+    if database.version and database.version >= minorVersion then
+        -- No upgrade required.
+        return nil;
     end
 
+    -- Upgrade fields on the database.
+    database.size = database.size or 0;
+    database.version = minorVersion;
+
     self.schema[databaseName] = database;
+    return database;
 end
 
---- Unregisters the named database.
-function LibRPMedia:UnregisterDatabase(databaseName)
-    -- Yoink!
-    self.schema[databaseName] = nil;
-end
-
---- Returns true if the named database exists. A real shocker, I know.
+--- Returns true if the named database exists.
 function LibRPMedia:IsDatabaseRegistered(databaseName)
-    return not not self.schema[databaseName];
+    return self.schema[databaseName] ~= nil;
 end
 
 --- Returns the named database.
 --  This function will error if the database is not present.
 function LibRPMedia:GetDatabase(databaseName)
-    if not self.schema[databaseName] then
+    local database = self.schema[databaseName];
+    if not database then
         error(strformat(ERR_DATABASE_NOT_FOUND, databaseName), 2);
     end
 
-    return self.schema[databaseName];
+    return database;
 end
 
 --- Returns the number of entries present within a named database.
@@ -260,6 +247,56 @@ end
 function LibRPMedia:GetNumDatabaseEntries(databaseName)
     local database = self:GetDatabase(databaseName);
     return database.size;
+end
+
+--- Creates a table that lazily loads its contents upon first access to any
+--  field.
+--
+--  If an error occurs during data loading, the global error handler is
+--  invoked but execution will not terminate, and nil is instead returned.
+function LibRPMedia:CreateLazyTable(generatorFunc)
+    local metatable = {};
+    metatable.__index = function(proxy, key)
+        -- Unset the metatable so that loading is only tried once.
+        setmetatable(proxy, nil);
+
+        local ok, data = xpcall(generatorFunc, CallErrorHandler);
+        if not ok then
+            -- Error is passed through default error handler.
+            return nil;
+        end
+
+        -- Copy the loaded data into the proxy.
+        Mixin(proxy, data);
+        return proxy[key];
+    end
+
+    return setmetatable({}, metatable);
+end
+
+--- Restores a string list encoded as a list of front-coded strings, returning
+--  a new table with the loaded contents.
+function LibRPMedia:LoadFrontCodedStringList(input)
+    local output = {};
+
+    -- Iterate over the list in pairs of common prefix length and suffixes.
+    for i = 1, #input, 2 do
+        local commonLength = input[i];
+        local suffix = input[i + 1];
+
+        if commonLength == 0 then
+            -- No data in common; the suffix is the whole string.
+            output[#output + 1] = suffix;
+        else
+            -- Combine the suffix with the previously restored string.
+            local prefix = output[#output];
+            local restored = strsub(prefix, 1, commonLength) .. suffix;
+
+            output[#output + 1] = restored;
+        end
+    end
+
+    return output;
 end
 
 --- Checks the type of a given value against a list of types. If no type
@@ -312,185 +349,6 @@ function AssertType(...)
     end
 
     return value;
-end
-
-do
-    -- Use a restricted environment for the lazy loading to prevent any
-    -- weird ideas taking form in the data generation layer.
-    local baseenv = { __newindex = function() end, __metatable = false };
-    local nullenv = setmetatable({}, baseenv);
-
-    -- Lookup table of ASCII bytes (decimal) for base64 decoding.
-    --
-    -- This table is based off the standard character set defined in RFC 4648,
-    -- and used in MIME (RFC 2045) and PEM (RFC 1421).
-    local b64bytes = {
-        [ 65] =  0, [ 66] =  1, [ 67] =  2, [ 68] =  3,
-        [ 69] =  4, [ 70] =  5, [ 71] =  6, [ 72] =  7,
-        [ 73] =  8, [ 74] =  9, [ 75] = 10, [ 76] = 11,
-        [ 77] = 12, [ 78] = 13, [ 79] = 14, [ 80] = 15,
-        [ 81] = 16, [ 82] = 17, [ 83] = 18, [ 84] = 19,
-        [ 85] = 20, [ 86] = 21, [ 87] = 22, [ 88] = 23,
-        [ 89] = 24, [ 90] = 25, [ 97] = 26, [ 98] = 27,
-        [ 99] = 28, [100] = 29, [101] = 30, [102] = 31,
-        [103] = 32, [104] = 33, [105] = 34, [106] = 35,
-        [107] = 36, [108] = 37, [109] = 38, [110] = 39,
-        [111] = 40, [112] = 41, [113] = 42, [114] = 43,
-        [115] = 44, [116] = 45, [117] = 46, [118] = 47,
-        [119] = 48, [120] = 49, [121] = 50, [122] = 51,
-        [ 48] = 52, [ 49] = 53, [ 50] = 54, [ 51] = 55,
-        [ 52] = 56, [ 53] = 57, [ 54] = 58, [ 55] = 59,
-        [ 56] = 60, [ 57] = 61, [ 43] = 62, [ 47] = 63,
-    };
-
-    --- Decodes a base64 encoded text string, returning the result as a a
-    --  decoded string.
-    --
-    --  This implementation is based off LibBase64, but tuned for a bit more
-    --  performance by omitting support for padding characters and using
-    --  only one loop/table for the decode phase.
-    --
-    --  Source:  https://www.wowace.com/projects/libbase64-1-0
-    --  Credit:  ckknight (ckknight@gmail.com)
-    --  License: MIT
-    local function b64decode(text)
-        -- Create a temporary table and a local length counter.
-        local t = {};
-        local n = 0;
-
-        -- Get local references for things in the loop.
-        local b64bytes = b64bytes; -- luacheck: no redefined
-        local strbyte = strbyte; -- luacheck: no redefined
-        local strchar = strchar; -- luacheck: no redefined
-
-        -- Read the text in blocks of 4 bytes.
-        for i = 1, #text, 4 do
-            -- Map the bytes using the lookup table.
-            local a, b, c, d = strbyte(text, i, i + 3);
-            a, b, c, d = b64bytes[a], b64bytes[b], b64bytes[c], b64bytes[d];
-
-            -- We don't support padding characters, so we'll check for the
-            -- absence of bytes. This also means we'll break if the input is
-            -- malformed, but we're not a public function.
-            local nilNum = 0;
-            if not c then
-                nilNum = 2;
-                c = 0;
-                d = 0;
-            elseif not d then
-                nilNum = 1;
-                d = 0;
-            end
-
-            -- Convert the four input bytes to three output bytes.
-            local num = (a * 2^18) + (b * 2^12) + (c * 2^6) + d;
-            c = num % 2^8;
-            num = (num - c) / 2^8;
-            b = num % 2^8;
-            num = (num - b) / 2^8;
-            a = num % 2^8;
-
-            -- Put the three output bytes into the output table.
-            n = n + 1;
-            if nilNum == 0 then
-                t[n] = strchar(a, b, c);
-            elseif nilNum == 1 then
-                t[n] = strchar(a, b);
-            elseif nilNum == 2 then
-                t[n] = strchar(a);
-            end
-        end
-
-        -- Join the output up and we're done.
-        return tconcat(t, "");
-    end
-
-    --- Hydrates the given data as a compressed string, returning a generator
-    --  that will inflate it upon being called and evaluate its contents.
-    local function HydrateDataString(data)
-        -- Create the generator that will load the data.
-        local function generator()
-            -- Decode and decompress.
-            local decoded = b64decode(data)
-            local decompressed = LibDeflate:DecompressDeflate(decoded);
-
-            -- Load the chunk.
-            local stmt = strjoin(" ", "return", decompressed);
-            local chunk, err = loadstring(stmt);
-            if err then
-                -- The error string might be super long, so we'll drop it.
-                error(ERR_DATA_DECOMPRESS_FAILED, 2);
-            end
-
-            -- Execute the chunk in an empty environment.
-            setfenv(chunk, nullenv);
-            return chunk();
-        end
-
-        -- Ensure the generator doesn't do anything weird.
-        return setfenv(generator, nullenv);
-    end
-
-    --- Hydrates the given data as a table, causing any contained generator
-    --  functions to be lazily executed on first access to the table.
-    local function HydrateDataTable(data)
-        -- Map of functions that generate data on first access.
-        local generators = {};
-
-        -- Move any data producing functions from the table to the generators.
-        for key, value in pairs(data) do
-            if type(value) == "function" then
-                generators[key] = setfenv(value, nullenv);
-                data[key] = nil;
-            end
-        end
-
-        -- Apply a metatable that will catch hits to the fields we just nil'd.
-        local metatable = {};
-        metatable.__index = function(_, key)
-            local generator = generators[key];
-            if not generator then
-                return nil;
-            end
-
-            -- Drop the reference to the generator to let it be GC'd.
-            generators[key] = nil;
-
-            -- Invoke the generator and get its value.
-            local ok, value = xpcall(generator, CallErrorHandler);
-            if not ok then
-                return nil;
-            end
-
-            -- Cache it and we're done.
-            rawset(data, key, value);
-            return value;
-        end
-
-        return setmetatable(data, metatable);
-    end
-
-    --- Hydrates the given data. Depending upon the type of data given,
-    --  this will have different effects.
-    --
-    --  If a table is given, it will be wrapped in a proxy which detects
-    --  the first access to any field and lazily loads its content if the
-    --  value stored is a function.
-    --
-    --  If a string is given, it is assumed to be a base64 encoded, compressed
-    --  Lua expression that when inflated will expand out to the data. This
-    --  will be transformed into a function.
-    --
-    --  If any other type is given, an error is raised.
-    function LibRPMedia:HydrateData(data)
-        if type(data) == "table" then
-            return HydrateDataTable(data);
-        elseif type(data) == "string" then
-            return HydrateDataString(data);
-        else
-            error(strformat(ERR_DATA_NOT_HYDRATABLE, type(data)), 2);
-        end
-    end
 end
 
 --- Internal utility functions.

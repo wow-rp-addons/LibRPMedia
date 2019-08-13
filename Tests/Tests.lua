@@ -66,7 +66,7 @@ RegisterTest("Music: API Type Checks", function()
     local string = "";
     local number = 0;
     local boolean = false;
-    local thread = coroutine.create(nop);
+    local thread = coroutine.create(function() end);
     local userdata = newproxy(false);
 
     -- The Get<X>ByName functions allow only strings as their parameters.
@@ -725,15 +725,15 @@ if IsInGame() then
     RunTests();
 else
     -- Parse CLI arguments.
-    local optInterface;
+    local optProject;
 
     local offset = 1;
     while offset < #arg do
         local opt = arg[offset];
         offset = offset + 1;
 
-        if opt == "-i" or opt == "--interface" then
-            optInterface = tonumber(arg[offset]);
+        if opt == "-p" or opt == "--project" then
+            optProject = arg[offset];
             offset = offset + 1;
         else
             error(strformat("Unknown option: %s", tostring(opt)));
@@ -741,16 +741,28 @@ else
     end
 
     -- Validate arguments.
-    if not optInterface then
-        error("No interface version specified (--interface). Aborting.");
+    if not optProject then
+        error("No project token specified (--project). Aborting.");
     end
 
     -- Populate the global environment with things that WoW provides, and
     -- that we need for testing.
-    _G.GetBuildInfo = function() return "", 0, "", optInterface; end;
+    _G[optProject] = optProject;
+    _G.WOW_PROJECT_ID = optProject;
     _G.CallErrorHandler = function(...) return ...; end;
-    _G.nop = function() end;
     _G.strmatch = string.match;
+
+    _G.Mixin = function(object, ...)
+        for i = 1, select("#", ...) do
+            local mixin = select(i, ...);
+            for k, v in pairs(mixin) do
+                object[k] = v;
+            end
+        end
+
+        return object;
+    end
+
     _G.tostringall = function(...)
         if select("#", ...) == 0 then
             return;
@@ -770,7 +782,6 @@ else
     local ns = {};
 
     LoadScript("Libs/LibStub/LibStub.lua", MAJOR_NAME, ns);
-    LoadScript("Libs/LibDeflate/LibDeflate.lua", MAJOR_NAME, ns);
 
     LoadScript("LibRPMedia-1.0.lua", MAJOR_NAME, ns);
     LoadScript("LibRPMedia-Classic-1.0.lua", MAJOR_NAME, ns);

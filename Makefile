@@ -26,9 +26,9 @@ release: $(PACKAGER_SCRIPT)
 
 test:
 	@echo Testing Classic database...
-	@$(LUA) Tests/Tests.lua --interface $(Classic_INTERFACE_VERSION)
+	@$(LUA) Tests/Tests.lua --project WOW_PROJECT_CLASSIC
 	@echo Testing Retail database...
-	@$(LUA) Tests/Tests.lua --interface $(Retail_INTERFACE_VERSION)
+	@$(LUA) Tests/Tests.lua --project WOW_PROJECT_MAINLINE
 
 LibRPMedia-%-1.0.lua: .FORCE
 	@echo Generating $(@)...
