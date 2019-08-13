@@ -492,10 +492,6 @@ local strjoin = string.join or function(delim, ...)
 end
 
 local WrapTextInColorCode = WrapTextInColorCode or function(text, color)
-    if string.find(package.config, "^\\") then
-        return text;
-    end
-
     return string.format("\27[%sm%s\27[0m", color, text);
 end
 
