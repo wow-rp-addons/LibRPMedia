@@ -25,9 +25,6 @@ return {
             "^sword_1h_artifactfelomelorn_d_",
             "^sword_2h_ebonblade_b_",
             "^thrown_1h_",
-            "^thumbsdown$",
-            "^thumbsup$",
-            "^thumbup$",
 
             -- "Blizzard" branded icons.
             "^mail_gmicon$",
