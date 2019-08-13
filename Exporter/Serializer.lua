@@ -309,8 +309,12 @@ function Serializer.CreateCompactTable(t)
     return setmetatable(t or {}, CompactSerializer);
 end
 
-function CompactSerializer:__serialize()
-    return Serializer.DumpRaw(self, Serializer.OptionsCompact);
+function CompactSerializer:__serialize(options)
+    options = Utils.CreateFromMixins(Serializer.OptionsCompact, {
+        indentDepth = GetSerializerOption(options, "indentDepth"),
+    });
+
+    return Serializer.DumpRaw(self, options);
 end
 
 -- Serializer mixin that will force its applied table to be written
@@ -325,8 +329,12 @@ function Serializer.CreateSpacedTable(t)
     return setmetatable(t or {}, SpacedSerializer);
 end
 
-function SpacedSerializer:__serialize()
-    return Serializer.DumpRaw(self, Serializer.OptionsSpaced);
+function SpacedSerializer:__serialize(options)
+    options = Utils.CreateFromMixins(Serializer.OptionsSpaced, {
+        indentDepth = GetSerializerOption(options, "indentDepth"),
+    });
+
+    return Serializer.DumpRaw(self, options);
 end
 
 -- Serializer mixin that will pretty-print the applied table.
@@ -334,14 +342,13 @@ local PrettySerializer = {};
 
 -- Creates a new table that will serialize its contents in a pretty format.
 --
--- If a table is given, the metatable of it is replaced wit that of the
+-- If a table is given, the metatable of it is replaced with that of the
 -- PrettySerializer serializer.
 function Serializer.CreatePrettyTable(t)
     return setmetatable(t or {}, PrettySerializer);
 end
 
 function PrettySerializer:__serialize(options)
-    -- We need to propagate the indent depth down.
     options = Utils.CreateFromMixins(Serializer.OptionsPretty, {
         indentDepth = GetSerializerOption(options, "indentDepth"),
     });
@@ -373,22 +380,7 @@ function FrontCodedStringList:__serialize(options)
         tinsert(encoded, strsub(current, commonLength + 1));
     end
 
-    return Serializer.DumpRaw(encoded, Serializer.OptionsCompact);
-end
-
--- Serializer that causes the table to be serialized inside of an anonymous
--- function for lazy-loading.
-local LazyLoadedTable = {};
-
--- Creates a new lazily-loaded table. If a table is given, the metatable
--- of it is replaced wit that of the LazyLoadedTable serializer.
-function Serializer.CreateLazyLoadedTable(t)
-    return setmetatable(t or {}, LazyLoadedTable);
-end
-
-function LazyLoadedTable:__serialize(options)
-    local contents = Serializer.DumpRaw(self, options);
-    return strformat("(function() return %s; end)", contents);
+    return Serializer.DumpRaw(encoded, options);
 end
 
 -- Module exports.
@@ -396,6 +388,5 @@ Serializer.CompactSerializer = CompactSerializer;
 Serializer.SpacedSerializer = SpacedSerializer;
 Serializer.PrettySerializer = PrettySerializer;
 Serializer.FrontCodedStringList = FrontCodedStringList;
-Serializer.LazyLoadedTable = LazyLoadedTable;
 
 return Serializer;

@@ -16,6 +16,8 @@ local lfs = require "lfs";
 
 -- Upvalues.
 local strformat = string.format;
+local strmatch = string.match;
+local strsub = string.sub;
 
 -- Script usage text.
 local USAGE_TEXT = [[
@@ -94,6 +96,25 @@ local config = {
     cacheDir = Resources.GetCacheDirectory(),
 };
 
+-- Extracts the major and minor version components from the library script.
+local function GetLibraryVersion()
+    local libraryFile = assert(io.open("LibRPMedia-1.0.lua", "rb"));
+    local library = assert(libraryFile:read("*a"));
+    libraryFile:close();
+
+    local versionMajor = strmatch(library, "MODULE_MAJOR = (%b\"\")");
+    if not versionMajor then
+        error("Failed to extract major version from library.");
+    end
+
+    local versionMinor = strmatch(library, "MODULE_MINOR = (%d+)");
+    if not versionMinor then
+        error("Failed to extract minor version from library.");
+    end
+
+    return strsub(versionMajor, 2, -2), tonumber(versionMinor);
+end
+
 -- Run the actual script in protected mode so we can log fatal errors cleanly.
 local ok, err = pcall(function()
     -- Read in the user configuration and merge it.
@@ -150,6 +171,10 @@ local ok, err = pcall(function()
     database.music = Music.GetDatabase(manifest.music);
     database.icons = Icons.GetDatabase(manifest.icons);
 
+    -- Read in the main script to obtain the library version.
+    Log.Info("Fetching library version...");
+    local versionMajor, versionMinor = GetLibraryVersion();
+
     -- Read in the template file and render the database.
     Log.Info("Loading template file...", { path = config.template });
     local templateFile = assert(io.open(config.template, "rb"));
@@ -163,6 +188,10 @@ local ok, err = pcall(function()
         config = config,
         database = database,
         manifest = manifest,
+
+        -- Versioning.
+        versionMajor = versionMajor,
+        versionMinor = versionMinor,
 
         -- Functions.
         Dump = Serializer.Dump,

@@ -382,29 +382,29 @@ end
 -- from the contents of the given manifest.
 function Music.GetDatabase(manifest)
     -- Create the initial database structure.
-    local database = Serializer.CreatePrettyTable({
+    local database = {
         -- Database size.
         size = #manifest,
         -- Data table.
-        data = Serializer.CreateLazyLoadedTable({
+        data = {
             -- File ID array.
-            file = Serializer.CreateCompactTable(),
+            file = {},
             -- File name array.
             name = Serializer.CreateFrontCodedStringList(),
             -- File duration array.
-            time = Serializer.CreateCompactTable(),
-        }),
+            time = {},
+        },
         -- Search index root.
         index = {
             -- Search index for music names.
-            name = Serializer.CreateLazyLoadedTable({
+            name = {
                 -- Array of data row indices.
-                row = Serializer.CreateCompactTable(),
+                row = {},
                 -- Array of file names.
                 key = Serializer.CreateFrontCodedStringList(),
-            }),
+            },
         };
-    });
+    };
 
     -- Copy the data from the manifest to the database.
     Log.Info("Building music database...", { entries = database.size });

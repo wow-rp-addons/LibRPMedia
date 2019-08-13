@@ -263,17 +263,17 @@ end
 -- given icon manifest for use by the library.
 function Icons.GetDatabase(manifest)
     -- Create the initial database structure.
-    local database = Serializer.CreatePrettyTable({
+    local database = {
         -- Database size.
         size = #manifest,
         -- Data table.
-        data = Serializer.CreateLazyLoadedTable({
+        data = {
             -- Icon name array.
             name = Serializer.CreateFrontCodedStringList(),
             -- Icon type mapping.
-            type = Serializer.CreateCompactTable(),
-        }),
-    });
+            type = {},
+        },
+    };
 
     -- Copy the data from the manifest to the database.
     Log.Info("Building icon database...", { entries = database.size });

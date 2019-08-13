@@ -16,10 +16,39 @@ if not LibRPMedia then
     return;
 end
 
-if not LibRPMedia:IsDatabaseRegistered("icons") then
-    LibRPMedia:RegisterDatabase("icons", <%- Dump(database.icons, { indentDepth = 1 }) %>);
+-- Minor version number of the database.
+local DATABASE_VERSION = <%- versionMinor %>;
+
+-- Icon database.
+local icons = LibRPMedia:NewDatabase("icons", DATABASE_VERSION);
+if icons then
+    icons.size = <%- Dump(database.icons.size) %>;
+    icons.data = LibRPMedia:CreateLazyTable(function()
+        return {
+            name = LibRPMedia:LoadFrontCodedStringList(<%- Dump(database.icons.data.name) %>),
+            type = <%- Dump(database.icons.data.type) %>,
+        };
+    end);
 end
 
-if not LibRPMedia:IsDatabaseRegistered("music") then
-    LibRPMedia:RegisterDatabase("music", <%- Dump(database.music, { indentDepth = 1 }) %>);
+-- Music database.
+local music = LibRPMedia:NewDatabase("music", DATABASE_VERSION);
+if music then
+    music.size = <%- Dump(database.music.size) %>;
+    music.data = LibRPMedia:CreateLazyTable(function()
+        return {
+            file = <%- Dump(database.music.data.file) %>,
+            name = LibRPMedia:LoadFrontCodedStringList(<%- Dump(database.music.data.name) %>),
+            time = <%- Dump(database.music.data.time) %>,
+        };
+    end);
+
+    music.index = {
+        name = LibRPMedia:CreateLazyTable(function()
+            return {
+                row = <%- Dump(database.music.index.name.row) %>,
+                key = LibRPMedia:LoadFrontCodedStringList(<%- Dump(database.music.index.name.key) %>),
+            };
+        end),
+    };
 end
