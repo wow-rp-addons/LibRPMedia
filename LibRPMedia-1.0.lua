@@ -34,6 +34,8 @@ local BinarySearch;
 local BinarySearchPrefix;
 local CheckType;
 local GetCommonPrefixLength;
+local IterIndexByPattern;
+local IterIndexByPrefix;
 local IterMusicFiles;
 local IterMusicFilesByPattern;
 local IterMusicFilesByPrefix;
@@ -424,7 +426,95 @@ function GetCommonPrefixLength(a, b)
     return offset - 1;
 end
 
+--- Returns an iterator that returns all matching rows in the given database
+--  index that match a given common prefix string.
+--
+--  For each matching row, the given accessor function is called with the
+--  given data parameter, the row index, and the matched key. The return
+--  values from this are yielded to the caller of the iterator.
+function IterIndexByPrefix(index, prefix, rowAccessorFunc, data)
+    -- Map of row indices that we've already returned.
+    local seen = {};
+
+    -- Begin iteration from the closest matching prefix.
+    local offset = BinarySearchPrefix(index.key, prefix);
+    local length = #index.key;
+
+    local iterator = function()
+        -- Loop so long as we don't run out of keys.
+        while offset <= length do
+            -- If the common prefix between our search string and the current
+            -- file name isn't the same as the search string, then we should
+            -- stop since we're past the "like" range of names.
+            local key = index.key[offset];
+            local commonLength = GetCommonPrefixLength(prefix, key);
+            if commonLength ~= #prefix then
+                return nil;
+            end
+
+            -- Obtain the row index for this key.
+            local row = index.row[offset];
+            offset = offset + 1;
+
+            if not seen[row] then
+                -- Row hasn't been yielded yet; yield data from the accessor.
+                seen[row] = true;
+                return rowAccessorFunc(data, row, key);
+            end
+        end
+    end
+
+    return iterator;
+end
+
+--- Returns an iterator that returns all matching rows in the given database
+--  index that match a given pattern string. If plain is true, the search
+--  will not be a pattern but rather a substring test.
+--
+--  For each matching row, the given accessor function is called with the
+--  given data parameter, the row index, and the matched key. The return
+--  values from this are yielded to the caller of the iterator.
+function IterIndexByPattern(index, pattern, plain, rowAccessorFunc, data)
+    -- Map of row indices that we've already returned.
+    local seen = {};
+
+    -- Start iteration from the start of the index array.
+    local offset = 1;
+    local length = #index.key;
+
+    local iterator = function()
+        -- Loop so long as we don't run out of keys.
+        while offset <= length do
+            local key = index.key[offset];
+            local row = index.row[offset];
+            offset = offset + 1;
+
+            -- If the row hasn't been seen, test the key.
+            if not seen[row] and strfind(key, pattern, 1, plain) then
+                -- Git a hit.
+                seen[row] = true;
+                return rowAccessorFunc(data, row, key);
+            end
+        end
+    end
+
+    return iterator;
+end
+
 do
+    -- Common accessor function for translating a matching row index to a
+    -- set of return values for music entry iterators.
+    local function accessor(data, row, key)
+        -- The music name is always the matched key and not the canonical
+        -- name, since searches don't make sense otherwise.
+        local musicIndex = row;
+        local musicFile = data.file[musicIndex];
+        local musicName = key;
+
+        return musicIndex, musicFile, musicName;
+    end
+
+    -- Iterator for accessing all music files in index-order.
     local function iterator(music, musicIndex)
         musicIndex = musicIndex + 1;
         if musicIndex > music.size then
@@ -441,87 +531,25 @@ do
     function IterMusicFiles(music)
         return iterator, music, 0;
     end
-end
 
---- Returns an iterator that returns all matching music files in the database
---  that share a common prefix with the given search string.
-function IterMusicFilesByPrefix(music, search)
-    -- Map of file indices that we've already returned.
-    local seen = {};
+    --- Returns an iterator that returns all matching entries in the given
+    --  music database that match a given common prefix string.
+    function IterMusicFilesByPrefix(music, prefix)
+        local index = music.index.name;
+        local data = music.data;
 
-    -- Upvalue the database and search index to minimize lookups a bit.
-    local data = music.data;
-    local names = music.index.name;
-
-    -- Begin iteration from the closest matching prefix in the key array.
-    local nameIndex = BinarySearchPrefix(names.key, search);
-
-    local function iterator()
-        -- Loop so long as we don't run out of keys.
-        local keyCount = #names.key;
-        while nameIndex < keyCount do
-            -- If the common prefix between our search string and the current
-            -- file name isn't the same as the search string, then we should
-            -- stop since we're past the "like" range of names.
-            local name = names.key[nameIndex];
-            local shared = GetCommonPrefixLength(search, name);
-            if shared ~= #search then
-                return nil;
-            end
-
-            -- Convert the search index into a music index.
-            local musicIndex = names.row[nameIndex];
-            nameIndex = nameIndex + 1;
-
-            -- Yield the music file if we haven't reported it already.
-            if not seen[musicIndex] then
-                seen[musicIndex] = true;
-
-                -- It's important that we yield the matched name and not
-                -- the canonical name, since the searches don't make sense
-                -- otherwise.
-                local musicFile = data.file[musicIndex];
-                return musicIndex, musicFile, name;
-            end
-        end
+        return IterIndexByPrefix(index, prefix, accessor, data);
     end
 
-    return iterator;
-end
+    --- Returns an iterator that returns all matching entries in the given
+    --  music database that match a given pattern string. If plain is true,
+    --  the search will not be a pattern but rather a substring test.
+    function IterMusicFilesByPattern(music, pattern, plain)
+        local index = music.index.name;
+        local data = music.data;
 
---- Returns an iterator that returns all matching music files in the database
---  that match a given pattern string. If plain is true, the search will not
---  be a pattern but rather a substring test.
-function IterMusicFilesByPattern(music, search, plain)
-    -- Map of file indices that we've already returned.
-    local seen = {};
-
-    -- Upvalue the database and search index to minimize lookups a bit.
-    local data = music.data;
-    local names = music.index.name;
-
-    -- Start iteration from the beginning of the keys array.
-    local nameIndex = 1;
-
-    local function iterator()
-        local keyCount = #names.key;
-        while nameIndex < keyCount do
-            local name = names.key[nameIndex];
-            local musicIndex = names.row[nameIndex];
-            nameIndex = nameIndex + 1;
-
-            -- If we've not seen this file, test the name.
-            if not seen[musicIndex] and strfind(name, search, 1, plain) then
-                -- Got a hit.
-                seen[musicIndex] = true;
-
-                local musicFile = data.file[musicIndex];
-                return musicIndex, musicFile, name;
-            end
-        end
+        return IterIndexByPattern(index, pattern, plain, accessor, data);
     end
-
-    return iterator;
 end
 
 --- Normalizes the given music name, turning it into a lowercase string
