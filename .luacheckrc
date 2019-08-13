@@ -14,8 +14,9 @@ max_comment_line_length = 78;
 exclude_files = {
     ".release",
     "Exporter/casc",
-    "Exporter/Config.*.lua",
-    "Exporter/Template.*.lua",
+    "Exporter/Config",
+    "Exporter/Data",
+    "Exporter/Templates",
     "LibRPMedia-*-1.0.lua",
     "Libs",
 };
