@@ -12,7 +12,6 @@ local bbor = bit.bor;
 local blshift = bit.lshift;
 local strbyte = string.byte;
 local strfind = string.find;
-local strformat = string.format;
 local strgsub = string.gsub;
 local strlower = string.lower;
 local tinsert = table.insert;
@@ -79,12 +78,6 @@ function Icons.GetNameFromFilePath(filePath)
 
     local name = plpath.splitext(plpath.basename(filePath));
     return strlower(name);
-end
-
--- Returns the name for an icon based on its atlas name.
-function Icons.GetNameFromAtlasName(atlasName)
-    -- Atlas names are prefixed to ensure no collisions occur.
-    return Icons.NormalizeName(strformat("atlas:%s", atlasName));
 end
 
 -- Returns true if the given icon name is excluded from the database.
@@ -245,7 +238,7 @@ function Icons.GetManifest(cache)
 
             -- Populate and insert an icon entry into the manifest.
             local icon = {};
-            icon.name = Icons.GetNameFromAtlasName(atlasName);
+            icon.name = atlasName;
             icon.type = IconType.Atlas;
             icon.size = Serializer.CreateSpacedTable({
                 w = x2 - x1,
