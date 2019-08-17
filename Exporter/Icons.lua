@@ -181,6 +181,7 @@ function Icons.UpdateIconData(icon)
     end
 
     -- Update fields on the icon.
+    icon.hash = Resources.GetFileContentHash(icon.file);
     icon.size = dimensions;
     return icon;
 end
