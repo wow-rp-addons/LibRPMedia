@@ -182,7 +182,7 @@ local ok, err = pcall(function()
     templateFile:close();
 
     Log.Info("Rendering template contents...");
-    local content = etlua.render(template, {
+    local content = assert(etlua.render(template, {
         -- Data.
         build = build,
         config = config,
@@ -195,7 +195,7 @@ local ok, err = pcall(function()
 
         -- Functions.
         Dump = Serializer.Dump,
-    });
+    }));
 
     -- Write the rendered template out.
     Log.Info("Writing database contents...", { path = config.database });
