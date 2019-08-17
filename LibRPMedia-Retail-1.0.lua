@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 8.2.0.31429
--- Build Config: 64ac3abe0f7af37f350279683e0acf02
+-- Client Version: 8.2.0.31478
+-- Build Config: dbf21656d4e6691daee053017923d3fb
 if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then
     return;
 end
