@@ -30,16 +30,20 @@ return {
             "^mail_gmicon$",
             "^ui_shop_bcv$",
 
-            -- Encrypted icon files.
-            "inv_8xp_encrypted07",
-            "inv_encrypted14",
-            "inv_encrypted15",
+            -- The following files require file ID support, since the client
+            -- doesn't accept their paths.
+            "^inv_redbird$",
+            "^inv_snowkid$",
+            "^inv_skiff$",
+
+            -- Encrypted icon files (these *may* work with file IDs):
+            "^inv_.*encrypted%d+",
         },
 
         -- List of atlas name patterns to include.
         includeAtlases = {
-            -- Race icons.
-            "^raceicon%-",
+            -- Race icons. Disabled for now until atlas support is set up.
+            -- "^raceicon%-",
         },
     },
 
