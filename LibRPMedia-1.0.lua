@@ -748,9 +748,10 @@ do
 end
 
 --@do-not-package@
--- Only execute the below if loaded in standalone, non-packaged mode.
+-- Only execute the below if loaded in standalone, non-packaged mode, and
+-- if we're ingame.
 local ADDON_NAME = ...;
-if ADDON_NAME == MODULE_MAJOR then
+if ADDON_NAME == MODULE_MAJOR and UIParent ~= nil then
     -- Register the browser frame as a UI panel.
     UIPanelWindows["LibRPMedia_BrowserFrame"] = {
         area = "doublewide",
