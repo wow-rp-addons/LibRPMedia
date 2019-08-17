@@ -34,11 +34,15 @@ local BinarySearch;
 local BinarySearchPrefix;
 local CheckType;
 local GetCommonPrefixLength;
+local IterIcons;
+local IterIconsByPattern;
+local IterIconsByPrefix;
 local IterIndexByPattern;
 local IterIndexByPrefix;
 local IterMusicFiles;
 local IterMusicFilesByPattern;
 local IterMusicFilesByPrefix;
+local NormalizeIconName;
 local NormalizeMusicName;
 
 -- Error constants.
@@ -50,7 +54,7 @@ local ERR_INVALID_SEARCH_METHOD = "LibRPMedia: Invalid search method: %q";
 
 --- Returns true if music data is presently loaded.
 --
---  If this returns false, most other functions will error.
+--  If this returns false, most other music API functions will error.
 function LibRPMedia:IsMusicDataLoaded()
     return self:IsDatabaseRegistered("music");
 end
@@ -105,6 +109,8 @@ end
 
 --- Returns the index of a music file from its file ID. If the given file
 --  ID is not present in the database, nil is returned.
+--
+--  Indices are not stable and may change between upgrades to the library.
 function LibRPMedia:GetMusicIndexByFile(musicFile)
     AssertType(musicFile, "musicFile", "number");
 
@@ -114,6 +120,8 @@ end
 
 --- Returns the index of a music file from its name. If no matching name
 --  is found in the database, nil is returned.
+--
+--  Indices are not stable and may change between upgrades to the library.
 function LibRPMedia:GetMusicIndexByName(musicName)
     AssertType(musicName, "musicName", "string");
 
@@ -153,7 +161,7 @@ function LibRPMedia:GetMusicNameByFile(musicFile)
 end
 
 --- Returns an iterator for accessing all music files in the database
---  matching the given name.
+--  matching the given name, matching according to the given options table.
 --
 --  The iterator will return triplet of file index, file ID, and file name.
 --
@@ -187,12 +195,126 @@ function LibRPMedia:FindMusicFiles(musicName, options)
 end
 
 --- Returns an iterator for accessing all music files in the database.
---  The iterator will return triplet of file index, file ID, and file name.
+--  The iterator will return a triplet of file index, file ID, and file name.
 --
 --  The order of which files are returned by this iterator is not guaranteed.
 function LibRPMedia:FindAllMusicFiles()
     local music = self:GetDatabase("music");
     return IterMusicFiles(music);
+end
+
+--- Icon Database API
+
+--- Icon type enumeration.
+LibRPMedia.IconType = {
+    -- Icon name is a standard texture file in the Interface\Icons folder.
+    Texture = 1,
+    -- Icon name is a texture atlas.
+    Atlas = 2,
+};
+
+--- Returns true if icon data is presently loaded.
+--
+--  If this returns false, most other icon API functions will error.
+function LibRPMedia:IsIconDataLoaded()
+    return self:IsDatabaseRegistered("icons");
+end
+
+--- Returns the number of icons in the database.
+function LibRPMedia:GetNumIcons()
+    return self:GetNumDatabaseEntries("icons");
+end
+
+--- Returns the name of an icon by its index. If the given index is outside
+--  of the range 1 through GetNumIcons(), nil is returned.
+function LibRPMedia:GetIconNameByIndex(iconIndex)
+    AssertType(iconIndex, "iconIndex", "number");
+
+    local icons = self:GetDatabase("icons");
+    return icons.data.name[iconIndex];
+end
+
+--- Returns the type of an icon by its index. If the given index is outside
+--  of the range 1 through GetNumIcons(), nil is returned.
+function LibRPMedia:GetIconTypeByIndex(iconIndex)
+    AssertType(iconIndex, "iconIndex", "number");
+
+    -- Explicitly test the index range due to the layout of the data.
+    local icons = self:GetDatabase("icons");
+    if iconIndex <= 0 or iconIndex > icons.size then
+        return nil;
+    end
+
+    -- The type map only contains entries for non-textures; as the index is
+    -- in range we should *always* default it.
+    return icons.data.type[iconIndex] or self.IconType.Texture;
+end
+
+--- Returns the name of an icon by its name. If no matching name is found in
+--  the database, nil is returned.
+function LibRPMedia:GetIconTypeByName(iconName)
+    AssertType(iconName, "iconName", "string");
+
+    local iconIndex = self:GetIconIndexByName(iconName);
+    if not iconIndex then
+        return nil;
+    end
+
+    return self:GetIconTypeByIndex(iconIndex);
+end
+
+--- Returns the index of an icon from its name. If no matching name is found
+--  in the database, nil is returned.
+--
+--  Indices are not stable and may change between upgrades to the library.
+function LibRPMedia:GetIconIndexByName(iconName)
+    AssertType(iconName, "iconName", "string");
+
+    local icons = self:GetDatabase("icons");
+    return BinarySearch(icons.data.name, NormalizeIconName(iconName));
+end
+
+--- Returns an iterator for accessing all icons in the database matching
+--  the given name, matching according to the given options table.
+--
+--  The iterator will yield each matching icon index and name on each
+--  successive call, until the end of the matching set is reached.
+--
+--  The order of which files are returned by this iterator is not guaranteed.
+function LibRPMedia:FindIcons(iconName, options)
+    AssertType(iconName, "iconName", "string");
+    AssertType(options, "options", "table", "nil");
+
+    -- If the search space is empty then everything matches.
+    if iconName == "" then
+        return self:FindAllIcons();
+    end
+
+    -- Default the options and extract them.
+    local optMethod = options and options.method or "prefix";
+
+    -- Grab the database and search appropriately.
+    local icons = self:GetDatabase("icons");
+    if optMethod == "prefix" then
+        return IterIconsByPrefix(icons, iconName);
+    elseif optMethod == "substring" then
+        return IterIconsByPattern(icons, NormalizeIconName(iconName), true);
+    elseif optMethod == "pattern" then
+        return IterIconsByPattern(icons, iconName, false);
+    else
+        error(strformat(ERR_INVALID_SEARCH_METHOD, optMethod), 2);
+    end
+end
+
+--- Returns an iterator for accessing all icons in the database.
+--
+--  The iterator will yield each icon index and name on each successive call,
+--  until the end of the database is reached.
+--
+--  The order of which icons are returned by this iterator is not guaranteed.
+function LibRPMedia:FindAllIcons()
+    local icons = self:GetDatabase("icons");
+    return IterIcons(icons);
 end
 
 --- Internal API
@@ -443,12 +565,11 @@ function IterIndexByPrefix(index, prefix, rowAccessorFunc, data)
     local iterator = function()
         -- Loop so long as we don't run out of keys.
         while offset <= length do
-            -- If the common prefix between our search string and the current
-            -- file name isn't the same as the search string, then we should
-            -- stop since we're past the "like" range of names.
             local key = index.key[offset];
             local commonLength = GetCommonPrefixLength(prefix, key);
             if commonLength ~= #prefix then
+                -- Common prefix length isn't the full prefix, so we're
+                -- past the searchable range where things can match.
                 return nil;
             end
 
@@ -501,6 +622,7 @@ function IterIndexByPattern(index, pattern, plain, rowAccessorFunc, data)
     return iterator;
 end
 
+-- Music API support functions.
 do
     -- Common accessor function for translating a matching row index to a
     -- set of return values for music entry iterators.
@@ -533,15 +655,6 @@ do
     end
 
     --- Returns an iterator that returns all matching entries in the given
-    --  music database that match a given common prefix string.
-    function IterMusicFilesByPrefix(music, prefix)
-        local index = music.index.name;
-        local data = music.data;
-
-        return IterIndexByPrefix(index, prefix, accessor, data);
-    end
-
-    --- Returns an iterator that returns all matching entries in the given
     --  music database that match a given pattern string. If plain is true,
     --  the search will not be a pattern but rather a substring test.
     function IterMusicFilesByPattern(music, pattern, plain)
@@ -550,10 +663,86 @@ do
 
         return IterIndexByPattern(index, pattern, plain, accessor, data);
     end
+
+    --- Returns an iterator that returns all matching entries in the given
+    --  music database that match a given common prefix string.
+    function IterMusicFilesByPrefix(music, prefix)
+        local index = music.index.name;
+        local data = music.data;
+
+        return IterIndexByPrefix(index, prefix, accessor, data);
+    end
+
+    --- Normalizes the given music name.
+    function NormalizeMusicName(musicName)
+        -- Music names are lowercased strings with / path separators.
+        return strlower(strgsub(musicName, "\\", "/"));
+    end
 end
 
---- Normalizes the given music name, turning it into a lowercase string
---  with all backslashes (\) into forward slashes (/).
-function NormalizeMusicName(musicName)
-    return strlower(strgsub(musicName, "\\", "/"));
+-- Icon API support functions.
+do
+    -- Iterator for accessing all icons in index-order.
+    local function iterator(icons, iconIndex)
+        iconIndex = iconIndex + 1;
+        if iconIndex > icons.size then
+            return nil;
+        end
+
+        local iconName = icons.data.name[iconIndex];
+        return iconIndex, iconName;
+    end
+
+    --- Returns an iterator that returns all icon entries in the database
+    --  in index-order.
+    function IterIcons(icons)
+        return iterator, icons, 0;
+    end
+
+    --- Returns an iterator that returns all matching entries in the given
+    --  icon database that match a given pattern string. If plain is true,
+    --  the search will not be a pattern but rather a substring test.
+    function IterIconsByPattern(icons, pattern, plain)
+        local patternIterator = function(_, offset)
+            -- Test indices until we run out of them.
+            for iconIndex = offset + 1, icons.size do
+                local iconName = icons.data.name[iconIndex];
+                if strfind(iconName, pattern, 1, plain) then
+                    -- Icon matches the pattern, yield it.
+                    return iconIndex, iconName;
+                end
+            end
+        end
+
+        return patternIterator, icons, 0;
+    end
+
+    --- Returns an iterator that returns all matching entries in the given
+    --  icon database that match a given common prefix string.
+    function IterIconsByPrefix(icons, prefix)
+        local prefixIterator = function(_, offset)
+            local iconIndex = offset + 1;
+            local iconName = icons.data.name[iconIndex];
+            local commonLength = GetCommonPrefixLength(prefix, iconName);
+            if commonLength == #prefix then
+                -- Common prefix length still matches, so this is a hit.
+                return iconIndex, iconName;
+            end
+
+            -- Common prefix length isn't the full prefix, so we're
+            -- past the searchable range where things can match.
+            return nil;
+        end
+
+        -- Start iteration from the index before the matched prefix, as our
+        -- name data is stored alphabetically.
+        local startIndex = BinarySearchPrefix(icons.data.name, prefix);
+        return prefixIterator, icons, startIndex - 1;
+    end
+
+    --- Normalizes the given icon name.
+    function NormalizeIconName(iconName)
+        -- Icon names are just lowercased strings.
+        return strlower(iconName);
+    end
 end

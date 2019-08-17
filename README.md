@@ -96,7 +96,7 @@ Returns the music index associated with the given file ID inside the database.
 
 If no matching file ID is found, `nil` is returned.
 
-The index returned by this function is not guaranteed to remain stable between updates to this library.
+The index returned by this function is not guaranteed to remain stable between upgrades to this library.
 
 ##### Usage
 
@@ -111,7 +111,7 @@ Returns the music index associated with the given music name inside the database
 
 Music files may be associated with multiple names, and this function will search against all of them. If no matching name is found, `nil` is returned.
 
-The index returned by this function is not guaranteed to remain stable between updates to this library.
+The index returned by this function is not guaranteed to remain stable between upgrades to this library.
 
 ##### Usage
 
