@@ -87,6 +87,7 @@ stds.wow = {
         "UIDropDownMenu_AddButton",
         "UIDropDownMenu_CreateInfo",
         "UIDropDownMenu_Initialize",
+        "UIParent",
         "WOW_PROJECT_CLASSIC",
         "WOW_PROJECT_ID",
         "WOW_PROJECT_MAINLINE",
