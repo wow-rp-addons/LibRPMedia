@@ -16,3 +16,4 @@ ignore:
     - Exporter
     - Makefile
     - Tests
+    - UI

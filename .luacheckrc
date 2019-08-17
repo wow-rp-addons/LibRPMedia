@@ -21,6 +21,28 @@ exclude_files = {
     "Libs",
 };
 
+-- The following globals are only read/written in non-packaged releases.
+globals = {
+    "LibRPMedia_BrowserMixin",
+    "LibRPMedia_BrowserTabMixin",
+    "LibRPMedia_IconBrowserMixin",
+    "LibRPMedia_IconContentMixin",
+    "LibRPMedia_IconPreviewMixin",
+    "LibRPMedia_MusicBrowserMixin",
+    "LibRPMedia_MusicColumnDisplayMixin",
+    "LibRPMedia_MusicItemRowMixin",
+    "LibRPMedia_MusicScrollMixin",
+    "LibRPMedia_PaginationBarMixin",
+    "LibRPMedia_SearchOptionsDropDownMixin",
+    "SLASH_LIBRPMEDIA_SLASHCMD1",
+    "SlashCmdList",
+    "UIPanelWindows",
+};
+
+read_globals = {
+    "LibRPMedia_BrowserFrame",
+};
+
 -- Add exceptions for external libraries.
 std = "lua51+libstub+wow+wowstd"
 
@@ -31,16 +53,43 @@ stds.libstub = {
 };
 
 stds.wow = {
-    globals = {
-        "SLASH_LIBRPMEDIA_SLASHCMD1",
-        "SlashCmdList",
-    },
     read_globals = {
+        "CallbackRegistryBaseMixin",
         "CallErrorHandler",
+        "Clamp",
+        "ColumnDisplayMixin",
+        "CreateFramePool",
+        "CreateFromMixins",
         "debugprofilestop",
         "debugstack",
+        "FauxScrollFrame_GetOffset",
+        "FauxScrollFrame_OnVerticalScroll",
+        "FauxScrollFrame_SetOffset",
+        "FauxScrollFrame_Update",
+        "GameTooltip_AddInstructionLine",
+        "GameTooltip_AddNormalLine",
+        "GameTooltip_SetTitle",
+        "GameTooltip",
+        "GetMouseFocus",
+        "GREEN_FONT_COLOR",
+        "HideUIPanel",
         "Mixin",
+        "PanelTemplates_ResizeTabsToFit",
+        "PanelTemplates_SetNumTabs",
+        "PanelTemplates_SetTab",
+        "PlayMusic",
+        "PlaySound",
+        "SecondsToTime",
+        "ShowUIPanel",
+        "SOUNDKIT",
+        "StopMusic",
         "tostringall",
+        "UIDropDownMenu_AddButton",
+        "UIDropDownMenu_CreateInfo",
+        "UIDropDownMenu_Initialize",
+        "WOW_PROJECT_CLASSIC",
+        "WOW_PROJECT_ID",
+        "WOW_PROJECT_MAINLINE",
         "WrapTextInColorCode",
     },
 };
@@ -50,6 +99,11 @@ stds.wowstd = {
         string = {
             fields = {
                 "join",
+            },
+        },
+        table = {
+            fields = {
+                "wipe",
             },
         },
     },

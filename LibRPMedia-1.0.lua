@@ -746,3 +746,33 @@ do
         return strlower(iconName);
     end
 end
+
+--@do-not-package@
+-- Only execute the below if loaded in standalone, non-packaged mode.
+local ADDON_NAME = ...;
+if ADDON_NAME == MODULE_MAJOR then
+    -- Register the browser frame as a UI panel.
+    UIPanelWindows["LibRPMedia_BrowserFrame"] = {
+        area = "doublewide",
+        xoffset = 80,
+        pushable = 0,
+        whileDead = 1,
+    };
+
+    -- Add in a slash command to toggle the browser or re-run tests.
+    SLASH_LIBRPMEDIA_SLASHCMD1 = "/lrpm";
+
+    SlashCmdList["LIBRPMEDIA_SLASHCMD"] = function(cmd)
+        local subcommand, params = string.match(cmd, "^([^%s]*)%s*(.-)$");
+        if subcommand == "" or subcommand == "browse" then
+            if LibRPMedia_BrowserFrame:IsShown() then
+                HideUIPanel(LibRPMedia_BrowserFrame);
+            else
+                ShowUIPanel(LibRPMedia_BrowserFrame);
+            end
+        elseif subcommand == "test" then
+            LibRPMedia.Test.RunTests(params);
+        end
+    end
+end
+--@end-do-not-package@
