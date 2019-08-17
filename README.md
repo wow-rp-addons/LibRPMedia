@@ -124,7 +124,7 @@ print("Music index (by name):", LibRPMedia:GetMusicIndexByName("citymusic/darnas
 
 Returns the music name associated with the given numeric index inside the database, in the range of 1 through the result of `LibRPMedia:GetNumMusicFiles()`. Queries outside of this range will return `nil`.
 
-Music files may be associated with multiple names, however only one name will ever be returned by this function. The name returned by this function is not guaranteed to remain stable between updates to this library.
+Music files may be associated with multiple names, however only one name will ever be returned by this function. The name returned by this function is not guaranteed to remain stable between upgrades to this library.
 
 ##### Usage
 
@@ -137,7 +137,7 @@ print("Music name (by index):", LibRPMedia:GetMusicNameByIndex(1));
 
 Returns the music name associated with the given file ID inside the database.
 
-Music files may be associated with multiple names, however only one name will ever be returned by this function. The name returned by this function is not guaranteed to remain stable between updates to this library. If no matching name is found, `nil` is returned.
+Music files may be associated with multiple names, however only one name will ever be returned by this function. The name returned by this function is not guaranteed to remain stable between upgrades to this library. If no matching name is found, `nil` is returned.
 
 ##### Usage
 
@@ -150,9 +150,9 @@ print("Music name (by file):", LibRPMedia:GetMusicNameByFile(53183));
 
 Returns an iterator for accessing the contents of the music database for music files matching the given name. The iterator will return a triplet of the music index, file ID, and music name on each successive call, or `nil` at the end of the database.
 
-Music files may be associated with multiple names, and this function will search against all of them. The music index and name yielded by this iterator is not guaranteed to remain stable between updates to this library.
+Music files may be associated with multiple names, and this function will search against all of them. The music index and name yielded by this iterator is not guaranteed to remain stable between upgrades to this library.
 
-The order of files returned by this iterator is not stable between updates to this library.
+The order of files returned by this iterator is not stable between upgrades to this library.
 
 ##### Usage
 
@@ -180,21 +180,141 @@ end
 
 Returns an iterator for accessing the contents of the music database. The iterator will return a triplet of the music index, file ID, and music name on each successive call, or `nil` at the end of the database.
 
-The music index and name yielded by this iterator is not guaranteed to remain stable between updates to this library.
+The music index and name yielded by this iterator is not guaranteed to remain stable between upgrades to this library.
 
-The order of files returned by this iterator is not stable between updates to this library.
+The order of files returned by this iterator is not stable between upgrades to this library.
 
 ##### Usage
 
 ```lua
-for index, file, name in LibRPMedia:FindAllMusicFIles() do
+for index, file, name in LibRPMedia:FindAllMusicFiles() do
     print("Found music file:", name, file);
     -- Example output: "Found music file: citymusic/darnassus/darnassus intro, 53183"
 end
 ```
 
-## Building
+### Icon API
 
+#### `LibRPMedia:IsIconDataLoaded()`
+
+Returns `true` if the icon database has been loaded. If this returns `false`, most other Icon API functions will raise errors.
+
+##### Usage
+
+```lua
+print("Is icon data loaded?", LibRPMedia:IsIconDataLoaded());
+-- Example output: "Is icon data loaded? true"
+```
+
+#### `LibRPMedia:GetNumIcons()`
+
+Returns the number of icons present within the database.
+
+##### Usage
+
+```lua
+print("Number of icons:", LibRPMedia:GetNumIcons());
+-- Example output: "Number of icons: 20974"
+```
+
+#### `LibRPMedia:GetIconNameByIndex(iconIndex)`
+
+Returns the name of an icon by its given index within the database, in the range of 1 through the result of `LibRPMedia:GetNumIcons()`. Queries outside of this range will return `nil`.
+
+Icon indices are not stable and may result in different data being returned between upgrades to the library. It is recommended to persist icons via their name and instead query via the `GetIcon<X>ByName` functions where possible.
+
+##### Usage
+
+```lua
+print("Icon Name #1:", LibRPMedia:GetIconNameByIndex(1));
+-- Example output: "Icon Name #1: ability_ambush"
+```
+
+#### `LibRPMedia:GetIconTypeByIndex(iconIndex)`
+
+Returns the type of an icon by its given index within the database, in the range of 1 through the result of `LibRPMedia:GetNumIcons()`. Queries outside of this range will return `nil`, otherwise a value present in the `LibRPMedia.IconType` enumeration is returned.
+
+Icon indices are not stable and may result in different data being returned between upgrades to the library. It is recommended to persist icons via their name and instead query via the `GetIcon<X>ByName` functions where possible.
+
+##### Usage
+
+```lua
+print("Icon Type #1:", LibRPMedia:GetIconTypeByIndex(1));
+-- Example output: "Icon Type #1: 1"
+```
+
+#### `LibRPMedia:GetIconTypeByName(iconName)`
+
+Returns the type of an icon keyed by its name within the database. If the given icon name cannot be found `nil` is returned, otherwise a value present in the `LibRPMedia.IconType` enumeration is returned.
+
+##### Usage
+
+```lua
+print("Icon Type:", LibRPMedia:GetIconTypeByName("raceicon-dwarf-female"));
+-- Example output: "Icon Type: 2"
+```
+
+#### `LibRPMedia:GetIconIndexByName(iconName)`
+
+Returns the index of an icon keyed by its name within the database. If the given icon name cannot be found `nil` is returned, otherwise an index integer is returned within the range 1 through `LibRPMedia:GetNumIcons()`.
+
+Icon indices are not stable and may result in different data being returned between upgrades to the library. It is recommended to persist icons via their name and instead query via the `GetIcon<X>ByName` functions where possible.
+
+##### Usage
+
+```lua
+print("Icon Index:", LibRPMedia:GetIconIndexByName("ability-ambush"));
+-- Example output: "Icon Index: 1"
+```
+
+#### `LibRPMedia:FindIcons(iconName[, options])`
+
+Returns an iterator for accessing the contents of the icon database for icons matching the given name. The iterator will return a pair of the icon index and icon name on each successive call, or `nil` at the end of the database.
+
+Icon indices are not stable and may result in different data being returned between upgrades to the library.
+
+The order of files returned by this iterator is not stable between upgrades to this library.
+
+##### Usage
+
+```lua
+-- Prefix searching (default):
+for index, name in LibRPMedia:FindIcons("ability_") do
+    print("Found icon:", name);
+    -- Example output: "Found icon: ability_ambush"
+end
+
+-- Substring matching:
+for index, name in LibRPMedia:FindIcons("hunter", { method = "substring" }) do
+    print("Found icon:", name);
+    -- Example output: "Found icon: ability_hunter_swiftstrike"
+end
+
+-- Pattern matching:
+for index, name in LibRPMedia:FindIcons("^inv_mace_%d+", { method = "pattern" }) do
+    print("Found icon:", name);
+    -- Example output: "Found icon: inv_mace_01"
+end
+```
+
+#### `LibRPMedia:FindAllIcons()`
+
+Returns an iterator for accessing the contents of the icon database. The iterator will return a pair of the icon index and icon name on each successive call, or `nil` at the end of the database.
+
+Icon indices are not stable and may result in different data being returned between upgrades to the library.
+
+The order of files returned by this iterator is not stable between upgrades to this library.
+
+##### Usage
+
+```lua
+for index, name in LibRPMedia:FindAllIcons() do
+    print("Found icon:", name);
+    -- Example output: "Found icon: ability_ambush"
+end
+```
+
+## Building
 
 The included Makefile will execute the exporter script to generate the databases, and update the manifest files. The exporter script has the following dependencies:
 
