@@ -2,38 +2,32 @@
 assert(LibStub, "Missing dependency: LibStub");
 
 local MODULE_MAJOR = "LibRPMedia-1.0";
-local MODULE_MINOR = 3;
+local MODULE_MINOR = 4;
 
 local LibRPMedia = LibStub:NewLibrary(MODULE_MAJOR, MODULE_MINOR);
 if not LibRPMedia then
     return;
 end
 
--- Dependencies.
-local LibDeflate = LibStub:GetLibrary("LibDeflate");
-
 -- Upvalues.
 local error = error;
 local floor = math.floor;
-local loadstring = loadstring;
 local min = math.min;
-local nop = nop;
-local pairs = pairs;
-local rawset = rawset;
-local setfenv = setfenv;
+local select = select;
 local setmetatable = setmetatable;
 local strbyte = string.byte;
-local strchar = string.char;
 local strfind = string.find;
 local strformat = string.format;
 local strgsub = string.gsub;
 local strjoin = string.join;
 local strlower = string.lower;
-local tconcat = table.concat;
+local strsplit = string.split;
+local strsub = string.sub;
 local type = type;
 local xpcall = xpcall;
 
 local CallErrorHandler = CallErrorHandler;
+local Mixin = Mixin;
 
 -- Local declarations.
 local AssertType;
@@ -41,16 +35,19 @@ local BinarySearch;
 local BinarySearchPrefix;
 local CheckType;
 local GetCommonPrefixLength;
+local IterIcons;
+local IterIconsByPattern;
+local IterIconsByPrefix;
+local IterIndexByPattern;
+local IterIndexByPrefix;
 local IterMusicFiles;
 local IterMusicFilesByPattern;
 local IterMusicFilesByPrefix;
+local NormalizeIconName;
 local NormalizeMusicName;
 
 -- Error constants.
-local ERR_DATA_DECOMPRESS_FAILED = "LibRPMedia: Error decompressing data.";
-local ERR_DATA_NOT_HYDRATABLE = "LibRPMedia: Type %s cannot be hydrated.";
-local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found.";
-local ERR_DATABASE_UNSIZED = "LibRPMedia: Database %q has no size.";
+local ERR_DATABASE_NOT_FOUND = "LibRPMedia: Database %q was not found";
 local ERR_INVALID_ARG_TYPE = "LibRPMedia: Argument %q is %s, expected %s";
 local ERR_INVALID_SEARCH_METHOD = "LibRPMedia: Invalid search method: %q";
 
@@ -58,7 +55,7 @@ local ERR_INVALID_SEARCH_METHOD = "LibRPMedia: Invalid search method: %q";
 
 --- Returns true if music data is presently loaded.
 --
---  If this returns false, most other functions will error.
+--  If this returns false, most other music API functions will error.
 function LibRPMedia:IsMusicDataLoaded()
     return self:IsDatabaseRegistered("music");
 end
@@ -74,8 +71,6 @@ end
 --  If no match is found, nil is returned.
 function LibRPMedia:GetMusicFileByName(musicName)
     AssertType(musicName, "musicName", "string");
-
-    musicName = NormalizeMusicName(musicName);
 
     local musicIndex = self:GetMusicIndexByName(musicName);
     if not musicIndex then
@@ -113,8 +108,37 @@ function LibRPMedia:GetMusicFileDuration(musicFile)
     return music.data.time[musicIndex] or 0;
 end
 
+--- Converts a music file ID to a native music file value that can be
+--  supplied to in-game APIs such as PlayMusic and PlaySoundFile.
+--
+--  If the given music file does not exist in the database, nil is returned.
+--
+--  The return type of a valid music file is unspecified; the only guarantees
+--  are that it will work with most ingame API functions and is convertible
+--  to a string.
+function LibRPMedia:GetNativeMusicFile(musicFile)
+    AssertType(musicFile, "musicFile", "number");
+
+    -- Validate the input file and return nil if invalid.
+    if not self:GetMusicIndexByFile(musicFile) then
+        return nil;
+    end
+
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        -- Classic doesn't support file IDs, so we need to use paths.
+        local musicName = self:GetMusicNameByFile(musicFile);
+        return strjoin("\\", "Sound", "Music", strsplit("/", musicName))
+            .. ".mp3";
+    end
+
+    -- Default to returning the file ID otherwise.
+    return musicFile;
+end
+
 --- Returns the index of a music file from its file ID. If the given file
 --  ID is not present in the database, nil is returned.
+--
+--  Indices are not stable and may change between upgrades to the library.
 function LibRPMedia:GetMusicIndexByFile(musicFile)
     AssertType(musicFile, "musicFile", "number");
 
@@ -124,6 +148,8 @@ end
 
 --- Returns the index of a music file from its name. If no matching name
 --  is found in the database, nil is returned.
+--
+--  Indices are not stable and may change between upgrades to the library.
 function LibRPMedia:GetMusicIndexByName(musicName)
     AssertType(musicName, "musicName", "string");
 
@@ -163,7 +189,7 @@ function LibRPMedia:GetMusicNameByFile(musicFile)
 end
 
 --- Returns an iterator for accessing all music files in the database
---  matching the given name.
+--  matching the given name, matching according to the given options table.
 --
 --  The iterator will return triplet of file index, file ID, and file name.
 --
@@ -197,7 +223,7 @@ function LibRPMedia:FindMusicFiles(musicName, options)
 end
 
 --- Returns an iterator for accessing all music files in the database.
---  The iterator will return triplet of file index, file ID, and file name.
+--  The iterator will return a triplet of file index, file ID, and file name.
 --
 --  The order of which files are returned by this iterator is not guaranteed.
 function LibRPMedia:FindAllMusicFiles()
@@ -205,54 +231,167 @@ function LibRPMedia:FindAllMusicFiles()
     return IterMusicFiles(music);
 end
 
---- Unpacks and decompresses music data within the database. This may cause
---  a momentary lag spike in the client.
-function LibRPMedia:UnpackMusicData()
-    -- Access anything that might be compressed here.
-    local music = self:GetDatabase("music");
-    nop(music.data);
-    nop(music.index.name);
+--- Icon Database API
 
-    -- We'll throw in a GC for free too, thanks to the decompression.
-    collectgarbage("collect");
+--- Icon type enumeration.
+LibRPMedia.IconType = {
+    -- Icon name is a standard texture file in the Interface\Icons folder.
+    Texture = 1,
+    -- Icon name is a texture atlas.
+    Atlas = 2,
+};
+
+--- Returns true if icon data is presently loaded.
+--
+--  If this returns false, most other icon API functions will error.
+function LibRPMedia:IsIconDataLoaded()
+    return self:IsDatabaseRegistered("icons");
+end
+
+--- Returns the number of icons in the database.
+function LibRPMedia:GetNumIcons()
+    return self:GetNumDatabaseEntries("icons");
+end
+
+--- Returns the name of an icon by its index. If the given index is outside
+--  of the range 1 through GetNumIcons(), nil is returned.
+function LibRPMedia:GetIconNameByIndex(iconIndex)
+    AssertType(iconIndex, "iconIndex", "number");
+
+    local icons = self:GetDatabase("icons");
+    return icons.data.name[iconIndex];
+end
+
+--- Returns the type of an icon by its index. If the given index is outside
+--  of the range 1 through GetNumIcons(), nil is returned.
+function LibRPMedia:GetIconTypeByIndex(iconIndex)
+    AssertType(iconIndex, "iconIndex", "number");
+
+    -- Explicitly test the index range due to the layout of the data.
+    local icons = self:GetDatabase("icons");
+    if iconIndex <= 0 or iconIndex > icons.size then
+        return nil;
+    end
+
+    -- The type map only contains entries for non-textures; as the index is
+    -- in range we should *always* default it.
+    return icons.data.type[iconIndex] or self.IconType.Texture;
+end
+
+--- Returns the name of an icon by its name. If no matching name is found in
+--  the database, nil is returned.
+function LibRPMedia:GetIconTypeByName(iconName)
+    AssertType(iconName, "iconName", "string");
+
+    local iconIndex = self:GetIconIndexByName(iconName);
+    if not iconIndex then
+        return nil;
+    end
+
+    return self:GetIconTypeByIndex(iconIndex);
+end
+
+--- Returns the index of an icon from its name. If no matching name is found
+--  in the database, nil is returned.
+--
+--  Indices are not stable and may change between upgrades to the library.
+function LibRPMedia:GetIconIndexByName(iconName)
+    AssertType(iconName, "iconName", "string");
+
+    local icons = self:GetDatabase("icons");
+    return BinarySearch(icons.data.name, NormalizeIconName(iconName));
+end
+
+--- Returns an iterator for accessing all icons in the database matching
+--  the given name, matching according to the given options table.
+--
+--  The iterator will yield each matching icon index and name on each
+--  successive call, until the end of the matching set is reached.
+--
+--  The order of which files are returned by this iterator is not guaranteed.
+function LibRPMedia:FindIcons(iconName, options)
+    AssertType(iconName, "iconName", "string");
+    AssertType(options, "options", "table", "nil");
+
+    -- If the search space is empty then everything matches.
+    if iconName == "" then
+        return self:FindAllIcons();
+    end
+
+    -- Default the options and extract them.
+    local optMethod = options and options.method or "prefix";
+
+    -- Grab the database and search appropriately.
+    local icons = self:GetDatabase("icons");
+    if optMethod == "prefix" then
+        return IterIconsByPrefix(icons, iconName);
+    elseif optMethod == "substring" then
+        return IterIconsByPattern(icons, NormalizeIconName(iconName), true);
+    elseif optMethod == "pattern" then
+        return IterIconsByPattern(icons, iconName, false);
+    else
+        error(strformat(ERR_INVALID_SEARCH_METHOD, optMethod), 2);
+    end
+end
+
+--- Returns an iterator for accessing all icons in the database.
+--
+--  The iterator will yield each icon index and name on each successive call,
+--  until the end of the database is reached.
+--
+--  The order of which icons are returned by this iterator is not guaranteed.
+function LibRPMedia:FindAllIcons()
+    local icons = self:GetDatabase("icons");
+    return IterIcons(icons);
 end
 
 --- Internal API
 --  The below declarations are for internal use only.
 
---- Table storing all the databases. Doesn't persist across upgrades; the
---  data is baked into the library and the library assumes a lot about it.
+--- Table storing all the databases.
+--
+--  This _currently_ doesn't persist across upgrades as there's a lot of
+--  assumptions about the structure of the data, and the data is packed
+--  into the library regardless.
 LibRPMedia.schema = {};
 
---- Registers a named database.
-function LibRPMedia:RegisterDatabase(databaseName, database)
-    -- Databases must have at minimum a size field.
-    if not database.size then
-        error(strformat(ERR_DATABASE_UNSIZED, databaseName));
+--- Registers a named database with the given minor version.
+--
+--  If a database already exists with a greater or same minor version nil is
+--  returned, otherwise a table will be returned.
+--
+--  The database will be initialized with a size field (set to zero), and a
+--  version field matching the given minor version.
+function LibRPMedia:NewDatabase(databaseName, minorVersion)
+    -- Get or create a table for the database.
+    local database = self.schema[databaseName] or {};
+    if database.version and database.version >= minorVersion then
+        -- No upgrade required.
+        return nil;
     end
 
+    -- Upgrade fields on the database.
+    database.size = database.size or 0;
+    database.version = minorVersion;
+
     self.schema[databaseName] = database;
+    return database;
 end
 
---- Unregisters the named database.
-function LibRPMedia:UnregisterDatabase(databaseName)
-    -- Yoink!
-    self.schema[databaseName] = nil;
-end
-
---- Returns true if the named database exists. A real shocker, I know.
+--- Returns true if the named database exists.
 function LibRPMedia:IsDatabaseRegistered(databaseName)
-    return not not self.schema[databaseName];
+    return self.schema[databaseName] ~= nil;
 end
 
 --- Returns the named database.
 --  This function will error if the database is not present.
 function LibRPMedia:GetDatabase(databaseName)
-    if not self.schema[databaseName] then
+    local database = self.schema[databaseName];
+    if not database then
         error(strformat(ERR_DATABASE_NOT_FOUND, databaseName), 2);
     end
 
-    return self.schema[databaseName];
+    return database;
 end
 
 --- Returns the number of entries present within a named database.
@@ -260,6 +399,73 @@ end
 function LibRPMedia:GetNumDatabaseEntries(databaseName)
     local database = self:GetDatabase(databaseName);
     return database.size;
+end
+
+--- Creates a table that lazily loads its contents upon first access to any
+--  field.
+--
+--  If an error occurs during data loading, the global error handler is
+--  invoked but execution will not terminate, and nil is instead returned.
+function LibRPMedia:CreateLazyTable(generatorFunc)
+    local metatable = {};
+    metatable.__index = function(proxy, key)
+        -- Unset the metatable so that loading is only tried once.
+        setmetatable(proxy, nil);
+
+        local ok, data = xpcall(generatorFunc, CallErrorHandler);
+        if not ok then
+            -- Error is passed through default error handler.
+            return nil;
+        end
+
+        -- Copy the loaded data into the proxy.
+        Mixin(proxy, data);
+        return proxy[key];
+    end
+
+    return setmetatable({}, metatable);
+end
+
+--- Loads the given string of code as a function, executing it and returning
+--  the result.
+--
+--  The loaded function will have an environment with LibRPMedia present.
+function LibRPMedia:LoadFunctionFromString(code)
+    local chunk = assert(loadstring(code));
+    local env = setmetatable({ LibRPMedia = LibRPMedia }, { __index = _G });
+    setfenv(chunk, env);
+
+    local data = chunk();
+
+    -- Loading the data often generates a ton of garbage, so we'll sneak in
+    -- a free collection before wrapping up.
+    collectgarbage("collect");
+    return data;
+end
+
+--- Restores a string list encoded as a list of front-coded strings, returning
+--  a new table with the loaded contents.
+function LibRPMedia:LoadFrontCodedStringList(input)
+    local output = {};
+
+    -- Iterate over the list in pairs of common prefix length and suffixes.
+    for i = 1, #input, 2 do
+        local commonLength = input[i];
+        local suffix = input[i + 1];
+
+        if commonLength == 0 then
+            -- No data in common; the suffix is the whole string.
+            output[#output + 1] = suffix;
+        else
+            -- Combine the suffix with the previously restored string.
+            local prefix = output[#output];
+            local restored = strsub(prefix, 1, commonLength) .. suffix;
+
+            output[#output + 1] = restored;
+        end
+    end
+
+    return output;
 end
 
 --- Checks the type of a given value against a list of types. If no type
@@ -312,185 +518,6 @@ function AssertType(...)
     end
 
     return value;
-end
-
-do
-    -- Use a restricted environment for the lazy loading to prevent any
-    -- weird ideas taking form in the data generation layer.
-    local baseenv = { __newindex = function() end, __metatable = false };
-    local nullenv = setmetatable({}, baseenv);
-
-    -- Lookup table of ASCII bytes (decimal) for base64 decoding.
-    --
-    -- This table is based off the standard character set defined in RFC 4648,
-    -- and used in MIME (RFC 2045) and PEM (RFC 1421).
-    local b64bytes = {
-        [ 65] =  0, [ 66] =  1, [ 67] =  2, [ 68] =  3,
-        [ 69] =  4, [ 70] =  5, [ 71] =  6, [ 72] =  7,
-        [ 73] =  8, [ 74] =  9, [ 75] = 10, [ 76] = 11,
-        [ 77] = 12, [ 78] = 13, [ 79] = 14, [ 80] = 15,
-        [ 81] = 16, [ 82] = 17, [ 83] = 18, [ 84] = 19,
-        [ 85] = 20, [ 86] = 21, [ 87] = 22, [ 88] = 23,
-        [ 89] = 24, [ 90] = 25, [ 97] = 26, [ 98] = 27,
-        [ 99] = 28, [100] = 29, [101] = 30, [102] = 31,
-        [103] = 32, [104] = 33, [105] = 34, [106] = 35,
-        [107] = 36, [108] = 37, [109] = 38, [110] = 39,
-        [111] = 40, [112] = 41, [113] = 42, [114] = 43,
-        [115] = 44, [116] = 45, [117] = 46, [118] = 47,
-        [119] = 48, [120] = 49, [121] = 50, [122] = 51,
-        [ 48] = 52, [ 49] = 53, [ 50] = 54, [ 51] = 55,
-        [ 52] = 56, [ 53] = 57, [ 54] = 58, [ 55] = 59,
-        [ 56] = 60, [ 57] = 61, [ 43] = 62, [ 47] = 63,
-    };
-
-    --- Decodes a base64 encoded text string, returning the result as a a
-    --  decoded string.
-    --
-    --  This implementation is based off LibBase64, but tuned for a bit more
-    --  performance by omitting support for padding characters and using
-    --  only one loop/table for the decode phase.
-    --
-    --  Source:  https://www.wowace.com/projects/libbase64-1-0
-    --  Credit:  ckknight (ckknight@gmail.com)
-    --  License: MIT
-    local function b64decode(text)
-        -- Create a temporary table and a local length counter.
-        local t = {};
-        local n = 0;
-
-        -- Get local references for things in the loop.
-        local b64bytes = b64bytes; -- luacheck: no redefined
-        local strbyte = strbyte; -- luacheck: no redefined
-        local strchar = strchar; -- luacheck: no redefined
-
-        -- Read the text in blocks of 4 bytes.
-        for i = 1, #text, 4 do
-            -- Map the bytes using the lookup table.
-            local a, b, c, d = strbyte(text, i, i + 3);
-            a, b, c, d = b64bytes[a], b64bytes[b], b64bytes[c], b64bytes[d];
-
-            -- We don't support padding characters, so we'll check for the
-            -- absence of bytes. This also means we'll break if the input is
-            -- malformed, but we're not a public function.
-            local nilNum = 0;
-            if not c then
-                nilNum = 2;
-                c = 0;
-                d = 0;
-            elseif not d then
-                nilNum = 1;
-                d = 0;
-            end
-
-            -- Convert the four input bytes to three output bytes.
-            local num = (a * 2^18) + (b * 2^12) + (c * 2^6) + d;
-            c = num % 2^8;
-            num = (num - c) / 2^8;
-            b = num % 2^8;
-            num = (num - b) / 2^8;
-            a = num % 2^8;
-
-            -- Put the three output bytes into the output table.
-            n = n + 1;
-            if nilNum == 0 then
-                t[n] = strchar(a, b, c);
-            elseif nilNum == 1 then
-                t[n] = strchar(a, b);
-            elseif nilNum == 2 then
-                t[n] = strchar(a);
-            end
-        end
-
-        -- Join the output up and we're done.
-        return tconcat(t, "");
-    end
-
-    --- Hydrates the given data as a compressed string, returning a generator
-    --  that will inflate it upon being called and evaluate its contents.
-    local function HydrateDataString(data)
-        -- Create the generator that will load the data.
-        local function generator()
-            -- Decode and decompress.
-            local decoded = b64decode(data)
-            local decompressed = LibDeflate:DecompressDeflate(decoded);
-
-            -- Load the chunk.
-            local stmt = strjoin(" ", "return", decompressed);
-            local chunk, err = loadstring(stmt);
-            if err then
-                -- The error string might be super long, so we'll drop it.
-                error(ERR_DATA_DECOMPRESS_FAILED, 2);
-            end
-
-            -- Execute the chunk in an empty environment.
-            setfenv(chunk, nullenv);
-            return chunk();
-        end
-
-        -- Ensure the generator doesn't do anything weird.
-        return setfenv(generator, nullenv);
-    end
-
-    --- Hydrates the given data as a table, causing any contained generator
-    --  functions to be lazily executed on first access to the table.
-    local function HydrateDataTable(data)
-        -- Map of functions that generate data on first access.
-        local generators = {};
-
-        -- Move any data producing functions from the table to the generators.
-        for key, value in pairs(data) do
-            if type(value) == "function" then
-                generators[key] = setfenv(value, nullenv);
-                data[key] = nil;
-            end
-        end
-
-        -- Apply a metatable that will catch hits to the fields we just nil'd.
-        local metatable = {};
-        metatable.__index = function(_, key)
-            local generator = generators[key];
-            if not generator then
-                return nil;
-            end
-
-            -- Drop the reference to the generator to let it be GC'd.
-            generators[key] = nil;
-
-            -- Invoke the generator and get its value.
-            local ok, value = xpcall(generator, CallErrorHandler);
-            if not ok then
-                return nil;
-            end
-
-            -- Cache it and we're done.
-            rawset(data, key, value);
-            return value;
-        end
-
-        return setmetatable(data, metatable);
-    end
-
-    --- Hydrates the given data. Depending upon the type of data given,
-    --  this will have different effects.
-    --
-    --  If a table is given, it will be wrapped in a proxy which detects
-    --  the first access to any field and lazily loads its content if the
-    --  value stored is a function.
-    --
-    --  If a string is given, it is assumed to be a base64 encoded, compressed
-    --  Lua expression that when inflated will expand out to the data. This
-    --  will be transformed into a function.
-    --
-    --  If any other type is given, an error is raised.
-    function LibRPMedia:HydrateData(data)
-        if type(data) == "table" then
-            return HydrateDataTable(data);
-        elseif type(data) == "string" then
-            return HydrateDataString(data);
-        else
-            error(strformat(ERR_DATA_NOT_HYDRATABLE, type(data)), 2);
-        end
-    end
 end
 
 --- Internal utility functions.
@@ -566,7 +593,95 @@ function GetCommonPrefixLength(a, b)
     return offset - 1;
 end
 
+--- Returns an iterator that returns all matching rows in the given database
+--  index that match a given common prefix string.
+--
+--  For each matching row, the given accessor function is called with the
+--  given data parameter, the row index, and the matched key. The return
+--  values from this are yielded to the caller of the iterator.
+function IterIndexByPrefix(index, prefix, rowAccessorFunc, data)
+    -- Map of row indices that we've already returned.
+    local seen = {};
+
+    -- Begin iteration from the closest matching prefix.
+    local offset = BinarySearchPrefix(index.key, prefix);
+    local length = #index.key;
+
+    local iterator = function()
+        -- Loop so long as we don't run out of keys.
+        while offset <= length do
+            local key = index.key[offset];
+            local commonLength = GetCommonPrefixLength(prefix, key);
+            if commonLength ~= #prefix then
+                -- Common prefix length isn't the full prefix, so we're
+                -- past the searchable range where things can match.
+                return nil;
+            end
+
+            -- Obtain the row index for this key.
+            local row = index.row[offset];
+            offset = offset + 1;
+
+            if not seen[row] then
+                -- Row hasn't been yielded yet; yield data from the accessor.
+                seen[row] = true;
+                return rowAccessorFunc(data, row, key);
+            end
+        end
+    end
+
+    return iterator;
+end
+
+--- Returns an iterator that returns all matching rows in the given database
+--  index that match a given pattern string. If plain is true, the search
+--  will not be a pattern but rather a substring test.
+--
+--  For each matching row, the given accessor function is called with the
+--  given data parameter, the row index, and the matched key. The return
+--  values from this are yielded to the caller of the iterator.
+function IterIndexByPattern(index, pattern, plain, rowAccessorFunc, data)
+    -- Map of row indices that we've already returned.
+    local seen = {};
+
+    -- Start iteration from the start of the index array.
+    local offset = 1;
+    local length = #index.key;
+
+    local iterator = function()
+        -- Loop so long as we don't run out of keys.
+        while offset <= length do
+            local key = index.key[offset];
+            local row = index.row[offset];
+            offset = offset + 1;
+
+            -- If the row hasn't been seen, test the key.
+            if not seen[row] and strfind(key, pattern, 1, plain) then
+                -- Git a hit.
+                seen[row] = true;
+                return rowAccessorFunc(data, row, key);
+            end
+        end
+    end
+
+    return iterator;
+end
+
+-- Music API support functions.
 do
+    -- Common accessor function for translating a matching row index to a
+    -- set of return values for music entry iterators.
+    local function accessor(data, row, key)
+        -- The music name is always the matched key and not the canonical
+        -- name, since searches don't make sense otherwise.
+        local musicIndex = row;
+        local musicFile = data.file[musicIndex];
+        local musicName = key;
+
+        return musicIndex, musicFile, musicName;
+    end
+
+    -- Iterator for accessing all music files in index-order.
     local function iterator(music, musicIndex)
         musicIndex = musicIndex + 1;
         if musicIndex > music.size then
@@ -583,91 +698,127 @@ do
     function IterMusicFiles(music)
         return iterator, music, 0;
     end
-end
 
---- Returns an iterator that returns all matching music files in the database
---  that share a common prefix with the given search string.
-function IterMusicFilesByPrefix(music, search)
-    -- Map of file indices that we've already returned.
-    local seen = {};
+    --- Returns an iterator that returns all matching entries in the given
+    --  music database that match a given pattern string. If plain is true,
+    --  the search will not be a pattern but rather a substring test.
+    function IterMusicFilesByPattern(music, pattern, plain)
+        local index = music.index.name;
+        local data = music.data;
 
-    -- Upvalue the database and search index to minimize lookups a bit.
-    local data = music.data;
-    local names = music.index.name;
-
-    -- Begin iteration from the closest matching prefix in the key array.
-    local nameIndex = BinarySearchPrefix(names.key, search);
-
-    local function iterator()
-        -- Loop so long as we don't run out of keys.
-        local keyCount = #names.key;
-        while nameIndex < keyCount do
-            -- If the common prefix between our search string and the current
-            -- file name isn't the same as the search string, then we should
-            -- stop since we're past the "like" range of names.
-            local name = names.key[nameIndex];
-            local shared = GetCommonPrefixLength(search, name);
-            if shared ~= #search then
-                return nil;
-            end
-
-            -- Convert the search index into a music index.
-            local musicIndex = names.row[nameIndex];
-            nameIndex = nameIndex + 1;
-
-            -- Yield the music file if we haven't reported it already.
-            if not seen[musicIndex] then
-                seen[musicIndex] = true;
-
-                -- It's important that we yield the matched name and not
-                -- the canonical name, since the searches don't make sense
-                -- otherwise.
-                local musicFile = data.file[musicIndex];
-                return musicIndex, musicFile, name;
-            end
-        end
+        return IterIndexByPattern(index, pattern, plain, accessor, data);
     end
 
-    return iterator;
-end
+    --- Returns an iterator that returns all matching entries in the given
+    --  music database that match a given common prefix string.
+    function IterMusicFilesByPrefix(music, prefix)
+        local index = music.index.name;
+        local data = music.data;
 
---- Returns an iterator that returns all matching music files in the database
---  that match a given pattern string. If plain is true, the search will not
---  be a pattern but rather a substring test.
-function IterMusicFilesByPattern(music, search, plain)
-    -- Map of file indices that we've already returned.
-    local seen = {};
-
-    -- Upvalue the database and search index to minimize lookups a bit.
-    local data = music.data;
-    local names = music.index.name;
-
-    -- Start iteration from the beginning of the keys array.
-    local nameIndex = 1;
-
-    local function iterator()
-        local keyCount = #names.key;
-        while nameIndex < keyCount do
-            local name = names.key[nameIndex];
-            local musicIndex = names.row[nameIndex];
-            nameIndex = nameIndex + 1;
-
-            -- If we've not seen this file, test the name.
-            if not seen[musicIndex] and strfind(name, search, 1, plain) then
-                -- Got a hit.
-                seen[musicIndex] = true;
-
-                local musicFile = data.file[musicIndex];
-                return musicIndex, musicFile, name;
-            end
-        end
+        return IterIndexByPrefix(index, prefix, accessor, data);
     end
 
-    return iterator;
+    --- Normalizes the given music name.
+    function NormalizeMusicName(musicName)
+        -- Music names are lowercased strings with / path separators.
+        return strlower(strgsub(musicName, "\\", "/"));
+    end
 end
 
---- Normalizes the given music name, turning it into a lowercase string
---  with all backslashes (\) into forward slashes (/).
-function NormalizeMusicName(musicName)
-    return strlower(strgsub(musicName, "\\", "/"));
+-- Icon API support functions.
+do
+    -- Iterator for accessing all icons in index-order.
+    local function iterator(icons, iconIndex)
+        iconIndex = iconIndex + 1;
+        if iconIndex > icons.size then
+            return nil;
+        end
+
+        local iconName = icons.data.name[iconIndex];
+        return iconIndex, iconName;
+    end
+
+    --- Returns an iterator that returns all icon entries in the database
+    --  in index-order.
+    function IterIcons(icons)
+        return iterator, icons, 0;
+    end
+
+    --- Returns an iterator that returns all matching entries in the given
+    --  icon database that match a given pattern string. If plain is true,
+    --  the search will not be a pattern but rather a substring test.
+    function IterIconsByPattern(icons, pattern, plain)
+        local patternIterator = function(_, offset)
+            -- Test indices until we run out of them.
+            for iconIndex = offset + 1, icons.size do
+                local iconName = icons.data.name[iconIndex];
+                if strfind(iconName, pattern, 1, plain) then
+                    -- Icon matches the pattern, yield it.
+                    return iconIndex, iconName;
+                end
+            end
+        end
+
+        return patternIterator, icons, 0;
+    end
+
+    --- Returns an iterator that returns all matching entries in the given
+    --  icon database that match a given common prefix string.
+    function IterIconsByPrefix(icons, prefix)
+        local prefixIterator = function(_, offset)
+            local iconIndex = offset + 1;
+            local iconName = icons.data.name[iconIndex];
+            local commonLength = GetCommonPrefixLength(prefix, iconName);
+            if commonLength == #prefix then
+                -- Common prefix length still matches, so this is a hit.
+                return iconIndex, iconName;
+            end
+
+            -- Common prefix length isn't the full prefix, so we're
+            -- past the searchable range where things can match.
+            return nil;
+        end
+
+        -- Start iteration from the index before the matched prefix, as our
+        -- name data is stored alphabetically.
+        local startIndex = BinarySearchPrefix(icons.data.name, prefix);
+        return prefixIterator, icons, startIndex - 1;
+    end
+
+    --- Normalizes the given icon name.
+    function NormalizeIconName(iconName)
+        -- Icon names are just lowercased strings.
+        return strlower(iconName);
+    end
 end
+
+--@do-not-package@
+-- Only execute the below if loaded in standalone, non-packaged mode, and
+-- if we're ingame.
+local ADDON_NAME = ...;
+if ADDON_NAME == MODULE_MAJOR and UIParent ~= nil then
+    -- Register the browser frame as a UI panel.
+    UIPanelWindows["LibRPMedia_BrowserFrame"] = {
+        area = "doublewide",
+        xoffset = 80,
+        pushable = 0,
+        whileDead = 1,
+    };
+
+    -- Add in a slash command to toggle the browser or re-run tests.
+    SLASH_LIBRPMEDIA_SLASHCMD1 = "/lrpm";
+
+    SlashCmdList["LIBRPMEDIA_SLASHCMD"] = function(cmd)
+        local subcommand, params = string.match(cmd, "^([^%s]*)%s*(.-)$");
+        if subcommand == "" or subcommand == "browse" then
+            if LibRPMedia_BrowserFrame:IsShown() then
+                HideUIPanel(LibRPMedia_BrowserFrame);
+            else
+                ShowUIPanel(LibRPMedia_BrowserFrame);
+            end
+        elseif subcommand == "test" then
+            LibRPMedia.Test.RunTests(params);
+        end
+    end
+end
+--@end-do-not-package@

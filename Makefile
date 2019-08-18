@@ -1,30 +1,9 @@
-# Region to use when querying the CDN.
-REGION ?= eu
-
-# CDN product IDs for version querying. Prefix these with a product name.
-Classic_PRODUCT_ID ?= wow_classic
-Retail_PRODUCT_ID ?= wow
-
-# TOC versions for file generation. Prefix these with a product name.
-Classic_INTERFACE_VERSION ?= 11302
-Retail_INTERFACE_VERSION ?= 80100
-
-# Additional options to pass to the exporter script, prefixed by their
-# applicable product name (or no prefix to apply to both).
-EXPORTER_OPTIONS ?= --compress=false
-Classic_EXPORTER_OPTIONS ?= --max-interface-version 20000
-Retail_EXPORTER_OPTIONS ?=
-
 # Path to a Lua interpreter.
 LUA ?= lua
 LUACHECK ?= luacheck
 
 # Directory where releases and scripts are downoaded to.
 RELEASE_DIR := .release
-
-# Path and URL to the exporter binary for data generation.
-EXPORTER_BIN := $(RELEASE_DIR)/LibRPMediaExporter-v1.1.0.exe
-EXPORTER_BIN_URL := https://github.com/wow-rp-addons/LibRPMediaExporter/releases/download/v1.1.0/LibRPMediaExporter.exe
 
 # Path and URL to the packager script.
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
@@ -47,28 +26,17 @@ release: $(PACKAGER_SCRIPT)
 
 test:
 	@echo Testing Classic database...
-	@$(LUA) Tests/Tests.lua --interface $(Classic_INTERFACE_VERSION)
+	@$(LUA) Tests/CLIRunner.lua --project WOW_PROJECT_CLASSIC
 	@echo Testing Retail database...
-	@$(LUA) Tests/Tests.lua --interface $(Retail_INTERFACE_VERSION)
+	@$(LUA) Tests/CLIRunner.lua --project WOW_PROJECT_MAINLINE
 
-LibRPMedia-%-1.0.lua: $(EXPORTER_BIN) .FORCE
+LibRPMedia-%-1.0.lua: .FORCE
 	@echo Generating $(@)...
-	@$(EXPORTER_BIN) \
-		--manifest LibRPMedia-$(*)-1.0.manifest \
-		--min-interface-version $($(*)_INTERFACE_VERSION) \
-		--output $(@) \
-		--product $($(*)_PRODUCT_ID) \
-		--region $(REGION) \
-		$(EXPORTER_OPTIONS) \
-		$($(*)_EXPORTER_OPTIONS)
+	@$(LUA) Exporter/Main.lua --config Exporter/Config/$(*).lua
 
 $(PACKAGER_SCRIPT): $(RELEASE_DIR) .FORCE
 	@echo Fetching packager script...
 	@curl -Ls $(PACKAGER_SCRIPT_URL) > $(@)
-
-$(EXPORTER_BIN): $(RELEASE_DIR)
-	@echo Fetching exporter binary...
-	@curl -Ls $(EXPORTER_BIN_URL) > $(@)
 
 $(RELEASE_DIR):
 	@mkdir $(@)
