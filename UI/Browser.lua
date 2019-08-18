@@ -12,6 +12,7 @@ local floor = math.floor;
 local strformat = string.format;
 local strgsub = string.gsub;
 local tinsert = table.insert;
+local tsort = table.sort;
 local twipe = table.wipe;
 
 --- Returns true if running in the classic client.
@@ -436,12 +437,20 @@ LibRPMedia_MusicColumnDisplayMixin = CreateFromMixins(ColumnDisplayMixin);
 function LibRPMedia_MusicColumnDisplayMixin:OnLoad()
     ColumnDisplayMixin.OnLoad(self);
 
+    self.sortingFunction = function(_, columnIndex)
+        self:GetParent():SortByColumnIndex(columnIndex);
+    end
+
     self:LayoutColumns({
         [1] = {
-            title = "Name",
-            width = 500,
+            title = "File",
+            width = 120,
         },
         [2] = {
+            title = "Name",
+            width = 450,
+        },
+        [3] = {
             title = "Duration",
             width = 0,
         },
@@ -529,13 +538,15 @@ end
 --- Updates the UI for the row.
 function LibRPMedia_MusicItemRowMixin:UpdateVisualization()
     local musicName = self.musicName;
+    local musicFile;
     local musicDuration = 0;
 
     if self:IsValidMusicName() then
-        local musicFile = LibRPMedia:GetMusicFileByName(musicName);
+        musicFile = LibRPMedia:GetMusicFileByName(musicName);
         musicDuration = LibRPMedia:GetMusicFileDuration(musicFile);
     end
 
+    self.FileText:SetText(musicFile or "");
     self.NameText:SetText(musicName or "");
     self.DurationText:SetText(SecondsToTime(musicDuration));
 end
@@ -594,6 +605,11 @@ function LibRPMedia_MusicScrollMixin:OnLoad()
     -- List of music names that pass the assigned filter.
     self.music = {};
 
+    -- Sorting state for columns in the UI. The index is the column number,
+    -- and ascending is true if the data is sorted in ascending order.
+    self.sortIndex = 1;
+    self.sortAscending = true;
+
     -- Pool of item widgets to display as rows.
     self.itemPool = CreateFramePool("Button", self,
         "LibRPMedia_MusicItemRowTemplate");
@@ -604,6 +620,7 @@ function LibRPMedia_MusicScrollMixin:OnShow()
     FauxScrollFrame_SetOffset(self, 0);
     self.ScrollBar:SetValue(0);
 
+    -- Refresh the UI.
     self:UpdateVisualization();
 end
 
@@ -624,6 +641,68 @@ function LibRPMedia_MusicScrollMixin:SetSearchFilter(query, options)
         tinsert(self.music, name);
     end
 
+    -- Sort data as needed.
+    self:SortByColumnIndex(self.sortIndex, self.sortAscending);
+end
+
+--- Sorts the music list by the given column index.
+function LibRPMedia_MusicScrollMixin:SortByColumnIndex(columnIndex, ascending)
+    if self.sortIndex == columnIndex then
+        -- We're sorting the same column; flip the order only.
+        self.sortAscending = not self.sortAscending;
+    else
+        -- Sorting a different column, reset the order.
+        self.sortIndex = columnIndex;
+        self.sortAscending = true;
+    end
+
+    -- If an explicit order was given, honor it.
+    if ascending ~= nil then
+        self.sortAscending = ascending;
+    end
+
+    -- Predicate used for ordering the results.
+    local predicate = function(a, b)
+        if self.sortAscending then
+            return a < b;
+        else
+            return a > b;
+        end
+    end
+
+    -- Run over the list of music that we currently have and build a separate
+    -- table with data that can be sorted.
+    local music = {};
+    for _, musicName in ipairs(self.music) do
+        local value;
+        if columnIndex == 1 then
+            -- Sorting by file ID.
+            value = LibRPMedia:GetMusicFileByName(musicName) or 0;
+        elseif columnIndex == 2 then
+            -- Sorting by name.
+            value = musicName;
+        elseif columnIndex == 3 then
+            -- Sorting by duration.
+            local musicFile = LibRPMedia:GetMusicFileByName(musicName) or 0;
+            value = LibRPMedia:GetMusicFileDuration(musicFile);
+        else
+            -- Invalid column; ignore the request.
+            return;
+        end
+
+        tinsert(music, { key = musicName, value = value })
+    end
+
+    -- Sort the table by the values and then re-populate our actual music
+    -- name table with the now sorted keys.
+    tsort(music, function(a, b) return predicate(a.value, b.value); end);
+
+    twipe(self.music);
+    for _, row in ipairs(music) do
+        tinsert(self.music, row.key);
+    end
+
+    -- Refresh the UI.
     self:UpdateVisualization();
 end
 
@@ -685,6 +764,11 @@ end
 function LibRPMedia_MusicBrowserMixin:SetSearchMethod(searchMethod)
     self.searchMethod = searchMethod;
     self:UpdateVisualization();
+end
+
+--- Sorts the music list by the given column index.
+function LibRPMedia_MusicBrowserMixin:SortByColumnIndex(columnIndex)
+    self.ContentFrame.ScrollFrame:SortByColumnIndex(columnIndex);
 end
 
 --- Updates the UI of the browser, refreshing music according to the search
