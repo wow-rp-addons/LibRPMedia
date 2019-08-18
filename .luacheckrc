@@ -101,6 +101,7 @@ stds.wowstd = {
         string = {
             fields = {
                 "join",
+                "split",
             },
         },
         table = {

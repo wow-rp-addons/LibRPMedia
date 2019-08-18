@@ -92,6 +92,13 @@ RegisterTest("Music: API Type Checks", function()
     AssertError(LibRPMedia, "GetMusicFileDuration", thread);
     AssertError(LibRPMedia, "GetMusicFileDuration", userdata);
 
+    AssertNoError(LibRPMedia, "GetNativeMusicFile", number);
+    AssertError(LibRPMedia, "GetNativeMusicFile", string);
+    AssertError(LibRPMedia, "GetNativeMusicFile", nil);
+    AssertError(LibRPMedia, "GetNativeMusicFile", boolean);
+    AssertError(LibRPMedia, "GetNativeMusicFile", thread);
+    AssertError(LibRPMedia, "GetNativeMusicFile", userdata);
+
     -- FindMusicFiles is a pain in the butt since it allows a string as the
     -- first parameter only, but either a nil or a table as the last.
     AssertNoError(LibRPMedia, "FindMusicFiles", string, nil);
@@ -247,6 +254,29 @@ RegisterTest("Music: Invalid File Durations", function()
     local duration = LibRPMedia:GetMusicFileDuration(-1);
     AssertType(duration, "number", "Music duration is not numeric");
     Assert(duration == 0, "Expected a zero duration.");
+end);
+
+RegisterTest("Music: Valid Native Files", function()
+    -- Each music file should be convertible to a native file of some type.
+    for i = 1, LibRPMedia:GetNumMusicFiles() do
+        local fileID = LibRPMedia:GetMusicFileByIndex(i);
+        local nativeFile = LibRPMedia:GetNativeMusicFile(fileID);
+
+        Assertf(nativeFile ~= nil, "Music index %d lacks a native file", i);
+
+        -- We'll test the types here for validity, as we're not a black box.
+        if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+            AssertType(nativeFile, "string", "Native file is not a path");
+        else
+            AssertType(nativeFile, "number", "Native file is not a file ID");
+        end
+    end
+end);
+
+RegisterTest("Music: Invalid Native Files", function()
+    -- Testing invalid file IDs should return nil.
+    local nativeFile = LibRPMedia:GetNativeMusicFile(-1);
+    AssertType(nativeFile, "nil", "Native file is not nil");
 end);
 
 RegisterTest("Music: Find All", function()

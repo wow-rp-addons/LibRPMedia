@@ -41,15 +41,15 @@ function env.strmatch(...)
 end
 
 function env.Mixin(object, ...)
-        for i = 1, select("#", ...) do
-            local mixin = select(i, ...);
-            for k, v in pairs(mixin) do
-                object[k] = v;
-            end
+    for i = 1, select("#", ...) do
+        local mixin = select(i, ...);
+        for k, v in pairs(mixin) do
+            object[k] = v;
         end
-
-        return object;
     end
+
+    return object;
+end
 
 function env.tostringall(...)
     if select("#", ...) == 0 then
@@ -57,6 +57,21 @@ function env.tostringall(...)
     end
 
     return tostring((...)), env.tostringall(select(2, ...));
+end
+
+env.string = setmetatable({}, { __index = string });
+
+function env.string.join(delim, ...)
+    return table.concat({ ... }, delim);
+end
+
+function env.string.split(delim, str)
+    local parts = {};
+    for part in string.gmatch(str, "[^" .. delim .. "]+") do
+        table.insert(parts, part);
+    end
+
+    return unpack(parts);
 end
 
 -- Helper function for loading a script.

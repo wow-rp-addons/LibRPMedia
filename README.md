@@ -90,6 +90,20 @@ print("File duration (seconds):", LibRPMedia:GetMusicFileDuration(file));
 -- Example output: "File duration (seconds): 39.923125"
 ```
 
+#### `LibRPMedia:GetNativeMusicFile(musicFile)`
+
+Returns a native music file value for a given music file ID that that can be supplied to in-game APIs such as PlayMusic and PlaySoundFile. The type of the returned value is unspecified; the only guarantees are that it may be used with in-game APIs and is convertible to a string.
+
+If the given music file ID is not present within the database, `nil` is returned.
+
+##### Usage
+
+```lua
+print("Native file:", LibRPMedia:GetNativeMusicFile(53600));
+-- Example output (retail): "Native file: 53600"
+-- Example output (classic): "Native file: Sound\Music\zonemusic\naxxramas\naxxramashubbasel.mp3"
+```
+
 #### `LibRPMedia:GetMusicIndexByFile(musicFile)`
 
 Returns the music index associated with the given file ID inside the database.

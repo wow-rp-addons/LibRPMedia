@@ -21,6 +21,7 @@ local strformat = string.format;
 local strgsub = string.gsub;
 local strjoin = string.join;
 local strlower = string.lower;
+local strsplit = string.split;
 local strsub = string.sub;
 local type = type;
 local xpcall = xpcall;
@@ -105,6 +106,33 @@ function LibRPMedia:GetMusicFileDuration(musicFile)
     end
 
     return music.data.time[musicIndex] or 0;
+end
+
+--- Converts a music file ID to a native music file value that can be
+--  supplied to in-game APIs such as PlayMusic and PlaySoundFile.
+--
+--  If the given music file does not exist in the database, nil is returned.
+--
+--  The return type of a valid music file is unspecified; the only guarantees
+--  are that it will work with most ingame API functions and is convertible
+--  to a string.
+function LibRPMedia:GetNativeMusicFile(musicFile)
+    AssertType(musicFile, "musicFile", "number");
+
+    -- Validate the input file and return nil if invalid.
+    if not self:GetMusicIndexByFile(musicFile) then
+        return nil;
+    end
+
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        -- Classic doesn't support file IDs, so we need to use paths.
+        local musicName = self:GetMusicNameByFile(musicFile);
+        return strjoin("\\", "Sound", "Music", strsplit("/", musicName))
+            .. ".mp3";
+    end
+
+    -- Default to returning the file ID otherwise.
+    return musicFile;
 end
 
 --- Returns the index of a music file from its file ID. If the given file
