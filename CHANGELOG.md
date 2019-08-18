@@ -1,5 +1,11 @@
 # LibRPMedia-1.0
 
+## v1.1.0
+
+ * Added Icons API.
+ * Removed LibDeflate as a dependency.
+ * Improvements to efficiency of data at rest.
+
 ## v1.0.1
 
  * No outward facing changes.
