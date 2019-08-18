@@ -14,6 +14,11 @@ local strgsub = string.gsub;
 local tinsert = table.insert;
 local twipe = table.wipe;
 
+--- Returns true if running in the classic client.
+local function IsClassicClient()
+    return WOW_PROJECT_ID == WOW_PROJECT_CLASSIC;
+end
+
 --- Wraps the given iterator in a protected version which will return nil
 --  if an error is raised.
 local function SafeIterator(source, ...)
@@ -694,7 +699,14 @@ end
 --- Mixin for a tab button on the browser window.
 LibRPMedia_BrowserTabMixin = {};
 
---- OnClick handler for browser tabs.
+function LibRPMedia_BrowserTabMixin:OnLoad()
+    if IsClassicClient() then
+        -- The template in Classic lacks the .Text parentkey, and so the
+        -- various tab functions used in the browser break.
+        self.Text = _G[self:GetName() .. "Text"];
+    end
+end
+
 function LibRPMedia_BrowserTabMixin:OnClick()
     local browserFrame = self:GetParent();
 
@@ -718,7 +730,14 @@ function LibRPMedia_BrowserMixin:OnLoad()
     PanelTemplates_SetNumTabs(self, self.TABS_COUNT);
 
     self:SetTab(self.TAB_ICONS);
-    self:SetPortraitToAsset([[Interface\Icons\Inv_legion_chest_KirinTor]]);
+
+    if IsClassicClient() then
+        local asset = [[Interface\Icons\INV_Box_04]];
+        SetPortraitToTexture(self.portrait, asset);
+    else
+        local asset = [[Interface\Icons\Inv_legion_chest_KirinTor]];
+        self:SetPortraitToAsset(asset);
+    end
 
     self.TitleText:SetFormattedText("%s: Media Browser", ADDON_NAME);
 end

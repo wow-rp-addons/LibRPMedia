@@ -80,6 +80,7 @@ stds.wow = {
         "PlayMusic",
         "PlaySound",
         "SecondsToTime",
+        "SetPortraitToTexture",
         "ShowUIPanel",
         "SOUNDKIT",
         "StopMusic",

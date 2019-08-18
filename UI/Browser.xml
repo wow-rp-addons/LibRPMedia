@@ -75,18 +75,6 @@
                         <Anchor point="BOTTOMRIGHT" x="-2" y="2"/>
                     </Anchors>
                 </Texture>
-                <MaskTexture parentKey="IconMask" atlas="UI-Frame-IconMask" hWrapMode="CLAMPTOBLACKADDITIVE" vWrapMode="CLAMPTOBLACKADDITIVE">
-                    <Anchors>
-                        <Anchor point="TOPLEFT" relativeKey="$parent.Icon" />
-                        <Anchor point="BOTTOMRIGHT" relativeKey="$parent.Icon" />
-                    </Anchors>
-                    <MaskedTextures>
-                        <MaskedTexture childKey="Icon"/>
-                    </MaskedTextures>
-                </MaskTexture>
-            </Layer>
-            <Layer level="BORDER" textureSubLevel="2">
-                <Texture parentKey="Border" atlas="UI-Frame-IconBorder" setAllPoints="true"/>
             </Layer>
         </Layers>
         <HighlightTexture file="Interface\Buttons\ButtonHilight-Square" alphaMode="ADD" alpha="0.5"/>
@@ -307,6 +295,7 @@
             <KeyValue key="minWidth" value="57" type="number"/>
         </KeyValues>
         <Scripts>
+            <OnLoad method="OnLoad"/>
             <OnClick method="OnClick"/>
         </Scripts>
     </Frame>
