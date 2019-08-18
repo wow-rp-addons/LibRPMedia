@@ -398,6 +398,23 @@ function LibRPMedia:CreateLazyTable(generatorFunc)
     return setmetatable({}, metatable);
 end
 
+--- Loads the given string of code as a function, executing it and returning
+--  the result.
+--
+--  The loaded function will have an environment with LibRPMedia present.
+function LibRPMedia:LoadFunctionFromString(code)
+    local chunk = assert(loadstring(code));
+    local env = setmetatable({ LibRPMedia = LibRPMedia }, { __index = _G });
+    setfenv(chunk, env);
+
+    local data = chunk();
+
+    -- Loading the data often generates a ton of garbage, so we'll sneak in
+    -- a free collection before wrapping up.
+    collectgarbage("collect");
+    return data;
+end
+
 --- Restores a string list encoded as a list of front-coded strings, returning
 --  a new table with the loaded contents.
 function LibRPMedia:LoadFrontCodedStringList(input)
