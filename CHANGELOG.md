@@ -3,6 +3,7 @@
 ## v1.1.0
 
  * Added Icons API.
+ * Added `GetNativeMusicFile(fileID)` function to assist with Classic client compatibility.
  * Removed LibDeflate as a dependency.
  * Improvements to efficiency of data at rest.
 
