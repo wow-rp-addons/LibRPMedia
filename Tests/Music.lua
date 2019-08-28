@@ -41,6 +41,13 @@ RegisterTest("Music: API Type Checks", function()
     local userdata = newproxy(false);
 
     -- The Get<X>ByName functions allow only strings as their parameters.
+    AssertNoError(LibRPMedia, "GetMusicDataByName", string);
+    AssertError(LibRPMedia, "GetMusicDataByName", nil);
+    AssertError(LibRPMedia, "GetMusicDataByName", number);
+    AssertError(LibRPMedia, "GetMusicDataByName", boolean);
+    AssertError(LibRPMedia, "GetMusicDataByName", thread);
+    AssertError(LibRPMedia, "GetMusicDataByName", userdata);
+
     AssertNoError(LibRPMedia, "GetMusicFileByName", string);
     AssertError(LibRPMedia, "GetMusicFileByName", nil);
     AssertError(LibRPMedia, "GetMusicFileByName", number);
@@ -57,6 +64,13 @@ RegisterTest("Music: API Type Checks", function()
 
     -- The Get<X>ByIndex functions and Get<X>ByFile functions expect
     -- numbers as their parameters.
+    AssertNoError(LibRPMedia, "GetMusicDataByIndex", number);
+    AssertError(LibRPMedia, "GetMusicDataByIndex", string);
+    AssertError(LibRPMedia, "GetMusicDataByIndex", nil);
+    AssertError(LibRPMedia, "GetMusicDataByIndex", boolean);
+    AssertError(LibRPMedia, "GetMusicDataByIndex", thread);
+    AssertError(LibRPMedia, "GetMusicDataByIndex", userdata);
+
     AssertNoError(LibRPMedia, "GetMusicFileByIndex", number);
     AssertError(LibRPMedia, "GetMusicFileByIndex", string);
     AssertError(LibRPMedia, "GetMusicFileByIndex", nil);
@@ -70,6 +84,13 @@ RegisterTest("Music: API Type Checks", function()
     AssertError(LibRPMedia, "GetMusicNameByIndex", boolean);
     AssertError(LibRPMedia, "GetMusicNameByIndex", thread);
     AssertError(LibRPMedia, "GetMusicNameByIndex", userdata);
+
+    AssertNoError(LibRPMedia, "GetMusicDataByFile", number);
+    AssertError(LibRPMedia, "GetMusicDataByFile", string);
+    AssertError(LibRPMedia, "GetMusicDataByFile", nil);
+    AssertError(LibRPMedia, "GetMusicDataByFile", boolean);
+    AssertError(LibRPMedia, "GetMusicDataByFile", thread);
+    AssertError(LibRPMedia, "GetMusicDataByFile", userdata);
 
     AssertNoError(LibRPMedia, "GetMusicIndexByFile", number);
     AssertError(LibRPMedia, "GetMusicIndexByFile", string);
@@ -113,6 +134,64 @@ RegisterTest("Music: API Type Checks", function()
     AssertError(LibRPMedia, "FindMusicFiles", string, boolean);
     AssertError(LibRPMedia, "FindMusicFiles", string, thread);
     AssertError(LibRPMedia, "FindMusicFiles", string, userdata);
+end);
+
+RegisterTest("Music: Data Lookup (By Index)", function()
+    -- Test that each index can be collected into a table, and that each
+    -- entry for those indices matches a field name lookup.
+    for i = 1, LibRPMedia:GetNumMusicFiles() do
+        local musicData = LibRPMedia:GetMusicDataByIndex(i);
+
+        AssertType(musicData, "table", "Music data is not a table");
+        Assertf(next(musicData), "Music data (index %d) is empty", i);
+
+        -- Validate the contents against field name lookups.
+        for fieldName, fieldValue in pairs(musicData) do
+            local value = LibRPMedia:GetMusicDataByIndex(i, fieldName);
+
+            Assertf(fieldValue == value,
+                "Field lookup (%s) had differing data: %s ~= %s",
+                fieldName, fieldValue, value);
+        end
+    end
+end);
+
+RegisterTest("Music: Data Lookup (By File)", function()
+    -- Test that each file ID lookup returns a data table.
+    for i = 1, LibRPMedia:GetNumMusicFiles() do
+        local musicFile = LibRPMedia:GetMusicFileByIndex(i);
+        local musicData = LibRPMedia:GetMusicDataByFile(musicFile);
+        AssertType(musicData, "table", "Music data is not a table");
+        Assertf(next(musicData), "Music data (file %d) is empty", musicFile);
+
+        -- Validate the contents against field name lookups.
+        for fieldName, fieldValue in pairs(musicData) do
+            local value = LibRPMedia:GetMusicDataByFile(musicFile, fieldName);
+
+            Assertf(fieldValue == value,
+                "Field lookup (%s) had differing data: %s ~= %s",
+                fieldName, fieldValue, value);
+        end
+    end
+end);
+
+RegisterTest("Music: Data Lookup (By Name)", function()
+    -- Test that each name lookup returns a data table.
+    for i = 1, LibRPMedia:GetNumMusicFiles() do
+        local musicName = LibRPMedia:GetMusicNameByIndex(i);
+        local musicData = LibRPMedia:GetMusicDataByName(musicName);
+        AssertType(musicData, "table", "Music data is not a table");
+        Assertf(next(musicData), "Music data (name %q) is empty", musicName);
+
+        -- Validate the contents against field name lookups.
+        for fieldName, fieldValue in pairs(musicData) do
+            local value = LibRPMedia:GetMusicDataByName(musicName, fieldName);
+
+            Assertf(fieldValue == value,
+                "Field lookup (%s) had differing data: %s ~= %s",
+                fieldName, fieldValue, value);
+        end
+    end
 end);
 
 RegisterTest("Music: Name Lookup (By Index)", function()
@@ -195,6 +274,12 @@ RegisterTest("Music: Invalid Lookups", function()
     local count = LibRPMedia:GetNumMusicFiles();
 
     -- Test ranges outside of 1 through GetNumMusicFiles for index lookups.
+    Assert(LibRPMedia:GetMusicDataByIndex(-1) == nil,
+        "Expected nil music data.");
+
+    Assert(LibRPMedia:GetMusicDataByIndex(count + 1) == nil,
+        "Expected nil music data.");
+
     Assert(LibRPMedia:GetMusicNameByIndex(-1) == nil,
         "Expected nil music name.");
 
@@ -208,6 +293,9 @@ RegisterTest("Music: Invalid Lookups", function()
         "Expected nil music file.");
 
     -- Test invalid file IDs.
+    Assert(LibRPMedia:GetMusicDataByFile(0) == nil,
+        "Expected nil music data.");
+
     Assert(LibRPMedia:GetMusicIndexByFile(0) == nil,
         "Expected nil music index.");
 
@@ -215,11 +303,25 @@ RegisterTest("Music: Invalid Lookups", function()
         "Expected nil music name.");
 
     -- Test invalid music names.
+    Assert(LibRPMedia:GetMusicDataByName("") == nil,
+        "Expected nil music data.");
+
     Assert(LibRPMedia:GetMusicIndexByName("") == nil,
         "Expected nil music index.");
 
     Assert(LibRPMedia:GetMusicFileByName("") == nil,
         "Expected nil music file.");
+
+    -- Data lookups involving invalid fields should return nil.
+    local validMusicFile = LibRPMedia:GetMusicFileByIndex(1);
+    local validMusicName = LibRPMedia:GetMusicNameByIndex(1);
+
+    Assert(LibRPMedia:GetMusicDataByIndex(1, "-") == nil,
+        "Expected nil result.");
+    Assert(LibRPMedia:GetMusicDataByFile(validMusicFile, "-") == nil,
+        "Expected nil result.");
+    Assert(LibRPMedia:GetMusicDataByName(validMusicName, "-") == nil,
+        "Expected nil result.");
 end);
 
 RegisterTest("Music: File Lookup (By Name)", function()

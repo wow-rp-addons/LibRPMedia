@@ -41,6 +41,13 @@ RegisterTest("Icons: API Type Checks", function()
     local userdata = newproxy(false);
 
     -- The Get<X>ByName functions allow only strings as their parameters.
+    AssertNoError(LibRPMedia, "GetIconDataByName", string);
+    AssertError(LibRPMedia, "GetIconDataByName", nil);
+    AssertError(LibRPMedia, "GetIconDataByName", number);
+    AssertError(LibRPMedia, "GetIconDataByName", boolean);
+    AssertError(LibRPMedia, "GetIconDataByName", thread);
+    AssertError(LibRPMedia, "GetIconDataByName", userdata);
+
     AssertNoError(LibRPMedia, "GetIconIndexByName", string);
     AssertError(LibRPMedia, "GetIconIndexByName", nil);
     AssertError(LibRPMedia, "GetIconIndexByName", number);
@@ -56,6 +63,13 @@ RegisterTest("Icons: API Type Checks", function()
     AssertError(LibRPMedia, "GetIconTypeByName", userdata);
 
     -- The Get<X>ByIndex functions expect numbers as their parameters.
+    AssertNoError(LibRPMedia, "GetIconDataByIndex", number);
+    AssertError(LibRPMedia, "GetIconDataByIndex", string);
+    AssertError(LibRPMedia, "GetIconDataByIndex", nil);
+    AssertError(LibRPMedia, "GetIconDataByIndex", boolean);
+    AssertError(LibRPMedia, "GetIconDataByIndex", thread);
+    AssertError(LibRPMedia, "GetIconDataByIndex", userdata);
+
     AssertNoError(LibRPMedia, "GetIconNameByIndex", number);
     AssertError(LibRPMedia, "GetIconNameByIndex", string);
     AssertError(LibRPMedia, "GetIconNameByIndex", nil);
@@ -84,6 +98,45 @@ RegisterTest("Icons: API Type Checks", function()
     AssertError(LibRPMedia, "FindIcons", string, boolean);
     AssertError(LibRPMedia, "FindIcons", string, thread);
     AssertError(LibRPMedia, "FindIcons", string, userdata);
+end);
+
+RegisterTest("Icons: Data Lookup (By Index)", function()
+    -- Test that each index can be collected into a table, and that each
+    -- entry for those indices matches a field name lookup.
+    for i = 1, LibRPMedia:GetNumIcons() do
+        local iconData = LibRPMedia:GetIconDataByIndex(i);
+
+        AssertType(iconData, "table", "Icon data is not a table");
+        Assertf(next(iconData), "Icon data (index %d) is empty", i);
+
+        -- Validate the contents against field name lookups.
+        for fieldName, fieldValue in pairs(iconData) do
+            local value = LibRPMedia:GetIconDataByIndex(i, fieldName);
+
+            Assertf(fieldValue == value,
+                "Field lookup (%s) had differing data: %s ~= %s",
+                fieldName, fieldValue, value);
+        end
+    end
+end);
+
+RegisterTest("Icons: Data Lookup (By Name)", function()
+    -- Test that each name lookup returns a data table.
+    for i = 1, LibRPMedia:GetNumIcons() do
+        local iconName = LibRPMedia:GetIconNameByIndex(i);
+        local iconData = LibRPMedia:GetIconDataByName(iconName);
+        AssertType(iconData, "table", "Icon data is not a table");
+        Assertf(next(iconData), "Icon data (name %q) is empty", iconName);
+
+        -- Validate the contents against field name lookups.
+        for fieldName, fieldValue in pairs(iconData) do
+            local value = LibRPMedia:GetIconDataByName(iconName, fieldName);
+
+            Assertf(fieldValue == value,
+                "Field lookup (%s) had differing data: %s ~= %s",
+                fieldName, fieldValue, value);
+        end
+    end
 end);
 
 RegisterTest("Icons: Name Lookup (By Index)", function()
@@ -151,6 +204,12 @@ RegisterTest("Icons: Invalid Lookups", function()
     local count = LibRPMedia:GetNumIcons();
 
     -- Test ranges outside of 1 through GetNumIcons for index lookups.
+    Assert(LibRPMedia:GetIconDataByIndex(-1) == nil,
+        "Expected nil icon data.");
+
+    Assert(LibRPMedia:GetIconDataByIndex(count + 1) == nil,
+        "Expected nil icon data.");
+
     Assert(LibRPMedia:GetIconNameByIndex(-1) == nil,
         "Expected nil icon name.");
 
@@ -158,17 +217,28 @@ RegisterTest("Icons: Invalid Lookups", function()
         "Expected nil icon name.");
 
     Assert(LibRPMedia:GetIconTypeByIndex(-1) == nil,
-        "Expected nil icon file.");
+        "Expected nil icon type.");
 
     Assert(LibRPMedia:GetIconTypeByIndex(count + 1) == nil,
-        "Expected nil icon file.");
+        "Expected nil icon type.");
 
     -- Test invalid icon names.
+    Assert(LibRPMedia:GetIconDataByName("") == nil,
+        "Expected nil icon data.");
+
     Assert(LibRPMedia:GetIconIndexByName("") == nil,
         "Expected nil icon index.");
 
     Assert(LibRPMedia:GetIconTypeByName("") == nil,
-        "Expected nil icon file.");
+        "Expected nil icon type.");
+
+    -- Data lookups involving invalid fields should return nil.
+    local validIconName = LibRPMedia:GetIconNameByIndex(1);
+
+    Assert(LibRPMedia:GetIconDataByIndex(1, "-") == nil,
+        "Expected nil result.");
+    Assert(LibRPMedia:GetIconDataByName(validIconName, "-") == nil,
+        "Expected nil result.");
 end);
 
 RegisterTest("Icons: Find All", function()

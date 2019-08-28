@@ -2,7 +2,7 @@
 assert(LibStub, "Missing dependency: LibStub");
 
 local MODULE_MAJOR = "LibRPMedia-1.0";
-local MODULE_MINOR = 4;
+local MODULE_MINOR = 5;
 
 local LibRPMedia = LibStub:NewLibrary(MODULE_MAJOR, MODULE_MINOR);
 if not LibRPMedia then
@@ -65,19 +65,115 @@ function LibRPMedia:GetNumMusicFiles()
     return self:GetNumDatabaseEntries("music");
 end
 
---- Returns the file ID for a music file based on its sound kit name, or
---  file path.
+--- Returns data about a given music file identified by its name.
 --
---  If no match is found, nil is returned.
-function LibRPMedia:GetMusicFileByName(musicName)
-    AssertType(musicName, "musicName", "string");
-
+--  An optional second parameter (target) may be specified to control the type
+--  of data yielded by the query.
+--
+--  If a string is given, it must correspond to a field in the database, and
+--  will return the value associated with this music file for that field.
+--  Invalid field lookups will return nil.
+--
+--  If a table is given, all fields are collected into the given table and
+--  returned. If nil is given, a table is created automatically. The contents
+--  of the table are not wiped between calls.
+--
+--  If the requested music file is not found within the database, nil is
+--  returned for all query types.
+function LibRPMedia:GetMusicDataByName(musicName, target)
     local musicIndex = self:GetMusicIndexByName(musicName);
     if not musicIndex then
         return nil;
     end
 
-    return self:GetMusicFileByIndex(musicIndex);
+    return self:GetMusicDataByIndex(musicIndex, target);
+end
+
+--- Returns data about a given music file identified by its file ID.
+--
+--  An optional second parameter (target) may be specified to control the type
+--  of data yielded by the query.
+--
+--  If a string is given, it must correspond to a field in the database, and
+--  will return the value associated with this music file for that field.
+--  Invalid field lookups will return nil.
+--
+--  If a table is given, all fields are collected into the given table and
+--  returned. If nil is given, a table is created automatically. The contents
+--  of the table are not wiped between calls.
+--
+--  If the requested music file is not found within the database, nil is
+--  returned for all query types.
+function LibRPMedia:GetMusicDataByFile(musicFile, target)
+    local musicIndex = self:GetMusicIndexByFile(musicFile);
+    if not musicIndex then
+        return nil;
+    end
+
+    return self:GetMusicDataByIndex(musicIndex, target);
+end
+
+--- Returns data about a given music file identified by its index within
+--  the database.
+--
+--  An optional second parameter (target) may be specified to control the type
+--  of data yielded by the query.
+--
+--  If a string is given, it must correspond to a field in the database, and
+--  will return the value associated with this music file for that field.
+--  Invalid field lookups will return nil.
+--
+--  If a table is given, all fields are collected into the given table and
+--  returned. If nil is given, a table is created automatically. The contents
+--  of the table are not wiped between calls.
+--
+--  If the requested music file is not found within the database, nil is
+--  returned for all query types.
+function LibRPMedia:GetMusicDataByIndex(musicIndex, target)
+    AssertType(musicIndex, "musicIndex", "number");
+
+    local music = self:GetDatabase("music");
+    if musicIndex < 1 or musicIndex > music.size then
+        -- Index out of range.
+        return nil;
+    end
+
+    local targetType = type(target);
+    if targetType == "string" then
+        -- Look up a specific field name.
+        local fieldData = music.data[target];
+        if not fieldData then
+            -- Field name doesn't exist.
+            return nil;
+        end
+
+        return fieldData[musicIndex];
+    elseif targetType == "table" or targetType == "nil" then
+        -- Collect into the given table, or create a fresh one.
+        local fieldTable = target or {};
+
+        -- The data table is lazily loaded; this breaks pairs/next iteration
+        -- until a named field is explicitly looked up.
+        local _ = music.data._;
+
+        for fieldName, fieldData in pairs(music.data) do
+            fieldTable[fieldName] = fieldData[musicIndex];
+        end
+
+        return fieldTable;
+    else
+        -- Invalid target type; the below check will always fail but it
+        -- generates a useful error message for us to spit back out.
+        AssertType(target, "target", "string", "table", "nil");
+    end
+end
+
+--- Returns the file ID for a music file based on its sound kit name, or
+--  file path.
+--
+--  If no match is found, nil is returned.
+function LibRPMedia:GetMusicFileByName(musicName)
+    return self:GetMusicDataByName(musicName, "file");
 end
 
 --- Returns the file ID for a music file based on its index, in the range
@@ -85,10 +181,7 @@ end
 --
 --  If no file is found, nil is returned.
 function LibRPMedia:GetMusicFileByIndex(musicIndex)
-    AssertType(musicIndex, "musicIndex", "number");
-
-    local music = self:GetDatabase("music");
-    return music.data.file[musicIndex];
+    return self:GetMusicDataByIndex(musicIndex, "file");
 end
 
 --- Returns the duration of a music file from its file ID, if known. The
@@ -97,15 +190,7 @@ end
 --  If no file is found, or no duration information is available, this will
 --  return 0.
 function LibRPMedia:GetMusicFileDuration(musicFile)
-    AssertType(musicFile, "musicFile", "number");
-
-    local music = self:GetDatabase("music");
-    local musicIndex = self:GetMusicIndexByFile(musicFile);
-    if not musicIndex then
-        return 0;
-    end
-
-    return music.data.time[musicIndex] or 0;
+    return self:GetMusicDataByFile(musicFile, "time") or 0;
 end
 
 --- Converts a music file ID to a native music file value that can be
@@ -168,24 +253,14 @@ end
 --
 --  If no name is found, nil is returned.
 function LibRPMedia:GetMusicNameByIndex(musicIndex)
-    AssertType(musicIndex, "musicIndex", "number");
-
-    local music = self:GetDatabase("music");
-    return music.data.name[musicIndex];
+    return self:GetMusicDataByIndex(musicIndex, "name");
 end
 
 --- Returns a string name for a music file based on its file ID.
 --
 --  If no name is found, nil is returned.
 function LibRPMedia:GetMusicNameByFile(musicFile)
-    AssertType(musicFile, "musicFile", "number");
-
-    local musicIndex = self:GetMusicIndexByFile(musicFile);
-    if not musicIndex then
-        return nil;
-    end
-
-    return self:GetMusicNameByIndex(musicIndex);
+    return self:GetMusicDataByFile(musicFile, "name");
 end
 
 --- Returns an iterator for accessing all music files in the database
@@ -253,42 +328,101 @@ function LibRPMedia:GetNumIcons()
     return self:GetNumDatabaseEntries("icons");
 end
 
---- Returns the name of an icon by its index. If the given index is outside
---  of the range 1 through GetNumIcons(), nil is returned.
-function LibRPMedia:GetIconNameByIndex(iconIndex)
-    AssertType(iconIndex, "iconIndex", "number");
-
-    local icons = self:GetDatabase("icons");
-    return icons.data.name[iconIndex];
-end
-
---- Returns the type of an icon by its index. If the given index is outside
---  of the range 1 through GetNumIcons(), nil is returned.
-function LibRPMedia:GetIconTypeByIndex(iconIndex)
-    AssertType(iconIndex, "iconIndex", "number");
-
-    -- Explicitly test the index range due to the layout of the data.
-    local icons = self:GetDatabase("icons");
-    if iconIndex <= 0 or iconIndex > icons.size then
-        return nil;
-    end
-
-    -- The type map only contains entries for non-textures; as the index is
-    -- in range we should *always* default it.
-    return icons.data.type[iconIndex] or self.IconType.Texture;
-end
-
---- Returns the name of an icon by its name. If no matching name is found in
---  the database, nil is returned.
-function LibRPMedia:GetIconTypeByName(iconName)
-    AssertType(iconName, "iconName", "string");
-
+--- Returns data about a given icon identified by its name.
+--
+--  An optional second parameter (target) may be specified to control the type
+--  of data yielded by the query.
+--
+--  If a string is given, it must correspond to a field in the database, and
+--  will return the value associated with this icon for that field. Invalid
+--  field lookups will return nil.
+--
+--  If a table is given, all fields are collected into the given table and
+--  returned. If nil is given, a table is created automatically. The contents
+--  of the table are not wiped between calls.
+--
+--  If the requested icon is not found within the database, nil is returned
+--  for all query types.
+function LibRPMedia:GetIconDataByName(iconName, target)
     local iconIndex = self:GetIconIndexByName(iconName);
     if not iconIndex then
         return nil;
     end
 
-    return self:GetIconTypeByIndex(iconIndex);
+    return self:GetIconDataByIndex(iconIndex, target);
+end
+
+--- Returns data about a given icon identified by its index within
+--  the database.
+--
+--  An optional second parameter (target) may be specified to control the type
+--  of data yielded by the query.
+--
+--  If a string is given, it must correspond to a field in the database, and
+--  will return the value associated with this icon for that field. Invalid
+--  field lookups will return nil.
+--
+--  If a table is given, all fields are collected into the given table and
+--  returned. If nil is given, a table is created automatically. The contents
+--  of the table are not wiped between calls.
+--
+--  If the requested icon is not found within the database, nil is returned
+--  for all query types.
+function LibRPMedia:GetIconDataByIndex(iconIndex, target)
+    AssertType(iconIndex, "iconIndex", "number");
+
+    local icons = self:GetDatabase("icons");
+    if iconIndex < 1 or iconIndex > icons.size then
+        -- Index out of range.
+        return nil;
+    end
+
+    local targetType = type(target);
+    if targetType == "string" then
+        -- Look up a specific field name.
+        local fieldData = icons.data[target];
+        if not fieldData then
+            -- Field name doesn't exist.
+            return nil;
+        end
+
+        return fieldData[iconIndex];
+    elseif targetType == "table" or targetType == "nil" then
+        -- Collect into the given table, or create a fresh one.
+        local fieldTable = target or {};
+
+        -- The data table is lazily loaded; this breaks pairs/next iteration
+        -- until a named field is explicitly looked up.
+        local _ = icons.data._;
+
+        for fieldName, fieldData in pairs(icons.data) do
+            fieldTable[fieldName] = fieldData[iconIndex];
+        end
+
+        return fieldTable;
+    else
+        -- Invalid target type; the below check will always fail but it
+        -- generates a useful error message for us to spit back out.
+        AssertType(target, "target", "string", "table", "nil");
+    end
+end
+
+--- Returns the name of an icon by its index. If the given index is outside
+--  of the range 1 through GetNumIcons(), nil is returned.
+function LibRPMedia:GetIconNameByIndex(iconIndex)
+    return self:GetIconDataByIndex(iconIndex, "name");
+end
+
+--- Returns the type of an icon by its index. If the given index is outside
+--  of the range 1 through GetNumIcons(), nil is returned.
+function LibRPMedia:GetIconTypeByIndex(iconIndex)
+    return self:GetIconDataByIndex(iconIndex, "type");
+end
+
+--- Returns the name of an icon by its name. If no matching name is found in
+--  the database, nil is returned.
+function LibRPMedia:GetIconTypeByName(iconName)
+    return self:GetIconDataByName(iconName, "type");
 end
 
 --- Returns the index of an icon from its name. If no matching name is found
