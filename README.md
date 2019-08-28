@@ -318,7 +318,7 @@ If the requested icon is not found within the database, `nil` is returned for al
 local iconData = LibRPMedia:GetIconDataByName("ability-ambush");
 local iconName = LibRPMedia:GetIconDataByName("ability-ambush", "name");
 
-assert(iconData.file == iconName);
+assert(iconData.name == iconName);
 print("Icon name:", iconName);
 -- Example output: "Icon name: ability-ambush"
 ```
