@@ -1,5 +1,10 @@
 # LibRPMedia-1.0
 
+## v1.1.1
+
+ * Added `GetMusicDataByFile(musicFile)`, `GetMusicDataByName(musicName)`, `GetMusicDataByIndex(musicIndex)` functions for retrieving a full table of data about a single music database entry.
+ * Added `GetIconDataByName(iconName)`, `GetIconDataByIndex(iconIndex)` for symmetry with the above.
+
 ## v1.1.0
 
  * Added Icons API.
