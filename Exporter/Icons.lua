@@ -21,7 +21,7 @@ local ICON_DIRECTORY_PATTERN = "^interface/icons/";
 
 -- Enumeration of icon types. Entries here must be present in the library.
 local IconType = {
-    File = 1,
+    Texture = 1,
     Atlas = 2,
 };
 
@@ -207,7 +207,7 @@ function Icons.GetManifest(cache)
             local icon = {};
             icon.file = file;
             icon.name = name;
-            icon.type = IconType.File;
+            icon.type = IconType.Texture;
 
             -- Populate the advanced data. If this fails, we'll omit it.
             local ok, err = Icons.UpdateIconData(icon);
@@ -226,19 +226,32 @@ function Icons.GetManifest(cache)
 
     Log.Info("Collecting icon atlases...");
 
-    local atlases = Resources.GetDatabase("uitextureatlasmember");
+    -- Collect atlas file IDs into a mapping.
+    local atlases = Resources.GetDatabase("uitextureatlas");
+    local atlasFiles = {};
     for i = 1, atlases.size do
-        -- Check if this atlas is on the whitelist.
-        local atlasName = atlases.CommittedName[i];
-        if Icons.IsAtlasIncluded(atlasName) then
+        local atlasID = tonumber(atlases.ID[i]);
+        local atlasFile = tonumber(atlases.FileDataID[i]);
+
+        atlasFiles[atlasID] = atlasFile;
+    end
+
+    local atlasMembers = Resources.GetDatabase("uitextureatlasmember");
+    for i = 1, atlasMembers.size do
+        -- Verify that this atlas refers to a valid file.
+        local atlasID = tonumber(atlasMembers.UiTextureAtlasID[i]);
+        local atlasName = atlasMembers.CommittedName[i];
+
+        if atlasFiles[atlasID] and Icons.IsAtlasIncluded(atlasName) then
             -- Extract attributes.
-            local x1 = tonumber(atlases.CommittedLeft[i])
-            local x2 = tonumber(atlases.CommittedRight[i]);
-            local y1 = tonumber(atlases.CommittedTop[i])
-            local y2 = tonumber(atlases.CommittedBottom[i]);
+            local x1 = tonumber(atlasMembers.CommittedLeft[i])
+            local x2 = tonumber(atlasMembers.CommittedRight[i]);
+            local y1 = tonumber(atlasMembers.CommittedTop[i])
+            local y2 = tonumber(atlasMembers.CommittedBottom[i]);
 
             -- Populate and insert an icon entry into the manifest.
             local icon = {};
+            icon.file = atlasFiles[atlasID];
             icon.name = atlasName;
             icon.type = IconType.Atlas;
             icon.size = Serializer.CreateSpacedTable({
@@ -247,6 +260,11 @@ function Icons.GetManifest(cache)
             });
 
             AddIconToManifest(icon, manifest);
+        elseif not atlasFiles[atlasID] then
+            Log.Warn("Icon atlas has no associated file ID.", {
+                name = atlasName,
+                atlas = atlasID,
+            });
         end
     end
 
@@ -262,6 +280,8 @@ function Icons.GetDatabase(manifest)
         size = #manifest,
         -- Data table.
         data = {
+            -- Icon file ID array.
+            file = {},
             -- Icon name array.
             name = Serializer.CreateFrontCodedStringList(),
             -- Icon type mapping.
@@ -273,11 +293,12 @@ function Icons.GetDatabase(manifest)
     Log.Info("Building icon database...", { entries = database.size });
 
     for index, icon in ipairs(manifest) do
-        tinsert(database.data.name, icon.name);
+        database.data.name[index] = icon.name;
+        database.data.file[index] = icon.file;
 
         -- Due to the sparseness of atlases vs files, we'll omit files and
         -- treat the type table as a map of indices => non-file-types.
-        if icon.type ~= IconType.File then
+        if icon.type ~= IconType.Texture then
             database.data.type[index] = icon.type;
         end
     end

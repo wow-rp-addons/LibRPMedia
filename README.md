@@ -359,6 +359,19 @@ print("Icon Name #1:", LibRPMedia:GetIconNameByIndex(1));
 -- Example output: "Icon Name #1: ability_ambush"
 ```
 
+#### `LibRPMedia:GetIconFileByIndex(iconIndex)`
+
+Returns the file ID of an icon by its given index within the database, in the range of 1 through the result of `LibRPMedia:GetNumIcons()`. Queries outside of this range will return `nil`.
+
+Icon indices are not stable and may result in different data being returned between upgrades to the library. It is recommended to persist icons via their name and instead query via the `GetIcon<X>ByName` functions where possible.
+
+##### Usage
+
+```lua
+print("Icon File ID #1:", LibRPMedia:GetIconFileByIndex(1));
+-- Example output: "Icon File ID #1: 1044087"
+```
+
 #### `LibRPMedia:GetIconTypeByIndex(iconIndex)`
 
 Returns the type of an icon by its given index within the database, in the range of 1 through the result of `LibRPMedia:GetNumIcons()`. Queries outside of this range will return `nil`, otherwise a value present in the `LibRPMedia.IconType` enumeration is returned.
@@ -370,6 +383,17 @@ Icon indices are not stable and may result in different data being returned betw
 ```lua
 print("Icon Type #1:", LibRPMedia:GetIconTypeByIndex(1));
 -- Example output: "Icon Type #1: 1"
+```
+
+#### `LibRPMedia:GetIconFileByName(iconName)`
+
+Returns the file ID of an icon keyed by its name within the database. If the given icon name cannot be found `nil` is returned.
+
+##### Usage
+
+```lua
+print("Icon File ID:", LibRPMedia:GetIconFileByName("raceicon-dwarf-female"));
+-- Example output: "Icon File ID: 1662186"
 ```
 
 #### `LibRPMedia:GetIconTypeByName(iconName)`

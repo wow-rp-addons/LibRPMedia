@@ -383,10 +383,17 @@ function FrontCodedStringList:__serialize(options)
     return Serializer.DumpRaw(encoded, options);
 end
 
+--- Sentinel value that can be inserted into arrays for serialization as nil
+--  values.
+local NilSentinel = setmetatable({}, {
+    __serialize = function() return "nil"; end,
+});
+
 -- Module exports.
 Serializer.CompactSerializer = CompactSerializer;
 Serializer.SpacedSerializer = SpacedSerializer;
 Serializer.PrettySerializer = PrettySerializer;
 Serializer.FrontCodedStringList = FrontCodedStringList;
+Serializer.NilSentinel = NilSentinel;
 
 return Serializer;

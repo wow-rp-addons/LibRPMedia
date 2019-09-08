@@ -2,7 +2,7 @@
 assert(LibStub, "Missing dependency: LibStub");
 
 local MODULE_MAJOR = "LibRPMedia-1.0";
-local MODULE_MINOR = 5;
+local MODULE_MINOR = 6;
 
 local LibRPMedia = LibStub:NewLibrary(MODULE_MAJOR, MODULE_MINOR);
 if not LibRPMedia then
@@ -411,6 +411,18 @@ end
 --  of the range 1 through GetNumIcons(), nil is returned.
 function LibRPMedia:GetIconNameByIndex(iconIndex)
     return self:GetIconDataByIndex(iconIndex, "name");
+end
+
+--- Returns the file ID of an icon by its index. If the given index is
+--  outside of the range 1 through GetNumIcons(), nil is returned.
+function LibRPMedia:GetIconFileByIndex(iconIndex)
+    return self:GetIconDataByIndex(iconIndex, "file");
+end
+
+--- Returns the file ID of an icon by its name. If no matching name is found
+--  in the database, nil is returned.
+function LibRPMedia:GetIconFileByName(iconName)
+    return self:GetIconDataByName(iconName, "file");
 end
 
 --- Returns the type of an icon by its index. If the given index is outside

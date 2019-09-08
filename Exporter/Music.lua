@@ -412,9 +412,9 @@ function Music.GetDatabase(manifest)
     for index, music in ipairs(manifest) do
         -- The data can just be copied; if a name for the file (from its path)
         -- doesn't exist we'll use the first soundkit name.
-        tinsert(database.data.file, music.id);
-        tinsert(database.data.name, Music.GetMusicName(music));
-        tinsert(database.data.time, music.time);
+        database.data.file[index] = music.id;
+        database.data.name[index] = Music.GetMusicName(music);
+        database.data.time[index] = music.time;
 
         -- Add the name and all soundkit names to the name search index.
         local rows = database.index.name.row;
