@@ -25,6 +25,7 @@ if icons then
     icons.size = <%- Dump(database.icons.size) %>;
     icons.data = LibRPMedia:CreateLazyTable(function()
         return LibRPMedia:LoadFunctionFromString([=[return {
+            file = <%- Dump(database.icons.data.file) %>,
             name = LibRPMedia:LoadFrontCodedStringList(<%- Dump(database.icons.data.name) %>),
             type = setmetatable(<%- Dump(database.icons.data.type) %>, { __index = function() return LibRPMedia.IconType.Texture; end }),
         }]=]);

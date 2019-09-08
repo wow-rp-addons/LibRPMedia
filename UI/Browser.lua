@@ -251,6 +251,7 @@ function LibRPMedia_IconPreviewMixin:UpdateTooltipVisualization()
 
     -- The icon index is otherwise valid, so obtain the data and display.
     local iconName = LibRPMedia:GetIconNameByIndex(self.iconIndex);
+    local iconFile = LibRPMedia:GetIconFileByIndex(self.iconIndex);
     local iconType = LibRPMedia:GetIconTypeByIndex(self.iconIndex);
 
     local iconTypeText = tostring(iconType);
@@ -262,6 +263,9 @@ function LibRPMedia_IconPreviewMixin:UpdateTooltipVisualization()
 
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
     GameTooltip_SetTitle(GameTooltip, iconName, GREEN_FONT_COLOR, false);
+
+    local fileLineText = strformat("File: |cffffffff%s|r", iconFile or "nil");
+    GameTooltip_AddNormalLine(GameTooltip, fileLineText, false);
 
     local typeLineText = strformat("Type: |cffffffff%s|r", iconTypeText);
     GameTooltip_AddNormalLine(GameTooltip, typeLineText, false);

@@ -55,6 +55,13 @@ RegisterTest("Icons: API Type Checks", function()
     AssertError(LibRPMedia, "GetIconIndexByName", thread);
     AssertError(LibRPMedia, "GetIconIndexByName", userdata);
 
+    AssertNoError(LibRPMedia, "GetIconFileByName", string);
+    AssertError(LibRPMedia, "GetIconFileByName", nil);
+    AssertError(LibRPMedia, "GetIconFileByName", number);
+    AssertError(LibRPMedia, "GetIconFileByName", boolean);
+    AssertError(LibRPMedia, "GetIconFileByName", thread);
+    AssertError(LibRPMedia, "GetIconFileByName", userdata);
+
     AssertNoError(LibRPMedia, "GetIconTypeByName", string);
     AssertError(LibRPMedia, "GetIconTypeByName", nil);
     AssertError(LibRPMedia, "GetIconTypeByName", number);
@@ -76,6 +83,13 @@ RegisterTest("Icons: API Type Checks", function()
     AssertError(LibRPMedia, "GetIconNameByIndex", boolean);
     AssertError(LibRPMedia, "GetIconNameByIndex", thread);
     AssertError(LibRPMedia, "GetIconNameByIndex", userdata);
+
+    AssertNoError(LibRPMedia, "GetIconFileByIndex", number);
+    AssertError(LibRPMedia, "GetIconFileByIndex", string);
+    AssertError(LibRPMedia, "GetIconFileByIndex", nil);
+    AssertError(LibRPMedia, "GetIconFileByIndex", boolean);
+    AssertError(LibRPMedia, "GetIconFileByIndex", thread);
+    AssertError(LibRPMedia, "GetIconFileByIndex", userdata);
 
     AssertNoError(LibRPMedia, "GetIconTypeByIndex", number);
     AssertError(LibRPMedia, "GetIconTypeByIndex", string);
@@ -169,6 +183,16 @@ RegisterTest("Icons: Type Lookup (By Index)", function()
     end
 end);
 
+RegisterTest("Icons: File Lookup (By Index)", function()
+    -- Each icon index in the range 1 through GetNumIcons should return
+    -- a valid file ID.
+    for i = 1, LibRPMedia:GetNumIcons() do
+        local iconFile = LibRPMedia:GetIconFileByIndex(i);
+
+        AssertType(iconFile, "number", "Icon file ID is not numeric");
+    end
+end);
+
 RegisterTest("Icons: Index Lookup (By Name)", function()
     -- Mapping each index from 1 through GetNumIcons to a name and back to an
     -- index again should result in the same index.
@@ -198,6 +222,21 @@ RegisterTest("Icons: Type Lookup (By Name)", function()
     end
 end);
 
+RegisterTest("Icons: File Lookup (By Name)", function()
+    -- Iterate over each icon index, get the file ID, then map that to a name.
+    for i = 1, LibRPMedia:GetNumIcons() do
+        local name = LibRPMedia:GetIconNameByIndex(i);
+        local want = LibRPMedia:GetIconFileByIndex(i);
+        local have = LibRPMedia:GetIconFileByName(name);
+
+        AssertType(have, "number", "Looked-up file ID is not numeric");
+        AssertType(want, "number", "Expected file ID is not numeric");
+        Assertf(have == want,
+            "Icon %q by-index is file %s, but is file %s by-name.",
+            name, tostring(want), tostring(have));
+    end
+end);
+
 RegisterTest("Icons: Invalid Lookups", function()
     -- Each function that is given a correctly-typed but otherwise invalid
     -- value for lookup should return nil to indicate no match.
@@ -216,6 +255,12 @@ RegisterTest("Icons: Invalid Lookups", function()
     Assert(LibRPMedia:GetIconNameByIndex(count + 1) == nil,
         "Expected nil icon name.");
 
+    Assert(LibRPMedia:GetIconFileByIndex(-1) == nil,
+        "Expected nil icon file ID.");
+
+    Assert(LibRPMedia:GetIconFileByIndex(count + 1) == nil,
+        "Expected nil icon file ID.");
+
     Assert(LibRPMedia:GetIconTypeByIndex(-1) == nil,
         "Expected nil icon type.");
 
@@ -228,6 +273,9 @@ RegisterTest("Icons: Invalid Lookups", function()
 
     Assert(LibRPMedia:GetIconIndexByName("") == nil,
         "Expected nil icon index.");
+
+    Assert(LibRPMedia:GetIconFileByName("") == nil,
+        "Expected nil icon file ID.");
 
     Assert(LibRPMedia:GetIconTypeByName("") == nil,
         "Expected nil icon type.");
