@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 1.13.2.31727
--- Build Config: 0f9b4efb7e262dac08d8e330ffa32126
+-- Client Version: 1.13.2.31882
+-- Build Config: 8a01b815ea1356e7e031aee9e762f99c
 if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
     return;
 end
@@ -17,7 +17,7 @@ if not LibRPMedia then
 end
 
 -- Minor version number of the database.
-local DATABASE_VERSION = 5;
+local DATABASE_VERSION = 6;
 
 -- Icon database.
 local icons = LibRPMedia:NewDatabase("icons", DATABASE_VERSION);

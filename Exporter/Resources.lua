@@ -564,6 +564,7 @@ ENCRYPTION_KEYS = {
     ["c050fa06bb0538f6"] = "c552f5d0b72231502d2547314e6015f7",
     ["ab5cdd3fc321831f"] = "e1384f5b06ebbcd333695aa6ffc68318",
     ["a7b7d1f12395040e"] = "36ad3b31273f1ebcee8520aaa74b12f2",
+    ["302aad8b1f441d95"] = "24b86438cf02538649e5ba672fd5993a",
 };
 
 -- Module exports.
