@@ -192,21 +192,40 @@ function Music.GetSoundKits()
     local soundkitEntries = Resources.GetDatabase("soundkitentry");
     local soundkitNames = Resources.GetDatabase("soundkitname");
 
+    -- Collect the sound kits from the primary database. Start with all
+    -- files flagged as being music.
     local kits = {};
     for index = 1, soundkit.size do
-        -- Assert that the soundkit and soundkit name databases are in-sync.
-        if soundkit.ID[index] ~= soundkitNames.ID[index] then
-            error("assertion failed: soundkit databases out-of-sync");
-        end
-
         local id = tonumber(soundkit.ID[index]);
         local type = tonumber(soundkit.SoundType[index]);
+
+        if type == SOUNDKIT_TYPE_MUSIC then
+            kits[id] = { id = id, name = nil, files = {} };
+        end
+    end
+
+    -- Next, go over the name database and attach that information if present.
+    -- Anything that should be excluded by name will be filtered.
+    for index = 1, soundkitNames.size do
+        local id = tonumber(soundkitNames.ID[index]);
         local name = Music.NormalizeName(soundkitNames.Name[index]);
 
-        -- Is this a music soundkit?
-        if type == SOUNDKIT_TYPE_MUSIC and not Music.IsNameExcluded(name) then
-            -- Add the kit data to our music soundkit mapping.
-            kits[id] = { id = id, name = name, files = {} };
+        if kits[id] then
+            if not Music.IsNameExcluded(name) then
+                -- Kit isn't excluded, attach the name data.
+                kits[id].name = name;
+            else
+                -- Kit is excluded, discard the entire kit.
+                kits[id] = nil;
+            end
+        end
+    end
+
+    -- Now prune the kits; anything that still doesn't have a primary name
+    -- at this point will be discarded.
+    for id, kit in pairs(kits) do
+        if not kit.name then
+            kits[id] = nil;
         end
     end
 
