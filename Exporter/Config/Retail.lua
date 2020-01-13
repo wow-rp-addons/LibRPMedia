@@ -56,6 +56,21 @@ return {
 
     -- Settings for music database generation.
     music = {
+        -- Mapping of soundkit IDs to be explicitly included or excluded.
+        -- The value of each entry should be false to omit the soundkit,
+        -- true to include it, or a string to include it with a custom name.
+        --
+        -- If a kit is included, a name must be obtainable from the client
+        -- databases; if not, it will be skipped and a debug message logged.
+        --
+        -- Custom names take priority over those found within the client
+        -- databases.
+        --
+        -- Soundkits present within this mapping will be overridden and
+        -- excluded if matching any of the files or names present in the
+        -- excludeFiles and excludeNames lists.
+        overrideKits = {},
+
         -- List of file IDs to exclude from the database.
         excludeFiles = {
             538910, -- Sound test file ("sound/soundtest06.ogg").
@@ -73,10 +88,10 @@ return {
             629319, -- Sound test file ("mus_soundtest_music01.mp3").
             629320, -- Sound test file ("mus_soundtest_music02.mp3").
             629321, -- Sound test file ("mus_soundtest_music03.mp3").
-            642256, -- Used by sound kit 30582, file doesn't exist.
+            642256, -- Used by soundkit 30582, file doesn't exist.
         },
 
-        -- List of file/sound kit name patterns to exclude from the database.
+        -- List of file/soundkit name patterns to exclude from the database.
         excludeNames = {
             -- Any soundkits with these tags should be skipped.
             "^%[not used%]",

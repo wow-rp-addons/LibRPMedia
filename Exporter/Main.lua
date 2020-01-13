@@ -87,9 +87,24 @@ local config = {
 
     -- Settings for music database generation.
     music = {
+        -- Mapping of soundkit IDs to be explicitly included or excluded.
+        -- The value of each entry should be false to omit the soundkit,
+        -- true to include it, or a string to include it with a custom name.
+        --
+        -- If a kit is included, a name must be obtainable from the client
+        -- databases; if not, it will be skipped and a warning logged.
+        --
+        -- Custom names take priority over those found within the client
+        -- databases.
+        --
+        -- Soundkits present within this mapping will be overridden and
+        -- excluded if matching any of the files or names present in the
+        -- excludeFiles and excludeNames lists.
+        overrideKits = {},
+
         -- List of file IDs to exclude from the database.
         excludeFiles = {},
-        -- List of file/sound kit name patterns to exclude from the database.
+        -- List of file/soundkit name patterns to exclude from the database.
         excludeNames = {},
     },
 
@@ -136,6 +151,7 @@ local ok, err = pcall(function()
     Icons.SetExcludedNames(config.icons.excludeNames);
     Icons.SetIncludedAtlases(config.icons.includeAtlases);
 
+    Music.SetOverrideKits(config.music.overrideKits);
     Music.SetExcludedFiles(config.music.excludeFiles);
     Music.SetExcludedNames(config.music.excludeNames);
 

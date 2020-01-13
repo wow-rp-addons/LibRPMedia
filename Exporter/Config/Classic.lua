@@ -55,7 +55,7 @@ return {
         -- List of file IDs to exclude from the database.
         excludeFiles = {},
 
-        -- List of file/sound kit name patterns to exclude from the database.
+        -- List of file/soundkit name patterns to exclude from the database.
         excludeNames = {},
     },
 };

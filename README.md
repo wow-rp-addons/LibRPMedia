@@ -123,7 +123,7 @@ print("Music file ID:", musicFile);
 
 Returns the file ID associated with a given name or file path.
 
-If using a file name, this will usually match that of a sound kit name as present within the internal client databases, eg. `zone-cursedlandfelwoodfurbolg_1`.
+If using a file name, this will usually match that of a soundkit name as present within the internal client databases, eg. `zone-cursedlandfelwoodfurbolg_1`.
 
 If using a file path, the database only includes entries for files within the `sound/music` directory tree. The file path should omit the `sound/music/` prefix, as well as the file extension (`.mp3`).
 

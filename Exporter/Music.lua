@@ -79,9 +79,11 @@ end
 
 -- Music database module.
 local Music = {
+    -- Mapping of soundkit overrides.
+    overrideKits = {},
     -- List of excluded music file IDs.
     excludeFiles = {},
-    -- List of excluded file/sound kit name patterns.
+    -- List of excluded file/soundkit name patterns.
     excludeNames = {},
 };
 
@@ -95,19 +97,42 @@ function Music.SetExcludedFiles(excludeFiles)
     Music.excludeFiles = excludeFiles;
 end
 
--- Returns the list of excluded music file/sound kit name patterns.
+-- Returns the list of excluded music file/soundkit name patterns.
 function Music.GetExcludedNames()
     return Music.excludeNames;
 end
 
--- Sets the list of excluded music file/sound kit name patterns.
+-- Sets the list of excluded music file/soundkit name patterns.
 function Music.SetExcludedNames(excludeNames)
     Music.excludeNames = excludeNames;
+end
+
+-- Returns the mapping of overridden soundkits to their inclusion/exclusion
+-- state, or custom names.
+function Music.GetOverrideKits()
+    return Music.overrideKits;
+end
+
+-- Sets the mapping of overridden soundkits.
+function Music.SetOverrideKits(overrideKits)
+    Music.overrideKits = overrideKits;
 end
 
 -- Normalizes the given music file path or name.
 function Music.NormalizeName(name)
     return strgsub(strlower(name), "\\", "/");
+end
+
+-- Returns any custom name assigned for a soundkit, or nil if not available.
+function Music.GetOverrideKitName(kitID)
+    local overrides = Music.GetOverrideKits();
+    local name = overrides[kitID];
+
+    if type(name) == "string" then
+        return Music.NormalizeName(name);
+    end
+
+    return nil;
 end
 
 -- Returns a name for a music file derived from its file path.
@@ -121,13 +146,13 @@ function Music.GetNameFromFilePath(filePath)
 end
 
 -- Returns a name for a music file derived from a soundkit name and the
--- index of the file entry for the sound kit.
+-- index of the file entry for the soundkit.
 function Music.GetNameForSoundKit(soundkitName, fileIndex)
     local name = strformat("%s_%02d", soundkitName, fileIndex);
     return Music.NormalizeName(name);
 end
 
--- Returns true if the given music name (file path or sound kit name) is
+-- Returns true if the given music name (file path or soundkit name) is
 -- excluded from the database.
 function Music.IsNameExcluded(name)
     for _, pattern in ipairs(Music.GetExcludedNames()) do
@@ -137,6 +162,20 @@ function Music.IsNameExcluded(name)
     end
 
     return false;
+end
+
+-- Returns true if the given soundkit ID is explicitly included inside
+-- the database.
+function Music.IsKitIncluded(kitID)
+    local overrides = Music.GetOverrideKits();
+    return not not overrides[kitID]; -- Allow any truthy value.
+end
+
+-- Returns true if the given soundkit ID is explicitly excluded from the
+-- database.
+function Music.IsKitExcluded(kitID)
+    local overrides = Music.GetOverrideKits();
+    return overrides[kitID] == false; -- Explicit false required.
 end
 
 -- Returns true if the given file path is that of a music file that can be
@@ -183,48 +222,75 @@ function Music.GetFileDuration(fileID)
     return tonumber(output) or 0;
 end
 
--- Collects a mapping of sound kits representing music files from the
+-- Collects a mapping of soundkits representing music files from the
 -- client database dumps.
 function Music.GetSoundKits()
-    -- Run over all sound kits and find music entries.
+    -- Run over all soundkits and find music entries.
     Log.Info("Collecting music soundkits...");
     local soundkit = Resources.GetDatabase("soundkit");
     local soundkitEntries = Resources.GetDatabase("soundkitentry");
     local soundkitNames = Resources.GetDatabase("soundkitname");
+    local zoneMusic = Resources.GetDatabase("zonemusic");
 
-    -- Collect the sound kits from the primary database. Start with all
+    -- Collect the soundkits from the primary database. Start with all
     -- files flagged as being music.
     local kits = {};
     for index = 1, soundkit.size do
         local id = tonumber(soundkit.ID[index]);
         local type = tonumber(soundkit.SoundType[index]);
+        local name = Music.GetOverrideKitName(id);
 
-        if type == SOUNDKIT_TYPE_MUSIC then
-            kits[id] = { id = id, name = nil, files = {} };
+        if type == SOUNDKIT_TYPE_MUSIC or Music.IsKitIncluded(id) then
+            kits[id] = { id = id, name = name, files = {} };
         end
     end
 
     -- Next, go over the name database and attach that information if present.
-    -- Anything that should be excluded by name will be filtered.
     for index = 1, soundkitNames.size do
-        local id = tonumber(soundkitNames.ID[index]);
         local name = Music.NormalizeName(soundkitNames.Name[index]);
+        local kitID = tonumber(soundkitNames.ID[index]);
+        local kit = kits[kitID];
 
-        if kits[id] then
-            if not Music.IsNameExcluded(name) then
-                -- Kit isn't excluded, attach the name data.
-                kits[id].name = name;
-            else
-                -- Kit is excluded, discard the entire kit.
-                kits[id] = nil;
+        if kit and not kit.name then
+            kit.name = name;
+        end
+    end
+
+    -- Soundkits can have names derived from the zonemusic database too.
+    for rowIndex = 1, zoneMusic.size do
+        -- Zones have two potential soundkits for day and night music.
+        local name = Music.NormalizeName(zoneMusic.SetName[rowIndex]);
+
+        for columnIndex = 0, 1 do
+            local columnName = strformat("Sounds[%d]", columnIndex);
+            local kitID = tonumber(zoneMusic[columnName][rowIndex]);
+            local kit = kits[kitID];
+
+            if kit and not kit.name then
+                kit.name = name;
             end
         end
     end
 
-    -- Now prune the kits; anything that still doesn't have a primary name
-    -- at this point will be discarded.
+    -- Now prune the kits; anything excluded by ID, name, or lacking a name
+    -- will be discarded.
     for id, kit in pairs(kits) do
-        if not kit.name then
+        -- We implicitly exclude soundkits if they have no names. Otherwise
+        -- we check for an explicit exclusion.
+        local implicitExclude = (not kit.name);
+        local explicitExclude = implicitExclude
+            or Music.IsKitExcluded(id)
+            or Music.IsNameExcluded(kit.name);
+
+        if explicitExclude or implicitExclude then
+            -- Only log implicit exclusions so the user can maybe fix them.
+            if implicitExclude then
+                -- Use the debug level since with the patch 8.3 changes
+                -- we're likely going to just amass a huge amount of
+                -- missing names going forward.
+                Log.Debug("Skipping unnamed soundkit.", { soundkit = id });
+            end
+
             kits[id] = nil;
         end
     end
@@ -238,7 +304,7 @@ function Music.GetSoundKits()
 
         local kit = kits[entryKitID];
         if kit then
-            -- Some sound kits reference the same file multiple times. This
+            -- Some soundkits reference the same file multiple times. This
             -- isn't an error, but should be noted when it does occur.
             if Utils.BinarySearch(kit.files, entryFileID) then
                 Log.Debug("Duplicate file ID in soundkit.", {
@@ -279,7 +345,7 @@ end
 
 -- Returns an appropriate name for a given music file data table. This will
 -- prefer the name derived from the filepath if available, otherwise it will
--- use a name from the sound kits list.
+-- use a name from the soundkits list.
 function Music.GetMusicName(music)
     return music.name or music.kits[1];
 end
