@@ -11,6 +11,11 @@ return {
     -- Name of the manifest file to generate.
     manifest = "Exporter/Data/Retail.lua",
 
+    -- Override mapping of DB2 names to explicit build versions to download.
+    databaseOverrides = {
+        soundkitname = "8.3.0.32218", -- Removed after this build.
+    },
+
     -- Settings for icon database generation.
     icons = {
         -- List of icon name patterns to exclude from the database.
