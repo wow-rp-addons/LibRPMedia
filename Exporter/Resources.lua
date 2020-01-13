@@ -45,8 +45,11 @@ local Resources = {
     store = nil,
     -- Cached filelist for this product.
     filelist = nil,
-    -- Cached databases for this prodict.
+    -- Cached databases for this product.
     databases = {},
+
+    -- Mapping of database names to version overrides.
+    databaseVersions = {},
 };
 
 -- Returns the directory used for storing locally cached resources.
@@ -90,6 +93,17 @@ function Resources.SetRegion(region)
     -- Invalidate anything that's region-sensitive.
     Resources.build = nil;
     Resources.store = nil;
+end
+
+-- Returns the override mapping of versions to use for database requests.
+function Resources.GetDatabaseVersionOverrides()
+    return Resources.databaseVersions;
+end
+
+-- Sets the override mapping of versions to use for database requests.
+function Resources.SetDatabaseVersionOverrides(versions)
+    assert(type(versions) == "table", "versions must be a table");
+    Resources.databaseVersions = versions;
 end
 
 -- Returns a table of build information obtained from the patch servers
@@ -191,7 +205,10 @@ function Resources.GetDatabase(name)
     };
 
     -- Fetch the resource.
-    Log.Info("Fetching client database...", { name = name });
+    Log.Info("Fetching client database...", {
+        name = name,
+        version = Resources.GetDatabaseVersion(name),
+    });
 
     local stream, err = Resources.OpenResource(ResourceType.Database, name);
     if not stream then
@@ -223,6 +240,19 @@ function Resources.GetDatabase(name)
     Resources.CloseResource(stream);
     Resources.databases[name] = database;
     return database;
+end
+
+-- Returns the version for a named database. This will consult the versions
+-- set by SetDatabaseVersions first, and if fails will instead use the version
+-- of the current build.
+function Resources.GetDatabaseVersion(name)
+    local overrides = Resources.GetDatabaseVersionOverrides();
+    if overrides[name] then
+        return overrides[name];
+    end
+
+    local build = Resources.GetBuildInfo();
+    return build.version;
 end
 
 -- Returns a table of locale variants for the given file ID.
@@ -367,8 +397,8 @@ function Resources.GetResourceURL(resourceType, ...)
         return strformat(FILELIST_URL, build.bkey);
     elseif resourceType == ResourceType.Database then
         -- Input should be the database name.
-        local build = Resources.GetBuildInfo();
-        return strformat(DATABASE_URL, (...), build.version);
+        local version = Resources.GetDatabaseVersion((...));
+        return strformat(DATABASE_URL, (...), version);
     end
 
     -- Invalid resource type, or the given type isn't fetchable.

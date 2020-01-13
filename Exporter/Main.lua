@@ -74,6 +74,9 @@ local config = {
     -- Name of the template file to use for the database output.
     template = "Exporter/Templates/Database.lua.tpl",
 
+    -- Override mapping of DB2 names to explicit build versions to download.
+    databaseOverrides = {},
+
     -- Settings for icon database generation.
     icons = {
         -- List of icon name patterns to exclude from the database.
@@ -126,6 +129,7 @@ local ok, err = pcall(function()
     Log.SetLogLevel(config.verbose and Log.Level.Debug or Log.Level.Info);
 
     Resources.SetCacheDirectory(config.cacheDir);
+    Resources.SetDatabaseVersionOverrides(config.databaseOverrides);
     Resources.SetProductName(config.product);
     Resources.SetRegion(config.region);
 
