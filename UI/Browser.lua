@@ -187,6 +187,14 @@ function LibRPMedia_IconPreviewMixin:OnLeave()
     self:UpdateTooltipVisualization();
 end
 
+function LibRPMedia_IconPreviewMixin:OnClick()
+    self.showIconByFile = not self.showIconByFile;
+    PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+
+    self:UpdateVisualization();
+    self:UpdateTooltipVisualization();
+end
+
 --- Unsets the current icon index used by the widget, clearing its display.
 function LibRPMedia_IconPreviewMixin:ClearIconIndex()
     self:SetIconIndex(nil);
@@ -200,6 +208,7 @@ end
 --- Sets the icon index to be displayed by the widget.
 function LibRPMedia_IconPreviewMixin:SetIconIndex(iconIndex)
     self.iconIndex = iconIndex;
+    self.showIconByFile = false;
 
     self:UpdateVisualization();
     self:UpdateTooltipVisualization();
@@ -222,12 +231,17 @@ function LibRPMedia_IconPreviewMixin:UpdateVisualization()
 
     if self:IsValidIconIndex() then
         -- Icon is valid; query for actual data.
+        iconFile = LibRPMedia:GetIconFileByIndex(self.iconIndex);
         iconName = LibRPMedia:GetIconNameByIndex(self.iconIndex);
         iconType = LibRPMedia:GetIconTypeByIndex(self.iconIndex);
     end
 
     if iconType == LibRPMedia.IconType.Texture then
-        self.Icon:SetTexture([[Interface\Icons\]] .. iconName);
+        if self.showIconByFile then
+            self.Icon:SetTexture(iconFile);
+        else
+            self.Icon:SetTexture([[Interface\Icons\]] .. iconName);
+        end
     elseif iconType == LibRPMedia.IconType.Atlas then
         self.Icon:SetAtlas(iconName, false);
     else
@@ -269,6 +283,12 @@ function LibRPMedia_IconPreviewMixin:UpdateTooltipVisualization()
 
     local typeLineText = strformat("Type: |cffffffff%s|r", iconTypeText);
     GameTooltip_AddNormalLine(GameTooltip, typeLineText, false);
+
+    if iconType == LibRPMedia.IconType.Texture and self.showIconByFile then
+        local displayText = "|c0042b1fe<Showing via File ID>|r";
+        GameTooltip_AddNormalLine(GameTooltip, displayText, false);
+    end
+
     GameTooltip:Show();
 end
 
