@@ -226,6 +226,7 @@ end
 
 --- Updates the UI for the widget based on the current icon index.
 function LibRPMedia_IconPreviewMixin:UpdateVisualization()
+    local iconFile = 0;
     local iconName = [[Interface\Icons\INV_Misc_QuestionMark]];
     local iconType = LibRPMedia.IconType.Texture;
 
