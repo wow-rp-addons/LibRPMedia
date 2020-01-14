@@ -2,7 +2,7 @@
 assert(LibStub, "Missing dependency: LibStub");
 
 local MODULE_MAJOR = "LibRPMedia-1.0";
-local MODULE_MINOR = 6;
+local MODULE_MINOR = 7;
 
 local LibRPMedia = LibStub:NewLibrary(MODULE_MAJOR, MODULE_MINOR);
 if not LibRPMedia then
@@ -168,7 +168,7 @@ function LibRPMedia:GetMusicDataByIndex(musicIndex, target)
     end
 end
 
---- Returns the file ID for a music file based on its sound kit name, or
+--- Returns the file ID for a music file based on its soundkit name, or
 --  file path.
 --
 --  If no match is found, nil is returned.
@@ -248,7 +248,7 @@ end
 --- Returns a string name for a music file based on its index, in the range
 --  1 through GetNumMusicFiles.
 --
---  While a music file may have multiple names in the form of sound kit
+--  While a music file may have multiple names in the form of soundkit
 --  names or file paths, this function will return only one predefined name.
 --
 --  If no name is found, nil is returned.

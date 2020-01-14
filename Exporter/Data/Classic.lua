@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "8a01b815ea1356e7e031aee9e762f99c",
-        version = "1.13.2.31882",
+        bkey = "289e100e9c14605242193aa351ef16f1",
+        version = "1.13.3.32887",
     },
     icons = {
         {
@@ -18817,6 +18817,13 @@ return {
             file = 2056011,
             hash = "bfaff218a1e373a0697d0176ebb92198",
             name = "ui_chat",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 1530081,
+            hash = "cb5192f1cd588fc310a28b94a695434e",
+            name = "vas_charactertransfer",
             size = { h = 64, w = 64 },
             type = 1,
         },
