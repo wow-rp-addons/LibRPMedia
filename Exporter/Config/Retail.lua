@@ -42,6 +42,13 @@ return {
             "^inv_skiff$",
             "^inv_explorergyrocopter$",
             "^inv_camelmount2$",
+            "^inv_aetherbase$", -- Shadowlands prepurchase rewards.
+            "^inv_aetherserpentmount$",
+            "^inv_aetherserpentpet$",
+            "^inv_hearthstone_aether$",
+            "^inv_%a+_armor_oribos_d_01$",
+            "^inv_armor_explorer_d_01_%a+$", -- RaF rewards.
+            "^inv_marmosetpet$",
 
             -- Encrypted icon files (these *may* work with file IDs):
             "^inv_.*encrypted%d+",
