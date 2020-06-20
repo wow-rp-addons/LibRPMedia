@@ -2,7 +2,7 @@ return {
     -- Project token for this game variant.
     project = "WOW_PROJECT_MAINLINE",
     -- Product name for obtaining data from the patch/CDN servers.
-    product = "wowt",
+    product = "wow",
     -- Region to use when connecting to patch/CDN server.
     region = "eu",
 
@@ -49,6 +49,7 @@ return {
             "^inv_%a+_armor_oribos_d_01$",
             "^inv_armor_explorer_d_01_%a+$", -- RaF rewards.
             "^inv_marmosetpet$",
+            "^inv_hand_1h_naga_c_01 %- copy$",
 
             -- Encrypted icon files (these *may* work with file IDs):
             "^inv_.*encrypted%d+",
@@ -58,6 +59,7 @@ return {
         includeAtlases = {
             -- Race icons. Disabled for now until atlas support is set up.
             -- "^raceicon%-",
+            -- "^classicon%-",
         },
     },
 

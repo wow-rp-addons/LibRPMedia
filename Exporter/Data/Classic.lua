@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "289e100e9c14605242193aa351ef16f1",
-        version = "1.13.3.32887",
+        bkey = "77a2fb029d38b05f6325d47e18183429",
+        version = "1.13.4.34835",
     },
     icons = {
         {
@@ -18824,6 +18824,20 @@ return {
             file = 1530081,
             hash = "cb5192f1cd588fc310a28b94a695434e",
             name = "vas_charactertransfer",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 1120721,
+            hash = "9f0fc8ccee7b2a453587edf9f14c6ab6",
+            name = "wow_token01",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 1121394,
+            hash = "18e8f2dae9ef39d89d3305efd69eae49",
+            name = "wow_token02",
             size = { h = 64, w = 64 },
             type = 1,
         },
