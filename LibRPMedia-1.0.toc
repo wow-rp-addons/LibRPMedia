@@ -10,8 +10,6 @@
 ## X-Curse-Project-ID: 324111
 ## X-WoWI-ID: 25019
 
-Libs\LibStub\LibStub.lua
-
 LibRPMedia-1.0.xml
 #@do-not-package@
 Tests\Tests.xml
