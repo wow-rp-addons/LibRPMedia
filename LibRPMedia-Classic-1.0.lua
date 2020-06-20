@@ -17,7 +17,7 @@ if not LibRPMedia then
 end
 
 -- Minor version number of the database.
-local DATABASE_VERSION = 7;
+local DATABASE_VERSION = 8;
 
 -- Icon database.
 local icons = LibRPMedia:NewDatabase("icons", DATABASE_VERSION);
