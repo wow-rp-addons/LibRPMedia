@@ -5,13 +5,12 @@ enable-nolib-creation: no
 license-output: LICENSE
 
 externals:
-    Libs/LibStub:
-        url: svn://svn.wowace.com/wow/libstub/mainline/trunk
-        tag: latest
+  Libs/LibStub:
+    url: svn://svn.wowace.com/wow/libstub/mainline/trunk
+    tag: latest
 
 ignore:
-    - Exporter
-    - Libs/LibStub/tests
-    - Makefile
-    - Tests
-    - UI
+  - Exporter
+  - Libs/LibStub/tests
+  - Makefile
+  - UI
