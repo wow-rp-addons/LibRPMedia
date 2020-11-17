@@ -39,10 +39,13 @@ local function SafeIterator(source, ...)
 end
 
 --- Mixin that allows pagination of content via a bar with page buttons.
-LibRPMedia_PaginationBarMixin = CreateFromMixins(CallbackRegistryBaseMixin);
+LibRPMedia_PaginationBarMixin = CreateFromMixins(CallbackRegistryMixin);
+LibRPMedia_PaginationBarMixin:GenerateCallbackEvents({
+    "OnPageChanged",
+});
 
 function LibRPMedia_PaginationBarMixin:OnLoad()
-    CallbackRegistryBaseMixin.OnLoad(self);
+    CallbackRegistryMixin.OnLoad(self);
 
     -- Initialize with a single page.
     self.pageCount = 1;
@@ -306,7 +309,7 @@ function LibRPMedia_IconContentMixin:OnLoad()
     -- When the page changes, we'll need to update our icons.
     self.PaginationBar:RegisterCallback("OnPageChanged", function()
         self:UpdateIconVisualization();
-    end);
+    end, self);
 
     -- Start by displaying all icons.
     self:SetSearchFilter("");
