@@ -143,9 +143,9 @@ function LibRPMedia_SearchOptionsDropDownMixin:Initialize(level)
     local info = UIDropDownMenu_CreateInfo();
 
     -- Search methods.
-    local method = self:GetParent():GetSearchMethod();
+    local _, method = CallMethodOnNearestAncestor(self, "GetSearchMethod");
     local methodSetter = function(item)
-        self:GetParent():SetSearchMethod(item.value);
+        CallMethodOnNearestAncestor(self, "SetSearchMethod", item.value);
     end
 
     info.hasArrow = false;
@@ -463,7 +463,7 @@ function LibRPMedia_MusicColumnDisplayMixin:OnLoad()
     ColumnDisplayMixin.OnLoad(self);
 
     self.sortingFunction = function(_, columnIndex)
-        self:GetParent():SortByColumnIndex(columnIndex);
+        CallMethodOnNearestAncestor(self, "SortByColumnIndex", columnIndex);
     end
 
     self:LayoutColumns({
@@ -817,9 +817,7 @@ function LibRPMedia_BrowserTabMixin:OnLoad()
 end
 
 function LibRPMedia_BrowserTabMixin:OnClick()
-    local browserFrame = self:GetParent();
-
-    browserFrame:SetTab(self:GetID());
+    CallMethodOnNearestAncestor(self, "SetTab", self:GetID());
     PlaySound(SOUNDKIT.UI_TOYBOX_TABS);
 end
 
