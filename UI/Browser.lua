@@ -135,7 +135,7 @@ end
 LibRPMedia_SearchOptionsDropDownMixin = {};
 
 function LibRPMedia_SearchOptionsDropDownMixin:OnLoad()
-	UIDropDownMenu_Initialize(self, self.Initialize, "MENU");
+    UIDropDownMenu_Initialize(self, self.Initialize, "MENU");
 end
 
 --- Initializes the dropdown, populating it with search options.
@@ -276,7 +276,7 @@ function LibRPMedia_IconPreviewMixin:UpdateTooltipVisualization()
         iconTypeText = "Atlas";
     end
 
-	GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+    GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
     GameTooltip_SetTitle(GameTooltip, iconName, GREEN_FONT_COLOR, false);
 
     local fileLineText = strformat("File: |cffffffff%s|r", iconFile or "nil");
@@ -595,7 +595,7 @@ function LibRPMedia_MusicItemRowMixin:UpdateTooltipVisualization()
     local musicFile = LibRPMedia:GetMusicFileByIndex(musicIndex);
     local musicDuration = LibRPMedia:GetMusicFileDuration(musicFile);
 
-	GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+    GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
     GameTooltip_SetTitle(GameTooltip, self.musicName, GREEN_FONT_COLOR);
 
     if self.musicName ~= musicName then

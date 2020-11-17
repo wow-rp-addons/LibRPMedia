@@ -12,21 +12,21 @@ local tsort = table.sort;
 
 -- Default serializer options.
 local SerializeOptionsDefault = {
-	-- Prefix to prepend to the start of each line. This is appended for
-	-- each key/value pair within a table, as well as the table end (}).
+    -- Prefix to prepend to the start of each line. This is appended for
+    -- each key/value pair within a table, as well as the table end (}).
     linePrefix = "",
-	-- Indentation string, repeated for each level of depth. This is placed
-	-- after LinePrefix on each suitable line.
+    -- Indentation string, repeated for each level of depth. This is placed
+    -- after LinePrefix on each suitable line.
     lineIndent = "",
-	-- Suffix to append to the end of each line. This is applied to the end
-	-- of each table start ({), and any key/value pairs within tables.
+    -- Suffix to append to the end of each line. This is applied to the end
+    -- of each table start ({), and any key/value pairs within tables.
     lineSuffix = "",
-	-- If true, include a trailing comma on the last entry in a table.
+    -- If true, include a trailing comma on the last entry in a table.
     trailingComma = false,
-	-- If true, include spaces around "=" in table assignments.
+    -- If true, include spaces around "=" in table assignments.
     keyValueSpace = false,
-	-- Indentation depth. Defaults to zero. Incremented each time a new table
-	-- is started.
+    -- Indentation depth. Defaults to zero. Incremented each time a new table
+    -- is started.
     indentDepth = 0,
 };
 
