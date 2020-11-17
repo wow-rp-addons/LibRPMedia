@@ -54,7 +54,7 @@ stds.libstub = {
 
 stds.wow = {
     read_globals = {
-        "CallbackRegistryBaseMixin",
+        "CallbackRegistryMixin",
         "CallErrorHandler",
         "CallMethodOnNearestAncestor",
         "Clamp",
