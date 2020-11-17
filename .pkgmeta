@@ -5,14 +5,13 @@ enable-nolib-creation: no
 license-output: LICENSE
 
 externals:
-    Libs/LibStub:
-        url: https://repos.wowace.com/wow/libstub/trunk
-        tag: latest
+  Libs/LibStub:
+    url: https://repos.wowace.com/wow/libstub/trunk
+    tag: latest
 
 ignore:
-    - Exporter
-    - Libs/LibStub/tests
-    - Libs/LibStub/LibStub.toc
-    - Makefile
-    - Tests
-    - UI
+  - Exporter
+  - Libs/LibStub/tests
+  - Libs/LibStub/LibStub.toc
+  - Makefile
+  - UI
