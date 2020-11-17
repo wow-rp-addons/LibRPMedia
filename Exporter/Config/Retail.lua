@@ -2,7 +2,7 @@ return {
     -- Project token for this game variant.
     project = "WOW_PROJECT_MAINLINE",
     -- Product name for obtaining data from the patch/CDN servers.
-    product = "wow",
+    product = "wowt",
     -- Region to use when connecting to patch/CDN server.
     region = "eu",
 
@@ -21,6 +21,7 @@ return {
         -- List of icon name patterns to exclude from the database.
         excludeNames = {
             -- Non-icons.
+            "^7fx_alphamask_glow_teal_blend$",
             "^6ih_ironhorde_stone_base_stonewalledge$",
             "^6or_garrison_",
             "^cape_draenorcraftedcaster_d_",
@@ -50,6 +51,8 @@ return {
             "^inv_armor_explorer_d_01_%a+$", -- RaF rewards.
             "^inv_marmosetpet$",
             "^inv_hand_1h_naga_c_01 %- copy$",
+            "^inv_%a+_armor_faeriedragon_d_01$",
+            "^inv_ratmount2$",
 
             -- Encrypted icon files (these *may* work with file IDs):
             "^inv_.*encrypted%d+",
