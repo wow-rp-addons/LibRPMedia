@@ -951,19 +951,17 @@ if ADDON_NAME == MODULE_MAJOR and UIParent ~= nil then
         whileDead = 1,
     };
 
-    -- Add in a slash command to toggle the browser or re-run tests.
+    -- Add in a slash command to toggle the browser.
     SLASH_LIBRPMEDIA_SLASHCMD1 = "/lrpm";
 
     SlashCmdList["LIBRPMEDIA_SLASHCMD"] = function(cmd)
-        local subcommand, params = string.match(cmd, "^([^%s]*)%s*(.-)$");
+        local subcommand = string.match(cmd, "^([^%s]*)%s*(.-)$");
         if subcommand == "" or subcommand == "browse" then
             if LibRPMedia_BrowserFrame:IsShown() then
                 HideUIPanel(LibRPMedia_BrowserFrame);
             else
                 ShowUIPanel(LibRPMedia_BrowserFrame);
             end
-        elseif subcommand == "test" then
-            LibRPMedia.Test.RunTests(params);
         end
     end
 end

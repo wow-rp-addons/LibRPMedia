@@ -12,6 +12,5 @@
 
 LibRPMedia-1.0.xml
 #@do-not-package@
-Tests\Tests.xml
 UI\Browser.xml
 #@end-do-not-package@

@@ -1,36 +1,46 @@
-name: PR-CI
-
-on: [pull_request]
+---
+name: Pull Request
+on:   pull_request
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-python@v2
+      - uses: actions/setup-ruby@v1
       - uses: actions/checkout@v2
-
-      - name: Install and run Luacheck
-        run: |
-          sudo apt -qqy install lua5.1 luarocks
-          luarocks install --local luacheck
-          /home/runner/.luarocks/bin/luacheck . --no-color -q
-
-      - name: Run Retail tests
-        run: lua5.1 Tests/CLIRunner.lua --project WOW_PROJECT_MAINLINE
-
-      - name: Run Classic tests
-        run: lua5.1 Tests/CLIRunner.lua --project WOW_PROJECT_CLASSIC
-
-      - name: Package local release
-        run: curl -s https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh | bash -s -- -d -z
-
-      - uses: actions/upload-artifact@master
         with:
-          name: LibRPMedia-${{ github.sha }}
+          fetch-depth: 500
+
+      - name: Run Luacheck
+        uses: nebularg/actions-luacheck@v1
+        with:
+          args:     --no-color -q
+          annotate: warning
+
+      - name: Run editorconfig-checker
+        uses: wow-rp-addons/actions-editorconfig-check@v1.0.1
+        with:
+          args:  -no-color
+          files: $(git ls-files '*.lua' '*.xml' '*.toc' ':!:Exporter/casc/' ':!:Exporter/Config/' ':!:Exporter/Data/' ':!:Libs/')
+
+      - name: Create Package
+        uses: BigWigsMods/packager@master
+        with:
+          args: -d -z
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: LibRPMedia-1.0-PR-${{ github.event.number }}
           path: .release/
 
-      - name: Notify on failure
-        if: failure()
+      - name:  Send Webhook Notification
+        if:    failure()
+        run: |
+          git clone https://github.com/DiscordHooks/github-actions-discord-webhook.git webhook
+          bash webhook/send.sh $JOB_STATUS $WEBHOOK_URL
         env:
-          BUILD_STATUS: ${{ job.status }}
-          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-        run: curl -s https://raw.githubusercontent.com/nebularg/actions-discord-webhook/master/send.sh | bash
+          JOB_STATUS:    ${{ job.status }}
+          HOOK_OS_NAME:  ${{ runner.os }}
+          WEBHOOK_URL:   ${{ secrets.WEBHOOK_URL }}
+          WORKFLOW_NAME: ${{ github.workflow }}
