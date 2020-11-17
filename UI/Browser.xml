@@ -1,6 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
 
     <Script file="Browser.lua"/>
 
@@ -29,9 +29,9 @@
                 <Scripts>
                     <OnClick>
                         if not IsShiftKeyDown() then
-                            self:GetParent():PreviousPage();
+                            CallMethodOnNearestAncestor(self, "PreviousPage");
                         else
-                            self:GetParent():AdvancePage(-10);
+                            CallMethodOnNearestAncestor(self, "AdvancePage", -10);
                         end
 
                         PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -50,9 +50,9 @@
                 <Scripts>
                     <OnClick>
                         if not IsShiftKeyDown() then
-                            self:GetParent():NextPage();
+                            CallMethodOnNearestAncestor(self, "NextPage");
                         else
-                            self:GetParent():AdvancePage(10);
+                            CallMethodOnNearestAncestor(self, "AdvancePage", 10);
                         end
 
                         PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -95,7 +95,7 @@
                 </Anchors>
                 <Scripts>
                     <OnTextChanged inherit="prepend">
-                        self:GetParent():UpdateVisualization();
+                        CallMethodOnNearestAncestor(self, "UpdateVisualization");
                     </OnTextChanged>
                 </Scripts>
             </EditBox>
@@ -223,7 +223,7 @@
                 </Anchors>
                 <Scripts>
                     <OnTextChanged inherit="prepend">
-                        self:GetParent():UpdateVisualization();
+                        CallMethodOnNearestAncestor(self, "UpdateVisualization");
                     </OnTextChanged>
                 </Scripts>
             </EditBox>

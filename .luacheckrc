@@ -56,6 +56,7 @@ stds.wow = {
     read_globals = {
         "CallbackRegistryBaseMixin",
         "CallErrorHandler",
+        "CallMethodOnNearestAncestor",
         "Clamp",
         "ColumnDisplayMixin",
         "CreateFramePool",
