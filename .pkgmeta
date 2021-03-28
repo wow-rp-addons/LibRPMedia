@@ -1,17 +1,22 @@
 ---
-package-as: LibRPMedia-1.0
+package-as: LibRPMedia
 enable-nolib-creation: no
 
 license-output: LICENSE
 
 externals:
-  Libs/LibStub:
-    url: https://repos.wowace.com/wow/libstub/trunk
-    tag: latest
+  Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
+  Libs/LibDeflate: https://github.com/SafeteeWoW/LibDeflate
+  Libs/LibSerialize: https://github.com/rossnichols/LibSerialize
 
 ignore:
+  - Libs/*/*.rockspec
+  - Libs/*/*.toc
+  - Libs/*/changelog.*
+  - Libs/*/CHANGELOG.*
+  - Libs/*/docs
+  - Libs/*/examples
+  - Libs/*/README.*
+  - Libs/*/tests
   - Exporter
-  - Libs/LibStub/tests
-  - Libs/LibStub/LibStub.toc
   - Makefile
-  - UI

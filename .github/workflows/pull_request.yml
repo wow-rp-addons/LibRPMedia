@@ -1,6 +1,6 @@
 ---
 name: Pull Request
-on:   pull_request
+on: pull_request
 
 jobs:
   build:
@@ -9,20 +9,18 @@ jobs:
       - uses: actions/setup-python@v2
       - uses: actions/setup-ruby@v1
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 500
 
       - name: Run Luacheck
         uses: nebularg/actions-luacheck@v1
         with:
-          args:     --no-color -q
+          args: --no-color -q
           annotate: warning
 
       - name: Run editorconfig-checker
         uses: wow-rp-addons/actions-editorconfig-check@v1.0.1
         with:
-          args:  -no-color
-          files: $(git ls-files '*.lua' '*.xml' '*.toc' ':!:Exporter/casc/' ':!:Exporter/Config/' ':!:Exporter/Data/' ':!:Libs/')
+          args: -no-color
+          files: $(git ls-files '*.lua' '*.xml' '*.toc' ':!:Exporter/Libs/'' ':!:Exporter/Data/' ':!:Libs/')
 
       - name: Create Package
         uses: BigWigsMods/packager@master
@@ -31,16 +29,16 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: LibRPMedia-1.0-PR-${{ github.event.number }}
+          name: LibRPMedia-PR-${{ github.event.number }}
           path: .release/
 
-      - name:  Send Webhook Notification
-        if:    failure()
+      - name: Send Webhook Notification
+        if: failure()
         run: |
           git clone https://github.com/DiscordHooks/github-actions-discord-webhook.git webhook
           bash webhook/send.sh $JOB_STATUS $WEBHOOK_URL
         env:
-          JOB_STATUS:    ${{ job.status }}
-          HOOK_OS_NAME:  ${{ runner.os }}
-          WEBHOOK_URL:   ${{ secrets.WEBHOOK_URL }}
+          JOB_STATUS: ${{ job.status }}
+          HOOK_OS_NAME: ${{ runner.os }}
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           WORKFLOW_NAME: ${{ github.workflow }}

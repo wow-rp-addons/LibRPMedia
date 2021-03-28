@@ -2,26 +2,16 @@
 local ADDON_NAME = ...;
 
 local LibRPMedia = LibStub and LibStub:GetLibrary("LibRPMedia-1.0", true);
-if not LibRPMedia then
+local LRPM12 = LibStub and LibStub:GetLibrary("LibRPMedia-1.2", true);
+
+if not LibRPMedia or not LRPM12 then
     return;
 end
 
--- Upvalues.
-local ceil = math.ceil;
-local floor = math.floor;
-local strformat = string.format;
-local strgsub = string.gsub;
-local tinsert = table.insert;
-local tsort = table.sort;
-local twipe = table.wipe;
-
---- Returns true if running in the classic client.
 local function IsClassicClient()
     return WOW_PROJECT_ID == WOW_PROJECT_CLASSIC;
 end
 
---- Wraps the given iterator in a protected version which will return nil
---  if an error is raised.
 local function SafeIterator(source, ...)
     local unwrap = function(ok, ...)
         if not ok then
@@ -38,7 +28,6 @@ local function SafeIterator(source, ...)
     return iterator, ...;
 end
 
---- Mixin that allows pagination of content via a bar with page buttons.
 LibRPMedia_PaginationBarMixin = CreateFromMixins(CallbackRegistryMixin);
 LibRPMedia_PaginationBarMixin:GenerateCallbackEvents({
     "OnPageChanged",
@@ -282,10 +271,10 @@ function LibRPMedia_IconPreviewMixin:UpdateTooltipVisualization()
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
     GameTooltip_SetTitle(GameTooltip, iconName, GREEN_FONT_COLOR, false);
 
-    local fileLineText = strformat("File: |cffffffff%s|r", iconFile or "nil");
+    local fileLineText = string.format("File: |cffffffff%s|r", iconFile or "nil");
     GameTooltip_AddNormalLine(GameTooltip, fileLineText, false);
 
-    local typeLineText = strformat("Type: |cffffffff%s|r", iconTypeText);
+    local typeLineText = string.format("Type: |cffffffff%s|r", iconTypeText);
     GameTooltip_AddNormalLine(GameTooltip, typeLineText, false);
 
     if iconType == LibRPMedia.IconType.Texture and self.showIconByFile then
@@ -328,10 +317,10 @@ end
 --- Resets the icons displayed by the frame and re-queries the library
 --  using the given query string and options.
 function LibRPMedia_IconContentMixin:SetSearchFilter(query, options)
-    twipe(self.icons);
+    table.wipe(self.icons);
 
     for iconIndex in SafeIterator(LibRPMedia:FindIcons(query, options)) do
-        tinsert(self.icons, iconIndex);
+        table.insert(self.icons, iconIndex);
     end
 
     self:UpdateVisualization();
@@ -369,8 +358,8 @@ function LibRPMedia_IconContentMixin:CalculateGridSize()
         return 0, 0, 0;
     end
 
-    local columns = floor(gridWidth / iconWidth);
-    local rows = floor(gridHeight / iconHeight);
+    local columns = math.floor(gridWidth / iconWidth);
+    local rows = math.floor(gridHeight / iconHeight);
 
     return columns, rows, columns * rows;
 end
@@ -390,7 +379,7 @@ function LibRPMedia_IconContentMixin:UpdatePageVisualization()
     local pageCount = 0;
 
     if gridCells > 0 then
-        pageCount = ceil(iconCount / gridCells);
+        pageCount = math.ceil(iconCount / gridCells);
     end
 
     self.PaginationBar:SetPageCount(pageCount);
@@ -412,7 +401,7 @@ function LibRPMedia_IconContentMixin:UpdateIconVisualization()
     for gridIndex = 1, gridCells do
         -- Acquire and position an icon widget for this cell.
         local gridColumn = ((gridIndex - 1) % gridColumns) + 1;
-        local gridRow = floor((gridIndex - 1) / gridColumns) + 1;
+        local gridRow = math.floor((gridIndex - 1) / gridColumns) + 1;
 
         local iconWidget = self.iconPool:Acquire();
         local iconParent = self.IconsFrame;
@@ -503,9 +492,9 @@ function LibRPMedia_MusicItemRowMixin:OnClick(button)
             -- The name we might have could be an alias; we need the real one.
             local musicIndex = LibRPMedia:GetMusicIndexByName(self.musicName);
             local musicName = LibRPMedia:GetMusicNameByIndex(musicIndex);
-            musicName = strgsub(musicName, "/", "\\");
+            musicName = string.gsub(musicName, "/", "\\");
 
-            PlayMusic(strformat([[Sound\Music\%s.mp3]], musicName));
+            PlayMusic(string.format([[Sound\Music\%s.mp3]], musicName));
         else
             local musicFile = LibRPMedia:GetMusicFileByName(self.musicName);
             if musicFile then
@@ -615,10 +604,8 @@ function LibRPMedia_MusicItemRowMixin:UpdateTooltipVisualization()
     GameTooltip_AddNormalLine(GameTooltip, indexLine);
     GameTooltip_AddNormalLine(GameTooltip, " ");
 
-    GameTooltip_AddInstructionLine(GameTooltip,
-        "Left-Click: |cffffffffPlay Music");
-    GameTooltip_AddInstructionLine(GameTooltip,
-        "Right-Click: |cffffffffStop Music");
+    GameTooltip_AddInstructionLine(GameTooltip, "Left-Click: |cffffffffPlay Music");
+    GameTooltip_AddInstructionLine(GameTooltip, "Right-Click: |cffffffffStop Music");
 
     GameTooltip:Show();
 end
@@ -662,11 +649,10 @@ end
 --  of the view appropriately.
 function LibRPMedia_MusicScrollMixin:SetSearchFilter(query, options)
     -- Wipe the existing list and re-query the database.
-    twipe(self.music);
+    table.wipe(self.music);
 
-    for _, _, name in SafeIterator(LibRPMedia:FindMusicFiles(query, options))
-    do
-        tinsert(self.music, name);
+    for _, _, name in SafeIterator(LibRPMedia:FindMusicFiles(query, options)) do
+        table.insert(self.music, name);
     end
 
     -- Sort data as needed.
@@ -718,16 +704,16 @@ function LibRPMedia_MusicScrollMixin:SortByColumnIndex(columnIndex, ascending)
             return;
         end
 
-        tinsert(music, { key = musicName, value = value })
+        table.insert(music, { key = musicName, value = value })
     end
 
     -- Sort the table by the values and then re-populate our actual music
     -- name table with the now sorted keys.
-    tsort(music, function(a, b) return predicate(a.value, b.value); end);
+    table.sort(music, function(a, b) return predicate(a.value, b.value); end);
 
-    twipe(self.music);
+    table.wipe(self.music);
     for _, row in ipairs(music) do
-        tinsert(self.music, row.key);
+        table.insert(self.music, row.key);
     end
 
     -- Refresh the UI.
@@ -738,7 +724,7 @@ end
 function LibRPMedia_MusicScrollMixin:UpdateVisualization()
     local musicRowHeight = self.ROW_HEIGHT;
     local musicCount = #self.music;
-    local musicShown = floor(self:GetHeight() / musicRowHeight);
+    local musicShown = math.floor(self:GetHeight() / musicRowHeight);
     local itemOffset = FauxScrollFrame_GetOffset(self);
 
     -- Release all existing widgets.
@@ -770,7 +756,7 @@ function LibRPMedia_MusicScrollMixin:UpdateVisualization()
     end
 
     -- Configure the scrollbar step and update the scrollframe.
-    self.ScrollBar.scrollStep = floor(musicShown / 2) * musicRowHeight;
+    self.ScrollBar.scrollStep = math.floor(musicShown / 2) * musicRowHeight;
     FauxScrollFrame_Update(self, musicCount, musicShown, musicRowHeight,
         nil, nil, nil, nil, nil, nil, true);
 end

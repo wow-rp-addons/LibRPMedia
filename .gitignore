@@ -1,3 +1,5 @@
 # Ignore the database cache and packager output directories.
 .cache
 .release
+*.so
+Exporter/Data

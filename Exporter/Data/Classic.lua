@@ -1,10 +1,11 @@
 return {
     build = {
-        bkey = "cafbd15664682311ca1785c018aaaee7",
-        version = "1.13.6.36611",
+        bkey = "3f54383a77a7c4774335d74b7e8e8f56",
+        version = "1.13.6.37497",
     },
     icons = {
         {
+            id   = 132089,
             file = 132089,
             hash = "76ad858b86c7d9875b2f898553c508ff",
             name = "ability_ambush",
@@ -12,6 +13,7 @@ return {
             type = 1,
         },
         {
+            id   = 132090,
             file = 132090,
             hash = "5f30f8ebfef8455f316a7379e8081e1b",
             name = "ability_backstab",
@@ -19,6 +21,7 @@ return {
             type = 1,
         },
         {
+            id   = 132091,
             file = 132091,
             hash = "0125247231e27d06e5c7c75fa8f0d93a",
             name = "ability_bullrush",
@@ -26,6 +29,7 @@ return {
             type = 1,
         },
         {
+            id   = 132092,
             file = 132092,
             hash = "38ee86fe57fb4af204151c182a72e144",
             name = "ability_cheapshot",
@@ -33,6 +37,7 @@ return {
             type = 1,
         },
         {
+            id   = 132093,
             file = 132093,
             hash = "adbc20ea6fde1b7920cc3ef9d1506854",
             name = "ability_creature_cursed_01",
@@ -40,6 +45,7 @@ return {
             type = 1,
         },
         {
+            id   = 132094,
             file = 132094,
             hash = "3f677c465c9a7ebfe3175c348145f9de",
             name = "ability_creature_cursed_02",
@@ -47,6 +53,7 @@ return {
             type = 1,
         },
         {
+            id   = 132095,
             file = 132095,
             hash = "25b8559af6f8589ef04f6a7bcf3e083d",
             name = "ability_creature_cursed_03",
@@ -54,6 +61,7 @@ return {
             type = 1,
         },
         {
+            id   = 132096,
             file = 132096,
             hash = "a4546c09688868798a3fac6296a07aee",
             name = "ability_creature_cursed_04",
@@ -61,6 +69,7 @@ return {
             type = 1,
         },
         {
+            id   = 132097,
             file = 132097,
             hash = "565a9e6d8499b40c189f3e28c44ec493",
             name = "ability_creature_cursed_05",
@@ -68,6 +77,7 @@ return {
             type = 1,
         },
         {
+            id   = 132098,
             file = 132098,
             hash = "a92d7d61cf5a174b3e0991b1fddf3d00",
             name = "ability_creature_disease_01",
@@ -75,6 +85,7 @@ return {
             type = 1,
         },
         {
+            id   = 132099,
             file = 132099,
             hash = "2dd3fcaac528e465f9935d7883ae6f72",
             name = "ability_creature_disease_02",
@@ -82,6 +93,7 @@ return {
             type = 1,
         },
         {
+            id   = 132100,
             file = 132100,
             hash = "109db885e9407e86de6c6bb3894752b5",
             name = "ability_creature_disease_03",
@@ -89,6 +101,7 @@ return {
             type = 1,
         },
         {
+            id   = 132101,
             file = 132101,
             hash = "46848987c527b9252d635601d81399c8",
             name = "ability_creature_disease_04",
@@ -96,6 +109,7 @@ return {
             type = 1,
         },
         {
+            id   = 132102,
             file = 132102,
             hash = "1550d5abe9c8ae930e69eac6501e38d6",
             name = "ability_creature_disease_05",
@@ -103,6 +117,7 @@ return {
             type = 1,
         },
         {
+            id   = 132103,
             file = 132103,
             hash = "c942c8181fa0671ee208b98488bff821",
             name = "ability_creature_poison_01",
@@ -110,6 +125,7 @@ return {
             type = 1,
         },
         {
+            id   = 132104,
             file = 132104,
             hash = "c3e26804187de72e4ea28bd06792d195",
             name = "ability_creature_poison_02",
@@ -117,6 +133,7 @@ return {
             type = 1,
         },
         {
+            id   = 132105,
             file = 132105,
             hash = "ac1b02aa92e7a0c8759747e1b302ab96",
             name = "ability_creature_poison_03",
@@ -124,6 +141,7 @@ return {
             type = 1,
         },
         {
+            id   = 132106,
             file = 132106,
             hash = "eddb0bfbf124adda25eeb8380c285d27",
             name = "ability_creature_poison_04",
@@ -131,6 +149,7 @@ return {
             type = 1,
         },
         {
+            id   = 132107,
             file = 132107,
             hash = "8ace7ae2d9e5e5961a40491b8ecd2f12",
             name = "ability_creature_poison_05",
@@ -138,6 +157,7 @@ return {
             type = 1,
         },
         {
+            id   = 132108,
             file = 132108,
             hash = "047967dc64ad70e8cf9a628ce3c1c95c",
             name = "ability_creature_poison_06",
@@ -145,6 +165,7 @@ return {
             type = 1,
         },
         {
+            id   = 132109,
             file = 132109,
             hash = "ea0a1d632a05e44b0b827228b08fa3c0",
             name = "ability_criticalstrike",
@@ -152,6 +173,7 @@ return {
             type = 1,
         },
         {
+            id   = 132110,
             file = 132110,
             hash = "8765f1c29a3d799d6fbd83861088e421",
             name = "ability_defend",
@@ -159,6 +181,7 @@ return {
             type = 1,
         },
         {
+            id   = 132111,
             file = 132111,
             hash = "6ec75f3b802f0e2335704010de57960e",
             name = "ability_devour",
@@ -166,6 +189,7 @@ return {
             type = 1,
         },
         {
+            id   = 132112,
             file = 132112,
             hash = "2ed70a70da28bc721e535cdb0997f7b4",
             name = "ability_druid_aquaticform",
@@ -173,6 +197,7 @@ return {
             type = 1,
         },
         {
+            id   = 132114,
             file = 132114,
             hash = "7b2e02eeb9855964e8d1c3a85ebd9a9b",
             name = "ability_druid_bash",
@@ -180,6 +205,7 @@ return {
             type = 1,
         },
         {
+            id   = 132115,
             file = 132115,
             hash = "4fc25115dbb840fc3329404289cae162",
             name = "ability_druid_catform",
@@ -187,6 +213,7 @@ return {
             type = 1,
         },
         {
+            id   = 132116,
             file = 132116,
             hash = "f9e3b542247b72fb30885277bdeafca9",
             name = "ability_druid_catformattack",
@@ -194,6 +221,7 @@ return {
             type = 1,
         },
         {
+            id   = 132117,
             file = 132117,
             hash = "392c96fc9f3fdfcad64ecab52aa3c45e",
             name = "ability_druid_challangingroar",
@@ -201,6 +229,7 @@ return {
             type = 1,
         },
         {
+            id   = 132118,
             file = 132118,
             hash = "d74e5699ff2717d427da7e9656a62272",
             name = "ability_druid_cower",
@@ -208,6 +237,7 @@ return {
             type = 1,
         },
         {
+            id   = 132120,
             file = 132120,
             hash = "8dc1de299571fa2582cd00484a8c3bfc",
             name = "ability_druid_dash",
@@ -215,6 +245,7 @@ return {
             type = 1,
         },
         {
+            id   = 132121,
             file = 132121,
             hash = "ae2284b00c95dc805a7f94d3f85118c6",
             name = "ability_druid_demoralizingroar",
@@ -222,6 +253,7 @@ return {
             type = 1,
         },
         {
+            id   = 132122,
             file = 132122,
             hash = "4af633780642248da86d41a2a222664e",
             name = "ability_druid_disembowel",
@@ -229,6 +261,7 @@ return {
             type = 1,
         },
         {
+            id   = 132126,
             file = 132126,
             hash = "b7fff628b51da6e9a663b8a5ec1b7a82",
             name = "ability_druid_enrage",
@@ -236,6 +269,7 @@ return {
             type = 1,
         },
         {
+            id   = 132127,
             file = 132127,
             hash = "c2f7844efb3f9814b222e4eb87095113",
             name = "ability_druid_ferociousbite",
@@ -243,6 +277,7 @@ return {
             type = 1,
         },
         {
+            id   = 132133,
             file = 132133,
             hash = "b0733f76e5cbd01ed388d72d80547d18",
             name = "ability_druid_mangle",
@@ -250,13 +285,7 @@ return {
             type = 1,
         },
         {
-            file = 132134,
-            hash = "b0733f76e5cbd01ed388d72d80547d18",
-            name = "ability_druid_mangle.tga",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
+            id   = 132136,
             file = 132136,
             hash = "498d77f4ecf06f2e4ed58f5647a2bec8",
             name = "ability_druid_maul",
@@ -264,6 +293,7 @@ return {
             type = 1,
         },
         {
+            id   = 132140,
             file = 132140,
             hash = "054a03eb2f13fc5fda126c6262e2ce29",
             name = "ability_druid_rake",
@@ -271,6 +301,7 @@ return {
             type = 1,
         },
         {
+            id   = 132141,
             file = 132141,
             hash = "ec9c67720acab696d0712848efd17387",
             name = "ability_druid_ravage",
@@ -278,6 +309,7 @@ return {
             type = 1,
         },
         {
+            id   = 132142,
             file = 132142,
             hash = "fda4cb5c927e99d276585bff065aff1d",
             name = "ability_druid_supriseattack",
@@ -285,6 +317,7 @@ return {
             type = 1,
         },
         {
+            id   = 132143,
             file = 132143,
             hash = "0e6fb0b88b86e10fcd8a230aa2685c41",
             name = "ability_druid_swipe",
@@ -292,6 +325,7 @@ return {
             type = 1,
         },
         {
+            id   = 132144,
             file = 132144,
             hash = "b8937c5b97ae48eabaed4287a0cb554a",
             name = "ability_druid_travelform",
@@ -299,6 +333,7 @@ return {
             type = 1,
         },
         {
+            id   = 132147,
             file = 132147,
             hash = "ccd4109b8df8033ed67fc540d53f558b",
             name = "ability_dualwield",
@@ -306,6 +341,7 @@ return {
             type = 1,
         },
         {
+            id   = 132149,
             file = 132149,
             hash = "07ad25f3cb4146ac4e81791daeca1546",
             name = "ability_ensnare",
@@ -313,6 +349,7 @@ return {
             type = 1,
         },
         {
+            id   = 132150,
             file = 132150,
             hash = "84bc16033e6eaeb2b09bbe00bc99b25e",
             name = "ability_eyeoftheowl",
@@ -320,6 +357,7 @@ return {
             type = 1,
         },
         {
+            id   = 132151,
             file = 132151,
             hash = "50b87601692ef2062283672e0172df41",
             name = "ability_fiegndead",
@@ -327,6 +365,7 @@ return {
             type = 1,
         },
         {
+            id   = 132152,
             file = 132152,
             hash = "234a11f2ba37ec39f0ae56f689c9f4ea",
             name = "ability_ghoulfrenzy",
@@ -334,6 +373,7 @@ return {
             type = 1,
         },
         {
+            id   = 132153,
             file = 132153,
             hash = "8ae9ab20a2dcdbde878a0b9dddfae7c0",
             name = "ability_golemstormbolt",
@@ -341,6 +381,7 @@ return {
             type = 1,
         },
         {
+            id   = 132154,
             file = 132154,
             hash = "7a17e2ae6a6cfa7da0ca5e250e319735",
             name = "ability_golemthunderclap",
@@ -348,6 +389,7 @@ return {
             type = 1,
         },
         {
+            id   = 132155,
             file = 132155,
             hash = "940740cd3bf45bad0eaf766b30241a4e",
             name = "ability_gouge",
@@ -355,6 +397,7 @@ return {
             type = 1,
         },
         {
+            id   = 132156,
             file = 132156,
             hash = "87952adf0af7246760659680971a7524",
             name = "ability_hibernation",
@@ -362,6 +405,7 @@ return {
             type = 1,
         },
         {
+            id   = 132157,
             file = 132157,
             hash = "4193bce440ccb66101b97779af02461e",
             name = "ability_hunter_aimedshot",
@@ -369,6 +413,7 @@ return {
             type = 1,
         },
         {
+            id   = 132159,
             file = 132159,
             hash = "33659abecb36d366939437301410a385",
             name = "ability_hunter_aspectofthemonkey",
@@ -376,6 +421,7 @@ return {
             type = 1,
         },
         {
+            id   = 132161,
             file = 132161,
             hash = "6c2f12b94b850559da700f30ce2ea4dd",
             name = "ability_hunter_beastcall",
@@ -383,6 +429,7 @@ return {
             type = 1,
         },
         {
+            id   = 132162,
             file = 132162,
             hash = "dff1094bb246803da7eee1e00f85eaaa",
             name = "ability_hunter_beastcall02",
@@ -390,6 +437,7 @@ return {
             type = 1,
         },
         {
+            id   = 132163,
             file = 132163,
             hash = "3d2de1b1db59f3530a1edab0f548b7ca",
             name = "ability_hunter_beastsoothe",
@@ -397,6 +445,7 @@ return {
             type = 1,
         },
         {
+            id   = 132164,
             file = 132164,
             hash = "120c2f08a2a38ea7201a20f80bfa13c0",
             name = "ability_hunter_beasttaming",
@@ -404,6 +453,7 @@ return {
             type = 1,
         },
         {
+            id   = 132165,
             file = 132165,
             hash = "d0a479962c2f1c9dae551a02d8be192f",
             name = "ability_hunter_beasttraining",
@@ -411,6 +461,7 @@ return {
             type = 1,
         },
         {
+            id   = 132169,
             file = 132169,
             hash = "fa1c1362ac6a13a6987dffb44148ba54",
             name = "ability_hunter_criticalshot",
@@ -418,6 +469,7 @@ return {
             type = 1,
         },
         {
+            id   = 132172,
             file = 132172,
             hash = "9e93e103ab093a94f53f16e8335e6990",
             name = "ability_hunter_eagleeye",
@@ -425,6 +477,7 @@ return {
             type = 1,
         },
         {
+            id   = 132175,
             file = 132175,
             hash = "e544a3e01031a365152611d4c1bf9649",
             name = "ability_hunter_harass",
@@ -432,6 +485,7 @@ return {
             type = 1,
         },
         {
+            id   = 132179,
             file = 132179,
             hash = "30812c6e3a1e0a96cc548ade07818677",
             name = "ability_hunter_mendpet",
@@ -439,6 +493,7 @@ return {
             type = 1,
         },
         {
+            id   = 132181,
             file = 132181,
             hash = "fd3f7a0b5b2db062ece7a28ec48b97e8",
             name = "ability_hunter_pathfinding",
@@ -446,6 +501,7 @@ return {
             type = 1,
         },
         {
+            id   = 132182,
             file = 132182,
             hash = "ae7336691113f4c5d849236f8279d001",
             name = "ability_hunter_pet_bat",
@@ -453,6 +509,7 @@ return {
             type = 1,
         },
         {
+            id   = 132183,
             file = 132183,
             hash = "e04c0e9ca52d628460b0a6c5974bba2f",
             name = "ability_hunter_pet_bear",
@@ -460,6 +517,7 @@ return {
             type = 1,
         },
         {
+            id   = 132184,
             file = 132184,
             hash = "80a6cd2c2e4db0efb0cd8804b17b08b2",
             name = "ability_hunter_pet_boar",
@@ -467,6 +525,7 @@ return {
             type = 1,
         },
         {
+            id   = 132185,
             file = 132185,
             hash = "9212576a6ceac7fb1d0867a5b92fe8c0",
             name = "ability_hunter_pet_cat",
@@ -474,6 +533,7 @@ return {
             type = 1,
         },
         {
+            id   = 132186,
             file = 132186,
             hash = "91532e7f4865477e4b0ea19bb64a5e95",
             name = "ability_hunter_pet_crab",
@@ -481,6 +541,7 @@ return {
             type = 1,
         },
         {
+            id   = 132187,
             file = 132187,
             hash = "3a82a3321ac194915c51d7c4c4fe7e98",
             name = "ability_hunter_pet_crocolisk",
@@ -488,6 +549,7 @@ return {
             type = 1,
         },
         {
+            id   = 132189,
             file = 132189,
             hash = "4d2efec15d481420192b8d0d2e78dd91",
             name = "ability_hunter_pet_gorilla",
@@ -495,6 +557,7 @@ return {
             type = 1,
         },
         {
+            id   = 132190,
             file = 132190,
             hash = "2cf8bcf61e2ca0468ba557abbf18d8dc",
             name = "ability_hunter_pet_hyena",
@@ -502,6 +565,7 @@ return {
             type = 1,
         },
         {
+            id   = 132192,
             file = 132192,
             hash = "9093091656448ddd21cdfca13e80eb19",
             name = "ability_hunter_pet_owl",
@@ -509,6 +573,7 @@ return {
             type = 1,
         },
         {
+            id   = 132193,
             file = 132193,
             hash = "951a784054b62944f79984122222a9fa",
             name = "ability_hunter_pet_raptor",
@@ -516,6 +581,7 @@ return {
             type = 1,
         },
         {
+            id   = 132195,
             file = 132195,
             hash = "a8e89e7e9d53c7b42431d67602639fc5",
             name = "ability_hunter_pet_scorpid",
@@ -523,6 +589,7 @@ return {
             type = 1,
         },
         {
+            id   = 132196,
             file = 132196,
             hash = "058234c43a47531e78bf72ddf24555b3",
             name = "ability_hunter_pet_spider",
@@ -530,6 +597,7 @@ return {
             type = 1,
         },
         {
+            id   = 132198,
             file = 132198,
             hash = "5f69a157317c4ad51ce6151f9f7909b4",
             name = "ability_hunter_pet_tallstrider",
@@ -537,6 +605,7 @@ return {
             type = 1,
         },
         {
+            id   = 132199,
             file = 132199,
             hash = "b9d3fc2e3e939b550bab628408a78c61",
             name = "ability_hunter_pet_turtle",
@@ -544,6 +613,7 @@ return {
             type = 1,
         },
         {
+            id   = 132200,
             file = 132200,
             hash = "3c2009b0f004c47b6afd22cbeff323bd",
             name = "ability_hunter_pet_vulture",
@@ -551,6 +621,7 @@ return {
             type = 1,
         },
         {
+            id   = 132202,
             file = 132202,
             hash = "85ba53f381406466538b2db08a9bc478",
             name = "ability_hunter_pet_windserpent",
@@ -558,6 +629,7 @@ return {
             type = 1,
         },
         {
+            id   = 132203,
             file = 132203,
             hash = "e55ca9d020398ac50c36ee53fdb9a82a",
             name = "ability_hunter_pet_wolf",
@@ -565,6 +637,7 @@ return {
             type = 1,
         },
         {
+            id   = 132204,
             file = 132204,
             hash = "5c2a32e22850bea4fbc4068e573b871e",
             name = "ability_hunter_quickshot",
@@ -572,6 +645,7 @@ return {
             type = 1,
         },
         {
+            id   = 132208,
             file = 132208,
             hash = "9eb1b7829aeb46d2d71d200430da8862",
             name = "ability_hunter_runningshot",
@@ -579,6 +653,7 @@ return {
             type = 1,
         },
         {
+            id   = 132212,
             file = 132212,
             hash = "0f5bdc798b45085588f2e33cbf229d90",
             name = "ability_hunter_snipershot",
@@ -586,6 +661,7 @@ return {
             type = 1,
         },
         {
+            id   = 132215,
             file = 132215,
             hash = "39edfb8ab5e149564fed0a9cd8e369bd",
             name = "ability_hunter_swiftstrike",
@@ -593,6 +669,7 @@ return {
             type = 1,
         },
         {
+            id   = 132218,
             file = 132218,
             hash = "1d00454e37ed91979a7dbc53c5f6c8f5",
             name = "ability_impalingbolt",
@@ -600,6 +677,7 @@ return {
             type = 1,
         },
         {
+            id   = 132219,
             file = 132219,
             hash = "2c84d130c0fc206419f50d64cd6e5bde",
             name = "ability_kick",
@@ -607,6 +685,7 @@ return {
             type = 1,
         },
         {
+            id   = 132222,
             file = 132222,
             hash = "c57848da2017c55abeabb4db43d3d689",
             name = "ability_marksmanship",
@@ -614,6 +693,7 @@ return {
             type = 1,
         },
         {
+            id   = 132223,
             file = 132223,
             hash = "97eab794fc684907a5cb09d04591d867",
             name = "ability_meleedamage",
@@ -621,6 +701,7 @@ return {
             type = 1,
         },
         {
+            id   = 132224,
             file = 132224,
             hash = "1ee954b297aa1488125467e4089f0ddb",
             name = "ability_mount_blackdirewolf",
@@ -628,6 +709,7 @@ return {
             type = 1,
         },
         {
+            id   = 132225,
             file = 132225,
             hash = "6caa1718b282964b8c722e81daeaa7b8",
             name = "ability_mount_blackpanther",
@@ -635,6 +717,7 @@ return {
             type = 1,
         },
         {
+            id   = 132226,
             file = 132226,
             hash = "e1c8b83b0b7cef75f03ca03579b4544a",
             name = "ability_mount_charger",
@@ -642,6 +725,7 @@ return {
             type = 1,
         },
         {
+            id   = 132238,
             file = 132238,
             hash = "917772b5c9e8b68b5c7f790882448b23",
             name = "ability_mount_dreadsteed",
@@ -649,6 +733,7 @@ return {
             type = 1,
         },
         {
+            id   = 132242,
             file = 132242,
             hash = "54e455b616cfc2a394138ca5fa2bf1c9",
             name = "ability_mount_jungletiger",
@@ -656,6 +741,7 @@ return {
             type = 1,
         },
         {
+            id   = 132243,
             file = 132243,
             hash = "625f5d1b1958c31b0a2a3c491715a25a",
             name = "ability_mount_kodo_01",
@@ -663,6 +749,7 @@ return {
             type = 1,
         },
         {
+            id   = 132244,
             file = 132244,
             hash = "91b17670663f6a992b8ef0fce850e8ad",
             name = "ability_mount_kodo_02",
@@ -670,6 +757,7 @@ return {
             type = 1,
         },
         {
+            id   = 132245,
             file = 132245,
             hash = "5330c22492d8277549bd2ccfa6be36b0",
             name = "ability_mount_kodo_03",
@@ -677,6 +765,7 @@ return {
             type = 1,
         },
         {
+            id   = 132247,
             file = 132247,
             hash = "f4e064a9c18e4e3563a1683107386b1d",
             name = "ability_mount_mechastrider",
@@ -684,6 +773,7 @@ return {
             type = 1,
         },
         {
+            id   = 132248,
             file = 132248,
             hash = "ba281762a582acdfae70f5db8eb68e50",
             name = "ability_mount_mountainram",
@@ -691,6 +781,7 @@ return {
             type = 1,
         },
         {
+            id   = 132251,
             file = 132251,
             hash = "c1b0119a089449216c280daab990e511",
             name = "ability_mount_nightmarehorse",
@@ -698,6 +789,7 @@ return {
             type = 1,
         },
         {
+            id   = 132252,
             file = 132252,
             hash = "d3a2a867984bc40c207f6bb75501f1e7",
             name = "ability_mount_pinktiger",
@@ -705,6 +797,7 @@ return {
             type = 1,
         },
         {
+            id   = 132253,
             file = 132253,
             hash = "5cf77cefe1b2468d5ea456011c4d6036",
             name = "ability_mount_raptor",
@@ -712,6 +805,7 @@ return {
             type = 1,
         },
         {
+            id   = 132261,
             file = 132261,
             hash = "86c9f6fce9ed691620467df6a8afc7c5",
             name = "ability_mount_ridinghorse",
@@ -719,6 +813,7 @@ return {
             type = 1,
         },
         {
+            id   = 132264,
             file = 132264,
             hash = "86eb890b31aaca8ffdbcc23bd40e50e5",
             name = "ability_mount_undeadhorse",
@@ -726,6 +821,7 @@ return {
             type = 1,
         },
         {
+            id   = 132266,
             file = 132266,
             hash = "b059733278491b6ffc2001f5e9d181c1",
             name = "ability_mount_whitedirewolf",
@@ -733,6 +829,7 @@ return {
             type = 1,
         },
         {
+            id   = 132267,
             file = 132267,
             hash = "bc136d53c01e3af379addbcb03ced7ca",
             name = "ability_mount_whitetiger",
@@ -740,6 +837,7 @@ return {
             type = 1,
         },
         {
+            id   = 132269,
             file = 132269,
             hash = "ab7978922f023f9d9dc45308b6b9ae42",
             name = "ability_parry",
@@ -747,6 +845,7 @@ return {
             type = 1,
         },
         {
+            id   = 132270,
             file = 132270,
             hash = "c569153dd9bca98cac98de9e6f300c0d",
             name = "ability_physical_taunt",
@@ -754,6 +853,7 @@ return {
             type = 1,
         },
         {
+            id   = 132271,
             file = 132271,
             hash = "39f07d117e4c16950d239f3cd17d9dbf",
             name = "ability_piercedamage",
@@ -761,6 +861,7 @@ return {
             type = 1,
         },
         {
+            id   = 132272,
             file = 132272,
             hash = "aa8b10b3e25b0f026fc92f343f08d818",
             name = "ability_poisonarrow",
@@ -768,6 +869,7 @@ return {
             type = 1,
         },
         {
+            id   = 132273,
             file = 132273,
             hash = "49d8ef9a335f9b784a40d1e66a37d3e8",
             name = "ability_poisons",
@@ -775,6 +877,7 @@ return {
             type = 1,
         },
         {
+            id   = 132274,
             file = 132274,
             hash = "0a2f41e0183ab0c26a57680edf39ea34",
             name = "ability_poisonsting",
@@ -782,6 +885,7 @@ return {
             type = 1,
         },
         {
+            id   = 132275,
             file = 132275,
             hash = "0ce39f6f6368e113773ccd3d450f06a1",
             name = "ability_racial_avatar",
@@ -789,6 +893,7 @@ return {
             type = 1,
         },
         {
+            id   = 132276,
             file = 132276,
             hash = "5e049eb703ebb54fe69fbd67c5f6e14f",
             name = "ability_racial_bearform",
@@ -796,6 +901,7 @@ return {
             type = 1,
         },
         {
+            id   = 132277,
             file = 132277,
             hash = "da33d90754f0d26af7f456280667bdb6",
             name = "ability_racial_bloodrage",
@@ -803,6 +909,7 @@ return {
             type = 1,
         },
         {
+            id   = 132278,
             file = 132278,
             hash = "a696b9762e52cee857cc1b97e8994eb2",
             name = "ability_racial_cannibalize",
@@ -810,6 +917,7 @@ return {
             type = 1,
         },
         {
+            id   = 132279,
             file = 132279,
             hash = "8fd036eb31d79d5be7e996eb6bc1327f",
             name = "ability_racial_shadowmeld",
@@ -817,6 +925,7 @@ return {
             type = 1,
         },
         {
+            id   = 132280,
             file = 132280,
             hash = "b04e01a97a216fd1fc32a7e3c11d39ef",
             name = "ability_racial_ultravision",
@@ -824,6 +933,7 @@ return {
             type = 1,
         },
         {
+            id   = 132281,
             file = 132281,
             hash = "5246b38854bb65f6c30b130b664a2d2c",
             name = "ability_repair",
@@ -831,6 +941,7 @@ return {
             type = 1,
         },
         {
+            id   = 132282,
             file = 132282,
             hash = "ded45d57f3486d34c9ec6376cd274b2c",
             name = "ability_rogue_ambush",
@@ -838,6 +949,7 @@ return {
             type = 1,
         },
         {
+            id   = 132288,
             file = 132288,
             hash = "2920af42f102c1a20179baf418a89112",
             name = "ability_rogue_disguise",
@@ -845,6 +957,7 @@ return {
             type = 1,
         },
         {
+            id   = 132289,
             file = 132289,
             hash = "8aaba54b503446bb797282cd3dc2f40e",
             name = "ability_rogue_distract",
@@ -852,6 +965,7 @@ return {
             type = 1,
         },
         {
+            id   = 132290,
             file = 132290,
             hash = "aec21b0c989b8ecc0334c5ffc52cde58",
             name = "ability_rogue_dualweild",
@@ -859,6 +973,7 @@ return {
             type = 1,
         },
         {
+            id   = 132292,
             file = 132292,
             hash = "7716dad4b6c3add862fcfe410e1f9b33",
             name = "ability_rogue_eviscerate",
@@ -866,6 +981,7 @@ return {
             type = 1,
         },
         {
+            id   = 132293,
             file = 132293,
             hash = "3de2e3d46a438fcc6cb536942409a013",
             name = "ability_rogue_feigndeath",
@@ -873,6 +989,7 @@ return {
             type = 1,
         },
         {
+            id   = 132294,
             file = 132294,
             hash = "cf64f302677668ccfbe39036040393c9",
             name = "ability_rogue_feint",
@@ -880,6 +997,7 @@ return {
             type = 1,
         },
         {
+            id   = 132297,
             file = 132297,
             hash = "9fdd28392b13be272116a87627ae7ee1",
             name = "ability_rogue_garrote",
@@ -887,6 +1005,7 @@ return {
             type = 1,
         },
         {
+            id   = 132298,
             file = 132298,
             hash = "927f03ea2834806f75d7fffaa388ac97",
             name = "ability_rogue_kidneyshot",
@@ -894,6 +1013,7 @@ return {
             type = 1,
         },
         {
+            id   = 132302,
             file = 132302,
             hash = "85dc3bdde704671e4c654179811115ec",
             name = "ability_rogue_rupture",
@@ -901,6 +1021,7 @@ return {
             type = 1,
         },
         {
+            id   = 132306,
             file = 132306,
             hash = "f2670b4505d5b012b61292acb45b6b09",
             name = "ability_rogue_slicedice",
@@ -908,6 +1029,7 @@ return {
             type = 1,
         },
         {
+            id   = 132307,
             file = 132307,
             hash = "3c7dec567c27b5fa6604ebca34013514",
             name = "ability_rogue_sprint",
@@ -915,6 +1037,7 @@ return {
             type = 1,
         },
         {
+            id   = 132309,
             file = 132309,
             hash = "3bc57a7e07a07e928427e809d6f3d1f7",
             name = "ability_rogue_trip",
@@ -922,6 +1045,7 @@ return {
             type = 1,
         },
         {
+            id   = 132310,
             file = 132310,
             hash = "a974be5eaca75929598b18ec1a785afa",
             name = "ability_sap",
@@ -929,6 +1053,7 @@ return {
             type = 1,
         },
         {
+            id   = 132311,
             file = 132311,
             hash = "4a9b5ce665020667f3823a425b3b842a",
             name = "ability_seal",
@@ -936,6 +1061,7 @@ return {
             type = 1,
         },
         {
+            id   = 132312,
             file = 132312,
             hash = "1326c015e45f19d2194882f36f30f1c4",
             name = "ability_searingarrow",
@@ -943,6 +1069,7 @@ return {
             type = 1,
         },
         {
+            id   = 132316,
             file = 132316,
             hash = "c209bb880ebb07f85c39013b984016b9",
             name = "ability_shockwave",
@@ -950,6 +1077,7 @@ return {
             type = 1,
         },
         {
+            id   = 132317,
             file = 132317,
             hash = "31a05f92f48e85f6314f85ede7c4602e",
             name = "ability_shootwand",
@@ -957,6 +1085,7 @@ return {
             type = 1,
         },
         {
+            id   = 132318,
             file = 132318,
             hash = "85ac5b1503d2219a931623e5512f6cc0",
             name = "ability_smash",
@@ -964,6 +1093,7 @@ return {
             type = 1,
         },
         {
+            id   = 132319,
             file = 132319,
             hash = "e9a5327fcfdd17bb9ef57c5fe8874bf6",
             name = "ability_spy",
@@ -971,6 +1101,7 @@ return {
             type = 1,
         },
         {
+            id   = 132320,
             file = 132320,
             hash = "516d55f0d849e948aa6ba954de800caa",
             name = "ability_stealth",
@@ -978,6 +1109,7 @@ return {
             type = 1,
         },
         {
+            id   = 132321,
             file = 132321,
             hash = "284010e5775122059ed8f25b4490cef4",
             name = "ability_steelmelee",
@@ -985,6 +1117,7 @@ return {
             type = 1,
         },
         {
+            id   = 132322,
             file = 132322,
             hash = "9f7adc1cea5ba70f001012a78e297096",
             name = "ability_suffocate",
@@ -992,6 +1125,7 @@ return {
             type = 1,
         },
         {
+            id   = 132323,
             file = 132323,
             hash = "8aed2ac95d6f4d6083bc9c4b6fbfabac",
             name = "ability_theblackarrow",
@@ -999,6 +1133,7 @@ return {
             type = 1,
         },
         {
+            id   = 132324,
             file = 132324,
             hash = "50a8f9cb6732d21377484ccf91377b85",
             name = "ability_throw",
@@ -1006,6 +1141,7 @@ return {
             type = 1,
         },
         {
+            id   = 132325,
             file = 132325,
             hash = "db5aeacf3eedd9efa23e13877c20757d",
             name = "ability_thunderbolt",
@@ -1013,6 +1149,7 @@ return {
             type = 1,
         },
         {
+            id   = 132326,
             file = 132326,
             hash = "99e4a4d5118bfa3c0088f3e6a06b27a9",
             name = "ability_thunderclap",
@@ -1020,6 +1157,7 @@ return {
             type = 1,
         },
         {
+            id   = 132327,
             file = 132327,
             hash = "9425d0c322d7041be6567513a846c0d7",
             name = "ability_townwatch",
@@ -1027,6 +1165,7 @@ return {
             type = 1,
         },
         {
+            id   = 132328,
             file = 132328,
             hash = "1342c3479f9cafb5de5610729c488f21",
             name = "ability_tracking",
@@ -1034,6 +1173,7 @@ return {
             type = 1,
         },
         {
+            id   = 132329,
             file = 132329,
             hash = "5c81aebbed0cb2a9c76724f6e752af55",
             name = "ability_trueshot",
@@ -1041,6 +1181,7 @@ return {
             type = 1,
         },
         {
+            id   = 132330,
             file = 132330,
             hash = "b1e65c47c9961ee7633c2701b2c92f89",
             name = "ability_upgrademoonglaive",
@@ -1048,6 +1189,7 @@ return {
             type = 1,
         },
         {
+            id   = 132331,
             file = 132331,
             hash = "f57c544240d0229a5e8b6a38577435c9",
             name = "ability_vanish",
@@ -1055,6 +1197,7 @@ return {
             type = 1,
         },
         {
+            id   = 132333,
             file = 132333,
             hash = "3eb0e2de3aefb3ef767f841e6b6bc66d",
             name = "ability_warrior_battleshout",
@@ -1062,6 +1205,7 @@ return {
             type = 1,
         },
         {
+            id   = 132336,
             file = 132336,
             hash = "c7034fa4f23547a70a69cdfe8627338f",
             name = "ability_warrior_challange",
@@ -1069,6 +1213,7 @@ return {
             type = 1,
         },
         {
+            id   = 132337,
             file = 132337,
             hash = "2528f63f3cdf73e1999e86ab2127965c",
             name = "ability_warrior_charge",
@@ -1076,6 +1221,7 @@ return {
             type = 1,
         },
         {
+            id   = 132338,
             file = 132338,
             hash = "3bb63bb73c19c7f51380305ab5d0b998",
             name = "ability_warrior_cleave",
@@ -1083,6 +1229,7 @@ return {
             type = 1,
         },
         {
+            id   = 132340,
             file = 132340,
             hash = "e67f8d0518c6bc38c958f9f23ee4cb19",
             name = "ability_warrior_decisivestrike",
@@ -1090,6 +1237,7 @@ return {
             type = 1,
         },
         {
+            id   = 132341,
             file = 132341,
             hash = "6f3dd74f7a567ae9c1b00944d2404dcb",
             name = "ability_warrior_defensivestance",
@@ -1097,6 +1245,7 @@ return {
             type = 1,
         },
         {
+            id   = 132343,
             file = 132343,
             hash = "e2fe10a6c6ff29af7250f61580d82206",
             name = "ability_warrior_disarm",
@@ -1104,6 +1253,7 @@ return {
             type = 1,
         },
         {
+            id   = 132347,
             file = 132347,
             hash = "79837f6d837a80790b60cc55e18c8f16",
             name = "ability_warrior_innerrage",
@@ -1111,6 +1261,7 @@ return {
             type = 1,
         },
         {
+            id   = 132349,
             file = 132349,
             hash = "ac6c701eb777e22d477dc328e2ba2375",
             name = "ability_warrior_offensivestance",
@@ -1118,6 +1269,7 @@ return {
             type = 1,
         },
         {
+            id   = 132350,
             file = 132350,
             hash = "6b08de1ac3a6f88d59f5b9d4b8ba2de4",
             name = "ability_warrior_punishingblow",
@@ -1125,6 +1277,7 @@ return {
             type = 1,
         },
         {
+            id   = 132353,
             file = 132353,
             hash = "f4e14d59e4da483d26a66997777a51b1",
             name = "ability_warrior_revenge",
@@ -1132,6 +1285,7 @@ return {
             type = 1,
         },
         {
+            id   = 132354,
             file = 132354,
             hash = "5fb49c2c7a654a74a2bc1e505c87f2f3",
             name = "ability_warrior_riposte",
@@ -1139,6 +1293,7 @@ return {
             type = 1,
         },
         {
+            id   = 132355,
             file = 132355,
             hash = "8ab43c84713cf54857c80cac1f5953b3",
             name = "ability_warrior_savageblow",
@@ -1146,6 +1301,7 @@ return {
             type = 1,
         },
         {
+            id   = 132357,
             file = 132357,
             hash = "250afb15a562708d4bc007aa477aae67",
             name = "ability_warrior_shieldbash",
@@ -1153,6 +1309,7 @@ return {
             type = 1,
         },
         {
+            id   = 132362,
             file = 132362,
             hash = "34af5cd745b248da2b1a3383c26ac5e3",
             name = "ability_warrior_shieldwall",
@@ -1160,6 +1317,7 @@ return {
             type = 1,
         },
         {
+            id   = 132363,
             file = 132363,
             hash = "933a206225dcc202aceaa7cf2da92fa6",
             name = "ability_warrior_sunder",
@@ -1167,6 +1325,7 @@ return {
             type = 1,
         },
         {
+            id   = 132366,
             file = 132366,
             hash = "bcea155c10d5e56ece44fa7d88ad034a",
             name = "ability_warrior_warcry",
@@ -1174,6 +1333,7 @@ return {
             type = 1,
         },
         {
+            id   = 132368,
             file = 132368,
             hash = "7cc94705699cf5a2568cda46645e7709",
             name = "ability_warstomp",
@@ -1181,6 +1341,7 @@ return {
             type = 1,
         },
         {
+            id   = 132369,
             file = 132369,
             hash = "0039815df49febda2537ea28adfdb32d",
             name = "ability_whirlwind",
@@ -1188,111 +1349,7 @@ return {
             type = 1,
         },
         {
-            file = 236444,
-            hash = "f1b9afcb827dd2dcaf6425930d8f9c2b",
-            name = "achievement_character_dwarf_male",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 236449,
-            hash = "c75dae0bf3380aa7ea5dc6facaf94679",
-            name = "achievement_character_nightelf_female",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 236456,
-            hash = "e09da4c53aa432cea1dce57ad5964096",
-            name = "achievement_character_troll_male",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 464820,
-            hash = "08766a9dd366031ea8d48093bb40a926",
-            name = "achievement_general_stayclassy",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 442272,
-            hash = "383e5cce8e755565b32d1f51dbddcfb3",
-            name = "achievement_guildperk_everybodysfriend",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 413583,
-            hash = "8ebec1a8a93edfa4f1f5e9f16b52c736",
-            name = "achievement_guildperk_havegroup willtravel",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 625999,
-            hash = "8825f88cd07d0bd13acfad1151241323",
-            name = "classicon_druid",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626000,
-            hash = "381f4fa41e171bc7088db67cbb4bb1a9",
-            name = "classicon_hunter",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626001,
-            hash = "f795af48b5fb75a5222a9c830f245513",
-            name = "classicon_mage",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626003,
-            hash = "bada413372556337b425f34a49e58012",
-            name = "classicon_paladin",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626004,
-            hash = "84a51c556a7a4c1cfe20e4d18e2fbe9a",
-            name = "classicon_priest",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626005,
-            hash = "3bfa7ca86bd6d5b963f825f570988808",
-            name = "classicon_rogue",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626006,
-            hash = "f1ebf32ddd2b7bd2a0ae4898e93ff7a3",
-            name = "classicon_shaman",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626007,
-            hash = "a888d617cd85828ac637fe5dc55e807f",
-            name = "classicon_warlock",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            file = 626008,
-            hash = "deaed333a393b37b784040561594e02f",
-            name = "classicon_warrior",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
+            id   = 132373,
             file = 132373,
             hash = "a182a9385d576d5a1e6911b9f7e87cbb",
             name = "inv-sword_53",
@@ -1300,6 +1357,7 @@ return {
             type = 1,
         },
         {
+            id   = 132381,
             file = 132381,
             hash = "7ecbf60699b8494cd290ff7313d6c122",
             name = "inv_ammo_arrow_01",
@@ -1307,6 +1365,7 @@ return {
             type = 1,
         },
         {
+            id   = 132382,
             file = 132382,
             hash = "050b5f28eb88a61555814243b5dec561",
             name = "inv_ammo_arrow_02",
@@ -1314,6 +1373,7 @@ return {
             type = 1,
         },
         {
+            id   = 132383,
             file = 132383,
             hash = "acaf2c06476ad3a097d36a62f52a4d80",
             name = "inv_ammo_bullet_01",
@@ -1321,6 +1381,7 @@ return {
             type = 1,
         },
         {
+            id   = 132384,
             file = 132384,
             hash = "58f4b38c9553b0821f587cc5022117ad",
             name = "inv_ammo_bullet_02",
@@ -1328,6 +1389,7 @@ return {
             type = 1,
         },
         {
+            id   = 132385,
             file = 132385,
             hash = "dccf6f8ce046cefec45ff7673b51edd2",
             name = "inv_ammo_bullet_03",
@@ -1335,6 +1397,7 @@ return {
             type = 1,
         },
         {
+            id   = 132386,
             file = 132386,
             hash = "4a00af0ac92bcfcc6d05d74caed71767",
             name = "inv_ammo_firetar",
@@ -1342,6 +1405,7 @@ return {
             type = 1,
         },
         {
+            id   = 132387,
             file = 132387,
             hash = "b58de092616afca8860a3da6162e7809",
             name = "inv_ammo_snowball",
@@ -1349,6 +1413,7 @@ return {
             type = 1,
         },
         {
+            id   = 132388,
             file = 132388,
             hash = "7627530726bef087efadb1268a4f40af",
             name = "inv_armor_helm_plate_naxxramas_raidwarrior_c_01",
@@ -1356,6 +1421,7 @@ return {
             type = 1,
         },
         {
+            id   = 132389,
             file = 132389,
             hash = "655254759e4149bcc0879eba4085b32c",
             name = "inv_armor_shield_naxxramas_d_01",
@@ -1363,6 +1429,7 @@ return {
             type = 1,
         },
         {
+            id   = 132390,
             file = 132390,
             hash = "bb6c5d6e02da668c5909d188cd6be87d",
             name = "inv_armor_shield_naxxramas_d_02",
@@ -1370,6 +1437,7 @@ return {
             type = 1,
         },
         {
+            id   = 132391,
             file = 132391,
             hash = "af282171100453a7c5e479245a6fda94",
             name = "inv_armor_shoulder_plate_naxxramas_raidwarrior_c_01",
@@ -1377,6 +1445,7 @@ return {
             type = 1,
         },
         {
+            id   = 132392,
             file = 132392,
             hash = "ef1867ad34ea1f6d96e3a141cdf6ec16",
             name = "inv_axe_01",
@@ -1384,6 +1453,7 @@ return {
             type = 1,
         },
         {
+            id   = 132393,
             file = 132393,
             hash = "141b7c1bd90aabdc2b5e6db6e031f606",
             name = "inv_axe_02",
@@ -1391,6 +1461,7 @@ return {
             type = 1,
         },
         {
+            id   = 132394,
             file = 132394,
             hash = "2b9a1c131be39dd93284a2899ef3c081",
             name = "inv_axe_03",
@@ -1398,6 +1469,7 @@ return {
             type = 1,
         },
         {
+            id   = 132395,
             file = 132395,
             hash = "5f3c6202270284e2afca1f1ca0662aa9",
             name = "inv_axe_04",
@@ -1405,6 +1477,7 @@ return {
             type = 1,
         },
         {
+            id   = 132396,
             file = 132396,
             hash = "517fb4c18e85efac24538690c3f15ae4",
             name = "inv_axe_05",
@@ -1412,6 +1485,7 @@ return {
             type = 1,
         },
         {
+            id   = 132397,
             file = 132397,
             hash = "1fefd3eba9c58f7d2612baa70775ce8a",
             name = "inv_axe_06",
@@ -1419,6 +1493,7 @@ return {
             type = 1,
         },
         {
+            id   = 132398,
             file = 132398,
             hash = "2de1457641ee53e9921f3c1e9f50deff",
             name = "inv_axe_07",
@@ -1426,6 +1501,7 @@ return {
             type = 1,
         },
         {
+            id   = 132399,
             file = 132399,
             hash = "a15f5a87e872724f1c400ebcf54e85e5",
             name = "inv_axe_08",
@@ -1433,6 +1509,7 @@ return {
             type = 1,
         },
         {
+            id   = 132400,
             file = 132400,
             hash = "c31d9fb997ed67fa406361aacbcd1eae",
             name = "inv_axe_09",
@@ -1440,6 +1517,7 @@ return {
             type = 1,
         },
         {
+            id   = 132401,
             file = 132401,
             hash = "0a9e208cf5bedf6da33ace22292c89b3",
             name = "inv_axe_10",
@@ -1447,6 +1525,7 @@ return {
             type = 1,
         },
         {
+            id   = 132402,
             file = 132402,
             hash = "0ae24e5e845d5229152476f80959bc67",
             name = "inv_axe_11",
@@ -1454,6 +1533,7 @@ return {
             type = 1,
         },
         {
+            id   = 132403,
             file = 132403,
             hash = "dfd9116ffc1c0abddacf5a6b94e1569c",
             name = "inv_axe_12",
@@ -1461,6 +1541,7 @@ return {
             type = 1,
         },
         {
+            id   = 132404,
             file = 132404,
             hash = "66302187608807175f1171aa50711f48",
             name = "inv_axe_13",
@@ -1468,6 +1549,7 @@ return {
             type = 1,
         },
         {
+            id   = 132405,
             file = 132405,
             hash = "4eddca84fbbf9fc7d78d497f09a90651",
             name = "inv_axe_14",
@@ -1475,6 +1557,7 @@ return {
             type = 1,
         },
         {
+            id   = 132406,
             file = 132406,
             hash = "d6d9426cbcf19e1dde7b2d7218ee9d75",
             name = "inv_axe_15",
@@ -1482,6 +1565,7 @@ return {
             type = 1,
         },
         {
+            id   = 132407,
             file = 132407,
             hash = "6552f41b2ff3e8bae6a145b4b99b26db",
             name = "inv_axe_16",
@@ -1489,6 +1573,7 @@ return {
             type = 1,
         },
         {
+            id   = 132408,
             file = 132408,
             hash = "d9c9692914b42e874a772a73e4c0a021",
             name = "inv_axe_17",
@@ -1496,6 +1581,7 @@ return {
             type = 1,
         },
         {
+            id   = 132409,
             file = 132409,
             hash = "354b2ced10b7af2cc69890ae7694d9d8",
             name = "inv_axe_18",
@@ -1503,6 +1589,7 @@ return {
             type = 1,
         },
         {
+            id   = 132410,
             file = 132410,
             hash = "ed981db977389c2f06fbda860afe8b7a",
             name = "inv_axe_19",
@@ -1510,6 +1597,7 @@ return {
             type = 1,
         },
         {
+            id   = 132414,
             file = 132414,
             hash = "16f19f60c79cabd1cefd3431315cdd7c",
             name = "inv_axe_20",
@@ -1517,6 +1605,7 @@ return {
             type = 1,
         },
         {
+            id   = 132415,
             file = 132415,
             hash = "954b6d885df17f0aab1a46998c81035e",
             name = "inv_axe_21",
@@ -1524,6 +1613,7 @@ return {
             type = 1,
         },
         {
+            id   = 132416,
             file = 132416,
             hash = "35a1cc4868615ff0a3eade424378d56a",
             name = "inv_axe_22",
@@ -1531,6 +1621,7 @@ return {
             type = 1,
         },
         {
+            id   = 132417,
             file = 132417,
             hash = "74eb867e669457f5e7cfff0bc33b1959",
             name = "inv_axe_23",
@@ -1538,6 +1629,7 @@ return {
             type = 1,
         },
         {
+            id   = 132418,
             file = 132418,
             hash = "6746e311650d2e1c4e47ea08c6f13026",
             name = "inv_axe_24",
@@ -1545,6 +1637,7 @@ return {
             type = 1,
         },
         {
+            id   = 132419,
             file = 132419,
             hash = "6c6eb89e714039d55e3edab0c24e8366",
             name = "inv_axe_25",
@@ -1552,6 +1645,7 @@ return {
             type = 1,
         },
         {
+            id   = 132420,
             file = 132420,
             hash = "5f61b30a199c48d0c6a9a7e3fb2b0b0b",
             name = "inv_axe_26",
@@ -1559,6 +1653,7 @@ return {
             type = 1,
         },
         {
+            id   = 132422,
             file = 132422,
             hash = "11448c202e45e19a2c81931a1ba25e92",
             name = "inv_axe_2h_stratholme_d_01",
@@ -1566,6 +1661,7 @@ return {
             type = 1,
         },
         {
+            id   = 132427,
             file = 132427,
             hash = "b2e2c824f0b9e4fcd6d036af71476c4e",
             name = "inv_axe_34",
@@ -1573,6 +1669,7 @@ return {
             type = 1,
         },
         {
+            id   = 132428,
             file = 132428,
             hash = "a1e4b2e1ef59f1b1a8c152b603f0b333",
             name = "inv_axe_35",
@@ -1580,6 +1677,7 @@ return {
             type = 1,
         },
         {
+            id   = 132482,
             file = 132482,
             hash = "0130ba016ed7693c52da15d0b2ecfc87",
             name = "inv_banner_01",
@@ -1587,6 +1685,7 @@ return {
             type = 1,
         },
         {
+            id   = 132483,
             file = 132483,
             hash = "6f931e656ebfb6eebd83c0c3fc419b0b",
             name = "inv_banner_02",
@@ -1594,6 +1693,7 @@ return {
             type = 1,
         },
         {
+            id   = 132484,
             file = 132484,
             hash = "9ad53185106b440db7919e1495141006",
             name = "inv_banner_03",
@@ -1601,6 +1701,7 @@ return {
             type = 1,
         },
         {
+            id   = 132485,
             file = 132485,
             hash = "5ac8f54210098f61402887aad30dc151",
             name = "inv_bannerpvp_01",
@@ -1608,6 +1709,7 @@ return {
             type = 1,
         },
         {
+            id   = 132486,
             file = 132486,
             hash = "bb3c254226a6e22eec531207afb091fa",
             name = "inv_bannerpvp_02",
@@ -1615,6 +1717,7 @@ return {
             type = 1,
         },
         {
+            id   = 132488,
             file = 132488,
             hash = "f61f9265bc15c94f96309309643a294c",
             name = "inv_battery_01",
@@ -1622,6 +1725,7 @@ return {
             type = 1,
         },
         {
+            id   = 132489,
             file = 132489,
             hash = "947386645daa49aa9709fec5238896fd",
             name = "inv_battery_02",
@@ -1629,6 +1733,7 @@ return {
             type = 1,
         },
         {
+            id   = 132490,
             file = 132490,
             hash = "4e97c048b2fba9fc316c4fe8ae1f2c49",
             name = "inv_belt_01",
@@ -1636,6 +1741,7 @@ return {
             type = 1,
         },
         {
+            id   = 132491,
             file = 132491,
             hash = "42f974c60578910d761667b18c34e99b",
             name = "inv_belt_02",
@@ -1643,6 +1749,7 @@ return {
             type = 1,
         },
         {
+            id   = 132492,
             file = 132492,
             hash = "a788b114ddb6deee9c50252b8a09c8dc",
             name = "inv_belt_03",
@@ -1650,6 +1757,7 @@ return {
             type = 1,
         },
         {
+            id   = 132493,
             file = 132493,
             hash = "e358dc9f52d5f7243a25f48928615ea3",
             name = "inv_belt_04",
@@ -1657,6 +1765,7 @@ return {
             type = 1,
         },
         {
+            id   = 132494,
             file = 132494,
             hash = "7b8fd4a7cf65a7e623c8ea28d5f9b304",
             name = "inv_belt_05",
@@ -1664,6 +1773,7 @@ return {
             type = 1,
         },
         {
+            id   = 132495,
             file = 132495,
             hash = "ef3e01bfc0f477ff11771c6e4c67eb7c",
             name = "inv_belt_06",
@@ -1671,6 +1781,7 @@ return {
             type = 1,
         },
         {
+            id   = 132496,
             file = 132496,
             hash = "9d444971eecf31618aa10c79e1d9637a",
             name = "inv_belt_07",
@@ -1678,6 +1789,7 @@ return {
             type = 1,
         },
         {
+            id   = 132497,
             file = 132497,
             hash = "921d1d193b5f449d947a59d76ec57337",
             name = "inv_belt_08",
@@ -1685,6 +1797,7 @@ return {
             type = 1,
         },
         {
+            id   = 132498,
             file = 132498,
             hash = "dd75f72c3ead6786c4c70be4a45a9a8f",
             name = "inv_belt_09",
@@ -1692,6 +1805,7 @@ return {
             type = 1,
         },
         {
+            id   = 132499,
             file = 132499,
             hash = "47febaad93847d7657aa2c43315bcbbf",
             name = "inv_belt_10",
@@ -1699,6 +1813,7 @@ return {
             type = 1,
         },
         {
+            id   = 132500,
             file = 132500,
             hash = "c4d44bc7fe3b21ab36f303327d9deb6b",
             name = "inv_belt_11",
@@ -1706,6 +1821,7 @@ return {
             type = 1,
         },
         {
+            id   = 132501,
             file = 132501,
             hash = "4d39f4ef8f0d4afd5f90c2dea7b13c4f",
             name = "inv_belt_12",
@@ -1713,6 +1829,7 @@ return {
             type = 1,
         },
         {
+            id   = 132502,
             file = 132502,
             hash = "6681c76acd9df2c6bf6d46f1b18f1206",
             name = "inv_belt_13",
@@ -1720,6 +1837,7 @@ return {
             type = 1,
         },
         {
+            id   = 132503,
             file = 132503,
             hash = "c63448de50bd4ab1d165c6417beeb902",
             name = "inv_belt_14",
@@ -1727,6 +1845,7 @@ return {
             type = 1,
         },
         {
+            id   = 132504,
             file = 132504,
             hash = "a1f8ff939a6abd266e3cfcd10d94f365",
             name = "inv_belt_15",
@@ -1734,6 +1853,7 @@ return {
             type = 1,
         },
         {
+            id   = 132505,
             file = 132505,
             hash = "daa9b40160044c615dcfd61411145edd",
             name = "inv_belt_16",
@@ -1741,6 +1861,7 @@ return {
             type = 1,
         },
         {
+            id   = 132506,
             file = 132506,
             hash = "4a16f5b0d4492cfee1886cf1873509e7",
             name = "inv_belt_17",
@@ -1748,6 +1869,7 @@ return {
             type = 1,
         },
         {
+            id   = 132507,
             file = 132507,
             hash = "92000796523710c59ad7f4bb3f28a67f",
             name = "inv_belt_18",
@@ -1755,6 +1877,7 @@ return {
             type = 1,
         },
         {
+            id   = 132508,
             file = 132508,
             hash = "0c54dbbf4239c8e4871bf9e5009277a1",
             name = "inv_belt_19",
@@ -1762,6 +1885,7 @@ return {
             type = 1,
         },
         {
+            id   = 132509,
             file = 132509,
             hash = "7389218d6430db776d0ddfbac1eb9d10",
             name = "inv_belt_20",
@@ -1769,6 +1893,7 @@ return {
             type = 1,
         },
         {
+            id   = 132510,
             file = 132510,
             hash = "fe6eaff6a3e88604e4fae6e3171dae7b",
             name = "inv_belt_21",
@@ -1776,6 +1901,7 @@ return {
             type = 1,
         },
         {
+            id   = 132511,
             file = 132511,
             hash = "286c56bdcd0d4b29317c193ee9bc68c6",
             name = "inv_belt_22",
@@ -1783,6 +1909,7 @@ return {
             type = 1,
         },
         {
+            id   = 132512,
             file = 132512,
             hash = "4bf4c7e8755fc34a84bcd5b72cc208f1",
             name = "inv_belt_23",
@@ -1790,6 +1917,7 @@ return {
             type = 1,
         },
         {
+            id   = 132513,
             file = 132513,
             hash = "23f8d28134b0551479b51cbf1bde705b",
             name = "inv_belt_24",
@@ -1797,6 +1925,7 @@ return {
             type = 1,
         },
         {
+            id   = 132514,
             file = 132514,
             hash = "e4d98c525df10c60d3dac38e774b65ad",
             name = "inv_belt_25",
@@ -1804,6 +1933,7 @@ return {
             type = 1,
         },
         {
+            id   = 132515,
             file = 132515,
             hash = "486c66244a6e6ef37a637540eb701019",
             name = "inv_belt_26",
@@ -1811,6 +1941,7 @@ return {
             type = 1,
         },
         {
+            id   = 132516,
             file = 132516,
             hash = "5313981c97d5d6988bd110eddc9c7eb7",
             name = "inv_belt_27",
@@ -1818,6 +1949,7 @@ return {
             type = 1,
         },
         {
+            id   = 132517,
             file = 132517,
             hash = "910c29bb122c9c69066ed5a93cbad34a",
             name = "inv_belt_28",
@@ -1825,6 +1957,7 @@ return {
             type = 1,
         },
         {
+            id   = 132518,
             file = 132518,
             hash = "c387d4cd7c21abc8d33f7bb7d3c2eb09",
             name = "inv_belt_29",
@@ -1832,6 +1965,7 @@ return {
             type = 1,
         },
         {
+            id   = 132519,
             file = 132519,
             hash = "6e28682d3ff54e9434969ac1ad1e60e7",
             name = "inv_belt_30",
@@ -1839,6 +1973,7 @@ return {
             type = 1,
         },
         {
+            id   = 132520,
             file = 132520,
             hash = "e092d115b99321275c86fa56d7216b47",
             name = "inv_belt_31",
@@ -1846,6 +1981,7 @@ return {
             type = 1,
         },
         {
+            id   = 132521,
             file = 132521,
             hash = "391eb105e629119211a21b5b10700ee6",
             name = "inv_belt_32",
@@ -1853,6 +1989,7 @@ return {
             type = 1,
         },
         {
+            id   = 132522,
             file = 132522,
             hash = "f6879e96d0d1f40b8eacc622a13757e6",
             name = "inv_belt_33",
@@ -1860,6 +1997,7 @@ return {
             type = 1,
         },
         {
+            id   = 132523,
             file = 132523,
             hash = "dc16ff245dd70af9a9a0d8894111cc01",
             name = "inv_belt_34",
@@ -1867,6 +2005,7 @@ return {
             type = 1,
         },
         {
+            id   = 132524,
             file = 132524,
             hash = "3b3e0659da1ee3a92fa2568af0f22519",
             name = "inv_belt_35",
@@ -1874,6 +2013,7 @@ return {
             type = 1,
         },
         {
+            id   = 132526,
             file = 132526,
             hash = "b34394362b19fc9525fc1fe29b7a1124",
             name = "inv_bijou_blue",
@@ -1881,6 +2021,7 @@ return {
             type = 1,
         },
         {
+            id   = 132527,
             file = 132527,
             hash = "7b6b1abb27dc7ea73da41c793e29e47c",
             name = "inv_bijou_bronze",
@@ -1888,6 +2029,7 @@ return {
             type = 1,
         },
         {
+            id   = 132528,
             file = 132528,
             hash = "21640c955ee23957a6a41f79aaac8682",
             name = "inv_bijou_gold",
@@ -1895,6 +2037,7 @@ return {
             type = 1,
         },
         {
+            id   = 132529,
             file = 132529,
             hash = "1c42f5ea2d3960f89b43ec2b81d37273",
             name = "inv_bijou_green",
@@ -1902,6 +2045,7 @@ return {
             type = 1,
         },
         {
+            id   = 132530,
             file = 132530,
             hash = "290a7e1798dc474aeeae1c382a492e6f",
             name = "inv_bijou_orange",
@@ -1909,6 +2053,7 @@ return {
             type = 1,
         },
         {
+            id   = 132531,
             file = 132531,
             hash = "efc3753fb22caa2ee8db65cf1fbfbc34",
             name = "inv_bijou_purple",
@@ -1916,6 +2061,7 @@ return {
             type = 1,
         },
         {
+            id   = 132532,
             file = 132532,
             hash = "ae19fb433ff0aa0a6d93ee6d8b0f1d25",
             name = "inv_bijou_red",
@@ -1923,6 +2069,7 @@ return {
             type = 1,
         },
         {
+            id   = 132533,
             file = 132533,
             hash = "a73d61260d89938ffdecaa8a7ffdd657",
             name = "inv_bijou_silver",
@@ -1930,6 +2077,7 @@ return {
             type = 1,
         },
         {
+            id   = 132534,
             file = 132534,
             hash = "98733d2e8f109442a8ae443fdf2e1e45",
             name = "inv_bijou_yellow",
@@ -1937,6 +2085,7 @@ return {
             type = 1,
         },
         {
+            id   = 132535,
             file = 132535,
             hash = "8e01ba1f3161130a6b594424a6688f86",
             name = "inv_boots_01",
@@ -1944,6 +2093,7 @@ return {
             type = 1,
         },
         {
+            id   = 132536,
             file = 132536,
             hash = "9ce750364d9abc57bcc521ec4fc70759",
             name = "inv_boots_02",
@@ -1951,6 +2101,7 @@ return {
             type = 1,
         },
         {
+            id   = 132537,
             file = 132537,
             hash = "3ee7eeb12af982f9ab8dee0fb0962fc9",
             name = "inv_boots_03",
@@ -1958,6 +2109,7 @@ return {
             type = 1,
         },
         {
+            id   = 132538,
             file = 132538,
             hash = "275d6d8f0e212f651c304f99e3d5cac3",
             name = "inv_boots_04",
@@ -1965,6 +2117,7 @@ return {
             type = 1,
         },
         {
+            id   = 132539,
             file = 132539,
             hash = "bdb95e5417f81772cdc90d30848a4fc4",
             name = "inv_boots_05",
@@ -1972,6 +2125,7 @@ return {
             type = 1,
         },
         {
+            id   = 132540,
             file = 132540,
             hash = "7b7c2c0b68692afd7bc9fd41f7baa810",
             name = "inv_boots_06",
@@ -1979,6 +2133,7 @@ return {
             type = 1,
         },
         {
+            id   = 132541,
             file = 132541,
             hash = "0edbcbaf2b75e1c40e773d78be1cb765",
             name = "inv_boots_07",
@@ -1986,6 +2141,7 @@ return {
             type = 1,
         },
         {
+            id   = 132542,
             file = 132542,
             hash = "747a4729804afa54fab6e76002dcfdf2",
             name = "inv_boots_08",
@@ -1993,6 +2149,7 @@ return {
             type = 1,
         },
         {
+            id   = 132543,
             file = 132543,
             hash = "9db48d37c6b2520b2be9349e055ccdcb",
             name = "inv_boots_09",
@@ -2000,6 +2157,7 @@ return {
             type = 1,
         },
         {
+            id   = 132544,
             file = 132544,
             hash = "2afc00b3571940aa79bdc2a5ebec839d",
             name = "inv_boots_chain_01",
@@ -2007,6 +2165,7 @@ return {
             type = 1,
         },
         {
+            id   = 132545,
             file = 132545,
             hash = "9c380b67f0f21040579aed7ffa06869b",
             name = "inv_boots_chain_02",
@@ -2014,6 +2173,7 @@ return {
             type = 1,
         },
         {
+            id   = 132546,
             file = 132546,
             hash = "25fdbded16887c468596496a8c7c9ced",
             name = "inv_boots_chain_03",
@@ -2021,6 +2181,7 @@ return {
             type = 1,
         },
         {
+            id   = 132547,
             file = 132547,
             hash = "12564d84e7406f5e9c84c8abf8539e2e",
             name = "inv_boots_chain_04",
@@ -2028,6 +2189,7 @@ return {
             type = 1,
         },
         {
+            id   = 132548,
             file = 132548,
             hash = "6995b6becbf9535d6f750dfb6db4a160",
             name = "inv_boots_chain_05",
@@ -2035,6 +2197,7 @@ return {
             type = 1,
         },
         {
+            id   = 132549,
             file = 132549,
             hash = "f36f80cd27a80dd2c4f90bec1ba33b77",
             name = "inv_boots_chain_06",
@@ -2042,6 +2205,7 @@ return {
             type = 1,
         },
         {
+            id   = 132550,
             file = 132550,
             hash = "d2258725a1f1b1c5b5529ba1297634de",
             name = "inv_boots_chain_07",
@@ -2049,6 +2213,7 @@ return {
             type = 1,
         },
         {
+            id   = 132551,
             file = 132551,
             hash = "c71c16858e438519867e5c8f76b2b51b",
             name = "inv_boots_chain_08",
@@ -2056,6 +2221,7 @@ return {
             type = 1,
         },
         {
+            id   = 132552,
             file = 132552,
             hash = "5c206e44bb82baced29ef64308f6b0b7",
             name = "inv_boots_chain_09",
@@ -2063,6 +2229,7 @@ return {
             type = 1,
         },
         {
+            id   = 132553,
             file = 132553,
             hash = "baa9ae04d6b9d6df2ad297be7ea8ff5b",
             name = "inv_boots_chain_10",
@@ -2070,6 +2237,7 @@ return {
             type = 1,
         },
         {
+            id   = 132554,
             file = 132554,
             hash = "d313386d4b6a93fc3f13c26f94396c74",
             name = "inv_boots_chain_11",
@@ -2077,6 +2245,7 @@ return {
             type = 1,
         },
         {
+            id   = 132555,
             file = 132555,
             hash = "df77fc175809ebe22760e0f03217322e",
             name = "inv_boots_chain_12",
@@ -2084,6 +2253,7 @@ return {
             type = 1,
         },
         {
+            id   = 132556,
             file = 132556,
             hash = "9de7676e5723b4f7673c4a1ad0263f7f",
             name = "inv_boots_chain_13",
@@ -2091,6 +2261,7 @@ return {
             type = 1,
         },
         {
+            id   = 132558,
             file = 132558,
             hash = "a9591d94b02c1a58ac9d489e4bc9d550",
             name = "inv_boots_cloth_01",
@@ -2098,6 +2269,7 @@ return {
             type = 1,
         },
         {
+            id   = 132559,
             file = 132559,
             hash = "342c2077bfeb24d0017c1206b171d0cc",
             name = "inv_boots_cloth_02",
@@ -2105,6 +2277,7 @@ return {
             type = 1,
         },
         {
+            id   = 132560,
             file = 132560,
             hash = "23ac96127f4bcff99b88789e7d912aa6",
             name = "inv_boots_cloth_03",
@@ -2112,6 +2285,7 @@ return {
             type = 1,
         },
         {
+            id   = 132561,
             file = 132561,
             hash = "825fa55dba10db2c0bda3a280436defe",
             name = "inv_boots_cloth_04",
@@ -2119,6 +2293,7 @@ return {
             type = 1,
         },
         {
+            id   = 132562,
             file = 132562,
             hash = "ec29ca505eb0679b24af326907d59c5b",
             name = "inv_boots_cloth_05",
@@ -2126,6 +2301,7 @@ return {
             type = 1,
         },
         {
+            id   = 132563,
             file = 132563,
             hash = "96cf14ed246d0fa076fb1a17c2b0ec49",
             name = "inv_boots_cloth_06",
@@ -2133,6 +2309,7 @@ return {
             type = 1,
         },
         {
+            id   = 132564,
             file = 132564,
             hash = "fd24cad911e0d86610c8bcf9d92df09d",
             name = "inv_boots_cloth_07",
@@ -2140,6 +2317,7 @@ return {
             type = 1,
         },
         {
+            id   = 132565,
             file = 132565,
             hash = "f079f490bf98a7d53e8b06618c6a9e41",
             name = "inv_boots_cloth_08",
@@ -2147,6 +2325,7 @@ return {
             type = 1,
         },
         {
+            id   = 132566,
             file = 132566,
             hash = "a4578c7012ae6283cbd5d6bd17c71366",
             name = "inv_boots_cloth_09",
@@ -2154,6 +2333,7 @@ return {
             type = 1,
         },
         {
+            id   = 132567,
             file = 132567,
             hash = "4482a73c52e88162b9eb1d183c9ec73f",
             name = "inv_boots_cloth_10",
@@ -2161,6 +2341,7 @@ return {
             type = 1,
         },
         {
+            id   = 132568,
             file = 132568,
             hash = "af8a629c1f9b5e3745ddac387d4a8ea3",
             name = "inv_boots_cloth_11",
@@ -2168,6 +2349,7 @@ return {
             type = 1,
         },
         {
+            id   = 132569,
             file = 132569,
             hash = "20aaca4200ef8b9d3b3666d8db427791",
             name = "inv_boots_cloth_12",
@@ -2175,6 +2357,7 @@ return {
             type = 1,
         },
         {
+            id   = 132570,
             file = 132570,
             hash = "3cbf45d7ffcc1ba36ad63f225e2961e2",
             name = "inv_boots_cloth_13",
@@ -2182,6 +2365,7 @@ return {
             type = 1,
         },
         {
+            id   = 132571,
             file = 132571,
             hash = "98082f9a8ec8124d75f457f0bd697ebb",
             name = "inv_boots_cloth_14",
@@ -2189,6 +2373,7 @@ return {
             type = 1,
         },
         {
+            id   = 132572,
             file = 132572,
             hash = "e2681b98a4517c55c1e14a7c38d4a4ae",
             name = "inv_boots_cloth_15",
@@ -2196,6 +2381,7 @@ return {
             type = 1,
         },
         {
+            id   = 132573,
             file = 132573,
             hash = "ddb1b881230004a7573b19470f6517f0",
             name = "inv_boots_cloth_16",
@@ -2203,6 +2389,7 @@ return {
             type = 1,
         },
         {
+            id   = 132579,
             file = 132579,
             hash = "c1976739d840c26790cf35688bf56428",
             name = "inv_boots_fabric_01",
@@ -2210,6 +2397,7 @@ return {
             type = 1,
         },
         {
+            id   = 132582,
             file = 132582,
             hash = "61fe6ef30e975d4a44b83d6412315906",
             name = "inv_boots_plate_01",
@@ -2217,6 +2405,7 @@ return {
             type = 1,
         },
         {
+            id   = 132583,
             file = 132583,
             hash = "10011537b9641b22ae31a0c3937a4b93",
             name = "inv_boots_plate_02",
@@ -2224,6 +2413,7 @@ return {
             type = 1,
         },
         {
+            id   = 132584,
             file = 132584,
             hash = "40dc7a83bc6dbd9d3e12d2c7122fe46f",
             name = "inv_boots_plate_03",
@@ -2231,6 +2421,7 @@ return {
             type = 1,
         },
         {
+            id   = 132585,
             file = 132585,
             hash = "d3aeef841d9644712dc64e663b148aa4",
             name = "inv_boots_plate_04",
@@ -2238,6 +2429,7 @@ return {
             type = 1,
         },
         {
+            id   = 132586,
             file = 132586,
             hash = "761ddb4c3edf842b83feb88d8a4879aa",
             name = "inv_boots_plate_05",
@@ -2245,6 +2437,7 @@ return {
             type = 1,
         },
         {
+            id   = 132587,
             file = 132587,
             hash = "7a0c66114fae7e07d0a008b325639389",
             name = "inv_boots_plate_06",
@@ -2252,6 +2445,7 @@ return {
             type = 1,
         },
         {
+            id   = 132588,
             file = 132588,
             hash = "12652ae2aadb6800efed52582b33fb4d",
             name = "inv_boots_plate_07",
@@ -2259,6 +2453,7 @@ return {
             type = 1,
         },
         {
+            id   = 132589,
             file = 132589,
             hash = "cc91d19bbe8cbc2951604422c72fa47a",
             name = "inv_boots_plate_08",
@@ -2266,6 +2461,7 @@ return {
             type = 1,
         },
         {
+            id   = 132590,
             file = 132590,
             hash = "c7ca938f0a5b74025e4023de77a06162",
             name = "inv_boots_plate_09",
@@ -2273,6 +2469,7 @@ return {
             type = 1,
         },
         {
+            id   = 132592,
             file = 132592,
             hash = "2cf654af4cfe8d41c934ed4bc7efd9ee",
             name = "inv_boots_wolf",
@@ -2280,6 +2477,7 @@ return {
             type = 1,
         },
         {
+            id   = 132594,
             file = 132594,
             hash = "aba6af1675d35ca737e0aa034bc766ea",
             name = "inv_box_01",
@@ -2287,6 +2485,7 @@ return {
             type = 1,
         },
         {
+            id   = 132595,
             file = 132595,
             hash = "fd8411c130eb2c9a98ed2f1595ce40fa",
             name = "inv_box_02",
@@ -2294,6 +2493,7 @@ return {
             type = 1,
         },
         {
+            id   = 132596,
             file = 132596,
             hash = "ac41663413c08abf4c4782cd7b651bd2",
             name = "inv_box_03",
@@ -2301,6 +2501,7 @@ return {
             type = 1,
         },
         {
+            id   = 132597,
             file = 132597,
             hash = "bfab3688dd79ac17fb01d17ccaae1c66",
             name = "inv_box_04",
@@ -2308,6 +2509,7 @@ return {
             type = 1,
         },
         {
+            id   = 132598,
             file = 132598,
             hash = "059e89ea97c42883f91b7f18a947abb2",
             name = "inv_box_birdcage_01",
@@ -2315,6 +2517,7 @@ return {
             type = 1,
         },
         {
+            id   = 132599,
             file = 132599,
             hash = "9eb161cce4007c872905325bf82289b1",
             name = "inv_box_petcarrier_01",
@@ -2322,6 +2525,7 @@ return {
             type = 1,
         },
         {
+            id   = 132600,
             file = 132600,
             hash = "356eb0a3dc13005dc88aa330a10de616",
             name = "inv_bracer_01",
@@ -2329,6 +2533,7 @@ return {
             type = 1,
         },
         {
+            id   = 132601,
             file = 132601,
             hash = "65904beb962ea902e29fc4b3b51b1c79",
             name = "inv_bracer_02",
@@ -2336,6 +2541,7 @@ return {
             type = 1,
         },
         {
+            id   = 132602,
             file = 132602,
             hash = "2ca253cffe66b5b73604a65737852023",
             name = "inv_bracer_03",
@@ -2343,6 +2549,7 @@ return {
             type = 1,
         },
         {
+            id   = 132603,
             file = 132603,
             hash = "4a24384af256031f9334bc0a1234d538",
             name = "inv_bracer_04",
@@ -2350,6 +2557,7 @@ return {
             type = 1,
         },
         {
+            id   = 132604,
             file = 132604,
             hash = "7e5af6d714820e0cf7337c5e58447675",
             name = "inv_bracer_05",
@@ -2357,6 +2565,7 @@ return {
             type = 1,
         },
         {
+            id   = 132605,
             file = 132605,
             hash = "50cf14242f4cca86e0c34dea45a08c9f",
             name = "inv_bracer_06",
@@ -2364,6 +2573,7 @@ return {
             type = 1,
         },
         {
+            id   = 132606,
             file = 132606,
             hash = "03d7c5f6cd2dbb9b02aff8842285e72a",
             name = "inv_bracer_07",
@@ -2371,6 +2581,7 @@ return {
             type = 1,
         },
         {
+            id   = 132607,
             file = 132607,
             hash = "98787861e5218bae2100be972368187c",
             name = "inv_bracer_08",
@@ -2378,6 +2589,7 @@ return {
             type = 1,
         },
         {
+            id   = 132608,
             file = 132608,
             hash = "fe95792192ffcf33c427f6a656636d9e",
             name = "inv_bracer_09",
@@ -2385,6 +2597,7 @@ return {
             type = 1,
         },
         {
+            id   = 132609,
             file = 132609,
             hash = "604a3c6a664e7821a55c2fa779abd596",
             name = "inv_bracer_10",
@@ -2392,6 +2605,7 @@ return {
             type = 1,
         },
         {
+            id   = 132610,
             file = 132610,
             hash = "e7b8827fc01b375bc734023b7ab0954a",
             name = "inv_bracer_11",
@@ -2399,6 +2613,7 @@ return {
             type = 1,
         },
         {
+            id   = 132611,
             file = 132611,
             hash = "61f46df3c1a523ae3aa33ce943364de6",
             name = "inv_bracer_12",
@@ -2406,6 +2621,7 @@ return {
             type = 1,
         },
         {
+            id   = 132612,
             file = 132612,
             hash = "9bfd478036370d3739b6715d9ae68457",
             name = "inv_bracer_13",
@@ -2413,6 +2629,7 @@ return {
             type = 1,
         },
         {
+            id   = 132613,
             file = 132613,
             hash = "dc79b2f279d125553b4d5baba2669494",
             name = "inv_bracer_14",
@@ -2420,6 +2637,7 @@ return {
             type = 1,
         },
         {
+            id   = 132614,
             file = 132614,
             hash = "64c53b03197df17a916257d2400655da",
             name = "inv_bracer_15",
@@ -2427,6 +2645,7 @@ return {
             type = 1,
         },
         {
+            id   = 132615,
             file = 132615,
             hash = "20038d87b6aa949ba1c2f1019c527b39",
             name = "inv_bracer_16",
@@ -2434,6 +2653,7 @@ return {
             type = 1,
         },
         {
+            id   = 132616,
             file = 132616,
             hash = "dd88e4b18477c2b122cea86b3bcb7bd1",
             name = "inv_bracer_17",
@@ -2441,6 +2661,7 @@ return {
             type = 1,
         },
         {
+            id   = 132617,
             file = 132617,
             hash = "2718ea1988de4c875acf18027195d56b",
             name = "inv_bracer_18",
@@ -2448,6 +2669,7 @@ return {
             type = 1,
         },
         {
+            id   = 132618,
             file = 132618,
             hash = "3bbac1f0db7a401a09223cedc59466a7",
             name = "inv_bracer_19",
@@ -2455,6 +2677,7 @@ return {
             type = 1,
         },
         {
+            id   = 132619,
             file = 132619,
             hash = "839433a4aafa9c69f44af71636b68426",
             name = "inv_brd_banner",
@@ -2462,6 +2685,7 @@ return {
             type = 1,
         },
         {
+            id   = 132620,
             file = 132620,
             hash = "ad9ec7c48f1452c7c5ff1b85a739c2fb",
             name = "inv_cask_01",
@@ -2469,6 +2693,7 @@ return {
             type = 1,
         },
         {
+            id   = 132621,
             file = 132621,
             hash = "e20671604c7f8cdddf0d526748af3717",
             name = "inv_cask_02",
@@ -2476,6 +2701,7 @@ return {
             type = 1,
         },
         {
+            id   = 132622,
             file = 132622,
             hash = "fbe121172b8aaaeb89b455653cdd75dd",
             name = "inv_cask_03",
@@ -2483,6 +2709,7 @@ return {
             type = 1,
         },
         {
+            id   = 132623,
             file = 132623,
             hash = "c96db0998f090ded332d31987c1c74c8",
             name = "inv_cask_04",
@@ -2490,6 +2717,7 @@ return {
             type = 1,
         },
         {
+            id   = 132624,
             file = 132624,
             hash = "a384e8724195159896bbcde564e22647",
             name = "inv_chest_chain",
@@ -2497,6 +2725,7 @@ return {
             type = 1,
         },
         {
+            id   = 132625,
             file = 132625,
             hash = "7c9759ea67f4c9420ea5e49668440f9d",
             name = "inv_chest_chain_03",
@@ -2504,6 +2733,7 @@ return {
             type = 1,
         },
         {
+            id   = 132626,
             file = 132626,
             hash = "5b238660a15bf796435558f0b4a01f10",
             name = "inv_chest_chain_04",
@@ -2511,6 +2741,7 @@ return {
             type = 1,
         },
         {
+            id   = 132627,
             file = 132627,
             hash = "c1b3214b22ed49c387b96b330567a086",
             name = "inv_chest_chain_05",
@@ -2518,6 +2749,7 @@ return {
             type = 1,
         },
         {
+            id   = 132628,
             file = 132628,
             hash = "76721c5f0b4ed786e1736ed058a58736",
             name = "inv_chest_chain_06",
@@ -2525,6 +2757,7 @@ return {
             type = 1,
         },
         {
+            id   = 132629,
             file = 132629,
             hash = "50d8e0a6a661abe9065745728ba6c75f",
             name = "inv_chest_chain_07",
@@ -2532,6 +2765,7 @@ return {
             type = 1,
         },
         {
+            id   = 132630,
             file = 132630,
             hash = "60f8d15383c6842e6cf2da318d541953",
             name = "inv_chest_chain_08",
@@ -2539,6 +2773,7 @@ return {
             type = 1,
         },
         {
+            id   = 132631,
             file = 132631,
             hash = "1464658840062ec6a9d5a655697fce56",
             name = "inv_chest_chain_09",
@@ -2546,6 +2781,7 @@ return {
             type = 1,
         },
         {
+            id   = 132632,
             file = 132632,
             hash = "b736a0c12ced029bc15b65edbdf79a9a",
             name = "inv_chest_chain_10",
@@ -2553,6 +2789,7 @@ return {
             type = 1,
         },
         {
+            id   = 132633,
             file = 132633,
             hash = "248427a2724eb0669005f06ff1ee1296",
             name = "inv_chest_chain_11",
@@ -2560,6 +2797,7 @@ return {
             type = 1,
         },
         {
+            id   = 132634,
             file = 132634,
             hash = "062e91b3149b487f5369a5022b343643",
             name = "inv_chest_chain_12",
@@ -2567,6 +2805,7 @@ return {
             type = 1,
         },
         {
+            id   = 132635,
             file = 132635,
             hash = "fab13f31abf76dbd37aca97ff3744c9b",
             name = "inv_chest_chain_13",
@@ -2574,6 +2813,7 @@ return {
             type = 1,
         },
         {
+            id   = 132636,
             file = 132636,
             hash = "3cda734aa99f331c75237352c992c7c5",
             name = "inv_chest_chain_14",
@@ -2581,6 +2821,7 @@ return {
             type = 1,
         },
         {
+            id   = 132637,
             file = 132637,
             hash = "b5bdd0746c7f02456de4be0f54b0e390",
             name = "inv_chest_chain_15",
@@ -2588,6 +2829,7 @@ return {
             type = 1,
         },
         {
+            id   = 132638,
             file = 132638,
             hash = "c031f8f329a65a140aaafc655cbeaf80",
             name = "inv_chest_chain_16",
@@ -2595,6 +2837,7 @@ return {
             type = 1,
         },
         {
+            id   = 132639,
             file = 132639,
             hash = "880934abc38e07a5f56b244c78c9860f",
             name = "inv_chest_chain_17",
@@ -2602,6 +2845,7 @@ return {
             type = 1,
         },
         {
+            id   = 132642,
             file = 132642,
             hash = "49af132c1bfa4c19303ecb7fc05d7b1c",
             name = "inv_chest_cloth_01",
@@ -2609,6 +2853,7 @@ return {
             type = 1,
         },
         {
+            id   = 132643,
             file = 132643,
             hash = "3366fe3e448d6d8a0520924ffb09589f",
             name = "inv_chest_cloth_02",
@@ -2616,6 +2861,7 @@ return {
             type = 1,
         },
         {
+            id   = 132644,
             file = 132644,
             hash = "1489091756f5a102534db8cfd713ff3e",
             name = "inv_chest_cloth_03",
@@ -2623,6 +2869,7 @@ return {
             type = 1,
         },
         {
+            id   = 132645,
             file = 132645,
             hash = "733141f07d5d13f277ceca15c706ed35",
             name = "inv_chest_cloth_04",
@@ -2630,6 +2877,7 @@ return {
             type = 1,
         },
         {
+            id   = 132646,
             file = 132646,
             hash = "31754b3e3fa2d5c53163561d81ec7da7",
             name = "inv_chest_cloth_05",
@@ -2637,6 +2885,7 @@ return {
             type = 1,
         },
         {
+            id   = 132647,
             file = 132647,
             hash = "ddf8b6cc68fb16b3a34476f518f58150",
             name = "inv_chest_cloth_06",
@@ -2644,6 +2893,7 @@ return {
             type = 1,
         },
         {
+            id   = 132648,
             file = 132648,
             hash = "ac9ffa29df78d4652038e2a8f5838d7d",
             name = "inv_chest_cloth_07",
@@ -2651,6 +2901,7 @@ return {
             type = 1,
         },
         {
+            id   = 132649,
             file = 132649,
             hash = "6d0a2e762314a08edb48fcbfdde4e41e",
             name = "inv_chest_cloth_08",
@@ -2658,6 +2909,7 @@ return {
             type = 1,
         },
         {
+            id   = 132650,
             file = 132650,
             hash = "6cd964b84a78098d6e6d4c404fe8b3b7",
             name = "inv_chest_cloth_09",
@@ -2665,6 +2917,7 @@ return {
             type = 1,
         },
         {
+            id   = 132651,
             file = 132651,
             hash = "eede9faeaa47d1f2b005181a00af23b1",
             name = "inv_chest_cloth_10",
@@ -2672,6 +2925,7 @@ return {
             type = 1,
         },
         {
+            id   = 132652,
             file = 132652,
             hash = "67317c84bb9c7ddf92a3646b9debaf23",
             name = "inv_chest_cloth_11",
@@ -2679,6 +2933,7 @@ return {
             type = 1,
         },
         {
+            id   = 132653,
             file = 132653,
             hash = "2325f0b1be5f52d4b601dfd93f4dab08",
             name = "inv_chest_cloth_12",
@@ -2686,6 +2941,7 @@ return {
             type = 1,
         },
         {
+            id   = 132654,
             file = 132654,
             hash = "b9cb0daea64c7b8513634487492d0d42",
             name = "inv_chest_cloth_13",
@@ -2693,6 +2949,7 @@ return {
             type = 1,
         },
         {
+            id   = 132655,
             file = 132655,
             hash = "c936a1b6342143a824bf885e6a8d7c3a",
             name = "inv_chest_cloth_14",
@@ -2700,6 +2957,7 @@ return {
             type = 1,
         },
         {
+            id   = 132656,
             file = 132656,
             hash = "48be9da7fe83652f62207752e803a8cd",
             name = "inv_chest_cloth_15",
@@ -2707,6 +2965,7 @@ return {
             type = 1,
         },
         {
+            id   = 132657,
             file = 132657,
             hash = "e4816b00d4ceda5fede3370df7016c7d",
             name = "inv_chest_cloth_16",
@@ -2714,6 +2973,7 @@ return {
             type = 1,
         },
         {
+            id   = 132658,
             file = 132658,
             hash = "e42f23b86f03ae2c7fb078f9044961e5",
             name = "inv_chest_cloth_17",
@@ -2721,6 +2981,7 @@ return {
             type = 1,
         },
         {
+            id   = 132659,
             file = 132659,
             hash = "b64469e200114c4a3cb3b9eabd245e54",
             name = "inv_chest_cloth_18",
@@ -2728,6 +2989,7 @@ return {
             type = 1,
         },
         {
+            id   = 132660,
             file = 132660,
             hash = "b602926b8f5ecca05d9c4e91bccd3b72",
             name = "inv_chest_cloth_19",
@@ -2735,6 +2997,7 @@ return {
             type = 1,
         },
         {
+            id   = 132661,
             file = 132661,
             hash = "6c62eb6f395f1a19e9fab2962107b2de",
             name = "inv_chest_cloth_20",
@@ -2742,6 +3005,7 @@ return {
             type = 1,
         },
         {
+            id   = 132662,
             file = 132662,
             hash = "822f50c6e0389b8bf89b443dd05e2c56",
             name = "inv_chest_cloth_21",
@@ -2749,6 +3013,7 @@ return {
             type = 1,
         },
         {
+            id   = 132663,
             file = 132663,
             hash = "da51a00a5712dcb15d3a139d8ad33e3e",
             name = "inv_chest_cloth_22",
@@ -2756,6 +3021,7 @@ return {
             type = 1,
         },
         {
+            id   = 132664,
             file = 132664,
             hash = "7a7ca044d305e577817de9bd39b7ba8b",
             name = "inv_chest_cloth_23",
@@ -2763,6 +3029,7 @@ return {
             type = 1,
         },
         {
+            id   = 132665,
             file = 132665,
             hash = "b6aed6bacfb2b965fd0b0431a5a35985",
             name = "inv_chest_cloth_24",
@@ -2770,6 +3037,7 @@ return {
             type = 1,
         },
         {
+            id   = 132666,
             file = 132666,
             hash = "0af69bd3d1e7ef16a47e9b408ff3ced8",
             name = "inv_chest_cloth_25",
@@ -2777,6 +3045,7 @@ return {
             type = 1,
         },
         {
+            id   = 132667,
             file = 132667,
             hash = "b8389e5ce2bce173968cbc667e221e58",
             name = "inv_chest_cloth_26",
@@ -2784,6 +3053,7 @@ return {
             type = 1,
         },
         {
+            id   = 132668,
             file = 132668,
             hash = "0080ee871b7c9ccac3823f73a6255ee9",
             name = "inv_chest_cloth_27",
@@ -2791,6 +3061,7 @@ return {
             type = 1,
         },
         {
+            id   = 132669,
             file = 132669,
             hash = "d116d28d5e4f28cec8b1fb72c90044a9",
             name = "inv_chest_cloth_28",
@@ -2798,6 +3069,7 @@ return {
             type = 1,
         },
         {
+            id   = 132670,
             file = 132670,
             hash = "f59bc38b08fb881d348d3d622ed00de7",
             name = "inv_chest_cloth_29",
@@ -2805,6 +3077,7 @@ return {
             type = 1,
         },
         {
+            id   = 132671,
             file = 132671,
             hash = "1e10a03a49b30e629257d2c3b6480714",
             name = "inv_chest_cloth_30",
@@ -2812,6 +3085,7 @@ return {
             type = 1,
         },
         {
+            id   = 132672,
             file = 132672,
             hash = "abf901deb08481bc8c34e0053816229b",
             name = "inv_chest_cloth_31",
@@ -2819,6 +3093,7 @@ return {
             type = 1,
         },
         {
+            id   = 132673,
             file = 132673,
             hash = "ff9700bbc484f7e5e042c11b5fac2817",
             name = "inv_chest_cloth_32",
@@ -2826,6 +3101,7 @@ return {
             type = 1,
         },
         {
+            id   = 132674,
             file = 132674,
             hash = "56a21d2c77a4948fdd9a188941763a26",
             name = "inv_chest_cloth_33",
@@ -2833,6 +3109,7 @@ return {
             type = 1,
         },
         {
+            id   = 132675,
             file = 132675,
             hash = "4aea37584ad9a1df02962808c4e2c1f4",
             name = "inv_chest_cloth_34",
@@ -2840,6 +3117,7 @@ return {
             type = 1,
         },
         {
+            id   = 132676,
             file = 132676,
             hash = "c3bdc5270f56510f87594e04268ed850",
             name = "inv_chest_cloth_35",
@@ -2847,6 +3125,7 @@ return {
             type = 1,
         },
         {
+            id   = 132677,
             file = 132677,
             hash = "fedbd02e74dcc4e22ff1fc3692e3f533",
             name = "inv_chest_cloth_36",
@@ -2854,6 +3133,7 @@ return {
             type = 1,
         },
         {
+            id   = 132678,
             file = 132678,
             hash = "7e3500ad4a86ecd5eb64c47ce6f68f5b",
             name = "inv_chest_cloth_37",
@@ -2861,6 +3141,7 @@ return {
             type = 1,
         },
         {
+            id   = 132679,
             file = 132679,
             hash = "cd59cfa7bdb551e8af3c0d71fbebfaae",
             name = "inv_chest_cloth_38",
@@ -2868,6 +3149,7 @@ return {
             type = 1,
         },
         {
+            id   = 132680,
             file = 132680,
             hash = "3233e7037fb5a2f055f00dfc15d66699",
             name = "inv_chest_cloth_39",
@@ -2875,6 +3157,7 @@ return {
             type = 1,
         },
         {
+            id   = 132681,
             file = 132681,
             hash = "75af38abf4c7a7c47cb81a93ffd9e4a6",
             name = "inv_chest_cloth_40",
@@ -2882,6 +3165,7 @@ return {
             type = 1,
         },
         {
+            id   = 132682,
             file = 132682,
             hash = "4a598062ca20123cbbca5f07888a7d08",
             name = "inv_chest_cloth_41",
@@ -2889,6 +3173,7 @@ return {
             type = 1,
         },
         {
+            id   = 132683,
             file = 132683,
             hash = "9697d032e974650427f20016ed16354e",
             name = "inv_chest_cloth_42",
@@ -2896,6 +3181,7 @@ return {
             type = 1,
         },
         {
+            id   = 132684,
             file = 132684,
             hash = "13b3ff21e9c0d8bc78c6b8d5e3c51d35",
             name = "inv_chest_cloth_43",
@@ -2903,6 +3189,7 @@ return {
             type = 1,
         },
         {
+            id   = 132685,
             file = 132685,
             hash = "e1b03832f07de56aa9fb8e5f8193e276",
             name = "inv_chest_cloth_44",
@@ -2910,6 +3197,7 @@ return {
             type = 1,
         },
         {
+            id   = 132686,
             file = 132686,
             hash = "539232672d033340e1c5f5074dff2d67",
             name = "inv_chest_cloth_45",
@@ -2917,6 +3205,7 @@ return {
             type = 1,
         },
         {
+            id   = 132687,
             file = 132687,
             hash = "06b7dbb3413eb95e2d9015bb674cd9cf",
             name = "inv_chest_cloth_46",
@@ -2924,6 +3213,7 @@ return {
             type = 1,
         },
         {
+            id   = 132688,
             file = 132688,
             hash = "1849d387e84ba4f213e40c239b9e4f5f",
             name = "inv_chest_cloth_47",
@@ -2931,6 +3221,7 @@ return {
             type = 1,
         },
         {
+            id   = 132689,
             file = 132689,
             hash = "d5b0e5f52ad978026461323ff874ec82",
             name = "inv_chest_cloth_48",
@@ -2938,6 +3229,7 @@ return {
             type = 1,
         },
         {
+            id   = 132690,
             file = 132690,
             hash = "702ad94426306ddbdd4d8ef50a9b3472",
             name = "inv_chest_cloth_49",
@@ -2945,6 +3237,7 @@ return {
             type = 1,
         },
         {
+            id   = 132691,
             file = 132691,
             hash = "a66be04af0f033f60508ee5e4017eca0",
             name = "inv_chest_cloth_50",
@@ -2952,6 +3245,7 @@ return {
             type = 1,
         },
         {
+            id   = 132692,
             file = 132692,
             hash = "dfa4404f8b93ddc1f87c1f805f7ec5fc",
             name = "inv_chest_cloth_51",
@@ -2959,6 +3253,7 @@ return {
             type = 1,
         },
         {
+            id   = 132693,
             file = 132693,
             hash = "6fabb947dfe5d161a96a63d58a0daac6",
             name = "inv_chest_cloth_52",
@@ -2966,6 +3261,7 @@ return {
             type = 1,
         },
         {
+            id   = 132694,
             file = 132694,
             hash = "cc7416b6ab9213e373ca6ac5fbe3f7ae",
             name = "inv_chest_cloth_53",
@@ -2973,6 +3269,7 @@ return {
             type = 1,
         },
         {
+            id   = 132695,
             file = 132695,
             hash = "0e60e30f2d8b724f1ab69c75c3d0c1c3",
             name = "inv_chest_cloth_54",
@@ -2980,6 +3277,7 @@ return {
             type = 1,
         },
         {
+            id   = 132696,
             file = 132696,
             hash = "4adc27c282a40760eac455bb46de782e",
             name = "inv_chest_cloth_55",
@@ -2987,6 +3285,7 @@ return {
             type = 1,
         },
         {
+            id   = 132697,
             file = 132697,
             hash = "e8b76433eb06d9f97080b7f6b3ff213b",
             name = "inv_chest_cloth_56",
@@ -2994,6 +3293,7 @@ return {
             type = 1,
         },
         {
+            id   = 132698,
             file = 132698,
             hash = "3cacc52a439b5321f4fe1646fad43dfb",
             name = "inv_chest_cloth_57",
@@ -3001,6 +3301,7 @@ return {
             type = 1,
         },
         {
+            id   = 132699,
             file = 132699,
             hash = "cccb2a705e04260426f22d607b8e22fb",
             name = "inv_chest_cloth_58",
@@ -3008,6 +3309,7 @@ return {
             type = 1,
         },
         {
+            id   = 132700,
             file = 132700,
             hash = "69d3c9f05484f7f34b924c7037226b6e",
             name = "inv_chest_cloth_59",
@@ -3015,6 +3317,7 @@ return {
             type = 1,
         },
         {
+            id   = 132715,
             file = 132715,
             hash = "e1cadcfddac580b77a6cc74138d17c5e",
             name = "inv_chest_fur",
@@ -3022,6 +3325,7 @@ return {
             type = 1,
         },
         {
+            id   = 132716,
             file = 132716,
             hash = "e08a1dbcd10ab5bd2445b496f0be5363",
             name = "inv_chest_leather_01",
@@ -3029,6 +3333,7 @@ return {
             type = 1,
         },
         {
+            id   = 132717,
             file = 132717,
             hash = "132084aa9420f3eca847427f96cdf8b5",
             name = "inv_chest_leather_02",
@@ -3036,6 +3341,7 @@ return {
             type = 1,
         },
         {
+            id   = 132718,
             file = 132718,
             hash = "25ed45ca734e6822f38d56eda842fd17",
             name = "inv_chest_leather_03",
@@ -3043,6 +3349,7 @@ return {
             type = 1,
         },
         {
+            id   = 132719,
             file = 132719,
             hash = "372eb8c308aa3cf6dcabf8f37fb20799",
             name = "inv_chest_leather_04",
@@ -3050,6 +3357,7 @@ return {
             type = 1,
         },
         {
+            id   = 132720,
             file = 132720,
             hash = "c005e3a23e97f6b54b4220f035b8f624",
             name = "inv_chest_leather_05",
@@ -3057,6 +3365,7 @@ return {
             type = 1,
         },
         {
+            id   = 132721,
             file = 132721,
             hash = "b721c8329453f8825562b5dd913921fc",
             name = "inv_chest_leather_06",
@@ -3064,6 +3373,7 @@ return {
             type = 1,
         },
         {
+            id   = 132722,
             file = 132722,
             hash = "cf9fea55fcf270854749af14c4897550",
             name = "inv_chest_leather_07",
@@ -3071,6 +3381,7 @@ return {
             type = 1,
         },
         {
+            id   = 132723,
             file = 132723,
             hash = "840503a40cae45927404ee7638c9a71c",
             name = "inv_chest_leather_08",
@@ -3078,6 +3389,7 @@ return {
             type = 1,
         },
         {
+            id   = 132724,
             file = 132724,
             hash = "a80fa642a92977342bad2c37986b23f5",
             name = "inv_chest_leather_09",
@@ -3085,6 +3397,7 @@ return {
             type = 1,
         },
         {
+            id   = 132725,
             file = 132725,
             hash = "a4c9a70d0baaca52d58dba77dcf203a8",
             name = "inv_chest_leather_10",
@@ -3092,6 +3405,7 @@ return {
             type = 1,
         },
         {
+            id   = 132736,
             file = 132736,
             hash = "77969d15ca8a8c3af09cacda99d8bb1d",
             name = "inv_chest_plate01",
@@ -3099,6 +3413,7 @@ return {
             type = 1,
         },
         {
+            id   = 132737,
             file = 132737,
             hash = "0860f14790d687341eebec99f8e9b060",
             name = "inv_chest_plate02",
@@ -3106,6 +3421,7 @@ return {
             type = 1,
         },
         {
+            id   = 132738,
             file = 132738,
             hash = "c0ddb8909df85f672b0225e839964c2c",
             name = "inv_chest_plate03",
@@ -3113,6 +3429,7 @@ return {
             type = 1,
         },
         {
+            id   = 132739,
             file = 132739,
             hash = "7fb17ccdb7138d94baf21846e43274bf",
             name = "inv_chest_plate04",
@@ -3120,6 +3437,7 @@ return {
             type = 1,
         },
         {
+            id   = 132740,
             file = 132740,
             hash = "869a8720e880b23c3d1fadb6f5bedbf4",
             name = "inv_chest_plate05",
@@ -3127,6 +3445,7 @@ return {
             type = 1,
         },
         {
+            id   = 132741,
             file = 132741,
             hash = "12c56d08366c977191d87513f5a0c444",
             name = "inv_chest_plate06",
@@ -3134,6 +3453,7 @@ return {
             type = 1,
         },
         {
+            id   = 132742,
             file = 132742,
             hash = "d6386c6878d6e909b0152e36bed9cf57",
             name = "inv_chest_plate07",
@@ -3141,6 +3461,7 @@ return {
             type = 1,
         },
         {
+            id   = 132743,
             file = 132743,
             hash = "3d15462f2fad965a48cf2cce6935ea8c",
             name = "inv_chest_plate08",
@@ -3148,6 +3469,7 @@ return {
             type = 1,
         },
         {
+            id   = 132744,
             file = 132744,
             hash = "22e8b59265de906582fd1d07f629d301",
             name = "inv_chest_plate09",
@@ -3155,6 +3477,7 @@ return {
             type = 1,
         },
         {
+            id   = 132745,
             file = 132745,
             hash = "46b0e51a412a6f72afeb7e2226b1ee10",
             name = "inv_chest_plate10",
@@ -3162,6 +3485,7 @@ return {
             type = 1,
         },
         {
+            id   = 132746,
             file = 132746,
             hash = "34ecbb77edf98b5a19adbe68f647191f",
             name = "inv_chest_plate11",
@@ -3169,6 +3493,7 @@ return {
             type = 1,
         },
         {
+            id   = 132747,
             file = 132747,
             hash = "0118309ca491a9cb0add2396799fbfc0",
             name = "inv_chest_plate12",
@@ -3176,6 +3501,7 @@ return {
             type = 1,
         },
         {
+            id   = 132748,
             file = 132748,
             hash = "8a0f6979ac52eb5ca3d02b0d5e8e734f",
             name = "inv_chest_plate13",
@@ -3183,6 +3509,7 @@ return {
             type = 1,
         },
         {
+            id   = 132749,
             file = 132749,
             hash = "220760a4bca7762e00f5259dd31ee5ce",
             name = "inv_chest_plate14",
@@ -3190,6 +3517,7 @@ return {
             type = 1,
         },
         {
+            id   = 132750,
             file = 132750,
             hash = "9a6c46ad4f00157ece43279ed0bc762f",
             name = "inv_chest_plate15",
@@ -3197,6 +3525,7 @@ return {
             type = 1,
         },
         {
+            id   = 132751,
             file = 132751,
             hash = "3711b2f0e0eabc25d513efa5fc5b8b91",
             name = "inv_chest_plate16",
@@ -3204,6 +3533,7 @@ return {
             type = 1,
         },
         {
+            id   = 132759,
             file = 132759,
             hash = "20e521242fdf78b3059e54beb5c7fe05",
             name = "inv_chest_samurai",
@@ -3211,6 +3541,7 @@ return {
             type = 1,
         },
         {
+            id   = 132760,
             file = 132760,
             hash = "f00596f1019096f000f371356827b6b7",
             name = "inv_chest_wolf",
@@ -3218,6 +3549,7 @@ return {
             type = 1,
         },
         {
+            id   = 132761,
             file = 132761,
             hash = "8ca3bf935ee96f33b20aacd62e66a2f2",
             name = "inv_crate_01",
@@ -3225,6 +3557,7 @@ return {
             type = 1,
         },
         {
+            id   = 132762,
             file = 132762,
             hash = "5ec0ff3eb0d335fb78309433a913048c",
             name = "inv_crate_02",
@@ -3232,6 +3565,7 @@ return {
             type = 1,
         },
         {
+            id   = 132763,
             file = 132763,
             hash = "cc8e434507cf1dc440d18b5e1a7e0d10",
             name = "inv_crate_03",
@@ -3239,6 +3573,7 @@ return {
             type = 1,
         },
         {
+            id   = 132764,
             file = 132764,
             hash = "656a7379c61710d8351d484162e9de67",
             name = "inv_crate_04",
@@ -3246,6 +3581,7 @@ return {
             type = 1,
         },
         {
+            id   = 132765,
             file = 132765,
             hash = "02764b45e78984943c5b82aa809325b8",
             name = "inv_crate_05",
@@ -3253,6 +3589,7 @@ return {
             type = 1,
         },
         {
+            id   = 132766,
             file = 132766,
             hash = "816002e343cb78387d213f446f320a85",
             name = "inv_crate_06",
@@ -3260,6 +3597,7 @@ return {
             type = 1,
         },
         {
+            id   = 132767,
             file = 132767,
             hash = "1554f6bafb9b3435e8f0f339e5d7b76a",
             name = "inv_crown_01",
@@ -3267,6 +3605,7 @@ return {
             type = 1,
         },
         {
+            id   = 132768,
             file = 132768,
             hash = "10fb61bc89d200fb2d2d90eeb70ea41c",
             name = "inv_crown_02",
@@ -3274,6 +3613,7 @@ return {
             type = 1,
         },
         {
+            id   = 132787,
             file = 132787,
             hash = "3c3d252e3c22400226c2e5b338085f78",
             name = "inv_diablostone",
@@ -3281,6 +3621,7 @@ return {
             type = 1,
         },
         {
+            id   = 132788,
             file = 132788,
             hash = "47f947bfe23415f8c7bd397ef8039321",
             name = "inv_drink_01",
@@ -3288,6 +3629,7 @@ return {
             type = 1,
         },
         {
+            id   = 132789,
             file = 132789,
             hash = "046ea268f48677805d1404c7704a640a",
             name = "inv_drink_02",
@@ -3295,6 +3637,7 @@ return {
             type = 1,
         },
         {
+            id   = 132790,
             file = 132790,
             hash = "85ae0c99c821e5ade9f589486ac6a384",
             name = "inv_drink_03",
@@ -3302,6 +3645,7 @@ return {
             type = 1,
         },
         {
+            id   = 132791,
             file = 132791,
             hash = "eb62af456c404fa597be61b4697ca845",
             name = "inv_drink_04",
@@ -3309,6 +3653,7 @@ return {
             type = 1,
         },
         {
+            id   = 132792,
             file = 132792,
             hash = "967835118395cd9d39c1143976bb67da",
             name = "inv_drink_05",
@@ -3316,6 +3661,7 @@ return {
             type = 1,
         },
         {
+            id   = 132793,
             file = 132793,
             hash = "83dd6bb9775a2f6a714d2511aa760a26",
             name = "inv_drink_06",
@@ -3323,6 +3669,7 @@ return {
             type = 1,
         },
         {
+            id   = 132794,
             file = 132794,
             hash = "fbdeeaaabe73720c12cc3b690e41b8b1",
             name = "inv_drink_07",
@@ -3330,6 +3677,7 @@ return {
             type = 1,
         },
         {
+            id   = 132795,
             file = 132795,
             hash = "26d2642146c9e050a8c9d1317cb68f34",
             name = "inv_drink_08",
@@ -3337,6 +3685,7 @@ return {
             type = 1,
         },
         {
+            id   = 132796,
             file = 132796,
             hash = "4d75d1b18cdf993d89178415374573e0",
             name = "inv_drink_09",
@@ -3344,6 +3693,7 @@ return {
             type = 1,
         },
         {
+            id   = 132797,
             file = 132797,
             hash = "cd9c4658f8a7db8b7ae5184962771252",
             name = "inv_drink_10",
@@ -3351,6 +3701,7 @@ return {
             type = 1,
         },
         {
+            id   = 132798,
             file = 132798,
             hash = "b0415fd5da45fadd85a0c2be8d4c4ef3",
             name = "inv_drink_11",
@@ -3358,6 +3709,7 @@ return {
             type = 1,
         },
         {
+            id   = 132799,
             file = 132799,
             hash = "44993fe6e34d373e710f9067422bfa3b",
             name = "inv_drink_12",
@@ -3365,6 +3717,7 @@ return {
             type = 1,
         },
         {
+            id   = 132800,
             file = 132800,
             hash = "5e10b90e284a770b7d7f1b57c10dd981",
             name = "inv_drink_13",
@@ -3372,6 +3725,7 @@ return {
             type = 1,
         },
         {
+            id   = 132801,
             file = 132801,
             hash = "d3dab89e9add90d2dc6631beb64c52ce",
             name = "inv_drink_14",
@@ -3379,6 +3733,7 @@ return {
             type = 1,
         },
         {
+            id   = 132802,
             file = 132802,
             hash = "3e0d4e5f4dd08e72cf4d32a930768ebd",
             name = "inv_drink_15",
@@ -3386,6 +3741,7 @@ return {
             type = 1,
         },
         {
+            id   = 132803,
             file = 132803,
             hash = "f91cb356101bd7787826ddc349b8c886",
             name = "inv_drink_16",
@@ -3393,6 +3749,7 @@ return {
             type = 1,
         },
         {
+            id   = 132804,
             file = 132804,
             hash = "23c7ab072aff5165fa62cd8faab98637",
             name = "inv_drink_17",
@@ -3400,6 +3757,7 @@ return {
             type = 1,
         },
         {
+            id   = 132805,
             file = 132805,
             hash = "8d284662c8734513d5340e7a09dae1f2",
             name = "inv_drink_18",
@@ -3407,6 +3765,7 @@ return {
             type = 1,
         },
         {
+            id   = 132806,
             file = 132806,
             hash = "0dc9c491921a52b071a903188539d4bc",
             name = "inv_drink_19",
@@ -3414,6 +3773,7 @@ return {
             type = 1,
         },
         {
+            id   = 132815,
             file = 132815,
             hash = "9704c87d823fb73211d16a85fb555042",
             name = "inv_drink_milk_01",
@@ -3421,6 +3781,7 @@ return {
             type = 1,
         },
         {
+            id   = 132816,
             file = 132816,
             hash = "26d8955fc2ec420c01a6de280de34cd9",
             name = "inv_drink_milk_02",
@@ -3428,6 +3789,7 @@ return {
             type = 1,
         },
         {
+            id   = 132817,
             file = 132817,
             hash = "1d78321bfb2fa57f550ebd1353d88407",
             name = "inv_drink_milk_03",
@@ -3435,6 +3797,7 @@ return {
             type = 1,
         },
         {
+            id   = 132818,
             file = 132818,
             hash = "e1e654c3cb14ef56cad2b9e78281f4bb",
             name = "inv_drink_milk_04",
@@ -3442,6 +3805,7 @@ return {
             type = 1,
         },
         {
+            id   = 132819,
             file = 132819,
             hash = "5040920961ba9880f067ddc69bd8bccf",
             name = "inv_drink_milk_05",
@@ -3449,6 +3813,7 @@ return {
             type = 1,
         },
         {
+            id   = 132820,
             file = 132820,
             hash = "5a5c3f8d71538cdba8e1425e0a04c61a",
             name = "inv_drink_waterskin_01",
@@ -3456,6 +3821,7 @@ return {
             type = 1,
         },
         {
+            id   = 132821,
             file = 132821,
             hash = "083adfcae0e0384037fc2cfe75f2712a",
             name = "inv_drink_waterskin_02",
@@ -3463,6 +3829,7 @@ return {
             type = 1,
         },
         {
+            id   = 132822,
             file = 132822,
             hash = "2ed6ba94a0d18ec4e0c76df71c82c6f7",
             name = "inv_drink_waterskin_03",
@@ -3470,6 +3837,7 @@ return {
             type = 1,
         },
         {
+            id   = 132823,
             file = 132823,
             hash = "c4cf89460a702e18cde234e4b9cdaf3a",
             name = "inv_drink_waterskin_04",
@@ -3477,6 +3845,7 @@ return {
             type = 1,
         },
         {
+            id   = 132824,
             file = 132824,
             hash = "97a848412d624ca7e1bb2c1a0cf2eda5",
             name = "inv_drink_waterskin_05",
@@ -3484,6 +3853,7 @@ return {
             type = 1,
         },
         {
+            id   = 132825,
             file = 132825,
             hash = "5c74098eae45e8b9d532555b21b084cb",
             name = "inv_drink_waterskin_06",
@@ -3491,6 +3861,7 @@ return {
             type = 1,
         },
         {
+            id   = 132826,
             file = 132826,
             hash = "4fad8edeb99e248c9f3a34dae0f2a586",
             name = "inv_drink_waterskin_07",
@@ -3498,6 +3869,7 @@ return {
             type = 1,
         },
         {
+            id   = 132827,
             file = 132827,
             hash = "9bede5e1dd9dae30ed1de5f61302c427",
             name = "inv_drink_waterskin_08",
@@ -3505,6 +3877,7 @@ return {
             type = 1,
         },
         {
+            id   = 132828,
             file = 132828,
             hash = "ec319b6fad0687a8d688593a545b4ee5",
             name = "inv_drink_waterskin_09",
@@ -3512,6 +3885,7 @@ return {
             type = 1,
         },
         {
+            id   = 132829,
             file = 132829,
             hash = "599e82b47b57055bd5aa43064cbe91e1",
             name = "inv_drink_waterskin_10",
@@ -3519,6 +3893,7 @@ return {
             type = 1,
         },
         {
+            id   = 132832,
             file = 132832,
             hash = "65ccb20014ede97a463df8db6f0f3f3e",
             name = "inv_egg_01",
@@ -3526,6 +3901,7 @@ return {
             type = 1,
         },
         {
+            id   = 132833,
             file = 132833,
             hash = "1a00c0b823bdbd3b46918b7cdd857b8b",
             name = "inv_egg_02",
@@ -3533,6 +3909,7 @@ return {
             type = 1,
         },
         {
+            id   = 132834,
             file = 132834,
             hash = "1b2fe9a19c1bf03bf6600bf490247d94",
             name = "inv_egg_03",
@@ -3540,6 +3917,7 @@ return {
             type = 1,
         },
         {
+            id   = 132835,
             file = 132835,
             hash = "15f359c289d65e0837657e46aa8f4c92",
             name = "inv_egg_04",
@@ -3547,6 +3925,7 @@ return {
             type = 1,
         },
         {
+            id   = 132836,
             file = 132836,
             hash = "0a531f34963d7c4aa74cdd84a332b053",
             name = "inv_egg_05",
@@ -3554,6 +3933,7 @@ return {
             type = 1,
         },
         {
+            id   = 132855,
             file = 132855,
             hash = "1bd9bb16e3601a818e1cf5924274fafd",
             name = "inv_enchant_dustdream",
@@ -3561,6 +3941,7 @@ return {
             type = 1,
         },
         {
+            id   = 132856,
             file = 132856,
             hash = "8a0703338cf6885c5847ecc8123f8478",
             name = "inv_enchant_dustillusion",
@@ -3568,6 +3949,7 @@ return {
             type = 1,
         },
         {
+            id   = 132857,
             file = 132857,
             hash = "2a9bf4ed1d1a56e7d7d3a969484d201b",
             name = "inv_enchant_dustsoul",
@@ -3575,6 +3957,7 @@ return {
             type = 1,
         },
         {
+            id   = 132858,
             file = 132858,
             hash = "3aeb46a93613fab33af2487c36429832",
             name = "inv_enchant_duststrange",
@@ -3582,6 +3965,7 @@ return {
             type = 1,
         },
         {
+            id   = 132859,
             file = 132859,
             hash = "43a564a2f28049d479023ab3acb479e2",
             name = "inv_enchant_dustvision",
@@ -3589,6 +3973,7 @@ return {
             type = 1,
         },
         {
+            id   = 132862,
             file = 132862,
             hash = "97f61301a57dd25e8a70d417c0dc4364",
             name = "inv_enchant_essenceastrallarge",
@@ -3596,6 +3981,7 @@ return {
             type = 1,
         },
         {
+            id   = 132863,
             file = 132863,
             hash = "621da55da9f2a4062f1d57d7dee0ca78",
             name = "inv_enchant_essenceastralsmall",
@@ -3603,6 +3989,7 @@ return {
             type = 1,
         },
         {
+            id   = 132864,
             file = 132864,
             hash = "f80288a5a18a805297148a8719b9caaf",
             name = "inv_enchant_essenceeternallarge",
@@ -3610,6 +3997,7 @@ return {
             type = 1,
         },
         {
+            id   = 132865,
             file = 132865,
             hash = "c8540e0d03e29a1a3d96f5a372c57725",
             name = "inv_enchant_essenceeternalsmall",
@@ -3617,6 +4005,7 @@ return {
             type = 1,
         },
         {
+            id   = 132866,
             file = 132866,
             hash = "e9eb167ea2721a398682adbb68301bb8",
             name = "inv_enchant_essencemagiclarge",
@@ -3624,6 +4013,7 @@ return {
             type = 1,
         },
         {
+            id   = 132867,
             file = 132867,
             hash = "58544e5e0fb346ba4068eed593bdd0ba",
             name = "inv_enchant_essencemagicsmall",
@@ -3631,6 +4021,7 @@ return {
             type = 1,
         },
         {
+            id   = 132868,
             file = 132868,
             hash = "349951cb4f3778a6998254e748436906",
             name = "inv_enchant_essencemysticallarge",
@@ -3638,6 +4029,7 @@ return {
             type = 1,
         },
         {
+            id   = 132869,
             file = 132869,
             hash = "b37f59e7b2205f71ee62bd18cf113fe2",
             name = "inv_enchant_essencemysticalsmall",
@@ -3645,6 +4037,7 @@ return {
             type = 1,
         },
         {
+            id   = 132870,
             file = 132870,
             hash = "9ef837f748c1696f99fea527651217c5",
             name = "inv_enchant_essencenetherlarge",
@@ -3652,6 +4045,7 @@ return {
             type = 1,
         },
         {
+            id   = 132871,
             file = 132871,
             hash = "552c23b2fed0c57f20b29c70f7547cae",
             name = "inv_enchant_essencenethersmall",
@@ -3659,6 +4053,7 @@ return {
             type = 1,
         },
         {
+            id   = 132873,
             file = 132873,
             hash = "3ba54627934d1224feaedaf9b5c21e56",
             name = "inv_enchant_shardbrilliantlarge",
@@ -3666,6 +4061,7 @@ return {
             type = 1,
         },
         {
+            id   = 132874,
             file = 132874,
             hash = "1a2de8d40695ba431a87b221b8467b1c",
             name = "inv_enchant_shardbrilliantsmall",
@@ -3673,6 +4069,7 @@ return {
             type = 1,
         },
         {
+            id   = 132876,
             file = 132876,
             hash = "546c98205f030ed5b27763eaff4edfc2",
             name = "inv_enchant_shardglimmeringlarge",
@@ -3680,6 +4077,7 @@ return {
             type = 1,
         },
         {
+            id   = 132877,
             file = 132877,
             hash = "e6b9c745f28b8bf18f8839680773efcc",
             name = "inv_enchant_shardglimmeringsmall",
@@ -3687,6 +4085,7 @@ return {
             type = 1,
         },
         {
+            id   = 132878,
             file = 132878,
             hash = "547ae79cbb039630e015d0d49817a541",
             name = "inv_enchant_shardglowinglarge",
@@ -3694,6 +4093,7 @@ return {
             type = 1,
         },
         {
+            id   = 132879,
             file = 132879,
             hash = "3bcbd31c1f9d61fd6f82ff97f3de7484",
             name = "inv_enchant_shardglowingsmall",
@@ -3701,6 +4101,7 @@ return {
             type = 1,
         },
         {
+            id   = 132880,
             file = 132880,
             hash = "00a404c3461c1f5723fc82b7d1ac13b4",
             name = "inv_enchant_shardnexuslarge",
@@ -3708,6 +4109,7 @@ return {
             type = 1,
         },
         {
+            id   = 132883,
             file = 132883,
             hash = "fa304eb1f04029743794e6247b31d85b",
             name = "inv_enchant_shardradientlarge",
@@ -3715,6 +4117,7 @@ return {
             type = 1,
         },
         {
+            id   = 132884,
             file = 132884,
             hash = "e402d4a71e68b5a9cb3b337359b73077",
             name = "inv_enchant_shardradientsmall",
@@ -3722,6 +4125,7 @@ return {
             type = 1,
         },
         {
+            id   = 132888,
             file = 132888,
             hash = "11c5544ed092ca0abade17915690390b",
             name = "inv_fabric_felrag",
@@ -3729,6 +4133,7 @@ return {
             type = 1,
         },
         {
+            id   = 132889,
             file = 132889,
             hash = "5bed23777ab331b7e7f6063a65944e42",
             name = "inv_fabric_linen_01",
@@ -3736,6 +4141,7 @@ return {
             type = 1,
         },
         {
+            id   = 132890,
             file = 132890,
             hash = "41bf28737d7433e12a9b1ceadab0bf33",
             name = "inv_fabric_linen_02",
@@ -3743,6 +4149,7 @@ return {
             type = 1,
         },
         {
+            id   = 132891,
             file = 132891,
             hash = "760fc83a5d9c6de2e98436cee2f4901a",
             name = "inv_fabric_linen_03",
@@ -3750,6 +4157,7 @@ return {
             type = 1,
         },
         {
+            id   = 132892,
             file = 132892,
             hash = "5093fd80115dda430341ddcd9edd4420",
             name = "inv_fabric_mageweave_01",
@@ -3757,6 +4165,7 @@ return {
             type = 1,
         },
         {
+            id   = 132893,
             file = 132893,
             hash = "863f989e923743f61e4740bf434f45d7",
             name = "inv_fabric_mageweave_02",
@@ -3764,6 +4173,7 @@ return {
             type = 1,
         },
         {
+            id   = 132894,
             file = 132894,
             hash = "dcc75fd34375f69ecf0047190a8f88d8",
             name = "inv_fabric_mageweave_03",
@@ -3771,6 +4181,7 @@ return {
             type = 1,
         },
         {
+            id   = 132895,
             file = 132895,
             hash = "1308c99c5d4ede912fa3833d3fb0063b",
             name = "inv_fabric_moonrag_01",
@@ -3778,6 +4189,7 @@ return {
             type = 1,
         },
         {
+            id   = 132896,
             file = 132896,
             hash = "85aa1de5bfd2e860f85d2ff09361882b",
             name = "inv_fabric_moonrag_02",
@@ -3785,6 +4197,7 @@ return {
             type = 1,
         },
         {
+            id   = 132901,
             file = 132901,
             hash = "ca1506ccdc753c099de870db14beefee",
             name = "inv_fabric_purple_01",
@@ -3792,6 +4205,7 @@ return {
             type = 1,
         },
         {
+            id   = 132902,
             file = 132902,
             hash = "b80ff09ba330ef10d999097ef98eeb3b",
             name = "inv_fabric_purple_02",
@@ -3799,6 +4213,7 @@ return {
             type = 1,
         },
         {
+            id   = 132903,
             file = 132903,
             hash = "1d64335224d8f037facc34a21794209a",
             name = "inv_fabric_purplefire_01",
@@ -3806,6 +4221,7 @@ return {
             type = 1,
         },
         {
+            id   = 132904,
             file = 132904,
             hash = "6d9ba9f683a1c08f2d576055c15a1907",
             name = "inv_fabric_purplefire_02",
@@ -3813,6 +4229,7 @@ return {
             type = 1,
         },
         {
+            id   = 132905,
             file = 132905,
             hash = "b480bc9d79b4ecbf90cc67a21fb1927e",
             name = "inv_fabric_silk_01",
@@ -3820,6 +4237,7 @@ return {
             type = 1,
         },
         {
+            id   = 132906,
             file = 132906,
             hash = "f08865f89398c9402d0a624f72cffc86",
             name = "inv_fabric_silk_02",
@@ -3827,6 +4245,7 @@ return {
             type = 1,
         },
         {
+            id   = 132907,
             file = 132907,
             hash = "3fa696b22164f21e0eeaaa66860cc237",
             name = "inv_fabric_silk_03",
@@ -3834,6 +4253,7 @@ return {
             type = 1,
         },
         {
+            id   = 132911,
             file = 132911,
             hash = "dfb17e4214eafb0e005acb876ad1f46b",
             name = "inv_fabric_wool_01",
@@ -3841,6 +4261,7 @@ return {
             type = 1,
         },
         {
+            id   = 132912,
             file = 132912,
             hash = "c01b6603fc2b6e6c7cf43f1b57dbddab",
             name = "inv_fabric_wool_02",
@@ -3848,6 +4269,7 @@ return {
             type = 1,
         },
         {
+            id   = 132913,
             file = 132913,
             hash = "521bdbf0a2b654e819545c1ea1fbec4a",
             name = "inv_fabric_wool_03",
@@ -3855,6 +4277,7 @@ return {
             type = 1,
         },
         {
+            id   = 132914,
             file = 132914,
             hash = "dfebe3e44d76f403af9d9a59e80f28d7",
             name = "inv_feather_01",
@@ -3862,6 +4285,7 @@ return {
             type = 1,
         },
         {
+            id   = 132915,
             file = 132915,
             hash = "2149ceaed13da0e1c98cc74e59d704ab",
             name = "inv_feather_02",
@@ -3869,6 +4293,7 @@ return {
             type = 1,
         },
         {
+            id   = 132916,
             file = 132916,
             hash = "413f09a498bfde5efffadb01a165f6f8",
             name = "inv_feather_03",
@@ -3876,6 +4301,7 @@ return {
             type = 1,
         },
         {
+            id   = 132917,
             file = 132917,
             hash = "b8f3463b5dd8c2031e270dba56b7a92d",
             name = "inv_feather_04",
@@ -3883,6 +4309,7 @@ return {
             type = 1,
         },
         {
+            id   = 132918,
             file = 132918,
             hash = "a4a1441455763c1e605729c106897fea",
             name = "inv_feather_05",
@@ -3890,6 +4317,7 @@ return {
             type = 1,
         },
         {
+            id   = 132919,
             file = 132919,
             hash = "83b5c6baa4a66a386559750a25a1d098",
             name = "inv_feather_06",
@@ -3897,6 +4325,7 @@ return {
             type = 1,
         },
         {
+            id   = 132920,
             file = 132920,
             hash = "fa8cc8d32746006f43008a5fafdb41ff",
             name = "inv_feather_07",
@@ -3904,6 +4333,7 @@ return {
             type = 1,
         },
         {
+            id   = 132921,
             file = 132921,
             hash = "5c7855a7c8877509ce552439b222da81",
             name = "inv_feather_08",
@@ -3911,6 +4341,7 @@ return {
             type = 1,
         },
         {
+            id   = 132922,
             file = 132922,
             hash = "843b7d6a16a29dd5b29af127b8bc4818",
             name = "inv_feather_09",
@@ -3918,6 +4349,7 @@ return {
             type = 1,
         },
         {
+            id   = 132923,
             file = 132923,
             hash = "1e31d7700555ee161004321cff931904",
             name = "inv_feather_10",
@@ -3925,6 +4357,7 @@ return {
             type = 1,
         },
         {
+            id   = 132924,
             file = 132924,
             hash = "0d00cef716d09a3f5070d8123a9667af",
             name = "inv_feather_11",
@@ -3932,6 +4365,7 @@ return {
             type = 1,
         },
         {
+            id   = 132925,
             file = 132925,
             hash = "8b803cc45e27c68d558970fc1a746407",
             name = "inv_feather_12",
@@ -3939,6 +4373,7 @@ return {
             type = 1,
         },
         {
+            id   = 132926,
             file = 132926,
             hash = "e4de046f582eda03dd147ef59c84dee1",
             name = "inv_feather_13",
@@ -3946,6 +4381,7 @@ return {
             type = 1,
         },
         {
+            id   = 132927,
             file = 132927,
             hash = "0ca8977266cd9812a763cd2703068be0",
             name = "inv_feather_14",
@@ -3953,6 +4389,7 @@ return {
             type = 1,
         },
         {
+            id   = 132928,
             file = 132928,
             hash = "6f606520371a6e7cc2d7d7ba51f62044",
             name = "inv_feather_15",
@@ -3960,6 +4397,7 @@ return {
             type = 1,
         },
         {
+            id   = 132929,
             file = 132929,
             hash = "cb300ba1c966c9e0b9240ee5934f982d",
             name = "inv_feather_16",
@@ -3967,6 +4405,7 @@ return {
             type = 1,
         },
         {
+            id   = 132931,
             file = 132931,
             hash = "7e0a43247628719a8e4e771850e37a07",
             name = "inv_fishingpole_01",
@@ -3974,6 +4413,7 @@ return {
             type = 1,
         },
         {
+            id   = 132932,
             file = 132932,
             hash = "25102a45cdb48933bf40ffe477b1b76b",
             name = "inv_fishingpole_02",
@@ -3981,6 +4421,7 @@ return {
             type = 1,
         },
         {
+            id   = 132934,
             file = 132934,
             hash = "734e0ddf64399797117a1dad9c6c44e1",
             name = "inv_food_christmasfruitcake_01",
@@ -3988,6 +4429,7 @@ return {
             type = 1,
         },
         {
+            id   = 132935,
             file = 132935,
             hash = "6e3d7ee649bd233fd472b1e894a9678b",
             name = "inv_gauntlets_01",
@@ -3995,6 +4437,7 @@ return {
             type = 1,
         },
         {
+            id   = 132936,
             file = 132936,
             hash = "b153d8264c524fa4270aa5457d83ec72",
             name = "inv_gauntlets_02",
@@ -4002,6 +4445,7 @@ return {
             type = 1,
         },
         {
+            id   = 132937,
             file = 132937,
             hash = "039f4ac9656b361622eaa9d35c494015",
             name = "inv_gauntlets_03",
@@ -4009,6 +4453,7 @@ return {
             type = 1,
         },
         {
+            id   = 132938,
             file = 132938,
             hash = "e0c744d4b22f76e2e0039268286e14ad",
             name = "inv_gauntlets_04",
@@ -4016,6 +4461,7 @@ return {
             type = 1,
         },
         {
+            id   = 132939,
             file = 132939,
             hash = "f6a8c038e6d4c190ec5f46a7cf5c195b",
             name = "inv_gauntlets_05",
@@ -4023,6 +4469,7 @@ return {
             type = 1,
         },
         {
+            id   = 132940,
             file = 132940,
             hash = "2afd1b71344641dfd519be80ec43c6e2",
             name = "inv_gauntlets_06",
@@ -4030,6 +4477,7 @@ return {
             type = 1,
         },
         {
+            id   = 132941,
             file = 132941,
             hash = "a7a1184c2034ddc82716d80c0bbec819",
             name = "inv_gauntlets_07",
@@ -4037,6 +4485,7 @@ return {
             type = 1,
         },
         {
+            id   = 132942,
             file = 132942,
             hash = "7a6db772c56db5b550381db6d0a408de",
             name = "inv_gauntlets_08",
@@ -4044,6 +4493,7 @@ return {
             type = 1,
         },
         {
+            id   = 132943,
             file = 132943,
             hash = "c32eca020b95f22d622bb7eb39d86c06",
             name = "inv_gauntlets_09",
@@ -4051,6 +4501,7 @@ return {
             type = 1,
         },
         {
+            id   = 132944,
             file = 132944,
             hash = "8887ce3eccb6c1e9334086a2a99a0406",
             name = "inv_gauntlets_10",
@@ -4058,6 +4509,7 @@ return {
             type = 1,
         },
         {
+            id   = 132945,
             file = 132945,
             hash = "f1b2e1593323e3838a02e4f4fd1ba533",
             name = "inv_gauntlets_11",
@@ -4065,6 +4517,7 @@ return {
             type = 1,
         },
         {
+            id   = 132946,
             file = 132946,
             hash = "424ad32281ed044ffd7cbe08315b91b1",
             name = "inv_gauntlets_12",
@@ -4072,6 +4525,7 @@ return {
             type = 1,
         },
         {
+            id   = 132947,
             file = 132947,
             hash = "e477caab1d65ef1aeee9d18980e1cca0",
             name = "inv_gauntlets_13",
@@ -4079,6 +4533,7 @@ return {
             type = 1,
         },
         {
+            id   = 132948,
             file = 132948,
             hash = "9038e36f0570ddc148fab977a376b048",
             name = "inv_gauntlets_14",
@@ -4086,6 +4541,7 @@ return {
             type = 1,
         },
         {
+            id   = 132949,
             file = 132949,
             hash = "fa1e4e1ea6ef9983ec6acb848ce9eea8",
             name = "inv_gauntlets_15",
@@ -4093,6 +4549,7 @@ return {
             type = 1,
         },
         {
+            id   = 132950,
             file = 132950,
             hash = "e8ded44da2807c4e69a4f75252eb755a",
             name = "inv_gauntlets_16",
@@ -4100,6 +4557,7 @@ return {
             type = 1,
         },
         {
+            id   = 132951,
             file = 132951,
             hash = "9dbba3a998754848f79642129ea68801",
             name = "inv_gauntlets_17",
@@ -4107,6 +4565,7 @@ return {
             type = 1,
         },
         {
+            id   = 132952,
             file = 132952,
             hash = "0820aa5513dd070f30f91135aba9c7cd",
             name = "inv_gauntlets_18",
@@ -4114,6 +4573,7 @@ return {
             type = 1,
         },
         {
+            id   = 132953,
             file = 132953,
             hash = "b4dd97db1bc1bd54440c14577a0b1739",
             name = "inv_gauntlets_19",
@@ -4121,6 +4581,7 @@ return {
             type = 1,
         },
         {
+            id   = 132954,
             file = 132954,
             hash = "0793b771d1fb49ef5c41e3c0d6516f21",
             name = "inv_gauntlets_20",
@@ -4128,6 +4589,7 @@ return {
             type = 1,
         },
         {
+            id   = 132955,
             file = 132955,
             hash = "aedc5c156cb2629eb63b81dc5e2c4775",
             name = "inv_gauntlets_21",
@@ -4135,6 +4597,7 @@ return {
             type = 1,
         },
         {
+            id   = 132956,
             file = 132956,
             hash = "8b3854e91431c8eea8aabe6480826cbf",
             name = "inv_gauntlets_22",
@@ -4142,6 +4605,7 @@ return {
             type = 1,
         },
         {
+            id   = 132957,
             file = 132957,
             hash = "100525641b8f6308e33980d9bb639835",
             name = "inv_gauntlets_23",
@@ -4149,6 +4613,7 @@ return {
             type = 1,
         },
         {
+            id   = 132958,
             file = 132958,
             hash = "26313b01e15568a8273be1deb7ca96f9",
             name = "inv_gauntlets_24",
@@ -4156,6 +4621,7 @@ return {
             type = 1,
         },
         {
+            id   = 132959,
             file = 132959,
             hash = "51ee60883c1019d96395b0603a0b7e21",
             name = "inv_gauntlets_25",
@@ -4163,6 +4629,7 @@ return {
             type = 1,
         },
         {
+            id   = 132960,
             file = 132960,
             hash = "d846ebb74c46a9f6632d3ba213e627f5",
             name = "inv_gauntlets_26",
@@ -4170,6 +4637,7 @@ return {
             type = 1,
         },
         {
+            id   = 132961,
             file = 132961,
             hash = "2538a4c6ba35ba5cf777f44a1b6c7dd9",
             name = "inv_gauntlets_27",
@@ -4177,6 +4645,7 @@ return {
             type = 1,
         },
         {
+            id   = 132962,
             file = 132962,
             hash = "a69985ad7bf6df12ee2a44349160e184",
             name = "inv_gauntlets_28",
@@ -4184,6 +4653,7 @@ return {
             type = 1,
         },
         {
+            id   = 132963,
             file = 132963,
             hash = "95e47e1f1a87b546b9a3981e1d8a71e8",
             name = "inv_gauntlets_29",
@@ -4191,6 +4661,7 @@ return {
             type = 1,
         },
         {
+            id   = 132964,
             file = 132964,
             hash = "ff0f48d2fe6077f6945a283a9a1b2db3",
             name = "inv_gauntlets_30",
@@ -4198,6 +4669,7 @@ return {
             type = 1,
         },
         {
+            id   = 132965,
             file = 132965,
             hash = "178ab63d7db8cebbc215b6f9e6481ed9",
             name = "inv_gauntlets_31",
@@ -4205,6 +4677,7 @@ return {
             type = 1,
         },
         {
+            id   = 132966,
             file = 132966,
             hash = "b906c111abcb58c040abb9a51d9f5650",
             name = "inv_gauntlets_32",
@@ -4212,6 +4685,7 @@ return {
             type = 1,
         },
         {
+            id   = 132995,
             file = 132995,
             hash = "250ac12d21f98aeb694385577331c85c",
             name = "inv_gizmo_01",
@@ -4219,6 +4693,7 @@ return {
             type = 1,
         },
         {
+            id   = 132996,
             file = 132996,
             hash = "9686ae94362aea53c1a8710ba3a3acc9",
             name = "inv_gizmo_02",
@@ -4226,6 +4701,7 @@ return {
             type = 1,
         },
         {
+            id   = 132997,
             file = 132997,
             hash = "4739e99cdfd380cf3ceb18e1934e65b4",
             name = "inv_gizmo_03",
@@ -4233,6 +4709,7 @@ return {
             type = 1,
         },
         {
+            id   = 132998,
             file = 132998,
             hash = "3aba9e7a5081928e47f87754a3881b7c",
             name = "inv_gizmo_04",
@@ -4240,6 +4717,7 @@ return {
             type = 1,
         },
         {
+            id   = 132999,
             file = 132999,
             hash = "ee09f0f1b6af8c4fdc1e53a5c8ba68f3",
             name = "inv_gizmo_05",
@@ -4247,6 +4725,7 @@ return {
             type = 1,
         },
         {
+            id   = 133000,
             file = 133000,
             hash = "82be5e7f78c7422da8b07d2abada0d15",
             name = "inv_gizmo_06",
@@ -4254,6 +4733,7 @@ return {
             type = 1,
         },
         {
+            id   = 133001,
             file = 133001,
             hash = "cbda2a048903b9590d8d760eaad55145",
             name = "inv_gizmo_07",
@@ -4261,6 +4741,7 @@ return {
             type = 1,
         },
         {
+            id   = 133002,
             file = 133002,
             hash = "ef1d19a99eb119139cb7519f51d109c2",
             name = "inv_gizmo_08",
@@ -4268,6 +4749,7 @@ return {
             type = 1,
         },
         {
+            id   = 133003,
             file = 133003,
             hash = "b99d5265295b1692ed00c97f0988cf69",
             name = "inv_gizmo_09",
@@ -4275,6 +4757,7 @@ return {
             type = 1,
         },
         {
+            id   = 133006,
             file = 133006,
             hash = "5f55a855d8dfacb6f5b82dd5e252c3d7",
             name = "inv_gizmo_bronzeframework_01",
@@ -4282,6 +4765,7 @@ return {
             type = 1,
         },
         {
+            id   = 133014,
             file = 133014,
             hash = "fa28801b043eda83aaa948b71b9fb0bc",
             name = "inv_gizmo_goblinboombox_01",
@@ -4289,6 +4773,7 @@ return {
             type = 1,
         },
         {
+            id   = 133021,
             file = 133021,
             hash = "02c1bffd82428fcb53346a2806a0b619",
             name = "inv_gizmo_mithrilcasing_01",
@@ -4296,6 +4781,7 @@ return {
             type = 1,
         },
         {
+            id   = 133022,
             file = 133022,
             hash = "56ecad643da884a2d6babef3ba523765",
             name = "inv_gizmo_mithrilcasing_02",
@@ -4303,6 +4789,7 @@ return {
             type = 1,
         },
         {
+            id   = 133024,
             file = 133024,
             hash = "67282fe377982ff0a9d126a720047c5a",
             name = "inv_gizmo_pipe_01",
@@ -4310,6 +4797,7 @@ return {
             type = 1,
         },
         {
+            id   = 133025,
             file = 133025,
             hash = "2b8febcd2771707f0c0d75d656e23b46",
             name = "inv_gizmo_pipe_02",
@@ -4317,6 +4805,7 @@ return {
             type = 1,
         },
         {
+            id   = 133026,
             file = 133026,
             hash = "f92a7d976a85728e6d3e028ce28529ae",
             name = "inv_gizmo_pipe_03",
@@ -4324,6 +4813,7 @@ return {
             type = 1,
         },
         {
+            id   = 133027,
             file = 133027,
             hash = "79fdb771c4fcff6057ef61a17b113d66",
             name = "inv_gizmo_pipe_04",
@@ -4331,6 +4821,7 @@ return {
             type = 1,
         },
         {
+            id   = 133029,
             file = 133029,
             hash = "57465de9d3753ebba4883f4ef3d5feaa",
             name = "inv_gizmo_rocketboot_01",
@@ -4338,6 +4829,7 @@ return {
             type = 1,
         },
         {
+            id   = 133030,
             file = 133030,
             hash = "438066df956dcac1dadab48c5652e98a",
             name = "inv_gizmo_rocketboot_destroyed_02",
@@ -4345,6 +4837,7 @@ return {
             type = 1,
         },
         {
+            id   = 133038,
             file = 133038,
             hash = "366cd379a0790c9788879598f37d0281",
             name = "inv_hammer_01",
@@ -4352,6 +4845,7 @@ return {
             type = 1,
         },
         {
+            id   = 133039,
             file = 133039,
             hash = "0cf9f078ce25907387fe3f796c902683",
             name = "inv_hammer_02",
@@ -4359,6 +4853,7 @@ return {
             type = 1,
         },
         {
+            id   = 133040,
             file = 133040,
             hash = "02a6b50a333cdec07004e279945b0bef",
             name = "inv_hammer_03",
@@ -4366,6 +4861,7 @@ return {
             type = 1,
         },
         {
+            id   = 133041,
             file = 133041,
             hash = "75069cca77a84967b792255adf7a800a",
             name = "inv_hammer_04",
@@ -4373,6 +4869,7 @@ return {
             type = 1,
         },
         {
+            id   = 133042,
             file = 133042,
             hash = "aaa8bd35f07338084c8099acea3d4b92",
             name = "inv_hammer_05",
@@ -4380,6 +4877,7 @@ return {
             type = 1,
         },
         {
+            id   = 133043,
             file = 133043,
             hash = "4b4cdc801fb79cf03e444331f9af639b",
             name = "inv_hammer_06",
@@ -4387,6 +4885,7 @@ return {
             type = 1,
         },
         {
+            id   = 133044,
             file = 133044,
             hash = "b4e392f6c2014dda6b4017a8c1a3607e",
             name = "inv_hammer_07",
@@ -4394,6 +4893,7 @@ return {
             type = 1,
         },
         {
+            id   = 133045,
             file = 133045,
             hash = "050022322ca5ca3e1f639e693fff19fb",
             name = "inv_hammer_08",
@@ -4401,6 +4901,7 @@ return {
             type = 1,
         },
         {
+            id   = 133046,
             file = 133046,
             hash = "c77323f22de86c304a563badafd57094",
             name = "inv_hammer_09",
@@ -4408,6 +4909,7 @@ return {
             type = 1,
         },
         {
+            id   = 133047,
             file = 133047,
             hash = "eecb9f76338fb16e51bfd82e2d1f9bb9",
             name = "inv_hammer_10",
@@ -4415,6 +4917,7 @@ return {
             type = 1,
         },
         {
+            id   = 133048,
             file = 133048,
             hash = "de278be9d1bc9a14ce7b9fc8147dcbd2",
             name = "inv_hammer_11",
@@ -4422,6 +4925,7 @@ return {
             type = 1,
         },
         {
+            id   = 133049,
             file = 133049,
             hash = "0eb177c1a9cca5de84f79964732bd2a9",
             name = "inv_hammer_12",
@@ -4429,6 +4933,7 @@ return {
             type = 1,
         },
         {
+            id   = 133050,
             file = 133050,
             hash = "5f6b8884438d6344752d60ffc520b249",
             name = "inv_hammer_13",
@@ -4436,6 +4941,7 @@ return {
             type = 1,
         },
         {
+            id   = 133051,
             file = 133051,
             hash = "97f515e49d78c58eccd690e679bd6139",
             name = "inv_hammer_14",
@@ -4443,6 +4949,7 @@ return {
             type = 1,
         },
         {
+            id   = 133052,
             file = 133052,
             hash = "17396b16376f686a219b037a134a676d",
             name = "inv_hammer_15",
@@ -4450,6 +4957,7 @@ return {
             type = 1,
         },
         {
+            id   = 133053,
             file = 133053,
             hash = "a1dda6eaece0e159a82082b66e7599a0",
             name = "inv_hammer_16",
@@ -4457,6 +4965,7 @@ return {
             type = 1,
         },
         {
+            id   = 133054,
             file = 133054,
             hash = "3fd6dad9211770f0bbe5ab8c69eafb2e",
             name = "inv_hammer_17",
@@ -4464,6 +4973,7 @@ return {
             type = 1,
         },
         {
+            id   = 133055,
             file = 133055,
             hash = "ffc34c271c88c4e3e1e6a58a2bc9f1b1",
             name = "inv_hammer_18",
@@ -4471,6 +4981,7 @@ return {
             type = 1,
         },
         {
+            id   = 133056,
             file = 133056,
             hash = "c3bde307cec2d530bc5a6894199fc447",
             name = "inv_hammer_19",
@@ -4478,6 +4989,7 @@ return {
             type = 1,
         },
         {
+            id   = 133057,
             file = 133057,
             hash = "ed7e289524460c62551d7d8ef7f038b7",
             name = "inv_hammer_20",
@@ -4485,6 +4997,7 @@ return {
             type = 1,
         },
         {
+            id   = 133058,
             file = 133058,
             hash = "cf3509c52ad8e69454c791bd63ea15dd",
             name = "inv_hammer_21",
@@ -4492,6 +5005,7 @@ return {
             type = 1,
         },
         {
+            id   = 133059,
             file = 133059,
             hash = "3cc120f203ed573cbc6920cc4552e2e7",
             name = "inv_hammer_22",
@@ -4499,6 +5013,7 @@ return {
             type = 1,
         },
         {
+            id   = 133060,
             file = 133060,
             hash = "4cdd621a7b3143aafb2be7aa8828ecab",
             name = "inv_hammer_23",
@@ -4506,6 +5021,7 @@ return {
             type = 1,
         },
         {
+            id   = 133061,
             file = 133061,
             hash = "7302ec2cf8f32b267837b12a7a006b48",
             name = "inv_hammer_24",
@@ -4513,6 +5029,7 @@ return {
             type = 1,
         },
         {
+            id   = 133062,
             file = 133062,
             hash = "effb434de7e010b310ff693715ca0ccd",
             name = "inv_hammer_25",
@@ -4520,6 +5037,7 @@ return {
             type = 1,
         },
         {
+            id   = 133066,
             file = 133066,
             hash = "879be73871151a2ec0feaf54682c2ef2",
             name = "inv_hammer_unique_sulfuras",
@@ -4527,6 +5045,7 @@ return {
             type = 1,
         },
         {
+            id   = 133067,
             file = 133067,
             hash = "2e39f81b36e06adf7e6c484637a65e6e",
             name = "inv_helm_mask_zulgurub_d_01",
@@ -4534,6 +5053,7 @@ return {
             type = 1,
         },
         {
+            id   = 133069,
             file = 133069,
             hash = "2e78fd0a0fa6d06199a650d0b2160d95",
             name = "inv_helmet_01",
@@ -4541,6 +5061,7 @@ return {
             type = 1,
         },
         {
+            id   = 133070,
             file = 133070,
             hash = "4ccf88c864146ab3ed744120bd290cdd",
             name = "inv_helmet_02",
@@ -4548,6 +5069,7 @@ return {
             type = 1,
         },
         {
+            id   = 133071,
             file = 133071,
             hash = "f789e01dcf1b9b5167c725ba99f7e3e1",
             name = "inv_helmet_03",
@@ -4555,6 +5077,7 @@ return {
             type = 1,
         },
         {
+            id   = 133072,
             file = 133072,
             hash = "5ff275d4f731685b0809b8fd0413aa24",
             name = "inv_helmet_04",
@@ -4562,6 +5085,7 @@ return {
             type = 1,
         },
         {
+            id   = 133073,
             file = 133073,
             hash = "6c03d6fbcdfa6e5b1aeef68e392834b9",
             name = "inv_helmet_05",
@@ -4569,6 +5093,7 @@ return {
             type = 1,
         },
         {
+            id   = 133074,
             file = 133074,
             hash = "a0918a011fe56cc3c9b41909d97d91d1",
             name = "inv_helmet_06",
@@ -4576,6 +5101,7 @@ return {
             type = 1,
         },
         {
+            id   = 133075,
             file = 133075,
             hash = "90bff4138633a76260c5ff9a69b59270",
             name = "inv_helmet_07",
@@ -4583,6 +5109,7 @@ return {
             type = 1,
         },
         {
+            id   = 133076,
             file = 133076,
             hash = "c362ad0571e6d8a6895d3233f601f451",
             name = "inv_helmet_08",
@@ -4590,6 +5117,7 @@ return {
             type = 1,
         },
         {
+            id   = 133077,
             file = 133077,
             hash = "a7d034698962fe06e66a541c12a63dfe",
             name = "inv_helmet_09",
@@ -4597,6 +5125,7 @@ return {
             type = 1,
         },
         {
+            id   = 133078,
             file = 133078,
             hash = "ca950fcab941997192837a7fa7655498",
             name = "inv_helmet_10",
@@ -4604,6 +5133,7 @@ return {
             type = 1,
         },
         {
+            id   = 133090,
             file = 133090,
             hash = "0c6d7c346a614a3d45e1e539296186bc",
             name = "inv_helmet_11",
@@ -4611,6 +5141,7 @@ return {
             type = 1,
         },
         {
+            id   = 133101,
             file = 133101,
             hash = "f928a574f95ad61a3276526cad400077",
             name = "inv_helmet_12",
@@ -4618,6 +5149,7 @@ return {
             type = 1,
         },
         {
+            id   = 133111,
             file = 133111,
             hash = "3da973007ecb03e4c01fa494b2ad70b7",
             name = "inv_helmet_13",
@@ -4625,6 +5157,7 @@ return {
             type = 1,
         },
         {
+            id   = 133116,
             file = 133116,
             hash = "eacf389c1cdd19bb6690a5697be36e79",
             name = "inv_helmet_14",
@@ -4632,6 +5165,7 @@ return {
             type = 1,
         },
         {
+            id   = 133117,
             file = 133117,
             hash = "c2d3f8ca2309d22cab1aaafcb1585468",
             name = "inv_helmet_15",
@@ -4639,6 +5173,7 @@ return {
             type = 1,
         },
         {
+            id   = 133118,
             file = 133118,
             hash = "e106fc5839791984b7cc1e0542a39882",
             name = "inv_helmet_16",
@@ -4646,6 +5181,7 @@ return {
             type = 1,
         },
         {
+            id   = 133119,
             file = 133119,
             hash = "7ad9fb4abecb501c9c1004df105c9f98",
             name = "inv_helmet_17",
@@ -4653,6 +5189,7 @@ return {
             type = 1,
         },
         {
+            id   = 133120,
             file = 133120,
             hash = "65177e8c747dd66b7b6216f73ae594ad",
             name = "inv_helmet_18",
@@ -4660,6 +5197,7 @@ return {
             type = 1,
         },
         {
+            id   = 133121,
             file = 133121,
             hash = "44c256b9c41b0db389e54e958f0199c6",
             name = "inv_helmet_19",
@@ -4667,6 +5205,7 @@ return {
             type = 1,
         },
         {
+            id   = 133122,
             file = 133122,
             hash = "16c0725968a1f4daa6908e4ff976aeef",
             name = "inv_helmet_20",
@@ -4674,6 +5213,7 @@ return {
             type = 1,
         },
         {
+            id   = 133123,
             file = 133123,
             hash = "bced51e26344a37338cd1b0716962ae9",
             name = "inv_helmet_21",
@@ -4681,6 +5221,7 @@ return {
             type = 1,
         },
         {
+            id   = 133124,
             file = 133124,
             hash = "b89403f07821b76f14151bf82aea4f67",
             name = "inv_helmet_22",
@@ -4688,6 +5229,7 @@ return {
             type = 1,
         },
         {
+            id   = 133125,
             file = 133125,
             hash = "f97ca0121a050c8a0ad98321a52138db",
             name = "inv_helmet_23",
@@ -4695,6 +5237,7 @@ return {
             type = 1,
         },
         {
+            id   = 133126,
             file = 133126,
             hash = "2410025609bc900582984667877a965d",
             name = "inv_helmet_24",
@@ -4702,6 +5245,7 @@ return {
             type = 1,
         },
         {
+            id   = 133127,
             file = 133127,
             hash = "6e89d2ec7d11690908d8c26f06bb47ea",
             name = "inv_helmet_25",
@@ -4709,6 +5253,7 @@ return {
             type = 1,
         },
         {
+            id   = 133128,
             file = 133128,
             hash = "883d410bc3aa81509e36f334da2ed76e",
             name = "inv_helmet_26",
@@ -4716,6 +5261,7 @@ return {
             type = 1,
         },
         {
+            id   = 133129,
             file = 133129,
             hash = "b01ef348556f6209fa6a950346f624ea",
             name = "inv_helmet_27",
@@ -4723,6 +5269,7 @@ return {
             type = 1,
         },
         {
+            id   = 133130,
             file = 133130,
             hash = "1485ff8dc61685863d36f5eda03be768",
             name = "inv_helmet_28",
@@ -4730,6 +5277,7 @@ return {
             type = 1,
         },
         {
+            id   = 133131,
             file = 133131,
             hash = "f709e6b4badcf0fa50453facece1562e",
             name = "inv_helmet_29",
@@ -4737,6 +5285,7 @@ return {
             type = 1,
         },
         {
+            id   = 133132,
             file = 133132,
             hash = "42e2b68eae38c1f26c3be5e166d467b1",
             name = "inv_helmet_30",
@@ -4744,6 +5293,7 @@ return {
             type = 1,
         },
         {
+            id   = 133133,
             file = 133133,
             hash = "140784e8de3aa1461a0724ee9b4e6e66",
             name = "inv_helmet_31",
@@ -4751,6 +5301,7 @@ return {
             type = 1,
         },
         {
+            id   = 133134,
             file = 133134,
             hash = "f94f15a7570e920573aa4b268d0e7a56",
             name = "inv_helmet_32",
@@ -4758,6 +5309,7 @@ return {
             type = 1,
         },
         {
+            id   = 133135,
             file = 133135,
             hash = "a20305c27e9febc1bc13fda8fd537c5b",
             name = "inv_helmet_33",
@@ -4765,6 +5317,7 @@ return {
             type = 1,
         },
         {
+            id   = 133136,
             file = 133136,
             hash = "c2b153520e84fa035477927e87b6603a",
             name = "inv_helmet_34",
@@ -4772,6 +5325,7 @@ return {
             type = 1,
         },
         {
+            id   = 133137,
             file = 133137,
             hash = "d4786daaa26f078f7038fb2cc2ded858",
             name = "inv_helmet_35",
@@ -4779,6 +5333,7 @@ return {
             type = 1,
         },
         {
+            id   = 133138,
             file = 133138,
             hash = "66c5bf36cf08da8b1335d86211977ed6",
             name = "inv_helmet_36",
@@ -4786,6 +5341,7 @@ return {
             type = 1,
         },
         {
+            id   = 133139,
             file = 133139,
             hash = "a9b4054993e5238bcac8efb9b09181ab",
             name = "inv_helmet_37",
@@ -4793,6 +5349,7 @@ return {
             type = 1,
         },
         {
+            id   = 133140,
             file = 133140,
             hash = "8367bca4dcea8ef70177a8107eb84ebb",
             name = "inv_helmet_38",
@@ -4800,6 +5357,7 @@ return {
             type = 1,
         },
         {
+            id   = 133141,
             file = 133141,
             hash = "e250e59128fcfb3074460ca1d5f222ac",
             name = "inv_helmet_39",
@@ -4807,6 +5365,7 @@ return {
             type = 1,
         },
         {
+            id   = 133142,
             file = 133142,
             hash = "5988303727d59ab41d3324f92cd7d1dc",
             name = "inv_helmet_40",
@@ -4814,6 +5373,7 @@ return {
             type = 1,
         },
         {
+            id   = 133143,
             file = 133143,
             hash = "c97b76a131e5e4b4036aa5b41d786ead",
             name = "inv_helmet_41",
@@ -4821,6 +5381,7 @@ return {
             type = 1,
         },
         {
+            id   = 133144,
             file = 133144,
             hash = "c9a5f377bada8b548f2f69221c7b43ca",
             name = "inv_helmet_42",
@@ -4828,6 +5389,7 @@ return {
             type = 1,
         },
         {
+            id   = 133145,
             file = 133145,
             hash = "38117d1aca8953dea27090d0f94a6054",
             name = "inv_helmet_43",
@@ -4835,6 +5397,7 @@ return {
             type = 1,
         },
         {
+            id   = 133146,
             file = 133146,
             hash = "16c168e1c3b58bb7535eac410616392f",
             name = "inv_helmet_44",
@@ -4842,6 +5405,7 @@ return {
             type = 1,
         },
         {
+            id   = 133147,
             file = 133147,
             hash = "d35472c523d3dca54506988965618b3d",
             name = "inv_helmet_45",
@@ -4849,6 +5413,7 @@ return {
             type = 1,
         },
         {
+            id   = 133148,
             file = 133148,
             hash = "2026189bc5d1eddc077e7553b43cc36b",
             name = "inv_helmet_46",
@@ -4856,6 +5421,7 @@ return {
             type = 1,
         },
         {
+            id   = 133149,
             file = 133149,
             hash = "86b943a18963ed0811b1a9f8018f792d",
             name = "inv_helmet_47",
@@ -4863,6 +5429,7 @@ return {
             type = 1,
         },
         {
+            id   = 133150,
             file = 133150,
             hash = "624e84a87a74a30023f58c2d3fe98e62",
             name = "inv_helmet_48",
@@ -4870,6 +5437,7 @@ return {
             type = 1,
         },
         {
+            id   = 133151,
             file = 133151,
             hash = "be924ca695b1d626e41096886817ef44",
             name = "inv_helmet_49",
@@ -4877,6 +5445,7 @@ return {
             type = 1,
         },
         {
+            id   = 133152,
             file = 133152,
             hash = "471e659734132fdc8a85f1e9c139a03a",
             name = "inv_helmet_50",
@@ -4884,6 +5453,7 @@ return {
             type = 1,
         },
         {
+            id   = 133153,
             file = 133153,
             hash = "193dcced0d798805e28aa0d68319cb7e",
             name = "inv_helmet_51",
@@ -4891,6 +5461,7 @@ return {
             type = 1,
         },
         {
+            id   = 133154,
             file = 133154,
             hash = "7d7f1379d31c56b3f0f43aea0073f07d",
             name = "inv_helmet_52",
@@ -4898,6 +5469,7 @@ return {
             type = 1,
         },
         {
+            id   = 133155,
             file = 133155,
             hash = "19f7854875ad443244062ae5b9ad55e1",
             name = "inv_helmet_53",
@@ -4905,6 +5477,7 @@ return {
             type = 1,
         },
         {
+            id   = 133156,
             file = 133156,
             hash = "f1ce60e3ae7a3f64bdf5c99a1a09416f",
             name = "inv_helmet_54",
@@ -4912,6 +5485,7 @@ return {
             type = 1,
         },
         {
+            id   = 133157,
             file = 133157,
             hash = "70031c1a2104eccee81c4f082ce4b07a",
             name = "inv_helmet_55",
@@ -4919,6 +5493,7 @@ return {
             type = 1,
         },
         {
+            id   = 133158,
             file = 133158,
             hash = "aa8e28f1a20b9341e15da1bb17834021",
             name = "inv_helmet_56",
@@ -4926,6 +5501,7 @@ return {
             type = 1,
         },
         {
+            id   = 133159,
             file = 133159,
             hash = "d36b25428d246a6a5b25515c1d078d0c",
             name = "inv_helmet_57",
@@ -4933,6 +5509,7 @@ return {
             type = 1,
         },
         {
+            id   = 133160,
             file = 133160,
             hash = "069235004f65566e23feca32e9c88c75",
             name = "inv_helmet_58",
@@ -4940,6 +5517,7 @@ return {
             type = 1,
         },
         {
+            id   = 133161,
             file = 133161,
             hash = "3bbb9677038d9833d356b004e6e4e491",
             name = "inv_helmet_59",
@@ -4947,6 +5525,7 @@ return {
             type = 1,
         },
         {
+            id   = 133162,
             file = 133162,
             hash = "ba1d5d2f0d342e5e55464634e02d88dc",
             name = "inv_helmet_60",
@@ -4954,6 +5533,7 @@ return {
             type = 1,
         },
         {
+            id   = 133163,
             file = 133163,
             hash = "f349152fe4483112f975a2a0960099f1",
             name = "inv_helmet_61",
@@ -4961,6 +5541,7 @@ return {
             type = 1,
         },
         {
+            id   = 133164,
             file = 133164,
             hash = "2429334b5e3367d3bb3be05a87e5c757",
             name = "inv_helmet_62",
@@ -4968,6 +5549,7 @@ return {
             type = 1,
         },
         {
+            id   = 133165,
             file = 133165,
             hash = "acc9090f826a20ae896a7fbe27f95200",
             name = "inv_helmet_63",
@@ -4975,6 +5557,7 @@ return {
             type = 1,
         },
         {
+            id   = 133166,
             file = 133166,
             hash = "fce722a58843eaa6488478115cb0d392",
             name = "inv_helmet_64",
@@ -4982,6 +5565,7 @@ return {
             type = 1,
         },
         {
+            id   = 133167,
             file = 133167,
             hash = "f76dbe6378c1f8146968c7546df1bf98",
             name = "inv_helmet_65",
@@ -4989,6 +5573,7 @@ return {
             type = 1,
         },
         {
+            id   = 133168,
             file = 133168,
             hash = "d0c56becaf85b9e3e28d79fbb6fea9a2",
             name = "inv_helmet_66",
@@ -4996,6 +5581,7 @@ return {
             type = 1,
         },
         {
+            id   = 133169,
             file = 133169,
             hash = "4975e45e59d2e054aa44b3167a682819",
             name = "inv_helmet_67",
@@ -5003,6 +5589,7 @@ return {
             type = 1,
         },
         {
+            id   = 133170,
             file = 133170,
             hash = "f048401072b3b5d149e3e9f09a0b0547",
             name = "inv_helmet_68",
@@ -5010,6 +5597,7 @@ return {
             type = 1,
         },
         {
+            id   = 133171,
             file = 133171,
             hash = "3d3456ca15b1a5d8bf8b93c2de283b84",
             name = "inv_helmet_69",
@@ -5017,6 +5605,7 @@ return {
             type = 1,
         },
         {
+            id   = 133172,
             file = 133172,
             hash = "626bd742c0042254218f186ad06c26b0",
             name = "inv_helmet_70",
@@ -5024,6 +5613,7 @@ return {
             type = 1,
         },
         {
+            id   = 133173,
             file = 133173,
             hash = "2a52850b0b8c74ebc4e9728db8b966bd",
             name = "inv_helmet_71",
@@ -5031,6 +5621,7 @@ return {
             type = 1,
         },
         {
+            id   = 133174,
             file = 133174,
             hash = "40f073a0cfa825552cb6c50aeed378e1",
             name = "inv_helmet_72",
@@ -5038,6 +5629,7 @@ return {
             type = 1,
         },
         {
+            id   = 133175,
             file = 133175,
             hash = "f97cf4e0a857e1882c873ce18a1129ac",
             name = "inv_helmet_73",
@@ -5045,6 +5637,7 @@ return {
             type = 1,
         },
         {
+            id   = 133176,
             file = 133176,
             hash = "99799c67c3bbd4fb1001f229ddf95f49",
             name = "inv_helmet_74",
@@ -5052,6 +5645,7 @@ return {
             type = 1,
         },
         {
+            id   = 133202,
             file = 133202,
             hash = "6cccf76d1f3e4530ad5e8e0a9514df60",
             name = "inv_holiday_christmas_present_01",
@@ -5059,6 +5653,7 @@ return {
             type = 1,
         },
         {
+            id   = 133203,
             file = 133203,
             hash = "41eed8275a268b65abb21d3dd88a1b82",
             name = "inv_holiday_christmas_present_02",
@@ -5066,6 +5661,7 @@ return {
             type = 1,
         },
         {
+            id   = 133204,
             file = 133204,
             hash = "8b3e4d2e1ca08df7b8aee393d1ceb564",
             name = "inv_holiday_christmas_present_03",
@@ -5073,6 +5669,7 @@ return {
             type = 1,
         },
         {
+            id   = 133205,
             file = 133205,
             hash = "3c53e8efbdf42491b080c1e7b0d53398",
             name = "inv_holiday_christmas_wrapping_01",
@@ -5080,6 +5677,7 @@ return {
             type = 1,
         },
         {
+            id   = 133206,
             file = 133206,
             hash = "5e37a2d4d32dfc684e7231a71086af13",
             name = "inv_holiday_christmas_wrapping_02",
@@ -5087,6 +5685,7 @@ return {
             type = 1,
         },
         {
+            id   = 133207,
             file = 133207,
             hash = "87521d439f81de2662041f867c275df2",
             name = "inv_holiday_christmas_wrapping_03",
@@ -5094,6 +5693,7 @@ return {
             type = 1,
         },
         {
+            id   = 133209,
             file = 133209,
             hash = "b1d06a5849c75e34488be032601eb7d1",
             name = "inv_holiday_tow_spicebandage",
@@ -5101,6 +5701,7 @@ return {
             type = 1,
         },
         {
+            id   = 133210,
             file = 133210,
             hash = "87b1e9adf4b4a9112f92d3f679a18d3b",
             name = "inv_holiday_tow_spicebowl",
@@ -5108,6 +5709,7 @@ return {
             type = 1,
         },
         {
+            id   = 133211,
             file = 133211,
             hash = "a3204f799537b0a82505dd7e2e9f7aa8",
             name = "inv_holiday_tow_spicebrownie",
@@ -5115,6 +5717,7 @@ return {
             type = 1,
         },
         {
+            id   = 133212,
             file = 133212,
             hash = "1c19d371bdc13f481a16a0fc87b50abf",
             name = "inv_holiday_tow_spicepotion01",
@@ -5122,6 +5725,7 @@ return {
             type = 1,
         },
         {
+            id   = 133213,
             file = 133213,
             hash = "e188d1a663f0df475327d02d4713ef28",
             name = "inv_holiday_tow_spicepotion02",
@@ -5129,6 +5733,7 @@ return {
             type = 1,
         },
         {
+            id   = 133214,
             file = 133214,
             hash = "3822758d6c18f6115768cebd0d4b06e3",
             name = "inv_holiday_tow_spicepotion03",
@@ -5136,6 +5741,7 @@ return {
             type = 1,
         },
         {
+            id   = 133215,
             file = 133215,
             hash = "b14577ae198d1bfb3ad76fe2e68a5ee9",
             name = "inv_ingot_01",
@@ -5143,6 +5749,7 @@ return {
             type = 1,
         },
         {
+            id   = 133216,
             file = 133216,
             hash = "ace4c3eea6b9a5652c7fbe8f3e4cd917",
             name = "inv_ingot_02",
@@ -5150,6 +5757,7 @@ return {
             type = 1,
         },
         {
+            id   = 133217,
             file = 133217,
             hash = "69e1c63ec7707f568543d078312ed488",
             name = "inv_ingot_03",
@@ -5157,6 +5765,7 @@ return {
             type = 1,
         },
         {
+            id   = 133218,
             file = 133218,
             hash = "04291d772d2156eabde0038ffea8581a",
             name = "inv_ingot_04",
@@ -5164,6 +5773,7 @@ return {
             type = 1,
         },
         {
+            id   = 133219,
             file = 133219,
             hash = "274eafba236079b0de45e516184f4356",
             name = "inv_ingot_05",
@@ -5171,6 +5781,7 @@ return {
             type = 1,
         },
         {
+            id   = 133220,
             file = 133220,
             hash = "3af52a5569c3a363ce8d77fd0ba019ad",
             name = "inv_ingot_06",
@@ -5178,6 +5789,7 @@ return {
             type = 1,
         },
         {
+            id   = 133221,
             file = 133221,
             hash = "e4d45e179ecf9503684dd2256a125903",
             name = "inv_ingot_07",
@@ -5185,6 +5797,7 @@ return {
             type = 1,
         },
         {
+            id   = 133222,
             file = 133222,
             hash = "2a1405bd60403c73abcecb7f069f2805",
             name = "inv_ingot_08",
@@ -5192,6 +5805,7 @@ return {
             type = 1,
         },
         {
+            id   = 133227,
             file = 133227,
             hash = "5bb91c2d616b304f837dc71b3cf913d2",
             name = "inv_ingot_bronze",
@@ -5199,6 +5813,7 @@ return {
             type = 1,
         },
         {
+            id   = 133229,
             file = 133229,
             hash = "2400e5e6fa35f890b8fc0fa9ff03d0d4",
             name = "inv_ingot_eternium",
@@ -5206,6 +5821,7 @@ return {
             type = 1,
         },
         {
+            id   = 133232,
             file = 133232,
             hash = "a42de54986ae210259a1ecfd5126aa12",
             name = "inv_ingot_iron",
@@ -5213,6 +5829,7 @@ return {
             type = 1,
         },
         {
+            id   = 133233,
             file = 133233,
             hash = "470ca8f90aa81fed1cdf39be5a94637c",
             name = "inv_ingot_mithril",
@@ -5220,6 +5837,7 @@ return {
             type = 1,
         },
         {
+            id   = 133234,
             file = 133234,
             hash = "491b1fdf8dfa3e3d541d30726b05a038",
             name = "inv_ingot_steel",
@@ -5227,6 +5845,7 @@ return {
             type = 1,
         },
         {
+            id   = 133235,
             file = 133235,
             hash = "9ffea44483bedbb1735133219792321e",
             name = "inv_ingot_thorium",
@@ -5234,6 +5853,7 @@ return {
             type = 1,
         },
         {
+            id   = 133276,
             file = 133276,
             hash = "f92aac27ff1ba6b2a9718fb137d6de33",
             name = "inv_jewelry_amulet_01",
@@ -5241,6 +5861,7 @@ return {
             type = 1,
         },
         {
+            id   = 133277,
             file = 133277,
             hash = "7037f44ba196af31b1290f385be3bfb2",
             name = "inv_jewelry_amulet_02",
@@ -5248,6 +5869,7 @@ return {
             type = 1,
         },
         {
+            id   = 133278,
             file = 133278,
             hash = "2fb78512c0cd7b27155d4554bc2ef38e",
             name = "inv_jewelry_amulet_03",
@@ -5255,6 +5877,7 @@ return {
             type = 1,
         },
         {
+            id   = 133279,
             file = 133279,
             hash = "e95356826e88480b01cb61cd4c061252",
             name = "inv_jewelry_amulet_04",
@@ -5262,6 +5885,7 @@ return {
             type = 1,
         },
         {
+            id   = 133280,
             file = 133280,
             hash = "204d1ffe9c41e285e302aaa5fd813640",
             name = "inv_jewelry_amulet_05",
@@ -5269,6 +5893,7 @@ return {
             type = 1,
         },
         {
+            id   = 133281,
             file = 133281,
             hash = "3938550757797bb3d2bfcfa6012226cb",
             name = "inv_jewelry_amulet_06",
@@ -5276,6 +5901,7 @@ return {
             type = 1,
         },
         {
+            id   = 133282,
             file = 133282,
             hash = "6cdc16d8c2b20793a94a55cd54237a3e",
             name = "inv_jewelry_amulet_07",
@@ -5283,6 +5909,7 @@ return {
             type = 1,
         },
         {
+            id   = 133283,
             file = 133283,
             hash = "8cb71e7f8ad3941ea229803604b758e9",
             name = "inv_jewelry_frostwolftrinket_01",
@@ -5290,6 +5917,7 @@ return {
             type = 1,
         },
         {
+            id   = 133284,
             file = 133284,
             hash = "6cc64908121c2844cca891e70675512e",
             name = "inv_jewelry_frostwolftrinket_02",
@@ -5297,6 +5925,7 @@ return {
             type = 1,
         },
         {
+            id   = 133285,
             file = 133285,
             hash = "59dc5d72f8edcbfdbc0df862336bb1a4",
             name = "inv_jewelry_frostwolftrinket_03",
@@ -5304,6 +5933,7 @@ return {
             type = 1,
         },
         {
+            id   = 133286,
             file = 133286,
             hash = "2d990874effbad8521a739d287126322",
             name = "inv_jewelry_frostwolftrinket_04",
@@ -5311,6 +5941,7 @@ return {
             type = 1,
         },
         {
+            id   = 133287,
             file = 133287,
             hash = "0cf51a002f0be057d7258d840ebe724a",
             name = "inv_jewelry_frostwolftrinket_05",
@@ -5318,6 +5949,7 @@ return {
             type = 1,
         },
         {
+            id   = 133288,
             file = 133288,
             hash = "6ebc38712cf96ea4f29a12deaa264603",
             name = "inv_jewelry_necklace_01",
@@ -5325,6 +5957,7 @@ return {
             type = 1,
         },
         {
+            id   = 133289,
             file = 133289,
             hash = "5ce2de8ab5072724e6f0a42c07ec0b63",
             name = "inv_jewelry_necklace_02",
@@ -5332,6 +5965,7 @@ return {
             type = 1,
         },
         {
+            id   = 133290,
             file = 133290,
             hash = "7f18032fcd013f7bcff7df2e0e1eed43",
             name = "inv_jewelry_necklace_03",
@@ -5339,6 +5973,7 @@ return {
             type = 1,
         },
         {
+            id   = 133291,
             file = 133291,
             hash = "d54fc4a589a53f4c08b64b76d075ab73",
             name = "inv_jewelry_necklace_04",
@@ -5346,6 +5981,7 @@ return {
             type = 1,
         },
         {
+            id   = 133292,
             file = 133292,
             hash = "78895667856749fc9e76a22eac7f99fa",
             name = "inv_jewelry_necklace_05",
@@ -5353,6 +5989,7 @@ return {
             type = 1,
         },
         {
+            id   = 133293,
             file = 133293,
             hash = "2ba58d77a80936283af6c39edf93a81f",
             name = "inv_jewelry_necklace_06",
@@ -5360,6 +5997,7 @@ return {
             type = 1,
         },
         {
+            id   = 133294,
             file = 133294,
             hash = "adaf2a85a1590d005cf7fd0c7a6800c5",
             name = "inv_jewelry_necklace_07",
@@ -5367,6 +6005,7 @@ return {
             type = 1,
         },
         {
+            id   = 133295,
             file = 133295,
             hash = "9a75e60673982fd109e60faf19f7657e",
             name = "inv_jewelry_necklace_08",
@@ -5374,6 +6013,7 @@ return {
             type = 1,
         },
         {
+            id   = 133296,
             file = 133296,
             hash = "4443229276d23bd68ef22e4a469a904c",
             name = "inv_jewelry_necklace_09",
@@ -5381,6 +6021,7 @@ return {
             type = 1,
         },
         {
+            id   = 133297,
             file = 133297,
             hash = "d7c634e4e85c159d86dc9df31ddefd75",
             name = "inv_jewelry_necklace_10",
@@ -5388,6 +6029,7 @@ return {
             type = 1,
         },
         {
+            id   = 133298,
             file = 133298,
             hash = "ff6dbaec90466fce42d0fd0680cc7350",
             name = "inv_jewelry_necklace_11",
@@ -5395,6 +6037,7 @@ return {
             type = 1,
         },
         {
+            id   = 133299,
             file = 133299,
             hash = "009737113c8fdf24e300c3af504b686f",
             name = "inv_jewelry_necklace_12",
@@ -5402,6 +6045,7 @@ return {
             type = 1,
         },
         {
+            id   = 133300,
             file = 133300,
             hash = "867bec57a94e74954b213d7fd0dc71a4",
             name = "inv_jewelry_necklace_13",
@@ -5409,6 +6053,7 @@ return {
             type = 1,
         },
         {
+            id   = 133301,
             file = 133301,
             hash = "9073c225e66dc5c378170c19ebe77c4d",
             name = "inv_jewelry_necklace_14",
@@ -5416,6 +6061,7 @@ return {
             type = 1,
         },
         {
+            id   = 133302,
             file = 133302,
             hash = "0e8a3d390989f1f1fe58b1aef3056ab6",
             name = "inv_jewelry_necklace_15",
@@ -5423,6 +6069,7 @@ return {
             type = 1,
         },
         {
+            id   = 133303,
             file = 133303,
             hash = "7233c9cf314ccd2054cd76cc94098dbb",
             name = "inv_jewelry_necklace_16",
@@ -5430,6 +6077,7 @@ return {
             type = 1,
         },
         {
+            id   = 133304,
             file = 133304,
             hash = "ff78fc5396a1e68ef658676bed1878ea",
             name = "inv_jewelry_necklace_17",
@@ -5437,6 +6085,7 @@ return {
             type = 1,
         },
         {
+            id   = 133305,
             file = 133305,
             hash = "08e224a362b4672db82e18429187c56d",
             name = "inv_jewelry_necklace_18",
@@ -5444,6 +6093,7 @@ return {
             type = 1,
         },
         {
+            id   = 133306,
             file = 133306,
             hash = "b016269eefb3dc9fe70f773412747fad",
             name = "inv_jewelry_necklace_19",
@@ -5451,6 +6101,7 @@ return {
             type = 1,
         },
         {
+            id   = 133307,
             file = 133307,
             hash = "0cd6d0a528c2441d5f436cf4768de6e5",
             name = "inv_jewelry_necklace_20",
@@ -5458,6 +6109,7 @@ return {
             type = 1,
         },
         {
+            id   = 133308,
             file = 133308,
             hash = "9a8b5c195ae3738d0e48803163e14bf9",
             name = "inv_jewelry_necklace_21",
@@ -5465,6 +6117,7 @@ return {
             type = 1,
         },
         {
+            id   = 133309,
             file = 133309,
             hash = "a224423470dd590aebb8b4bb55170618",
             name = "inv_jewelry_necklace_22",
@@ -5472,6 +6125,7 @@ return {
             type = 1,
         },
         {
+            id   = 133310,
             file = 133310,
             hash = "92840ba7399b5343be50247b9af24b8c",
             name = "inv_jewelry_necklace_23",
@@ -5479,6 +6133,7 @@ return {
             type = 1,
         },
         {
+            id   = 133311,
             file = 133311,
             hash = "444759d9589023e9af1fe743726cd61e",
             name = "inv_jewelry_necklace_24",
@@ -5486,6 +6141,7 @@ return {
             type = 1,
         },
         {
+            id   = 133312,
             file = 133312,
             hash = "7f3792b02ed861db6c3b23026c5a34e1",
             name = "inv_jewelry_necklace_25",
@@ -5493,6 +6149,7 @@ return {
             type = 1,
         },
         {
+            id   = 133313,
             file = 133313,
             hash = "4fc91557e44f2c5514db79148f34547a",
             name = "inv_jewelry_necklace_26",
@@ -5500,6 +6157,7 @@ return {
             type = 1,
         },
         {
+            id   = 133314,
             file = 133314,
             hash = "2d2c65a0dcb467f37b9fec7bdc2f2da9",
             name = "inv_jewelry_necklace_27",
@@ -5507,6 +6165,7 @@ return {
             type = 1,
         },
         {
+            id   = 133315,
             file = 133315,
             hash = "ca197ac22352b7e3573f07de9ca24196",
             name = "inv_jewelry_necklace_27naxxramas",
@@ -5514,6 +6173,7 @@ return {
             type = 1,
         },
         {
+            id   = 133316,
             file = 133316,
             hash = "e36fe0db8a29253c1b917c23eba97b77",
             name = "inv_jewelry_necklace_28",
@@ -5521,6 +6181,7 @@ return {
             type = 1,
         },
         {
+            id   = 133317,
             file = 133317,
             hash = "fcf6e1e839f4c1f0c4e55b3cc0a739a8",
             name = "inv_jewelry_necklace_28naxxramas",
@@ -5528,6 +6189,7 @@ return {
             type = 1,
         },
         {
+            id   = 133318,
             file = 133318,
             hash = "7962d0157998bc60e8452790a3aa55c3",
             name = "inv_jewelry_necklace_29",
@@ -5535,6 +6197,7 @@ return {
             type = 1,
         },
         {
+            id   = 133319,
             file = 133319,
             hash = "5b2f4f6b04708880f4f075a8c2f41a24",
             name = "inv_jewelry_necklace_29naxxramas",
@@ -5542,6 +6205,7 @@ return {
             type = 1,
         },
         {
+            id   = 133320,
             file = 133320,
             hash = "5d4f354a59a4d63b7a28d4078d2ea732",
             name = "inv_jewelry_necklace_30",
@@ -5549,6 +6213,7 @@ return {
             type = 1,
         },
         {
+            id   = 133321,
             file = 133321,
             hash = "68eede885b81adc9bc37a3a5b01256ae",
             name = "inv_jewelry_necklace_30naxxramas",
@@ -5556,6 +6221,7 @@ return {
             type = 1,
         },
         {
+            id   = 133339,
             file = 133339,
             hash = "b22da9d1c82dd642df4103dae4dd1213",
             name = "inv_jewelry_necklace_ahnqiraj_01",
@@ -5563,6 +6229,7 @@ return {
             type = 1,
         },
         {
+            id   = 133340,
             file = 133340,
             hash = "7f9bf2c2ed9f4027d8279a0170a33f48",
             name = "inv_jewelry_necklace_ahnqiraj_02",
@@ -5570,6 +6237,7 @@ return {
             type = 1,
         },
         {
+            id   = 133341,
             file = 133341,
             hash = "bd54bcf119015b3ba299d90ed319ee04",
             name = "inv_jewelry_necklace_ahnqiraj_03",
@@ -5577,6 +6245,7 @@ return {
             type = 1,
         },
         {
+            id   = 133342,
             file = 133342,
             hash = "cce6265d6577ec18622e975aa93ca2e0",
             name = "inv_jewelry_necklace_ahnqiraj_04",
@@ -5584,6 +6253,7 @@ return {
             type = 1,
         },
         {
+            id   = 133343,
             file = 133343,
             hash = "8a55cac8322c0faf03804acd289ca99a",
             name = "inv_jewelry_ring_01",
@@ -5591,6 +6261,7 @@ return {
             type = 1,
         },
         {
+            id   = 133344,
             file = 133344,
             hash = "b91905c61a9bf264251ea52221157f31",
             name = "inv_jewelry_ring_02",
@@ -5598,6 +6269,7 @@ return {
             type = 1,
         },
         {
+            id   = 133345,
             file = 133345,
             hash = "a9ae85348afa01694a35a655f35e6ffe",
             name = "inv_jewelry_ring_03",
@@ -5605,6 +6277,7 @@ return {
             type = 1,
         },
         {
+            id   = 133346,
             file = 133346,
             hash = "eb285dd16845ef392edfaa10f7d37d7a",
             name = "inv_jewelry_ring_04",
@@ -5612,6 +6285,7 @@ return {
             type = 1,
         },
         {
+            id   = 133347,
             file = 133347,
             hash = "ad30094677bd04af8351fcf0bc7b09a6",
             name = "inv_jewelry_ring_05",
@@ -5619,6 +6293,7 @@ return {
             type = 1,
         },
         {
+            id   = 133348,
             file = 133348,
             hash = "ad26c8c3c8ecec11f5a34d7c3f1874e1",
             name = "inv_jewelry_ring_06",
@@ -5626,6 +6301,7 @@ return {
             type = 1,
         },
         {
+            id   = 133349,
             file = 133349,
             hash = "d058f44b0e703fcf1cef815d83f1db54",
             name = "inv_jewelry_ring_07",
@@ -5633,6 +6309,7 @@ return {
             type = 1,
         },
         {
+            id   = 133350,
             file = 133350,
             hash = "a50eaa4b9313b18b13510470b2ef1c6a",
             name = "inv_jewelry_ring_08",
@@ -5640,6 +6317,7 @@ return {
             type = 1,
         },
         {
+            id   = 133351,
             file = 133351,
             hash = "84f9a0e0aadc1bc3eb6763902e11aea8",
             name = "inv_jewelry_ring_09",
@@ -5647,6 +6325,7 @@ return {
             type = 1,
         },
         {
+            id   = 133352,
             file = 133352,
             hash = "d43391600d1af5f2f6d9abb115c94fb2",
             name = "inv_jewelry_ring_10",
@@ -5654,6 +6333,7 @@ return {
             type = 1,
         },
         {
+            id   = 133353,
             file = 133353,
             hash = "3f818f6b9153be30de2009f98bc18898",
             name = "inv_jewelry_ring_11",
@@ -5661,6 +6341,7 @@ return {
             type = 1,
         },
         {
+            id   = 133354,
             file = 133354,
             hash = "612c4f29b6d2f05025fddbdbe4189352",
             name = "inv_jewelry_ring_12",
@@ -5668,6 +6349,7 @@ return {
             type = 1,
         },
         {
+            id   = 133355,
             file = 133355,
             hash = "ad14ae517b7fb15bf3e14db4fdada33c",
             name = "inv_jewelry_ring_13",
@@ -5675,6 +6357,7 @@ return {
             type = 1,
         },
         {
+            id   = 133356,
             file = 133356,
             hash = "d75fd9e83c365928b826471af2b12eec",
             name = "inv_jewelry_ring_14",
@@ -5682,6 +6365,7 @@ return {
             type = 1,
         },
         {
+            id   = 133357,
             file = 133357,
             hash = "9f62702d74e618f6d867d758540fd76c",
             name = "inv_jewelry_ring_15",
@@ -5689,6 +6373,7 @@ return {
             type = 1,
         },
         {
+            id   = 133358,
             file = 133358,
             hash = "d06d9feae323ce1ea461c590c3375e67",
             name = "inv_jewelry_ring_16",
@@ -5696,6 +6381,7 @@ return {
             type = 1,
         },
         {
+            id   = 133359,
             file = 133359,
             hash = "308e635be4c275252ccac450c422696b",
             name = "inv_jewelry_ring_17",
@@ -5703,6 +6389,7 @@ return {
             type = 1,
         },
         {
+            id   = 133360,
             file = 133360,
             hash = "56de27087563c4b422bfe6a3e0e2ba7d",
             name = "inv_jewelry_ring_18",
@@ -5710,6 +6397,7 @@ return {
             type = 1,
         },
         {
+            id   = 133361,
             file = 133361,
             hash = "bd83ccc661b774c42b840a77296ca2c7",
             name = "inv_jewelry_ring_19",
@@ -5717,6 +6405,7 @@ return {
             type = 1,
         },
         {
+            id   = 133362,
             file = 133362,
             hash = "8d6cb90cd1c4d56cd5ddc2a8b074ba6c",
             name = "inv_jewelry_ring_20",
@@ -5724,6 +6413,7 @@ return {
             type = 1,
         },
         {
+            id   = 133363,
             file = 133363,
             hash = "740f71b1f8bf8ebbf418acc331543c25",
             name = "inv_jewelry_ring_21",
@@ -5731,6 +6421,7 @@ return {
             type = 1,
         },
         {
+            id   = 133364,
             file = 133364,
             hash = "e7e2920e3e35248a090fafe9a498ce00",
             name = "inv_jewelry_ring_22",
@@ -5738,6 +6429,7 @@ return {
             type = 1,
         },
         {
+            id   = 133365,
             file = 133365,
             hash = "91e0bff479095429dc1c90ef93e112a2",
             name = "inv_jewelry_ring_23",
@@ -5745,6 +6437,7 @@ return {
             type = 1,
         },
         {
+            id   = 133366,
             file = 133366,
             hash = "80a8fa431f5d8fec53e13d671255f47d",
             name = "inv_jewelry_ring_24",
@@ -5752,6 +6445,7 @@ return {
             type = 1,
         },
         {
+            id   = 133367,
             file = 133367,
             hash = "bcfd1086b9e72d65393a9a75959c3e87",
             name = "inv_jewelry_ring_25",
@@ -5759,6 +6453,7 @@ return {
             type = 1,
         },
         {
+            id   = 133368,
             file = 133368,
             hash = "f93295765f0ad74e49be6c8603c7ba1c",
             name = "inv_jewelry_ring_26",
@@ -5766,6 +6461,7 @@ return {
             type = 1,
         },
         {
+            id   = 133369,
             file = 133369,
             hash = "c22b3659f1896f120ace1a923cf5bec0",
             name = "inv_jewelry_ring_27",
@@ -5773,6 +6469,7 @@ return {
             type = 1,
         },
         {
+            id   = 133370,
             file = 133370,
             hash = "442ae9ef7f9b878f1e96562aa6f81ed1",
             name = "inv_jewelry_ring_28",
@@ -5780,6 +6477,7 @@ return {
             type = 1,
         },
         {
+            id   = 133371,
             file = 133371,
             hash = "c1abd4ba4f3f75db0ca748c623ff40e6",
             name = "inv_jewelry_ring_29",
@@ -5787,6 +6485,7 @@ return {
             type = 1,
         },
         {
+            id   = 133372,
             file = 133372,
             hash = "ec259ba49ebeb21fa186e452ec29008a",
             name = "inv_jewelry_ring_30",
@@ -5794,6 +6493,7 @@ return {
             type = 1,
         },
         {
+            id   = 133373,
             file = 133373,
             hash = "f5100043909b035ee4e76f08caca5a10",
             name = "inv_jewelry_ring_31",
@@ -5801,6 +6501,7 @@ return {
             type = 1,
         },
         {
+            id   = 133374,
             file = 133374,
             hash = "08bac57f30fed63178d12a4c69a678e3",
             name = "inv_jewelry_ring_32",
@@ -5808,6 +6509,7 @@ return {
             type = 1,
         },
         {
+            id   = 133375,
             file = 133375,
             hash = "924e601932c78edf7a07be3556cf8419",
             name = "inv_jewelry_ring_33",
@@ -5815,6 +6517,7 @@ return {
             type = 1,
         },
         {
+            id   = 133376,
             file = 133376,
             hash = "0bc50655b4e77384f7fd9e2e485d3f86",
             name = "inv_jewelry_ring_34",
@@ -5822,6 +6525,7 @@ return {
             type = 1,
         },
         {
+            id   = 133377,
             file = 133377,
             hash = "70ddecceaeeb761683aeadaa27b6182d",
             name = "inv_jewelry_ring_35",
@@ -5829,6 +6533,7 @@ return {
             type = 1,
         },
         {
+            id   = 133378,
             file = 133378,
             hash = "939b5074af429875e6c9ca4e565b8e6a",
             name = "inv_jewelry_ring_36",
@@ -5836,6 +6541,7 @@ return {
             type = 1,
         },
         {
+            id   = 133379,
             file = 133379,
             hash = "7e9e8cf48f59a717f83d2a511acbb389",
             name = "inv_jewelry_ring_37",
@@ -5843,6 +6549,7 @@ return {
             type = 1,
         },
         {
+            id   = 133380,
             file = 133380,
             hash = "2ecfcc67b5174e9a2f1a20b4fb604c09",
             name = "inv_jewelry_ring_38",
@@ -5850,6 +6557,7 @@ return {
             type = 1,
         },
         {
+            id   = 133381,
             file = 133381,
             hash = "ef3fd72f869a514867383b74642509d9",
             name = "inv_jewelry_ring_39",
@@ -5857,6 +6565,7 @@ return {
             type = 1,
         },
         {
+            id   = 133382,
             file = 133382,
             hash = "443585fbb01f9dbe2c875f88bfcfc3c9",
             name = "inv_jewelry_ring_40",
@@ -5864,6 +6573,7 @@ return {
             type = 1,
         },
         {
+            id   = 133383,
             file = 133383,
             hash = "d3d70ededb6c5e1e25a74edc724d02ea",
             name = "inv_jewelry_ring_41",
@@ -5871,6 +6581,7 @@ return {
             type = 1,
         },
         {
+            id   = 133384,
             file = 133384,
             hash = "f6ed7972f9f7355d566ade65774a5d46",
             name = "inv_jewelry_ring_42",
@@ -5878,6 +6589,7 @@ return {
             type = 1,
         },
         {
+            id   = 133385,
             file = 133385,
             hash = "3ec0484a124b4b3d04c0323b13c9b982",
             name = "inv_jewelry_ring_43",
@@ -5885,6 +6597,7 @@ return {
             type = 1,
         },
         {
+            id   = 133386,
             file = 133386,
             hash = "b49d5709d53071c6c2f89f9ef806ae23",
             name = "inv_jewelry_ring_44",
@@ -5892,6 +6605,7 @@ return {
             type = 1,
         },
         {
+            id   = 133387,
             file = 133387,
             hash = "4d293544fc87244c46e2028b33fd4e76",
             name = "inv_jewelry_ring_45",
@@ -5899,6 +6613,7 @@ return {
             type = 1,
         },
         {
+            id   = 133388,
             file = 133388,
             hash = "39472b0711345e08360e1c89ba201dd0",
             name = "inv_jewelry_ring_46",
@@ -5906,6 +6621,7 @@ return {
             type = 1,
         },
         {
+            id   = 133389,
             file = 133389,
             hash = "cd2de57baa2e5767e905035f0d1a25fa",
             name = "inv_jewelry_ring_47",
@@ -5913,6 +6629,7 @@ return {
             type = 1,
         },
         {
+            id   = 133390,
             file = 133390,
             hash = "87557b42956653417dd4a9f52ede41a9",
             name = "inv_jewelry_ring_48naxxramas",
@@ -5920,6 +6637,7 @@ return {
             type = 1,
         },
         {
+            id   = 133391,
             file = 133391,
             hash = "5805e01518e0008c2d2b7c8a96f22331",
             name = "inv_jewelry_ring_49naxxramas",
@@ -5927,6 +6645,7 @@ return {
             type = 1,
         },
         {
+            id   = 133392,
             file = 133392,
             hash = "3c46b7f6920113ab01794bd89f59d82c",
             name = "inv_jewelry_ring_50naxxramas",
@@ -5934,6 +6653,7 @@ return {
             type = 1,
         },
         {
+            id   = 133393,
             file = 133393,
             hash = "48985ba454bbfec7d9a0c9918933efe9",
             name = "inv_jewelry_ring_51naxxramas",
@@ -5941,6 +6661,7 @@ return {
             type = 1,
         },
         {
+            id   = 133394,
             file = 133394,
             hash = "77eaffc8b1e91ca29639b4e744a04554",
             name = "inv_jewelry_ring_52naxxramas",
@@ -5948,6 +6669,7 @@ return {
             type = 1,
         },
         {
+            id   = 133395,
             file = 133395,
             hash = "90fc6dde4f7e410e8adcdb7a877a2f4c",
             name = "inv_jewelry_ring_53naxxramas",
@@ -5955,6 +6677,7 @@ return {
             type = 1,
         },
         {
+            id   = 133423,
             file = 133423,
             hash = "2da37fd52087b8bf9cfb4a5d6fd8cbd0",
             name = "inv_jewelry_ring_ahnqiraj_01",
@@ -5962,6 +6685,7 @@ return {
             type = 1,
         },
         {
+            id   = 133424,
             file = 133424,
             hash = "7e1ef7ec8eeb2b465e52e5fc9ceb94b9",
             name = "inv_jewelry_ring_ahnqiraj_02",
@@ -5969,6 +6693,7 @@ return {
             type = 1,
         },
         {
+            id   = 133425,
             file = 133425,
             hash = "2f80278fa1e5a33953372cf546a42b13",
             name = "inv_jewelry_ring_ahnqiraj_03",
@@ -5976,6 +6701,7 @@ return {
             type = 1,
         },
         {
+            id   = 133426,
             file = 133426,
             hash = "2ae189cc2dcba271f77f87c3a0c40ca3",
             name = "inv_jewelry_ring_ahnqiraj_04",
@@ -5983,6 +6709,7 @@ return {
             type = 1,
         },
         {
+            id   = 133427,
             file = 133427,
             hash = "a1b6cd4f3598dee94ee1300d84785d34",
             name = "inv_jewelry_ring_ahnqiraj_05",
@@ -5990,6 +6717,7 @@ return {
             type = 1,
         },
         {
+            id   = 133428,
             file = 133428,
             hash = "79f006681a654d78601b8d4b42c47153",
             name = "inv_jewelry_ring_ahnqiraj_06",
@@ -5997,6 +6725,7 @@ return {
             type = 1,
         },
         {
+            id   = 133429,
             file = 133429,
             hash = "1c93846b4a78826f63049e772ddbbb09",
             name = "inv_jewelry_stormpiketrinket_01",
@@ -6004,6 +6733,7 @@ return {
             type = 1,
         },
         {
+            id   = 133430,
             file = 133430,
             hash = "1b3f05565553cd02a27c1e251c6622dd",
             name = "inv_jewelry_stormpiketrinket_02",
@@ -6011,6 +6741,7 @@ return {
             type = 1,
         },
         {
+            id   = 133431,
             file = 133431,
             hash = "7002020db434300304d6102764734c53",
             name = "inv_jewelry_stormpiketrinket_03",
@@ -6018,6 +6749,7 @@ return {
             type = 1,
         },
         {
+            id   = 133432,
             file = 133432,
             hash = "c642004248a92570a3c182fb79ef58d8",
             name = "inv_jewelry_stormpiketrinket_04",
@@ -6025,6 +6757,7 @@ return {
             type = 1,
         },
         {
+            id   = 133433,
             file = 133433,
             hash = "bc3ca47468e4379456ed64db72519ade",
             name = "inv_jewelry_stormpiketrinket_05",
@@ -6032,6 +6765,7 @@ return {
             type = 1,
         },
         {
+            id   = 133434,
             file = 133434,
             hash = "c7ba5e5b76e029aa42ebd3201fab7665",
             name = "inv_jewelry_talisman_01",
@@ -6039,6 +6773,7 @@ return {
             type = 1,
         },
         {
+            id   = 133435,
             file = 133435,
             hash = "183a3ca8e6d66ad54724ec8c5a4dc865",
             name = "inv_jewelry_talisman_02",
@@ -6046,6 +6781,7 @@ return {
             type = 1,
         },
         {
+            id   = 133436,
             file = 133436,
             hash = "fde7649a24c9b2fcc82c8bdf89e61bdb",
             name = "inv_jewelry_talisman_03",
@@ -6053,6 +6789,7 @@ return {
             type = 1,
         },
         {
+            id   = 133437,
             file = 133437,
             hash = "c59c46898696a8be62bb377c55665b38",
             name = "inv_jewelry_talisman_04",
@@ -6060,6 +6797,7 @@ return {
             type = 1,
         },
         {
+            id   = 133438,
             file = 133438,
             hash = "d38919725f213bc7765bc00fff0ccf39",
             name = "inv_jewelry_talisman_05",
@@ -6067,6 +6805,7 @@ return {
             type = 1,
         },
         {
+            id   = 133439,
             file = 133439,
             hash = "c914f2b20a754c72309a368574957c76",
             name = "inv_jewelry_talisman_06",
@@ -6074,6 +6813,7 @@ return {
             type = 1,
         },
         {
+            id   = 133440,
             file = 133440,
             hash = "ff0e68a6557275f29443cf86a20f4615",
             name = "inv_jewelry_talisman_07",
@@ -6081,6 +6821,7 @@ return {
             type = 1,
         },
         {
+            id   = 133441,
             file = 133441,
             hash = "8fe9477dd9088b33eb7599c64949658a",
             name = "inv_jewelry_talisman_08",
@@ -6088,6 +6829,7 @@ return {
             type = 1,
         },
         {
+            id   = 133442,
             file = 133442,
             hash = "bd6132fbaf03b0c957ae3e498b458ae6",
             name = "inv_jewelry_talisman_09",
@@ -6095,6 +6837,7 @@ return {
             type = 1,
         },
         {
+            id   = 133443,
             file = 133443,
             hash = "97dd6abf1d9dd17467d1627218907857",
             name = "inv_jewelry_talisman_10",
@@ -6102,6 +6845,7 @@ return {
             type = 1,
         },
         {
+            id   = 133444,
             file = 133444,
             hash = "c29a71c7aee111eae64e98f2aeab441f",
             name = "inv_jewelry_talisman_11",
@@ -6109,6 +6853,7 @@ return {
             type = 1,
         },
         {
+            id   = 133445,
             file = 133445,
             hash = "8caef9ccdb3ad3c91764c52e85a73db6",
             name = "inv_jewelry_talisman_12",
@@ -6116,6 +6861,7 @@ return {
             type = 1,
         },
         {
+            id   = 133446,
             file = 133446,
             hash = "ca6bbb6620f8f6126b824f5cb2d1f773",
             name = "inv_jewelry_talisman_13",
@@ -6123,6 +6869,7 @@ return {
             type = 1,
         },
         {
+            id   = 133447,
             file = 133447,
             hash = "7579917f46c2c09d06fe1f2ec122a2fc",
             name = "inv_jewelry_talisman_14",
@@ -6130,6 +6877,7 @@ return {
             type = 1,
         },
         {
+            id   = 133452,
             file = 133452,
             hash = "c191a74cdeaad21d1d19b7b26104faad",
             name = "inv_jewelry_trinketpvp_01",
@@ -6137,6 +6885,7 @@ return {
             type = 1,
         },
         {
+            id   = 133453,
             file = 133453,
             hash = "435b9dfde5d81ef7046c60c493ed3367",
             name = "inv_jewelry_trinketpvp_02",
@@ -6144,6 +6893,7 @@ return {
             type = 1,
         },
         {
+            id   = 133454,
             file = 133454,
             hash = "0352f69d5807fcdc95a3017c8abc0796",
             name = "inv_knife_1h_stratholme_d_01",
@@ -6151,6 +6901,7 @@ return {
             type = 1,
         },
         {
+            id   = 133455,
             file = 133455,
             hash = "53f35a6abe226875145181ad8eebbeaa",
             name = "inv_knife_1h_stratholme_d_02",
@@ -6158,6 +6909,7 @@ return {
             type = 1,
         },
         {
+            id   = 133456,
             file = 133456,
             hash = "7c4ee11280971ee8cfd3c8f5425accdb",
             name = "inv_knife_1h_stratholme_d_03",
@@ -6165,6 +6917,7 @@ return {
             type = 1,
         },
         {
+            id   = 133457,
             file = 133457,
             hash = "7ce30d91ae6f3aed6e7e6ec070a7fcad",
             name = "inv_letter_01",
@@ -6172,6 +6925,7 @@ return {
             type = 1,
         },
         {
+            id   = 133458,
             file = 133458,
             hash = "f7c128a3ea5e237e80de456f7725746c",
             name = "inv_letter_02",
@@ -6179,6 +6933,7 @@ return {
             type = 1,
         },
         {
+            id   = 133459,
             file = 133459,
             hash = "83059d7f5eb0836a6a4b5a6721854f3a",
             name = "inv_letter_03",
@@ -6186,6 +6941,7 @@ return {
             type = 1,
         },
         {
+            id   = 133460,
             file = 133460,
             hash = "3c76c277d73f263db579e1fb6676ce0b",
             name = "inv_letter_04",
@@ -6193,6 +6949,7 @@ return {
             type = 1,
         },
         {
+            id   = 133461,
             file = 133461,
             hash = "663194efe4d8e078d18c7141ff5a03e7",
             name = "inv_letter_05",
@@ -6200,6 +6957,7 @@ return {
             type = 1,
         },
         {
+            id   = 133462,
             file = 133462,
             hash = "9b196f2500ddc46439b294f4588c66a3",
             name = "inv_letter_06",
@@ -6207,6 +6965,7 @@ return {
             type = 1,
         },
         {
+            id   = 133463,
             file = 133463,
             hash = "8fa23f51b754360e77302fbf2e78e3df",
             name = "inv_letter_07",
@@ -6214,6 +6973,7 @@ return {
             type = 1,
         },
         {
+            id   = 133464,
             file = 133464,
             hash = "4853af9dc94c5d40c409b8801b9c555a",
             name = "inv_letter_08",
@@ -6221,6 +6981,7 @@ return {
             type = 1,
         },
         {
+            id   = 133465,
             file = 133465,
             hash = "eb1bb0695d72ea70c30fd543a2220e19",
             name = "inv_letter_09",
@@ -6228,6 +6989,7 @@ return {
             type = 1,
         },
         {
+            id   = 133466,
             file = 133466,
             hash = "4f053517ae98295b595d1ecd2ee7c69b",
             name = "inv_letter_10",
@@ -6235,6 +6997,7 @@ return {
             type = 1,
         },
         {
+            id   = 133467,
             file = 133467,
             hash = "9b5e7ab0f656318047d2601e7fa99d24",
             name = "inv_letter_11",
@@ -6242,6 +7005,7 @@ return {
             type = 1,
         },
         {
+            id   = 133468,
             file = 133468,
             hash = "0255961ceb186545591be7260b089815",
             name = "inv_letter_12",
@@ -6249,6 +7013,7 @@ return {
             type = 1,
         },
         {
+            id   = 133469,
             file = 133469,
             hash = "de6ec7bdc05ad1655c2ca8078757def6",
             name = "inv_letter_13",
@@ -6256,6 +7021,7 @@ return {
             type = 1,
         },
         {
+            id   = 133470,
             file = 133470,
             hash = "c28d41617c579afc5813c055f01ac456",
             name = "inv_letter_14",
@@ -6263,6 +7029,7 @@ return {
             type = 1,
         },
         {
+            id   = 133471,
             file = 133471,
             hash = "eddb9334fce5928c2ca170b7bc09e4c4",
             name = "inv_letter_15",
@@ -6270,6 +7037,7 @@ return {
             type = 1,
         },
         {
+            id   = 133472,
             file = 133472,
             hash = "363ba531e6b06326c7645b0f88e5dd2d",
             name = "inv_letter_16",
@@ -6277,6 +7045,7 @@ return {
             type = 1,
         },
         {
+            id   = 133473,
             file = 133473,
             hash = "2be985b0d5e80eca158bddd8bfbe8dab",
             name = "inv_letter_17",
@@ -6284,6 +7053,7 @@ return {
             type = 1,
         },
         {
+            id   = 133474,
             file = 133474,
             hash = "ad6de524d253ebeec348dcf19176559b",
             name = "inv_mace22",
@@ -6291,13 +7061,7 @@ return {
             type = 1,
         },
         {
-            file = 2245030,
-            hash = "c328d9d695b4d5244014d641c43a3cad",
-            name = "inv_mace23",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
+            id   = 133476,
             file = 133476,
             hash = "1b93c381494b5e8e2172c689421942fd",
             name = "inv_mace_01",
@@ -6305,6 +7069,7 @@ return {
             type = 1,
         },
         {
+            id   = 133477,
             file = 133477,
             hash = "064c15696b49139b63f4720a5751b8ca",
             name = "inv_mace_02",
@@ -6312,6 +7077,7 @@ return {
             type = 1,
         },
         {
+            id   = 133478,
             file = 133478,
             hash = "ca197e71c8f290f4a5287ca9469d9320",
             name = "inv_mace_03",
@@ -6319,6 +7085,7 @@ return {
             type = 1,
         },
         {
+            id   = 133479,
             file = 133479,
             hash = "b31b077195db5ff39aadbcaac5acce8c",
             name = "inv_mace_04",
@@ -6326,6 +7093,7 @@ return {
             type = 1,
         },
         {
+            id   = 133480,
             file = 133480,
             hash = "2ae418885b8416fb304b0aa19910d236",
             name = "inv_mace_05",
@@ -6333,6 +7101,7 @@ return {
             type = 1,
         },
         {
+            id   = 133481,
             file = 133481,
             hash = "7c7be4a39688cbba8945fbd0418dd27d",
             name = "inv_mace_06",
@@ -6340,6 +7109,7 @@ return {
             type = 1,
         },
         {
+            id   = 133482,
             file = 133482,
             hash = "f03f5dbf09626a3b3f94e69476f14079",
             name = "inv_mace_07",
@@ -6347,6 +7117,7 @@ return {
             type = 1,
         },
         {
+            id   = 133483,
             file = 133483,
             hash = "3a8f633961d52a5de3454b80c03183de",
             name = "inv_mace_08",
@@ -6354,6 +7125,7 @@ return {
             type = 1,
         },
         {
+            id   = 133484,
             file = 133484,
             hash = "952aec7cdf9347e19d9f2ea345ad22fe",
             name = "inv_mace_09",
@@ -6361,6 +7133,7 @@ return {
             type = 1,
         },
         {
+            id   = 133485,
             file = 133485,
             hash = "654c3682cca8dafe248b5a0614075a59",
             name = "inv_mace_10",
@@ -6368,6 +7141,7 @@ return {
             type = 1,
         },
         {
+            id   = 133486,
             file = 133486,
             hash = "0107aad867466a53f4e0b1199e66dbbf",
             name = "inv_mace_11",
@@ -6375,6 +7149,7 @@ return {
             type = 1,
         },
         {
+            id   = 133487,
             file = 133487,
             hash = "cfc3e5c46f81abfe8f08ea2d3739d113",
             name = "inv_mace_12",
@@ -6382,6 +7157,7 @@ return {
             type = 1,
         },
         {
+            id   = 133488,
             file = 133488,
             hash = "e7b21a1119a07aa29df36fc7a961ec81",
             name = "inv_mace_13",
@@ -6389,6 +7165,7 @@ return {
             type = 1,
         },
         {
+            id   = 133489,
             file = 133489,
             hash = "9ad64ad7a7b5de0845229b63119a616e",
             name = "inv_mace_14",
@@ -6396,6 +7173,7 @@ return {
             type = 1,
         },
         {
+            id   = 133490,
             file = 133490,
             hash = "7f46b03def3eecc10b68b18067d3a854",
             name = "inv_mace_15",
@@ -6403,6 +7181,7 @@ return {
             type = 1,
         },
         {
+            id   = 133491,
             file = 133491,
             hash = "9459982a4a7c64f652be7b633992df9f",
             name = "inv_mace_16",
@@ -6410,6 +7189,7 @@ return {
             type = 1,
         },
         {
+            id   = 133492,
             file = 133492,
             hash = "24364af7a4025620ea455fb03264b9b7",
             name = "inv_mace_17",
@@ -6417,6 +7197,7 @@ return {
             type = 1,
         },
         {
+            id   = 133494,
             file = 133494,
             hash = "f5840a8f18e64e166211fa6e0d67b3d8",
             name = "inv_mace_19",
@@ -6424,6 +7205,7 @@ return {
             type = 1,
         },
         {
+            id   = 133495,
             file = 133495,
             hash = "2c63bed30459b7a1c22444e8e4bdf4f3",
             name = "inv_mace_1h_stratholme_d_01",
@@ -6431,6 +7213,7 @@ return {
             type = 1,
         },
         {
+            id   = 133496,
             file = 133496,
             hash = "6c79594191c63b9e26a2f3b548e8548e",
             name = "inv_mace_1h_stratholme_d_02",
@@ -6438,6 +7221,7 @@ return {
             type = 1,
         },
         {
+            id   = 133497,
             file = 133497,
             hash = "c4c6fd83e6e79b559f618fc7edc4e57f",
             name = "inv_mace_20",
@@ -6445,6 +7229,7 @@ return {
             type = 1,
         },
         {
+            id   = 133498,
             file = 133498,
             hash = "1a949792b24de9eac3fa9f44cf62606d",
             name = "inv_mace_21",
@@ -6452,13 +7237,7 @@ return {
             type = 1,
         },
         {
-            file = 2245099,
-            hash = "ad6de524d253ebeec348dcf19176559b",
-            name = "inv_mace_22",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
+            id   = 133500,
             file = 133500,
             hash = "c328d9d695b4d5244014d641c43a3cad",
             name = "inv_mace_23",
@@ -6466,6 +7245,7 @@ return {
             type = 1,
         },
         {
+            id   = 133501,
             file = 133501,
             hash = "5b78b87b550c34695247568eff4f23f2",
             name = "inv_mace_24",
@@ -6473,6 +7253,7 @@ return {
             type = 1,
         },
         {
+            id   = 133502,
             file = 133502,
             hash = "5da671ddd545a169139054cebc3069cf",
             name = "inv_mace_25",
@@ -6480,6 +7261,7 @@ return {
             type = 1,
         },
         {
+            id   = 133503,
             file = 133503,
             hash = "7907d6e51a13db9d14e2cf40dd3ce54a",
             name = "inv_mace_26",
@@ -6487,6 +7269,7 @@ return {
             type = 1,
         },
         {
+            id   = 133504,
             file = 133504,
             hash = "ac18cc2977a75504898ce44886ac3067",
             name = "inv_mace_27",
@@ -6494,6 +7277,7 @@ return {
             type = 1,
         },
         {
+            id   = 133505,
             file = 133505,
             hash = "0387468ab2eea394ce3f8cd0a567a603",
             name = "inv_mace_28",
@@ -6501,6 +7285,7 @@ return {
             type = 1,
         },
         {
+            id   = 133506,
             file = 133506,
             hash = "e903600a5e1f3c6a15ff159de8e904ce",
             name = "inv_mace_29",
@@ -6508,6 +7293,7 @@ return {
             type = 1,
         },
         {
+            id   = 133564,
             file = 133564,
             hash = "71ea5fb6c9895bd3497e6b0cfad2fcf2",
             name = "inv_mask_01",
@@ -6515,6 +7301,7 @@ return {
             type = 1,
         },
         {
+            id   = 133565,
             file = 133565,
             hash = "b8117acd41490aced66b952887444e1c",
             name = "inv_mask_02",
@@ -6522,6 +7309,7 @@ return {
             type = 1,
         },
         {
+            id   = 133570,
             file = 133570,
             hash = "ee9cbc9b909c8a1a78e6d6aec0164590",
             name = "inv_misc_ahnqirajtrinket_01",
@@ -6529,6 +7317,7 @@ return {
             type = 1,
         },
         {
+            id   = 133571,
             file = 133571,
             hash = "00a3254e2fde500b55c71b32e3d0fc20",
             name = "inv_misc_ahnqirajtrinket_02",
@@ -6536,6 +7325,7 @@ return {
             type = 1,
         },
         {
+            id   = 133572,
             file = 133572,
             hash = "2aeb1d63ec45703e45278cfd5c4988d5",
             name = "inv_misc_ahnqirajtrinket_03",
@@ -6543,6 +7333,7 @@ return {
             type = 1,
         },
         {
+            id   = 133573,
             file = 133573,
             hash = "a2e92fc9f83d6e202b75afcdd535737d",
             name = "inv_misc_ahnqirajtrinket_04",
@@ -6550,6 +7341,7 @@ return {
             type = 1,
         },
         {
+            id   = 133574,
             file = 133574,
             hash = "6884798c1964e43ba40de4fdfa66923d",
             name = "inv_misc_ahnqirajtrinket_05",
@@ -6557,6 +7349,7 @@ return {
             type = 1,
         },
         {
+            id   = 133575,
             file = 133575,
             hash = "a615db2d5b97f333a46524c104cccf77",
             name = "inv_misc_ahnqirajtrinket_06",
@@ -6564,6 +7357,7 @@ return {
             type = 1,
         },
         {
+            id   = 133581,
             file = 133581,
             hash = "8879303b1cd5b7f86903fc556056e27c",
             name = "inv_misc_ammo_bullet_01",
@@ -6571,6 +7365,7 @@ return {
             type = 1,
         },
         {
+            id   = 133587,
             file = 133587,
             hash = "ecc11094414a41900ea6e022e47610cc",
             name = "inv_misc_ammo_gunpowder_01",
@@ -6578,6 +7373,7 @@ return {
             type = 1,
         },
         {
+            id   = 133588,
             file = 133588,
             hash = "83c48129cb9387f7c042407fa5617c67",
             name = "inv_misc_ammo_gunpowder_02",
@@ -6585,6 +7381,7 @@ return {
             type = 1,
         },
         {
+            id   = 133589,
             file = 133589,
             hash = "e73787c0b5a2f3b322edaf087a64558b",
             name = "inv_misc_ammo_gunpowder_03",
@@ -6592,6 +7389,7 @@ return {
             type = 1,
         },
         {
+            id   = 133590,
             file = 133590,
             hash = "54595f6b8ddcc41b60663bbc669ea2a0",
             name = "inv_misc_ammo_gunpowder_04",
@@ -6599,6 +7397,7 @@ return {
             type = 1,
         },
         {
+            id   = 133591,
             file = 133591,
             hash = "dc997399201231d1a2b965dc0609fd7c",
             name = "inv_misc_ammo_gunpowder_05",
@@ -6606,6 +7405,7 @@ return {
             type = 1,
         },
         {
+            id   = 133592,
             file = 133592,
             hash = "871e64d3868df32a5d356ed2dadf1542",
             name = "inv_misc_ammo_gunpowder_06",
@@ -6613,6 +7413,7 @@ return {
             type = 1,
         },
         {
+            id   = 133593,
             file = 133593,
             hash = "69df61ce972a1bafd9f885768fd36f5f",
             name = "inv_misc_ammo_gunpowder_07",
@@ -6620,6 +7421,7 @@ return {
             type = 1,
         },
         {
+            id   = 133596,
             file = 133596,
             hash = "c2fc83829e540787620e35fd5d48f45d",
             name = "inv_misc_armorkit_01",
@@ -6627,6 +7429,7 @@ return {
             type = 1,
         },
         {
+            id   = 133597,
             file = 133597,
             hash = "b3c345296faac0f673bccba7ba098c98",
             name = "inv_misc_armorkit_02",
@@ -6634,6 +7437,7 @@ return {
             type = 1,
         },
         {
+            id   = 133598,
             file = 133598,
             hash = "4a2011ab91401221e1fcb882c72904f5",
             name = "inv_misc_armorkit_03",
@@ -6641,6 +7445,7 @@ return {
             type = 1,
         },
         {
+            id   = 133599,
             file = 133599,
             hash = "3644f417b95d9a5769b5b16f89dce52b",
             name = "inv_misc_armorkit_04",
@@ -6648,6 +7453,7 @@ return {
             type = 1,
         },
         {
+            id   = 133600,
             file = 133600,
             hash = "6d7dcf839a9897183b4de644a7c05567",
             name = "inv_misc_armorkit_05",
@@ -6655,6 +7461,7 @@ return {
             type = 1,
         },
         {
+            id   = 133601,
             file = 133601,
             hash = "9357257a63072b4c2b9ec793f7691061",
             name = "inv_misc_armorkit_06",
@@ -6662,6 +7469,7 @@ return {
             type = 1,
         },
         {
+            id   = 133602,
             file = 133602,
             hash = "793e95648ee2ad3c126e30e932cb423d",
             name = "inv_misc_armorkit_07",
@@ -6669,6 +7477,7 @@ return {
             type = 1,
         },
         {
+            id   = 133603,
             file = 133603,
             hash = "58730c1865869ca6b10a8a04c69315da",
             name = "inv_misc_armorkit_08",
@@ -6676,6 +7485,7 @@ return {
             type = 1,
         },
         {
+            id   = 133604,
             file = 133604,
             hash = "e780021f23cb6cba7ceff3b92658037e",
             name = "inv_misc_armorkit_09",
@@ -6683,6 +7493,7 @@ return {
             type = 1,
         },
         {
+            id   = 133605,
             file = 133605,
             hash = "bd939a85cccd3eb0c84e9c281fe9fc5e",
             name = "inv_misc_armorkit_10",
@@ -6690,6 +7501,7 @@ return {
             type = 1,
         },
         {
+            id   = 133606,
             file = 133606,
             hash = "5bd28d0034e4f54a9cb194e7539abaa9",
             name = "inv_misc_armorkit_11",
@@ -6697,6 +7509,7 @@ return {
             type = 1,
         },
         {
+            id   = 133607,
             file = 133607,
             hash = "61ad2a1e07edfa8d1494c0fa3a8c043a",
             name = "inv_misc_armorkit_12",
@@ -6704,6 +7517,7 @@ return {
             type = 1,
         },
         {
+            id   = 133608,
             file = 133608,
             hash = "abb56ec4e070e368ffa80beb8d87bd70",
             name = "inv_misc_armorkit_14",
@@ -6711,6 +7525,7 @@ return {
             type = 1,
         },
         {
+            id   = 133609,
             file = 133609,
             hash = "d47920b7f1610b300de7214e9c5dc0d8",
             name = "inv_misc_armorkit_15",
@@ -6718,6 +7533,7 @@ return {
             type = 1,
         },
         {
+            id   = 133610,
             file = 133610,
             hash = "09cfc2d56f40f69ea199a5c1c7e9e96f",
             name = "inv_misc_armorkit_16",
@@ -6725,6 +7541,7 @@ return {
             type = 1,
         },
         {
+            id   = 133611,
             file = 133611,
             hash = "af26eff69b31be058669d66b4a87eee7",
             name = "inv_misc_armorkit_17",
@@ -6732,6 +7549,7 @@ return {
             type = 1,
         },
         {
+            id   = 133612,
             file = 133612,
             hash = "9e1f6598c1c786b1551ed232cf15c4bc",
             name = "inv_misc_armorkit_18",
@@ -6739,6 +7557,7 @@ return {
             type = 1,
         },
         {
+            id   = 133613,
             file = 133613,
             hash = "6e18afa387ce70f9b620a04346cff3df",
             name = "inv_misc_armorkit_19",
@@ -6746,6 +7565,7 @@ return {
             type = 1,
         },
         {
+            id   = 133614,
             file = 133614,
             hash = "0e59e75539747e0ec0ec259add5d5cc5",
             name = "inv_misc_armorkit_20",
@@ -6753,6 +7573,7 @@ return {
             type = 1,
         },
         {
+            id   = 133622,
             file = 133622,
             hash = "61734e2b8bdb6fc2a7288b8f8cafc6b5",
             name = "inv_misc_bag_01",
@@ -6760,6 +7581,7 @@ return {
             type = 1,
         },
         {
+            id   = 133623,
             file = 133623,
             hash = "9395db509aa250a467ce9f5d1b918167",
             name = "inv_misc_bag_02",
@@ -6767,6 +7589,7 @@ return {
             type = 1,
         },
         {
+            id   = 133624,
             file = 133624,
             hash = "fbc269abf43fc4fc6e773c8b254c0f32",
             name = "inv_misc_bag_03",
@@ -6774,6 +7597,7 @@ return {
             type = 1,
         },
         {
+            id   = 133625,
             file = 133625,
             hash = "a90faaac05ec67645f007ad62364397a",
             name = "inv_misc_bag_04",
@@ -6781,6 +7605,7 @@ return {
             type = 1,
         },
         {
+            id   = 133626,
             file = 133626,
             hash = "da42cf84a56bc115580f6b2f47cdd6c1",
             name = "inv_misc_bag_05",
@@ -6788,6 +7613,7 @@ return {
             type = 1,
         },
         {
+            id   = 133627,
             file = 133627,
             hash = "b850c56c2db2c83c6cf41492df2e2ca0",
             name = "inv_misc_bag_06",
@@ -6795,6 +7621,7 @@ return {
             type = 1,
         },
         {
+            id   = 133628,
             file = 133628,
             hash = "33b4adc979d1c5ec8c774e305b90ed7c",
             name = "inv_misc_bag_07",
@@ -6802,6 +7629,7 @@ return {
             type = 1,
         },
         {
+            id   = 133629,
             file = 133629,
             hash = "fbea01292b52b510e266dd109100a2a4",
             name = "inv_misc_bag_07_black",
@@ -6809,6 +7637,7 @@ return {
             type = 1,
         },
         {
+            id   = 133630,
             file = 133630,
             hash = "a230432b0c99b2e6e5376f9991d607a5",
             name = "inv_misc_bag_07_blue",
@@ -6816,6 +7645,7 @@ return {
             type = 1,
         },
         {
+            id   = 133631,
             file = 133631,
             hash = "cd8b244a4369af543302869e4d7a7a74",
             name = "inv_misc_bag_07_green",
@@ -6823,6 +7653,7 @@ return {
             type = 1,
         },
         {
+            id   = 133632,
             file = 133632,
             hash = "9882b0d54de06e8bb33e1d0386ca7744",
             name = "inv_misc_bag_07_red",
@@ -6830,6 +7661,7 @@ return {
             type = 1,
         },
         {
+            id   = 133633,
             file = 133633,
             hash = "8298ca128ca9c4ac746368ad63aef089",
             name = "inv_misc_bag_08",
@@ -6837,6 +7669,7 @@ return {
             type = 1,
         },
         {
+            id   = 133634,
             file = 133634,
             hash = "6827562645ac5d6f44e5df043dbfb7f5",
             name = "inv_misc_bag_09",
@@ -6844,6 +7677,7 @@ return {
             type = 1,
         },
         {
+            id   = 133635,
             file = 133635,
             hash = "3508e7feb791a609b1da9d9f38070320",
             name = "inv_misc_bag_09_black",
@@ -6851,6 +7685,7 @@ return {
             type = 1,
         },
         {
+            id   = 133636,
             file = 133636,
             hash = "e0125785b5d800eda61651a3d11244f3",
             name = "inv_misc_bag_09_blue",
@@ -6858,6 +7693,7 @@ return {
             type = 1,
         },
         {
+            id   = 133637,
             file = 133637,
             hash = "b2824e2c9d83cc37cca822ad5902109c",
             name = "inv_misc_bag_09_green",
@@ -6865,6 +7701,7 @@ return {
             type = 1,
         },
         {
+            id   = 133638,
             file = 133638,
             hash = "d4f3365fa72e437ce27617072710da60",
             name = "inv_misc_bag_09_red",
@@ -6872,6 +7709,7 @@ return {
             type = 1,
         },
         {
+            id   = 133639,
             file = 133639,
             hash = "6f827d2c61c7322e5819e997bc75787c",
             name = "inv_misc_bag_10",
@@ -6879,6 +7717,7 @@ return {
             type = 1,
         },
         {
+            id   = 133640,
             file = 133640,
             hash = "a3ef6afed2c15d1852868511b2616700",
             name = "inv_misc_bag_10_black",
@@ -6886,6 +7725,7 @@ return {
             type = 1,
         },
         {
+            id   = 133641,
             file = 133641,
             hash = "52083a5532f991e1ddd69ff21e6bfede",
             name = "inv_misc_bag_10_blue",
@@ -6893,6 +7733,7 @@ return {
             type = 1,
         },
         {
+            id   = 133642,
             file = 133642,
             hash = "d4377bde2af2a49b9bcea347fcc2a3b7",
             name = "inv_misc_bag_10_green",
@@ -6900,6 +7741,7 @@ return {
             type = 1,
         },
         {
+            id   = 133643,
             file = 133643,
             hash = "a2c9c3c25474053fa03eb6f337c4cf68",
             name = "inv_misc_bag_10_red",
@@ -6907,6 +7749,7 @@ return {
             type = 1,
         },
         {
+            id   = 133644,
             file = 133644,
             hash = "9c2b64911020f2378c1be139642e1cda",
             name = "inv_misc_bag_11",
@@ -6914,6 +7757,7 @@ return {
             type = 1,
         },
         {
+            id   = 133645,
             file = 133645,
             hash = "8d8454b7ce50229fdf72e30300314147",
             name = "inv_misc_bag_12",
@@ -6921,6 +7765,7 @@ return {
             type = 1,
         },
         {
+            id   = 133646,
             file = 133646,
             hash = "798990d0715ed1ace8996d3a96d12eac",
             name = "inv_misc_bag_13",
@@ -6928,6 +7773,7 @@ return {
             type = 1,
         },
         {
+            id   = 133647,
             file = 133647,
             hash = "e7c2b771f05137cf1d8d708d037f422f",
             name = "inv_misc_bag_14",
@@ -6935,6 +7781,7 @@ return {
             type = 1,
         },
         {
+            id   = 133648,
             file = 133648,
             hash = "0bf78888e29e873c691291f29afcf621",
             name = "inv_misc_bag_15",
@@ -6942,6 +7789,7 @@ return {
             type = 1,
         },
         {
+            id   = 133649,
             file = 133649,
             hash = "8ce56b4549b09c16630deb26ed1511ac",
             name = "inv_misc_bag_16",
@@ -6949,6 +7797,7 @@ return {
             type = 1,
         },
         {
+            id   = 133650,
             file = 133650,
             hash = "a46dc0531d81b53873a9898a12780770",
             name = "inv_misc_bag_17",
@@ -6956,6 +7805,7 @@ return {
             type = 1,
         },
         {
+            id   = 133651,
             file = 133651,
             hash = "212f117743d7bfdf13e1618fc38b1ff8",
             name = "inv_misc_bag_18",
@@ -6963,6 +7813,7 @@ return {
             type = 1,
         },
         {
+            id   = 133652,
             file = 133652,
             hash = "a10f1267fcbbc6751ba0316c8a2d666d",
             name = "inv_misc_bag_19",
@@ -6970,6 +7821,7 @@ return {
             type = 1,
         },
         {
+            id   = 133653,
             file = 133653,
             hash = "2f418cd1fb9d63abaf54c44b4ea44ef7",
             name = "inv_misc_bag_20",
@@ -6977,6 +7829,7 @@ return {
             type = 1,
         },
         {
+            id   = 133654,
             file = 133654,
             hash = "f2fa597b380d09af4ff901a27a519d72",
             name = "inv_misc_bag_21",
@@ -6984,6 +7837,7 @@ return {
             type = 1,
         },
         {
+            id   = 133655,
             file = 133655,
             hash = "7e7db3e0f3a673faf8a16a8051454494",
             name = "inv_misc_bag_22",
@@ -6991,6 +7845,7 @@ return {
             type = 1,
         },
         {
+            id   = 133662,
             file = 133662,
             hash = "6b57cad75698541fb6f7341bfe11502a",
             name = "inv_misc_bag_bigbagofenchantments",
@@ -6998,6 +7853,7 @@ return {
             type = 1,
         },
         {
+            id   = 133663,
             file = 133663,
             hash = "43d012f59062931b3e1d8830e51fcb51",
             name = "inv_misc_bag_cenarionherbbag",
@@ -7005,6 +7861,7 @@ return {
             type = 1,
         },
         {
+            id   = 133664,
             file = 133664,
             hash = "ea73d28ccfd1cea9007ee14259adc3c7",
             name = "inv_misc_bag_corefelclothbag",
@@ -7012,6 +7869,7 @@ return {
             type = 1,
         },
         {
+            id   = 133665,
             file = 133665,
             hash = "e21d2f0e6cf4c679fba0f1630857f6a9",
             name = "inv_misc_bag_enchantedmageweave",
@@ -7019,6 +7877,7 @@ return {
             type = 1,
         },
         {
+            id   = 133666,
             file = 133666,
             hash = "c0030ecbe707f45c7207d8304e571544",
             name = "inv_misc_bag_enchantedrunecloth",
@@ -7026,6 +7885,7 @@ return {
             type = 1,
         },
         {
+            id   = 133667,
             file = 133667,
             hash = "dcef210dde72be41c1e7bb13b19abae4",
             name = "inv_misc_bag_felclothbag",
@@ -7033,6 +7893,7 @@ return {
             type = 1,
         },
         {
+            id   = 133668,
             file = 133668,
             hash = "8e7386363b0aa715c256dc225bb7c7fe",
             name = "inv_misc_bag_herbpouch",
@@ -7040,6 +7901,7 @@ return {
             type = 1,
         },
         {
+            id   = 133669,
             file = 133669,
             hash = "e929db947846572c7891fd984d6d8253",
             name = "inv_misc_bag_satchelofcenarius",
@@ -7047,6 +7909,7 @@ return {
             type = 1,
         },
         {
+            id   = 133670,
             file = 133670,
             hash = "e6d7cfd6f8ac2506d367261dd71b6e13",
             name = "inv_misc_bag_soulbag",
@@ -7054,6 +7917,7 @@ return {
             type = 1,
         },
         {
+            id   = 133671,
             file = 133671,
             hash = "45fe878795bb305fe0e808b6764017d2",
             name = "inv_misc_bandage_01",
@@ -7061,6 +7925,7 @@ return {
             type = 1,
         },
         {
+            id   = 133672,
             file = 133672,
             hash = "c3e61e7a1c0cac45b83d69e6176e3265",
             name = "inv_misc_bandage_02",
@@ -7068,6 +7933,7 @@ return {
             type = 1,
         },
         {
+            id   = 133673,
             file = 133673,
             hash = "d31bd6b7b0f344f1b0504ce2244f5f22",
             name = "inv_misc_bandage_03",
@@ -7075,6 +7941,7 @@ return {
             type = 1,
         },
         {
+            id   = 133674,
             file = 133674,
             hash = "dea305f78a486e08bb8bcc45231821e3",
             name = "inv_misc_bandage_04",
@@ -7082,6 +7949,7 @@ return {
             type = 1,
         },
         {
+            id   = 133675,
             file = 133675,
             hash = "a8e44a120eea5bdbedd1728e7a439f2f",
             name = "inv_misc_bandage_05",
@@ -7089,6 +7957,7 @@ return {
             type = 1,
         },
         {
+            id   = 133676,
             file = 133676,
             hash = "55e6746f10ea1b4c56f58abee6148aa3",
             name = "inv_misc_bandage_06",
@@ -7096,6 +7965,7 @@ return {
             type = 1,
         },
         {
+            id   = 133677,
             file = 133677,
             hash = "7378160a83f8d20a3d38bb9d3843f5a5",
             name = "inv_misc_bandage_07",
@@ -7103,6 +7973,7 @@ return {
             type = 1,
         },
         {
+            id   = 133678,
             file = 133678,
             hash = "4ac0d6974eaf768f6745281b351cfa8d",
             name = "inv_misc_bandage_08",
@@ -7110,6 +7981,7 @@ return {
             type = 1,
         },
         {
+            id   = 133679,
             file = 133679,
             hash = "347a928f79d9f8ba10a297d22542f835",
             name = "inv_misc_bandage_09",
@@ -7117,6 +7989,7 @@ return {
             type = 1,
         },
         {
+            id   = 133680,
             file = 133680,
             hash = "5dcca0bd909dfd6f5f77346a0da0f247",
             name = "inv_misc_bandage_10",
@@ -7124,6 +7997,7 @@ return {
             type = 1,
         },
         {
+            id   = 133681,
             file = 133681,
             hash = "b8c95ec20d0b505ac6411f02a00dd381",
             name = "inv_misc_bandage_11",
@@ -7131,6 +8005,7 @@ return {
             type = 1,
         },
         {
+            id   = 133682,
             file = 133682,
             hash = "a288f4bda0ea737535c00b68b249e9ae",
             name = "inv_misc_bandage_12",
@@ -7138,6 +8013,7 @@ return {
             type = 1,
         },
         {
+            id   = 133683,
             file = 133683,
             hash = "cece3bac048d2fdc8825eaefa4828ab8",
             name = "inv_misc_bandage_13",
@@ -7145,6 +8021,7 @@ return {
             type = 1,
         },
         {
+            id   = 133684,
             file = 133684,
             hash = "4c145505ab4356860fce884e01c46b83",
             name = "inv_misc_bandage_14",
@@ -7152,6 +8029,7 @@ return {
             type = 1,
         },
         {
+            id   = 133685,
             file = 133685,
             hash = "e3b29d22f2f92c09bdce520465de607b",
             name = "inv_misc_bandage_15",
@@ -7159,6 +8037,7 @@ return {
             type = 1,
         },
         {
+            id   = 133686,
             file = 133686,
             hash = "5e93c1670328a989da3670c64551cccf",
             name = "inv_misc_bandage_16",
@@ -7166,6 +8045,7 @@ return {
             type = 1,
         },
         {
+            id   = 133687,
             file = 133687,
             hash = "35f3b7acae41fe1b74be8b75356e0fa6",
             name = "inv_misc_bandage_17",
@@ -7173,6 +8053,7 @@ return {
             type = 1,
         },
         {
+            id   = 133688,
             file = 133688,
             hash = "a6b7ffc819e11ffc84e4b9a2dbfb92d4",
             name = "inv_misc_bandage_18",
@@ -7180,6 +8061,7 @@ return {
             type = 1,
         },
         {
+            id   = 133689,
             file = 133689,
             hash = "fa05ead472a9c280928234ec06c559c0",
             name = "inv_misc_bandage_19",
@@ -7187,6 +8069,7 @@ return {
             type = 1,
         },
         {
+            id   = 133690,
             file = 133690,
             hash = "0e4adbc3420af056ba10d7206958c115",
             name = "inv_misc_bandage_20",
@@ -7194,6 +8077,7 @@ return {
             type = 1,
         },
         {
+            id   = 133693,
             file = 133693,
             hash = "094110bc36956b2eec3026330cb8482a",
             name = "inv_misc_bandana_01",
@@ -7201,6 +8085,7 @@ return {
             type = 1,
         },
         {
+            id   = 133694,
             file = 133694,
             hash = "2a64b4760ff26ae1f8e8cebc0d1eb001",
             name = "inv_misc_bandana_03",
@@ -7208,6 +8093,7 @@ return {
             type = 1,
         },
         {
+            id   = 133706,
             file = 133706,
             hash = "6eb0158349512dc2b96860aea0de9a74",
             name = "inv_misc_bell_01",
@@ -7215,6 +8101,7 @@ return {
             type = 1,
         },
         {
+            id   = 133707,
             file = 133707,
             hash = "e3055a78fb539e65b229b87c581a61d3",
             name = "inv_misc_birdbeck_01",
@@ -7222,6 +8109,7 @@ return {
             type = 1,
         },
         {
+            id   = 133708,
             file = 133708,
             hash = "5f0931c54bfd3e6c7b1878fa501099b7",
             name = "inv_misc_birdbeck_02",
@@ -7229,6 +8117,7 @@ return {
             type = 1,
         },
         {
+            id   = 133709,
             file = 133709,
             hash = "70bbdae90291f320cbbaa85251268365",
             name = "inv_misc_bomb_01",
@@ -7236,6 +8125,7 @@ return {
             type = 1,
         },
         {
+            id   = 133710,
             file = 133710,
             hash = "6d6115748a9c64d46270fee727d03d8c",
             name = "inv_misc_bomb_02",
@@ -7243,6 +8133,7 @@ return {
             type = 1,
         },
         {
+            id   = 133711,
             file = 133711,
             hash = "4e558c8ce4b1243d8a1a79354553c5b2",
             name = "inv_misc_bomb_03",
@@ -7250,6 +8141,7 @@ return {
             type = 1,
         },
         {
+            id   = 133712,
             file = 133712,
             hash = "92bbbd28dd3d42b167790c3ddee470ab",
             name = "inv_misc_bomb_04",
@@ -7257,6 +8149,7 @@ return {
             type = 1,
         },
         {
+            id   = 133713,
             file = 133713,
             hash = "7b824b1a8c227771369f398715b65ef9",
             name = "inv_misc_bomb_05",
@@ -7264,6 +8157,7 @@ return {
             type = 1,
         },
         {
+            id   = 133714,
             file = 133714,
             hash = "4d8134b3b14f48d624aa3e1a6e92b1c1",
             name = "inv_misc_bomb_06",
@@ -7271,6 +8165,7 @@ return {
             type = 1,
         },
         {
+            id   = 133715,
             file = 133715,
             hash = "a752533696e89261782494324b083feb",
             name = "inv_misc_bomb_07",
@@ -7278,6 +8173,7 @@ return {
             type = 1,
         },
         {
+            id   = 133716,
             file = 133716,
             hash = "073b4ab0e0462744d5117174ddf7da27",
             name = "inv_misc_bomb_08",
@@ -7285,6 +8181,7 @@ return {
             type = 1,
         },
         {
+            id   = 133717,
             file = 133717,
             hash = "39402376086a4036c862641ff33d4220",
             name = "inv_misc_bomb_09",
@@ -7292,6 +8189,7 @@ return {
             type = 1,
         },
         {
+            id   = 133718,
             file = 133718,
             hash = "cabfc30e113989c0a36f679f77175a78",
             name = "inv_misc_bone_01",
@@ -7299,6 +8197,7 @@ return {
             type = 1,
         },
         {
+            id   = 133719,
             file = 133719,
             hash = "f6a0c3001796dd05eb3f81537511376e",
             name = "inv_misc_bone_02",
@@ -7306,6 +8205,7 @@ return {
             type = 1,
         },
         {
+            id   = 133720,
             file = 133720,
             hash = "0216d6668aa6607f194159768cee4c5a",
             name = "inv_misc_bone_03",
@@ -7313,6 +8213,7 @@ return {
             type = 1,
         },
         {
+            id   = 133721,
             file = 133721,
             hash = "ed911e2041b70ab3fcb0db3f02f608d3",
             name = "inv_misc_bone_04",
@@ -7320,6 +8221,7 @@ return {
             type = 1,
         },
         {
+            id   = 133722,
             file = 133722,
             hash = "e75e2775203cae0ebea7cf039d020fa7",
             name = "inv_misc_bone_05",
@@ -7327,6 +8229,7 @@ return {
             type = 1,
         },
         {
+            id   = 133723,
             file = 133723,
             hash = "e2b15487cffdce9456967116eaff8d00",
             name = "inv_misc_bone_06",
@@ -7334,6 +8237,7 @@ return {
             type = 1,
         },
         {
+            id   = 133724,
             file = 133724,
             hash = "3ab5fc3c161cccfaebe0b54c802ed7a8",
             name = "inv_misc_bone_07",
@@ -7341,6 +8245,7 @@ return {
             type = 1,
         },
         {
+            id   = 133725,
             file = 133725,
             hash = "03976715b44efdac187bf877c9cbd45a",
             name = "inv_misc_bone_08",
@@ -7348,6 +8253,7 @@ return {
             type = 1,
         },
         {
+            id   = 133726,
             file = 133726,
             hash = "c4d3b5fc234b108c95b3ddac1675d3ed",
             name = "inv_misc_bone_09",
@@ -7355,6 +8261,7 @@ return {
             type = 1,
         },
         {
+            id   = 133727,
             file = 133727,
             hash = "4642985f68939a4ba9a362ddec17f912",
             name = "inv_misc_bone_10",
@@ -7362,6 +8269,7 @@ return {
             type = 1,
         },
         {
+            id   = 133728,
             file = 133728,
             hash = "ff5656b65e52254d6e3fcbef1487bfd6",
             name = "inv_misc_bone_dwarfskull_01",
@@ -7369,6 +8277,7 @@ return {
             type = 1,
         },
         {
+            id   = 133729,
             file = 133729,
             hash = "c99d2050422a30c2a61bb283fd30b6c6",
             name = "inv_misc_bone_elfskull_01",
@@ -7376,6 +8285,7 @@ return {
             type = 1,
         },
         {
+            id   = 133730,
             file = 133730,
             hash = "fcb49bebb3356b48318f14dc09dd79b6",
             name = "inv_misc_bone_humanskull_01",
@@ -7383,6 +8293,7 @@ return {
             type = 1,
         },
         {
+            id   = 133731,
             file = 133731,
             hash = "c3db4e13b8fccf64cd27984710ef336a",
             name = "inv_misc_bone_orcskull_01",
@@ -7390,6 +8301,7 @@ return {
             type = 1,
         },
         {
+            id   = 133732,
             file = 133732,
             hash = "4d5d045a9b9e2bae2e008e05df416545",
             name = "inv_misc_bone_taurenskull_01",
@@ -7397,6 +8309,7 @@ return {
             type = 1,
         },
         {
+            id   = 133733,
             file = 133733,
             hash = "1c663885c321416d31cdb5810d83bf58",
             name = "inv_misc_book_01",
@@ -7404,6 +8317,7 @@ return {
             type = 1,
         },
         {
+            id   = 133734,
             file = 133734,
             hash = "c5ada3d487150638f8d83deb995edeb1",
             name = "inv_misc_book_02",
@@ -7411,6 +8325,7 @@ return {
             type = 1,
         },
         {
+            id   = 133735,
             file = 133735,
             hash = "a640b992a647f8e68ec751a5e60e6300",
             name = "inv_misc_book_03",
@@ -7418,6 +8333,7 @@ return {
             type = 1,
         },
         {
+            id   = 133736,
             file = 133736,
             hash = "04b2a62c1024a6c339fc9ae85721604a",
             name = "inv_misc_book_04",
@@ -7425,6 +8341,7 @@ return {
             type = 1,
         },
         {
+            id   = 133737,
             file = 133737,
             hash = "f531b0bb064d638258471ecd72b4ad9e",
             name = "inv_misc_book_05",
@@ -7432,6 +8349,7 @@ return {
             type = 1,
         },
         {
+            id   = 133738,
             file = 133738,
             hash = "9b794dba842ec60f42a9054744193ed1",
             name = "inv_misc_book_06",
@@ -7439,6 +8357,7 @@ return {
             type = 1,
         },
         {
+            id   = 133739,
             file = 133739,
             hash = "0f75ce30996cf4cdbf6e58c1705c7d87",
             name = "inv_misc_book_07",
@@ -7446,6 +8365,7 @@ return {
             type = 1,
         },
         {
+            id   = 133740,
             file = 133740,
             hash = "1e7bbc6a84a8e53e107135aba8dc71b4",
             name = "inv_misc_book_08",
@@ -7453,6 +8373,7 @@ return {
             type = 1,
         },
         {
+            id   = 133741,
             file = 133741,
             hash = "a1165787b5d5f9995d7233d5e077efe1",
             name = "inv_misc_book_09",
@@ -7460,6 +8381,7 @@ return {
             type = 1,
         },
         {
+            id   = 133742,
             file = 133742,
             hash = "89227defcfa166ffcc6dcaca5bc9bf4b",
             name = "inv_misc_book_10",
@@ -7467,6 +8389,7 @@ return {
             type = 1,
         },
         {
+            id   = 133743,
             file = 133743,
             hash = "6a0e9c72a04a4e49f72317571268b974",
             name = "inv_misc_book_11",
@@ -7474,6 +8397,7 @@ return {
             type = 1,
         },
         {
+            id   = 133744,
             file = 133744,
             hash = "92e9b7449e7afbdeca1f3edbed6623b2",
             name = "inv_misc_book_12",
@@ -7481,6 +8405,7 @@ return {
             type = 1,
         },
         {
+            id   = 133745,
             file = 133745,
             hash = "09f5d281d56dc8d550ae158ed341844a",
             name = "inv_misc_book_13",
@@ -7488,6 +8413,7 @@ return {
             type = 1,
         },
         {
+            id   = 133746,
             file = 133746,
             hash = "2693ffc46af1eec825be9bf2ace00302",
             name = "inv_misc_book_14",
@@ -7495,6 +8421,7 @@ return {
             type = 1,
         },
         {
+            id   = 133747,
             file = 133747,
             hash = "990ab24f54bf8f1db6e350746b7262c1",
             name = "inv_misc_book_15",
@@ -7502,6 +8429,7 @@ return {
             type = 1,
         },
         {
+            id   = 133748,
             file = 133748,
             hash = "b8dfa83985ec73c5e5efcb752c1fd815",
             name = "inv_misc_bowl_01",
@@ -7509,6 +8437,7 @@ return {
             type = 1,
         },
         {
+            id   = 133749,
             file = 133749,
             hash = "2c88a6d6ac2f3c9c09947df06d44d342",
             name = "inv_misc_branch_01",
@@ -7516,6 +8445,7 @@ return {
             type = 1,
         },
         {
+            id   = 133750,
             file = 133750,
             hash = "3ec5c8765ea0335fcdb386bce68dcdee",
             name = "inv_misc_candle_01",
@@ -7523,6 +8453,7 @@ return {
             type = 1,
         },
         {
+            id   = 133751,
             file = 133751,
             hash = "ded77527b9e5485c22777be0f7bb396d",
             name = "inv_misc_candle_02",
@@ -7530,6 +8461,7 @@ return {
             type = 1,
         },
         {
+            id   = 133752,
             file = 133752,
             hash = "9a85fd3b7f48a621703431832e76142a",
             name = "inv_misc_candle_03",
@@ -7537,6 +8469,7 @@ return {
             type = 1,
         },
         {
+            id   = 133753,
             file = 133753,
             hash = "c064120258369102370520ac75b0ea5d",
             name = "inv_misc_cape_01",
@@ -7544,6 +8477,7 @@ return {
             type = 1,
         },
         {
+            id   = 133754,
             file = 133754,
             hash = "3d4c633775b965d10e55ec7e6b820925",
             name = "inv_misc_cape_02",
@@ -7551,6 +8485,7 @@ return {
             type = 1,
         },
         {
+            id   = 133755,
             file = 133755,
             hash = "fb73b6eede667b374bcc93325f410862",
             name = "inv_misc_cape_03",
@@ -7558,6 +8493,7 @@ return {
             type = 1,
         },
         {
+            id   = 133756,
             file = 133756,
             hash = "7bd5d3508dfc2a47930ff325c98552fb",
             name = "inv_misc_cape_04",
@@ -7565,6 +8501,7 @@ return {
             type = 1,
         },
         {
+            id   = 133757,
             file = 133757,
             hash = "9acf5f6b1ae61b98b6c4f81850832d34",
             name = "inv_misc_cape_05",
@@ -7572,6 +8509,7 @@ return {
             type = 1,
         },
         {
+            id   = 133758,
             file = 133758,
             hash = "bcb054b3ce7c3a95d78c9878e33e35a0",
             name = "inv_misc_cape_06",
@@ -7579,6 +8517,7 @@ return {
             type = 1,
         },
         {
+            id   = 133759,
             file = 133759,
             hash = "3918f3e6d019454db517d58defc6a7fc",
             name = "inv_misc_cape_07",
@@ -7586,6 +8525,7 @@ return {
             type = 1,
         },
         {
+            id   = 133760,
             file = 133760,
             hash = "263a35245ccb166a69f19bbfd44da8c6",
             name = "inv_misc_cape_08",
@@ -7593,6 +8533,7 @@ return {
             type = 1,
         },
         {
+            id   = 133761,
             file = 133761,
             hash = "2e90b3e72777582c8e2ab2d9612932fc",
             name = "inv_misc_cape_09",
@@ -7600,6 +8541,7 @@ return {
             type = 1,
         },
         {
+            id   = 133762,
             file = 133762,
             hash = "7738d12ac881e65eaf92a2973f56c4ac",
             name = "inv_misc_cape_10",
@@ -7607,6 +8549,7 @@ return {
             type = 1,
         },
         {
+            id   = 133763,
             file = 133763,
             hash = "5311a9a3b7186928ec37a06a46df82a3",
             name = "inv_misc_cape_11",
@@ -7614,6 +8557,7 @@ return {
             type = 1,
         },
         {
+            id   = 133764,
             file = 133764,
             hash = "001d781f258478c5a778b8eea55b9a26",
             name = "inv_misc_cape_12",
@@ -7621,6 +8565,7 @@ return {
             type = 1,
         },
         {
+            id   = 133765,
             file = 133765,
             hash = "0c488f3bf3e5d8754e929fb71ca9be09",
             name = "inv_misc_cape_13",
@@ -7628,6 +8573,7 @@ return {
             type = 1,
         },
         {
+            id   = 133766,
             file = 133766,
             hash = "77bdd67a10573ccc7c27205f80cf1ad8",
             name = "inv_misc_cape_14",
@@ -7635,6 +8581,7 @@ return {
             type = 1,
         },
         {
+            id   = 133767,
             file = 133767,
             hash = "a2ecd23d5a2f5a1f2479ba0d2c0e04e2",
             name = "inv_misc_cape_15",
@@ -7642,6 +8589,7 @@ return {
             type = 1,
         },
         {
+            id   = 133768,
             file = 133768,
             hash = "65c5d0f2d327a1401fcd0b65d01024f7",
             name = "inv_misc_cape_16",
@@ -7649,6 +8597,7 @@ return {
             type = 1,
         },
         {
+            id   = 133769,
             file = 133769,
             hash = "076fa6a501c533b01c26a4346bdf2c3a",
             name = "inv_misc_cape_17",
@@ -7656,6 +8605,7 @@ return {
             type = 1,
         },
         {
+            id   = 133770,
             file = 133770,
             hash = "807e4a5f6c7a454a581ad732777c55fd",
             name = "inv_misc_cape_18",
@@ -7663,6 +8613,7 @@ return {
             type = 1,
         },
         {
+            id   = 133771,
             file = 133771,
             hash = "0cdbf75db4fa2c067f4b72b4b2f204a7",
             name = "inv_misc_cape_19",
@@ -7670,6 +8621,7 @@ return {
             type = 1,
         },
         {
+            id   = 133772,
             file = 133772,
             hash = "795fea462f94a3790d251b9827cf4838",
             name = "inv_misc_cape_20",
@@ -7677,6 +8629,7 @@ return {
             type = 1,
         },
         {
+            id   = 133773,
             file = 133773,
             hash = "ee705b30549f3d28c1f89223694881da",
             name = "inv_misc_cape_21",
@@ -7684,6 +8637,7 @@ return {
             type = 1,
         },
         {
+            id   = 133774,
             file = 133774,
             hash = "b7f523362a3279a0380c3c04f07bcc0d",
             name = "inv_misc_cape_22",
@@ -7691,6 +8645,7 @@ return {
             type = 1,
         },
         {
+            id   = 133775,
             file = 133775,
             hash = "f5aa058a203b342aa467b25c7a3b9fb5",
             name = "inv_misc_cape_naxxramas_01",
@@ -7698,6 +8653,7 @@ return {
             type = 1,
         },
         {
+            id   = 133776,
             file = 133776,
             hash = "4da535394670b9af9597f72c40c5d2a7",
             name = "inv_misc_cape_naxxramas_02",
@@ -7705,6 +8661,7 @@ return {
             type = 1,
         },
         {
+            id   = 133777,
             file = 133777,
             hash = "c6d8a4c30e60ee28512a48ed5b0f4e26",
             name = "inv_misc_cape_naxxramas_03",
@@ -7712,6 +8669,7 @@ return {
             type = 1,
         },
         {
+            id   = 133784,
             file = 133784,
             hash = "34d20f638443863b86fdae47baa1cde1",
             name = "inv_misc_coin_01",
@@ -7719,6 +8677,7 @@ return {
             type = 1,
         },
         {
+            id   = 133785,
             file = 133785,
             hash = "a23e0adb9a73f7073088f8942f09118c",
             name = "inv_misc_coin_02",
@@ -7726,6 +8685,7 @@ return {
             type = 1,
         },
         {
+            id   = 133786,
             file = 133786,
             hash = "6761ee0f158d175ddf3e50ea605aa358",
             name = "inv_misc_coin_03",
@@ -7733,6 +8693,7 @@ return {
             type = 1,
         },
         {
+            id   = 133787,
             file = 133787,
             hash = "c636019507ef60421b1dfd49a691a5a8",
             name = "inv_misc_coin_04",
@@ -7740,6 +8701,7 @@ return {
             type = 1,
         },
         {
+            id   = 133788,
             file = 133788,
             hash = "8c903c72eb76e15c03c9439333ee7d27",
             name = "inv_misc_coin_05",
@@ -7747,6 +8709,7 @@ return {
             type = 1,
         },
         {
+            id   = 133789,
             file = 133789,
             hash = "458ff98e994fc73e74d31279e8cfc215",
             name = "inv_misc_coin_06",
@@ -7754,6 +8717,7 @@ return {
             type = 1,
         },
         {
+            id   = 133790,
             file = 133790,
             hash = "608e0c0f466410d78caa63e17ae8747d",
             name = "inv_misc_coin_07",
@@ -7761,6 +8725,7 @@ return {
             type = 1,
         },
         {
+            id   = 133791,
             file = 133791,
             hash = "6a9aef09850044d5a709bedb0509b1d9",
             name = "inv_misc_coin_08",
@@ -7768,6 +8733,7 @@ return {
             type = 1,
         },
         {
+            id   = 133792,
             file = 133792,
             hash = "1483d15b3e356d2da42888cb77faee73",
             name = "inv_misc_coin_09",
@@ -7775,6 +8741,7 @@ return {
             type = 1,
         },
         {
+            id   = 133793,
             file = 133793,
             hash = "d63646877d047b12525cd909e33b9127",
             name = "inv_misc_coin_10",
@@ -7782,6 +8749,7 @@ return {
             type = 1,
         },
         {
+            id   = 133794,
             file = 133794,
             hash = "ae0747dcf1a7af2132a7ead24ab77fb8",
             name = "inv_misc_coin_11",
@@ -7789,6 +8757,7 @@ return {
             type = 1,
         },
         {
+            id   = 133795,
             file = 133795,
             hash = "d1280cc71b1a54b531ad5ec3616e1a00",
             name = "inv_misc_coin_12",
@@ -7796,6 +8765,7 @@ return {
             type = 1,
         },
         {
+            id   = 133796,
             file = 133796,
             hash = "a8d47a56b44fc32040db4a4dcd855e62",
             name = "inv_misc_coin_13",
@@ -7803,6 +8773,7 @@ return {
             type = 1,
         },
         {
+            id   = 133797,
             file = 133797,
             hash = "cbf34f4bd6d29cb378384260c0a61b6b",
             name = "inv_misc_coin_14",
@@ -7810,6 +8781,7 @@ return {
             type = 1,
         },
         {
+            id   = 133798,
             file = 133798,
             hash = "be44545842a00fa2609daa3e78f31123",
             name = "inv_misc_coin_15",
@@ -7817,6 +8789,7 @@ return {
             type = 1,
         },
         {
+            id   = 133800,
             file = 133800,
             hash = "3e2900f905396c8ef7ac6fbde36ed4e3",
             name = "inv_misc_comb_01",
@@ -7824,6 +8797,7 @@ return {
             type = 1,
         },
         {
+            id   = 133801,
             file = 133801,
             hash = "40d45029f29a458c64a478aaeb5a614c",
             name = "inv_misc_comb_02",
@@ -7831,6 +8805,7 @@ return {
             type = 1,
         },
         {
+            id   = 133804,
             file = 133804,
             hash = "16d679ea4c6e44b8c0cad05c58f07b81",
             name = "inv_misc_desecrated_clothbelt",
@@ -7838,6 +8813,7 @@ return {
             type = 1,
         },
         {
+            id   = 133805,
             file = 133805,
             hash = "64c8e07baa8d41456168568bfd19b973",
             name = "inv_misc_desecrated_clothboots",
@@ -7845,6 +8821,7 @@ return {
             type = 1,
         },
         {
+            id   = 133806,
             file = 133806,
             hash = "0ec91e51ad44f26762eed9c7f3d2fd5b",
             name = "inv_misc_desecrated_clothbracer",
@@ -7852,6 +8829,7 @@ return {
             type = 1,
         },
         {
+            id   = 133807,
             file = 133807,
             hash = "5ff3e985dcff4bbb160d2f4d4557e3ef",
             name = "inv_misc_desecrated_clothchest",
@@ -7859,6 +8837,7 @@ return {
             type = 1,
         },
         {
+            id   = 133808,
             file = 133808,
             hash = "af5c9b05facef11a6dcc3fa5e636618d",
             name = "inv_misc_desecrated_clothglove",
@@ -7866,6 +8845,7 @@ return {
             type = 1,
         },
         {
+            id   = 133809,
             file = 133809,
             hash = "8b99b68a0617b15406608fbb80532c12",
             name = "inv_misc_desecrated_clothhelm",
@@ -7873,6 +8853,7 @@ return {
             type = 1,
         },
         {
+            id   = 133810,
             file = 133810,
             hash = "11a308951954cc0d5a30c03a7e39c7ee",
             name = "inv_misc_desecrated_clothpants",
@@ -7880,6 +8861,7 @@ return {
             type = 1,
         },
         {
+            id   = 133811,
             file = 133811,
             hash = "e78c5fdceb0f9b4d72f4d2bc4664c895",
             name = "inv_misc_desecrated_clothshoulder",
@@ -7887,6 +8869,7 @@ return {
             type = 1,
         },
         {
+            id   = 133812,
             file = 133812,
             hash = "5142a1969cd20a07439e9987123a2106",
             name = "inv_misc_desecrated_leatherbelt",
@@ -7894,6 +8877,7 @@ return {
             type = 1,
         },
         {
+            id   = 133813,
             file = 133813,
             hash = "9bd65633fefcab56a2548ed514996269",
             name = "inv_misc_desecrated_leatherboots",
@@ -7901,6 +8885,7 @@ return {
             type = 1,
         },
         {
+            id   = 133814,
             file = 133814,
             hash = "1ef36726327e5e0b26acced60504d16f",
             name = "inv_misc_desecrated_leatherbracer",
@@ -7908,6 +8893,7 @@ return {
             type = 1,
         },
         {
+            id   = 133815,
             file = 133815,
             hash = "bc4145a46e62c6b4856db54584eab223",
             name = "inv_misc_desecrated_leatherchest",
@@ -7915,6 +8901,7 @@ return {
             type = 1,
         },
         {
+            id   = 133816,
             file = 133816,
             hash = "e6f086a78a31f229378f6bd23236143c",
             name = "inv_misc_desecrated_leatherglove",
@@ -7922,6 +8909,7 @@ return {
             type = 1,
         },
         {
+            id   = 133817,
             file = 133817,
             hash = "a5c00aa3a5f53f1ad70f4699a4a51287",
             name = "inv_misc_desecrated_leatherhelm",
@@ -7929,6 +8917,7 @@ return {
             type = 1,
         },
         {
+            id   = 133818,
             file = 133818,
             hash = "07e251c2aa712f49c482058c9f8639de",
             name = "inv_misc_desecrated_leatherpants",
@@ -7936,6 +8925,7 @@ return {
             type = 1,
         },
         {
+            id   = 133819,
             file = 133819,
             hash = "bbaead926d421018f3fedfdcb536fdc1",
             name = "inv_misc_desecrated_leathershoulder",
@@ -7943,6 +8933,7 @@ return {
             type = 1,
         },
         {
+            id   = 133820,
             file = 133820,
             hash = "b1319b9cbb67461c7b2230bdcc4cd234",
             name = "inv_misc_desecrated_mailbelt",
@@ -7950,6 +8941,7 @@ return {
             type = 1,
         },
         {
+            id   = 133821,
             file = 133821,
             hash = "2f89e5bc04260cef606bd68298e67328",
             name = "inv_misc_desecrated_mailboots",
@@ -7957,6 +8949,7 @@ return {
             type = 1,
         },
         {
+            id   = 133822,
             file = 133822,
             hash = "7986059cec771760790d4cde3f217001",
             name = "inv_misc_desecrated_mailbracer",
@@ -7964,6 +8957,7 @@ return {
             type = 1,
         },
         {
+            id   = 133823,
             file = 133823,
             hash = "db842835f7c2c9b2a450ceb8d6e02dc3",
             name = "inv_misc_desecrated_mailchest",
@@ -7971,6 +8965,7 @@ return {
             type = 1,
         },
         {
+            id   = 133824,
             file = 133824,
             hash = "10460ed1d55ed79a653dd94d0f90528d",
             name = "inv_misc_desecrated_mailglove",
@@ -7978,6 +8973,7 @@ return {
             type = 1,
         },
         {
+            id   = 133825,
             file = 133825,
             hash = "b437bcbc0e45a91822e6692008000109",
             name = "inv_misc_desecrated_mailhelm",
@@ -7985,6 +8981,7 @@ return {
             type = 1,
         },
         {
+            id   = 133826,
             file = 133826,
             hash = "c0ee93d61059e3d3686b5af3a3c9a827",
             name = "inv_misc_desecrated_mailpants",
@@ -7992,6 +8989,7 @@ return {
             type = 1,
         },
         {
+            id   = 133827,
             file = 133827,
             hash = "4327fd0b89da7f0676d65921f1c8d9de",
             name = "inv_misc_desecrated_mailshoulder",
@@ -7999,6 +8997,7 @@ return {
             type = 1,
         },
         {
+            id   = 133828,
             file = 133828,
             hash = "8cec14f94b2f0aaff725e3081481e37b",
             name = "inv_misc_desecrated_platebelt",
@@ -8006,6 +9005,7 @@ return {
             type = 1,
         },
         {
+            id   = 133829,
             file = 133829,
             hash = "89c9b40d6575847f8f090f418f11ee4c",
             name = "inv_misc_desecrated_plateboots",
@@ -8013,6 +9013,7 @@ return {
             type = 1,
         },
         {
+            id   = 133830,
             file = 133830,
             hash = "056aedbe3fd98a0312160f474a22a203",
             name = "inv_misc_desecrated_platebracer",
@@ -8020,6 +9021,7 @@ return {
             type = 1,
         },
         {
+            id   = 133831,
             file = 133831,
             hash = "82c380245356ef46f0d9b9f2d169f43f",
             name = "inv_misc_desecrated_platechest",
@@ -8027,6 +9029,7 @@ return {
             type = 1,
         },
         {
+            id   = 133832,
             file = 133832,
             hash = "ab3f24fe245b46c324ac5602ceda1098",
             name = "inv_misc_desecrated_plategloves",
@@ -8034,6 +9037,7 @@ return {
             type = 1,
         },
         {
+            id   = 133833,
             file = 133833,
             hash = "8fca1118202a2facfccca04d6262f4f5",
             name = "inv_misc_desecrated_platehelm",
@@ -8041,6 +9045,7 @@ return {
             type = 1,
         },
         {
+            id   = 133834,
             file = 133834,
             hash = "5e45c63bc1b1fbcdcf939599db39ff8e",
             name = "inv_misc_desecrated_platepants",
@@ -8048,6 +9053,7 @@ return {
             type = 1,
         },
         {
+            id   = 133835,
             file = 133835,
             hash = "fc7d2d09e2b54bd3c0a02118664d1aef",
             name = "inv_misc_desecrated_plateshoulder",
@@ -8055,6 +9061,7 @@ return {
             type = 1,
         },
         {
+            id   = 133841,
             file = 133841,
             hash = "ff9e3c3edb768e90485415c2441f6373",
             name = "inv_misc_drum_01",
@@ -8062,6 +9069,7 @@ return {
             type = 1,
         },
         {
+            id   = 133842,
             file = 133842,
             hash = "c7c4675d93fabc6b4f87511b3ddd649f",
             name = "inv_misc_drum_02",
@@ -8069,6 +9077,7 @@ return {
             type = 1,
         },
         {
+            id   = 133848,
             file = 133848,
             hash = "d749ce97a2777d6c209ba42e4ff1ba6d",
             name = "inv_misc_dust_01",
@@ -8076,6 +9085,7 @@ return {
             type = 1,
         },
         {
+            id   = 133849,
             file = 133849,
             hash = "d178b7ee620c73ee791f57dfaf529d56",
             name = "inv_misc_dust_02",
@@ -8083,6 +9093,7 @@ return {
             type = 1,
         },
         {
+            id   = 133850,
             file = 133850,
             hash = "6d5d75e632f02baac33bfac3db77186f",
             name = "inv_misc_dust_03",
@@ -8090,6 +9101,7 @@ return {
             type = 1,
         },
         {
+            id   = 133851,
             file = 133851,
             hash = "80cf1ce920f78a8ef14441afdfe25531",
             name = "inv_misc_dust_04",
@@ -8097,6 +9109,7 @@ return {
             type = 1,
         },
         {
+            id   = 133852,
             file = 133852,
             hash = "86f5cb46dc03384f22a734d4741c392b",
             name = "inv_misc_dust_05",
@@ -8104,6 +9117,7 @@ return {
             type = 1,
         },
         {
+            id   = 133853,
             file = 133853,
             hash = "417cd3052bfd64da93e00b292f6afb5d",
             name = "inv_misc_dust_06",
@@ -8111,6 +9125,7 @@ return {
             type = 1,
         },
         {
+            id   = 133854,
             file = 133854,
             hash = "2f6d1d0e338ec374edeb641427736526",
             name = "inv_misc_ear_human_01",
@@ -8118,6 +9133,7 @@ return {
             type = 1,
         },
         {
+            id   = 133855,
             file = 133855,
             hash = "45488e76c71ce285288942d0271a6ff1",
             name = "inv_misc_ear_human_02",
@@ -8125,6 +9141,7 @@ return {
             type = 1,
         },
         {
+            id   = 133856,
             file = 133856,
             hash = "696b433ddbf1157e0536478a9928333b",
             name = "inv_misc_ear_nightelf_01",
@@ -8132,6 +9149,7 @@ return {
             type = 1,
         },
         {
+            id   = 133857,
             file = 133857,
             hash = "3ac84f79150e48e88b846202d4a4c5a9",
             name = "inv_misc_ear_nightelf_02",
@@ -8139,6 +9157,7 @@ return {
             type = 1,
         },
         {
+            id   = 133858,
             file = 133858,
             hash = "dd308a22c5507a6f373a5f818cad6507",
             name = "inv_misc_elvencoins",
@@ -8146,6 +9165,7 @@ return {
             type = 1,
         },
         {
+            id   = 133859,
             file = 133859,
             hash = "7bd7b5b4a19912ba7f5d0d9d7363ccd5",
             name = "inv_misc_enggizmos_01",
@@ -8153,6 +9173,7 @@ return {
             type = 1,
         },
         {
+            id   = 133860,
             file = 133860,
             hash = "eeb1da4c5c5bfdc5f0a4746c5adfbf3e",
             name = "inv_misc_enggizmos_02",
@@ -8160,6 +9181,7 @@ return {
             type = 1,
         },
         {
+            id   = 133861,
             file = 133861,
             hash = "2eecd6562beebb7c43dcdbe070b767bc",
             name = "inv_misc_enggizmos_03",
@@ -8167,6 +9189,7 @@ return {
             type = 1,
         },
         {
+            id   = 133862,
             file = 133862,
             hash = "0953f2aee3527243228ec3bdc391f099",
             name = "inv_misc_enggizmos_04",
@@ -8174,6 +9197,7 @@ return {
             type = 1,
         },
         {
+            id   = 133863,
             file = 133863,
             hash = "5588180587bf78b1fabce95e9f97c712",
             name = "inv_misc_enggizmos_05",
@@ -8181,6 +9205,7 @@ return {
             type = 1,
         },
         {
+            id   = 133864,
             file = 133864,
             hash = "cdf30fc845ba2879e099482369c21b48",
             name = "inv_misc_enggizmos_06",
@@ -8188,6 +9213,7 @@ return {
             type = 1,
         },
         {
+            id   = 133865,
             file = 133865,
             hash = "6771576ef2c891bce50bc2d08ceb3118",
             name = "inv_misc_enggizmos_07",
@@ -8195,6 +9221,7 @@ return {
             type = 1,
         },
         {
+            id   = 133866,
             file = 133866,
             hash = "4d558b662b4793908f3bd6a75f76552a",
             name = "inv_misc_enggizmos_08",
@@ -8202,6 +9229,7 @@ return {
             type = 1,
         },
         {
+            id   = 133867,
             file = 133867,
             hash = "f01ad78f515254e07e9f89b3de556aa1",
             name = "inv_misc_enggizmos_09",
@@ -8209,6 +9237,7 @@ return {
             type = 1,
         },
         {
+            id   = 133868,
             file = 133868,
             hash = "9965f16532bb65c9ca6717235d0d96f1",
             name = "inv_misc_enggizmos_10",
@@ -8216,6 +9245,7 @@ return {
             type = 1,
         },
         {
+            id   = 133869,
             file = 133869,
             hash = "55d79026fa34b9d924626764d74c2ba6",
             name = "inv_misc_enggizmos_11",
@@ -8223,6 +9253,7 @@ return {
             type = 1,
         },
         {
+            id   = 133870,
             file = 133870,
             hash = "a177b542e5ea36b169413cd6e32cc4e2",
             name = "inv_misc_enggizmos_12",
@@ -8230,6 +9261,7 @@ return {
             type = 1,
         },
         {
+            id   = 133871,
             file = 133871,
             hash = "b0f7ad16151d1456d8a43a8281678161",
             name = "inv_misc_enggizmos_13",
@@ -8237,6 +9269,7 @@ return {
             type = 1,
         },
         {
+            id   = 133872,
             file = 133872,
             hash = "50151cf554bcc28d16edaf79ffb0404c",
             name = "inv_misc_enggizmos_14",
@@ -8244,6 +9277,7 @@ return {
             type = 1,
         },
         {
+            id   = 133873,
             file = 133873,
             hash = "99c5d46fa181c5b9edf58e096afef6dd",
             name = "inv_misc_enggizmos_15",
@@ -8251,6 +9285,7 @@ return {
             type = 1,
         },
         {
+            id   = 133874,
             file = 133874,
             hash = "f5a742b72b2e0661a997740ffdfba5dc",
             name = "inv_misc_enggizmos_16",
@@ -8258,6 +9293,7 @@ return {
             type = 1,
         },
         {
+            id   = 133875,
             file = 133875,
             hash = "43cb0535a253391928ade4450990e871",
             name = "inv_misc_enggizmos_17",
@@ -8265,6 +9301,7 @@ return {
             type = 1,
         },
         {
+            id   = 133876,
             file = 133876,
             hash = "312b6c83e380a39044eb7ab51ae6ab2a",
             name = "inv_misc_enggizmos_18",
@@ -8272,6 +9309,7 @@ return {
             type = 1,
         },
         {
+            id   = 133877,
             file = 133877,
             hash = "f922cb62d0aa72d67070f6bcb556d1d5",
             name = "inv_misc_enggizmos_19",
@@ -8279,6 +9317,7 @@ return {
             type = 1,
         },
         {
+            id   = 133878,
             file = 133878,
             hash = "e5db2137552d22d63da81df981a024e1",
             name = "inv_misc_enggizmos_20",
@@ -8286,6 +9325,7 @@ return {
             type = 1,
         },
         {
+            id   = 133879,
             file = 133879,
             hash = "c0184467518d38161fc8152444575e7e",
             name = "inv_misc_enggizmos_21",
@@ -8293,6 +9333,7 @@ return {
             type = 1,
         },
         {
+            id   = 133880,
             file = 133880,
             hash = "e4a47f749fb6d2b5eb60ea55a7c85067",
             name = "inv_misc_enggizmos_23",
@@ -8300,6 +9341,7 @@ return {
             type = 1,
         },
         {
+            id   = 133881,
             file = 133881,
             hash = "34e02259e1aca8fa89782630cd5ef552",
             name = "inv_misc_enggizmos_24",
@@ -8307,6 +9349,7 @@ return {
             type = 1,
         },
         {
+            id   = 133882,
             file = 133882,
             hash = "b3b553f3a1e3c13b8e538c9372db28d0",
             name = "inv_misc_enggizmos_essencedistiller",
@@ -8314,6 +9357,7 @@ return {
             type = 1,
         },
         {
+            id   = 133884,
             file = 133884,
             hash = "a20113f259556f591fc34466acc81f6a",
             name = "inv_misc_eye_01",
@@ -8321,6 +9365,7 @@ return {
             type = 1,
         },
         {
+            id   = 133887,
             file = 133887,
             hash = "7878e885ba012333b968b22d81a3dcfd",
             name = "inv_misc_fish_01",
@@ -8328,6 +9373,7 @@ return {
             type = 1,
         },
         {
+            id   = 133888,
             file = 133888,
             hash = "ce2dffcca36f82cfaa1e1c889f72247d",
             name = "inv_misc_fish_02",
@@ -8335,6 +9381,7 @@ return {
             type = 1,
         },
         {
+            id   = 133889,
             file = 133889,
             hash = "424768f8cc1ebc322af9422041bc43b8",
             name = "inv_misc_fish_03",
@@ -8342,6 +9389,7 @@ return {
             type = 1,
         },
         {
+            id   = 133890,
             file = 133890,
             hash = "3e1c8e36f7cb7a250c7d07383b594699",
             name = "inv_misc_fish_04",
@@ -8349,6 +9397,7 @@ return {
             type = 1,
         },
         {
+            id   = 133891,
             file = 133891,
             hash = "473f1fe357b3d90a67fe490160a95390",
             name = "inv_misc_fish_05",
@@ -8356,6 +9405,7 @@ return {
             type = 1,
         },
         {
+            id   = 133892,
             file = 133892,
             hash = "7341c9fdb629bbed5fa17fe02f6c1ed5",
             name = "inv_misc_fish_06",
@@ -8363,6 +9413,7 @@ return {
             type = 1,
         },
         {
+            id   = 133893,
             file = 133893,
             hash = "3f871a67f9d525d1cc4e94fa6439c064",
             name = "inv_misc_fish_07",
@@ -8370,6 +9421,7 @@ return {
             type = 1,
         },
         {
+            id   = 133894,
             file = 133894,
             hash = "9506fc549a20533dfc092ce4b277c319",
             name = "inv_misc_fish_08",
@@ -8377,6 +9429,7 @@ return {
             type = 1,
         },
         {
+            id   = 133895,
             file = 133895,
             hash = "12cc77c416e9191fac39729e325b0ef2",
             name = "inv_misc_fish_09",
@@ -8384,6 +9437,7 @@ return {
             type = 1,
         },
         {
+            id   = 133896,
             file = 133896,
             hash = "ec96ed02333659d743a25de504943f6c",
             name = "inv_misc_fish_10",
@@ -8391,6 +9445,7 @@ return {
             type = 1,
         },
         {
+            id   = 133897,
             file = 133897,
             hash = "0343e6ab00f699a779bfc427958915f6",
             name = "inv_misc_fish_11",
@@ -8398,6 +9453,7 @@ return {
             type = 1,
         },
         {
+            id   = 133898,
             file = 133898,
             hash = "300148c4ee01a69f83f433759836fc45",
             name = "inv_misc_fish_12",
@@ -8405,6 +9461,7 @@ return {
             type = 1,
         },
         {
+            id   = 133899,
             file = 133899,
             hash = "2b3ad864c0f29fd85c34b9efea7b0462",
             name = "inv_misc_fish_13",
@@ -8412,6 +9469,7 @@ return {
             type = 1,
         },
         {
+            id   = 133900,
             file = 133900,
             hash = "6a3092c3606870b9bebd969c4358b8bb",
             name = "inv_misc_fish_14",
@@ -8419,6 +9477,7 @@ return {
             type = 1,
         },
         {
+            id   = 133901,
             file = 133901,
             hash = "e30d45475676313567f91448807de278",
             name = "inv_misc_fish_15",
@@ -8426,6 +9485,7 @@ return {
             type = 1,
         },
         {
+            id   = 133902,
             file = 133902,
             hash = "2727b10d9613a5c3223e8e251ba10842",
             name = "inv_misc_fish_16",
@@ -8433,6 +9493,7 @@ return {
             type = 1,
         },
         {
+            id   = 133903,
             file = 133903,
             hash = "c10eddffe2cf2a38a20aedb4813b90d9",
             name = "inv_misc_fish_17",
@@ -8440,6 +9501,7 @@ return {
             type = 1,
         },
         {
+            id   = 133904,
             file = 133904,
             hash = "f240162966e8d7c00fbbde3cc67126cf",
             name = "inv_misc_fish_18",
@@ -8447,6 +9509,7 @@ return {
             type = 1,
         },
         {
+            id   = 133905,
             file = 133905,
             hash = "8c05b7e7dbf41bae0530ea7e513c7801",
             name = "inv_misc_fish_19",
@@ -8454,6 +9517,7 @@ return {
             type = 1,
         },
         {
+            id   = 133906,
             file = 133906,
             hash = "adfd1605a0fd4594238694c0e53577fe",
             name = "inv_misc_fish_20",
@@ -8461,6 +9525,7 @@ return {
             type = 1,
         },
         {
+            id   = 133907,
             file = 133907,
             hash = "e35623100a391804e5669e926e7c18a4",
             name = "inv_misc_fish_21",
@@ -8468,6 +9533,7 @@ return {
             type = 1,
         },
         {
+            id   = 133908,
             file = 133908,
             hash = "3fab9171fb10bd3f5d11432fb317a639",
             name = "inv_misc_fish_22",
@@ -8475,6 +9541,7 @@ return {
             type = 1,
         },
         {
+            id   = 133909,
             file = 133909,
             hash = "eb6d851ac1f86e87811fe54d638c189c",
             name = "inv_misc_fish_23",
@@ -8482,6 +9549,7 @@ return {
             type = 1,
         },
         {
+            id   = 133910,
             file = 133910,
             hash = "eb348ff2e9412a9c25660bc364cbe0ba",
             name = "inv_misc_fish_24",
@@ -8489,6 +9557,7 @@ return {
             type = 1,
         },
         {
+            id   = 133911,
             file = 133911,
             hash = "ff1ffbe16e0777b5ca19da72c2adaddf",
             name = "inv_misc_fish_25",
@@ -8496,6 +9565,7 @@ return {
             type = 1,
         },
         {
+            id   = 133912,
             file = 133912,
             hash = "fce583a45e236f215fc9b078e435f68f",
             name = "inv_misc_fish_26",
@@ -8503,6 +9573,7 @@ return {
             type = 1,
         },
         {
+            id   = 133913,
             file = 133913,
             hash = "b18bfa376a64b475ca38e912c4dfa4b0",
             name = "inv_misc_fish_27",
@@ -8510,6 +9581,7 @@ return {
             type = 1,
         },
         {
+            id   = 133914,
             file = 133914,
             hash = "6cbcdc4f0e2a42ec156e5b9659f5b34b",
             name = "inv_misc_fish_28",
@@ -8517,6 +9589,7 @@ return {
             type = 1,
         },
         {
+            id   = 133915,
             file = 133915,
             hash = "354a4708f48b95526658073d1cffd94f",
             name = "inv_misc_fish_29",
@@ -8524,6 +9597,7 @@ return {
             type = 1,
         },
         {
+            id   = 133916,
             file = 133916,
             hash = "6f394e2eb7cc911eff9ac8b49872465e",
             name = "inv_misc_fish_30",
@@ -8531,6 +9605,7 @@ return {
             type = 1,
         },
         {
+            id   = 133917,
             file = 133917,
             hash = "dccc98232696162b7f4ab1280a37df58",
             name = "inv_misc_fish_31",
@@ -8538,6 +9613,7 @@ return {
             type = 1,
         },
         {
+            id   = 133918,
             file = 133918,
             hash = "dd5bd8fdfdc09b56bdf1999a4ed331ac",
             name = "inv_misc_fish_32",
@@ -8545,6 +9621,7 @@ return {
             type = 1,
         },
         {
+            id   = 133919,
             file = 133919,
             hash = "bfa334ba0c20ff2420fc729264d46c26",
             name = "inv_misc_fish_33",
@@ -8552,6 +9629,7 @@ return {
             type = 1,
         },
         {
+            id   = 133935,
             file = 133935,
             hash = "08493542db320007c0d92f01e0628b3b",
             name = "inv_misc_fish_turtle_01",
@@ -8559,6 +9637,7 @@ return {
             type = 1,
         },
         {
+            id   = 133936,
             file = 133936,
             hash = "09dbb13e6894334f40235bf0afec990b",
             name = "inv_misc_fish_turtle_02",
@@ -8566,6 +9645,7 @@ return {
             type = 1,
         },
         {
+            id   = 133937,
             file = 133937,
             hash = "ce84e1ec401659c3a9d19646ff58ab62",
             name = "inv_misc_fish_turtle_03",
@@ -8573,6 +9653,7 @@ return {
             type = 1,
         },
         {
+            id   = 133938,
             file = 133938,
             hash = "af93208ede36890b4543c31722bb1af1",
             name = "inv_misc_flower_01",
@@ -8580,6 +9661,7 @@ return {
             type = 1,
         },
         {
+            id   = 133939,
             file = 133939,
             hash = "f1066306161947502d7031bc9936fab5",
             name = "inv_misc_flower_02",
@@ -8587,6 +9669,7 @@ return {
             type = 1,
         },
         {
+            id   = 133940,
             file = 133940,
             hash = "9d504637c554d3c80c2184531e73f959",
             name = "inv_misc_flower_03",
@@ -8594,6 +9677,7 @@ return {
             type = 1,
         },
         {
+            id   = 133941,
             file = 133941,
             hash = "4ef456963291221dc91ef418ee9f48ce",
             name = "inv_misc_flower_04",
@@ -8601,6 +9685,7 @@ return {
             type = 1,
         },
         {
+            id   = 133942,
             file = 133942,
             hash = "f5dfb1ff7cef01b691148023fb4b335e",
             name = "inv_misc_flute_01",
@@ -8608,6 +9693,7 @@ return {
             type = 1,
         },
         {
+            id   = 133943,
             file = 133943,
             hash = "c43c8ffa626a40a739d11da50f8b907b",
             name = "inv_misc_food_01",
@@ -8615,6 +9701,7 @@ return {
             type = 1,
         },
         {
+            id   = 133944,
             file = 133944,
             hash = "867cc5a59e5337d109434cc6fff8baf8",
             name = "inv_misc_food_02",
@@ -8622,6 +9709,7 @@ return {
             type = 1,
         },
         {
+            id   = 133945,
             file = 133945,
             hash = "ad66726003c5f857ec76832346a90283",
             name = "inv_misc_food_03",
@@ -8629,6 +9717,7 @@ return {
             type = 1,
         },
         {
+            id   = 133946,
             file = 133946,
             hash = "e9419553d9d18b577c9d6336b35677b3",
             name = "inv_misc_food_04",
@@ -8636,6 +9725,7 @@ return {
             type = 1,
         },
         {
+            id   = 133947,
             file = 133947,
             hash = "34c83992e66fbbb394594be60992bfa5",
             name = "inv_misc_food_05",
@@ -8643,6 +9733,7 @@ return {
             type = 1,
         },
         {
+            id   = 133948,
             file = 133948,
             hash = "2c1903e908be4b1b2c7119d868239ad3",
             name = "inv_misc_food_06",
@@ -8650,6 +9741,7 @@ return {
             type = 1,
         },
         {
+            id   = 133949,
             file = 133949,
             hash = "88c040fd6381b6cad41f6b810eae2ea4",
             name = "inv_misc_food_07",
@@ -8657,6 +9749,7 @@ return {
             type = 1,
         },
         {
+            id   = 133950,
             file = 133950,
             hash = "ad37c400f7e2deda11d92532c6da42a8",
             name = "inv_misc_food_08",
@@ -8664,6 +9757,7 @@ return {
             type = 1,
         },
         {
+            id   = 133951,
             file = 133951,
             hash = "aca08bde4915ae39e7f12734e7963da3",
             name = "inv_misc_food_09",
@@ -8671,6 +9765,7 @@ return {
             type = 1,
         },
         {
+            id   = 133952,
             file = 133952,
             hash = "fdc772bbc51185b636fea9926eec86b4",
             name = "inv_misc_food_10",
@@ -8678,6 +9773,7 @@ return {
             type = 1,
         },
         {
+            id   = 133964,
             file = 133964,
             hash = "3b39038ef8964d72f5fb29afa397b82b",
             name = "inv_misc_food_11",
@@ -8685,6 +9781,7 @@ return {
             type = 1,
         },
         {
+            id   = 133968,
             file = 133968,
             hash = "85142c67af05525693dc9aac4285de7f",
             name = "inv_misc_food_12",
@@ -8692,6 +9789,7 @@ return {
             type = 1,
         },
         {
+            id   = 133969,
             file = 133969,
             hash = "ef8346a4ee45409bde989e12ca99aed4",
             name = "inv_misc_food_13",
@@ -8699,6 +9797,7 @@ return {
             type = 1,
         },
         {
+            id   = 133970,
             file = 133970,
             hash = "a2e73cf44b922dda57b8204d06b14a2a",
             name = "inv_misc_food_14",
@@ -8706,6 +9805,7 @@ return {
             type = 1,
         },
         {
+            id   = 133971,
             file = 133971,
             hash = "283736480d85268a98f5897bd64165ce",
             name = "inv_misc_food_15",
@@ -8713,6 +9813,7 @@ return {
             type = 1,
         },
         {
+            id   = 133972,
             file = 133972,
             hash = "6940899a233df86c0069c04cff015760",
             name = "inv_misc_food_16",
@@ -8720,6 +9821,7 @@ return {
             type = 1,
         },
         {
+            id   = 133973,
             file = 133973,
             hash = "718c409d4d9575d2fbf3b9c8f4e3c837",
             name = "inv_misc_food_17",
@@ -8727,6 +9829,7 @@ return {
             type = 1,
         },
         {
+            id   = 133974,
             file = 133974,
             hash = "dd9f49b32bddc8fad03346d83f5c793a",
             name = "inv_misc_food_18",
@@ -8734,6 +9837,7 @@ return {
             type = 1,
         },
         {
+            id   = 133975,
             file = 133975,
             hash = "14cb0b3e3c7c17ff580f835fb297bb7b",
             name = "inv_misc_food_19",
@@ -8741,6 +9845,7 @@ return {
             type = 1,
         },
         {
+            id   = 133976,
             file = 133976,
             hash = "a400664aedd6e13550f70198480e97a3",
             name = "inv_misc_food_20",
@@ -8748,6 +9853,7 @@ return {
             type = 1,
         },
         {
+            id   = 133977,
             file = 133977,
             hash = "c9152606fc116071b29f5ecd76ba0ac3",
             name = "inv_misc_food_21",
@@ -8755,6 +9861,7 @@ return {
             type = 1,
         },
         {
+            id   = 133978,
             file = 133978,
             hash = "eeb710d08ab3472cb8bdf7a85016405e",
             name = "inv_misc_food_22",
@@ -8762,6 +9869,7 @@ return {
             type = 1,
         },
         {
+            id   = 133979,
             file = 133979,
             hash = "37fced135ea8a1893659624098741678",
             name = "inv_misc_food_23",
@@ -8769,6 +9877,7 @@ return {
             type = 1,
         },
         {
+            id   = 133980,
             file = 133980,
             hash = "196ddcfa844eb58deb1bb3dd2507b7a3",
             name = "inv_misc_food_24",
@@ -8776,6 +9885,7 @@ return {
             type = 1,
         },
         {
+            id   = 133981,
             file = 133981,
             hash = "d306ce59a09bbc6b004e1b6bd99fd175",
             name = "inv_misc_food_25",
@@ -8783,6 +9893,7 @@ return {
             type = 1,
         },
         {
+            id   = 133982,
             file = 133982,
             hash = "7a954f493b78cffd6281e53b0d57c157",
             name = "inv_misc_food_26",
@@ -8790,6 +9901,7 @@ return {
             type = 1,
         },
         {
+            id   = 133983,
             file = 133983,
             hash = "89ed701d95845cbc81896b3b54561077",
             name = "inv_misc_food_27",
@@ -8797,6 +9909,7 @@ return {
             type = 1,
         },
         {
+            id   = 133984,
             file = 133984,
             hash = "8fc316bfdadcabb9d0e652cfeb52b3bd",
             name = "inv_misc_food_28",
@@ -8804,6 +9917,7 @@ return {
             type = 1,
         },
         {
+            id   = 133985,
             file = 133985,
             hash = "e56d456238bffece6954293e64eedc39",
             name = "inv_misc_food_29",
@@ -8811,6 +9925,7 @@ return {
             type = 1,
         },
         {
+            id   = 133986,
             file = 133986,
             hash = "380c4ebe521614e135d50893e67d85d4",
             name = "inv_misc_food_30",
@@ -8818,6 +9933,7 @@ return {
             type = 1,
         },
         {
+            id   = 133987,
             file = 133987,
             hash = "3459ab28901b136154ce2954ae439be0",
             name = "inv_misc_food_31",
@@ -8825,6 +9941,7 @@ return {
             type = 1,
         },
         {
+            id   = 133988,
             file = 133988,
             hash = "0e7af41f9e565a4ad7894faa3f779821",
             name = "inv_misc_food_32",
@@ -8832,6 +9949,7 @@ return {
             type = 1,
         },
         {
+            id   = 133989,
             file = 133989,
             hash = "1dc6d9f82277c5de4f0a73d543223ab7",
             name = "inv_misc_food_33",
@@ -8839,6 +9957,7 @@ return {
             type = 1,
         },
         {
+            id   = 133990,
             file = 133990,
             hash = "3a9459c025a666a711b8b669661bc58d",
             name = "inv_misc_food_34",
@@ -8846,6 +9965,7 @@ return {
             type = 1,
         },
         {
+            id   = 133991,
             file = 133991,
             hash = "9085835132077778aedecb7ba53a25ee",
             name = "inv_misc_food_35",
@@ -8853,6 +9973,7 @@ return {
             type = 1,
         },
         {
+            id   = 133992,
             file = 133992,
             hash = "189a1504f9ebb5222733594472273929",
             name = "inv_misc_food_36",
@@ -8860,6 +9981,7 @@ return {
             type = 1,
         },
         {
+            id   = 133993,
             file = 133993,
             hash = "87cad77836ef8cf4e195d0ab0a62cf35",
             name = "inv_misc_food_37",
@@ -8867,6 +9989,7 @@ return {
             type = 1,
         },
         {
+            id   = 133994,
             file = 133994,
             hash = "4425f4da756e8264e555a34efbbb5eab",
             name = "inv_misc_food_38",
@@ -8874,6 +9997,7 @@ return {
             type = 1,
         },
         {
+            id   = 133995,
             file = 133995,
             hash = "aad78c25898422edbd5684af5178abf7",
             name = "inv_misc_food_39",
@@ -8881,6 +10005,7 @@ return {
             type = 1,
         },
         {
+            id   = 133996,
             file = 133996,
             hash = "9e104adf0ca3776a1af17a4eea1539a0",
             name = "inv_misc_food_40",
@@ -8888,6 +10013,7 @@ return {
             type = 1,
         },
         {
+            id   = 133997,
             file = 133997,
             hash = "aec21133790e7f1c98993eceafbfe395",
             name = "inv_misc_food_41",
@@ -8895,6 +10021,7 @@ return {
             type = 1,
         },
         {
+            id   = 133998,
             file = 133998,
             hash = "b597baf1bb186f35776d7bf4cf3d85e2",
             name = "inv_misc_food_42",
@@ -8902,6 +10029,7 @@ return {
             type = 1,
         },
         {
+            id   = 133999,
             file = 133999,
             hash = "9d3c038d45eaa6145b2431d3bf47e03b",
             name = "inv_misc_food_43",
@@ -8909,6 +10037,7 @@ return {
             type = 1,
         },
         {
+            id   = 134000,
             file = 134000,
             hash = "77f2ecf21b2fd9ae52bd462ad1fb1513",
             name = "inv_misc_food_44",
@@ -8916,6 +10045,7 @@ return {
             type = 1,
         },
         {
+            id   = 134001,
             file = 134001,
             hash = "8f84d99b110a670ba5e0a81761a77238",
             name = "inv_misc_food_45",
@@ -8923,6 +10053,7 @@ return {
             type = 1,
         },
         {
+            id   = 134002,
             file = 134002,
             hash = "859e6b52e5218e408d69488f665cbd38",
             name = "inv_misc_food_46",
@@ -8930,6 +10061,7 @@ return {
             type = 1,
         },
         {
+            id   = 134003,
             file = 134003,
             hash = "f77d3f878691cebf5ff4e836d6428b54",
             name = "inv_misc_food_47",
@@ -8937,6 +10069,7 @@ return {
             type = 1,
         },
         {
+            id   = 134004,
             file = 134004,
             hash = "e4c2170a1b27cf408e1df2dedd34898f",
             name = "inv_misc_food_48",
@@ -8944,6 +10077,7 @@ return {
             type = 1,
         },
         {
+            id   = 134005,
             file = 134005,
             hash = "3045e18348f95e87fc2c3f8ff98cffd4",
             name = "inv_misc_food_49",
@@ -8951,6 +10085,7 @@ return {
             type = 1,
         },
         {
+            id   = 134006,
             file = 134006,
             hash = "c7083a6542c64d167f49fd5d9602866d",
             name = "inv_misc_food_50",
@@ -8958,6 +10093,7 @@ return {
             type = 1,
         },
         {
+            id   = 134007,
             file = 134007,
             hash = "d910d74a9b1df3208fa6103ec458eb68",
             name = "inv_misc_food_51",
@@ -8965,6 +10101,7 @@ return {
             type = 1,
         },
         {
+            id   = 134008,
             file = 134008,
             hash = "370b93fc958077843a09ded62e9a286a",
             name = "inv_misc_food_52",
@@ -8972,6 +10109,7 @@ return {
             type = 1,
         },
         {
+            id   = 134009,
             file = 134009,
             hash = "412a19d532f53af3bb169d919af8ce93",
             name = "inv_misc_food_53",
@@ -8979,6 +10117,7 @@ return {
             type = 1,
         },
         {
+            id   = 134010,
             file = 134010,
             hash = "667b7e974fef3cfadfe8923f6efe3408",
             name = "inv_misc_food_54",
@@ -8986,6 +10125,7 @@ return {
             type = 1,
         },
         {
+            id   = 134011,
             file = 134011,
             hash = "ca0abda52d34035df151c62e520beb1c",
             name = "inv_misc_food_55",
@@ -8993,6 +10133,7 @@ return {
             type = 1,
         },
         {
+            id   = 134012,
             file = 134012,
             hash = "89988bf2978abdfdd7fcb1d5028397c8",
             name = "inv_misc_food_56",
@@ -9000,6 +10141,7 @@ return {
             type = 1,
         },
         {
+            id   = 134013,
             file = 134013,
             hash = "86bdce6918bf5243ab580459550b93f4",
             name = "inv_misc_food_57",
@@ -9007,6 +10149,7 @@ return {
             type = 1,
         },
         {
+            id   = 134014,
             file = 134014,
             hash = "b3eef30c3543a819a3202e8b2d244ff9",
             name = "inv_misc_food_58",
@@ -9014,6 +10157,7 @@ return {
             type = 1,
         },
         {
+            id   = 134015,
             file = 134015,
             hash = "5f9ca3643a9268a2e548dafbf051b731",
             name = "inv_misc_food_59",
@@ -9021,6 +10165,7 @@ return {
             type = 1,
         },
         {
+            id   = 134016,
             file = 134016,
             hash = "4fca907881d8636b21094882732aa0cc",
             name = "inv_misc_food_60",
@@ -9028,6 +10173,7 @@ return {
             type = 1,
         },
         {
+            id   = 134017,
             file = 134017,
             hash = "1a94c05a766f809c190f70bac982d466",
             name = "inv_misc_food_61",
@@ -9035,6 +10181,7 @@ return {
             type = 1,
         },
         {
+            id   = 134018,
             file = 134018,
             hash = "1afbf84cc4ea2dce8e309d4ac53f4f2c",
             name = "inv_misc_food_62",
@@ -9042,6 +10189,7 @@ return {
             type = 1,
         },
         {
+            id   = 134019,
             file = 134019,
             hash = "5b3ae228ef4e2cb65c636a9f34b72ba9",
             name = "inv_misc_food_63",
@@ -9049,6 +10197,7 @@ return {
             type = 1,
         },
         {
+            id   = 134020,
             file = 134020,
             hash = "c9ce48c273ac8fc2363cab9fd63ee8f4",
             name = "inv_misc_food_64",
@@ -9056,6 +10205,7 @@ return {
             type = 1,
         },
         {
+            id   = 134021,
             file = 134021,
             hash = "1531c2ace5d88bf2123fc873fb75484d",
             name = "inv_misc_food_65",
@@ -9063,6 +10213,7 @@ return {
             type = 1,
         },
         {
+            id   = 134022,
             file = 134022,
             hash = "06c696cca4ce292d70b1756e96fbbe75",
             name = "inv_misc_food_66",
@@ -9070,6 +10221,7 @@ return {
             type = 1,
         },
         {
+            id   = 134023,
             file = 134023,
             hash = "4fc31f13646527f7679c53e6f23c99b0",
             name = "inv_misc_food_67",
@@ -9077,6 +10229,7 @@ return {
             type = 1,
         },
         {
+            id   = 134024,
             file = 134024,
             hash = "e062154e4d7981ab65c0d6261a097d21",
             name = "inv_misc_food_68",
@@ -9084,6 +10237,7 @@ return {
             type = 1,
         },
         {
+            id   = 134025,
             file = 134025,
             hash = "0ac8ebca02ea87dca7c3829eec13f3f2",
             name = "inv_misc_food_69",
@@ -9091,6 +10245,7 @@ return {
             type = 1,
         },
         {
+            id   = 134026,
             file = 134026,
             hash = "f31c34d1b83c1956c5e17a4beb387442",
             name = "inv_misc_food_70",
@@ -9098,6 +10253,7 @@ return {
             type = 1,
         },
         {
+            id   = 134027,
             file = 134027,
             hash = "6f51ce6a6d51eb9cde30c8dc5c7117a4",
             name = "inv_misc_food_71",
@@ -9105,6 +10261,7 @@ return {
             type = 1,
         },
         {
+            id   = 134028,
             file = 134028,
             hash = "197f2871070a08a4121880d271534647",
             name = "inv_misc_food_72",
@@ -9112,6 +10269,7 @@ return {
             type = 1,
         },
         {
+            id   = 134029,
             file = 134029,
             hash = "dda0b6ef05b6a9e277b752cf3bfaa8bc",
             name = "inv_misc_food_73cinnamonroll",
@@ -9119,6 +10277,7 @@ return {
             type = 1,
         },
         {
+            id   = 134056,
             file = 134056,
             hash = "7a1c70bc4f3b7ce533e6a791e7bb52ca",
             name = "inv_misc_food_dimsum",
@@ -9126,6 +10285,7 @@ return {
             type = 1,
         },
         {
+            id   = 134058,
             file = 134058,
             hash = "1d524288346c313d45c5dbbbd2459133",
             name = "inv_misc_food_wheat_01",
@@ -9133,6 +10293,7 @@ return {
             type = 1,
         },
         {
+            id   = 134059,
             file = 134059,
             hash = "fff4cba1533971960ca7c9af69d9f91e",
             name = "inv_misc_food_wheat_02",
@@ -9140,6 +10301,7 @@ return {
             type = 1,
         },
         {
+            id   = 134060,
             file = 134060,
             hash = "20e2b45656c995b3865a9719ef1f4cfd",
             name = "inv_misc_foot_centaur",
@@ -9147,6 +10309,7 @@ return {
             type = 1,
         },
         {
+            id   = 134061,
             file = 134061,
             hash = "0963503e98d5ca44a820f532e6ad0d5e",
             name = "inv_misc_foot_kodo",
@@ -9154,6 +10317,7 @@ return {
             type = 1,
         },
         {
+            id   = 134062,
             file = 134062,
             hash = "bea88186a404e16e244c59ec77b2f40b",
             name = "inv_misc_fork&knife",
@@ -9161,6 +10325,7 @@ return {
             type = 1,
         },
         {
+            id   = 134063,
             file = 134063,
             hash = "703200855918ead0362bbe9b3368e2c2",
             name = "inv_misc_gear_01",
@@ -9168,6 +10333,7 @@ return {
             type = 1,
         },
         {
+            id   = 134064,
             file = 134064,
             hash = "891c671cafa83eb6bd13f665a9a6c063",
             name = "inv_misc_gear_02",
@@ -9175,6 +10341,7 @@ return {
             type = 1,
         },
         {
+            id   = 134065,
             file = 134065,
             hash = "8b9dd935e4f2f231d0016dc4e2303613",
             name = "inv_misc_gear_03",
@@ -9182,6 +10349,7 @@ return {
             type = 1,
         },
         {
+            id   = 134066,
             file = 134066,
             hash = "6b2e7e01e182e178e2f0406fb8c7b824",
             name = "inv_misc_gear_04",
@@ -9189,6 +10357,7 @@ return {
             type = 1,
         },
         {
+            id   = 134067,
             file = 134067,
             hash = "7e36c8d48d4636eff59cbc5e2a79383e",
             name = "inv_misc_gear_05",
@@ -9196,6 +10365,7 @@ return {
             type = 1,
         },
         {
+            id   = 134068,
             file = 134068,
             hash = "47b85113bc79b20078353ff3d46bf3be",
             name = "inv_misc_gear_06",
@@ -9203,6 +10373,7 @@ return {
             type = 1,
         },
         {
+            id   = 134069,
             file = 134069,
             hash = "9f6800f1ca2dc744669db55b476fc274",
             name = "inv_misc_gear_07",
@@ -9210,6 +10381,7 @@ return {
             type = 1,
         },
         {
+            id   = 134070,
             file = 134070,
             hash = "859c243f98996cd9dc45d0585e527190",
             name = "inv_misc_gear_08",
@@ -9217,6 +10389,7 @@ return {
             type = 1,
         },
         {
+            id   = 134071,
             file = 134071,
             hash = "12ecc324e8628bf19ee4be32da6fdec6",
             name = "inv_misc_gem_01",
@@ -9224,6 +10397,7 @@ return {
             type = 1,
         },
         {
+            id   = 134072,
             file = 134072,
             hash = "b70910ad3566227076aee53c3213efaf",
             name = "inv_misc_gem_02",
@@ -9231,6 +10405,7 @@ return {
             type = 1,
         },
         {
+            id   = 134073,
             file = 134073,
             hash = "3a37d631ab95768fc7d2f69e4068c7bf",
             name = "inv_misc_gem_03",
@@ -9238,6 +10413,7 @@ return {
             type = 1,
         },
         {
+            id   = 134074,
             file = 134074,
             hash = "63b623b27300b07c6c2021ac0a0d7fb1",
             name = "inv_misc_gem_amethyst_01",
@@ -9245,6 +10421,7 @@ return {
             type = 1,
         },
         {
+            id   = 134075,
             file = 134075,
             hash = "73f120ea478480c3b3b63599793f4efe",
             name = "inv_misc_gem_amethyst_02",
@@ -9252,6 +10429,7 @@ return {
             type = 1,
         },
         {
+            id   = 134076,
             file = 134076,
             hash = "417c234eaf56076de1e43a184171c169",
             name = "inv_misc_gem_amethyst_03",
@@ -9259,6 +10437,7 @@ return {
             type = 1,
         },
         {
+            id   = 134084,
             file = 134084,
             hash = "d1e2948cb3cc2a5048c534b343275fde",
             name = "inv_misc_gem_bloodstone_01",
@@ -9266,6 +10445,7 @@ return {
             type = 1,
         },
         {
+            id   = 134085,
             file = 134085,
             hash = "c73fa7f4213c6c5fdb067781f71e407f",
             name = "inv_misc_gem_bloodstone_02",
@@ -9273,6 +10453,7 @@ return {
             type = 1,
         },
         {
+            id   = 134086,
             file = 134086,
             hash = "06d81331266929c06c7b949271059824",
             name = "inv_misc_gem_bloodstone_03",
@@ -9280,6 +10461,7 @@ return {
             type = 1,
         },
         {
+            id   = 134087,
             file = 134087,
             hash = "8f9ff5e80c99b061d8e1e9dd59a4af33",
             name = "inv_misc_gem_crystal_01",
@@ -9287,6 +10469,7 @@ return {
             type = 1,
         },
         {
+            id   = 134088,
             file = 134088,
             hash = "49b8e1623f8ba823cdc3b43319a42b5b",
             name = "inv_misc_gem_crystal_02",
@@ -9294,6 +10477,7 @@ return {
             type = 1,
         },
         {
+            id   = 134089,
             file = 134089,
             hash = "828f98f0ab3a89447fecf19d7150179e",
             name = "inv_misc_gem_crystal_03",
@@ -9301,6 +10485,7 @@ return {
             type = 1,
         },
         {
+            id   = 134094,
             file = 134094,
             hash = "b78afb8baad6c337cc2ab3b9c43dfccd",
             name = "inv_misc_gem_diamond_01",
@@ -9308,6 +10493,7 @@ return {
             type = 1,
         },
         {
+            id   = 134095,
             file = 134095,
             hash = "c8ad832d5efc4411dcf8ef7e2081b4df",
             name = "inv_misc_gem_diamond_02",
@@ -9315,6 +10501,7 @@ return {
             type = 1,
         },
         {
+            id   = 134096,
             file = 134096,
             hash = "f71ce091df2256f22394a281f7e146cf",
             name = "inv_misc_gem_diamond_03",
@@ -9322,6 +10509,7 @@ return {
             type = 1,
         },
         {
+            id   = 134104,
             file = 134104,
             hash = "75411cf0ac4caa1f863efea3853abd7d",
             name = "inv_misc_gem_emerald_01",
@@ -9329,6 +10517,7 @@ return {
             type = 1,
         },
         {
+            id   = 134105,
             file = 134105,
             hash = "b932794fc4a4af7826620504c4530a65",
             name = "inv_misc_gem_emerald_02",
@@ -9336,6 +10525,7 @@ return {
             type = 1,
         },
         {
+            id   = 134106,
             file = 134106,
             hash = "406ea8c82f1aea98a25d8753e2f48b79",
             name = "inv_misc_gem_emerald_03",
@@ -9343,6 +10533,7 @@ return {
             type = 1,
         },
         {
+            id   = 134116,
             file = 134116,
             hash = "e353cea2ea1e8a89fec6312528c8f2f6",
             name = "inv_misc_gem_opal_01",
@@ -9350,6 +10541,7 @@ return {
             type = 1,
         },
         {
+            id   = 134117,
             file = 134117,
             hash = "177c58062d48e572a7a5fbf219c20cab",
             name = "inv_misc_gem_opal_02",
@@ -9357,6 +10549,7 @@ return {
             type = 1,
         },
         {
+            id   = 134118,
             file = 134118,
             hash = "8eee51cbad5bfc9e724a1edcd8d36808",
             name = "inv_misc_gem_opal_03",
@@ -9364,6 +10557,7 @@ return {
             type = 1,
         },
         {
+            id   = 134120,
             file = 134120,
             hash = "fce6a186a5b0fe117c3d9c606f7006c7",
             name = "inv_misc_gem_pearl_01",
@@ -9371,6 +10565,7 @@ return {
             type = 1,
         },
         {
+            id   = 134121,
             file = 134121,
             hash = "b2ab1a113823abc8224a81d4adebd02a",
             name = "inv_misc_gem_pearl_02",
@@ -9378,6 +10573,7 @@ return {
             type = 1,
         },
         {
+            id   = 134122,
             file = 134122,
             hash = "337e032b3aae1e98682b9584da0450ce",
             name = "inv_misc_gem_pearl_03",
@@ -9385,6 +10581,7 @@ return {
             type = 1,
         },
         {
+            id   = 134123,
             file = 134123,
             hash = "006a07a13f4b394e598420713f1ebaf4",
             name = "inv_misc_gem_pearl_04",
@@ -9392,6 +10589,7 @@ return {
             type = 1,
         },
         {
+            id   = 134124,
             file = 134124,
             hash = "4cda2c048356eb34dc794cf5d739c31f",
             name = "inv_misc_gem_pearl_05",
@@ -9399,6 +10597,7 @@ return {
             type = 1,
         },
         {
+            id   = 134125,
             file = 134125,
             hash = "b3febfd137c24fc137bad9a3cbaaf48e",
             name = "inv_misc_gem_pearl_06",
@@ -9406,6 +10605,7 @@ return {
             type = 1,
         },
         {
+            id   = 134128,
             file = 134128,
             hash = "cb48e97cf4ebd3dfcfbe2e87a4aafcd5",
             name = "inv_misc_gem_ruby_01",
@@ -9413,6 +10613,7 @@ return {
             type = 1,
         },
         {
+            id   = 134129,
             file = 134129,
             hash = "adcd09378221d09bbb501e5a655cd33d",
             name = "inv_misc_gem_ruby_02",
@@ -9420,6 +10621,7 @@ return {
             type = 1,
         },
         {
+            id   = 134130,
             file = 134130,
             hash = "3651ed7022269d3844f5c52bfc34c220",
             name = "inv_misc_gem_ruby_03",
@@ -9427,6 +10629,7 @@ return {
             type = 1,
         },
         {
+            id   = 134131,
             file = 134131,
             hash = "66a9c38de57091961d959ac52f3e3c00",
             name = "inv_misc_gem_sapphire_01",
@@ -9434,6 +10637,7 @@ return {
             type = 1,
         },
         {
+            id   = 134132,
             file = 134132,
             hash = "15d2a2969331e70e44acbb04b2beaec4",
             name = "inv_misc_gem_sapphire_02",
@@ -9441,6 +10645,7 @@ return {
             type = 1,
         },
         {
+            id   = 134133,
             file = 134133,
             hash = "75cbd11666bc091ff2fc8e1dd77f1230",
             name = "inv_misc_gem_sapphire_03",
@@ -9448,6 +10653,7 @@ return {
             type = 1,
         },
         {
+            id   = 134134,
             file = 134134,
             hash = "ae5efe2fc71ee342edd9b10959f78081",
             name = "inv_misc_gem_stone_01",
@@ -9455,6 +10661,7 @@ return {
             type = 1,
         },
         {
+            id   = 134135,
             file = 134135,
             hash = "7186c64346051be744d3f61aa1a7f4c1",
             name = "inv_misc_gem_topaz_01",
@@ -9462,6 +10669,7 @@ return {
             type = 1,
         },
         {
+            id   = 134136,
             file = 134136,
             hash = "f114a9657e6226908b4c43ac15e736ff",
             name = "inv_misc_gem_topaz_02",
@@ -9469,6 +10677,7 @@ return {
             type = 1,
         },
         {
+            id   = 134137,
             file = 134137,
             hash = "5f8ba7ae10c4d706c92aa5ae123f5b4e",
             name = "inv_misc_gem_topaz_03",
@@ -9476,6 +10685,7 @@ return {
             type = 1,
         },
         {
+            id   = 134138,
             file = 134138,
             hash = "a505363527d1a2302ad6d975e5437877",
             name = "inv_misc_gem_variety_01",
@@ -9483,6 +10693,7 @@ return {
             type = 1,
         },
         {
+            id   = 134139,
             file = 134139,
             hash = "0b76a06323c7784b8d288302b29aa5b1",
             name = "inv_misc_gem_variety_02",
@@ -9490,6 +10701,7 @@ return {
             type = 1,
         },
         {
+            id   = 134140,
             file = 134140,
             hash = "034e4c7d4d29ef51746910564ec6ece5",
             name = "inv_misc_gift_01",
@@ -9497,6 +10709,7 @@ return {
             type = 1,
         },
         {
+            id   = 134141,
             file = 134141,
             hash = "26d160d62c87761e045cbe5a7052e536",
             name = "inv_misc_gift_02",
@@ -9504,6 +10717,7 @@ return {
             type = 1,
         },
         {
+            id   = 134142,
             file = 134142,
             hash = "7431e27644b1baf60526a7a052985b95",
             name = "inv_misc_gift_03",
@@ -9511,6 +10725,7 @@ return {
             type = 1,
         },
         {
+            id   = 134143,
             file = 134143,
             hash = "0e9093abb0391af4cae78f44a5ca14fa",
             name = "inv_misc_gift_04",
@@ -9518,6 +10733,7 @@ return {
             type = 1,
         },
         {
+            id   = 134144,
             file = 134144,
             hash = "8490a02201c0090c2d70127d57889a27",
             name = "inv_misc_gift_05",
@@ -9525,6 +10741,7 @@ return {
             type = 1,
         },
         {
+            id   = 134145,
             file = 134145,
             hash = "1723db4fc495afb887c144f65c436bec",
             name = "inv_misc_giftwrap_01",
@@ -9532,6 +10749,7 @@ return {
             type = 1,
         },
         {
+            id   = 134146,
             file = 134146,
             hash = "2048bf0d17b5dd7c866260744667fa1a",
             name = "inv_misc_giftwrap_02",
@@ -9539,6 +10757,7 @@ return {
             type = 1,
         },
         {
+            id   = 134147,
             file = 134147,
             hash = "baeb66fcf957dbe338eb895bfee71e7a",
             name = "inv_misc_giftwrap_03",
@@ -9546,6 +10765,7 @@ return {
             type = 1,
         },
         {
+            id   = 134150,
             file = 134150,
             hash = "a1e464a8a2f968e632b736908f6c12cc",
             name = "inv_misc_head_02",
@@ -9553,6 +10773,7 @@ return {
             type = 1,
         },
         {
+            id   = 134151,
             file = 134151,
             hash = "7c5bdf89a3f57506afb919455b542a4a",
             name = "inv_misc_head_centaur_01",
@@ -9560,6 +10781,7 @@ return {
             type = 1,
         },
         {
+            id   = 134153,
             file = 134153,
             hash = "86b6f2d5d5a2a134d13242e203642168",
             name = "inv_misc_head_dragon_01",
@@ -9567,6 +10789,7 @@ return {
             type = 1,
         },
         {
+            id   = 134154,
             file = 134154,
             hash = "e556c0025f226650030b3963af0f5d57",
             name = "inv_misc_head_dragon_black",
@@ -9574,6 +10797,7 @@ return {
             type = 1,
         },
         {
+            id   = 134155,
             file = 134155,
             hash = "99bcda6fb77be9df528bdc6097cf7c40",
             name = "inv_misc_head_dragon_blue",
@@ -9581,6 +10805,7 @@ return {
             type = 1,
         },
         {
+            id   = 134156,
             file = 134156,
             hash = "128bb3995c8d161a20c8323a9a123f12",
             name = "inv_misc_head_dragon_bronze",
@@ -9588,6 +10813,7 @@ return {
             type = 1,
         },
         {
+            id   = 134157,
             file = 134157,
             hash = "baa67f5cffd653163d2ad431de5d8444",
             name = "inv_misc_head_dragon_green",
@@ -9595,6 +10821,7 @@ return {
             type = 1,
         },
         {
+            id   = 134158,
             file = 134158,
             hash = "de037972a6296a123522dd5e5de61a19",
             name = "inv_misc_head_dragon_red",
@@ -9602,6 +10829,7 @@ return {
             type = 1,
         },
         {
+            id   = 134159,
             file = 134159,
             hash = "5b6443a972927d5f4e92808fa2b44ce6",
             name = "inv_misc_head_dwarf_01",
@@ -9609,6 +10837,7 @@ return {
             type = 1,
         },
         {
+            id   = 134160,
             file = 134160,
             hash = "c0ecdf96d70e1e4d839af97c25d2b9cd",
             name = "inv_misc_head_dwarf_02",
@@ -9616,6 +10845,7 @@ return {
             type = 1,
         },
         {
+            id   = 134161,
             file = 134161,
             hash = "16178848693d081c509b3111ddfe9203",
             name = "inv_misc_head_elf_01",
@@ -9623,6 +10853,7 @@ return {
             type = 1,
         },
         {
+            id   = 134162,
             file = 134162,
             hash = "cd4cc07a60344cb3cc6756156617137f",
             name = "inv_misc_head_elf_02",
@@ -9630,6 +10861,7 @@ return {
             type = 1,
         },
         {
+            id   = 134163,
             file = 134163,
             hash = "92aeb09774d5a43155a9596af4444887",
             name = "inv_misc_head_gnoll_01",
@@ -9637,6 +10869,7 @@ return {
             type = 1,
         },
         {
+            id   = 134164,
             file = 134164,
             hash = "daa8bfa99ea8706357840242045521e4",
             name = "inv_misc_head_gnome_01",
@@ -9644,6 +10877,7 @@ return {
             type = 1,
         },
         {
+            id   = 134165,
             file = 134165,
             hash = "66d0c1c4d5d3659ed9f64b39f175d517",
             name = "inv_misc_head_gnome_02",
@@ -9651,6 +10885,7 @@ return {
             type = 1,
         },
         {
+            id   = 134166,
             file = 134166,
             hash = "8dcfe7e72ce649e8d03299d5c7d271d7",
             name = "inv_misc_head_human_01",
@@ -9658,6 +10893,7 @@ return {
             type = 1,
         },
         {
+            id   = 134167,
             file = 134167,
             hash = "bf1a354f7330442c559f6ea214ce9e8a",
             name = "inv_misc_head_human_02",
@@ -9665,6 +10901,7 @@ return {
             type = 1,
         },
         {
+            id   = 134168,
             file = 134168,
             hash = "b92f3670a497e2a3f33a7b5a052ba818",
             name = "inv_misc_head_kobold_01",
@@ -9672,6 +10909,7 @@ return {
             type = 1,
         },
         {
+            id   = 134169,
             file = 134169,
             hash = "2dfca53cfe556a39909785e96c9ac408",
             name = "inv_misc_head_murloc_01",
@@ -9679,6 +10917,7 @@ return {
             type = 1,
         },
         {
+            id   = 134170,
             file = 134170,
             hash = "0938e7ea10d4e87bdf255ac1fdfa6332",
             name = "inv_misc_head_orc_01",
@@ -9686,6 +10925,7 @@ return {
             type = 1,
         },
         {
+            id   = 134171,
             file = 134171,
             hash = "d2e6c64fb4f1371624818586e2139a41",
             name = "inv_misc_head_orc_02",
@@ -9693,6 +10933,7 @@ return {
             type = 1,
         },
         {
+            id   = 134172,
             file = 134172,
             hash = "895db3d8c802bf5f5a223d8c0f256d2c",
             name = "inv_misc_head_quillboar_01",
@@ -9700,6 +10941,7 @@ return {
             type = 1,
         },
         {
+            id   = 134173,
             file = 134173,
             hash = "21d6cbc82a7a087aa1476c642f7bab65",
             name = "inv_misc_head_scourge_01",
@@ -9707,6 +10949,7 @@ return {
             type = 1,
         },
         {
+            id   = 134174,
             file = 134174,
             hash = "e56f7ef8e41a7143765b7d0734469bda",
             name = "inv_misc_head_tauren_01",
@@ -9714,6 +10957,7 @@ return {
             type = 1,
         },
         {
+            id   = 134175,
             file = 134175,
             hash = "aeb7713ed0820c27ce7fcd43afa820fc",
             name = "inv_misc_head_tauren_02",
@@ -9721,6 +10965,7 @@ return {
             type = 1,
         },
         {
+            id   = 134176,
             file = 134176,
             hash = "bc375f330fda4cbd4f1d718f96903dd0",
             name = "inv_misc_head_tiger_01",
@@ -9728,6 +10973,7 @@ return {
             type = 1,
         },
         {
+            id   = 134177,
             file = 134177,
             hash = "0b9f5972b2ed27793280b1a07cbf45dd",
             name = "inv_misc_head_troll_01",
@@ -9735,6 +10981,7 @@ return {
             type = 1,
         },
         {
+            id   = 134178,
             file = 134178,
             hash = "dd270a8dceb18d9399dde3840f9c4789",
             name = "inv_misc_head_troll_02",
@@ -9742,6 +10989,7 @@ return {
             type = 1,
         },
         {
+            id   = 134179,
             file = 134179,
             hash = "3df0af2af2b982dd9283e76e248fb942",
             name = "inv_misc_head_undead_01",
@@ -9749,6 +10997,7 @@ return {
             type = 1,
         },
         {
+            id   = 134180,
             file = 134180,
             hash = "993fdedf5b3f39c8ceef153caa42696f",
             name = "inv_misc_head_undead_02",
@@ -9756,6 +11005,7 @@ return {
             type = 1,
         },
         {
+            id   = 134181,
             file = 134181,
             hash = "7a6036666224dcada4a9955de51ef51d",
             name = "inv_misc_herb_01",
@@ -9763,6 +11013,7 @@ return {
             type = 1,
         },
         {
+            id   = 134182,
             file = 134182,
             hash = "b46f14723041bf9353c93b44d5a165b3",
             name = "inv_misc_herb_02",
@@ -9770,6 +11021,7 @@ return {
             type = 1,
         },
         {
+            id   = 134183,
             file = 134183,
             hash = "479d58e61cdb970c4d01a412dda3618c",
             name = "inv_misc_herb_03",
@@ -9777,6 +11029,7 @@ return {
             type = 1,
         },
         {
+            id   = 134184,
             file = 134184,
             hash = "0106ccccd7df435458ef24fc6d9e9b27",
             name = "inv_misc_herb_04",
@@ -9784,6 +11037,7 @@ return {
             type = 1,
         },
         {
+            id   = 134185,
             file = 134185,
             hash = "d02a2399f4659bed280ebda86ddf25cc",
             name = "inv_misc_herb_05",
@@ -9791,6 +11045,7 @@ return {
             type = 1,
         },
         {
+            id   = 134186,
             file = 134186,
             hash = "b71d43c904159fcf91c779d7873f69f2",
             name = "inv_misc_herb_06",
@@ -9798,6 +11053,7 @@ return {
             type = 1,
         },
         {
+            id   = 134187,
             file = 134187,
             hash = "afe0419f2cb99d748ff7bea985d7971f",
             name = "inv_misc_herb_07",
@@ -9805,6 +11061,7 @@ return {
             type = 1,
         },
         {
+            id   = 134188,
             file = 134188,
             hash = "10b0c72a8805e99e807fa16f0ed359fd",
             name = "inv_misc_herb_08",
@@ -9812,6 +11069,7 @@ return {
             type = 1,
         },
         {
+            id   = 134189,
             file = 134189,
             hash = "95bb3cd282042d68d66523e0ded9b73a",
             name = "inv_misc_herb_09",
@@ -9819,6 +11077,7 @@ return {
             type = 1,
         },
         {
+            id   = 134190,
             file = 134190,
             hash = "0c225844a7e79a35abe12858ac58ef76",
             name = "inv_misc_herb_10",
@@ -9826,6 +11085,7 @@ return {
             type = 1,
         },
         {
+            id   = 134191,
             file = 134191,
             hash = "01b929a747398000e2d6448c14624468",
             name = "inv_misc_herb_11",
@@ -9833,6 +11093,7 @@ return {
             type = 1,
         },
         {
+            id   = 134192,
             file = 134192,
             hash = "27720b50abe094ec0063a1a0355d05ae",
             name = "inv_misc_herb_11a",
@@ -9840,6 +11101,7 @@ return {
             type = 1,
         },
         {
+            id   = 134193,
             file = 134193,
             hash = "82c9577de0e801897cf27c5e8bf81077",
             name = "inv_misc_herb_12",
@@ -9847,6 +11109,7 @@ return {
             type = 1,
         },
         {
+            id   = 134194,
             file = 134194,
             hash = "67c51e0b1ddc854c897439a5475d9046",
             name = "inv_misc_herb_13",
@@ -9854,6 +11117,7 @@ return {
             type = 1,
         },
         {
+            id   = 134195,
             file = 134195,
             hash = "b49e0e892eabcfaf679f6a217a096f67",
             name = "inv_misc_herb_14",
@@ -9861,6 +11125,7 @@ return {
             type = 1,
         },
         {
+            id   = 134196,
             file = 134196,
             hash = "4845caeb1b66f1f4d9fed8992879866e",
             name = "inv_misc_herb_15",
@@ -9868,6 +11133,7 @@ return {
             type = 1,
         },
         {
+            id   = 134197,
             file = 134197,
             hash = "2d35364a348bfc78f63bc2c63b39bb91",
             name = "inv_misc_herb_16",
@@ -9875,6 +11141,7 @@ return {
             type = 1,
         },
         {
+            id   = 134198,
             file = 134198,
             hash = "bde8683f1cf34f88fc2b3e000dfc6ac8",
             name = "inv_misc_herb_17",
@@ -9882,6 +11149,7 @@ return {
             type = 1,
         },
         {
+            id   = 134199,
             file = 134199,
             hash = "dea0e1be6c55315e36435a54510d7196",
             name = "inv_misc_herb_18",
@@ -9889,6 +11157,7 @@ return {
             type = 1,
         },
         {
+            id   = 134200,
             file = 134200,
             hash = "5adf655857bf996de5481c13cdbbcc88",
             name = "inv_misc_herb_19",
@@ -9896,6 +11165,7 @@ return {
             type = 1,
         },
         {
+            id   = 134202,
             file = 134202,
             hash = "7e8ec09987fa7d85c1ba02ec7c708fb0",
             name = "inv_misc_herb_blacklotus",
@@ -9903,6 +11173,7 @@ return {
             type = 1,
         },
         {
+            id   = 134204,
             file = 134204,
             hash = "14c1604dc190f830f98f5892ea4116cb",
             name = "inv_misc_herb_dreamfoil",
@@ -9910,6 +11181,7 @@ return {
             type = 1,
         },
         {
+            id   = 134212,
             file = 134212,
             hash = "72833ad0b401eb49cf12a7b7134ac8bb",
             name = "inv_misc_herb_icecap",
@@ -9917,6 +11189,7 @@ return {
             type = 1,
         },
         {
+            id   = 134215,
             file = 134215,
             hash = "b7f597548909e0a86c3a803dbea41b00",
             name = "inv_misc_herb_mountainsilversage",
@@ -9924,6 +11197,7 @@ return {
             type = 1,
         },
         {
+            id   = 134219,
             file = 134219,
             hash = "7609fcbbb5562d924d6008639173bc54",
             name = "inv_misc_herb_plaguebloom",
@@ -9931,6 +11205,7 @@ return {
             type = 1,
         },
         {
+            id   = 134221,
             file = 134221,
             hash = "f5268c304ae90f08f01290785cedff3e",
             name = "inv_misc_herb_sansamroot",
@@ -9938,6 +11213,7 @@ return {
             type = 1,
         },
         {
+            id   = 134227,
             file = 134227,
             hash = "101965730d6251fa80a7e917dcfdc9b4",
             name = "inv_misc_horn_01",
@@ -9945,6 +11221,7 @@ return {
             type = 1,
         },
         {
+            id   = 134228,
             file = 134228,
             hash = "7aebce2df3395cdd9cd47b39cb19907d",
             name = "inv_misc_horn_02",
@@ -9952,6 +11229,7 @@ return {
             type = 1,
         },
         {
+            id   = 134229,
             file = 134229,
             hash = "48a7913a28eb91453b4c2623d116cce3",
             name = "inv_misc_horn_03",
@@ -9959,6 +11237,7 @@ return {
             type = 1,
         },
         {
+            id   = 134230,
             file = 134230,
             hash = "c154ddeb562c22dc28f607e1ee3ec583",
             name = "inv_misc_idol_01",
@@ -9966,6 +11245,7 @@ return {
             type = 1,
         },
         {
+            id   = 134231,
             file = 134231,
             hash = "2e671d931c54f9b2395f2c15f8a93a6d",
             name = "inv_misc_idol_02",
@@ -9973,6 +11253,7 @@ return {
             type = 1,
         },
         {
+            id   = 134232,
             file = 134232,
             hash = "0c18c55c7a598aa2e37022231137c0fa",
             name = "inv_misc_idol_03",
@@ -9980,6 +11261,7 @@ return {
             type = 1,
         },
         {
+            id   = 134235,
             file = 134235,
             hash = "be8e58f89e2e3cfd335edb7c155c1f19",
             name = "inv_misc_key_01",
@@ -9987,6 +11269,7 @@ return {
             type = 1,
         },
         {
+            id   = 134236,
             file = 134236,
             hash = "61c69d11d7a01315f33b0ca750918d99",
             name = "inv_misc_key_02",
@@ -9994,6 +11277,7 @@ return {
             type = 1,
         },
         {
+            id   = 134237,
             file = 134237,
             hash = "00caf15dce888578f9805f6688685c8a",
             name = "inv_misc_key_03",
@@ -10001,6 +11285,7 @@ return {
             type = 1,
         },
         {
+            id   = 134238,
             file = 134238,
             hash = "2bd8833e9746af3e0b8d54af4e11ff8c",
             name = "inv_misc_key_04",
@@ -10008,6 +11293,7 @@ return {
             type = 1,
         },
         {
+            id   = 134239,
             file = 134239,
             hash = "74555f06b21a79c410a065f66b9238a0",
             name = "inv_misc_key_05",
@@ -10015,6 +11301,7 @@ return {
             type = 1,
         },
         {
+            id   = 134240,
             file = 134240,
             hash = "42d7e8c40b9a6e350bd09dff36a1b594",
             name = "inv_misc_key_06",
@@ -10022,6 +11309,7 @@ return {
             type = 1,
         },
         {
+            id   = 134241,
             file = 134241,
             hash = "e06bdef19f108980ae0041390633d6a1",
             name = "inv_misc_key_07",
@@ -10029,6 +11317,7 @@ return {
             type = 1,
         },
         {
+            id   = 134242,
             file = 134242,
             hash = "5d53bb8d884a840fefb51aa66bedb053",
             name = "inv_misc_key_08",
@@ -10036,6 +11325,7 @@ return {
             type = 1,
         },
         {
+            id   = 134243,
             file = 134243,
             hash = "33cf6e0707380ab4e7e0c26c2bd2e28f",
             name = "inv_misc_key_09",
@@ -10043,6 +11333,7 @@ return {
             type = 1,
         },
         {
+            id   = 134244,
             file = 134244,
             hash = "f2421f1c23468d3433025ce2ee8aec1f",
             name = "inv_misc_key_10",
@@ -10050,6 +11341,7 @@ return {
             type = 1,
         },
         {
+            id   = 134245,
             file = 134245,
             hash = "fb3ff1b9f351b6b4591e67f3d6443304",
             name = "inv_misc_key_11",
@@ -10057,6 +11349,7 @@ return {
             type = 1,
         },
         {
+            id   = 134246,
             file = 134246,
             hash = "c97f2c45e8cfcb0b2c81327ef3e71e3c",
             name = "inv_misc_key_12",
@@ -10064,6 +11357,7 @@ return {
             type = 1,
         },
         {
+            id   = 134247,
             file = 134247,
             hash = "ae7fa650c8c6fe84f44d726b03002c6f",
             name = "inv_misc_key_13",
@@ -10071,6 +11365,7 @@ return {
             type = 1,
         },
         {
+            id   = 134248,
             file = 134248,
             hash = "18f8a4ef6cae2891797e8bc212502684",
             name = "inv_misc_key_14",
@@ -10078,6 +11373,7 @@ return {
             type = 1,
         },
         {
+            id   = 134249,
             file = 134249,
             hash = "bc406c4e60526cfbf49b6f1d14ee4ca3",
             name = "inv_misc_lantern_01",
@@ -10085,6 +11381,7 @@ return {
             type = 1,
         },
         {
+            id   = 134250,
             file = 134250,
             hash = "00fb85787363e0206675e2165fceaf3a",
             name = "inv_misc_leatherscrap_01",
@@ -10092,6 +11389,7 @@ return {
             type = 1,
         },
         {
+            id   = 134251,
             file = 134251,
             hash = "d427e188923c496b41bd9d8fda90f3d8",
             name = "inv_misc_leatherscrap_02",
@@ -10099,6 +11397,7 @@ return {
             type = 1,
         },
         {
+            id   = 134252,
             file = 134252,
             hash = "a7e2424ad35fe9fcbe6a03189de696d0",
             name = "inv_misc_leatherscrap_03",
@@ -10106,6 +11405,7 @@ return {
             type = 1,
         },
         {
+            id   = 134253,
             file = 134253,
             hash = "5303ca9762ecfd6002f9b115ba57ebdd",
             name = "inv_misc_leatherscrap_04",
@@ -10113,6 +11413,7 @@ return {
             type = 1,
         },
         {
+            id   = 134254,
             file = 134254,
             hash = "6b259ec50f428e7c7b9a87e5487aa5ba",
             name = "inv_misc_leatherscrap_05",
@@ -10120,6 +11421,7 @@ return {
             type = 1,
         },
         {
+            id   = 134255,
             file = 134255,
             hash = "7ca6d2804938755125eb68e970fac322",
             name = "inv_misc_leatherscrap_06",
@@ -10127,6 +11429,7 @@ return {
             type = 1,
         },
         {
+            id   = 134256,
             file = 134256,
             hash = "02ed4c2e29cdacba8c3254787a6c14ee",
             name = "inv_misc_leatherscrap_07",
@@ -10134,6 +11437,7 @@ return {
             type = 1,
         },
         {
+            id   = 134257,
             file = 134257,
             hash = "97a61ea39702272a5c2b9fbd8009dcb7",
             name = "inv_misc_leatherscrap_08",
@@ -10141,6 +11445,7 @@ return {
             type = 1,
         },
         {
+            id   = 134268,
             file = 134268,
             hash = "c5603a2864064b8cb52a290595125089",
             name = "inv_misc_luckymoneyenvelope",
@@ -10148,6 +11453,7 @@ return {
             type = 1,
         },
         {
+            id   = 134269,
             file = 134269,
             hash = "d62c0ed4e717b2e66196ec574705770a",
             name = "inv_misc_map_01",
@@ -10155,6 +11461,7 @@ return {
             type = 1,
         },
         {
+            id   = 134270,
             file = 134270,
             hash = "c018e57069cd6f1d8fd7e0c8602e1e87",
             name = "inv_misc_missilelarge_blue",
@@ -10162,6 +11469,7 @@ return {
             type = 1,
         },
         {
+            id   = 134271,
             file = 134271,
             hash = "e9832dabcdd6dcfc019ad0be2bb31766",
             name = "inv_misc_missilelarge_green",
@@ -10169,6 +11477,7 @@ return {
             type = 1,
         },
         {
+            id   = 134272,
             file = 134272,
             hash = "3d058f0642d533ddeec48e778ee027e2",
             name = "inv_misc_missilelarge_purple",
@@ -10176,6 +11485,7 @@ return {
             type = 1,
         },
         {
+            id   = 134273,
             file = 134273,
             hash = "2d944724234cf143f283bccb89e30dd4",
             name = "inv_misc_missilelarge_red",
@@ -10183,6 +11493,7 @@ return {
             type = 1,
         },
         {
+            id   = 134274,
             file = 134274,
             hash = "8832b5ed61b5159a1ccfccba49152458",
             name = "inv_misc_missilelarge_white",
@@ -10190,6 +11501,7 @@ return {
             type = 1,
         },
         {
+            id   = 134275,
             file = 134275,
             hash = "4fa4a675dd497d4934e507e825dd5989",
             name = "inv_misc_missilelarge_yellow",
@@ -10197,6 +11509,7 @@ return {
             type = 1,
         },
         {
+            id   = 134276,
             file = 134276,
             hash = "4f0221e9fc94bc9870535fb2252d222f",
             name = "inv_misc_missilelargecluster_blue",
@@ -10204,6 +11517,7 @@ return {
             type = 1,
         },
         {
+            id   = 134277,
             file = 134277,
             hash = "abc5e6be81725b855b1d58fc0a6885bc",
             name = "inv_misc_missilelargecluster_green",
@@ -10211,6 +11525,7 @@ return {
             type = 1,
         },
         {
+            id   = 134278,
             file = 134278,
             hash = "ea525127def9568a414faad1b3c6422f",
             name = "inv_misc_missilelargecluster_purple",
@@ -10218,6 +11533,7 @@ return {
             type = 1,
         },
         {
+            id   = 134279,
             file = 134279,
             hash = "9d8f92e9471764cb24ee168ebcd57861",
             name = "inv_misc_missilelargecluster_red",
@@ -10225,6 +11541,7 @@ return {
             type = 1,
         },
         {
+            id   = 134280,
             file = 134280,
             hash = "44c1187e7a372529d0f2f2d9e5c0fa05",
             name = "inv_misc_missilelargecluster_white",
@@ -10232,6 +11549,7 @@ return {
             type = 1,
         },
         {
+            id   = 134281,
             file = 134281,
             hash = "e6692cc01e5b56566ffbeba2693d6d6f",
             name = "inv_misc_missilelargecluster_yellow",
@@ -10239,6 +11557,7 @@ return {
             type = 1,
         },
         {
+            id   = 134282,
             file = 134282,
             hash = "32340e74a5eec09924c85cc5317dbd24",
             name = "inv_misc_missilesmall_blue",
@@ -10246,6 +11565,7 @@ return {
             type = 1,
         },
         {
+            id   = 134283,
             file = 134283,
             hash = "150e7a915ab798f30d8933b62b84e993",
             name = "inv_misc_missilesmall_green",
@@ -10253,6 +11573,7 @@ return {
             type = 1,
         },
         {
+            id   = 134284,
             file = 134284,
             hash = "69fa0d7906895a2c3c9c51740a676054",
             name = "inv_misc_missilesmall_purple",
@@ -10260,6 +11581,7 @@ return {
             type = 1,
         },
         {
+            id   = 134285,
             file = 134285,
             hash = "89a160a13c59ba3c7b50d483497e90c6",
             name = "inv_misc_missilesmall_red",
@@ -10267,6 +11589,7 @@ return {
             type = 1,
         },
         {
+            id   = 134286,
             file = 134286,
             hash = "c6ec2371c122134bc9b7bd623aabd055",
             name = "inv_misc_missilesmall_white",
@@ -10274,6 +11597,7 @@ return {
             type = 1,
         },
         {
+            id   = 134287,
             file = 134287,
             hash = "e651bee62abe1e2e738d17fd1422cee2",
             name = "inv_misc_missilesmall_yellow",
@@ -10281,6 +11605,7 @@ return {
             type = 1,
         },
         {
+            id   = 134288,
             file = 134288,
             hash = "327e526f1af4a74b464de824dd8477cb",
             name = "inv_misc_missilesmallcluster_blue",
@@ -10288,6 +11613,7 @@ return {
             type = 1,
         },
         {
+            id   = 134289,
             file = 134289,
             hash = "fabf150b4d6a027965fce920c7b19c53",
             name = "inv_misc_missilesmallcluster_green",
@@ -10295,6 +11621,7 @@ return {
             type = 1,
         },
         {
+            id   = 134290,
             file = 134290,
             hash = "867ca18c866deab72c3e17358104c581",
             name = "inv_misc_missilesmallcluster_purple",
@@ -10302,6 +11629,7 @@ return {
             type = 1,
         },
         {
+            id   = 134291,
             file = 134291,
             hash = "0e743eab69c9224b248dd370b50ae7c9",
             name = "inv_misc_missilesmallcluster_red",
@@ -10309,6 +11637,7 @@ return {
             type = 1,
         },
         {
+            id   = 134292,
             file = 134292,
             hash = "f3d6e14fe502a5e11e9ad7d04f6e466b",
             name = "inv_misc_missilesmallcluster_white",
@@ -10316,6 +11645,7 @@ return {
             type = 1,
         },
         {
+            id   = 134293,
             file = 134293,
             hash = "296d36229f497a694e3d59d1c771c328",
             name = "inv_misc_missilesmallcluster_yellow",
@@ -10323,6 +11653,7 @@ return {
             type = 1,
         },
         {
+            id   = 134294,
             file = 134294,
             hash = "5128c16fea3ef43b063d91f3f843e059",
             name = "inv_misc_monsterclaw_01",
@@ -10330,6 +11661,7 @@ return {
             type = 1,
         },
         {
+            id   = 134295,
             file = 134295,
             hash = "91c251a8be7c4885d24b6d66a523aa17",
             name = "inv_misc_monsterclaw_02",
@@ -10337,6 +11669,7 @@ return {
             type = 1,
         },
         {
+            id   = 134296,
             file = 134296,
             hash = "9ec7c003e26f24f495ecc10b94faad3a",
             name = "inv_misc_monsterclaw_03",
@@ -10344,6 +11677,7 @@ return {
             type = 1,
         },
         {
+            id   = 134297,
             file = 134297,
             hash = "a55fb6e5dd0ca90005c1a15d6a1a4f47",
             name = "inv_misc_monsterclaw_04",
@@ -10351,6 +11685,7 @@ return {
             type = 1,
         },
         {
+            id   = 134298,
             file = 134298,
             hash = "c117509132841dc1f7fa7c7d5faec5be",
             name = "inv_misc_monsterfang_01",
@@ -10358,6 +11693,7 @@ return {
             type = 1,
         },
         {
+            id   = 134299,
             file = 134299,
             hash = "f19f4b8845206c8fa2c68b0870fdb748",
             name = "inv_misc_monsterhead_01",
@@ -10365,6 +11701,7 @@ return {
             type = 1,
         },
         {
+            id   = 134300,
             file = 134300,
             hash = "2844eb4c6f2d015037f2b5688cf4857f",
             name = "inv_misc_monsterhead_02",
@@ -10372,6 +11709,7 @@ return {
             type = 1,
         },
         {
+            id   = 134301,
             file = 134301,
             hash = "dd3a41ed7b9d02d3bfa68988ccc25314",
             name = "inv_misc_monsterhead_03",
@@ -10379,6 +11717,7 @@ return {
             type = 1,
         },
         {
+            id   = 134302,
             file = 134302,
             hash = "63007759ca4fe626b65c55b0c6fc01c2",
             name = "inv_misc_monsterhead_04",
@@ -10386,6 +11725,7 @@ return {
             type = 1,
         },
         {
+            id   = 134303,
             file = 134303,
             hash = "19a5c6ec957721f0a1da57b2170f1cc8",
             name = "inv_misc_monsterscales_01",
@@ -10393,6 +11733,7 @@ return {
             type = 1,
         },
         {
+            id   = 134304,
             file = 134304,
             hash = "4da0c78a3d6604318b9a8db8462813c6",
             name = "inv_misc_monsterscales_02",
@@ -10400,6 +11741,7 @@ return {
             type = 1,
         },
         {
+            id   = 134305,
             file = 134305,
             hash = "2d60037dfb716ae5365f483b13619e3c",
             name = "inv_misc_monsterscales_03",
@@ -10407,6 +11749,7 @@ return {
             type = 1,
         },
         {
+            id   = 134306,
             file = 134306,
             hash = "34f36e8154a0985e1abdcc8124fbfbcf",
             name = "inv_misc_monsterscales_04",
@@ -10414,6 +11757,7 @@ return {
             type = 1,
         },
         {
+            id   = 134307,
             file = 134307,
             hash = "c9c49e9e0855b157f6ad37180b72cc3d",
             name = "inv_misc_monsterscales_05",
@@ -10421,6 +11765,7 @@ return {
             type = 1,
         },
         {
+            id   = 134308,
             file = 134308,
             hash = "9c538bd44b55bc297479b699eea76c1f",
             name = "inv_misc_monsterscales_06",
@@ -10428,6 +11773,7 @@ return {
             type = 1,
         },
         {
+            id   = 134309,
             file = 134309,
             hash = "8dea6687fa3a6744b475f15a12cf805d",
             name = "inv_misc_monsterscales_07",
@@ -10435,6 +11781,7 @@ return {
             type = 1,
         },
         {
+            id   = 134310,
             file = 134310,
             hash = "9727c01ac94d0bfdf85f8a451aaeb018",
             name = "inv_misc_monsterscales_08",
@@ -10442,6 +11789,7 @@ return {
             type = 1,
         },
         {
+            id   = 134311,
             file = 134311,
             hash = "ffd02b299e7a69ef3a0dce785b2ab57f",
             name = "inv_misc_monsterscales_09",
@@ -10449,6 +11797,7 @@ return {
             type = 1,
         },
         {
+            id   = 134312,
             file = 134312,
             hash = "80a276f2dc359b6bfffdf34c74212c95",
             name = "inv_misc_monsterscales_10",
@@ -10456,6 +11805,7 @@ return {
             type = 1,
         },
         {
+            id   = 134313,
             file = 134313,
             hash = "0fd4180d59834e293a75cf21b9e7ebf6",
             name = "inv_misc_monsterscales_11",
@@ -10463,6 +11813,7 @@ return {
             type = 1,
         },
         {
+            id   = 134314,
             file = 134314,
             hash = "335c25b3a9a2ff722ba4d867515dac83",
             name = "inv_misc_monsterscales_12",
@@ -10470,6 +11821,7 @@ return {
             type = 1,
         },
         {
+            id   = 134315,
             file = 134315,
             hash = "dcb5ec8b0fc4a6d02d9066c9254efb0d",
             name = "inv_misc_monsterscales_13",
@@ -10477,6 +11829,7 @@ return {
             type = 1,
         },
         {
+            id   = 134316,
             file = 134316,
             hash = "d77e7da5e29b3aabbf62e3913c335687",
             name = "inv_misc_monsterscales_14",
@@ -10484,6 +11837,7 @@ return {
             type = 1,
         },
         {
+            id   = 134317,
             file = 134317,
             hash = "155ff299cfbf6bd4c70eef8d67a056dd",
             name = "inv_misc_monsterscales_15",
@@ -10491,6 +11845,7 @@ return {
             type = 1,
         },
         {
+            id   = 134318,
             file = 134318,
             hash = "37e88de34b9913f346f0e25ac5abf90e",
             name = "inv_misc_monsterscales_16",
@@ -10498,6 +11853,7 @@ return {
             type = 1,
         },
         {
+            id   = 134319,
             file = 134319,
             hash = "9cc9604bd3706234e1a70f7c13dbaf20",
             name = "inv_misc_monsterscales_17",
@@ -10505,6 +11861,7 @@ return {
             type = 1,
         },
         {
+            id   = 134320,
             file = 134320,
             hash = "8f93c613d73e713b888019c917510bbf",
             name = "inv_misc_monsterscales_18",
@@ -10512,6 +11869,7 @@ return {
             type = 1,
         },
         {
+            id   = 134321,
             file = 134321,
             hash = "1a37df948dca97ca31040cdebbbb19eb",
             name = "inv_misc_monsterspidercarapace_01",
@@ -10519,6 +11877,7 @@ return {
             type = 1,
         },
         {
+            id   = 134322,
             file = 134322,
             hash = "bd388ce5ce5477b76396112894eb378e",
             name = "inv_misc_monstertail_01",
@@ -10526,6 +11885,7 @@ return {
             type = 1,
         },
         {
+            id   = 134323,
             file = 134323,
             hash = "4227ae8cdcecd4ff396392e0bb3c9aba",
             name = "inv_misc_monstertail_02",
@@ -10533,6 +11893,7 @@ return {
             type = 1,
         },
         {
+            id   = 134324,
             file = 134324,
             hash = "e42998acf1c880fb8082f8cef9a97354",
             name = "inv_misc_monstertail_03",
@@ -10540,6 +11901,7 @@ return {
             type = 1,
         },
         {
+            id   = 134325,
             file = 134325,
             hash = "a253328daa5e0410224548519c0e4955",
             name = "inv_misc_net_01",
@@ -10547,6 +11909,7 @@ return {
             type = 1,
         },
         {
+            id   = 134327,
             file = 134327,
             hash = "bf1f687b770642b61551cf99a187f8fb",
             name = "inv_misc_note_01",
@@ -10554,6 +11917,7 @@ return {
             type = 1,
         },
         {
+            id   = 134328,
             file = 134328,
             hash = "bea65165326c5e43b53addea514e92d3",
             name = "inv_misc_note_02",
@@ -10561,6 +11925,7 @@ return {
             type = 1,
         },
         {
+            id   = 134329,
             file = 134329,
             hash = "50e879f51953c822aaac0930c722d9fd",
             name = "inv_misc_note_03",
@@ -10568,6 +11933,7 @@ return {
             type = 1,
         },
         {
+            id   = 134330,
             file = 134330,
             hash = "4ed7f55c2333539d720a6eaddfa9aacd",
             name = "inv_misc_note_04",
@@ -10575,6 +11941,7 @@ return {
             type = 1,
         },
         {
+            id   = 134331,
             file = 134331,
             hash = "f9874216d6cf725cb0f39dc1c8248039",
             name = "inv_misc_note_05",
@@ -10582,6 +11949,7 @@ return {
             type = 1,
         },
         {
+            id   = 134332,
             file = 134332,
             hash = "778d8cd72bb937e198f63273c2c75a62",
             name = "inv_misc_note_06",
@@ -10589,6 +11957,7 @@ return {
             type = 1,
         },
         {
+            id   = 134333,
             file = 134333,
             hash = "3c52b6f7798d3effa918165cebe980b6",
             name = "inv_misc_orb_01",
@@ -10596,6 +11965,7 @@ return {
             type = 1,
         },
         {
+            id   = 134334,
             file = 134334,
             hash = "7acd51f224b52d9da696a86ebe1eaba8",
             name = "inv_misc_orb_02",
@@ -10603,6 +11973,7 @@ return {
             type = 1,
         },
         {
+            id   = 134335,
             file = 134335,
             hash = "c0883abb24cd152659945699421a18be",
             name = "inv_misc_orb_03",
@@ -10610,6 +11981,7 @@ return {
             type = 1,
         },
         {
+            id   = 134336,
             file = 134336,
             hash = "200bd8aef911f0a02fb0e13fb8f8ac1a",
             name = "inv_misc_orb_04",
@@ -10617,6 +11989,7 @@ return {
             type = 1,
         },
         {
+            id   = 134337,
             file = 134337,
             hash = "97eb7135e5c309797552952e0c81359e",
             name = "inv_misc_orb_05",
@@ -10624,6 +11997,7 @@ return {
             type = 1,
         },
         {
+            id   = 134338,
             file = 134338,
             hash = "a17f8dcf273e21bb99d9254180ea8af8",
             name = "inv_misc_organ_01",
@@ -10631,6 +12005,7 @@ return {
             type = 1,
         },
         {
+            id   = 134339,
             file = 134339,
             hash = "f05a703b10911c4d8c2e164898b545cf",
             name = "inv_misc_organ_02",
@@ -10638,6 +12013,7 @@ return {
             type = 1,
         },
         {
+            id   = 134340,
             file = 134340,
             hash = "0f5695b53b49e04695243a89f86a29a1",
             name = "inv_misc_organ_03",
@@ -10645,6 +12021,7 @@ return {
             type = 1,
         },
         {
+            id   = 134341,
             file = 134341,
             hash = "a05e206fe979ba7a52cbbc763f91b19a",
             name = "inv_misc_organ_04",
@@ -10652,6 +12029,7 @@ return {
             type = 1,
         },
         {
+            id   = 134342,
             file = 134342,
             hash = "158e2198603d7d152f967099d0720c28",
             name = "inv_misc_organ_05",
@@ -10659,6 +12037,7 @@ return {
             type = 1,
         },
         {
+            id   = 134343,
             file = 134343,
             hash = "d60334ec74f05dc2685f3dc94297823a",
             name = "inv_misc_organ_06",
@@ -10666,6 +12045,7 @@ return {
             type = 1,
         },
         {
+            id   = 134344,
             file = 134344,
             hash = "e481d7254532bea1cc4f81b3ed94af77",
             name = "inv_misc_ornatebox",
@@ -10673,6 +12053,7 @@ return {
             type = 1,
         },
         {
+            id   = 134345,
             file = 134345,
             hash = "14a547111b1b67fe3db839864f0e1ee5",
             name = "inv_misc_pelt_01",
@@ -10680,6 +12061,7 @@ return {
             type = 1,
         },
         {
+            id   = 134346,
             file = 134346,
             hash = "4a08694edb2c79d5d06adaefbe53d502",
             name = "inv_misc_pelt_02",
@@ -10687,6 +12069,7 @@ return {
             type = 1,
         },
         {
+            id   = 134347,
             file = 134347,
             hash = "28b7a2b2af1cca0c4610b98cadf2dd6d",
             name = "inv_misc_pelt_03",
@@ -10694,6 +12077,7 @@ return {
             type = 1,
         },
         {
+            id   = 134348,
             file = 134348,
             hash = "cf11ebc3b6d6f22948e67253e751e055",
             name = "inv_misc_pelt_04",
@@ -10701,6 +12085,7 @@ return {
             type = 1,
         },
         {
+            id   = 134349,
             file = 134349,
             hash = "6a6de8ad497b5ff905514ffddb2ebe4a",
             name = "inv_misc_pelt_05",
@@ -10708,6 +12093,7 @@ return {
             type = 1,
         },
         {
+            id   = 134350,
             file = 134350,
             hash = "8d8804fd54bd4696d0dbc9f08586e2b2",
             name = "inv_misc_pelt_06",
@@ -10715,6 +12101,7 @@ return {
             type = 1,
         },
         {
+            id   = 134353,
             file = 134353,
             hash = "28f5b18e6345f70032072b2ffaf199b1",
             name = "inv_misc_pelt_bear_01",
@@ -10722,6 +12109,7 @@ return {
             type = 1,
         },
         {
+            id   = 134354,
             file = 134354,
             hash = "94279f46fe2b94efe3ae00ade7da74a2",
             name = "inv_misc_pelt_bear_02",
@@ -10729,6 +12117,7 @@ return {
             type = 1,
         },
         {
+            id   = 134355,
             file = 134355,
             hash = "04dbed3e81a7588d66f1eef759bfcd5a",
             name = "inv_misc_pelt_bear_03",
@@ -10736,6 +12125,7 @@ return {
             type = 1,
         },
         {
+            id   = 134356,
             file = 134356,
             hash = "f8547d417dc9263bc71f585ed33addef",
             name = "inv_misc_pelt_bear_ruin_01",
@@ -10743,6 +12133,7 @@ return {
             type = 1,
         },
         {
+            id   = 134357,
             file = 134357,
             hash = "026266d0af4b5c3ca6da7cc559862bac",
             name = "inv_misc_pelt_bear_ruin_02",
@@ -10750,6 +12141,7 @@ return {
             type = 1,
         },
         {
+            id   = 134358,
             file = 134358,
             hash = "adbf791cbe2af4685fb4e61741ea9497",
             name = "inv_misc_pelt_bear_ruin_03",
@@ -10757,6 +12149,7 @@ return {
             type = 1,
         },
         {
+            id   = 134359,
             file = 134359,
             hash = "00c63eecb76b192d69dfb151587e9b29",
             name = "inv_misc_pelt_bear_ruin_04",
@@ -10764,6 +12157,7 @@ return {
             type = 1,
         },
         {
+            id   = 134360,
             file = 134360,
             hash = "810cb3418a846eb00d7f5fb7984957a7",
             name = "inv_misc_pelt_bear_ruin_05",
@@ -10771,6 +12165,7 @@ return {
             type = 1,
         },
         {
+            id   = 134361,
             file = 134361,
             hash = "283a5063354b888317b37787e4a9ffbd",
             name = "inv_misc_pelt_boar_01",
@@ -10778,6 +12173,7 @@ return {
             type = 1,
         },
         {
+            id   = 134362,
             file = 134362,
             hash = "23614d88156525467a6009005cca13c1",
             name = "inv_misc_pelt_boar_02",
@@ -10785,6 +12181,7 @@ return {
             type = 1,
         },
         {
+            id   = 134363,
             file = 134363,
             hash = "a09971a016767a84f8555aa5b70e04aa",
             name = "inv_misc_pelt_boar_ruin_01",
@@ -10792,6 +12189,7 @@ return {
             type = 1,
         },
         {
+            id   = 134364,
             file = 134364,
             hash = "0284bd2f7d97f6d5918523f71669b553",
             name = "inv_misc_pelt_boar_ruin_02",
@@ -10799,6 +12197,7 @@ return {
             type = 1,
         },
         {
+            id   = 134365,
             file = 134365,
             hash = "42b3b9dcb1ba823b85b48928bac3c449",
             name = "inv_misc_pelt_boar_ruin_03",
@@ -10806,6 +12205,7 @@ return {
             type = 1,
         },
         {
+            id   = 134366,
             file = 134366,
             hash = "df9ebcc2a2796580bcd23761507f0cc0",
             name = "inv_misc_pelt_wolf_01",
@@ -10813,6 +12213,7 @@ return {
             type = 1,
         },
         {
+            id   = 134367,
             file = 134367,
             hash = "11069850a9b5a03f366b038389650333",
             name = "inv_misc_pelt_wolf_02",
@@ -10820,6 +12221,7 @@ return {
             type = 1,
         },
         {
+            id   = 134368,
             file = 134368,
             hash = "df4342fd3be7b593126d4e3c9981219e",
             name = "inv_misc_pelt_wolf_ruin_01",
@@ -10827,6 +12229,7 @@ return {
             type = 1,
         },
         {
+            id   = 134369,
             file = 134369,
             hash = "2c69bd8067882852b95706d875296eeb",
             name = "inv_misc_pelt_wolf_ruin_02",
@@ -10834,6 +12237,7 @@ return {
             type = 1,
         },
         {
+            id   = 134370,
             file = 134370,
             hash = "2a39c829be760e06566ff44d220bc830",
             name = "inv_misc_pelt_wolf_ruin_03",
@@ -10841,6 +12245,7 @@ return {
             type = 1,
         },
         {
+            id   = 134371,
             file = 134371,
             hash = "570c2ed989e4c1766387dc288109e842",
             name = "inv_misc_pelt_wolf_ruin_04",
@@ -10848,6 +12253,7 @@ return {
             type = 1,
         },
         {
+            id   = 134374,
             file = 134374,
             hash = "be9151862ca33a267d5dfcdb98d24041",
             name = "inv_misc_pipe_01",
@@ -10855,6 +12261,7 @@ return {
             type = 1,
         },
         {
+            id   = 134375,
             file = 134375,
             hash = "a6d38bc15b0ad2d2e9b237d7c2ae6d55",
             name = "inv_misc_platnumdisks",
@@ -10862,6 +12269,7 @@ return {
             type = 1,
         },
         {
+            id   = 134376,
             file = 134376,
             hash = "57257313c04c4c2e386c9c0e51a5a112",
             name = "inv_misc_pocketwatch_01",
@@ -10869,6 +12277,7 @@ return {
             type = 1,
         },
         {
+            id   = 134377,
             file = 134377,
             hash = "35489eca9999081d94b9bb163667b642",
             name = "inv_misc_pocketwatch_02",
@@ -10876,6 +12285,7 @@ return {
             type = 1,
         },
         {
+            id   = 134378,
             file = 134378,
             hash = "8e4d7fecfb42c79d6ded411c6ed88234",
             name = "inv_misc_pocketwatch_03",
@@ -10883,6 +12293,7 @@ return {
             type = 1,
         },
         {
+            id   = 134380,
             file = 134380,
             hash = "8714196db0991d76ef126bf21f4a19ef",
             name = "inv_misc_powder_black",
@@ -10890,6 +12301,7 @@ return {
             type = 1,
         },
         {
+            id   = 134381,
             file = 134381,
             hash = "6fcb01ffc5a9b107686a4a27e1445b35",
             name = "inv_misc_powder_blue",
@@ -10897,6 +12309,7 @@ return {
             type = 1,
         },
         {
+            id   = 134384,
             file = 134384,
             hash = "ceb358508a43db21b6c194ffbd03fd4d",
             name = "inv_misc_powder_green",
@@ -10904,6 +12317,7 @@ return {
             type = 1,
         },
         {
+            id   = 134387,
             file = 134387,
             hash = "c6ce13127841555ee02fad1d036609cd",
             name = "inv_misc_powder_purple",
@@ -10911,6 +12325,7 @@ return {
             type = 1,
         },
         {
+            id   = 134390,
             file = 134390,
             hash = "fdf519a020c6c1f5a359ffb7f2b0a311",
             name = "inv_misc_punchcards_blue",
@@ -10918,6 +12333,7 @@ return {
             type = 1,
         },
         {
+            id   = 134391,
             file = 134391,
             hash = "2e390e145f51112241a45ae5c71c235c",
             name = "inv_misc_punchcards_prismatic",
@@ -10925,6 +12341,7 @@ return {
             type = 1,
         },
         {
+            id   = 134392,
             file = 134392,
             hash = "589c28f0b56890a1e5de3d5479d95d92",
             name = "inv_misc_punchcards_red",
@@ -10932,6 +12349,7 @@ return {
             type = 1,
         },
         {
+            id   = 134393,
             file = 134393,
             hash = "dd69b9e75684e4c6f50d5d7ee804ae9c",
             name = "inv_misc_punchcards_white",
@@ -10939,6 +12357,7 @@ return {
             type = 1,
         },
         {
+            id   = 134394,
             file = 134394,
             hash = "2cc27260f3c6bfefb1ea59283333f2f2",
             name = "inv_misc_punchcards_yellow",
@@ -10946,6 +12365,7 @@ return {
             type = 1,
         },
         {
+            id   = 134395,
             file = 134395,
             hash = "8410d34aeba13bb096affc208f9b827e",
             name = "inv_misc_qirajicrystal_01",
@@ -10953,6 +12373,7 @@ return {
             type = 1,
         },
         {
+            id   = 134396,
             file = 134396,
             hash = "41feaa7f2d8ca3d61648c27bb38ba79b",
             name = "inv_misc_qirajicrystal_02",
@@ -10960,6 +12381,7 @@ return {
             type = 1,
         },
         {
+            id   = 134397,
             file = 134397,
             hash = "e30a055cc98ba1a66a0dee63b245f462",
             name = "inv_misc_qirajicrystal_03",
@@ -10967,6 +12389,7 @@ return {
             type = 1,
         },
         {
+            id   = 134398,
             file = 134398,
             hash = "8924167dbc556cf706cde28c896379d7",
             name = "inv_misc_qirajicrystal_04",
@@ -10974,6 +12397,7 @@ return {
             type = 1,
         },
         {
+            id   = 134399,
             file = 134399,
             hash = "55f83a2b0abb5712be7e7560addd7c15",
             name = "inv_misc_qirajicrystal_05",
@@ -10981,6 +12405,7 @@ return {
             type = 1,
         },
         {
+            id   = 134400,
             file = 134400,
             hash = "45809010e72cafe336851539a9805b80",
             name = "inv_misc_questionmark",
@@ -10988,6 +12413,7 @@ return {
             type = 1,
         },
         {
+            id   = 134401,
             file = 134401,
             hash = "b7780ae436a57b7315ede7c0afe586d4",
             name = "inv_misc_quiver_01",
@@ -10995,6 +12421,7 @@ return {
             type = 1,
         },
         {
+            id   = 134402,
             file = 134402,
             hash = "ec7424030597d298f28949a3af120278",
             name = "inv_misc_quiver_02",
@@ -11002,6 +12429,7 @@ return {
             type = 1,
         },
         {
+            id   = 134403,
             file = 134403,
             hash = "f3c4e3eb6f78d312452494b751a5c938",
             name = "inv_misc_quiver_03",
@@ -11009,6 +12437,7 @@ return {
             type = 1,
         },
         {
+            id   = 134404,
             file = 134404,
             hash = "0c58ac1e4ca1a962ceafcddf1e02a453",
             name = "inv_misc_quiver_04",
@@ -11016,6 +12445,7 @@ return {
             type = 1,
         },
         {
+            id   = 134405,
             file = 134405,
             hash = "b1c9cca37cafae324916aa247c66546d",
             name = "inv_misc_quiver_05",
@@ -11023,6 +12453,7 @@ return {
             type = 1,
         },
         {
+            id   = 134406,
             file = 134406,
             hash = "e5204f21501a43042fc5aea001759320",
             name = "inv_misc_quiver_06",
@@ -11030,6 +12461,7 @@ return {
             type = 1,
         },
         {
+            id   = 134407,
             file = 134407,
             hash = "bf39ba179a6b008d4ffd2dbb122edb8e",
             name = "inv_misc_quiver_07",
@@ -11037,6 +12469,7 @@ return {
             type = 1,
         },
         {
+            id   = 134408,
             file = 134408,
             hash = "f7e35af9959de61093b34af23c4bae4e",
             name = "inv_misc_quiver_08",
@@ -11044,6 +12477,7 @@ return {
             type = 1,
         },
         {
+            id   = 134409,
             file = 134409,
             hash = "1a86cc0486ff64278e7a4c0e2e68978b",
             name = "inv_misc_quiver_09",
@@ -11051,6 +12485,7 @@ return {
             type = 1,
         },
         {
+            id   = 134410,
             file = 134410,
             hash = "63398f126a5a612e383f4cd9d799775e",
             name = "inv_misc_quiver_10",
@@ -11058,6 +12493,7 @@ return {
             type = 1,
         },
         {
+            id   = 134411,
             file = 134411,
             hash = "10835667cf844680730ed3893a3582ae",
             name = "inv_misc_ribbon_01",
@@ -11065,6 +12501,7 @@ return {
             type = 1,
         },
         {
+            id   = 134412,
             file = 134412,
             hash = "6d1304188b73abd533ad88534cc9296e",
             name = "inv_misc_root_01",
@@ -11072,6 +12509,7 @@ return {
             type = 1,
         },
         {
+            id   = 134413,
             file = 134413,
             hash = "b787e4109925449433d4e2f3b722bdad",
             name = "inv_misc_root_02",
@@ -11079,6 +12517,7 @@ return {
             type = 1,
         },
         {
+            id   = 134414,
             file = 134414,
             hash = "c4ac71eb5aad52b0178da23c6dbd6a4f",
             name = "inv_misc_rune_01",
@@ -11086,6 +12525,7 @@ return {
             type = 1,
         },
         {
+            id   = 134415,
             file = 134415,
             hash = "5522b6594c675ac2dcac220836e72f57",
             name = "inv_misc_rune_02",
@@ -11093,6 +12533,7 @@ return {
             type = 1,
         },
         {
+            id   = 134416,
             file = 134416,
             hash = "b9154ac1574a52d5d298e0583707bb99",
             name = "inv_misc_rune_03",
@@ -11100,6 +12541,7 @@ return {
             type = 1,
         },
         {
+            id   = 134417,
             file = 134417,
             hash = "8ff0a6cb99914fba2d68074e81988f0c",
             name = "inv_misc_rune_04",
@@ -11107,6 +12549,7 @@ return {
             type = 1,
         },
         {
+            id   = 134418,
             file = 134418,
             hash = "8a3a5baaa0d669566878866933e9df75",
             name = "inv_misc_rune_05",
@@ -11114,6 +12557,7 @@ return {
             type = 1,
         },
         {
+            id   = 134419,
             file = 134419,
             hash = "38718b7263c24acf2cf03676599fea16",
             name = "inv_misc_rune_06",
@@ -11121,6 +12565,7 @@ return {
             type = 1,
         },
         {
+            id   = 134420,
             file = 134420,
             hash = "e095a194255cd9b80c8b9993dfd1522c",
             name = "inv_misc_rune_07",
@@ -11128,6 +12573,7 @@ return {
             type = 1,
         },
         {
+            id   = 134421,
             file = 134421,
             hash = "b62933de3b7bf04469e58bee3e4a5fd0",
             name = "inv_misc_rune_08",
@@ -11135,6 +12581,7 @@ return {
             type = 1,
         },
         {
+            id   = 134422,
             file = 134422,
             hash = "abbe799151e30db3e68f22e437606f8e",
             name = "inv_misc_rune_09",
@@ -11142,6 +12589,7 @@ return {
             type = 1,
         },
         {
+            id   = 134428,
             file = 134428,
             hash = "a418546d432c3eb59675dc1721828fdc",
             name = "inv_misc_screwdriver_01",
@@ -11149,6 +12597,7 @@ return {
             type = 1,
         },
         {
+            id   = 134429,
             file = 134429,
             hash = "073952c9928cc40a78e8ad0eeb79afd3",
             name = "inv_misc_screwdriver_02",
@@ -11156,6 +12605,7 @@ return {
             type = 1,
         },
         {
+            id   = 134430,
             file = 134430,
             hash = "871577419a14f6f910c34a41f9514bf7",
             name = "inv_misc_shadowegg",
@@ -11163,6 +12613,7 @@ return {
             type = 1,
         },
         {
+            id   = 134431,
             file = 134431,
             hash = "9376808746694191784cb89a8ef691c6",
             name = "inv_misc_shell_01",
@@ -11170,6 +12621,7 @@ return {
             type = 1,
         },
         {
+            id   = 134432,
             file = 134432,
             hash = "428addb2fc29b68f143a77d4271aab73",
             name = "inv_misc_shell_02",
@@ -11177,6 +12629,7 @@ return {
             type = 1,
         },
         {
+            id   = 134433,
             file = 134433,
             hash = "fc00d8edf638467f2b244032bef82963",
             name = "inv_misc_shell_03",
@@ -11184,6 +12637,7 @@ return {
             type = 1,
         },
         {
+            id   = 134434,
             file = 134434,
             hash = "762097ae36bd93f46a4a473d5d8363da",
             name = "inv_misc_shell_04",
@@ -11191,6 +12645,7 @@ return {
             type = 1,
         },
         {
+            id   = 134435,
             file = 134435,
             hash = "7a08607e342dc635cb1ccdcb5836b627",
             name = "inv_misc_shovel_01",
@@ -11198,6 +12653,7 @@ return {
             type = 1,
         },
         {
+            id   = 134436,
             file = 134436,
             hash = "63f357723f182efb78bacb6a41deb656",
             name = "inv_misc_shovel_02",
@@ -11205,6 +12661,7 @@ return {
             type = 1,
         },
         {
+            id   = 134437,
             file = 134437,
             hash = "63b8a36f6a3b0658fba75811a6fa99ba",
             name = "inv_misc_slime_01",
@@ -11212,6 +12669,7 @@ return {
             type = 1,
         },
         {
+            id   = 134440,
             file = 134440,
             hash = "8e522f8803ec44886771d817ec47a9aa",
             name = "inv_misc_spyglass_01",
@@ -11219,6 +12677,7 @@ return {
             type = 1,
         },
         {
+            id   = 134441,
             file = 134441,
             hash = "e50ab6f468253dde1bab31d578127edf",
             name = "inv_misc_spyglass_02",
@@ -11226,6 +12685,7 @@ return {
             type = 1,
         },
         {
+            id   = 134442,
             file = 134442,
             hash = "7a35c045dfeefd31126f8a88022c1220",
             name = "inv_misc_spyglass_03",
@@ -11233,6 +12693,7 @@ return {
             type = 1,
         },
         {
+            id   = 134455,
             file = 134455,
             hash = "1438a5879e16bfceedd203e2b33a9ad8",
             name = "inv_misc_stonetablet_01",
@@ -11240,6 +12701,7 @@ return {
             type = 1,
         },
         {
+            id   = 134456,
             file = 134456,
             hash = "60e22cef86ba9a29de1eb29a1fc9d774",
             name = "inv_misc_stonetablet_02",
@@ -11247,6 +12709,7 @@ return {
             type = 1,
         },
         {
+            id   = 134457,
             file = 134457,
             hash = "8c2bd43fcff6a380dda6d0a3f6e35852",
             name = "inv_misc_stonetablet_03",
@@ -11254,6 +12717,7 @@ return {
             type = 1,
         },
         {
+            id   = 134458,
             file = 134458,
             hash = "af92cba11ba4670e6f8fb7e32167d741",
             name = "inv_misc_stonetablet_04",
@@ -11261,6 +12725,7 @@ return {
             type = 1,
         },
         {
+            id   = 134459,
             file = 134459,
             hash = "c0fa91f0b15f264c530e1c8f784544f9",
             name = "inv_misc_stonetablet_05",
@@ -11268,6 +12733,7 @@ return {
             type = 1,
         },
         {
+            id   = 134460,
             file = 134460,
             hash = "fd35dd6454d82c16653815338de17b67",
             name = "inv_misc_stonetablet_06",
@@ -11275,6 +12741,7 @@ return {
             type = 1,
         },
         {
+            id   = 134461,
             file = 134461,
             hash = "625bcb5588f6bd8f17a02373f7608dea",
             name = "inv_misc_stonetablet_07",
@@ -11282,6 +12749,7 @@ return {
             type = 1,
         },
         {
+            id   = 134462,
             file = 134462,
             hash = "35c9bcc06270de3a137dae39290de770",
             name = "inv_misc_stonetablet_08",
@@ -11289,6 +12757,7 @@ return {
             type = 1,
         },
         {
+            id   = 134463,
             file = 134463,
             hash = "76d8b5fc6b85e2b19b2ede442bd2c8a6",
             name = "inv_misc_stonetablet_09",
@@ -11296,6 +12765,7 @@ return {
             type = 1,
         },
         {
+            id   = 134464,
             file = 134464,
             hash = "c193e4598498746fa41ec77460370299",
             name = "inv_misc_stonetablet_10",
@@ -11303,6 +12773,7 @@ return {
             type = 1,
         },
         {
+            id   = 134465,
             file = 134465,
             hash = "67dd9356aaa89db8bab80d5d2a74a0b2",
             name = "inv_misc_stonetablet_11",
@@ -11310,6 +12781,7 @@ return {
             type = 1,
         },
         {
+            id   = 134466,
             file = 134466,
             hash = "914895300c21ad30dee289fae996a222",
             name = "inv_misc_summerfest_brazierblue",
@@ -11317,6 +12789,7 @@ return {
             type = 1,
         },
         {
+            id   = 134467,
             file = 134467,
             hash = "efd8a090438a00a62d48014bd65f9866",
             name = "inv_misc_summerfest_braziergreen",
@@ -11324,6 +12797,7 @@ return {
             type = 1,
         },
         {
+            id   = 134468,
             file = 134468,
             hash = "f5dce98f74a9fe122da1534ebc761d83",
             name = "inv_misc_summerfest_brazierorange",
@@ -11331,6 +12805,7 @@ return {
             type = 1,
         },
         {
+            id   = 134469,
             file = 134469,
             hash = "9375d9db7d40a45f1e529d9929eb7e8f",
             name = "inv_misc_summerfest_brazierred",
@@ -11338,6 +12813,7 @@ return {
             type = 1,
         },
         {
+            id   = 134471,
             file = 134471,
             hash = "9b795d990cf422f0e1ce83a28f034ea4",
             name = "inv_misc_symbolofkings_01",
@@ -11345,6 +12821,7 @@ return {
             type = 1,
         },
         {
+            id   = 134472,
             file = 134472,
             hash = "2eddfe4cd0c76672201818c483fe3e6b",
             name = "inv_misc_tabardpvp_01",
@@ -11352,6 +12829,7 @@ return {
             type = 1,
         },
         {
+            id   = 134473,
             file = 134473,
             hash = "d9cbc87ee37871c4dd0ba8fb979115fa",
             name = "inv_misc_tabardpvp_02",
@@ -11359,6 +12837,7 @@ return {
             type = 1,
         },
         {
+            id   = 134474,
             file = 134474,
             hash = "d862b94c0b0236e6c1ca54f568bf4227",
             name = "inv_misc_tabardpvp_03",
@@ -11366,6 +12845,7 @@ return {
             type = 1,
         },
         {
+            id   = 134475,
             file = 134475,
             hash = "e3d53bb466ee20423dda0746f78480c3",
             name = "inv_misc_tabardpvp_04",
@@ -11373,6 +12853,7 @@ return {
             type = 1,
         },
         {
+            id   = 134478,
             file = 134478,
             hash = "d508046249d3505cd7e63b99a2053591",
             name = "inv_misc_thegoldencheep",
@@ -11380,6 +12861,7 @@ return {
             type = 1,
         },
         {
+            id   = 134480,
             file = 134480,
             hash = "9f0c23cdb2676b0f11e8d2ab3be9053d",
             name = "inv_misc_throwingball_01",
@@ -11387,6 +12869,7 @@ return {
             type = 1,
         },
         {
+            id   = 134481,
             file = 134481,
             hash = "a59825ffbb9a060398c374704b5ba32a",
             name = "inv_misc_ticket_darkmoon_01",
@@ -11394,6 +12877,7 @@ return {
             type = 1,
         },
         {
+            id   = 134482,
             file = 134482,
             hash = "c8b666f2fcc8f6271c799dd19bd40062",
             name = "inv_misc_ticket_tarot_beasts_01",
@@ -11401,6 +12885,7 @@ return {
             type = 1,
         },
         {
+            id   = 134484,
             file = 134484,
             hash = "4e3df24fca85970ea07498328a4d7a66",
             name = "inv_misc_ticket_tarot_bluedragon_01",
@@ -11408,6 +12893,7 @@ return {
             type = 1,
         },
         {
+            id   = 134486,
             file = 134486,
             hash = "5b9c2bfdfaac7e214e23a6bfb9c7d81a",
             name = "inv_misc_ticket_tarot_elemental_01",
@@ -11415,6 +12901,7 @@ return {
             type = 1,
         },
         {
+            id   = 134488,
             file = 134488,
             hash = "d1a7eb2b9c76d75d575e56aee0d6f64d",
             name = "inv_misc_ticket_tarot_heroism_01",
@@ -11422,6 +12909,7 @@ return {
             type = 1,
         },
         {
+            id   = 134491,
             file = 134491,
             hash = "b03481f684242c260c8755ef952ec8e4",
             name = "inv_misc_ticket_tarot_maelstrom_01",
@@ -11429,6 +12917,7 @@ return {
             type = 1,
         },
         {
+            id   = 134492,
             file = 134492,
             hash = "c5bd5b38570f9dac733f51ff25876d1a",
             name = "inv_misc_ticket_tarot_portal_01",
@@ -11436,6 +12925,7 @@ return {
             type = 1,
         },
         {
+            id   = 134493,
             file = 134493,
             hash = "7d7a906fa0310e3b8056f234937f6bdc",
             name = "inv_misc_ticket_tarot_stack_01",
@@ -11443,6 +12933,7 @@ return {
             type = 1,
         },
         {
+            id   = 134495,
             file = 134495,
             hash = "9e6ffbf6f2f00d3232e268fc55c2a31c",
             name = "inv_misc_ticket_tarot_twistingnether_01",
@@ -11450,6 +12941,7 @@ return {
             type = 1,
         },
         {
+            id   = 134497,
             file = 134497,
             hash = "fe0ba92bffd2c1c651fd46e4ab773056",
             name = "inv_misc_ticket_tarot_warlord_01",
@@ -11457,6 +12949,7 @@ return {
             type = 1,
         },
         {
+            id   = 134499,
             file = 134499,
             hash = "339d3d5965b5f0b6503b80960bf18885",
             name = "inv_misc_token_argentdawn",
@@ -11464,6 +12957,7 @@ return {
             type = 1,
         },
         {
+            id   = 134500,
             file = 134500,
             hash = "6010aff25283ca449ba243b43632ed06",
             name = "inv_misc_token_argentdawn2",
@@ -11471,6 +12965,7 @@ return {
             type = 1,
         },
         {
+            id   = 134501,
             file = 134501,
             hash = "4378f2566c20f46699d4f1476d12826a",
             name = "inv_misc_token_argentdawn3",
@@ -11478,6 +12973,7 @@ return {
             type = 1,
         },
         {
+            id   = 134503,
             file = 134503,
             hash = "ce01908baf361d7773f1ea2f1511f776",
             name = "inv_misc_token_scarletcrusade",
@@ -11485,6 +12981,7 @@ return {
             type = 1,
         },
         {
+            id   = 134514,
             file = 134514,
             hash = "cac1410eb90dbacc43000db4217a035a",
             name = "inv_misc_urn_01",
@@ -11492,6 +12989,7 @@ return {
             type = 1,
         },
         {
+            id   = 134515,
             file = 134515,
             hash = "01600545cd1bd5d60d0e76052618455b",
             name = "inv_misc_wartornscrap_chain",
@@ -11499,6 +12997,7 @@ return {
             type = 1,
         },
         {
+            id   = 134516,
             file = 134516,
             hash = "24880939fbaff60455083d4e8c46b6bc",
             name = "inv_misc_wartornscrap_cloth",
@@ -11506,6 +13005,7 @@ return {
             type = 1,
         },
         {
+            id   = 134517,
             file = 134517,
             hash = "141c76633073f18a2e9393742f603ae1",
             name = "inv_misc_wartornscrap_leather",
@@ -11513,6 +13013,7 @@ return {
             type = 1,
         },
         {
+            id   = 134518,
             file = 134518,
             hash = "8fb4f08865a751e895913c87b9da91b7",
             name = "inv_misc_wartornscrap_plate",
@@ -11520,6 +13021,7 @@ return {
             type = 1,
         },
         {
+            id   = 134520,
             file = 134520,
             hash = "63a749cee1c7451a24772874b4a9a44c",
             name = "inv_misc_wrench_01",
@@ -11527,6 +13029,7 @@ return {
             type = 1,
         },
         {
+            id   = 134521,
             file = 134521,
             hash = "f7a5c944541969aced93015f1f8e9cd5",
             name = "inv_misc_wrench_02",
@@ -11534,6 +13037,7 @@ return {
             type = 1,
         },
         {
+            id   = 134522,
             file = 134522,
             hash = "baea1e16762a4f94eecd3e69f35ff427",
             name = "inv_mushroom_01",
@@ -11541,6 +13045,7 @@ return {
             type = 1,
         },
         {
+            id   = 134523,
             file = 134523,
             hash = "4447792185e27ec86f6d0727b2e33245",
             name = "inv_mushroom_02",
@@ -11548,6 +13053,7 @@ return {
             type = 1,
         },
         {
+            id   = 134524,
             file = 134524,
             hash = "62173f0e5d192f310ba2497f831ce948",
             name = "inv_mushroom_03",
@@ -11555,6 +13061,7 @@ return {
             type = 1,
         },
         {
+            id   = 134525,
             file = 134525,
             hash = "b2b4c2a19085db628313839e3a4fc384",
             name = "inv_mushroom_04",
@@ -11562,6 +13069,7 @@ return {
             type = 1,
         },
         {
+            id   = 134526,
             file = 134526,
             hash = "2c43756d448c7a5cd6c458f73bd66ef6",
             name = "inv_mushroom_05",
@@ -11569,6 +13077,7 @@ return {
             type = 1,
         },
         {
+            id   = 134527,
             file = 134527,
             hash = "fb368f32477d2a887a70afecef00fe8c",
             name = "inv_mushroom_06",
@@ -11576,6 +13085,7 @@ return {
             type = 1,
         },
         {
+            id   = 134528,
             file = 134528,
             hash = "eeaf7abe932b14370e1428abe9f8fd02",
             name = "inv_mushroom_07",
@@ -11583,6 +13093,7 @@ return {
             type = 1,
         },
         {
+            id   = 134529,
             file = 134529,
             hash = "643c8b2fa232ab36b6eb299979b00474",
             name = "inv_mushroom_08",
@@ -11590,6 +13101,7 @@ return {
             type = 1,
         },
         {
+            id   = 134530,
             file = 134530,
             hash = "79457ec9289a5fe7b4012a644c7a8c27",
             name = "inv_mushroom_09",
@@ -11597,6 +13109,7 @@ return {
             type = 1,
         },
         {
+            id   = 134531,
             file = 134531,
             hash = "b829d86128aa8540922ead37df77c216",
             name = "inv_mushroom_10",
@@ -11604,6 +13117,7 @@ return {
             type = 1,
         },
         {
+            id   = 134532,
             file = 134532,
             hash = "1e6690681418cb798741ecaefe423a17",
             name = "inv_mushroom_11",
@@ -11611,6 +13125,7 @@ return {
             type = 1,
         },
         {
+            id   = 134533,
             file = 134533,
             hash = "6f80f6e139f0159627f0b18f7e6da014",
             name = "inv_mushroom_12",
@@ -11618,6 +13133,7 @@ return {
             type = 1,
         },
         {
+            id   = 134534,
             file = 134534,
             hash = "276ed0935893d19556e30a749d975841",
             name = "inv_mushroom_13",
@@ -11625,6 +13141,7 @@ return {
             type = 1,
         },
         {
+            id   = 134535,
             file = 134535,
             hash = "35099374e45f1616c3c130c642c519e1",
             name = "inv_musket_01",
@@ -11632,6 +13149,7 @@ return {
             type = 1,
         },
         {
+            id   = 134536,
             file = 134536,
             hash = "a8eac8eed03be1eb52e9384160f491b3",
             name = "inv_musket_02",
@@ -11639,6 +13157,7 @@ return {
             type = 1,
         },
         {
+            id   = 134537,
             file = 134537,
             hash = "e2f2522bf925a91af9c0d2c99ceb10c0",
             name = "inv_musket_03",
@@ -11646,6 +13165,7 @@ return {
             type = 1,
         },
         {
+            id   = 134538,
             file = 134538,
             hash = "a878819c34371459538df972e1b12c98",
             name = "inv_musket_04",
@@ -11653,6 +13173,7 @@ return {
             type = 1,
         },
         {
+            id   = 134545,
             file = 134545,
             hash = "f5d55d8c01f31ac4ffe9191a26d570da",
             name = "inv_offhand_naxxramas_02",
@@ -11660,6 +13181,7 @@ return {
             type = 1,
         },
         {
+            id   = 134546,
             file = 134546,
             hash = "c6a0fe60d77b0f7c0c90eab50238825a",
             name = "inv_offhand_naxxramas_03",
@@ -11667,6 +13189,7 @@ return {
             type = 1,
         },
         {
+            id   = 134547,
             file = 134547,
             hash = "fcf4d31646618fadb9ef6913b02dc067",
             name = "inv_offhand_naxxramas_04",
@@ -11674,6 +13197,7 @@ return {
             type = 1,
         },
         {
+            id   = 134548,
             file = 134548,
             hash = "099884ba7607090616dfbb7fd949ee88",
             name = "inv_offhand_naxxramas_d_01",
@@ -11681,6 +13205,7 @@ return {
             type = 1,
         },
         {
+            id   = 134554,
             file = 134554,
             hash = "50692e4ed404414ca0d6d7eb8c28a734",
             name = "inv_offhand_stratholme_a_01",
@@ -11688,6 +13213,7 @@ return {
             type = 1,
         },
         {
+            id   = 134555,
             file = 134555,
             hash = "0ad23298807dd2f2096162762b6306b5",
             name = "inv_offhand_stratholme_a_02",
@@ -11695,6 +13221,7 @@ return {
             type = 1,
         },
         {
+            id   = 134563,
             file = 134563,
             hash = "f541ce98f0e32651967dbe2c8d2c6349",
             name = "inv_ore_arcanite_01",
@@ -11702,6 +13229,7 @@ return {
             type = 1,
         },
         {
+            id   = 134564,
             file = 134564,
             hash = "87455d9bb3d207a5d5ac06cb7bfb4d98",
             name = "inv_ore_arcanite_02",
@@ -11709,6 +13237,7 @@ return {
             type = 1,
         },
         {
+            id   = 134566,
             file = 134566,
             hash = "2a9ac99119552773e8807e54b497d52b",
             name = "inv_ore_copper_01",
@@ -11716,6 +13245,7 @@ return {
             type = 1,
         },
         {
+            id   = 134572,
             file = 134572,
             hash = "90525d8264ea851fab6bc55fbc3eac1a",
             name = "inv_ore_iron_01",
@@ -11723,6 +13253,7 @@ return {
             type = 1,
         },
         {
+            id   = 134575,
             file = 134575,
             hash = "552b382d69f98f63a73c79abc9ed7137",
             name = "inv_ore_mithril_01",
@@ -11730,6 +13261,7 @@ return {
             type = 1,
         },
         {
+            id   = 134576,
             file = 134576,
             hash = "088ce2fbd88ddad518ebc8593277eb10",
             name = "inv_ore_mithril_02",
@@ -11737,6 +13269,7 @@ return {
             type = 1,
         },
         {
+            id   = 134577,
             file = 134577,
             hash = "6890ead53a98fd5245607d9e1775e740",
             name = "inv_ore_thorium_01",
@@ -11744,6 +13277,7 @@ return {
             type = 1,
         },
         {
+            id   = 134578,
             file = 134578,
             hash = "44a051e3ae6d3083854612c4ef51662e",
             name = "inv_ore_thorium_02",
@@ -11751,6 +13285,7 @@ return {
             type = 1,
         },
         {
+            id   = 134579,
             file = 134579,
             hash = "b92684b88a0ffc8435037022d40ef48e",
             name = "inv_ore_tin_01",
@@ -11758,6 +13293,7 @@ return {
             type = 1,
         },
         {
+            id   = 134580,
             file = 134580,
             hash = "743b0e57b54713e8cf34be241dd0873a",
             name = "inv_ore_truesilver_01",
@@ -11765,6 +13301,7 @@ return {
             type = 1,
         },
         {
+            id   = 134581,
             file = 134581,
             hash = "2454325cad5909ddf67c1fdc0d0645b3",
             name = "inv_pants_01",
@@ -11772,6 +13309,7 @@ return {
             type = 1,
         },
         {
+            id   = 134582,
             file = 134582,
             hash = "98a5140f89aaa747af1cdec97ba332c4",
             name = "inv_pants_02",
@@ -11779,6 +13317,7 @@ return {
             type = 1,
         },
         {
+            id   = 134583,
             file = 134583,
             hash = "cf7d8fed46fb935690cc08ac385427f3",
             name = "inv_pants_03",
@@ -11786,6 +13325,7 @@ return {
             type = 1,
         },
         {
+            id   = 134584,
             file = 134584,
             hash = "7fd9f4ed723cd054221b4996eb72711e",
             name = "inv_pants_04",
@@ -11793,6 +13333,7 @@ return {
             type = 1,
         },
         {
+            id   = 134585,
             file = 134585,
             hash = "11609d78203322f7c67b712d80f650d7",
             name = "inv_pants_05",
@@ -11800,6 +13341,7 @@ return {
             type = 1,
         },
         {
+            id   = 134586,
             file = 134586,
             hash = "f1e6bcb902e9830a5f95460f244b62e0",
             name = "inv_pants_06",
@@ -11807,6 +13349,7 @@ return {
             type = 1,
         },
         {
+            id   = 134587,
             file = 134587,
             hash = "539d027d2234d5a46fc5d6b8ed8718e5",
             name = "inv_pants_07",
@@ -11814,6 +13357,7 @@ return {
             type = 1,
         },
         {
+            id   = 134588,
             file = 134588,
             hash = "23f8d5363d5a71738a17b5f09910d27e",
             name = "inv_pants_08",
@@ -11821,6 +13365,7 @@ return {
             type = 1,
         },
         {
+            id   = 134589,
             file = 134589,
             hash = "46020334bf7da33592f3034a0c0efd13",
             name = "inv_pants_09",
@@ -11828,6 +13373,7 @@ return {
             type = 1,
         },
         {
+            id   = 134590,
             file = 134590,
             hash = "892d27582b91e713b84973635969937e",
             name = "inv_pants_10",
@@ -11835,6 +13381,7 @@ return {
             type = 1,
         },
         {
+            id   = 134591,
             file = 134591,
             hash = "93f302be615bf021fa27c00b83fdf0ac",
             name = "inv_pants_11",
@@ -11842,6 +13389,7 @@ return {
             type = 1,
         },
         {
+            id   = 134592,
             file = 134592,
             hash = "832309b63725a1f54c1c17d727e8e38c",
             name = "inv_pants_12",
@@ -11849,6 +13397,7 @@ return {
             type = 1,
         },
         {
+            id   = 134593,
             file = 134593,
             hash = "5132cc5083dafb4742c510bdb14e304e",
             name = "inv_pants_13",
@@ -11856,6 +13405,7 @@ return {
             type = 1,
         },
         {
+            id   = 134594,
             file = 134594,
             hash = "c472be67aa38f6cf4aa62949f3974b38",
             name = "inv_pants_14",
@@ -11863,6 +13413,7 @@ return {
             type = 1,
         },
         {
+            id   = 134595,
             file = 134595,
             hash = "2e5dfe6d8a0c5e88ff1cf37c25368106",
             name = "inv_pants_cloth_01",
@@ -11870,6 +13421,7 @@ return {
             type = 1,
         },
         {
+            id   = 134596,
             file = 134596,
             hash = "0d2884de154bb5a475e5c53c1e138eb2",
             name = "inv_pants_cloth_02",
@@ -11877,6 +13429,7 @@ return {
             type = 1,
         },
         {
+            id   = 134597,
             file = 134597,
             hash = "b86bef6c0d9d50b3c8f9fc1292315bc1",
             name = "inv_pants_cloth_03",
@@ -11884,6 +13437,7 @@ return {
             type = 1,
         },
         {
+            id   = 134598,
             file = 134598,
             hash = "f23895d5d9e99f71cb6516e0fe693271",
             name = "inv_pants_cloth_04",
@@ -11891,6 +13445,7 @@ return {
             type = 1,
         },
         {
+            id   = 134599,
             file = 134599,
             hash = "4495cbfdfbfa3bdbeaecc3d9056ac26c",
             name = "inv_pants_cloth_05",
@@ -11898,6 +13453,7 @@ return {
             type = 1,
         },
         {
+            id   = 134600,
             file = 134600,
             hash = "7f68ceec025348bfed17dfac36b78c78",
             name = "inv_pants_cloth_06",
@@ -11905,6 +13461,7 @@ return {
             type = 1,
         },
         {
+            id   = 134601,
             file = 134601,
             hash = "97d453e867f0eab315a0ad110055d17f",
             name = "inv_pants_cloth_07",
@@ -11912,6 +13469,7 @@ return {
             type = 1,
         },
         {
+            id   = 134602,
             file = 134602,
             hash = "95da62d0d9c6d4b2b9d58abcd4b905f0",
             name = "inv_pants_cloth_08",
@@ -11919,6 +13477,7 @@ return {
             type = 1,
         },
         {
+            id   = 134603,
             file = 134603,
             hash = "a4540625263eeb25d75afebb77bf14c6",
             name = "inv_pants_cloth_09",
@@ -11926,6 +13485,7 @@ return {
             type = 1,
         },
         {
+            id   = 134604,
             file = 134604,
             hash = "39ad0693fdff1aa11062925eed6c4b43",
             name = "inv_pants_cloth_10",
@@ -11933,6 +13493,7 @@ return {
             type = 1,
         },
         {
+            id   = 134605,
             file = 134605,
             hash = "f0038d1050c4ffde57cbbe5d9f1cba53",
             name = "inv_pants_cloth_11",
@@ -11940,6 +13501,7 @@ return {
             type = 1,
         },
         {
+            id   = 134606,
             file = 134606,
             hash = "58d447ee661a10f489178bd13f7ab52f",
             name = "inv_pants_cloth_12",
@@ -11947,6 +13509,7 @@ return {
             type = 1,
         },
         {
+            id   = 134607,
             file = 134607,
             hash = "7a2a31bffdb34c22a45065dbb986bf22",
             name = "inv_pants_cloth_13",
@@ -11954,6 +13517,7 @@ return {
             type = 1,
         },
         {
+            id   = 134608,
             file = 134608,
             hash = "6333ae5162c1b7728ffe59336006c7ce",
             name = "inv_pants_cloth_14",
@@ -11961,6 +13525,7 @@ return {
             type = 1,
         },
         {
+            id   = 134609,
             file = 134609,
             hash = "f3cf43c003800022e395fc579d5a586c",
             name = "inv_pants_cloth_15",
@@ -11968,6 +13533,7 @@ return {
             type = 1,
         },
         {
+            id   = 134610,
             file = 134610,
             hash = "0ec8ef7b2f25ceb2b0f4433c5d7d7fd7",
             name = "inv_pants_cloth_16",
@@ -11975,6 +13541,7 @@ return {
             type = 1,
         },
         {
+            id   = 134611,
             file = 134611,
             hash = "5c6ac06a8b8ed13b777f5f68c0e4b5e0",
             name = "inv_pants_cloth_17",
@@ -11982,6 +13549,7 @@ return {
             type = 1,
         },
         {
+            id   = 134612,
             file = 134612,
             hash = "e0acd0d19aa4d07c07c28c259c765a88",
             name = "inv_pants_cloth_18",
@@ -11989,6 +13557,7 @@ return {
             type = 1,
         },
         {
+            id   = 134613,
             file = 134613,
             hash = "ae22282aab03d03f7f647b36113e45ba",
             name = "inv_pants_cloth_19",
@@ -11996,6 +13565,7 @@ return {
             type = 1,
         },
         {
+            id   = 134614,
             file = 134614,
             hash = "a5bcb1f560002c7d060fe46b54287bb4",
             name = "inv_pants_cloth_20",
@@ -12003,6 +13573,7 @@ return {
             type = 1,
         },
         {
+            id   = 134626,
             file = 134626,
             hash = "c7693a2dd560572457f0e3303fcad8c3",
             name = "inv_pants_leather_01",
@@ -12010,6 +13581,7 @@ return {
             type = 1,
         },
         {
+            id   = 134627,
             file = 134627,
             hash = "5c4d4df2702563812495c28b4617025e",
             name = "inv_pants_leather_02",
@@ -12017,6 +13589,7 @@ return {
             type = 1,
         },
         {
+            id   = 134628,
             file = 134628,
             hash = "e8f53cc65a35fdc764c4cfdfe6f21452",
             name = "inv_pants_leather_03",
@@ -12024,6 +13597,7 @@ return {
             type = 1,
         },
         {
+            id   = 134629,
             file = 134629,
             hash = "73dedc1f4aef5153863a9671c9796262",
             name = "inv_pants_leather_04",
@@ -12031,6 +13605,7 @@ return {
             type = 1,
         },
         {
+            id   = 134630,
             file = 134630,
             hash = "72074e2098bee66405198152f318e574",
             name = "inv_pants_leather_05",
@@ -12038,6 +13613,7 @@ return {
             type = 1,
         },
         {
+            id   = 134631,
             file = 134631,
             hash = "5e9a945a5b9538a58a960fbf13de85bb",
             name = "inv_pants_leather_06",
@@ -12045,6 +13621,7 @@ return {
             type = 1,
         },
         {
+            id   = 134632,
             file = 134632,
             hash = "9d4705f100789c2ce1bbb3c272a85047",
             name = "inv_pants_leather_07",
@@ -12052,6 +13629,7 @@ return {
             type = 1,
         },
         {
+            id   = 134633,
             file = 134633,
             hash = "6a95c78ba986fda811b3956b7ce6e021",
             name = "inv_pants_leather_08",
@@ -12059,6 +13637,7 @@ return {
             type = 1,
         },
         {
+            id   = 134634,
             file = 134634,
             hash = "30e17750cd898b56f1efecd01f920568",
             name = "inv_pants_leather_09",
@@ -12066,6 +13645,7 @@ return {
             type = 1,
         },
         {
+            id   = 134635,
             file = 134635,
             hash = "7725a9d30d04a3e9ecfcb853acf5cdc4",
             name = "inv_pants_leather_10",
@@ -12073,6 +13653,7 @@ return {
             type = 1,
         },
         {
+            id   = 134636,
             file = 134636,
             hash = "21d86fd1a50538db1ed067bc5c7a3a21",
             name = "inv_pants_leather_11",
@@ -12080,6 +13661,7 @@ return {
             type = 1,
         },
         {
+            id   = 134637,
             file = 134637,
             hash = "f0f25d63864393360925d3bec87092fc",
             name = "inv_pants_leather_12",
@@ -12087,6 +13669,7 @@ return {
             type = 1,
         },
         {
+            id   = 134638,
             file = 134638,
             hash = "568fe8623210aeb690acaa4b9c9d9884",
             name = "inv_pants_leather_13",
@@ -12094,6 +13677,7 @@ return {
             type = 1,
         },
         {
+            id   = 134639,
             file = 134639,
             hash = "595cc1e29b99f7fb57179112d5475024",
             name = "inv_pants_leather_14",
@@ -12101,6 +13685,7 @@ return {
             type = 1,
         },
         {
+            id   = 134640,
             file = 134640,
             hash = "9fad64bdb2f1e292167f742da6ac03af",
             name = "inv_pants_leather_15",
@@ -12108,6 +13693,7 @@ return {
             type = 1,
         },
         {
+            id   = 134641,
             file = 134641,
             hash = "666b45bebb63ad69b8b15c02411bf557",
             name = "inv_pants_leather_16",
@@ -12115,6 +13701,7 @@ return {
             type = 1,
         },
         {
+            id   = 134642,
             file = 134642,
             hash = "869275e5a18d56d73a7e84d652f38dc1",
             name = "inv_pants_leather_17",
@@ -12122,6 +13709,7 @@ return {
             type = 1,
         },
         {
+            id   = 134643,
             file = 134643,
             hash = "0a8d13dede604e56b39d8645c4a89907",
             name = "inv_pants_leather_18",
@@ -12129,6 +13717,7 @@ return {
             type = 1,
         },
         {
+            id   = 134644,
             file = 134644,
             hash = "b89417209c17cd6bd059acb0f797ee9c",
             name = "inv_pants_leather_19",
@@ -12136,6 +13725,7 @@ return {
             type = 1,
         },
         {
+            id   = 134645,
             file = 134645,
             hash = "c29909b98f3211498e63e9998b33283d",
             name = "inv_pants_leather_20",
@@ -12143,6 +13733,7 @@ return {
             type = 1,
         },
         {
+            id   = 134646,
             file = 134646,
             hash = "699a876ab0cd4b476803a711773a3e63",
             name = "inv_pants_leather_21",
@@ -12150,6 +13741,7 @@ return {
             type = 1,
         },
         {
+            id   = 134653,
             file = 134653,
             hash = "e4e7721d81c54f3abc678903010ef06e",
             name = "inv_pants_mail_01",
@@ -12157,6 +13749,7 @@ return {
             type = 1,
         },
         {
+            id   = 134654,
             file = 134654,
             hash = "88a271848a3545022c75e8ae688b21ce",
             name = "inv_pants_mail_02",
@@ -12164,6 +13757,7 @@ return {
             type = 1,
         },
         {
+            id   = 134655,
             file = 134655,
             hash = "7676b844311065aed3ada691322eded6",
             name = "inv_pants_mail_03",
@@ -12171,6 +13765,7 @@ return {
             type = 1,
         },
         {
+            id   = 134656,
             file = 134656,
             hash = "e5a6f6cd37d88d4240713b69ec163ef7",
             name = "inv_pants_mail_04",
@@ -12178,6 +13773,7 @@ return {
             type = 1,
         },
         {
+            id   = 134657,
             file = 134657,
             hash = "3e60106ffcaa53abf92b4391de2d82ec",
             name = "inv_pants_mail_05",
@@ -12185,6 +13781,7 @@ return {
             type = 1,
         },
         {
+            id   = 134658,
             file = 134658,
             hash = "0a8b3fe9125a13053a8e81617ea0a5f4",
             name = "inv_pants_mail_06",
@@ -12192,6 +13789,7 @@ return {
             type = 1,
         },
         {
+            id   = 134659,
             file = 134659,
             hash = "12e15bbea9c5c2cef4b9f706a5d6a757",
             name = "inv_pants_mail_07",
@@ -12199,6 +13797,7 @@ return {
             type = 1,
         },
         {
+            id   = 134660,
             file = 134660,
             hash = "d60c804b8d28fed65ffdc50158d570e2",
             name = "inv_pants_mail_08",
@@ -12206,6 +13805,7 @@ return {
             type = 1,
         },
         {
+            id   = 134661,
             file = 134661,
             hash = "2114ae9ea3fcc2e07eb9c2800bfccfcd",
             name = "inv_pants_mail_09",
@@ -12213,6 +13813,7 @@ return {
             type = 1,
         },
         {
+            id   = 134662,
             file = 134662,
             hash = "e39bc2e5e65ba793474d71c8c6933ac2",
             name = "inv_pants_mail_10",
@@ -12220,6 +13821,7 @@ return {
             type = 1,
         },
         {
+            id   = 134663,
             file = 134663,
             hash = "ceee462bb5fc967f38f18a5765ddb7d7",
             name = "inv_pants_mail_11",
@@ -12227,6 +13829,7 @@ return {
             type = 1,
         },
         {
+            id   = 134664,
             file = 134664,
             hash = "dc5428f02c669d651c92c99a37eddd75",
             name = "inv_pants_mail_12",
@@ -12234,6 +13837,7 @@ return {
             type = 1,
         },
         {
+            id   = 134665,
             file = 134665,
             hash = "872143a60317e770ab0873517293d10f",
             name = "inv_pants_mail_13",
@@ -12241,6 +13845,7 @@ return {
             type = 1,
         },
         {
+            id   = 134666,
             file = 134666,
             hash = "32a58625e170fb111f372b5aa9302083",
             name = "inv_pants_mail_14",
@@ -12248,6 +13853,7 @@ return {
             type = 1,
         },
         {
+            id   = 134667,
             file = 134667,
             hash = "bb005cd15dd940f4f165f803cead0ca0",
             name = "inv_pants_mail_15",
@@ -12255,6 +13861,7 @@ return {
             type = 1,
         },
         {
+            id   = 134668,
             file = 134668,
             hash = "a0d10e55780b8e5f526a02aefd7963a2",
             name = "inv_pants_mail_16",
@@ -12262,6 +13869,7 @@ return {
             type = 1,
         },
         {
+            id   = 134669,
             file = 134669,
             hash = "45f7f36c89d106eedaa2dbf63466ffe2",
             name = "inv_pants_mail_17",
@@ -12269,6 +13877,7 @@ return {
             type = 1,
         },
         {
+            id   = 134670,
             file = 134670,
             hash = "46d297b3098f59c0b9db7977920a7741",
             name = "inv_pants_mail_18",
@@ -12276,6 +13885,7 @@ return {
             type = 1,
         },
         {
+            id   = 134671,
             file = 134671,
             hash = "0a78633e1d2748cf933db2dce4664627",
             name = "inv_pants_mail_19",
@@ -12283,6 +13893,7 @@ return {
             type = 1,
         },
         {
+            id   = 134672,
             file = 134672,
             hash = "ebbe1bb36a53518326a2bea0f7af1017",
             name = "inv_pants_mail_20",
@@ -12290,6 +13901,7 @@ return {
             type = 1,
         },
         {
+            id   = 134673,
             file = 134673,
             hash = "08c03706680ad89308eeb0bbb2fb5871",
             name = "inv_pants_mail_21",
@@ -12297,6 +13909,7 @@ return {
             type = 1,
         },
         {
+            id   = 134677,
             file = 134677,
             hash = "9d66f08ec6d76bba616528341cee4a15",
             name = "inv_pants_plate_01",
@@ -12304,6 +13917,7 @@ return {
             type = 1,
         },
         {
+            id   = 134678,
             file = 134678,
             hash = "06ae93310008e6448817d6a28a0ecc3f",
             name = "inv_pants_plate_02",
@@ -12311,6 +13925,7 @@ return {
             type = 1,
         },
         {
+            id   = 134679,
             file = 134679,
             hash = "eab68e17ece80d8a18097641053a63ab",
             name = "inv_pants_plate_03",
@@ -12318,6 +13933,7 @@ return {
             type = 1,
         },
         {
+            id   = 134680,
             file = 134680,
             hash = "67712497f4df5efea9106cd9ff122510",
             name = "inv_pants_plate_04",
@@ -12325,6 +13941,7 @@ return {
             type = 1,
         },
         {
+            id   = 134681,
             file = 134681,
             hash = "c7aa78d9aa1c3d2d77f6b07ab7419829",
             name = "inv_pants_plate_05",
@@ -12332,6 +13949,7 @@ return {
             type = 1,
         },
         {
+            id   = 134682,
             file = 134682,
             hash = "425ba65cec99f2b6b344ffbd5689fb64",
             name = "inv_pants_plate_06",
@@ -12339,6 +13957,7 @@ return {
             type = 1,
         },
         {
+            id   = 134683,
             file = 134683,
             hash = "07971437f933c3f7d7afe5a40162f803",
             name = "inv_pants_plate_07",
@@ -12346,6 +13965,7 @@ return {
             type = 1,
         },
         {
+            id   = 134684,
             file = 134684,
             hash = "09b65a9869e996ce8f34aa9bb84e3b6e",
             name = "inv_pants_plate_08",
@@ -12353,6 +13973,7 @@ return {
             type = 1,
         },
         {
+            id   = 134685,
             file = 134685,
             hash = "6a180f0969658579a128c85a4c318908",
             name = "inv_pants_plate_09",
@@ -12360,6 +13981,7 @@ return {
             type = 1,
         },
         {
+            id   = 134686,
             file = 134686,
             hash = "22e405cdaa85b645a2f12a5ce03c6e2a",
             name = "inv_pants_plate_10",
@@ -12367,6 +13989,7 @@ return {
             type = 1,
         },
         {
+            id   = 134687,
             file = 134687,
             hash = "1b56283911363357b3cec06551d15064",
             name = "inv_pants_plate_11",
@@ -12374,6 +13997,7 @@ return {
             type = 1,
         },
         {
+            id   = 134688,
             file = 134688,
             hash = "706f6e7b68a6a2403cd4c0c1d64b28ff",
             name = "inv_pants_plate_12",
@@ -12381,6 +14005,7 @@ return {
             type = 1,
         },
         {
+            id   = 134689,
             file = 134689,
             hash = "8111221917bed730b2cc699d1d6d5f60",
             name = "inv_pants_plate_13",
@@ -12388,6 +14013,7 @@ return {
             type = 1,
         },
         {
+            id   = 134690,
             file = 134690,
             hash = "ccf30495b52931e5966035be858d18ad",
             name = "inv_pants_plate_14",
@@ -12395,6 +14021,7 @@ return {
             type = 1,
         },
         {
+            id   = 134691,
             file = 134691,
             hash = "557f3175a85062daaa2c91e0433600a2",
             name = "inv_pants_plate_15",
@@ -12402,6 +14029,7 @@ return {
             type = 1,
         },
         {
+            id   = 134692,
             file = 134692,
             hash = "f15624605ede656ce141fcab731a92a0",
             name = "inv_pants_plate_16",
@@ -12409,6 +14037,7 @@ return {
             type = 1,
         },
         {
+            id   = 134693,
             file = 134693,
             hash = "07156a99b087a2ceccaac08fc6a15df1",
             name = "inv_pants_plate_17",
@@ -12416,6 +14045,7 @@ return {
             type = 1,
         },
         {
+            id   = 134694,
             file = 134694,
             hash = "75607af5f3f7bd12a1f5080112a594df",
             name = "inv_pants_plate_18",
@@ -12423,6 +14053,7 @@ return {
             type = 1,
         },
         {
+            id   = 134695,
             file = 134695,
             hash = "4c6af7f8dbaef2c25000639547bcef3b",
             name = "inv_pants_plate_19",
@@ -12430,6 +14061,7 @@ return {
             type = 1,
         },
         {
+            id   = 134696,
             file = 134696,
             hash = "1c073138e467eb77f027ac071d9b7b13",
             name = "inv_pants_plate_20",
@@ -12437,6 +14069,7 @@ return {
             type = 1,
         },
         {
+            id   = 134697,
             file = 134697,
             hash = "b00e58995cc47957dee69b01b5c008fe",
             name = "inv_pants_plate_21",
@@ -12444,6 +14077,7 @@ return {
             type = 1,
         },
         {
+            id   = 134706,
             file = 134706,
             hash = "d7a5aa8b2574f3c508104ad46e0bca35",
             name = "inv_pants_wolf",
@@ -12451,6 +14085,7 @@ return {
             type = 1,
         },
         {
+            id   = 134707,
             file = 134707,
             hash = "0db2b851be5e1be67bf73330716cfbed",
             name = "inv_pick_01",
@@ -12458,6 +14093,7 @@ return {
             type = 1,
         },
         {
+            id   = 134708,
             file = 134708,
             hash = "fdd96885cb4fe84641c9c8ccd5e3f862",
             name = "inv_pick_02",
@@ -12465,6 +14101,7 @@ return {
             type = 1,
         },
         {
+            id   = 134709,
             file = 134709,
             hash = "f255f6a92b78fb1db22b16a00f846ae2",
             name = "inv_pick_03",
@@ -12472,6 +14109,7 @@ return {
             type = 1,
         },
         {
+            id   = 134710,
             file = 134710,
             hash = "3d8070586518bee2da90a7d1fc045546",
             name = "inv_pick_05",
@@ -12479,6 +14117,7 @@ return {
             type = 1,
         },
         {
+            id   = 134711,
             file = 134711,
             hash = "6db3814fa64e358c4d33dbae4f244acb",
             name = "inv_poison_mindnumbing",
@@ -12486,6 +14125,7 @@ return {
             type = 1,
         },
         {
+            id   = 134712,
             file = 134712,
             hash = "20e638cf5ddc2e0f3656ca9c9aff2529",
             name = "inv_potion_01",
@@ -12493,6 +14133,7 @@ return {
             type = 1,
         },
         {
+            id   = 134713,
             file = 134713,
             hash = "88dccbaaf78b9083a618908ce2ae46e3",
             name = "inv_potion_02",
@@ -12500,6 +14141,7 @@ return {
             type = 1,
         },
         {
+            id   = 134714,
             file = 134714,
             hash = "c9a5db9d059b61b64cfd810d12dd94f3",
             name = "inv_potion_03",
@@ -12507,6 +14149,7 @@ return {
             type = 1,
         },
         {
+            id   = 134715,
             file = 134715,
             hash = "25103085d29c19b175477b7398b8386b",
             name = "inv_potion_04",
@@ -12514,6 +14157,7 @@ return {
             type = 1,
         },
         {
+            id   = 134716,
             file = 134716,
             hash = "67e75225975f1b29c964932ea5166d45",
             name = "inv_potion_05",
@@ -12521,6 +14165,7 @@ return {
             type = 1,
         },
         {
+            id   = 134717,
             file = 134717,
             hash = "0dea886c460a9a91b2a580162f4c955f",
             name = "inv_potion_06",
@@ -12528,6 +14173,7 @@ return {
             type = 1,
         },
         {
+            id   = 134718,
             file = 134718,
             hash = "45df28c166bdaf64c051dbc72e3b1ccf",
             name = "inv_potion_07",
@@ -12535,6 +14181,7 @@ return {
             type = 1,
         },
         {
+            id   = 134719,
             file = 134719,
             hash = "a244c7e551f6206ee79cb8fd25f7e6f7",
             name = "inv_potion_08",
@@ -12542,6 +14189,7 @@ return {
             type = 1,
         },
         {
+            id   = 134720,
             file = 134720,
             hash = "2aded3c8a92577e30e9663835bf90d9f",
             name = "inv_potion_09",
@@ -12549,6 +14197,7 @@ return {
             type = 1,
         },
         {
+            id   = 134721,
             file = 134721,
             hash = "ecd40d3d3ddfe4a391c593014dddf0c5",
             name = "inv_potion_10",
@@ -12556,6 +14205,7 @@ return {
             type = 1,
         },
         {
+            id   = 134722,
             file = 134722,
             hash = "72a640f03ff80dcece49b47a070cd6b6",
             name = "inv_potion_100",
@@ -12563,6 +14213,7 @@ return {
             type = 1,
         },
         {
+            id   = 134723,
             file = 134723,
             hash = "2e137dfb564f0a69dfed95a38aa889ee",
             name = "inv_potion_101",
@@ -12570,6 +14221,7 @@ return {
             type = 1,
         },
         {
+            id   = 134724,
             file = 134724,
             hash = "32b1bf9464d5d6b6dfa431c9d8c96fa2",
             name = "inv_potion_102",
@@ -12577,6 +14229,7 @@ return {
             type = 1,
         },
         {
+            id   = 134725,
             file = 134725,
             hash = "9587112afa898a2d36984f6fdb765b2c",
             name = "inv_potion_103",
@@ -12584,6 +14237,7 @@ return {
             type = 1,
         },
         {
+            id   = 134726,
             file = 134726,
             hash = "29a73acf2cc635981eb417cac8dbd1b3",
             name = "inv_potion_104",
@@ -12591,6 +14245,7 @@ return {
             type = 1,
         },
         {
+            id   = 134727,
             file = 134727,
             hash = "66e352f4634f67e1182e58a70fb0128e",
             name = "inv_potion_105",
@@ -12598,6 +14253,7 @@ return {
             type = 1,
         },
         {
+            id   = 134732,
             file = 134732,
             hash = "d27129280aafd3d1a6620b564a956d59",
             name = "inv_potion_11",
@@ -12605,6 +14261,7 @@ return {
             type = 1,
         },
         {
+            id   = 134743,
             file = 134743,
             hash = "9e1b42d1874f4df7643a0c30ac0d5db5",
             name = "inv_potion_12",
@@ -12612,6 +14269,7 @@ return {
             type = 1,
         },
         {
+            id   = 134754,
             file = 134754,
             hash = "e151eac9eec8e16e63ab807654fa6c8c",
             name = "inv_potion_13",
@@ -12619,6 +14277,7 @@ return {
             type = 1,
         },
         {
+            id   = 134765,
             file = 134765,
             hash = "85b3b01653f1f40dc59bdb4969a497c1",
             name = "inv_potion_14",
@@ -12626,6 +14285,7 @@ return {
             type = 1,
         },
         {
+            id   = 134776,
             file = 134776,
             hash = "8c4909636dd795855995ec3d38772bb6",
             name = "inv_potion_15",
@@ -12633,6 +14293,7 @@ return {
             type = 1,
         },
         {
+            id   = 134787,
             file = 134787,
             hash = "63f920c4926fe09bd60e36029c5e1cfa",
             name = "inv_potion_16",
@@ -12640,6 +14301,7 @@ return {
             type = 1,
         },
         {
+            id   = 134797,
             file = 134797,
             hash = "cd7ef35a178d07e1aea29c1abe865255",
             name = "inv_potion_17",
@@ -12647,6 +14309,7 @@ return {
             type = 1,
         },
         {
+            id   = 134798,
             file = 134798,
             hash = "53833fcbe1f2baead5cdad75278a7e4b",
             name = "inv_potion_18",
@@ -12654,6 +14317,7 @@ return {
             type = 1,
         },
         {
+            id   = 134799,
             file = 134799,
             hash = "e7243d72c7f5197fd55d44a5bce682e7",
             name = "inv_potion_19",
@@ -12661,6 +14325,7 @@ return {
             type = 1,
         },
         {
+            id   = 134800,
             file = 134800,
             hash = "05f6129fb527954dc3d748e7da072afd",
             name = "inv_potion_20",
@@ -12668,6 +14333,7 @@ return {
             type = 1,
         },
         {
+            id   = 134801,
             file = 134801,
             hash = "1a7bcc9ee8e0721b0b435100dee83c1f",
             name = "inv_potion_21",
@@ -12675,6 +14341,7 @@ return {
             type = 1,
         },
         {
+            id   = 134802,
             file = 134802,
             hash = "6d21d864c28b4c9d0ac8facd2cea9596",
             name = "inv_potion_22",
@@ -12682,6 +14349,7 @@ return {
             type = 1,
         },
         {
+            id   = 134803,
             file = 134803,
             hash = "bddfb1142d38b48be98a51686862fec5",
             name = "inv_potion_23",
@@ -12689,6 +14357,7 @@ return {
             type = 1,
         },
         {
+            id   = 134804,
             file = 134804,
             hash = "507fb76f19de7ec0cb43fb2afcda34f3",
             name = "inv_potion_24",
@@ -12696,6 +14365,7 @@ return {
             type = 1,
         },
         {
+            id   = 134805,
             file = 134805,
             hash = "5488f1a3a27cf66a7864d94f9cf7bd93",
             name = "inv_potion_25",
@@ -12703,6 +14373,7 @@ return {
             type = 1,
         },
         {
+            id   = 134806,
             file = 134806,
             hash = "b77c527b62248a26b069bc346f5aecc3",
             name = "inv_potion_26",
@@ -12710,6 +14381,7 @@ return {
             type = 1,
         },
         {
+            id   = 134807,
             file = 134807,
             hash = "78c0e0ff1f55aa6a656ca9429c7a93ad",
             name = "inv_potion_27",
@@ -12717,6 +14389,7 @@ return {
             type = 1,
         },
         {
+            id   = 134808,
             file = 134808,
             hash = "0a692984d49b70d3bd9f29497c6e3acb",
             name = "inv_potion_28",
@@ -12724,6 +14397,7 @@ return {
             type = 1,
         },
         {
+            id   = 134809,
             file = 134809,
             hash = "e050e94ab52f29984d0316d8f39fd8ec",
             name = "inv_potion_29",
@@ -12731,6 +14405,7 @@ return {
             type = 1,
         },
         {
+            id   = 134810,
             file = 134810,
             hash = "166faec3ac0fb81a5e2ec6628868c23d",
             name = "inv_potion_30",
@@ -12738,6 +14413,7 @@ return {
             type = 1,
         },
         {
+            id   = 134811,
             file = 134811,
             hash = "4f5d809e7185c211e4c4f95ceb0b93c7",
             name = "inv_potion_31",
@@ -12745,6 +14421,7 @@ return {
             type = 1,
         },
         {
+            id   = 134812,
             file = 134812,
             hash = "5c4a2520c884a9eed0edb9dd1556aec4",
             name = "inv_potion_32",
@@ -12752,6 +14429,7 @@ return {
             type = 1,
         },
         {
+            id   = 134813,
             file = 134813,
             hash = "cad6da37f3f85ea2e0fd35985f394807",
             name = "inv_potion_33",
@@ -12759,6 +14437,7 @@ return {
             type = 1,
         },
         {
+            id   = 134814,
             file = 134814,
             hash = "394494bdd151dc62bd04acec8794eb49",
             name = "inv_potion_34",
@@ -12766,6 +14445,7 @@ return {
             type = 1,
         },
         {
+            id   = 134815,
             file = 134815,
             hash = "8412dbe24641690b6decd83b6e6fa334",
             name = "inv_potion_35",
@@ -12773,6 +14453,7 @@ return {
             type = 1,
         },
         {
+            id   = 134816,
             file = 134816,
             hash = "d364936d79f78e5b74cd361b85a7e49b",
             name = "inv_potion_36",
@@ -12780,6 +14461,7 @@ return {
             type = 1,
         },
         {
+            id   = 134817,
             file = 134817,
             hash = "6f88b9fa8a3c3ef5b36af3746ab8624d",
             name = "inv_potion_37",
@@ -12787,6 +14469,7 @@ return {
             type = 1,
         },
         {
+            id   = 134818,
             file = 134818,
             hash = "9b733ab9bb56b99eaac2b0aa24a9eca5",
             name = "inv_potion_38",
@@ -12794,6 +14477,7 @@ return {
             type = 1,
         },
         {
+            id   = 134819,
             file = 134819,
             hash = "ee437225e79a4f71efe5e0d1719e400e",
             name = "inv_potion_39",
@@ -12801,6 +14485,7 @@ return {
             type = 1,
         },
         {
+            id   = 134820,
             file = 134820,
             hash = "9b7f639f7adefafead6bd66a27a623de",
             name = "inv_potion_40",
@@ -12808,6 +14493,7 @@ return {
             type = 1,
         },
         {
+            id   = 134821,
             file = 134821,
             hash = "543a2767e193f3671a72c46455c2302d",
             name = "inv_potion_41",
@@ -12815,6 +14501,7 @@ return {
             type = 1,
         },
         {
+            id   = 134822,
             file = 134822,
             hash = "c6fa20b51aed5309dc58f2c75391523d",
             name = "inv_potion_42",
@@ -12822,6 +14509,7 @@ return {
             type = 1,
         },
         {
+            id   = 134823,
             file = 134823,
             hash = "78282ac375198b1fe1334753bea508f8",
             name = "inv_potion_43",
@@ -12829,6 +14517,7 @@ return {
             type = 1,
         },
         {
+            id   = 134824,
             file = 134824,
             hash = "638cc94d9cba7ee388dd74a9e0cbd54c",
             name = "inv_potion_44",
@@ -12836,6 +14525,7 @@ return {
             type = 1,
         },
         {
+            id   = 134825,
             file = 134825,
             hash = "6d64bf624e337f9eb3b55958dcc0b5aa",
             name = "inv_potion_45",
@@ -12843,6 +14533,7 @@ return {
             type = 1,
         },
         {
+            id   = 134826,
             file = 134826,
             hash = "264c6f36984c5ecb5efbd9adb17db62a",
             name = "inv_potion_46",
@@ -12850,6 +14541,7 @@ return {
             type = 1,
         },
         {
+            id   = 134827,
             file = 134827,
             hash = "33f87a129897645315e2217ae598f18c",
             name = "inv_potion_47",
@@ -12857,6 +14549,7 @@ return {
             type = 1,
         },
         {
+            id   = 134828,
             file = 134828,
             hash = "75d56331845cd929e756ba603b19c225",
             name = "inv_potion_48",
@@ -12864,6 +14557,7 @@ return {
             type = 1,
         },
         {
+            id   = 134829,
             file = 134829,
             hash = "f32d32e9aed4b59c4a8b01b5b0d03aa1",
             name = "inv_potion_49",
@@ -12871,6 +14565,7 @@ return {
             type = 1,
         },
         {
+            id   = 134830,
             file = 134830,
             hash = "6d08298db868714b1e70cd87c819c8f3",
             name = "inv_potion_50",
@@ -12878,6 +14573,7 @@ return {
             type = 1,
         },
         {
+            id   = 134831,
             file = 134831,
             hash = "1e7681fcc9f8e966045885db554d97aa",
             name = "inv_potion_51",
@@ -12885,6 +14581,7 @@ return {
             type = 1,
         },
         {
+            id   = 134832,
             file = 134832,
             hash = "bb67cd0fd14ebc06d0f91536e11c43d3",
             name = "inv_potion_52",
@@ -12892,6 +14589,7 @@ return {
             type = 1,
         },
         {
+            id   = 134833,
             file = 134833,
             hash = "d41acfa7135bce4c7346112b6ccb6bf0",
             name = "inv_potion_53",
@@ -12899,6 +14597,7 @@ return {
             type = 1,
         },
         {
+            id   = 134834,
             file = 134834,
             hash = "d3c31ee248f8721168a2bee6621ef86f",
             name = "inv_potion_54",
@@ -12906,6 +14605,7 @@ return {
             type = 1,
         },
         {
+            id   = 134835,
             file = 134835,
             hash = "8c7d19c78e9f6a1ff042b5f5421efc46",
             name = "inv_potion_55",
@@ -12913,6 +14613,7 @@ return {
             type = 1,
         },
         {
+            id   = 134836,
             file = 134836,
             hash = "273df87aecf03d083347ef6939380de4",
             name = "inv_potion_56",
@@ -12920,6 +14621,7 @@ return {
             type = 1,
         },
         {
+            id   = 134837,
             file = 134837,
             hash = "536740d5c57cedc64027c19595b102f0",
             name = "inv_potion_57",
@@ -12927,6 +14629,7 @@ return {
             type = 1,
         },
         {
+            id   = 134838,
             file = 134838,
             hash = "f0277a25ae3ac725e864a9298d904df1",
             name = "inv_potion_58",
@@ -12934,6 +14637,7 @@ return {
             type = 1,
         },
         {
+            id   = 134839,
             file = 134839,
             hash = "e6fc82d7df90c1fdc64c67cfc4bf2f32",
             name = "inv_potion_59",
@@ -12941,6 +14645,7 @@ return {
             type = 1,
         },
         {
+            id   = 134840,
             file = 134840,
             hash = "733ee83e2a04fd4f74a08125e7f273f7",
             name = "inv_potion_60",
@@ -12948,6 +14653,7 @@ return {
             type = 1,
         },
         {
+            id   = 134841,
             file = 134841,
             hash = "418bece618b910f712a6bc0b4aa4d3de",
             name = "inv_potion_61",
@@ -12955,6 +14661,7 @@ return {
             type = 1,
         },
         {
+            id   = 134842,
             file = 134842,
             hash = "77d3359c99c8aad12b038c8d3ea8fb3b",
             name = "inv_potion_62",
@@ -12962,6 +14669,7 @@ return {
             type = 1,
         },
         {
+            id   = 134843,
             file = 134843,
             hash = "f8724cdf8666c15d85cebb4dd9068f81",
             name = "inv_potion_63",
@@ -12969,6 +14677,7 @@ return {
             type = 1,
         },
         {
+            id   = 134844,
             file = 134844,
             hash = "194ee35fd9b71fa49fba2da5abaae864",
             name = "inv_potion_64",
@@ -12976,6 +14685,7 @@ return {
             type = 1,
         },
         {
+            id   = 134845,
             file = 134845,
             hash = "ac0e67c9b82cd67cde2d688abae762ca",
             name = "inv_potion_65",
@@ -12983,6 +14693,7 @@ return {
             type = 1,
         },
         {
+            id   = 134846,
             file = 134846,
             hash = "3ab01bba1f2d55a33b974f7cd9e7ee25",
             name = "inv_potion_66",
@@ -12990,6 +14701,7 @@ return {
             type = 1,
         },
         {
+            id   = 134847,
             file = 134847,
             hash = "5a43b5e8a3b622bfc97d19db21864b25",
             name = "inv_potion_67",
@@ -12997,6 +14709,7 @@ return {
             type = 1,
         },
         {
+            id   = 134848,
             file = 134848,
             hash = "81140a5e2e8d3ba5158a0eb45b07ab05",
             name = "inv_potion_68",
@@ -13004,6 +14717,7 @@ return {
             type = 1,
         },
         {
+            id   = 134849,
             file = 134849,
             hash = "b2703ae7e75b98181aaf6f0d72445e1e",
             name = "inv_potion_69",
@@ -13011,6 +14725,7 @@ return {
             type = 1,
         },
         {
+            id   = 134850,
             file = 134850,
             hash = "bd3e12c1ef4d8496b3beba28607dc5cc",
             name = "inv_potion_70",
@@ -13018,6 +14733,7 @@ return {
             type = 1,
         },
         {
+            id   = 134851,
             file = 134851,
             hash = "2d4b3d7227b19334e20557984499e1fc",
             name = "inv_potion_71",
@@ -13025,6 +14741,7 @@ return {
             type = 1,
         },
         {
+            id   = 134852,
             file = 134852,
             hash = "0ea59762bae065a49dc7becf875463b7",
             name = "inv_potion_72",
@@ -13032,6 +14749,7 @@ return {
             type = 1,
         },
         {
+            id   = 134853,
             file = 134853,
             hash = "870909cb83c554a3d988803ba7460e68",
             name = "inv_potion_73",
@@ -13039,6 +14757,7 @@ return {
             type = 1,
         },
         {
+            id   = 134854,
             file = 134854,
             hash = "d9ca9d4cc8e8df8a620b6df48ec0347f",
             name = "inv_potion_74",
@@ -13046,6 +14765,7 @@ return {
             type = 1,
         },
         {
+            id   = 134855,
             file = 134855,
             hash = "9db7030d42c736c2be4d8990c99057fb",
             name = "inv_potion_75",
@@ -13053,6 +14773,7 @@ return {
             type = 1,
         },
         {
+            id   = 134856,
             file = 134856,
             hash = "8cbf71c9e79c5f7756d277869153b662",
             name = "inv_potion_76",
@@ -13060,6 +14781,7 @@ return {
             type = 1,
         },
         {
+            id   = 134857,
             file = 134857,
             hash = "75479f17dd4dd57d2efc0af2bc86992e",
             name = "inv_potion_77",
@@ -13067,6 +14789,7 @@ return {
             type = 1,
         },
         {
+            id   = 134858,
             file = 134858,
             hash = "0d82f6fa9cfc711172fcebde0d8ef7b4",
             name = "inv_potion_78",
@@ -13074,6 +14797,7 @@ return {
             type = 1,
         },
         {
+            id   = 134859,
             file = 134859,
             hash = "199691366bfd6ef685949fe68324277d",
             name = "inv_potion_79",
@@ -13081,6 +14805,7 @@ return {
             type = 1,
         },
         {
+            id   = 134860,
             file = 134860,
             hash = "01f8e9c17dcaf97fed39285d9d06c94c",
             name = "inv_potion_80",
@@ -13088,6 +14813,7 @@ return {
             type = 1,
         },
         {
+            id   = 134861,
             file = 134861,
             hash = "72d6be14df1ee4fdcc471708044556ea",
             name = "inv_potion_81",
@@ -13095,6 +14821,7 @@ return {
             type = 1,
         },
         {
+            id   = 134862,
             file = 134862,
             hash = "29306e9ff12c9b447a396e15bb20a7b0",
             name = "inv_potion_82",
@@ -13102,6 +14829,7 @@ return {
             type = 1,
         },
         {
+            id   = 134863,
             file = 134863,
             hash = "0d8c4ba183cb355d60db0c73b2120537",
             name = "inv_potion_83",
@@ -13109,6 +14837,7 @@ return {
             type = 1,
         },
         {
+            id   = 134864,
             file = 134864,
             hash = "90f104ac099e831b200c4f05ec326cd5",
             name = "inv_potion_84",
@@ -13116,6 +14845,7 @@ return {
             type = 1,
         },
         {
+            id   = 134865,
             file = 134865,
             hash = "b655a980c516de2616d15974873fedfb",
             name = "inv_potion_85",
@@ -13123,6 +14853,7 @@ return {
             type = 1,
         },
         {
+            id   = 134866,
             file = 134866,
             hash = "3776d11d1b6227e87b0c2ad7d86cae4d",
             name = "inv_potion_86",
@@ -13130,6 +14861,7 @@ return {
             type = 1,
         },
         {
+            id   = 134867,
             file = 134867,
             hash = "d1be84897aa1563d3beb0a64fc8a48c3",
             name = "inv_potion_87",
@@ -13137,6 +14869,7 @@ return {
             type = 1,
         },
         {
+            id   = 134868,
             file = 134868,
             hash = "17e6b752ba8e92087be5aa0c6e560f75",
             name = "inv_potion_88",
@@ -13144,6 +14877,7 @@ return {
             type = 1,
         },
         {
+            id   = 134869,
             file = 134869,
             hash = "3cc37f3604bf98c61a1f5c3485ff8c02",
             name = "inv_potion_89",
@@ -13151,6 +14885,7 @@ return {
             type = 1,
         },
         {
+            id   = 134870,
             file = 134870,
             hash = "d63cbef6ba72253d921c5ff2b03c4a74",
             name = "inv_potion_90",
@@ -13158,6 +14893,7 @@ return {
             type = 1,
         },
         {
+            id   = 134871,
             file = 134871,
             hash = "1a6a14ebb54185ffda52fb426c5d12d1",
             name = "inv_potion_91",
@@ -13165,6 +14901,7 @@ return {
             type = 1,
         },
         {
+            id   = 134872,
             file = 134872,
             hash = "0cc6387a53f2284ceb29082c50bf7427",
             name = "inv_potion_92",
@@ -13172,6 +14909,7 @@ return {
             type = 1,
         },
         {
+            id   = 134873,
             file = 134873,
             hash = "cd2ffcf61099916114efe27e87fdc883",
             name = "inv_potion_93",
@@ -13179,6 +14917,7 @@ return {
             type = 1,
         },
         {
+            id   = 134874,
             file = 134874,
             hash = "59b6cb6fdf925490c0c581c6827c6cfd",
             name = "inv_potion_94",
@@ -13186,6 +14925,7 @@ return {
             type = 1,
         },
         {
+            id   = 134875,
             file = 134875,
             hash = "58b23b5eac144afb142de9ec51c234d9",
             name = "inv_potion_95",
@@ -13193,6 +14933,7 @@ return {
             type = 1,
         },
         {
+            id   = 134876,
             file = 134876,
             hash = "16dd4a730cee4a853f8022eedf2dd765",
             name = "inv_potion_96",
@@ -13200,6 +14941,7 @@ return {
             type = 1,
         },
         {
+            id   = 134877,
             file = 134877,
             hash = "36d24462aa95803b8eece8406a3a6ad2",
             name = "inv_potion_97",
@@ -13207,6 +14949,7 @@ return {
             type = 1,
         },
         {
+            id   = 134878,
             file = 134878,
             hash = "41bfccf82eb71763582d5251fb5cddbf",
             name = "inv_potion_98",
@@ -13214,6 +14957,7 @@ return {
             type = 1,
         },
         {
+            id   = 134879,
             file = 134879,
             hash = "c1ac79f73c09245d35163e1509402ebc",
             name = "inv_potion_99",
@@ -13221,6 +14965,7 @@ return {
             type = 1,
         },
         {
+            id   = 134880,
             file = 134880,
             hash = "b6707a68eea593225596f9f3e3b35aec",
             name = "inv_qiraj_bindingscommand",
@@ -13228,6 +14973,7 @@ return {
             type = 1,
         },
         {
+            id   = 134881,
             file = 134881,
             hash = "7f104dc41783594bb4c621257ccc48a9",
             name = "inv_qiraj_bindingsdominance",
@@ -13235,6 +14981,7 @@ return {
             type = 1,
         },
         {
+            id   = 134882,
             file = 134882,
             hash = "a45f8b8e0ed72f48fabdc360184f42a3",
             name = "inv_qiraj_carapaceoldgod",
@@ -13242,6 +14989,7 @@ return {
             type = 1,
         },
         {
+            id   = 134883,
             file = 134883,
             hash = "e9b74cf409d37e2d5e2e1f98707e0a07",
             name = "inv_qiraj_drapemartial",
@@ -13249,6 +14997,7 @@ return {
             type = 1,
         },
         {
+            id   = 134884,
             file = 134884,
             hash = "4fae15ac8c9604d2bca24dafad34b94f",
             name = "inv_qiraj_draperegal",
@@ -13256,6 +15005,7 @@ return {
             type = 1,
         },
         {
+            id   = 134885,
             file = 134885,
             hash = "ffd0e153bf9f17564849b6afaf2b85b4",
             name = "inv_qiraj_hiltornate",
@@ -13263,6 +15013,7 @@ return {
             type = 1,
         },
         {
+            id   = 134886,
             file = 134886,
             hash = "3bd64cb244dd8a3b4324d9bad3ed573b",
             name = "inv_qiraj_hiltspiked",
@@ -13270,6 +15021,7 @@ return {
             type = 1,
         },
         {
+            id   = 134887,
             file = 134887,
             hash = "035d42a6324fd3d91ab23842a10c66ee",
             name = "inv_qiraj_huskoldgod",
@@ -13277,6 +15029,7 @@ return {
             type = 1,
         },
         {
+            id   = 134888,
             file = 134888,
             hash = "70eb14a93c77b8922e3d65e2d7b65703",
             name = "inv_qiraj_jewelblessed",
@@ -13284,6 +15037,7 @@ return {
             type = 1,
         },
         {
+            id   = 134889,
             file = 134889,
             hash = "6ed91a582044dadeb9e34f695c3baf4c",
             name = "inv_qiraj_jewelencased",
@@ -13291,6 +15045,7 @@ return {
             type = 1,
         },
         {
+            id   = 134890,
             file = 134890,
             hash = "215abc1fe4a10903f0f14e5150d3f0bc",
             name = "inv_qiraj_jewelengraved",
@@ -13298,6 +15053,7 @@ return {
             type = 1,
         },
         {
+            id   = 134891,
             file = 134891,
             hash = "e8395e9e6508fc7b03c00831e820e8e8",
             name = "inv_qiraj_jewelglyphed",
@@ -13305,6 +15061,7 @@ return {
             type = 1,
         },
         {
+            id   = 134892,
             file = 134892,
             hash = "2a41c3e4ba7e5a8469fbcdbc955333f9",
             name = "inv_qiraj_ourohide",
@@ -13312,6 +15069,7 @@ return {
             type = 1,
         },
         {
+            id   = 134893,
             file = 134893,
             hash = "672a2dbb3c22164bbcce2e52561a146c",
             name = "inv_qiraj_ringceremonial",
@@ -13319,6 +15077,7 @@ return {
             type = 1,
         },
         {
+            id   = 134894,
             file = 134894,
             hash = "5dad9847882e3406386e35cd31d87abe",
             name = "inv_qiraj_ringmagisterial",
@@ -13326,6 +15085,7 @@ return {
             type = 1,
         },
         {
+            id   = 134895,
             file = 134895,
             hash = "c1543944f6dfcac1ef3bbd043d272dca",
             name = "inv_qiraj_skinsandworm",
@@ -13333,6 +15093,7 @@ return {
             type = 1,
         },
         {
+            id   = 134896,
             file = 134896,
             hash = "d2243c8466a001b3f14272f114617867",
             name = "inv_qirajidol_alabaster",
@@ -13340,6 +15101,7 @@ return {
             type = 1,
         },
         {
+            id   = 134897,
             file = 134897,
             hash = "b9b1a33fb25e8138f1bcfb80f8999c2b",
             name = "inv_qirajidol_amber",
@@ -13347,6 +15109,7 @@ return {
             type = 1,
         },
         {
+            id   = 134898,
             file = 134898,
             hash = "e61a4a6149e2ee47674b1c0fa6aed2e1",
             name = "inv_qirajidol_azure",
@@ -13354,6 +15117,7 @@ return {
             type = 1,
         },
         {
+            id   = 134899,
             file = 134899,
             hash = "ec2f2e6ec994d10f456eeeabea178b1e",
             name = "inv_qirajidol_death",
@@ -13361,6 +15125,7 @@ return {
             type = 1,
         },
         {
+            id   = 134900,
             file = 134900,
             hash = "78d4b1b7043b82b3a90742441d5205b0",
             name = "inv_qirajidol_jasper",
@@ -13368,6 +15133,7 @@ return {
             type = 1,
         },
         {
+            id   = 134901,
             file = 134901,
             hash = "b36ef9c4b49d5bb90d50bb825fda4b19",
             name = "inv_qirajidol_lambent",
@@ -13375,6 +15141,7 @@ return {
             type = 1,
         },
         {
+            id   = 134902,
             file = 134902,
             hash = "a8be76f0f4a1e3f034e703b8c9795fd8",
             name = "inv_qirajidol_life",
@@ -13382,6 +15149,7 @@ return {
             type = 1,
         },
         {
+            id   = 134903,
             file = 134903,
             hash = "eb4b945ad335c40c84185e1fd9bd3d9e",
             name = "inv_qirajidol_night",
@@ -13389,6 +15157,7 @@ return {
             type = 1,
         },
         {
+            id   = 134904,
             file = 134904,
             hash = "3dc0267935e6e4a1e1ed2e669dddb222",
             name = "inv_qirajidol_obsidian",
@@ -13396,6 +15165,7 @@ return {
             type = 1,
         },
         {
+            id   = 134905,
             file = 134905,
             hash = "906ff5d2e4c1a141ea4d9e4ea569b124",
             name = "inv_qirajidol_onyx",
@@ -13403,6 +15173,7 @@ return {
             type = 1,
         },
         {
+            id   = 134906,
             file = 134906,
             hash = "26b6e6a4f82fbaedf1b05207e04f852b",
             name = "inv_qirajidol_rebirth",
@@ -13410,6 +15181,7 @@ return {
             type = 1,
         },
         {
+            id   = 134907,
             file = 134907,
             hash = "b95042eaaedaeaaa760211abeedfca33",
             name = "inv_qirajidol_sage",
@@ -13417,6 +15189,7 @@ return {
             type = 1,
         },
         {
+            id   = 134908,
             file = 134908,
             hash = "a0f4899a5a2497177192522b5f2ceb54",
             name = "inv_qirajidol_strife",
@@ -13424,6 +15197,7 @@ return {
             type = 1,
         },
         {
+            id   = 134909,
             file = 134909,
             hash = "2fe607b13ddfb4a64781212f36fe2d4e",
             name = "inv_qirajidol_sun",
@@ -13431,6 +15205,7 @@ return {
             type = 1,
         },
         {
+            id   = 134910,
             file = 134910,
             hash = "074fa288a4120860fbc3c5d23a56cfe3",
             name = "inv_qirajidol_vermillion",
@@ -13438,6 +15213,7 @@ return {
             type = 1,
         },
         {
+            id   = 134911,
             file = 134911,
             hash = "229b99e076893968ad50325c77d1d6c7",
             name = "inv_qirajidol_war",
@@ -13445,6 +15221,7 @@ return {
             type = 1,
         },
         {
+            id   = 134912,
             file = 134912,
             hash = "bf1bd54a23b6df7a7d7bbafefcab1e62",
             name = "inv_relics_idolofferocity",
@@ -13452,6 +15229,7 @@ return {
             type = 1,
         },
         {
+            id   = 134913,
             file = 134913,
             hash = "6e87562a209ff9139ffc165a2986371e",
             name = "inv_relics_idolofhealth",
@@ -13459,6 +15237,7 @@ return {
             type = 1,
         },
         {
+            id   = 134914,
             file = 134914,
             hash = "fa939c20ffb3a788aa6c7eeec1a236ca",
             name = "inv_relics_idolofrejuvenation",
@@ -13466,6 +15245,7 @@ return {
             type = 1,
         },
         {
+            id   = 134915,
             file = 134915,
             hash = "438ae5118e9e5b78524deb2c9d48060c",
             name = "inv_relics_libramofgrace",
@@ -13473,6 +15253,7 @@ return {
             type = 1,
         },
         {
+            id   = 134916,
             file = 134916,
             hash = "be19ca82fe738e2f65c0f3cc6ee009aa",
             name = "inv_relics_libramofhope",
@@ -13480,6 +15261,7 @@ return {
             type = 1,
         },
         {
+            id   = 134917,
             file = 134917,
             hash = "af2dcc8a80551a8486b57f611c98db2f",
             name = "inv_relics_libramoftruth",
@@ -13487,6 +15269,7 @@ return {
             type = 1,
         },
         {
+            id   = 134918,
             file = 134918,
             hash = "22761ab4808689bb7c6aa302207adc8a",
             name = "inv_relics_totemoflife",
@@ -13494,6 +15277,7 @@ return {
             type = 1,
         },
         {
+            id   = 134919,
             file = 134919,
             hash = "e0498c9a2761e14d04441ff806a721a2",
             name = "inv_relics_totemofrage",
@@ -13501,6 +15285,7 @@ return {
             type = 1,
         },
         {
+            id   = 134920,
             file = 134920,
             hash = "a8d0676a64fdbab5982cacba8fffb530",
             name = "inv_relics_totemofrebirth",
@@ -13508,6 +15293,7 @@ return {
             type = 1,
         },
         {
+            id   = 134927,
             file = 134927,
             hash = "ea55dd87a4e15748bdeb175b5a249fda",
             name = "inv_rosebouquet01",
@@ -13515,6 +15301,7 @@ return {
             type = 1,
         },
         {
+            id   = 134928,
             file = 134928,
             hash = "7268041c63b6260b662a73b9b71f2ef3",
             name = "inv_rosepotted01",
@@ -13522,6 +15309,7 @@ return {
             type = 1,
         },
         {
+            id   = 134929,
             file = 134929,
             hash = "86891b9f3abd7e843fdc60e3e12af8be",
             name = "inv_scarab_bone",
@@ -13529,6 +15317,7 @@ return {
             type = 1,
         },
         {
+            id   = 134930,
             file = 134930,
             hash = "53299a1896305333d38391322cd34e21",
             name = "inv_scarab_bronze",
@@ -13536,6 +15325,7 @@ return {
             type = 1,
         },
         {
+            id   = 134931,
             file = 134931,
             hash = "1983795a791e35f28515a68ba282c343",
             name = "inv_scarab_clay",
@@ -13543,6 +15333,7 @@ return {
             type = 1,
         },
         {
+            id   = 134932,
             file = 134932,
             hash = "efd23d1625f71d01053b436d3bd18a0e",
             name = "inv_scarab_crystal",
@@ -13550,6 +15341,7 @@ return {
             type = 1,
         },
         {
+            id   = 134933,
             file = 134933,
             hash = "6c137bc09bb9aae1dbc85c0c857d8801",
             name = "inv_scarab_gold",
@@ -13557,13 +15349,7 @@ return {
             type = 1,
         },
         {
-            file = 2241756,
-            hash = "86891b9f3abd7e843fdc60e3e12af8be",
-            name = "inv_scarab_ivory",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
+            id   = 134935,
             file = 134935,
             hash = "f8fe18658adb23fa13382524a6b28434",
             name = "inv_scarab_silver",
@@ -13571,6 +15357,7 @@ return {
             type = 1,
         },
         {
+            id   = 134936,
             file = 134936,
             hash = "300849a01282b0cd091e93ee29e8eeb2",
             name = "inv_scarab_stone",
@@ -13578,6 +15365,7 @@ return {
             type = 1,
         },
         {
+            id   = 134937,
             file = 134937,
             hash = "8c2b3924814ccddbf91f669cba173bc8",
             name = "inv_scroll_01",
@@ -13585,6 +15373,7 @@ return {
             type = 1,
         },
         {
+            id   = 134938,
             file = 134938,
             hash = "dd6d3d04b2c0b37fdb9b2be6b484b392",
             name = "inv_scroll_02",
@@ -13592,6 +15381,7 @@ return {
             type = 1,
         },
         {
+            id   = 134939,
             file = 134939,
             hash = "1c2e4acb94fb0569c84e769d2ad6da90",
             name = "inv_scroll_03",
@@ -13599,6 +15389,7 @@ return {
             type = 1,
         },
         {
+            id   = 134940,
             file = 134940,
             hash = "ca3da17f4e420fddf0768398a2d5179d",
             name = "inv_scroll_04",
@@ -13606,6 +15397,7 @@ return {
             type = 1,
         },
         {
+            id   = 134941,
             file = 134941,
             hash = "b525a9d6b51482e3a03c9b253074f427",
             name = "inv_scroll_05",
@@ -13613,6 +15405,7 @@ return {
             type = 1,
         },
         {
+            id   = 134942,
             file = 134942,
             hash = "1968abdbd761a063e0bc7950445659c8",
             name = "inv_scroll_06",
@@ -13620,6 +15413,7 @@ return {
             type = 1,
         },
         {
+            id   = 134943,
             file = 134943,
             hash = "27a0991570086ccdf48d68480f74dd54",
             name = "inv_scroll_07",
@@ -13627,6 +15421,7 @@ return {
             type = 1,
         },
         {
+            id   = 134944,
             file = 134944,
             hash = "adc576752051fece98cd6fa0326c5bbb",
             name = "inv_scroll_08",
@@ -13634,6 +15429,7 @@ return {
             type = 1,
         },
         {
+            id   = 134945,
             file = 134945,
             hash = "7890e2df8d763b11c33bf22239ba1963",
             name = "inv_scroll_09",
@@ -13641,6 +15437,7 @@ return {
             type = 1,
         },
         {
+            id   = 134946,
             file = 134946,
             hash = "f71ae2a99d96f1d529f357c807a53bbf",
             name = "inv_scroll_10",
@@ -13648,6 +15445,7 @@ return {
             type = 1,
         },
         {
+            id   = 134947,
             file = 134947,
             hash = "ed008951ed8e134b6b0d7d685be44b28",
             name = "inv_shield_01",
@@ -13655,6 +15453,7 @@ return {
             type = 1,
         },
         {
+            id   = 134948,
             file = 134948,
             hash = "b8a8d01479e4f31a40f7e9366e7d8f8e",
             name = "inv_shield_02",
@@ -13662,6 +15461,7 @@ return {
             type = 1,
         },
         {
+            id   = 134949,
             file = 134949,
             hash = "99213065558d43b1e53c1f8387a8d08f",
             name = "inv_shield_03",
@@ -13669,6 +15469,7 @@ return {
             type = 1,
         },
         {
+            id   = 134950,
             file = 134950,
             hash = "c0e87d58cf48584a75918865e39b3b91",
             name = "inv_shield_04",
@@ -13676,6 +15477,7 @@ return {
             type = 1,
         },
         {
+            id   = 134951,
             file = 134951,
             hash = "299e4b8d5dc83829ba028245404ca7f7",
             name = "inv_shield_05",
@@ -13683,6 +15485,7 @@ return {
             type = 1,
         },
         {
+            id   = 134952,
             file = 134952,
             hash = "46a8c325d3d4b1123582fc1550ec0bc2",
             name = "inv_shield_06",
@@ -13690,6 +15493,7 @@ return {
             type = 1,
         },
         {
+            id   = 134953,
             file = 134953,
             hash = "064ee51528e7971a6667718e9440b0c4",
             name = "inv_shield_07",
@@ -13697,6 +15501,7 @@ return {
             type = 1,
         },
         {
+            id   = 134954,
             file = 134954,
             hash = "3a95fb040ac595f17f9c6462a0311481",
             name = "inv_shield_08",
@@ -13704,6 +15509,7 @@ return {
             type = 1,
         },
         {
+            id   = 134955,
             file = 134955,
             hash = "2b332779212c40f7108ec02e463f4442",
             name = "inv_shield_09",
@@ -13711,6 +15517,7 @@ return {
             type = 1,
         },
         {
+            id   = 134956,
             file = 134956,
             hash = "4fe9aa34fc87c2aa4f6668732a636383",
             name = "inv_shield_10",
@@ -13718,6 +15525,7 @@ return {
             type = 1,
         },
         {
+            id   = 134957,
             file = 134957,
             hash = "6c3c57205b7e04680f0b5a47699e2fce",
             name = "inv_shield_11",
@@ -13725,6 +15533,7 @@ return {
             type = 1,
         },
         {
+            id   = 134958,
             file = 134958,
             hash = "8d9c37f62d9c2de25ca5bc0393edee3c",
             name = "inv_shield_12",
@@ -13732,6 +15541,7 @@ return {
             type = 1,
         },
         {
+            id   = 134959,
             file = 134959,
             hash = "23b29a74aa0e5a07782fda473e6060ff",
             name = "inv_shield_13",
@@ -13739,6 +15549,7 @@ return {
             type = 1,
         },
         {
+            id   = 134960,
             file = 134960,
             hash = "68a174204636059b9edcb5dddebf70b2",
             name = "inv_shield_14",
@@ -13746,6 +15557,7 @@ return {
             type = 1,
         },
         {
+            id   = 134961,
             file = 134961,
             hash = "ba1ea2c22c795384c5036de56b9bf28c",
             name = "inv_shield_15",
@@ -13753,6 +15565,7 @@ return {
             type = 1,
         },
         {
+            id   = 134962,
             file = 134962,
             hash = "336516faa7886112aeb1798a48b8688c",
             name = "inv_shield_16",
@@ -13760,6 +15573,7 @@ return {
             type = 1,
         },
         {
+            id   = 134963,
             file = 134963,
             hash = "d73c088c09cfd5765103975025c74142",
             name = "inv_shield_17",
@@ -13767,6 +15581,7 @@ return {
             type = 1,
         },
         {
+            id   = 134964,
             file = 134964,
             hash = "5c81ce0720d026fd776ad379ba32ed11",
             name = "inv_shield_18",
@@ -13774,6 +15589,7 @@ return {
             type = 1,
         },
         {
+            id   = 134965,
             file = 134965,
             hash = "a52596ddc706ca5af34f5ed2844f9513",
             name = "inv_shield_19",
@@ -13781,6 +15597,7 @@ return {
             type = 1,
         },
         {
+            id   = 134966,
             file = 134966,
             hash = "2d3ecbd791e8585f437824cf983359f3",
             name = "inv_shield_20",
@@ -13788,6 +15605,7 @@ return {
             type = 1,
         },
         {
+            id   = 134967,
             file = 134967,
             hash = "ef8de0c164e7d82fd5d8dfbc9fe93bdc",
             name = "inv_shield_21",
@@ -13795,6 +15613,7 @@ return {
             type = 1,
         },
         {
+            id   = 134968,
             file = 134968,
             hash = "325d4217d2d58da2e475cd47ad470f88",
             name = "inv_shield_22",
@@ -13802,6 +15621,7 @@ return {
             type = 1,
         },
         {
+            id   = 134969,
             file = 134969,
             hash = "cadf185fb26a733432d90b0b9a4f345b",
             name = "inv_shield_23",
@@ -13809,6 +15629,7 @@ return {
             type = 1,
         },
         {
+            id   = 134970,
             file = 134970,
             hash = "8f5dbf658d58668455de38f3c472fb6b",
             name = "inv_shield_24",
@@ -13816,6 +15637,7 @@ return {
             type = 1,
         },
         {
+            id   = 134971,
             file = 134971,
             hash = "6d7036a11f30c6cbd394082ac283e053",
             name = "inv_shield_26",
@@ -13823,6 +15645,7 @@ return {
             type = 1,
         },
         {
+            id   = 134972,
             file = 134972,
             hash = "0f4948f5434940a5663cacc77f8cc573",
             name = "inv_shield_27",
@@ -13830,6 +15653,7 @@ return {
             type = 1,
         },
         {
+            id   = 134973,
             file = 134973,
             hash = "7c518be405cd77ab1a00451779a15031",
             name = "inv_shield_28",
@@ -13837,6 +15661,7 @@ return {
             type = 1,
         },
         {
+            id   = 135005,
             file = 135005,
             hash = "01c0aaf929f917f67776f137163d3653",
             name = "inv_shirt_01",
@@ -13844,6 +15669,7 @@ return {
             type = 1,
         },
         {
+            id   = 135006,
             file = 135006,
             hash = "a9f46b1cc92ad217645dbec7426a35e0",
             name = "inv_shirt_02",
@@ -13851,6 +15677,7 @@ return {
             type = 1,
         },
         {
+            id   = 135007,
             file = 135007,
             hash = "d44c61405482675c45b766899eedb139",
             name = "inv_shirt_03",
@@ -13858,6 +15685,7 @@ return {
             type = 1,
         },
         {
+            id   = 135008,
             file = 135008,
             hash = "d043730c2b212d445a3493d136062820",
             name = "inv_shirt_04",
@@ -13865,6 +15693,7 @@ return {
             type = 1,
         },
         {
+            id   = 135009,
             file = 135009,
             hash = "fc09d466d8bedf304e197333d7d0b3ea",
             name = "inv_shirt_05",
@@ -13872,6 +15701,7 @@ return {
             type = 1,
         },
         {
+            id   = 135010,
             file = 135010,
             hash = "53161304e21ac9bfb1fe261fd6003db4",
             name = "inv_shirt_06",
@@ -13879,6 +15709,7 @@ return {
             type = 1,
         },
         {
+            id   = 135011,
             file = 135011,
             hash = "8f916a73dbd0f937052793e8c96233da",
             name = "inv_shirt_07",
@@ -13886,6 +15717,7 @@ return {
             type = 1,
         },
         {
+            id   = 135012,
             file = 135012,
             hash = "debb03d3d196887a30d46742922f365c",
             name = "inv_shirt_08",
@@ -13893,6 +15725,7 @@ return {
             type = 1,
         },
         {
+            id   = 135013,
             file = 135013,
             hash = "67c17d8bc99a66ad643a7d0e56434202",
             name = "inv_shirt_09",
@@ -13900,6 +15733,7 @@ return {
             type = 1,
         },
         {
+            id   = 135014,
             file = 135014,
             hash = "a19206ea1deb77af0de42fdcd20d17e7",
             name = "inv_shirt_10",
@@ -13907,6 +15741,7 @@ return {
             type = 1,
         },
         {
+            id   = 135015,
             file = 135015,
             hash = "c4990e1e2d015dffdd5542f290c5ba68",
             name = "inv_shirt_11",
@@ -13914,6 +15749,7 @@ return {
             type = 1,
         },
         {
+            id   = 135016,
             file = 135016,
             hash = "7e31926a6f73fb3e3400c790be3a0abc",
             name = "inv_shirt_12",
@@ -13921,6 +15757,7 @@ return {
             type = 1,
         },
         {
+            id   = 135017,
             file = 135017,
             hash = "ab1c5c799ad0e85fe639b4e315f3e3d5",
             name = "inv_shirt_13",
@@ -13928,6 +15765,7 @@ return {
             type = 1,
         },
         {
+            id   = 135018,
             file = 135018,
             hash = "4e2be64059853e1016a92e7627b8caaf",
             name = "inv_shirt_14",
@@ -13935,6 +15773,7 @@ return {
             type = 1,
         },
         {
+            id   = 135019,
             file = 135019,
             hash = "7f73e4bacc1fd7fda7bc9180144d1f3b",
             name = "inv_shirt_15",
@@ -13942,6 +15781,7 @@ return {
             type = 1,
         },
         {
+            id   = 135020,
             file = 135020,
             hash = "5cd58c4dd540096ca130dfe37e417670",
             name = "inv_shirt_16",
@@ -13949,6 +15789,7 @@ return {
             type = 1,
         },
         {
+            id   = 135021,
             file = 135021,
             hash = "8311fcc9dda9aaf6792da8d97ea76f20",
             name = "inv_shirt_17",
@@ -13956,6 +15797,7 @@ return {
             type = 1,
         },
         {
+            id   = 135022,
             file = 135022,
             hash = "1cc461e187781f791f68fa74168bea18",
             name = "inv_shirt_black_01",
@@ -13963,6 +15805,7 @@ return {
             type = 1,
         },
         {
+            id   = 135023,
             file = 135023,
             hash = "43b8ca8de5f8e3e9b6218256d331b12f",
             name = "inv_shirt_blue_01",
@@ -13970,6 +15813,7 @@ return {
             type = 1,
         },
         {
+            id   = 135024,
             file = 135024,
             hash = "b71ff01c09deb9ab270b7b6b91188a85",
             name = "inv_shirt_green_01",
@@ -13977,6 +15821,7 @@ return {
             type = 1,
         },
         {
+            id   = 135025,
             file = 135025,
             hash = "bac0767afe6b2c44d13d1b4e3a305e27",
             name = "inv_shirt_grey_01",
@@ -13984,6 +15829,7 @@ return {
             type = 1,
         },
         {
+            id   = 135026,
             file = 135026,
             hash = "466b4b31739fcd4f302367af4e5b5ca7",
             name = "inv_shirt_guildtabard_01",
@@ -13991,6 +15837,7 @@ return {
             type = 1,
         },
         {
+            id   = 135027,
             file = 135027,
             hash = "a35529aaf9f5674282b064b74b8b7487",
             name = "inv_shirt_orange_01",
@@ -13998,6 +15845,7 @@ return {
             type = 1,
         },
         {
+            id   = 135028,
             file = 135028,
             hash = "c94ba6d2d50b3595398265e1b5d3faf7",
             name = "inv_shirt_purple_01",
@@ -14005,6 +15853,7 @@ return {
             type = 1,
         },
         {
+            id   = 135029,
             file = 135029,
             hash = "794dffbe3794728cfbd70b2a1a5cf995",
             name = "inv_shirt_red_01",
@@ -14012,6 +15861,7 @@ return {
             type = 1,
         },
         {
+            id   = 135030,
             file = 135030,
             hash = "1dc13ad2b80011607a90180dc6aa57e8",
             name = "inv_shirt_white_01",
@@ -14019,6 +15869,7 @@ return {
             type = 1,
         },
         {
+            id   = 135031,
             file = 135031,
             hash = "53790ce5e5e9f49b1988a817e0dac45b",
             name = "inv_shirt_yellow_01",
@@ -14026,6 +15877,7 @@ return {
             type = 1,
         },
         {
+            id   = 135032,
             file = 135032,
             hash = "3dd225aabe8f6f3b28cef3df6aa750b6",
             name = "inv_shoulder_01",
@@ -14033,6 +15885,7 @@ return {
             type = 1,
         },
         {
+            id   = 135033,
             file = 135033,
             hash = "f3042413406f6deb4dbea4c06163f9ac",
             name = "inv_shoulder_02",
@@ -14040,6 +15893,7 @@ return {
             type = 1,
         },
         {
+            id   = 135034,
             file = 135034,
             hash = "2ee32fa040beab7a448f74dc60b283af",
             name = "inv_shoulder_03",
@@ -14047,6 +15901,7 @@ return {
             type = 1,
         },
         {
+            id   = 135035,
             file = 135035,
             hash = "dd1c89b760bf28c57f2fb6c6a1c1e30c",
             name = "inv_shoulder_04",
@@ -14054,6 +15909,7 @@ return {
             type = 1,
         },
         {
+            id   = 135036,
             file = 135036,
             hash = "56f2cb9a4b33d1418068140ff53044e8",
             name = "inv_shoulder_05",
@@ -14061,6 +15917,7 @@ return {
             type = 1,
         },
         {
+            id   = 135037,
             file = 135037,
             hash = "f2d9bac0efabbdd491e1c14dda4416f1",
             name = "inv_shoulder_06",
@@ -14068,6 +15925,7 @@ return {
             type = 1,
         },
         {
+            id   = 135038,
             file = 135038,
             hash = "6bd224dd58a2413bc060d0a4b429fd4e",
             name = "inv_shoulder_07",
@@ -14075,6 +15933,7 @@ return {
             type = 1,
         },
         {
+            id   = 135039,
             file = 135039,
             hash = "cf296255f0c81d668765537c1d9f17b8",
             name = "inv_shoulder_08",
@@ -14082,6 +15941,7 @@ return {
             type = 1,
         },
         {
+            id   = 135040,
             file = 135040,
             hash = "91a8076cc6888a645c8b89bca681ef9f",
             name = "inv_shoulder_09",
@@ -14089,6 +15949,7 @@ return {
             type = 1,
         },
         {
+            id   = 135041,
             file = 135041,
             hash = "2b402204802be5ce475211e0ae2f5079",
             name = "inv_shoulder_10",
@@ -14096,6 +15957,7 @@ return {
             type = 1,
         },
         {
+            id   = 135042,
             file = 135042,
             hash = "64ec09a0a00efe0489fb041dcf86c124",
             name = "inv_shoulder_11",
@@ -14103,6 +15965,7 @@ return {
             type = 1,
         },
         {
+            id   = 135043,
             file = 135043,
             hash = "6908170130b98f4a7a2a0cc230ff0e58",
             name = "inv_shoulder_12",
@@ -14110,6 +15973,7 @@ return {
             type = 1,
         },
         {
+            id   = 135044,
             file = 135044,
             hash = "8959f3c668f17e949bfe5e3732939927",
             name = "inv_shoulder_13",
@@ -14117,6 +15981,7 @@ return {
             type = 1,
         },
         {
+            id   = 135045,
             file = 135045,
             hash = "cde2b35a2e69643968c0ca604cee7f1f",
             name = "inv_shoulder_14",
@@ -14124,6 +15989,7 @@ return {
             type = 1,
         },
         {
+            id   = 135046,
             file = 135046,
             hash = "78ac0f6518c8770a3237598a0b96da0f",
             name = "inv_shoulder_15",
@@ -14131,6 +15997,7 @@ return {
             type = 1,
         },
         {
+            id   = 135047,
             file = 135047,
             hash = "34b9c8caf277cb56518892d11f778ad1",
             name = "inv_shoulder_16",
@@ -14138,6 +16005,7 @@ return {
             type = 1,
         },
         {
+            id   = 135048,
             file = 135048,
             hash = "c040e3009d53f85d794828910d4c0596",
             name = "inv_shoulder_17",
@@ -14145,6 +16013,7 @@ return {
             type = 1,
         },
         {
+            id   = 135049,
             file = 135049,
             hash = "de7e3a837d350421b75d27aeaa31b260",
             name = "inv_shoulder_18",
@@ -14152,6 +16021,7 @@ return {
             type = 1,
         },
         {
+            id   = 135050,
             file = 135050,
             hash = "fb44ba0ef2afd7dcb0dd1c284fa1d33b",
             name = "inv_shoulder_19",
@@ -14159,6 +16029,7 @@ return {
             type = 1,
         },
         {
+            id   = 135051,
             file = 135051,
             hash = "3bb751838bffdbaf150b3dd585e4f0f6",
             name = "inv_shoulder_20",
@@ -14166,6 +16037,7 @@ return {
             type = 1,
         },
         {
+            id   = 135052,
             file = 135052,
             hash = "417fb02d06d9305375369697c19c9c30",
             name = "inv_shoulder_21",
@@ -14173,6 +16045,7 @@ return {
             type = 1,
         },
         {
+            id   = 135053,
             file = 135053,
             hash = "c334cbed0e97d4507d43635ff70f7520",
             name = "inv_shoulder_22",
@@ -14180,6 +16053,7 @@ return {
             type = 1,
         },
         {
+            id   = 135054,
             file = 135054,
             hash = "1ca58dddb5c4c653606471c9f38585b4",
             name = "inv_shoulder_23",
@@ -14187,6 +16061,7 @@ return {
             type = 1,
         },
         {
+            id   = 135055,
             file = 135055,
             hash = "72efc382e55855e50743ef8a4b2fc895",
             name = "inv_shoulder_24",
@@ -14194,6 +16069,7 @@ return {
             type = 1,
         },
         {
+            id   = 135056,
             file = 135056,
             hash = "4599d4f4667bb0a150b564850c8a7858",
             name = "inv_shoulder_25",
@@ -14201,6 +16077,7 @@ return {
             type = 1,
         },
         {
+            id   = 135057,
             file = 135057,
             hash = "6a8256a72e9ac8dcd65ed0402602b59e",
             name = "inv_shoulder_26",
@@ -14208,6 +16085,7 @@ return {
             type = 1,
         },
         {
+            id   = 135058,
             file = 135058,
             hash = "3924c0b82cb84fbf5e1b1372c6258b3a",
             name = "inv_shoulder_27",
@@ -14215,6 +16093,7 @@ return {
             type = 1,
         },
         {
+            id   = 135059,
             file = 135059,
             hash = "bfb8c3e7ddf5fbd06eb6754f953cb091",
             name = "inv_shoulder_28",
@@ -14222,6 +16101,7 @@ return {
             type = 1,
         },
         {
+            id   = 135060,
             file = 135060,
             hash = "62b47a00550ed1d9bc091dfcb554a28a",
             name = "inv_shoulder_29",
@@ -14229,6 +16109,7 @@ return {
             type = 1,
         },
         {
+            id   = 135061,
             file = 135061,
             hash = "d22b3ee0566831642c6993a57f3eb8df",
             name = "inv_shoulder_30",
@@ -14236,6 +16117,7 @@ return {
             type = 1,
         },
         {
+            id   = 135062,
             file = 135062,
             hash = "16da2d0f00169255d261097374e02b0e",
             name = "inv_shoulder_31",
@@ -14243,6 +16125,7 @@ return {
             type = 1,
         },
         {
+            id   = 135063,
             file = 135063,
             hash = "30c40c7963d3c26509447ae77fc0d0b9",
             name = "inv_shoulder_32",
@@ -14250,6 +16133,7 @@ return {
             type = 1,
         },
         {
+            id   = 135064,
             file = 135064,
             hash = "b00018cfd1d551dde3843b8e78878387",
             name = "inv_shoulder_33",
@@ -14257,6 +16141,7 @@ return {
             type = 1,
         },
         {
+            id   = 135065,
             file = 135065,
             hash = "517142acc84ef4ab8ee6f49af90fd30a",
             name = "inv_shoulder_34",
@@ -14264,6 +16149,7 @@ return {
             type = 1,
         },
         {
+            id   = 135066,
             file = 135066,
             hash = "4bd7b0b2ca5e7ba45e91db53af02ebcc",
             name = "inv_shoulder_35",
@@ -14271,6 +16157,7 @@ return {
             type = 1,
         },
         {
+            id   = 135067,
             file = 135067,
             hash = "11aa199f3c970d6512696bb41110bdd8",
             name = "inv_shoulder_36",
@@ -14278,6 +16165,7 @@ return {
             type = 1,
         },
         {
+            id   = 135068,
             file = 135068,
             hash = "b937597389f8f24423346fe1befce616",
             name = "inv_shoulder_37",
@@ -14285,6 +16173,7 @@ return {
             type = 1,
         },
         {
+            id   = 135124,
             file = 135124,
             hash = "96a26df73c4bfaa8aba1d73ecef71302",
             name = "inv_spear_01",
@@ -14292,6 +16181,7 @@ return {
             type = 1,
         },
         {
+            id   = 135125,
             file = 135125,
             hash = "99e87ac401df6e1fdaea8451926b8923",
             name = "inv_spear_02",
@@ -14299,6 +16189,7 @@ return {
             type = 1,
         },
         {
+            id   = 135126,
             file = 135126,
             hash = "424399d2b4466b9b7f3432ea73ce6b86",
             name = "inv_spear_03",
@@ -14306,6 +16197,7 @@ return {
             type = 1,
         },
         {
+            id   = 135127,
             file = 135127,
             hash = "0eedcae151c52d8e445705684d8edb60",
             name = "inv_spear_04",
@@ -14313,6 +16205,7 @@ return {
             type = 1,
         },
         {
+            id   = 135128,
             file = 135128,
             hash = "44927f7eeca55bf60cfad16bcfc7f3a8",
             name = "inv_spear_05",
@@ -14320,6 +16213,7 @@ return {
             type = 1,
         },
         {
+            id   = 135129,
             file = 135129,
             hash = "aabc2a3594f1934c8d0e5f25f83f7dda",
             name = "inv_spear_06",
@@ -14327,6 +16221,7 @@ return {
             type = 1,
         },
         {
+            id   = 135130,
             file = 135130,
             hash = "33f497a050cd1b24013e82a6200a3aa0",
             name = "inv_spear_07",
@@ -14334,6 +16229,7 @@ return {
             type = 1,
         },
         {
+            id   = 135131,
             file = 135131,
             hash = "c5be06b478b8629e9e02563ee5065b75",
             name = "inv_spear_08",
@@ -14341,6 +16237,7 @@ return {
             type = 1,
         },
         {
+            id   = 135132,
             file = 135132,
             hash = "64bfb0ce6c178e2449c3c7a9d82ea35b",
             name = "inv_spear_09",
@@ -14348,6 +16245,7 @@ return {
             type = 1,
         },
         {
+            id   = 135138,
             file = 135138,
             hash = "b18fb45c6770dc4c0bef7da30e145b1d",
             name = "inv_staff_01",
@@ -14355,6 +16253,7 @@ return {
             type = 1,
         },
         {
+            id   = 135139,
             file = 135139,
             hash = "faa405d044523b0f62390b2b8948322f",
             name = "inv_staff_02",
@@ -14362,6 +16261,7 @@ return {
             type = 1,
         },
         {
+            id   = 135140,
             file = 135140,
             hash = "ae5e779069d9625fdef10e3ef85c1854",
             name = "inv_staff_03",
@@ -14369,6 +16269,7 @@ return {
             type = 1,
         },
         {
+            id   = 135141,
             file = 135141,
             hash = "6cf85146acbb2aee7e62ef7586d2af85",
             name = "inv_staff_04",
@@ -14376,6 +16277,7 @@ return {
             type = 1,
         },
         {
+            id   = 135142,
             file = 135142,
             hash = "dcff56e24621e0188ce8ab28816200c0",
             name = "inv_staff_05",
@@ -14383,6 +16285,7 @@ return {
             type = 1,
         },
         {
+            id   = 135143,
             file = 135143,
             hash = "1fdd9d4df98061cbde7c3553760df33c",
             name = "inv_staff_06",
@@ -14390,6 +16293,7 @@ return {
             type = 1,
         },
         {
+            id   = 135144,
             file = 135144,
             hash = "a59b77e33d7855ae8a2829be3739c617",
             name = "inv_staff_07",
@@ -14397,6 +16301,7 @@ return {
             type = 1,
         },
         {
+            id   = 135145,
             file = 135145,
             hash = "9aa9c61df3b82983278d0e26645d0be3",
             name = "inv_staff_08",
@@ -14404,6 +16309,7 @@ return {
             type = 1,
         },
         {
+            id   = 135146,
             file = 135146,
             hash = "be32f411651239343d03178e1aa808bb",
             name = "inv_staff_09",
@@ -14411,6 +16317,7 @@ return {
             type = 1,
         },
         {
+            id   = 135147,
             file = 135147,
             hash = "b40a478e8b3c33678d2d3f2f0c044032",
             name = "inv_staff_10",
@@ -14418,6 +16325,7 @@ return {
             type = 1,
         },
         {
+            id   = 135148,
             file = 135148,
             hash = "0316f24d8f7a274f6d5e489106f05707",
             name = "inv_staff_11",
@@ -14425,6 +16333,7 @@ return {
             type = 1,
         },
         {
+            id   = 135149,
             file = 135149,
             hash = "e8eac52e4ba4b51b124878fe6432faf7",
             name = "inv_staff_12",
@@ -14432,6 +16341,7 @@ return {
             type = 1,
         },
         {
+            id   = 135150,
             file = 135150,
             hash = "2dba2c410106919d1625f2c06f25960d",
             name = "inv_staff_13",
@@ -14439,6 +16349,7 @@ return {
             type = 1,
         },
         {
+            id   = 135151,
             file = 135151,
             hash = "6b7cfcfea83976c4cca8f328cb37ddc0",
             name = "inv_staff_14",
@@ -14446,6 +16357,7 @@ return {
             type = 1,
         },
         {
+            id   = 135152,
             file = 135152,
             hash = "52f0c52d7e430f93e2fe88f1649d1e41",
             name = "inv_staff_15",
@@ -14453,6 +16365,7 @@ return {
             type = 1,
         },
         {
+            id   = 135153,
             file = 135153,
             hash = "bdd72ca1ac8ed9a84eb71f2a3ea93988",
             name = "inv_staff_16",
@@ -14460,6 +16373,7 @@ return {
             type = 1,
         },
         {
+            id   = 135154,
             file = 135154,
             hash = "82854d0444c4be61fb72867c0dc22c1f",
             name = "inv_staff_17",
@@ -14467,6 +16381,7 @@ return {
             type = 1,
         },
         {
+            id   = 135155,
             file = 135155,
             hash = "7553d3c5b916827a7eca8167c9abc26e",
             name = "inv_staff_18",
@@ -14474,6 +16389,7 @@ return {
             type = 1,
         },
         {
+            id   = 135156,
             file = 135156,
             hash = "8d6807d08dcd72aa58fd0c26d5c7f0c9",
             name = "inv_staff_19",
@@ -14481,6 +16397,7 @@ return {
             type = 1,
         },
         {
+            id   = 135157,
             file = 135157,
             hash = "7f3c975e612e9812a348e14db6e906ff",
             name = "inv_staff_20",
@@ -14488,6 +16405,7 @@ return {
             type = 1,
         },
         {
+            id   = 135158,
             file = 135158,
             hash = "c9130edd3f9bfa0ba4b869903e25fcb7",
             name = "inv_staff_21",
@@ -14495,6 +16413,7 @@ return {
             type = 1,
         },
         {
+            id   = 135159,
             file = 135159,
             hash = "09c16a10035367177a14ca0fc816d4ff",
             name = "inv_staff_22",
@@ -14502,6 +16421,7 @@ return {
             type = 1,
         },
         {
+            id   = 135160,
             file = 135160,
             hash = "13d4750f1a7023f276f7f5ba6310455f",
             name = "inv_staff_23",
@@ -14509,6 +16429,7 @@ return {
             type = 1,
         },
         {
+            id   = 135161,
             file = 135161,
             hash = "33c21e92d9a78f2f7954fb0722dc6cfc",
             name = "inv_staff_24",
@@ -14516,6 +16437,7 @@ return {
             type = 1,
         },
         {
+            id   = 135162,
             file = 135162,
             hash = "155a1b6deb1e4bef87dea0a0013b150d",
             name = "inv_staff_25",
@@ -14523,6 +16445,7 @@ return {
             type = 1,
         },
         {
+            id   = 135163,
             file = 135163,
             hash = "30db74803bf1a0eeb58be64a1c5ac3a5",
             name = "inv_staff_26",
@@ -14530,6 +16453,7 @@ return {
             type = 1,
         },
         {
+            id   = 135164,
             file = 135164,
             hash = "b4391a87dc405992b6fe002f8f242251",
             name = "inv_staff_27",
@@ -14537,6 +16461,7 @@ return {
             type = 1,
         },
         {
+            id   = 135165,
             file = 135165,
             hash = "b7994af0ac31c61aebc0de280440a0df",
             name = "inv_staff_28",
@@ -14544,6 +16469,7 @@ return {
             type = 1,
         },
         {
+            id   = 135166,
             file = 135166,
             hash = "c9dcf55ccfd03ac590882031c78f9a82",
             name = "inv_staff_29",
@@ -14551,6 +16477,7 @@ return {
             type = 1,
         },
         {
+            id   = 135167,
             file = 135167,
             hash = "4347f10a7d30e7b2e96e350b92839703",
             name = "inv_staff_30",
@@ -14558,6 +16485,7 @@ return {
             type = 1,
         },
         {
+            id   = 135168,
             file = 135168,
             hash = "d5a0f26fe8578e39e47bbdd6791a1af3",
             name = "inv_staff_31",
@@ -14565,6 +16493,7 @@ return {
             type = 1,
         },
         {
+            id   = 135169,
             file = 135169,
             hash = "eb5269a4ce5a242aa90fa818dd1f83c5",
             name = "inv_staff_32",
@@ -14572,6 +16501,7 @@ return {
             type = 1,
         },
         {
+            id   = 135170,
             file = 135170,
             hash = "46baf84973ce6e06d19aeb03ba7a6e11",
             name = "inv_staff_33",
@@ -14579,6 +16509,7 @@ return {
             type = 1,
         },
         {
+            id   = 135171,
             file = 135171,
             hash = "547443c07515ec666e59f800797781ad",
             name = "inv_staff_34",
@@ -14586,6 +16517,7 @@ return {
             type = 1,
         },
         {
+            id   = 135172,
             file = 135172,
             hash = "e9c94e93eabf9c605d8fd363c84f6b0b",
             name = "inv_staff_35",
@@ -14593,6 +16525,7 @@ return {
             type = 1,
         },
         {
+            id   = 135173,
             file = 135173,
             hash = "ddc78caa1273a2e1cafeb4ea447b4cd6",
             name = "inv_staff_36",
@@ -14600,6 +16533,7 @@ return {
             type = 1,
         },
         {
+            id   = 135175,
             file = 135175,
             hash = "1d856efe9b042e78f07802e1f86224c2",
             name = "inv_staff_38",
@@ -14607,6 +16541,7 @@ return {
             type = 1,
         },
         {
+            id   = 135176,
             file = 135176,
             hash = "b5dd25baaf2ad8d1e16b87c10d0eeab7",
             name = "inv_staff_39",
@@ -14614,6 +16549,7 @@ return {
             type = 1,
         },
         {
+            id   = 135225,
             file = 135225,
             hash = "de1743b2bdb91d6f291e8993eed497e9",
             name = "inv_staff_goldfeathered_01",
@@ -14621,6 +16557,7 @@ return {
             type = 1,
         },
         {
+            id   = 135226,
             file = 135226,
             hash = "2e0d5c0b285b216ad701e29ddcdaf130",
             name = "inv_staff_medivh",
@@ -14628,6 +16565,7 @@ return {
             type = 1,
         },
         {
+            id   = 135227,
             file = 135227,
             hash = "90a3e6a125f75a8ee5f6227812fcf900",
             name = "inv_stone_01",
@@ -14635,6 +16573,7 @@ return {
             type = 1,
         },
         {
+            id   = 135228,
             file = 135228,
             hash = "421da8acee8aa1f366b5abdc9f2c6eac",
             name = "inv_stone_02",
@@ -14642,6 +16581,7 @@ return {
             type = 1,
         },
         {
+            id   = 135229,
             file = 135229,
             hash = "d7057f1371db4745b795a32f54ecde6e",
             name = "inv_stone_03",
@@ -14649,6 +16589,7 @@ return {
             type = 1,
         },
         {
+            id   = 135230,
             file = 135230,
             hash = "789ff5e0ed531c1d68c1fee3881aec2a",
             name = "inv_stone_04",
@@ -14656,6 +16597,7 @@ return {
             type = 1,
         },
         {
+            id   = 135231,
             file = 135231,
             hash = "d4f928be0dc58037dd21313c9c795520",
             name = "inv_stone_05",
@@ -14663,6 +16605,7 @@ return {
             type = 1,
         },
         {
+            id   = 135232,
             file = 135232,
             hash = "5a0ab17491f4f0ef57ec84e8d0511471",
             name = "inv_stone_06",
@@ -14670,6 +16613,7 @@ return {
             type = 1,
         },
         {
+            id   = 135233,
             file = 135233,
             hash = "7cc6e07b383c8975f9127ccff8238f39",
             name = "inv_stone_07",
@@ -14677,6 +16621,7 @@ return {
             type = 1,
         },
         {
+            id   = 135234,
             file = 135234,
             hash = "18ea7d44693c2686f50244d81c3e0def",
             name = "inv_stone_08",
@@ -14684,6 +16629,7 @@ return {
             type = 1,
         },
         {
+            id   = 135235,
             file = 135235,
             hash = "482bd00cf9d17c38af41c762b3b09ce9",
             name = "inv_stone_09",
@@ -14691,6 +16637,7 @@ return {
             type = 1,
         },
         {
+            id   = 135236,
             file = 135236,
             hash = "b7dec949e4f3257e10bfc7bbeef558dc",
             name = "inv_stone_10",
@@ -14698,6 +16645,7 @@ return {
             type = 1,
         },
         {
+            id   = 135237,
             file = 135237,
             hash = "40f4a12c0a819b5b757ae2c7b00a1bb8",
             name = "inv_stone_11",
@@ -14705,6 +16653,7 @@ return {
             type = 1,
         },
         {
+            id   = 135238,
             file = 135238,
             hash = "935f85138f35e0a4daac4a5793436bd6",
             name = "inv_stone_12",
@@ -14712,6 +16661,7 @@ return {
             type = 1,
         },
         {
+            id   = 135239,
             file = 135239,
             hash = "8dc2e82a061bcc5943882398415dcb8e",
             name = "inv_stone_13",
@@ -14719,6 +16669,7 @@ return {
             type = 1,
         },
         {
+            id   = 135240,
             file = 135240,
             hash = "0a2fbb963ca99f4f33bf4da36d7c5837",
             name = "inv_stone_14",
@@ -14726,6 +16677,7 @@ return {
             type = 1,
         },
         {
+            id   = 135241,
             file = 135241,
             hash = "3c0e7cb9e491bf843bc6aa01f65eec2f",
             name = "inv_stone_15",
@@ -14733,6 +16685,7 @@ return {
             type = 1,
         },
         {
+            id   = 135242,
             file = 135242,
             hash = "2b32d7ce4dec58b81be28c06833f1dc9",
             name = "inv_stone_16",
@@ -14740,6 +16693,7 @@ return {
             type = 1,
         },
         {
+            id   = 135243,
             file = 135243,
             hash = "a1169c0b914b349fa7124ade0d0b42f7",
             name = "inv_stone_grindingstone_01",
@@ -14747,6 +16701,7 @@ return {
             type = 1,
         },
         {
+            id   = 135244,
             file = 135244,
             hash = "073ae7bc918968a5b746552b535ed6e8",
             name = "inv_stone_grindingstone_02",
@@ -14754,6 +16709,7 @@ return {
             type = 1,
         },
         {
+            id   = 135245,
             file = 135245,
             hash = "9316ece3f333f8a78d5a7b3afec52a6f",
             name = "inv_stone_grindingstone_03",
@@ -14761,6 +16717,7 @@ return {
             type = 1,
         },
         {
+            id   = 135246,
             file = 135246,
             hash = "6024cd607299af5b9950d764363fbe4d",
             name = "inv_stone_grindingstone_04",
@@ -14768,6 +16725,7 @@ return {
             type = 1,
         },
         {
+            id   = 135247,
             file = 135247,
             hash = "f5311d9764125c5099b7df06125d5e82",
             name = "inv_stone_grindingstone_05",
@@ -14775,6 +16733,7 @@ return {
             type = 1,
         },
         {
+            id   = 135248,
             file = 135248,
             hash = "c49de92f9ab2f9f71f02b5c8ef595494",
             name = "inv_stone_sharpeningstone_01",
@@ -14782,6 +16741,7 @@ return {
             type = 1,
         },
         {
+            id   = 135249,
             file = 135249,
             hash = "9066eef3514761fbc7215d2f01cb5877",
             name = "inv_stone_sharpeningstone_02",
@@ -14789,6 +16749,7 @@ return {
             type = 1,
         },
         {
+            id   = 135250,
             file = 135250,
             hash = "a1a7401798ee2a2552a8412802253bf9",
             name = "inv_stone_sharpeningstone_03",
@@ -14796,6 +16757,7 @@ return {
             type = 1,
         },
         {
+            id   = 135251,
             file = 135251,
             hash = "1654183f3f048d2d74ed4f8bdf1272cb",
             name = "inv_stone_sharpeningstone_04",
@@ -14803,6 +16765,7 @@ return {
             type = 1,
         },
         {
+            id   = 135252,
             file = 135252,
             hash = "d8c5a323a6e96bae6d6943b421095456",
             name = "inv_stone_sharpeningstone_05",
@@ -14810,6 +16773,7 @@ return {
             type = 1,
         },
         {
+            id   = 135255,
             file = 135255,
             hash = "86014d8452852a5378854c7021c5c0ec",
             name = "inv_stone_weightstone_01",
@@ -14817,6 +16781,7 @@ return {
             type = 1,
         },
         {
+            id   = 135256,
             file = 135256,
             hash = "c97759645f583abc582a66b653cb2df5",
             name = "inv_stone_weightstone_02",
@@ -14824,6 +16789,7 @@ return {
             type = 1,
         },
         {
+            id   = 135257,
             file = 135257,
             hash = "6955f36254cc2a52ec31b0a99a7f551c",
             name = "inv_stone_weightstone_03",
@@ -14831,6 +16797,7 @@ return {
             type = 1,
         },
         {
+            id   = 135258,
             file = 135258,
             hash = "55c2b9cc93f1e55b53bf1beb08edd42a",
             name = "inv_stone_weightstone_04",
@@ -14838,6 +16805,7 @@ return {
             type = 1,
         },
         {
+            id   = 135259,
             file = 135259,
             hash = "d72c2b60e43b8437f69a216b38c4e1ba",
             name = "inv_stone_weightstone_05",
@@ -14845,6 +16813,7 @@ return {
             type = 1,
         },
         {
+            id   = 135262,
             file = 135262,
             hash = "3ead64ffa995d4f9cad361b702787356",
             name = "inv_summerfest_firedrink",
@@ -14852,6 +16821,7 @@ return {
             type = 1,
         },
         {
+            id   = 135263,
             file = 135263,
             hash = "ae0d53d97c388f8b3264347cb8d7566a",
             name = "inv_summerfest_fireflower",
@@ -14859,6 +16829,7 @@ return {
             type = 1,
         },
         {
+            id   = 135264,
             file = 135264,
             hash = "a93e01aaaba4c0eb2a1743969d7d71fa",
             name = "inv_summerfest_firepotion",
@@ -14866,6 +16837,7 @@ return {
             type = 1,
         },
         {
+            id   = 135265,
             file = 135265,
             hash = "cadfab0682d8c03509c567107e15ff9d",
             name = "inv_summerfest_firespirit",
@@ -14873,6 +16845,7 @@ return {
             type = 1,
         },
         {
+            id   = 135267,
             file = 135267,
             hash = "72ad677ac3192e30b800efcf12fb0593",
             name = "inv_summerfest_smorc",
@@ -14880,6 +16853,7 @@ return {
             type = 1,
         },
         {
+            id   = 135268,
             file = 135268,
             hash = "8a1bc9095c7f278cb631a77c1f00b3a4",
             name = "inv_summerfest_symbol_high",
@@ -14887,6 +16861,7 @@ return {
             type = 1,
         },
         {
+            id   = 135269,
             file = 135269,
             hash = "0c8636b08f262dff1acb91ce40a17342",
             name = "inv_summerfest_symbol_low",
@@ -14894,6 +16869,7 @@ return {
             type = 1,
         },
         {
+            id   = 135270,
             file = 135270,
             hash = "8f2c68487e5f056e0d6c5e285cfb736c",
             name = "inv_summerfest_symbol_medium",
@@ -14901,6 +16877,7 @@ return {
             type = 1,
         },
         {
+            id   = 135271,
             file = 135271,
             hash = "7396ca0593940729db9d889882f3a921",
             name = "inv_sword_01",
@@ -14908,6 +16885,7 @@ return {
             type = 1,
         },
         {
+            id   = 135272,
             file = 135272,
             hash = "ba7cfd640ddf3b73b65738da4e4d57ab",
             name = "inv_sword_02",
@@ -14915,6 +16893,7 @@ return {
             type = 1,
         },
         {
+            id   = 135273,
             file = 135273,
             hash = "afdec6285a4aca08986c698674e07ec7",
             name = "inv_sword_03",
@@ -14922,6 +16901,7 @@ return {
             type = 1,
         },
         {
+            id   = 135274,
             file = 135274,
             hash = "6c3a0f5b328d7f39b110179f912e051f",
             name = "inv_sword_04",
@@ -14929,6 +16909,7 @@ return {
             type = 1,
         },
         {
+            id   = 135275,
             file = 135275,
             hash = "43022f771e41c3d41278e875bcb50d18",
             name = "inv_sword_05",
@@ -14936,6 +16917,7 @@ return {
             type = 1,
         },
         {
+            id   = 135276,
             file = 135276,
             hash = "eb87fec8841c1c3395b699cb77399998",
             name = "inv_sword_06",
@@ -14943,6 +16925,7 @@ return {
             type = 1,
         },
         {
+            id   = 135277,
             file = 135277,
             hash = "a63551b3b213230cfb8c4385363d92c9",
             name = "inv_sword_07",
@@ -14950,6 +16933,7 @@ return {
             type = 1,
         },
         {
+            id   = 135278,
             file = 135278,
             hash = "e12ff401a237eb1981a52d0c833ec594",
             name = "inv_sword_08",
@@ -14957,6 +16941,7 @@ return {
             type = 1,
         },
         {
+            id   = 135279,
             file = 135279,
             hash = "d9a31ca9d15041d912b0eaea101de566",
             name = "inv_sword_09",
@@ -14964,6 +16949,7 @@ return {
             type = 1,
         },
         {
+            id   = 135280,
             file = 135280,
             hash = "33ad3a3124fac3334b476324106561ed",
             name = "inv_sword_10",
@@ -14971,6 +16957,7 @@ return {
             type = 1,
         },
         {
+            id   = 135291,
             file = 135291,
             hash = "922779b35af3762c1d9d299b221c2689",
             name = "inv_sword_11",
@@ -14978,6 +16965,7 @@ return {
             type = 1,
         },
         {
+            id   = 135302,
             file = 135302,
             hash = "37505c91b3d715d35fb1190504e47244",
             name = "inv_sword_12",
@@ -14985,6 +16973,7 @@ return {
             type = 1,
         },
         {
+            id   = 135311,
             file = 135311,
             hash = "0ed93fb541a3d81c97c50d6c0dd24407",
             name = "inv_sword_13",
@@ -14992,6 +16981,7 @@ return {
             type = 1,
         },
         {
+            id   = 135312,
             file = 135312,
             hash = "81fde9f174ed9c04c311284c074db232",
             name = "inv_sword_14",
@@ -14999,6 +16989,7 @@ return {
             type = 1,
         },
         {
+            id   = 135313,
             file = 135313,
             hash = "17a0d23eaef9cc335052e58b4c270611",
             name = "inv_sword_15",
@@ -15006,6 +16997,7 @@ return {
             type = 1,
         },
         {
+            id   = 135314,
             file = 135314,
             hash = "1fa1a9c19ec612d3b30610587438e74b",
             name = "inv_sword_16",
@@ -15013,6 +17005,7 @@ return {
             type = 1,
         },
         {
+            id   = 135315,
             file = 135315,
             hash = "4ac276c555587299b07588b65a00b2fb",
             name = "inv_sword_17",
@@ -15020,6 +17013,7 @@ return {
             type = 1,
         },
         {
+            id   = 135316,
             file = 135316,
             hash = "3051dfc25ecf2deca28b9c1163c26963",
             name = "inv_sword_18",
@@ -15027,6 +17021,7 @@ return {
             type = 1,
         },
         {
+            id   = 135317,
             file = 135317,
             hash = "76c21ad49980faed394c8c453b64f7e8",
             name = "inv_sword_19",
@@ -15034,6 +17029,7 @@ return {
             type = 1,
         },
         {
+            id   = 135321,
             file = 135321,
             hash = "1e52fe1c8e9f492cbc3ef174fb508e98",
             name = "inv_sword_20",
@@ -15041,6 +17037,7 @@ return {
             type = 1,
         },
         {
+            id   = 135322,
             file = 135322,
             hash = "43b586ae946af70758228ef7d8be0c3e",
             name = "inv_sword_21",
@@ -15048,6 +17045,7 @@ return {
             type = 1,
         },
         {
+            id   = 135323,
             file = 135323,
             hash = "5e6eb62f7f227a4be8189bddc716f515",
             name = "inv_sword_22",
@@ -15055,6 +17053,7 @@ return {
             type = 1,
         },
         {
+            id   = 135324,
             file = 135324,
             hash = "c0662cad25407f4bfe366e4f6be75de4",
             name = "inv_sword_23",
@@ -15062,6 +17061,7 @@ return {
             type = 1,
         },
         {
+            id   = 135325,
             file = 135325,
             hash = "b427bd0a1240a5ae1f36a72f6f5be01b",
             name = "inv_sword_24",
@@ -15069,6 +17069,7 @@ return {
             type = 1,
         },
         {
+            id   = 135326,
             file = 135326,
             hash = "19243be31064041369a33d6b9ea4c366",
             name = "inv_sword_25",
@@ -15076,6 +17077,7 @@ return {
             type = 1,
         },
         {
+            id   = 135327,
             file = 135327,
             hash = "cbe3c212e4d8ec9d5e04e334ceab9c7f",
             name = "inv_sword_26",
@@ -15083,6 +17085,7 @@ return {
             type = 1,
         },
         {
+            id   = 135328,
             file = 135328,
             hash = "633a57aacf1c4e65a132b6ac2a3fd521",
             name = "inv_sword_27",
@@ -15090,6 +17093,7 @@ return {
             type = 1,
         },
         {
+            id   = 135329,
             file = 135329,
             hash = "d0246d10533023478f0febefaddcf6a9",
             name = "inv_sword_28",
@@ -15097,6 +17101,7 @@ return {
             type = 1,
         },
         {
+            id   = 135330,
             file = 135330,
             hash = "4489fa04963100b075fce3f40d746f0e",
             name = "inv_sword_29",
@@ -15104,6 +17109,7 @@ return {
             type = 1,
         },
         {
+            id   = 135331,
             file = 135331,
             hash = "4659dd3d5e9c139f0a85f113ef521ba3",
             name = "inv_sword_2h_ashbringercorrupt",
@@ -15111,6 +17117,7 @@ return {
             type = 1,
         },
         {
+            id   = 135340,
             file = 135340,
             hash = "af624425f1d0ca27b4d7ae74d7d85593",
             name = "inv_sword_30",
@@ -15118,6 +17125,7 @@ return {
             type = 1,
         },
         {
+            id   = 135341,
             file = 135341,
             hash = "9cbae59e921d3be59b209e67115878dd",
             name = "inv_sword_31",
@@ -15125,6 +17133,7 @@ return {
             type = 1,
         },
         {
+            id   = 135342,
             file = 135342,
             hash = "11e58581d579eff4bf4cef33dac4d4b2",
             name = "inv_sword_32",
@@ -15132,6 +17141,7 @@ return {
             type = 1,
         },
         {
+            id   = 135343,
             file = 135343,
             hash = "917a180ee1d8500b567d92997ae7b46b",
             name = "inv_sword_33",
@@ -15139,6 +17149,7 @@ return {
             type = 1,
         },
         {
+            id   = 135344,
             file = 135344,
             hash = "60b346efaade945d9c985f006ba0c4d6",
             name = "inv_sword_34",
@@ -15146,6 +17157,7 @@ return {
             type = 1,
         },
         {
+            id   = 135345,
             file = 135345,
             hash = "ec715aec9f759e1b816833bd656dda34",
             name = "inv_sword_35",
@@ -15153,6 +17165,7 @@ return {
             type = 1,
         },
         {
+            id   = 135346,
             file = 135346,
             hash = "5389d68e3051253d2f368bf5f75ec0dc",
             name = "inv_sword_36",
@@ -15160,6 +17173,7 @@ return {
             type = 1,
         },
         {
+            id   = 135347,
             file = 135347,
             hash = "3b974fdc02ea74e9a2c2d11ee91d602d",
             name = "inv_sword_37",
@@ -15167,6 +17181,7 @@ return {
             type = 1,
         },
         {
+            id   = 135348,
             file = 135348,
             hash = "5fbe939f2aaea0ffdd3fe9b98f5d4f97",
             name = "inv_sword_38",
@@ -15174,6 +17189,7 @@ return {
             type = 1,
         },
         {
+            id   = 135349,
             file = 135349,
             hash = "a34e2ffaf8b1157571a7b7744193742d",
             name = "inv_sword_39",
@@ -15181,6 +17197,7 @@ return {
             type = 1,
         },
         {
+            id   = 135350,
             file = 135350,
             hash = "f2d50150198622172874eb1156190e17",
             name = "inv_sword_40",
@@ -15188,6 +17205,7 @@ return {
             type = 1,
         },
         {
+            id   = 135351,
             file = 135351,
             hash = "6b2d5512f6ff9f8b0bcafea7cec454b0",
             name = "inv_sword_41",
@@ -15195,6 +17213,7 @@ return {
             type = 1,
         },
         {
+            id   = 135352,
             file = 135352,
             hash = "a8d56d043af04d120ab871578a1063a9",
             name = "inv_sword_42",
@@ -15202,6 +17221,7 @@ return {
             type = 1,
         },
         {
+            id   = 135353,
             file = 135353,
             hash = "8a10eca9a0737b6100ee2aec5f27a7da",
             name = "inv_sword_43",
@@ -15209,6 +17229,7 @@ return {
             type = 1,
         },
         {
+            id   = 135354,
             file = 135354,
             hash = "cda5da5c3a4476fa24948dffa2c7949c",
             name = "inv_sword_44",
@@ -15216,6 +17237,7 @@ return {
             type = 1,
         },
         {
+            id   = 135355,
             file = 135355,
             hash = "0488d8e00667a0a863ed75e0aefa4dcf",
             name = "inv_sword_45",
@@ -15223,6 +17245,7 @@ return {
             type = 1,
         },
         {
+            id   = 135356,
             file = 135356,
             hash = "3b546c025f44b7500e4371b13d0ab5fd",
             name = "inv_sword_46",
@@ -15230,6 +17253,7 @@ return {
             type = 1,
         },
         {
+            id   = 135357,
             file = 135357,
             hash = "576757193f758ba5f2e966b9cd65f681",
             name = "inv_sword_47",
@@ -15237,6 +17261,7 @@ return {
             type = 1,
         },
         {
+            id   = 135358,
             file = 135358,
             hash = "78ed2c347fbeec05b0c6f4e33616832d",
             name = "inv_sword_48",
@@ -15244,6 +17269,7 @@ return {
             type = 1,
         },
         {
+            id   = 135359,
             file = 135359,
             hash = "107a4e409115b613d319615ebe3deee6",
             name = "inv_sword_49",
@@ -15251,6 +17277,7 @@ return {
             type = 1,
         },
         {
+            id   = 135360,
             file = 135360,
             hash = "346ad4d12e043ae632b6cce2ce67fcfd",
             name = "inv_sword_50",
@@ -15258,6 +17285,7 @@ return {
             type = 1,
         },
         {
+            id   = 135361,
             file = 135361,
             hash = "bed6c341a2d8f47fb579fbb5d8b9c1c8",
             name = "inv_sword_51",
@@ -15265,6 +17293,7 @@ return {
             type = 1,
         },
         {
+            id   = 135362,
             file = 135362,
             hash = "90832180d19309abcf11e3ab7336531d",
             name = "inv_sword_52",
@@ -15272,6 +17301,7 @@ return {
             type = 1,
         },
         {
+            id   = 135363,
             file = 135363,
             hash = "44aba5802e90cc53d0992de7302d500a",
             name = "inv_sword_53",
@@ -15279,6 +17309,7 @@ return {
             type = 1,
         },
         {
+            id   = 135364,
             file = 135364,
             hash = "cf339e4f8019df50d401a97e934aca01",
             name = "inv_sword_54",
@@ -15286,6 +17317,7 @@ return {
             type = 1,
         },
         {
+            id   = 135365,
             file = 135365,
             hash = "705cf0d59c5fa757a6d5ba312af3bdf1",
             name = "inv_sword_55",
@@ -15293,6 +17325,7 @@ return {
             type = 1,
         },
         {
+            id   = 135366,
             file = 135366,
             hash = "90832180d19309abcf11e3ab7336531d",
             name = "inv_sword_56",
@@ -15300,6 +17333,7 @@ return {
             type = 1,
         },
         {
+            id   = 135367,
             file = 135367,
             hash = "ad013f300aaa8f812217c56518661d1d",
             name = "inv_sword_57",
@@ -15307,6 +17341,7 @@ return {
             type = 1,
         },
         {
+            id   = 135368,
             file = 135368,
             hash = "b54b92521ced2a75097b5d44b6d7c18e",
             name = "inv_sword_58",
@@ -15314,6 +17349,7 @@ return {
             type = 1,
         },
         {
+            id   = 135369,
             file = 135369,
             hash = "f12c15085f3eda35aeaea6135257e12e",
             name = "inv_sword_59",
@@ -15321,6 +17357,7 @@ return {
             type = 1,
         },
         {
+            id   = 135370,
             file = 135370,
             hash = "5d1ec949994a6285027cf40b9ab2545a",
             name = "inv_sword_60",
@@ -15328,6 +17365,7 @@ return {
             type = 1,
         },
         {
+            id   = 135371,
             file = 135371,
             hash = "1a1a0c0d110243634a2f12b11a698545",
             name = "inv_sword_61",
@@ -15335,6 +17373,7 @@ return {
             type = 1,
         },
         {
+            id   = 135372,
             file = 135372,
             hash = "1abbc9f0af4ae56d92e590c09b95e4cd",
             name = "inv_sword_62",
@@ -15342,6 +17381,7 @@ return {
             type = 1,
         },
         {
+            id   = 135419,
             file = 135419,
             hash = "b8adedd46eb880ee532c924e5ea555b5",
             name = "inv_throwingaxe_01",
@@ -15349,6 +17389,7 @@ return {
             type = 1,
         },
         {
+            id   = 135420,
             file = 135420,
             hash = "83d899076ea165627a7d86504edfe550",
             name = "inv_throwingaxe_02",
@@ -15356,6 +17397,7 @@ return {
             type = 1,
         },
         {
+            id   = 135421,
             file = 135421,
             hash = "9240a74d7a2342790ce6eb0adb3e76ed",
             name = "inv_throwingaxe_03",
@@ -15363,6 +17405,7 @@ return {
             type = 1,
         },
         {
+            id   = 135422,
             file = 135422,
             hash = "42a6859ec132b171046200cebc85ffa5",
             name = "inv_throwingaxe_04",
@@ -15370,6 +17413,7 @@ return {
             type = 1,
         },
         {
+            id   = 135423,
             file = 135423,
             hash = "94f3722a35e9de7d65dcec7376025f6c",
             name = "inv_throwingaxe_05",
@@ -15377,6 +17421,7 @@ return {
             type = 1,
         },
         {
+            id   = 135424,
             file = 135424,
             hash = "97f1d475212b5d4ae413e22300ecc747",
             name = "inv_throwingaxe_06",
@@ -15384,6 +17429,7 @@ return {
             type = 1,
         },
         {
+            id   = 135425,
             file = 135425,
             hash = "47529749a961fde6af68669a358bb636",
             name = "inv_throwingknife_01",
@@ -15391,6 +17437,7 @@ return {
             type = 1,
         },
         {
+            id   = 135426,
             file = 135426,
             hash = "ebe685b49f1b69bd5331b297b02f2454",
             name = "inv_throwingknife_02",
@@ -15398,6 +17445,7 @@ return {
             type = 1,
         },
         {
+            id   = 135427,
             file = 135427,
             hash = "7dcfbc07e52d9103aae5fbda11550c6a",
             name = "inv_throwingknife_03",
@@ -15405,6 +17453,7 @@ return {
             type = 1,
         },
         {
+            id   = 135428,
             file = 135428,
             hash = "08011f2110815b7f2b8ec1317a0ed2a8",
             name = "inv_throwingknife_04",
@@ -15412,6 +17461,7 @@ return {
             type = 1,
         },
         {
+            id   = 135429,
             file = 135429,
             hash = "64ce3eb5fd83afd229429dab63eac728",
             name = "inv_throwingknife_05",
@@ -15419,6 +17469,7 @@ return {
             type = 1,
         },
         {
+            id   = 135432,
             file = 135432,
             hash = "02285a2b7d69a225c6ab49049553f5e0",
             name = "inv_torch_lit",
@@ -15426,6 +17477,7 @@ return {
             type = 1,
         },
         {
+            id   = 135434,
             file = 135434,
             hash = "fcad5c0fb3f5c2a07ecee89ae0a6ec01",
             name = "inv_torch_unlit",
@@ -15433,6 +17485,7 @@ return {
             type = 1,
         },
         {
+            id   = 135435,
             file = 135435,
             hash = "9e4c9db2a21c013b0ab27fd6e1d37a0c",
             name = "inv_tradeskillitem_01",
@@ -15440,6 +17493,7 @@ return {
             type = 1,
         },
         {
+            id   = 135436,
             file = 135436,
             hash = "98bf36c5e46b2d0a7216e01a5077ea98",
             name = "inv_tradeskillitem_02",
@@ -15447,6 +17501,7 @@ return {
             type = 1,
         },
         {
+            id   = 135437,
             file = 135437,
             hash = "7133dd82093d09f87806ac784d50d6d7",
             name = "inv_tradeskillitem_03",
@@ -15454,6 +17509,7 @@ return {
             type = 1,
         },
         {
+            id   = 135439,
             file = 135439,
             hash = "b19cd797480ac6a412f041edfbd6acc0",
             name = "inv_trinket_naxxramas01",
@@ -15461,6 +17517,7 @@ return {
             type = 1,
         },
         {
+            id   = 135440,
             file = 135440,
             hash = "00ed054b777fb7d5b448bbfd5910b373",
             name = "inv_trinket_naxxramas02",
@@ -15468,6 +17525,7 @@ return {
             type = 1,
         },
         {
+            id   = 135441,
             file = 135441,
             hash = "517e3639501534f0b9251914feea191c",
             name = "inv_trinket_naxxramas03",
@@ -15475,6 +17533,7 @@ return {
             type = 1,
         },
         {
+            id   = 135442,
             file = 135442,
             hash = "f8c4733d7b5c3fb270a8adffba2b57e7",
             name = "inv_trinket_naxxramas04",
@@ -15482,6 +17541,7 @@ return {
             type = 1,
         },
         {
+            id   = 135443,
             file = 135443,
             hash = "7d846a08165737ce72ea906cb771e86c",
             name = "inv_trinket_naxxramas05",
@@ -15489,6 +17549,7 @@ return {
             type = 1,
         },
         {
+            id   = 135444,
             file = 135444,
             hash = "00646bfb3724931dd682c706a7debdcf",
             name = "inv_trinket_naxxramas06",
@@ -15496,6 +17557,7 @@ return {
             type = 1,
         },
         {
+            id   = 135446,
             file = 135446,
             hash = "6d05bb3b8f8fe74bafc27323f8a102a1",
             name = "inv_valentinecolognebottle",
@@ -15503,6 +17565,7 @@ return {
             type = 1,
         },
         {
+            id   = 135447,
             file = 135447,
             hash = "d285eb6ef39a36e056c52fb76d2173cf",
             name = "inv_valentineperfumebottle",
@@ -15510,6 +17573,7 @@ return {
             type = 1,
         },
         {
+            id   = 135449,
             file = 135449,
             hash = "72f04a0e4cd8150ccdc1e056e789024c",
             name = "inv_valentinesboxofchocolates01",
@@ -15517,6 +17581,7 @@ return {
             type = 1,
         },
         {
+            id   = 135450,
             file = 135450,
             hash = "1f4b790f42870245d3709918fb8b7034",
             name = "inv_valentinesboxofchocolates02",
@@ -15524,6 +17589,7 @@ return {
             type = 1,
         },
         {
+            id   = 135451,
             file = 135451,
             hash = "04086e62f16d0f2cd7ddaa7e2f5c24cc",
             name = "inv_valentinescandy",
@@ -15531,6 +17597,7 @@ return {
             type = 1,
         },
         {
+            id   = 135452,
             file = 135452,
             hash = "bb34a6790edf0f31d8ec79bb618a54ca",
             name = "inv_valentinescandysack",
@@ -15538,6 +17605,7 @@ return {
             type = 1,
         },
         {
+            id   = 135453,
             file = 135453,
             hash = "31f1e85f1781fe722b57dfc94ea01072",
             name = "inv_valentinescard01",
@@ -15545,6 +17613,7 @@ return {
             type = 1,
         },
         {
+            id   = 135454,
             file = 135454,
             hash = "c2d4fc58165b8dd57f857140242e2287",
             name = "inv_valentinescard02",
@@ -15552,6 +17621,7 @@ return {
             type = 1,
         },
         {
+            id   = 135455,
             file = 135455,
             hash = "971743b22e438d97ec9df4d781f646e8",
             name = "inv_valentinescardtornleft",
@@ -15559,6 +17629,7 @@ return {
             type = 1,
         },
         {
+            id   = 135456,
             file = 135456,
             hash = "e413a113f9872c9e1304931236753829",
             name = "inv_valentinescardtornright",
@@ -15566,6 +17637,7 @@ return {
             type = 1,
         },
         {
+            id   = 135457,
             file = 135457,
             hash = "10f7235d604f1b138544c024d3a3a8f1",
             name = "inv_valentineschocolate01",
@@ -15573,6 +17645,7 @@ return {
             type = 1,
         },
         {
+            id   = 135458,
             file = 135458,
             hash = "86958d49be5f4099c7522c4b93f3fa40",
             name = "inv_valentineschocolate02",
@@ -15580,6 +17653,7 @@ return {
             type = 1,
         },
         {
+            id   = 135459,
             file = 135459,
             hash = "644f9550f2b48628bb51c7e88f3674ec",
             name = "inv_valentineschocolate03",
@@ -15587,6 +17661,7 @@ return {
             type = 1,
         },
         {
+            id   = 135460,
             file = 135460,
             hash = "e4ae9a77a7d2d5ea998805ae91a28993",
             name = "inv_valentineschocolate04",
@@ -15594,6 +17669,7 @@ return {
             type = 1,
         },
         {
+            id   = 135461,
             file = 135461,
             hash = "c1dd0e37bbc081f2d0c67567350b5000",
             name = "inv_waepon_bow_zulgrub_d_01",
@@ -15601,6 +17677,7 @@ return {
             type = 1,
         },
         {
+            id   = 135462,
             file = 135462,
             hash = "abf9dee147725d7f7c046870e3e8704a",
             name = "inv_waepon_bow_zulgrub_d_02",
@@ -15608,6 +17685,7 @@ return {
             type = 1,
         },
         {
+            id   = 135463,
             file = 135463,
             hash = "14b5f88e81f51226997b90b3e6bad32a",
             name = "inv_wand_01",
@@ -15615,6 +17693,7 @@ return {
             type = 1,
         },
         {
+            id   = 135464,
             file = 135464,
             hash = "f78223e035437eebc068eea9d1893c93",
             name = "inv_wand_02",
@@ -15622,6 +17701,7 @@ return {
             type = 1,
         },
         {
+            id   = 135465,
             file = 135465,
             hash = "1172d6681291f09fe0db62e6a8555c82",
             name = "inv_wand_03",
@@ -15629,6 +17709,7 @@ return {
             type = 1,
         },
         {
+            id   = 135466,
             file = 135466,
             hash = "9d141eef66f441cd632705ffaa5c6ae0",
             name = "inv_wand_04",
@@ -15636,6 +17717,7 @@ return {
             type = 1,
         },
         {
+            id   = 135467,
             file = 135467,
             hash = "04813635c13cac6169566ee9f078f7aa",
             name = "inv_wand_05",
@@ -15643,6 +17725,7 @@ return {
             type = 1,
         },
         {
+            id   = 135468,
             file = 135468,
             hash = "81b05c883afa57e2028ff034142cd5b7",
             name = "inv_wand_06",
@@ -15650,6 +17733,7 @@ return {
             type = 1,
         },
         {
+            id   = 135469,
             file = 135469,
             hash = "87d2191d1191d74d18f329f5289625a0",
             name = "inv_wand_07",
@@ -15657,6 +17741,7 @@ return {
             type = 1,
         },
         {
+            id   = 135470,
             file = 135470,
             hash = "c110d5bc927c938d4e002ce2c12c6a62",
             name = "inv_wand_08",
@@ -15664,6 +17749,7 @@ return {
             type = 1,
         },
         {
+            id   = 135471,
             file = 135471,
             hash = "2ee180777cd8a39aa902fcd6c69599f4",
             name = "inv_wand_09",
@@ -15671,6 +17757,7 @@ return {
             type = 1,
         },
         {
+            id   = 135472,
             file = 135472,
             hash = "e897758e251e073a8b1f842320359e55",
             name = "inv_wand_10",
@@ -15678,6 +17765,7 @@ return {
             type = 1,
         },
         {
+            id   = 135473,
             file = 135473,
             hash = "db393b46d07b1dcbefa5be678214cd2c",
             name = "inv_wand_11",
@@ -15685,6 +17773,7 @@ return {
             type = 1,
         },
         {
+            id   = 135474,
             file = 135474,
             hash = "690ad480a9ee5378695300b4ca6f78c1",
             name = "inv_wand_12",
@@ -15692,6 +17781,7 @@ return {
             type = 1,
         },
         {
+            id   = 135481,
             file = 135481,
             hash = "79d35321e1dfecf8536d52ceabfc0b3b",
             name = "inv_wand_1h_stratholme_d_01",
@@ -15699,6 +17789,7 @@ return {
             type = 1,
         },
         {
+            id   = 135482,
             file = 135482,
             hash = "35782fe9ca78596a13b468196294f75d",
             name = "inv_wand_1h_stratholme_d_02",
@@ -15706,6 +17797,7 @@ return {
             type = 1,
         },
         {
+            id   = 135489,
             file = 135489,
             hash = "c020d8fccada07e8040430ab4c550f38",
             name = "inv_weapon_bow_01",
@@ -15713,6 +17805,7 @@ return {
             type = 1,
         },
         {
+            id   = 135490,
             file = 135490,
             hash = "a82500ee1e04bbf7bfbf6c19192d185e",
             name = "inv_weapon_bow_02",
@@ -15720,6 +17813,7 @@ return {
             type = 1,
         },
         {
+            id   = 135491,
             file = 135491,
             hash = "4a0c692e1c8e2e3f18ce07d0965e5a35",
             name = "inv_weapon_bow_03",
@@ -15727,6 +17821,7 @@ return {
             type = 1,
         },
         {
+            id   = 135492,
             file = 135492,
             hash = "10cb5758304a3af7bd1354bd8882f83f",
             name = "inv_weapon_bow_04",
@@ -15734,6 +17829,7 @@ return {
             type = 1,
         },
         {
+            id   = 135493,
             file = 135493,
             hash = "0bd613754c12719df394e5e234b9c674",
             name = "inv_weapon_bow_05",
@@ -15741,6 +17837,7 @@ return {
             type = 1,
         },
         {
+            id   = 135494,
             file = 135494,
             hash = "b2fa2b7fd81e8f11613608e2d705e74d",
             name = "inv_weapon_bow_06",
@@ -15748,6 +17845,7 @@ return {
             type = 1,
         },
         {
+            id   = 135495,
             file = 135495,
             hash = "748a712eba4125d0abbbac7047999d3f",
             name = "inv_weapon_bow_07",
@@ -15755,6 +17853,7 @@ return {
             type = 1,
         },
         {
+            id   = 135496,
             file = 135496,
             hash = "fc3a9093370f9815feba99980d5ea24c",
             name = "inv_weapon_bow_08",
@@ -15762,6 +17861,7 @@ return {
             type = 1,
         },
         {
+            id   = 135497,
             file = 135497,
             hash = "94d9b656a3d8bd35a32f4df68051b4cd",
             name = "inv_weapon_bow_09",
@@ -15769,6 +17869,7 @@ return {
             type = 1,
         },
         {
+            id   = 135498,
             file = 135498,
             hash = "8abaca93d25b19b2233943217ccc7b0c",
             name = "inv_weapon_bow_10",
@@ -15776,6 +17877,7 @@ return {
             type = 1,
         },
         {
+            id   = 135499,
             file = 135499,
             hash = "44b1b605d5efe74df59622befbb25f49",
             name = "inv_weapon_bow_11",
@@ -15783,6 +17885,7 @@ return {
             type = 1,
         },
         {
+            id   = 135500,
             file = 135500,
             hash = "b2ef93bc546cedb2928fecafd955e2a8",
             name = "inv_weapon_bow_12",
@@ -15790,6 +17893,7 @@ return {
             type = 1,
         },
         {
+            id   = 135501,
             file = 135501,
             hash = "2249a846b997b5af701c94e604ef41a9",
             name = "inv_weapon_bow_13",
@@ -15797,6 +17901,7 @@ return {
             type = 1,
         },
         {
+            id   = 135502,
             file = 135502,
             hash = "55c3c2cb30df19d7aa5ab85adf283ca3",
             name = "inv_weapon_bow_14",
@@ -15804,6 +17909,7 @@ return {
             type = 1,
         },
         {
+            id   = 135530,
             file = 135530,
             hash = "2a498749a9b023e85a37ea0d32fee6c6",
             name = "inv_weapon_crossbow_01",
@@ -15811,6 +17917,7 @@ return {
             type = 1,
         },
         {
+            id   = 135531,
             file = 135531,
             hash = "22eb84bfe48d67f7ef2b2aee4cbdc804",
             name = "inv_weapon_crossbow_02",
@@ -15818,6 +17925,7 @@ return {
             type = 1,
         },
         {
+            id   = 135532,
             file = 135532,
             hash = "e309aec5b21ffef21bc4c380b82487c1",
             name = "inv_weapon_crossbow_03",
@@ -15825,6 +17933,7 @@ return {
             type = 1,
         },
         {
+            id   = 135533,
             file = 135533,
             hash = "7fd354a7c8a97b05a170d5f7e61ea4eb",
             name = "inv_weapon_crossbow_04",
@@ -15832,6 +17941,7 @@ return {
             type = 1,
         },
         {
+            id   = 135534,
             file = 135534,
             hash = "26d97fe3a45a471ced87a32b58e4f470",
             name = "inv_weapon_crossbow_05",
@@ -15839,6 +17949,7 @@ return {
             type = 1,
         },
         {
+            id   = 135535,
             file = 135535,
             hash = "813476ead8c69e8c5389b34036512801",
             name = "inv_weapon_crossbow_06",
@@ -15846,6 +17957,7 @@ return {
             type = 1,
         },
         {
+            id   = 135536,
             file = 135536,
             hash = "b385c86e9c439a53a45a7de49f700d39",
             name = "inv_weapon_crossbow_07",
@@ -15853,6 +17965,7 @@ return {
             type = 1,
         },
         {
+            id   = 135537,
             file = 135537,
             hash = "9988de82564392a68bf4b6d1258df8ac",
             name = "inv_weapon_crossbow_08",
@@ -15860,6 +17973,7 @@ return {
             type = 1,
         },
         {
+            id   = 135538,
             file = 135538,
             hash = "835c8d5c080ab2bd5e84e74e4b467787",
             name = "inv_weapon_crossbow_09",
@@ -15867,6 +17981,7 @@ return {
             type = 1,
         },
         {
+            id   = 135539,
             file = 135539,
             hash = "b7dcbc2a4534564b2c1008ce664642f5",
             name = "inv_weapon_crossbow_10",
@@ -15874,6 +17989,7 @@ return {
             type = 1,
         },
         {
+            id   = 135540,
             file = 135540,
             hash = "3caba495b05a8da2dbf2c39d63232e35",
             name = "inv_weapon_crossbow_11",
@@ -15881,6 +17997,7 @@ return {
             type = 1,
         },
         {
+            id   = 135541,
             file = 135541,
             hash = "58f6a6caa71a497074be39bddeb4e7bd",
             name = "inv_weapon_crossbow_12",
@@ -15888,6 +18005,7 @@ return {
             type = 1,
         },
         {
+            id   = 135562,
             file = 135562,
             hash = "25fd4d3bfd4b6af2ea5407564a0f1967",
             name = "inv_weapon_halbard_01",
@@ -15895,6 +18013,7 @@ return {
             type = 1,
         },
         {
+            id   = 135572,
             file = 135572,
             hash = "227e70a5d5ec2519580f50126dbff66b",
             name = "inv_weapon_halberd_02",
@@ -15902,6 +18021,7 @@ return {
             type = 1,
         },
         {
+            id   = 135573,
             file = 135573,
             hash = "3a4f4645e6f186d8273b8a48a3540fda",
             name = "inv_weapon_halberd_03",
@@ -15909,6 +18029,7 @@ return {
             type = 1,
         },
         {
+            id   = 135574,
             file = 135574,
             hash = "0a15ccfdb8997f587f813557182cba94",
             name = "inv_weapon_halberd_04",
@@ -15916,6 +18037,7 @@ return {
             type = 1,
         },
         {
+            id   = 135575,
             file = 135575,
             hash = "4da2edc78cc27efbb29020c156e92ff2",
             name = "inv_weapon_halberd_05",
@@ -15923,6 +18045,7 @@ return {
             type = 1,
         },
         {
+            id   = 135576,
             file = 135576,
             hash = "48b9a025636e525d49fb2dc0fed2d4ec",
             name = "inv_weapon_halberd_06",
@@ -15930,6 +18053,7 @@ return {
             type = 1,
         },
         {
+            id   = 135577,
             file = 135577,
             hash = "7001df368087f8f867c2bf9e619216f4",
             name = "inv_weapon_halberd_07",
@@ -15937,6 +18061,7 @@ return {
             type = 1,
         },
         {
+            id   = 135578,
             file = 135578,
             hash = "d0ca3d4881e10a43d83cb13961a9a723",
             name = "inv_weapon_halberd_08",
@@ -15944,6 +18069,7 @@ return {
             type = 1,
         },
         {
+            id   = 135579,
             file = 135579,
             hash = "09defe79bd25e327d4b92dc06ce1f2cf",
             name = "inv_weapon_halberd_09",
@@ -15951,6 +18077,7 @@ return {
             type = 1,
         },
         {
+            id   = 135580,
             file = 135580,
             hash = "6319a278086e6e06084357d65fef4a37",
             name = "inv_weapon_halberd_10",
@@ -15958,6 +18085,7 @@ return {
             type = 1,
         },
         {
+            id   = 135581,
             file = 135581,
             hash = "6500e2e8fc0de5b5470fc65812757a36",
             name = "inv_weapon_halberd_11",
@@ -15965,6 +18093,7 @@ return {
             type = 1,
         },
         {
+            id   = 135582,
             file = 135582,
             hash = "2c842ffb9acc54fa3a520575ae74aa5b",
             name = "inv_weapon_halberd_12",
@@ -15972,6 +18101,7 @@ return {
             type = 1,
         },
         {
+            id   = 135591,
             file = 135591,
             hash = "f7302c35d17be8d9362e34a6cc06e631",
             name = "inv_weapon_halberd_ahnqiraj",
@@ -15979,6 +18109,7 @@ return {
             type = 1,
         },
         {
+            id   = 135592,
             file = 135592,
             hash = "380c3ee7e8e5a22fe433bed26e505381",
             name = "inv_weapon_hand_01",
@@ -15986,6 +18117,7 @@ return {
             type = 1,
         },
         {
+            id   = 135593,
             file = 135593,
             hash = "f84493388c52ac62496982aa4321abea",
             name = "inv_weapon_hand_02",
@@ -15993,6 +18125,7 @@ return {
             type = 1,
         },
         {
+            id   = 135594,
             file = 135594,
             hash = "7d5589f0a5339398718f2f36c0f7c189",
             name = "inv_weapon_hand_03",
@@ -16000,6 +18133,7 @@ return {
             type = 1,
         },
         {
+            id   = 135610,
             file = 135610,
             hash = "7e159d24503f416ef1b0cd214d55f756",
             name = "inv_weapon_rifle_01",
@@ -16007,6 +18141,7 @@ return {
             type = 1,
         },
         {
+            id   = 135611,
             file = 135611,
             hash = "1473ab6a688bda47701f2d79a3bfdb80",
             name = "inv_weapon_rifle_02",
@@ -16014,6 +18149,7 @@ return {
             type = 1,
         },
         {
+            id   = 135612,
             file = 135612,
             hash = "ae391fae18897c34a7546f237ec0947e",
             name = "inv_weapon_rifle_03",
@@ -16021,6 +18157,7 @@ return {
             type = 1,
         },
         {
+            id   = 135613,
             file = 135613,
             hash = "81d20e6788a44824fae4d805a0924d53",
             name = "inv_weapon_rifle_04",
@@ -16028,6 +18165,7 @@ return {
             type = 1,
         },
         {
+            id   = 135614,
             file = 135614,
             hash = "2b7cd6c061e2fcad2341ffe6cb715eb9",
             name = "inv_weapon_rifle_05",
@@ -16035,6 +18173,7 @@ return {
             type = 1,
         },
         {
+            id   = 135615,
             file = 135615,
             hash = "e8dbe90f58b6036d8a274c211ecf5e01",
             name = "inv_weapon_rifle_06",
@@ -16042,6 +18181,7 @@ return {
             type = 1,
         },
         {
+            id   = 135616,
             file = 135616,
             hash = "cb028bd44d2654552f464eb6b0342e11",
             name = "inv_weapon_rifle_07",
@@ -16049,6 +18189,7 @@ return {
             type = 1,
         },
         {
+            id   = 135617,
             file = 135617,
             hash = "ae22bfce37932e27506c438a91e3160a",
             name = "inv_weapon_rifle_08",
@@ -16056,6 +18197,7 @@ return {
             type = 1,
         },
         {
+            id   = 135618,
             file = 135618,
             hash = "f5b1be2936f3ba1252b76b35f1c4e840",
             name = "inv_weapon_rifle_09",
@@ -16063,6 +18205,7 @@ return {
             type = 1,
         },
         {
+            id   = 135619,
             file = 135619,
             hash = "fc47d86a79a402a9acfd433a5d2e4f3c",
             name = "inv_weapon_rifle_10",
@@ -16070,6 +18213,7 @@ return {
             type = 1,
         },
         {
+            id   = 135620,
             file = 135620,
             hash = "4907b5a5c7e0dc7cc13798dff874e3bb",
             name = "inv_weapon_rifle_11",
@@ -16077,6 +18221,7 @@ return {
             type = 1,
         },
         {
+            id   = 135621,
             file = 135621,
             hash = "b83831e12a39427655f18cfa67e85e91",
             name = "inv_weapon_rifle_13",
@@ -16084,6 +18229,7 @@ return {
             type = 1,
         },
         {
+            id   = 135637,
             file = 135637,
             hash = "b336fa3ce4de6a199353c4a9d53bf682",
             name = "inv_weapon_shortblade_01",
@@ -16091,6 +18237,7 @@ return {
             type = 1,
         },
         {
+            id   = 135638,
             file = 135638,
             hash = "f96b906434947c447bceee1ed2f67eb9",
             name = "inv_weapon_shortblade_02",
@@ -16098,6 +18245,7 @@ return {
             type = 1,
         },
         {
+            id   = 135639,
             file = 135639,
             hash = "984379fc8a6187237f7266be2b6a099e",
             name = "inv_weapon_shortblade_03",
@@ -16105,6 +18253,7 @@ return {
             type = 1,
         },
         {
+            id   = 135640,
             file = 135640,
             hash = "33e4c8aa9a0c630b65fb54073e0b347f",
             name = "inv_weapon_shortblade_04",
@@ -16112,6 +18261,7 @@ return {
             type = 1,
         },
         {
+            id   = 135641,
             file = 135641,
             hash = "f056da635f113578176cd29da9f5af6b",
             name = "inv_weapon_shortblade_05",
@@ -16119,6 +18269,7 @@ return {
             type = 1,
         },
         {
+            id   = 135642,
             file = 135642,
             hash = "b78583c2514a12240049dac96826fd6f",
             name = "inv_weapon_shortblade_06",
@@ -16126,6 +18277,7 @@ return {
             type = 1,
         },
         {
+            id   = 135643,
             file = 135643,
             hash = "a5738493c5fbd9c851968ee683d5a047",
             name = "inv_weapon_shortblade_07",
@@ -16133,6 +18285,7 @@ return {
             type = 1,
         },
         {
+            id   = 135644,
             file = 135644,
             hash = "7c4f9e6720e81af6e46aaa8a18c13c7b",
             name = "inv_weapon_shortblade_08",
@@ -16140,6 +18293,7 @@ return {
             type = 1,
         },
         {
+            id   = 135645,
             file = 135645,
             hash = "5317d98b3b537897901fd6f74ba864a8",
             name = "inv_weapon_shortblade_09",
@@ -16147,6 +18301,7 @@ return {
             type = 1,
         },
         {
+            id   = 135646,
             file = 135646,
             hash = "2208206b43bcb6b8738079562fad984b",
             name = "inv_weapon_shortblade_10",
@@ -16154,6 +18309,7 @@ return {
             type = 1,
         },
         {
+            id   = 135647,
             file = 135647,
             hash = "4873a487a5bf102fed9d70b946c89708",
             name = "inv_weapon_shortblade_11",
@@ -16161,6 +18317,7 @@ return {
             type = 1,
         },
         {
+            id   = 135648,
             file = 135648,
             hash = "2787fd1d03ff47b635e35b1cd13d85f1",
             name = "inv_weapon_shortblade_12",
@@ -16168,6 +18325,7 @@ return {
             type = 1,
         },
         {
+            id   = 135649,
             file = 135649,
             hash = "defedb3884b962a50623f1ddfac20bad",
             name = "inv_weapon_shortblade_13",
@@ -16175,6 +18333,7 @@ return {
             type = 1,
         },
         {
+            id   = 135650,
             file = 135650,
             hash = "a11f651aae6fbde23881127e19cbae6d",
             name = "inv_weapon_shortblade_14",
@@ -16182,6 +18341,7 @@ return {
             type = 1,
         },
         {
+            id   = 135651,
             file = 135651,
             hash = "5bc0b732d9d99ce69445645d96f64047",
             name = "inv_weapon_shortblade_15",
@@ -16189,6 +18349,7 @@ return {
             type = 1,
         },
         {
+            id   = 135652,
             file = 135652,
             hash = "1531afa12f1c0e8959748b116fadef01",
             name = "inv_weapon_shortblade_16",
@@ -16196,6 +18357,7 @@ return {
             type = 1,
         },
         {
+            id   = 135653,
             file = 135653,
             hash = "b5704cf381574e5359383e6871a9498d",
             name = "inv_weapon_shortblade_17",
@@ -16203,6 +18365,7 @@ return {
             type = 1,
         },
         {
+            id   = 135654,
             file = 135654,
             hash = "bd73952478ec403037b59e4139b37eb6",
             name = "inv_weapon_shortblade_18",
@@ -16210,6 +18373,7 @@ return {
             type = 1,
         },
         {
+            id   = 135655,
             file = 135655,
             hash = "14087449a4be9bed50577c65aa37bf8d",
             name = "inv_weapon_shortblade_19",
@@ -16217,6 +18381,7 @@ return {
             type = 1,
         },
         {
+            id   = 135656,
             file = 135656,
             hash = "1f21d5dd39f69383e0d79cdd0443694a",
             name = "inv_weapon_shortblade_20",
@@ -16224,6 +18389,7 @@ return {
             type = 1,
         },
         {
+            id   = 135657,
             file = 135657,
             hash = "c299b7fc555f9e30d029cc4f28b621f8",
             name = "inv_weapon_shortblade_21",
@@ -16231,6 +18397,7 @@ return {
             type = 1,
         },
         {
+            id   = 135658,
             file = 135658,
             hash = "894707e9e20e6fa4b7d96d5160a6a4b8",
             name = "inv_weapon_shortblade_22",
@@ -16238,6 +18405,7 @@ return {
             type = 1,
         },
         {
+            id   = 135659,
             file = 135659,
             hash = "d132cdc6f50b9f579aee765160037ef6",
             name = "inv_weapon_shortblade_23",
@@ -16245,6 +18413,7 @@ return {
             type = 1,
         },
         {
+            id   = 135660,
             file = 135660,
             hash = "bd68cfdb54d649922118913304adb9f3",
             name = "inv_weapon_shortblade_24",
@@ -16252,6 +18421,7 @@ return {
             type = 1,
         },
         {
+            id   = 135661,
             file = 135661,
             hash = "ae2f51f193297275fd4e50bc7d69a409",
             name = "inv_weapon_shortblade_25",
@@ -16259,6 +18429,7 @@ return {
             type = 1,
         },
         {
+            id   = 135662,
             file = 135662,
             hash = "d69b386eb61b721a9c0051163bf3afac",
             name = "inv_weapon_shortblade_26",
@@ -16266,6 +18437,7 @@ return {
             type = 1,
         },
         {
+            id   = 135663,
             file = 135663,
             hash = "8e94634c6e7c4e20a5c7225c8a8566b2",
             name = "inv_weapon_shortblade_27",
@@ -16273,6 +18445,7 @@ return {
             type = 1,
         },
         {
+            id   = 135664,
             file = 135664,
             hash = "157f44dc2966c8886143e29214125fe6",
             name = "inv_weapon_shortblade_28",
@@ -16280,6 +18453,7 @@ return {
             type = 1,
         },
         {
+            id   = 135665,
             file = 135665,
             hash = "fe381674894a564d1ac1bbd84d40225a",
             name = "inv_weapon_shortblade_29",
@@ -16287,6 +18461,7 @@ return {
             type = 1,
         },
         {
+            id   = 135666,
             file = 135666,
             hash = "0c568944554dfa676ae53f35212a2f37",
             name = "inv_weapon_shortblade_30",
@@ -16294,6 +18469,7 @@ return {
             type = 1,
         },
         {
+            id   = 135667,
             file = 135667,
             hash = "32a1900aa570eea8ba56109615fc9756",
             name = "inv_weapon_shortblade_31",
@@ -16301,6 +18477,7 @@ return {
             type = 1,
         },
         {
+            id   = 135668,
             file = 135668,
             hash = "cb2e0089478892ba7524c184290d5f22",
             name = "inv_weapon_shortblade_32",
@@ -16308,6 +18485,7 @@ return {
             type = 1,
         },
         {
+            id   = 135669,
             file = 135669,
             hash = "217dc7c6c25f4325154d3812a1ae96a4",
             name = "inv_weapon_shortblade_33",
@@ -16315,6 +18493,7 @@ return {
             type = 1,
         },
         {
+            id   = 135670,
             file = 135670,
             hash = "61cb31b6a1606b63ae3a2ef528e16ff4",
             name = "inv_weapon_shortblade_34",
@@ -16322,6 +18501,7 @@ return {
             type = 1,
         },
         {
+            id   = 135671,
             file = 135671,
             hash = "a81829b5aac7f13c4588827b3a7b4130",
             name = "inv_weapon_shortblade_35",
@@ -16329,6 +18509,7 @@ return {
             type = 1,
         },
         {
+            id   = 135672,
             file = 135672,
             hash = "5cd8cec16d8bd9dc077aa29d02742738",
             name = "inv_weapon_shortblade_37",
@@ -16336,6 +18517,7 @@ return {
             type = 1,
         },
         {
+            id   = 135723,
             file = 135723,
             hash = "b89e411905032c224ac4c8fe8be397a9",
             name = "inv_zulgurubtrinket",
@@ -16343,6 +18525,7 @@ return {
             type = 1,
         },
         {
+            id   = 135725,
             file = 135725,
             hash = "c65f3897da4c1718076f6a566c735360",
             name = "racial_dwarf_findtreasure",
@@ -16350,6 +18533,7 @@ return {
             type = 1,
         },
         {
+            id   = 135726,
             file = 135726,
             hash = "60ab675602e77881c0013a78e2b0b0a6",
             name = "racial_orc_berserkerstrength",
@@ -16357,6 +18541,7 @@ return {
             type = 1,
         },
         {
+            id   = 135727,
             file = 135727,
             hash = "846162780206e19e2e2c414e06c7036f",
             name = "racial_troll_berserk",
@@ -16364,6 +18549,7 @@ return {
             type = 1,
         },
         {
+            id   = 135733,
             file = 135733,
             hash = "952d9983fa625495c322b1677cda87e6",
             name = "spell_arcane_arcaneresilience",
@@ -16371,6 +18557,7 @@ return {
             type = 1,
         },
         {
+            id   = 135736,
             file = 135736,
             hash = "73c61afdecfaa87520959a0777b9cc9c",
             name = "spell_arcane_blink",
@@ -16378,6 +18565,7 @@ return {
             type = 1,
         },
         {
+            id   = 135741,
             file = 135741,
             hash = "ddac89a7e0c522bd6cfeaa628510118a",
             name = "spell_arcane_portaldarnassus",
@@ -16385,6 +18573,7 @@ return {
             type = 1,
         },
         {
+            id   = 135743,
             file = 135743,
             hash = "29253a20ab50950d95982d726ed33a3c",
             name = "spell_arcane_portalironforge",
@@ -16392,6 +18581,7 @@ return {
             type = 1,
         },
         {
+            id   = 135744,
             file = 135744,
             hash = "56030a184277b8c467ea7932e6e3dbdb",
             name = "spell_arcane_portalorgrimmar",
@@ -16399,6 +18589,7 @@ return {
             type = 1,
         },
         {
+            id   = 135748,
             file = 135748,
             hash = "9dd72914f2e773ac49c00ecac7e4b5e6",
             name = "spell_arcane_portalstormwind",
@@ -16406,6 +18597,7 @@ return {
             type = 1,
         },
         {
+            id   = 135750,
             file = 135750,
             hash = "8b82b8efef7beca6502d411203e399aa",
             name = "spell_arcane_portalthunderbluff",
@@ -16413,6 +18605,7 @@ return {
             type = 1,
         },
         {
+            id   = 135751,
             file = 135751,
             hash = "ea34c517976ff83f6fb8681449a5b4d5",
             name = "spell_arcane_portalundercity",
@@ -16420,6 +18613,7 @@ return {
             type = 1,
         },
         {
+            id   = 135753,
             file = 135753,
             hash = "ce646d6c4709128cb9a4b6209ec80daf",
             name = "spell_arcane_starfire",
@@ -16427,6 +18621,7 @@ return {
             type = 1,
         },
         {
+            id   = 135755,
             file = 135755,
             hash = "827835b89a54936326e5ac3e5a21c06b",
             name = "spell_arcane_teleportdarnassus",
@@ -16434,6 +18629,7 @@ return {
             type = 1,
         },
         {
+            id   = 135757,
             file = 135757,
             hash = "a981a0badb8e4f9cfa0ba36856b449b5",
             name = "spell_arcane_teleportironforge",
@@ -16441,6 +18637,7 @@ return {
             type = 1,
         },
         {
+            id   = 135758,
             file = 135758,
             hash = "7d60773d79ae71a20f3c8553cd7e4512",
             name = "spell_arcane_teleportmoonglade",
@@ -16448,6 +18645,7 @@ return {
             type = 1,
         },
         {
+            id   = 135759,
             file = 135759,
             hash = "a60f257cd15980e335873db8eb1065c5",
             name = "spell_arcane_teleportorgrimmar",
@@ -16455,6 +18653,7 @@ return {
             type = 1,
         },
         {
+            id   = 135763,
             file = 135763,
             hash = "207a9c59809d4ed577ae77c9e3c4579b",
             name = "spell_arcane_teleportstormwind",
@@ -16462,6 +18661,7 @@ return {
             type = 1,
         },
         {
+            id   = 135765,
             file = 135765,
             hash = "222b552822883c6ef513957a2a4504eb",
             name = "spell_arcane_teleportthunderbluff",
@@ -16469,6 +18669,7 @@ return {
             type = 1,
         },
         {
+            id   = 135766,
             file = 135766,
             hash = "8661d313e4943fd31eccf2868feb3571",
             name = "spell_arcane_teleportundercity",
@@ -16476,6 +18677,7 @@ return {
             type = 1,
         },
         {
+            id   = 135767,
             file = 135767,
             hash = "2a4c3d828e2f75c967300d663908068e",
             name = "spell_brokenheart",
@@ -16483,6 +18685,7 @@ return {
             type = 1,
         },
         {
+            id   = 135768,
             file = 135768,
             hash = "8de7b5b48b020c92efb5a6730491657d",
             name = "spell_chargenegative",
@@ -16490,6 +18693,7 @@ return {
             type = 1,
         },
         {
+            id   = 135769,
             file = 135769,
             hash = "0b4320359d1705a1fd5ccbdd475cae8f",
             name = "spell_chargepositive",
@@ -16497,6 +18701,7 @@ return {
             type = 1,
         },
         {
+            id   = 135791,
             file = 135791,
             hash = "c7366cb33898f81add9681c689c0a37f",
             name = "spell_fire_elementaldevastation",
@@ -16504,6 +18709,7 @@ return {
             type = 1,
         },
         {
+            id   = 135792,
             file = 135792,
             hash = "412b802c274197bf0de775855c7e71ab",
             name = "spell_fire_enchantweapon",
@@ -16511,6 +18717,7 @@ return {
             type = 1,
         },
         {
+            id   = 135805,
             file = 135805,
             hash = "f1180f485c77f12df16f61f865d45d04",
             name = "spell_fire_fire",
@@ -16518,6 +18725,7 @@ return {
             type = 1,
         },
         {
+            id   = 135806,
             file = 135806,
             hash = "c2ac74cc5974b3d69845badfc2b069ff",
             name = "spell_fire_firearmor",
@@ -16525,6 +18733,7 @@ return {
             type = 1,
         },
         {
+            id   = 135807,
             file = 135807,
             hash = "bdfa2df4d3b1edfa8d2867e0251cea7d",
             name = "spell_fire_fireball",
@@ -16532,6 +18741,7 @@ return {
             type = 1,
         },
         {
+            id   = 135808,
             file = 135808,
             hash = "0fb81f099fdbf95623c9df0dc22d9b56",
             name = "spell_fire_fireball02",
@@ -16539,6 +18749,7 @@ return {
             type = 1,
         },
         {
+            id   = 135809,
             file = 135809,
             hash = "462784d108702dc09071c1b33835b40c",
             name = "spell_fire_firebolt",
@@ -16546,6 +18757,7 @@ return {
             type = 1,
         },
         {
+            id   = 135810,
             file = 135810,
             hash = "6018b986ff4aab2eff1381d7f74fc90e",
             name = "spell_fire_firebolt02",
@@ -16553,6 +18765,7 @@ return {
             type = 1,
         },
         {
+            id   = 135811,
             file = 135811,
             hash = "2417e9c3ad981b11e4dd4234bf9dafdc",
             name = "spell_fire_flameblades",
@@ -16560,6 +18773,7 @@ return {
             type = 1,
         },
         {
+            id   = 135812,
             file = 135812,
             hash = "0fdecebe6a3966b9b62a258aae318f4c",
             name = "spell_fire_flamebolt",
@@ -16567,6 +18781,7 @@ return {
             type = 1,
         },
         {
+            id   = 135813,
             file = 135813,
             hash = "29ca6c9aefb2c44dc37a37f8508c087d",
             name = "spell_fire_flameshock",
@@ -16574,6 +18789,7 @@ return {
             type = 1,
         },
         {
+            id   = 135814,
             file = 135814,
             hash = "ca7b1f62162f2351dad792a2a1e2dc6b",
             name = "spell_fire_flametounge",
@@ -16581,6 +18797,7 @@ return {
             type = 1,
         },
         {
+            id   = 135815,
             file = 135815,
             hash = "f20d9816b5ad93d8d30270179b644990",
             name = "spell_fire_flare",
@@ -16588,6 +18805,7 @@ return {
             type = 1,
         },
         {
+            id   = 135816,
             file = 135816,
             hash = "bc9b4d44d76c8e9964bc90217b8fb6af",
             name = "spell_fire_frostresistancetotem",
@@ -16595,6 +18813,7 @@ return {
             type = 1,
         },
         {
+            id   = 135817,
             file = 135817,
             hash = "7cdde3183839c325657f4c23248266b8",
             name = "spell_fire_immolation",
@@ -16602,6 +18821,7 @@ return {
             type = 1,
         },
         {
+            id   = 135818,
             file = 135818,
             hash = "070cd66d250bb4dc5533461833299aa3",
             name = "spell_fire_incinerate",
@@ -16609,6 +18829,7 @@ return {
             type = 1,
         },
         {
+            id   = 135819,
             file = 135819,
             hash = "1809d90628325009a4cea25284a8519f",
             name = "spell_fire_lavaspawn",
@@ -16616,6 +18837,7 @@ return {
             type = 1,
         },
         {
+            id   = 135820,
             file = 135820,
             hash = "0e5b368d1a64cb13a0a1b69064f5ebab",
             name = "spell_fire_masterofelements",
@@ -16623,6 +18845,7 @@ return {
             type = 1,
         },
         {
+            id   = 135821,
             file = 135821,
             hash = "ca4704164254b718f26de3c5563259e9",
             name = "spell_fire_meteorstorm",
@@ -16630,6 +18853,7 @@ return {
             type = 1,
         },
         {
+            id   = 135824,
             file = 135824,
             hash = "17613864ed7f59e01aae5afbe2f3e7f9",
             name = "spell_fire_sealoffire",
@@ -16637,6 +18861,7 @@ return {
             type = 1,
         },
         {
+            id   = 135825,
             file = 135825,
             hash = "689564f3a7a84c23dd0f3f2261faa9c2",
             name = "spell_fire_searingtotem",
@@ -16644,6 +18869,7 @@ return {
             type = 1,
         },
         {
+            id   = 135826,
             file = 135826,
             hash = "d4eefcb2e76f08aca763bf691c662733",
             name = "spell_fire_selfdestruct",
@@ -16651,6 +18877,7 @@ return {
             type = 1,
         },
         {
+            id   = 135827,
             file = 135827,
             hash = "6218048965f3442f825f3267f573aeac",
             name = "spell_fire_soulburn",
@@ -16658,6 +18885,7 @@ return {
             type = 1,
         },
         {
+            id   = 135828,
             file = 135828,
             hash = "a3d0b4b0c8becd5b5b29e1dc8ef09242",
             name = "spell_fire_sunkey",
@@ -16665,6 +18893,7 @@ return {
             type = 1,
         },
         {
+            id   = 135830,
             file = 135830,
             hash = "e9f79be99da8ed6fd1086cbb7086c026",
             name = "spell_fire_volcano",
@@ -16672,6 +18901,7 @@ return {
             type = 1,
         },
         {
+            id   = 135831,
             file = 135831,
             hash = "5a172529818b56bdff68af37e26fab4a",
             name = "spell_fire_windsofwoe",
@@ -16679,6 +18909,7 @@ return {
             type = 1,
         },
         {
+            id   = 135832,
             file = 135832,
             hash = "235d6fe23bc02f3d217609e17b5466c9",
             name = "spell_fireresistancetotem_01",
@@ -16686,6 +18917,7 @@ return {
             type = 1,
         },
         {
+            id   = 135834,
             file = 135834,
             hash = "d55dac517433d206dee051ed0ceaec97",
             name = "spell_frost_chainsofice",
@@ -16693,6 +18925,7 @@ return {
             type = 1,
         },
         {
+            id   = 135835,
             file = 135835,
             hash = "f57b51bddb28d59cc62d7cd892a390be",
             name = "spell_frost_chillingarmor",
@@ -16700,6 +18933,7 @@ return {
             type = 1,
         },
         {
+            id   = 135836,
             file = 135836,
             hash = "86a70bd631453989040934054450c75c",
             name = "spell_frost_chillingblast",
@@ -16707,6 +18941,7 @@ return {
             type = 1,
         },
         {
+            id   = 135837,
             file = 135837,
             hash = "de29f57f68d0c45c10dbb68f8734db17",
             name = "spell_frost_chillingbolt",
@@ -16714,6 +18949,7 @@ return {
             type = 1,
         },
         {
+            id   = 135839,
             file = 135839,
             hash = "a5311d25db83c0e0686d23e6cb2eb4ca",
             name = "spell_frost_fireresistancetotem",
@@ -16721,6 +18957,7 @@ return {
             type = 1,
         },
         {
+            id   = 135840,
             file = 135840,
             hash = "7c243710f0981ee7eb53def79f72e3e3",
             name = "spell_frost_freezingbreath",
@@ -16728,6 +18965,7 @@ return {
             type = 1,
         },
         {
+            id   = 135841,
             file = 135841,
             hash = "18192bed008775a4cb429a71cb04bfe8",
             name = "spell_frost_frost",
@@ -16735,6 +18973,7 @@ return {
             type = 1,
         },
         {
+            id   = 135842,
             file = 135842,
             hash = "6652f9e247e8f7dde77b9bf7046f91de",
             name = "spell_frost_frostarmor",
@@ -16742,6 +18981,7 @@ return {
             type = 1,
         },
         {
+            id   = 135843,
             file = 135843,
             hash = "fe23420f028204fb009c942046c4ec52",
             name = "spell_frost_frostarmor02",
@@ -16749,6 +18989,7 @@ return {
             type = 1,
         },
         {
+            id   = 135844,
             file = 135844,
             hash = "430e4f54cf5ff9f8aa554923bffb8b6c",
             name = "spell_frost_frostblast",
@@ -16756,6 +18997,7 @@ return {
             type = 1,
         },
         {
+            id   = 135845,
             file = 135845,
             hash = "d3b4cdeb55cb0c7ce2e960015d6e1cb0",
             name = "spell_frost_frostbolt",
@@ -16763,6 +19005,7 @@ return {
             type = 1,
         },
         {
+            id   = 135846,
             file = 135846,
             hash = "55d4431b8df96b695b54a2e05419d573",
             name = "spell_frost_frostbolt02",
@@ -16770,6 +19013,7 @@ return {
             type = 1,
         },
         {
+            id   = 135847,
             file = 135847,
             hash = "008528d5a299c21624bfc78e8535f420",
             name = "spell_frost_frostbrand",
@@ -16777,6 +19021,7 @@ return {
             type = 1,
         },
         {
+            id   = 135848,
             file = 135848,
             hash = "84630480f4990c9ac0f3511753b8f1c7",
             name = "spell_frost_frostnova",
@@ -16784,6 +19029,7 @@ return {
             type = 1,
         },
         {
+            id   = 135849,
             file = 135849,
             hash = "cf7272bdf0a971fae3c0797f0705d3dd",
             name = "spell_frost_frostshock",
@@ -16791,6 +19037,7 @@ return {
             type = 1,
         },
         {
+            id   = 135850,
             file = 135850,
             hash = "4adad6d4bb8d8dd44e79840b391cbeef",
             name = "spell_frost_frostward",
@@ -16798,6 +19045,7 @@ return {
             type = 1,
         },
         {
+            id   = 135852,
             file = 135852,
             hash = "1b6b8b36493a7d95db35ff15adb9a5eb",
             name = "spell_frost_glacier",
@@ -16805,6 +19053,7 @@ return {
             type = 1,
         },
         {
+            id   = 135853,
             file = 135853,
             hash = "39f6063817faa4b506c4ce15085a1b15",
             name = "spell_frost_iceclaw",
@@ -16812,6 +19061,7 @@ return {
             type = 1,
         },
         {
+            id   = 135855,
             file = 135855,
             hash = "97a6dee7e324159e094dc5bf24967d13",
             name = "spell_frost_iceshard",
@@ -16819,6 +19069,7 @@ return {
             type = 1,
         },
         {
+            id   = 135856,
             file = 135856,
             hash = "7fb0d974a4d798427d7c44212746cba7",
             name = "spell_frost_iceshock",
@@ -16826,6 +19077,7 @@ return {
             type = 1,
         },
         {
+            id   = 135857,
             file = 135857,
             hash = "a078757b161a00e5226ac817d870a722",
             name = "spell_frost_icestorm",
@@ -16833,6 +19085,7 @@ return {
             type = 1,
         },
         {
+            id   = 135858,
             file = 135858,
             hash = "a1b87965d6de45e4d25fb1952aa41230",
             name = "spell_frost_manaburn",
@@ -16840,6 +19093,7 @@ return {
             type = 1,
         },
         {
+            id   = 135859,
             file = 135859,
             hash = "c1eb9650429f95c16ec248544e97803b",
             name = "spell_frost_manarecharge",
@@ -16847,6 +19101,7 @@ return {
             type = 1,
         },
         {
+            id   = 135860,
             file = 135860,
             hash = "b3728a615229d56b8b17fb2f024d4651",
             name = "spell_frost_stun",
@@ -16854,6 +19109,7 @@ return {
             type = 1,
         },
         {
+            id   = 135861,
             file = 135861,
             hash = "14d17bbbdffbe4c6a49f34ecf5f7fd66",
             name = "spell_frost_summonwaterelemental",
@@ -16861,6 +19117,7 @@ return {
             type = 1,
         },
         {
+            id   = 135863,
             file = 135863,
             hash = "5b1982bde065ffb488ef9037016e7ea7",
             name = "spell_frost_windwalkon",
@@ -16868,6 +19125,7 @@ return {
             type = 1,
         },
         {
+            id   = 135864,
             file = 135864,
             hash = "6c7b6c0ea42ab7eea1317e34a74cabfc",
             name = "spell_frost_wisp",
@@ -16875,6 +19133,7 @@ return {
             type = 1,
         },
         {
+            id   = 135865,
             file = 135865,
             hash = "27b9bfd9362f2fc67d013a43a4aa7196",
             name = "spell_frost_wizardmark",
@@ -16882,6 +19141,7 @@ return {
             type = 1,
         },
         {
+            id   = 135866,
             file = 135866,
             hash = "ebf577c627ec7dee3ca9218b0b9f833e",
             name = "spell_frostresistancetotem_01",
@@ -16889,6 +19149,7 @@ return {
             type = 1,
         },
         {
+            id   = 135867,
             file = 135867,
             hash = "9ab30bb76846d6853048549f1a59fc14",
             name = "spell_holiday_tow_spicecloud",
@@ -16896,6 +19157,7 @@ return {
             type = 1,
         },
         {
+            id   = 135869,
             file = 135869,
             hash = "2193c6f6bbbe22f7a980eb64d60302bb",
             name = "spell_holy_arcaneintellect",
@@ -16903,6 +19165,7 @@ return {
             type = 1,
         },
         {
+            id   = 135871,
             file = 135871,
             hash = "3997032fe1c1c169fbf4fd05145dec62",
             name = "spell_holy_ashestoashes",
@@ -16910,6 +19173,7 @@ return {
             type = 1,
         },
         {
+            id   = 135873,
             file = 135873,
             hash = "07a283ef0fb43981624b63e423e0f772",
             name = "spell_holy_auraoflight",
@@ -16917,6 +19181,7 @@ return {
             type = 1,
         },
         {
+            id   = 135877,
             file = 135877,
             hash = "f9720e5be264b986318376cbb4d74a54",
             name = "spell_holy_blessedrecovery",
@@ -16924,6 +19189,7 @@ return {
             type = 1,
         },
         {
+            id   = 135879,
             file = 135879,
             hash = "9daad6792c60c4642b0facb2a813ff96",
             name = "spell_holy_blessingofagility",
@@ -16931,6 +19197,7 @@ return {
             type = 1,
         },
         {
+            id   = 135880,
             file = 135880,
             hash = "4a7e03a495544881e2cea1d6b62371d2",
             name = "spell_holy_blessingofprotection",
@@ -16938,6 +19205,7 @@ return {
             type = 1,
         },
         {
+            id   = 135881,
             file = 135881,
             hash = "52736f88df3de54babf19ef95b086fbf",
             name = "spell_holy_blessingofstamina",
@@ -16945,6 +19213,7 @@ return {
             type = 1,
         },
         {
+            id   = 135882,
             file = 135882,
             hash = "d897b0f4f6d278a7e151475bd504385d",
             name = "spell_holy_blessingofstrength",
@@ -16952,6 +19221,7 @@ return {
             type = 1,
         },
         {
+            id   = 135892,
             file = 135892,
             hash = "5417f811c02622a65214521a2f56aac8",
             name = "spell_holy_devotion",
@@ -16959,6 +19229,7 @@ return {
             type = 1,
         },
         {
+            id   = 135893,
             file = 135893,
             hash = "e1828433b192092c393fb9198d962c10",
             name = "spell_holy_devotionaura",
@@ -16966,6 +19237,7 @@ return {
             type = 1,
         },
         {
+            id   = 135894,
             file = 135894,
             hash = "b67c9a9a6bee4380e86bf270204c3dd0",
             name = "spell_holy_dispelmagic",
@@ -16973,6 +19245,7 @@ return {
             type = 1,
         },
         {
+            id   = 135896,
             file = 135896,
             hash = "49b9873a8f0946862d0d4f7e330bb495",
             name = "spell_holy_divineintervention",
@@ -16980,6 +19253,7 @@ return {
             type = 1,
         },
         {
+            id   = 135898,
             file = 135898,
             hash = "4d9c49c3e9e322d7a90ac87e53e609b8",
             name = "spell_holy_divinespirit",
@@ -16987,6 +19261,7 @@ return {
             type = 1,
         },
         {
+            id   = 135899,
             file = 135899,
             hash = "a36292f377b1e060235c777ba1a778fc",
             name = "spell_holy_dizzy",
@@ -16994,6 +19269,7 @@ return {
             type = 1,
         },
         {
+            id   = 135900,
             file = 135900,
             hash = "3bd9552885c74de72a5ffa054d2dcb7b",
             name = "spell_holy_elunesgrace",
@@ -17001,6 +19277,7 @@ return {
             type = 1,
         },
         {
+            id   = 135902,
             file = 135902,
             hash = "96b24d0948fb3e569595563ee11b2edb",
             name = "spell_holy_excorcism",
@@ -17008,6 +19285,7 @@ return {
             type = 1,
         },
         {
+            id   = 135903,
             file = 135903,
             hash = "9d54e4f9a78ca8f823adda40afa53dfb",
             name = "spell_holy_excorcism_02",
@@ -17015,6 +19293,7 @@ return {
             type = 1,
         },
         {
+            id   = 135904,
             file = 135904,
             hash = "6de0ed072767f0315d5b468dd86d99ac",
             name = "spell_holy_eyeforaneye",
@@ -17022,6 +19301,7 @@ return {
             type = 1,
         },
         {
+            id   = 135906,
             file = 135906,
             hash = "0356af7bfcc3ec5cee740784e13af0b9",
             name = "spell_holy_fistofjustice",
@@ -17029,6 +19309,7 @@ return {
             type = 1,
         },
         {
+            id   = 135907,
             file = 135907,
             hash = "9b44d7a8d4dcec625eb38f892013716e",
             name = "spell_holy_flashheal",
@@ -17036,6 +19317,7 @@ return {
             type = 1,
         },
         {
+            id   = 135908,
             file = 135908,
             hash = "4bc8680d7b685e712b76736d03ff0258",
             name = "spell_holy_greaterblessingofkings",
@@ -17043,6 +19325,7 @@ return {
             type = 1,
         },
         {
+            id   = 135909,
             file = 135909,
             hash = "9b3910834c725524b72c58e9eee89548",
             name = "spell_holy_greaterblessingoflight",
@@ -17050,6 +19333,7 @@ return {
             type = 1,
         },
         {
+            id   = 135910,
             file = 135910,
             hash = "905d261b0af7685d4d276e2d6d41b563",
             name = "spell_holy_greaterblessingofsalvation",
@@ -17057,6 +19341,7 @@ return {
             type = 1,
         },
         {
+            id   = 135911,
             file = 135911,
             hash = "88cc0b3fd9d29deb7814a495ec8bdecf",
             name = "spell_holy_greaterblessingofsanctuary",
@@ -17064,6 +19349,7 @@ return {
             type = 1,
         },
         {
+            id   = 135912,
             file = 135912,
             hash = "c3a744793b753b3b3061388bde6b20ae",
             name = "spell_holy_greaterblessingofwisdom",
@@ -17071,6 +19357,7 @@ return {
             type = 1,
         },
         {
+            id   = 135913,
             file = 135913,
             hash = "8fc2d53fdad53022086166f7eaa4943d",
             name = "spell_holy_greaterheal",
@@ -17078,6 +19365,7 @@ return {
             type = 1,
         },
         {
+            id   = 135914,
             file = 135914,
             hash = "d4564904983178bff2db8ae2ed480173",
             name = "spell_holy_harmundeadaura",
@@ -17085,6 +19373,7 @@ return {
             type = 1,
         },
         {
+            id   = 135915,
             file = 135915,
             hash = "c0542c21b797fd1315fda57a1b79ccbf",
             name = "spell_holy_heal",
@@ -17092,6 +19381,7 @@ return {
             type = 1,
         },
         {
+            id   = 135916,
             file = 135916,
             hash = "ba8be3e94fc33632f2d4fc4490e82267",
             name = "spell_holy_heal02",
@@ -17099,6 +19389,7 @@ return {
             type = 1,
         },
         {
+            id   = 135917,
             file = 135917,
             hash = "fdcd726037ad0ee518b1486a89a7c738",
             name = "spell_holy_healingaura",
@@ -17106,6 +19397,7 @@ return {
             type = 1,
         },
         {
+            id   = 135918,
             file = 135918,
             hash = "90b832e30c02a3b67b1542d2a7907237",
             name = "spell_holy_healingfocus",
@@ -17113,6 +19405,7 @@ return {
             type = 1,
         },
         {
+            id   = 135920,
             file = 135920,
             hash = "873c4cccdc8413ffcc90b1e50791f45d",
             name = "spell_holy_holybolt",
@@ -17120,6 +19413,7 @@ return {
             type = 1,
         },
         {
+            id   = 135922,
             file = 135922,
             hash = "51a919fdfbf3bb23d448898ba8ce2ee6",
             name = "spell_holy_holynova",
@@ -17127,6 +19421,7 @@ return {
             type = 1,
         },
         {
+            id   = 135923,
             file = 135923,
             hash = "5e671c01597ce20850de5887d50b1901",
             name = "spell_holy_holyprotection",
@@ -17134,6 +19429,7 @@ return {
             type = 1,
         },
         {
+            id   = 135924,
             file = 135924,
             hash = "ac49dc9a26a03cea0ce121aa121a00b6",
             name = "spell_holy_holysmite",
@@ -17141,6 +19437,7 @@ return {
             type = 1,
         },
         {
+            id   = 135926,
             file = 135926,
             hash = "ed2eb7c11e2e082f6a2bffdcacfcc9c8",
             name = "spell_holy_innerfire",
@@ -17148,6 +19445,7 @@ return {
             type = 1,
         },
         {
+            id   = 135928,
             file = 135928,
             hash = "441d6b6e8a67177584b3229ec8755c3b",
             name = "spell_holy_layonhands",
@@ -17155,6 +19453,7 @@ return {
             type = 1,
         },
         {
+            id   = 135929,
             file = 135929,
             hash = "b6e8bfcfad77a7a17bb2e293be874c28",
             name = "spell_holy_lesserheal",
@@ -17162,6 +19461,7 @@ return {
             type = 1,
         },
         {
+            id   = 135930,
             file = 135930,
             hash = "28b994792e744353611dcbe9135ea3c8",
             name = "spell_holy_lesserheal02",
@@ -17169,6 +19469,7 @@ return {
             type = 1,
         },
         {
+            id   = 135932,
             file = 135932,
             hash = "92fa69885328ba4e41c253f26b7b54e1",
             name = "spell_holy_magicalsentry",
@@ -17176,6 +19477,7 @@ return {
             type = 1,
         },
         {
+            id   = 135933,
             file = 135933,
             hash = "5a98f40b625cf81575bc6630d1b87a15",
             name = "spell_holy_mindsooth",
@@ -17183,6 +19485,7 @@ return {
             type = 1,
         },
         {
+            id   = 135934,
             file = 135934,
             hash = "5399cac181898893e0af410eb2161d11",
             name = "spell_holy_mindvision",
@@ -17190,6 +19493,7 @@ return {
             type = 1,
         },
         {
+            id   = 135935,
             file = 135935,
             hash = "aa5beff2e9502c3190c5a8c81f9d28c2",
             name = "spell_holy_nullifydisease",
@@ -17197,6 +19501,7 @@ return {
             type = 1,
         },
         {
+            id   = 135937,
             file = 135937,
             hash = "84fa45323c95bfc5b19d53dd68e1138f",
             name = "spell_holy_persuitofjustice",
@@ -17204,6 +19509,7 @@ return {
             type = 1,
         },
         {
+            id   = 135938,
             file = 135938,
             hash = "41bcce233e30484680f6a6446f1450b4",
             name = "spell_holy_power",
@@ -17211,6 +19517,7 @@ return {
             type = 1,
         },
         {
+            id   = 135939,
             file = 135939,
             hash = "23bd1e209ae67e9658700ba8cff2782d",
             name = "spell_holy_powerinfusion",
@@ -17218,6 +19525,7 @@ return {
             type = 1,
         },
         {
+            id   = 135940,
             file = 135940,
             hash = "e73e4a0d7140c49957a7ed08fa791cae",
             name = "spell_holy_powerwordshield",
@@ -17225,6 +19533,7 @@ return {
             type = 1,
         },
         {
+            id   = 135941,
             file = 135941,
             hash = "8e893c29e37adaf94f7a26d95b1b9509",
             name = "spell_holy_prayeroffortitude",
@@ -17232,6 +19541,7 @@ return {
             type = 1,
         },
         {
+            id   = 135942,
             file = 135942,
             hash = "6aa6586d3a04ca6c44c82a7e7545733c",
             name = "spell_holy_prayerofhealing",
@@ -17239,6 +19549,7 @@ return {
             type = 1,
         },
         {
+            id   = 135943,
             file = 135943,
             hash = "7d97cd9197b92efe71a12e1a4575e60e",
             name = "spell_holy_prayerofhealing02",
@@ -17246,6 +19557,7 @@ return {
             type = 1,
         },
         {
+            id   = 135945,
             file = 135945,
             hash = "95b925e51d85b15e19ef7ccdc4228112",
             name = "spell_holy_prayerofshadowprotection",
@@ -17253,6 +19565,7 @@ return {
             type = 1,
         },
         {
+            id   = 135946,
             file = 135946,
             hash = "b40d1cb0158fdaaef780d26ded356091",
             name = "spell_holy_prayerofspirit",
@@ -17260,6 +19573,7 @@ return {
             type = 1,
         },
         {
+            id   = 135949,
             file = 135949,
             hash = "12428805a305d463fa66912aed65b426",
             name = "spell_holy_purify",
@@ -17267,6 +19581,7 @@ return {
             type = 1,
         },
         {
+            id   = 135951,
             file = 135951,
             hash = "95c283138edb50ba8897b8ab8987cbf0",
             name = "spell_holy_redemption",
@@ -17274,6 +19589,7 @@ return {
             type = 1,
         },
         {
+            id   = 135952,
             file = 135952,
             hash = "1f59f5846dd7fdd5ba6fc04e12e79f78",
             name = "spell_holy_removecurse",
@@ -17281,6 +19597,7 @@ return {
             type = 1,
         },
         {
+            id   = 135953,
             file = 135953,
             hash = "44fe061098220d6d1c82ec2a2e7093bd",
             name = "spell_holy_renew",
@@ -17288,6 +19605,7 @@ return {
             type = 1,
         },
         {
+            id   = 135954,
             file = 135954,
             hash = "474c7583cfe37c90412fc1390ea64b81",
             name = "spell_holy_restoration",
@@ -17295,6 +19613,7 @@ return {
             type = 1,
         },
         {
+            id   = 135955,
             file = 135955,
             hash = "5a01db5dd50c975daa0a67f2ea284e88",
             name = "spell_holy_resurrection",
@@ -17302,6 +19621,7 @@ return {
             type = 1,
         },
         {
+            id   = 135956,
             file = 135956,
             hash = "b35adb181435270001ee37223139a4ad",
             name = "spell_holy_retribution",
@@ -17309,6 +19629,7 @@ return {
             type = 1,
         },
         {
+            id   = 135957,
             file = 135957,
             hash = "ca8f81e142d31ea8a5b633bfe5bb7e4e",
             name = "spell_holy_retributionaura",
@@ -17316,6 +19637,7 @@ return {
             type = 1,
         },
         {
+            id   = 135959,
             file = 135959,
             hash = "fccde002208b1176c16fce376866bf4b",
             name = "spell_holy_righteousfury",
@@ -17323,6 +19645,7 @@ return {
             type = 1,
         },
         {
+            id   = 135960,
             file = 135960,
             hash = "06afa5470e7f04ed9e562df753c9f566",
             name = "spell_holy_righteousnessaura",
@@ -17330,6 +19653,7 @@ return {
             type = 1,
         },
         {
+            id   = 135962,
             file = 135962,
             hash = "1feade9d8c661d359a0c37e244027cd7",
             name = "spell_holy_sealoffury",
@@ -17337,6 +19661,7 @@ return {
             type = 1,
         },
         {
+            id   = 135963,
             file = 135963,
             hash = "212a6d9bd356e750719df5e948397ac7",
             name = "spell_holy_sealofmight",
@@ -17344,6 +19669,7 @@ return {
             type = 1,
         },
         {
+            id   = 135964,
             file = 135964,
             hash = "94ef17d451b3c479f3dce01a125ef37d",
             name = "spell_holy_sealofprotection",
@@ -17351,6 +19677,7 @@ return {
             type = 1,
         },
         {
+            id   = 135965,
             file = 135965,
             hash = "6d9f6abc77fd82ced3b0dfd396c5371d",
             name = "spell_holy_sealofrighteousness",
@@ -17358,6 +19685,7 @@ return {
             type = 1,
         },
         {
+            id   = 135966,
             file = 135966,
             hash = "7cd53b4d2266ef4637928d53c077bdba",
             name = "spell_holy_sealofsacrifice",
@@ -17365,6 +19693,7 @@ return {
             type = 1,
         },
         {
+            id   = 135967,
             file = 135967,
             hash = "d881f009c1f07e50949236efe37ff61b",
             name = "spell_holy_sealofsalvation",
@@ -17372,6 +19701,7 @@ return {
             type = 1,
         },
         {
+            id   = 135968,
             file = 135968,
             hash = "56c38fbf3a1df9f3eb47b947fe7b1442",
             name = "spell_holy_sealofvalor",
@@ -17379,6 +19709,7 @@ return {
             type = 1,
         },
         {
+            id   = 135970,
             file = 135970,
             hash = "db224fee4c37c32e5cf3bf884aa03b5e",
             name = "spell_holy_sealofwisdom",
@@ -17386,6 +19717,7 @@ return {
             type = 1,
         },
         {
+            id   = 135971,
             file = 135971,
             hash = "247acc94a82377ddd107b0dc022fca03",
             name = "spell_holy_sealofwrath",
@@ -17393,6 +19725,7 @@ return {
             type = 1,
         },
         {
+            id   = 135972,
             file = 135972,
             hash = "6c418e231f95c8ffd984ca6ebe7ea073",
             name = "spell_holy_searinglight",
@@ -17400,6 +19733,7 @@ return {
             type = 1,
         },
         {
+            id   = 135973,
             file = 135973,
             hash = "d0bc52e3197d7720d68184adc859f351",
             name = "spell_holy_searinglightpriest",
@@ -17407,6 +19741,7 @@ return {
             type = 1,
         },
         {
+            id   = 135974,
             file = 135974,
             hash = "f982cf79bf856ef2874bee70710bbcbf",
             name = "spell_holy_senseundead",
@@ -17414,6 +19749,7 @@ return {
             type = 1,
         },
         {
+            id   = 135975,
             file = 135975,
             hash = "bc8ee14b1540e25389261a649ba8a23c",
             name = "spell_holy_silence",
@@ -17421,6 +19757,7 @@ return {
             type = 1,
         },
         {
+            id   = 135976,
             file = 135976,
             hash = "87b0c37ec0750873eb848c074dc33bfe",
             name = "spell_holy_spellwarding",
@@ -17428,6 +19765,7 @@ return {
             type = 1,
         },
         {
+            id   = 135977,
             file = 135977,
             hash = "7115ffe1bc591a281bc08a03a9e5ef17",
             name = "spell_holy_spiritualguidence",
@@ -17435,6 +19773,7 @@ return {
             type = 1,
         },
         {
+            id   = 135980,
             file = 135980,
             hash = "25edffeaf34fb357a8d7d70f587a8564",
             name = "spell_holy_summonlightwell",
@@ -17442,6 +19781,7 @@ return {
             type = 1,
         },
         {
+            id   = 135983,
             file = 135983,
             hash = "6a8c50f6fb20ed3a952ded95a89feb9c",
             name = "spell_holy_turnundead",
@@ -17449,6 +19789,7 @@ return {
             type = 1,
         },
         {
+            id   = 135984,
             file = 135984,
             hash = "e1bae3ebf708c976008e2c84522fff28",
             name = "spell_holy_unyieldingfaith",
@@ -17456,6 +19797,7 @@ return {
             type = 1,
         },
         {
+            id   = 135985,
             file = 135985,
             hash = "c494d9c17c84603ae6abe147438c6050",
             name = "spell_holy_vindication",
@@ -17463,6 +19805,7 @@ return {
             type = 1,
         },
         {
+            id   = 135987,
             file = 135987,
             hash = "3522359f725a078316bd250b7000990e",
             name = "spell_holy_wordfortitude",
@@ -17470,6 +19813,7 @@ return {
             type = 1,
         },
         {
+            id   = 135988,
             file = 135988,
             hash = "39c41875d6188f3d2ffb1a847dfb1633",
             name = "spell_ice_lament",
@@ -17477,6 +19821,7 @@ return {
             type = 1,
         },
         {
+            id   = 135989,
             file = 135989,
             hash = "e27952336a5c272b46e27e3cc6d33e5e",
             name = "spell_ice_magicdamage",
@@ -17484,6 +19829,7 @@ return {
             type = 1,
         },
         {
+            id   = 135990,
             file = 135990,
             hash = "49399ab0bac0afcf2b005552ba086fd8",
             name = "spell_lightning_lightningbolt01",
@@ -17491,6 +19837,7 @@ return {
             type = 1,
         },
         {
+            id   = 135991,
             file = 135991,
             hash = "c07e99b4202a754b1b1c48f0aa56350a",
             name = "spell_magearmor",
@@ -17498,6 +19845,7 @@ return {
             type = 1,
         },
         {
+            id   = 135992,
             file = 135992,
             hash = "07f32f01af018338bf3b39a8ba419189",
             name = "spell_magic_featherfall",
@@ -17505,6 +19853,7 @@ return {
             type = 1,
         },
         {
+            id   = 135993,
             file = 135993,
             hash = "88b3a8cb78ca60bd62cd27c140b3e474",
             name = "spell_magic_greaterblessingofkings",
@@ -17512,6 +19861,7 @@ return {
             type = 1,
         },
         {
+            id   = 135994,
             file = 135994,
             hash = "8e515ae41cb66748c2e776779b925fd8",
             name = "spell_magic_lesserinvisibilty",
@@ -17519,6 +19869,7 @@ return {
             type = 1,
         },
         {
+            id   = 135995,
             file = 135995,
             hash = "8cf4bb048225dcf93c402bf204d0d7a2",
             name = "spell_magic_magearmor",
@@ -17526,6 +19877,7 @@ return {
             type = 1,
         },
         {
+            id   = 135996,
             file = 135996,
             hash = "3fcfeb51a1fc5475f866b4645af009a1",
             name = "spell_magic_polymorphchicken",
@@ -17533,6 +19885,7 @@ return {
             type = 1,
         },
         {
+            id   = 135997,
             file = 135997,
             hash = "e3642b5b2410bd1e66dfbed3def787af",
             name = "spell_magic_polymorphpig",
@@ -17540,6 +19893,7 @@ return {
             type = 1,
         },
         {
+            id   = 135998,
             file = 135998,
             hash = "4401f3c8e8365f52c90e52995f551c33",
             name = "spell_misc_conjuremanajewel",
@@ -17547,6 +19901,7 @@ return {
             type = 1,
         },
         {
+            id   = 135999,
             file = 135999,
             hash = "054ae15c10bfc0998031b6675fcd0590",
             name = "spell_misc_drink",
@@ -17554,6 +19909,7 @@ return {
             type = 1,
         },
         {
+            id   = 136000,
             file = 136000,
             hash = "7ced1ebd2b320ac7a5de6edadfbe57da",
             name = "spell_misc_food",
@@ -17561,6 +19917,7 @@ return {
             type = 1,
         },
         {
+            id   = 136006,
             file = 136006,
             hash = "a25e243b7d001897082c66369802fdd3",
             name = "spell_nature_abolishmagic",
@@ -17568,6 +19925,7 @@ return {
             type = 1,
         },
         {
+            id   = 136007,
             file = 136007,
             hash = "78936442d29d22876d34b08a73d7ee8d",
             name = "spell_nature_acid_01",
@@ -17575,6 +19933,7 @@ return {
             type = 1,
         },
         {
+            id   = 136008,
             file = 136008,
             hash = "fb3d8152278e3730e638380c15fde049",
             name = "spell_nature_agitatingtotem",
@@ -17582,6 +19941,7 @@ return {
             type = 1,
         },
         {
+            id   = 136009,
             file = 136009,
             hash = "3e87f343c87f0d28df27241df0b652ee",
             name = "spell_nature_ancestralguardian",
@@ -17589,6 +19949,7 @@ return {
             type = 1,
         },
         {
+            id   = 136010,
             file = 136010,
             hash = "260a94a164a96fe8d15d8b16e03ec16e",
             name = "spell_nature_astralrecal",
@@ -17596,6 +19957,7 @@ return {
             type = 1,
         },
         {
+            id   = 136011,
             file = 136011,
             hash = "a47d9d1feff630dce000706859267b47",
             name = "spell_nature_astralrecalgroup",
@@ -17603,6 +19965,7 @@ return {
             type = 1,
         },
         {
+            id   = 136012,
             file = 136012,
             hash = "c26a313b8869666e6db705bf8fd89046",
             name = "spell_nature_bloodlust",
@@ -17610,6 +19973,7 @@ return {
             type = 1,
         },
         {
+            id   = 136013,
             file = 136013,
             hash = "c40653546812fe24eecfc00f30c049eb",
             name = "spell_nature_brilliance",
@@ -17617,6 +19981,7 @@ return {
             type = 1,
         },
         {
+            id   = 136014,
             file = 136014,
             hash = "4a372bcf9820c1094c8051d39e1e9833",
             name = "spell_nature_callstorm",
@@ -17624,6 +19989,7 @@ return {
             type = 1,
         },
         {
+            id   = 136015,
             file = 136015,
             hash = "6af988232aa1377930963d46d0973b78",
             name = "spell_nature_chainlightning",
@@ -17631,6 +19997,7 @@ return {
             type = 1,
         },
         {
+            id   = 136016,
             file = 136016,
             hash = "9ca92ff17e6084d84849d369c9737e7a",
             name = "spell_nature_corrosivebreath",
@@ -17638,6 +20005,7 @@ return {
             type = 1,
         },
         {
+            id   = 136017,
             file = 136017,
             hash = "a1d2a3595ab8a669b227e37044be8dc3",
             name = "spell_nature_crystalball",
@@ -17645,6 +20013,7 @@ return {
             type = 1,
         },
         {
+            id   = 136018,
             file = 136018,
             hash = "4403136b8c891f9927e8aa5a76c4e0e1",
             name = "spell_nature_cyclone",
@@ -17652,6 +20021,7 @@ return {
             type = 1,
         },
         {
+            id   = 136019,
             file = 136019,
             hash = "fa9b495207a7ffd3fa81227963019345",
             name = "spell_nature_diseasecleansingtotem",
@@ -17659,6 +20029,7 @@ return {
             type = 1,
         },
         {
+            id   = 136020,
             file = 136020,
             hash = "7e66e6dbed0332a28f22f1a7ac9ef3a2",
             name = "spell_nature_drowsy",
@@ -17666,6 +20037,7 @@ return {
             type = 1,
         },
         {
+            id   = 136021,
             file = 136021,
             hash = "ea4dd0d9839e32a65b6ccae0a6db59a0",
             name = "spell_nature_dryaddispelmagic",
@@ -17673,6 +20045,7 @@ return {
             type = 1,
         },
         {
+            id   = 136022,
             file = 136022,
             hash = "9d8935b520acec78b997682cb8a1b64d",
             name = "spell_nature_earthbind",
@@ -17680,6 +20053,7 @@ return {
             type = 1,
         },
         {
+            id   = 136023,
             file = 136023,
             hash = "9e7e3c62cbba0beab820f70831a7052f",
             name = "spell_nature_earthbindtotem",
@@ -17687,6 +20061,7 @@ return {
             type = 1,
         },
         {
+            id   = 136025,
             file = 136025,
             hash = "6a07915469491fcabf5afbb17142b311",
             name = "spell_nature_earthquake",
@@ -17694,6 +20069,7 @@ return {
             type = 1,
         },
         {
+            id   = 136026,
             file = 136026,
             hash = "6428079c57af448b71215bf8a4924e35",
             name = "spell_nature_earthshock",
@@ -17701,6 +20077,7 @@ return {
             type = 1,
         },
         {
+            id   = 136031,
             file = 136031,
             hash = "7ddc27706f8a31956b5210be2632a5b4",
             name = "spell_nature_enchantarmor",
@@ -17708,6 +20085,7 @@ return {
             type = 1,
         },
         {
+            id   = 136032,
             file = 136032,
             hash = "313dc178694d7b828170e65e729188e0",
             name = "spell_nature_eyeofthestorm",
@@ -17715,6 +20093,7 @@ return {
             type = 1,
         },
         {
+            id   = 136033,
             file = 136033,
             hash = "5624ce1a57be56f6564f3356a18f6601",
             name = "spell_nature_faeriefire",
@@ -17722,6 +20101,7 @@ return {
             type = 1,
         },
         {
+            id   = 136034,
             file = 136034,
             hash = "6d535a25550339c2890891a4c68ffe3a",
             name = "spell_nature_farsight",
@@ -17729,6 +20109,7 @@ return {
             type = 1,
         },
         {
+            id   = 136036,
             file = 136036,
             hash = "4c458d165c564fa042d95d87c1dc7051",
             name = "spell_nature_forceofnature",
@@ -17736,6 +20117,7 @@ return {
             type = 1,
         },
         {
+            id   = 136039,
             file = 136039,
             hash = "e3a2026ae25c73deb52579f128297154",
             name = "spell_nature_groundingtotem",
@@ -17743,6 +20125,7 @@ return {
             type = 1,
         },
         {
+            id   = 136040,
             file = 136040,
             hash = "5cc94c52871ee156295c058845753e65",
             name = "spell_nature_guardianward",
@@ -17750,6 +20133,7 @@ return {
             type = 1,
         },
         {
+            id   = 136041,
             file = 136041,
             hash = "0545785e6787c842bc94b0b099f0b560",
             name = "spell_nature_healingtouch",
@@ -17757,6 +20141,7 @@ return {
             type = 1,
         },
         {
+            id   = 136042,
             file = 136042,
             hash = "dc6398b876cb03b84318ea96985917fd",
             name = "spell_nature_healingwavegreater",
@@ -17764,6 +20149,7 @@ return {
             type = 1,
         },
         {
+            id   = 136043,
             file = 136043,
             hash = "2cf4e37f59b51d568b30750934d48667",
             name = "spell_nature_healingwavelesser",
@@ -17771,6 +20157,7 @@ return {
             type = 1,
         },
         {
+            id   = 136044,
             file = 136044,
             hash = "af075099130687739d6a389be0848dbd",
             name = "spell_nature_healingway",
@@ -17778,6 +20165,7 @@ return {
             type = 1,
         },
         {
+            id   = 136045,
             file = 136045,
             hash = "82574d2787216550676a69ce4d22bf2f",
             name = "spell_nature_insectswarm",
@@ -17785,6 +20173,7 @@ return {
             type = 1,
         },
         {
+            id   = 136046,
             file = 136046,
             hash = "0cdd9970617dcef6a3c29481c9ee3002",
             name = "spell_nature_invisibilitytotem",
@@ -17792,6 +20181,7 @@ return {
             type = 1,
         },
         {
+            id   = 136047,
             file = 136047,
             hash = "edb0f1c17f878734eb3854d9e191c0e5",
             name = "spell_nature_invisibilty",
@@ -17799,6 +20189,7 @@ return {
             type = 1,
         },
         {
+            id   = 136048,
             file = 136048,
             hash = "94162250cde5aa13775b664b5e666750",
             name = "spell_nature_lightning",
@@ -17806,6 +20197,7 @@ return {
             type = 1,
         },
         {
+            id   = 136049,
             file = 136049,
             hash = "f2ada2117d37bd7db23bbf6303a6aa90",
             name = "spell_nature_lightningbolt",
@@ -17813,6 +20205,7 @@ return {
             type = 1,
         },
         {
+            id   = 136051,
             file = 136051,
             hash = "2f9b586b67d9e117f808383c3b30d334",
             name = "spell_nature_lightningshield",
@@ -17820,6 +20213,7 @@ return {
             type = 1,
         },
         {
+            id   = 136052,
             file = 136052,
             hash = "05684dc2003e444bd114f9e31a93ee0c",
             name = "spell_nature_magicimmunity",
@@ -17827,6 +20221,7 @@ return {
             type = 1,
         },
         {
+            id   = 136053,
             file = 136053,
             hash = "a02361e1c91f99b3f27ce753214bb1b7",
             name = "spell_nature_manaregentotem",
@@ -17834,6 +20229,7 @@ return {
             type = 1,
         },
         {
+            id   = 136054,
             file = 136054,
             hash = "52323a8564d44e2d46fba50c408891be",
             name = "spell_nature_massteleport",
@@ -17841,6 +20237,7 @@ return {
             type = 1,
         },
         {
+            id   = 136056,
             file = 136056,
             hash = "ec4a47bdff255ed483e4ec3163312674",
             name = "spell_nature_mirrorimage",
@@ -17848,6 +20245,7 @@ return {
             type = 1,
         },
         {
+            id   = 136057,
             file = 136057,
             hash = "ef625e8fbf6d7052b53fc38008167415",
             name = "spell_nature_moonglow",
@@ -17855,6 +20253,7 @@ return {
             type = 1,
         },
         {
+            id   = 136058,
             file = 136058,
             hash = "7cbfe8f95dc4f2f72f4fc7c5634cdfab",
             name = "spell_nature_moonkey",
@@ -17862,6 +20261,7 @@ return {
             type = 1,
         },
         {
+            id   = 136061,
             file = 136061,
             hash = "d1f4154b3a624dd822397831cbd3e319",
             name = "spell_nature_natureresistancetotem",
@@ -17869,6 +20269,7 @@ return {
             type = 1,
         },
         {
+            id   = 136062,
             file = 136062,
             hash = "696300db7bf427179f0f603ea37915cf",
             name = "spell_nature_naturesblessing",
@@ -17876,6 +20277,7 @@ return {
             type = 1,
         },
         {
+            id   = 136063,
             file = 136063,
             hash = "0a1a4f944562e1e7a8874c615c4eb56f",
             name = "spell_nature_natureswrath",
@@ -17883,6 +20285,7 @@ return {
             type = 1,
         },
         {
+            id   = 136064,
             file = 136064,
             hash = "2a56d830b35c8baca12f7a0962cbbced",
             name = "spell_nature_naturetouchdecay",
@@ -17890,6 +20293,7 @@ return {
             type = 1,
         },
         {
+            id   = 136065,
             file = 136065,
             hash = "1da5154b05a69dd8a75b49a336adde1a",
             name = "spell_nature_naturetouchgrow",
@@ -17897,6 +20301,7 @@ return {
             type = 1,
         },
         {
+            id   = 136066,
             file = 136066,
             hash = "f8536103529c64b692f8785ea83a1c5a",
             name = "spell_nature_nullifydisease",
@@ -17904,6 +20309,7 @@ return {
             type = 1,
         },
         {
+            id   = 136067,
             file = 136067,
             hash = "09eb8c19359dc91a6c697bb266da8466",
             name = "spell_nature_nullifypoison",
@@ -17911,6 +20317,7 @@ return {
             type = 1,
         },
         {
+            id   = 136068,
             file = 136068,
             hash = "25d8586ee197e7c2ff576a3a778da8dc",
             name = "spell_nature_nullifypoison_02",
@@ -17918,6 +20325,7 @@ return {
             type = 1,
         },
         {
+            id   = 136069,
             file = 136069,
             hash = "243c909e1de98ee4f74ff14ed1576cff",
             name = "spell_nature_nullward",
@@ -17925,6 +20333,7 @@ return {
             type = 1,
         },
         {
+            id   = 136070,
             file = 136070,
             hash = "620892326fccbeab064ad12a630a28b0",
             name = "spell_nature_poisoncleansingtotem",
@@ -17932,6 +20341,7 @@ return {
             type = 1,
         },
         {
+            id   = 136071,
             file = 136071,
             hash = "d7c2b166e1dd07b2d2b9aebf7b136236",
             name = "spell_nature_polymorph",
@@ -17939,6 +20349,7 @@ return {
             type = 1,
         },
         {
+            id   = 136072,
             file = 136072,
             hash = "70857a64aea6e1d3cb139c65fd3c942f",
             name = "spell_nature_polymorph_cow",
@@ -17946,6 +20357,7 @@ return {
             type = 1,
         },
         {
+            id   = 136073,
             file = 136073,
             hash = "a91f7a2e19228518c1d501003bf3c908",
             name = "spell_nature_preservation",
@@ -17953,6 +20365,7 @@ return {
             type = 1,
         },
         {
+            id   = 136074,
             file = 136074,
             hash = "9cdc2d07b2b6ad759b5d870c8f3014f0",
             name = "spell_nature_protectionformnature",
@@ -17960,6 +20373,7 @@ return {
             type = 1,
         },
         {
+            id   = 136075,
             file = 136075,
             hash = "6b26622f9eeeb0ff4243c52afba352b5",
             name = "spell_nature_purge",
@@ -17967,6 +20381,7 @@ return {
             type = 1,
         },
         {
+            id   = 136076,
             file = 136076,
             hash = "1cbbda7b3a048961914cf34323731e38",
             name = "spell_nature_ravenform",
@@ -17974,6 +20389,7 @@ return {
             type = 1,
         },
         {
+            id   = 136077,
             file = 136077,
             hash = "b9518c738422fcd4e48bc72d8565520e",
             name = "spell_nature_regenerate",
@@ -17981,6 +20397,7 @@ return {
             type = 1,
         },
         {
+            id   = 136078,
             file = 136078,
             hash = "be8e604ebf89f1f8884b181e526add25",
             name = "spell_nature_regeneration",
@@ -17988,6 +20405,7 @@ return {
             type = 1,
         },
         {
+            id   = 136080,
             file = 136080,
             hash = "c69e30b613c79cd06c038c0ff1b75c39",
             name = "spell_nature_reincarnation",
@@ -17995,6 +20413,7 @@ return {
             type = 1,
         },
         {
+            id   = 136081,
             file = 136081,
             hash = "6ab0c923f0ae22f67508656ed2ad4e00",
             name = "spell_nature_rejuvenation",
@@ -18002,6 +20421,7 @@ return {
             type = 1,
         },
         {
+            id   = 136082,
             file = 136082,
             hash = "0fcece8177d6d6f762bcfbdad5cdcd6c",
             name = "spell_nature_removecurse",
@@ -18009,6 +20429,7 @@ return {
             type = 1,
         },
         {
+            id   = 136083,
             file = 136083,
             hash = "453acb2406c15701113bb4a3746ae3af",
             name = "spell_nature_removedisease",
@@ -18016,6 +20437,7 @@ return {
             type = 1,
         },
         {
+            id   = 136084,
             file = 136084,
             hash = "622aaa0617fcd601e83f2b079dbffda3",
             name = "spell_nature_resistmagic",
@@ -18023,6 +20445,7 @@ return {
             type = 1,
         },
         {
+            id   = 136085,
             file = 136085,
             hash = "b32fe0fc8b4afbc72f056569a1afc925",
             name = "spell_nature_resistnature",
@@ -18030,6 +20453,7 @@ return {
             type = 1,
         },
         {
+            id   = 136086,
             file = 136086,
             hash = "48bc38ea32d7af69272d8d6051c8c6f0",
             name = "spell_nature_rockbiter",
@@ -18037,6 +20461,7 @@ return {
             type = 1,
         },
         {
+            id   = 136087,
             file = 136087,
             hash = "fa1f3451e6e2036c5945533a6c042946",
             name = "spell_nature_sentinal",
@@ -18044,6 +20469,7 @@ return {
             type = 1,
         },
         {
+            id   = 136090,
             file = 136090,
             hash = "e9817fb6b2764a91cadb2722d4911ccb",
             name = "spell_nature_sleep",
@@ -18051,6 +20477,7 @@ return {
             type = 1,
         },
         {
+            id   = 136091,
             file = 136091,
             hash = "5c86f3c52da7e6fb7f64c99203651357",
             name = "spell_nature_slow",
@@ -18058,6 +20485,7 @@ return {
             type = 1,
         },
         {
+            id   = 136092,
             file = 136092,
             hash = "e75fceacdad1ee1ac9f1747d6f49494f",
             name = "spell_nature_slowingtotem",
@@ -18065,6 +20493,7 @@ return {
             type = 1,
         },
         {
+            id   = 136093,
             file = 136093,
             hash = "f43d8c7bccbdea510ff6217ac28e442b",
             name = "spell_nature_slowpoison",
@@ -18072,6 +20501,7 @@ return {
             type = 1,
         },
         {
+            id   = 136094,
             file = 136094,
             hash = "c2a707fe937d9dd4ddaa405ecec6c268",
             name = "spell_nature_spiritarmor",
@@ -18079,6 +20509,7 @@ return {
             type = 1,
         },
         {
+            id   = 136095,
             file = 136095,
             hash = "c49701c515f95f927d90845ce8e9f5c5",
             name = "spell_nature_spiritwolf",
@@ -18086,6 +20517,7 @@ return {
             type = 1,
         },
         {
+            id   = 136096,
             file = 136096,
             hash = "2efcc821644a2ea3224e5b3df617b426",
             name = "spell_nature_starfall",
@@ -18093,6 +20525,7 @@ return {
             type = 1,
         },
         {
+            id   = 136097,
             file = 136097,
             hash = "d32d9f2b738f02d8704b40863c733465",
             name = "spell_nature_stoneclawtotem",
@@ -18100,6 +20533,7 @@ return {
             type = 1,
         },
         {
+            id   = 136098,
             file = 136098,
             hash = "f87318cd27419cd9e8fe90a628881195",
             name = "spell_nature_stoneskintotem",
@@ -18107,6 +20541,7 @@ return {
             type = 1,
         },
         {
+            id   = 136099,
             file = 136099,
             hash = "1103f721c9b86c3cbd67702ae44bc8f6",
             name = "spell_nature_stormreach",
@@ -18114,6 +20549,7 @@ return {
             type = 1,
         },
         {
+            id   = 136100,
             file = 136100,
             hash = "b1cf02ce3c205cae5b305cf151eaddb2",
             name = "spell_nature_stranglevines",
@@ -18121,6 +20557,7 @@ return {
             type = 1,
         },
         {
+            id   = 136101,
             file = 136101,
             hash = "420543d69255db0270ae1b8f8d39bb9c",
             name = "spell_nature_strength",
@@ -18128,6 +20565,7 @@ return {
             type = 1,
         },
         {
+            id   = 136102,
             file = 136102,
             hash = "38be2dcd2d068b7e282fdc3cd29d11f0",
             name = "spell_nature_strengthofearthtotem02",
@@ -18135,6 +20573,7 @@ return {
             type = 1,
         },
         {
+            id   = 136103,
             file = 136103,
             hash = "dbb2bf9cf92485d729033204f21d8792",
             name = "spell_nature_swiftness",
@@ -18142,6 +20581,7 @@ return {
             type = 1,
         },
         {
+            id   = 136104,
             file = 136104,
             hash = "9eb4811e531e8d61f0f97b9147481ab4",
             name = "spell_nature_thorns",
@@ -18149,6 +20589,7 @@ return {
             type = 1,
         },
         {
+            id   = 136105,
             file = 136105,
             hash = "677aefb1f0e4881b246b51ecd86c83d1",
             name = "spell_nature_thunderclap",
@@ -18156,6 +20597,7 @@ return {
             type = 1,
         },
         {
+            id   = 136106,
             file = 136106,
             hash = "70544a99317b63fb8333a48452ac45da",
             name = "spell_nature_timestop",
@@ -18163,6 +20605,7 @@ return {
             type = 1,
         },
         {
+            id   = 136107,
             file = 136107,
             hash = "94a09cce4467666bb5683bb1c237329a",
             name = "spell_nature_tranquility",
@@ -18170,6 +20613,7 @@ return {
             type = 1,
         },
         {
+            id   = 136108,
             file = 136108,
             hash = "9f9325cd1ef243673d718a7f63fc49d4",
             name = "spell_nature_tremortotem",
@@ -18177,6 +20621,7 @@ return {
             type = 1,
         },
         {
+            id   = 136109,
             file = 136109,
             hash = "ab0175ed7f60da7d104f8fed8058ad13",
             name = "spell_nature_undyingstrength",
@@ -18184,6 +20629,7 @@ return {
             type = 1,
         },
         {
+            id   = 136112,
             file = 136112,
             hash = "12fd3306885dec73725a471da7dc3ee1",
             name = "spell_nature_unyeildingstamina",
@@ -18191,6 +20637,7 @@ return {
             type = 1,
         },
         {
+            id   = 136113,
             file = 136113,
             hash = "ad6fc5e658b141bff3e80fc90325463a",
             name = "spell_nature_web",
@@ -18198,6 +20645,7 @@ return {
             type = 1,
         },
         {
+            id   = 136114,
             file = 136114,
             hash = "a28e70664d9c560c302a21b3a91f4c30",
             name = "spell_nature_windfury",
@@ -18205,6 +20653,7 @@ return {
             type = 1,
         },
         {
+            id   = 136115,
             file = 136115,
             hash = "fd9f3ac22151f3e04b96c7abd8392510",
             name = "spell_nature_wispheal",
@@ -18212,6 +20661,7 @@ return {
             type = 1,
         },
         {
+            id   = 136116,
             file = 136116,
             hash = "f2f3a24025048c9bd158249f513f5fdd",
             name = "spell_nature_wispsplode",
@@ -18219,6 +20669,7 @@ return {
             type = 1,
         },
         {
+            id   = 136118,
             file = 136118,
             hash = "1c758ab08e70f52968fe61d76a1c56a3",
             name = "spell_shadow_abominationexplosion",
@@ -18226,6 +20677,7 @@ return {
             type = 1,
         },
         {
+            id   = 136119,
             file = 136119,
             hash = "c7ef42453585290c4132b92f18a9c8a9",
             name = "spell_shadow_animatedead",
@@ -18233,6 +20685,7 @@ return {
             type = 1,
         },
         {
+            id   = 136120,
             file = 136120,
             hash = "c9cbc5f91c765f1ef4779a04908a1e01",
             name = "spell_shadow_antimagicshell",
@@ -18240,6 +20693,7 @@ return {
             type = 1,
         },
         {
+            id   = 136121,
             file = 136121,
             hash = "5ee9af2f32a4aa8ae23ec9df09e68806",
             name = "spell_shadow_antishadow",
@@ -18247,6 +20701,7 @@ return {
             type = 1,
         },
         {
+            id   = 136122,
             file = 136122,
             hash = "43acd9ba6081db8306a863a1bcc40bf7",
             name = "spell_shadow_auraofdarkness",
@@ -18254,6 +20709,7 @@ return {
             type = 1,
         },
         {
+            id   = 136123,
             file = 136123,
             hash = "d7d0bc28703dcacc4c0219aa7c6648aa",
             name = "spell_shadow_blackplague",
@@ -18261,6 +20717,7 @@ return {
             type = 1,
         },
         {
+            id   = 136124,
             file = 136124,
             hash = "d4c28d7c89a43cc99dae4cc4e8001f25",
             name = "spell_shadow_bloodboil",
@@ -18268,6 +20725,7 @@ return {
             type = 1,
         },
         {
+            id   = 136126,
             file = 136126,
             hash = "421616611e718c6592eb905c95777937",
             name = "spell_shadow_burningspirit",
@@ -18275,6 +20733,7 @@ return {
             type = 1,
         },
         {
+            id   = 136127,
             file = 136127,
             hash = "156ae0d248d9f6d7d0904a2527f4b38e",
             name = "spell_shadow_callofbone",
@@ -18282,6 +20741,7 @@ return {
             type = 1,
         },
         {
+            id   = 136128,
             file = 136128,
             hash = "9ac64096fd4884e47129fe9735a36840",
             name = "spell_shadow_carrionswarm",
@@ -18289,6 +20749,7 @@ return {
             type = 1,
         },
         {
+            id   = 136129,
             file = 136129,
             hash = "2ac0fc016a629830bd720acc19cadf97",
             name = "spell_shadow_charm",
@@ -18296,6 +20757,7 @@ return {
             type = 1,
         },
         {
+            id   = 136130,
             file = 136130,
             hash = "c2bc5d68a1cca69d5c092755ddd10d04",
             name = "spell_shadow_chilltouch",
@@ -18303,6 +20765,7 @@ return {
             type = 1,
         },
         {
+            id   = 136132,
             file = 136132,
             hash = "8deac77eaaa46770750567db6f685565",
             name = "spell_shadow_contagion",
@@ -18310,6 +20773,7 @@ return {
             type = 1,
         },
         {
+            id   = 136133,
             file = 136133,
             hash = "9e31f12c5c72d6ba33169f7381280390",
             name = "spell_shadow_corpseexplode",
@@ -18317,6 +20781,7 @@ return {
             type = 1,
         },
         {
+            id   = 136134,
             file = 136134,
             hash = "46f61f5b8afbfbffc022bd7de17ba118",
             name = "spell_shadow_creepingplague",
@@ -18324,6 +20789,7 @@ return {
             type = 1,
         },
         {
+            id   = 136135,
             file = 136135,
             hash = "87305472f1729304b9a75b0f61f03013",
             name = "spell_shadow_cripple",
@@ -18331,6 +20797,7 @@ return {
             type = 1,
         },
         {
+            id   = 136136,
             file = 136136,
             hash = "689bc3175f2357edddfa247e73e26946",
             name = "spell_shadow_curse",
@@ -18338,6 +20805,7 @@ return {
             type = 1,
         },
         {
+            id   = 136137,
             file = 136137,
             hash = "34b618875ff028bb479d04c986207ec2",
             name = "spell_shadow_curseofachimonde",
@@ -18345,6 +20813,7 @@ return {
             type = 1,
         },
         {
+            id   = 136138,
             file = 136138,
             hash = "2ecf5939b47a7bdf54bb974c6971f255",
             name = "spell_shadow_curseofmannoroth",
@@ -18352,6 +20821,7 @@ return {
             type = 1,
         },
         {
+            id   = 136139,
             file = 136139,
             hash = "8711e6c8dd306006c3bf12d755093dda",
             name = "spell_shadow_curseofsargeras",
@@ -18359,6 +20829,7 @@ return {
             type = 1,
         },
         {
+            id   = 136140,
             file = 136140,
             hash = "fd54cca1da389b0959f0ac4605fbd06d",
             name = "spell_shadow_curseoftounges",
@@ -18366,6 +20837,7 @@ return {
             type = 1,
         },
         {
+            id   = 136141,
             file = 136141,
             hash = "32c007854be2a206e42b5d600e11d16e",
             name = "spell_shadow_darkritual",
@@ -18373,6 +20845,7 @@ return {
             type = 1,
         },
         {
+            id   = 136142,
             file = 136142,
             hash = "8c6e8d865e1576e5f0570bd7dadc4e2a",
             name = "spell_shadow_darksummoning",
@@ -18380,6 +20853,7 @@ return {
             type = 1,
         },
         {
+            id   = 136143,
             file = 136143,
             hash = "7c4568ac54542f7342a6c75a3204a348",
             name = "spell_shadow_deadofnight",
@@ -18387,6 +20861,7 @@ return {
             type = 1,
         },
         {
+            id   = 136144,
             file = 136144,
             hash = "879951cf9f09b7bb6f4749b612a8f34f",
             name = "spell_shadow_deathanddecay",
@@ -18394,6 +20869,7 @@ return {
             type = 1,
         },
         {
+            id   = 136145,
             file = 136145,
             hash = "ca2d91db480b106be969f7229a798041",
             name = "spell_shadow_deathcoil",
@@ -18401,6 +20877,7 @@ return {
             type = 1,
         },
         {
+            id   = 136146,
             file = 136146,
             hash = "64ccc208eff240929cf02e0e70833754",
             name = "spell_shadow_deathpact",
@@ -18408,6 +20885,7 @@ return {
             type = 1,
         },
         {
+            id   = 136147,
             file = 136147,
             hash = "a0c32f0795020847dff7e67de3f1f296",
             name = "spell_shadow_deathscream",
@@ -18415,6 +20893,7 @@ return {
             type = 1,
         },
         {
+            id   = 136148,
             file = 136148,
             hash = "75502d57361e7cc318271db32747e231",
             name = "spell_shadow_demonbreath",
@@ -18422,6 +20901,7 @@ return {
             type = 1,
         },
         {
+            id   = 136152,
             file = 136152,
             hash = "c030cd7d74e200b62244d55e34243a07",
             name = "spell_shadow_detectinvisibility",
@@ -18429,6 +20909,7 @@ return {
             type = 1,
         },
         {
+            id   = 136153,
             file = 136153,
             hash = "a05794cfb7f82d7f90274d707f70252c",
             name = "spell_shadow_detectlesserinvisibility",
@@ -18436,6 +20917,7 @@ return {
             type = 1,
         },
         {
+            id   = 136154,
             file = 136154,
             hash = "6a297b02b37bf2163faaaac616005a98",
             name = "spell_shadow_enslavedemon",
@@ -18443,6 +20925,7 @@ return {
             type = 1,
         },
         {
+            id   = 136155,
             file = 136155,
             hash = "417f9dd30b722917c72a9223731f4852",
             name = "spell_shadow_evileye",
@@ -18450,6 +20933,7 @@ return {
             type = 1,
         },
         {
+            id   = 136157,
             file = 136157,
             hash = "62907835ae76698cedd99b1350547f84",
             name = "spell_shadow_fingerofdeath",
@@ -18457,6 +20941,7 @@ return {
             type = 1,
         },
         {
+            id   = 136159,
             file = 136159,
             hash = "c8e38783335471a4ed18c496a2abf66e",
             name = "spell_shadow_fumble",
@@ -18464,6 +20949,7 @@ return {
             type = 1,
         },
         {
+            id   = 136160,
             file = 136160,
             hash = "574c78301797e61612c0d005b8fcd764",
             name = "spell_shadow_gathershadows",
@@ -18471,6 +20957,7 @@ return {
             type = 1,
         },
         {
+            id   = 136161,
             file = 136161,
             hash = "ac25a69f2ff944cecf2b7a377d477977",
             name = "spell_shadow_ghostkey",
@@ -18478,6 +20965,7 @@ return {
             type = 1,
         },
         {
+            id   = 136162,
             file = 136162,
             hash = "55c3abe8572fb6bbf88efb189c21351e",
             name = "spell_shadow_grimward",
@@ -18485,6 +20973,7 @@ return {
             type = 1,
         },
         {
+            id   = 136163,
             file = 136163,
             hash = "c9087d36839c9c3a4df7fa9fd4951b99",
             name = "spell_shadow_haunting",
@@ -18492,6 +20981,7 @@ return {
             type = 1,
         },
         {
+            id   = 136164,
             file = 136164,
             hash = "0696cd66da97c5739b1fa4e9ace83a03",
             name = "spell_shadow_impphaseshift",
@@ -18499,6 +20989,7 @@ return {
             type = 1,
         },
         {
+            id   = 136165,
             file = 136165,
             hash = "d7515ac093178062fbccc00b1408e4eb",
             name = "spell_shadow_improvedvampiricembrace",
@@ -18506,6 +20997,7 @@ return {
             type = 1,
         },
         {
+            id   = 136168,
             file = 136168,
             hash = "8c0c69186b74931d798dbd5b6a3f4d98",
             name = "spell_shadow_lifedrain",
@@ -18513,6 +21005,7 @@ return {
             type = 1,
         },
         {
+            id   = 136169,
             file = 136169,
             hash = "6dfe1dd4945de2dc307178704dd9f37c",
             name = "spell_shadow_lifedrain02",
@@ -18520,6 +21013,7 @@ return {
             type = 1,
         },
         {
+            id   = 136170,
             file = 136170,
             hash = "beb128978ca9da09a380274bb16dc588",
             name = "spell_shadow_manaburn",
@@ -18527,6 +21021,7 @@ return {
             type = 1,
         },
         {
+            id   = 136172,
             file = 136172,
             hash = "e72e33e28cc64110418acc63f6ed47c2",
             name = "spell_shadow_metamorphosis",
@@ -18534,6 +21029,7 @@ return {
             type = 1,
         },
         {
+            id   = 136173,
             file = 136173,
             hash = "c47de94b02da7b05abe09c186bf21f78",
             name = "spell_shadow_mindbomb",
@@ -18541,6 +21037,7 @@ return {
             type = 1,
         },
         {
+            id   = 136174,
             file = 136174,
             hash = "a2b90fe434281713a6f426fbc4463e33",
             name = "spell_shadow_mindrot",
@@ -18548,6 +21045,7 @@ return {
             type = 1,
         },
         {
+            id   = 136175,
             file = 136175,
             hash = "1b21ff1f13fc60cacd979d1c552cbaad",
             name = "spell_shadow_mindsteal",
@@ -18555,6 +21053,7 @@ return {
             type = 1,
         },
         {
+            id   = 136179,
             file = 136179,
             hash = "737242515b1a59b0fa8a0df9724c3188",
             name = "spell_shadow_nightofthedead",
@@ -18562,6 +21061,7 @@ return {
             type = 1,
         },
         {
+            id   = 136182,
             file = 136182,
             hash = "4c0883bd71da734d34fa4312b838814d",
             name = "spell_shadow_plaguecloud",
@@ -18569,6 +21069,7 @@ return {
             type = 1,
         },
         {
+            id   = 136183,
             file = 136183,
             hash = "5a62ead3a51ac639d5b90fc82d31bace",
             name = "spell_shadow_possession",
@@ -18576,6 +21077,7 @@ return {
             type = 1,
         },
         {
+            id   = 136184,
             file = 136184,
             hash = "0dba1b73efef4bdfbe0f11e6ebf4a84b",
             name = "spell_shadow_psychicscream",
@@ -18583,6 +21085,7 @@ return {
             type = 1,
         },
         {
+            id   = 136185,
             file = 136185,
             hash = "0425b3225a8eef1f00bff450e403fda1",
             name = "spell_shadow_ragingscream",
@@ -18590,6 +21093,7 @@ return {
             type = 1,
         },
         {
+            id   = 136186,
             file = 136186,
             hash = "6a2fe42f2a5c8a9efb5814a1c7802d2a",
             name = "spell_shadow_rainoffire",
@@ -18597,6 +21101,7 @@ return {
             type = 1,
         },
         {
+            id   = 136187,
             file = 136187,
             hash = "4e3cf77eeea0378c6560da2f469abb6e",
             name = "spell_shadow_raisedead",
@@ -18604,6 +21109,7 @@ return {
             type = 1,
         },
         {
+            id   = 136188,
             file = 136188,
             hash = "e9f32ce36112e45a59831f281b0126d4",
             name = "spell_shadow_requiem",
@@ -18611,6 +21117,7 @@ return {
             type = 1,
         },
         {
+            id   = 136189,
             file = 136189,
             hash = "d7da03fbfb15e6da72c13ebcdcdff0e9",
             name = "spell_shadow_ritualofsacrifice",
@@ -18618,6 +21125,7 @@ return {
             type = 1,
         },
         {
+            id   = 136190,
             file = 136190,
             hash = "88c684c72db1c15de834e81ed5be9086",
             name = "spell_shadow_sacrificialshield",
@@ -18625,6 +21133,7 @@ return {
             type = 1,
         },
         {
+            id   = 136191,
             file = 136191,
             hash = "059060d3b88e729a0341ef4cc632779b",
             name = "spell_shadow_scourgebuild",
@@ -18632,6 +21141,7 @@ return {
             type = 1,
         },
         {
+            id   = 136192,
             file = 136192,
             hash = "867be9d4920425c7cccfe423e855131e",
             name = "spell_shadow_sealofkings",
@@ -18639,6 +21149,7 @@ return {
             type = 1,
         },
         {
+            id   = 136195,
             file = 136195,
             hash = "62f50adb590dc115d6997d79b68c0f80",
             name = "spell_shadow_shadetruesight",
@@ -18646,6 +21157,7 @@ return {
             type = 1,
         },
         {
+            id   = 136197,
             file = 136197,
             hash = "ef072c1c3757b7245ebbf189e16ea12e",
             name = "spell_shadow_shadowbolt",
@@ -18653,6 +21165,7 @@ return {
             type = 1,
         },
         {
+            id   = 136200,
             file = 136200,
             hash = "e8c19494d32f30bcb40e7f4e9555d5d0",
             name = "spell_shadow_shadowform",
@@ -18660,6 +21173,7 @@ return {
             type = 1,
         },
         {
+            id   = 136203,
             file = 136203,
             hash = "e052b8197ccd980d9aa7d36fad520bfc",
             name = "spell_shadow_shadowpact",
@@ -18667,6 +21181,7 @@ return {
             type = 1,
         },
         {
+            id   = 136205,
             file = 136205,
             hash = "082696d1de0a5ed5c2d74e1cc2488200",
             name = "spell_shadow_shadowward",
@@ -18674,6 +21189,7 @@ return {
             type = 1,
         },
         {
+            id   = 136206,
             file = 136206,
             hash = "003a3f33ba63c40b626c356c00ff1b11",
             name = "spell_shadow_shadowworddominate",
@@ -18681,6 +21197,7 @@ return {
             type = 1,
         },
         {
+            id   = 136207,
             file = 136207,
             hash = "8356ac913d16806aec29dc0f7982dcd2",
             name = "spell_shadow_shadowwordpain",
@@ -18688,6 +21205,7 @@ return {
             type = 1,
         },
         {
+            id   = 136208,
             file = 136208,
             hash = "9dcdd7e72c1a3f23e39f91435be279ab",
             name = "spell_shadow_siphonmana",
@@ -18695,6 +21213,7 @@ return {
             type = 1,
         },
         {
+            id   = 136209,
             file = 136209,
             hash = "e940e779b13988c72b2bcbf8cebaf254",
             name = "spell_shadow_soothingkiss",
@@ -18702,6 +21221,7 @@ return {
             type = 1,
         },
         {
+            id   = 136210,
             file = 136210,
             hash = "e570a21e76c7f0988265473bb8a0d8e9",
             name = "spell_shadow_soulgem",
@@ -18709,6 +21229,7 @@ return {
             type = 1,
         },
         {
+            id   = 136215,
             file = 136215,
             hash = "105ef2e482151ca63f7dcbf55890094f",
             name = "spell_shadow_spectralsight",
@@ -18716,6 +21237,7 @@ return {
             type = 1,
         },
         {
+            id   = 136217,
             file = 136217,
             hash = "dc4c4d2c770bdbe55c539c08492402cc",
             name = "spell_shadow_summonfelhunter",
@@ -18723,6 +21245,7 @@ return {
             type = 1,
         },
         {
+            id   = 136218,
             file = 136218,
             hash = "1501cb0f9231cc3a0cb72f3d8f0facbd",
             name = "spell_shadow_summonimp",
@@ -18730,6 +21253,7 @@ return {
             type = 1,
         },
         {
+            id   = 136219,
             file = 136219,
             hash = "aefbba1f3e4a1efb8134875269c22ab9",
             name = "spell_shadow_summoninfernal",
@@ -18737,6 +21261,7 @@ return {
             type = 1,
         },
         {
+            id   = 136220,
             file = 136220,
             hash = "8b7b030140eb91b6cbd6c4994485d6c2",
             name = "spell_shadow_summonsuccubus",
@@ -18744,6 +21269,7 @@ return {
             type = 1,
         },
         {
+            id   = 136221,
             file = 136221,
             hash = "49e95c2b97a784897bf0fcb0ec5871b5",
             name = "spell_shadow_summonvoidwalker",
@@ -18751,6 +21277,7 @@ return {
             type = 1,
         },
         {
+            id   = 136222,
             file = 136222,
             hash = "7f480cc9e592e6ac9b8982146aae8342",
             name = "spell_shadow_teleport",
@@ -18758,6 +21285,7 @@ return {
             type = 1,
         },
         {
+            id   = 136223,
             file = 136223,
             hash = "d4392cecefe97e21c5fe3142f9249205",
             name = "spell_shadow_twilight",
@@ -18765,6 +21293,7 @@ return {
             type = 1,
         },
         {
+            id   = 136224,
             file = 136224,
             hash = "b7f7257e3bd99f4a87a981d340081629",
             name = "spell_shadow_unholyfrenzy",
@@ -18772,6 +21301,7 @@ return {
             type = 1,
         },
         {
+            id   = 136225,
             file = 136225,
             hash = "e48e76d080925d3b82c15621b41a4bef",
             name = "spell_shadow_unholystrength",
@@ -18779,6 +21309,7 @@ return {
             type = 1,
         },
         {
+            id   = 136230,
             file = 136230,
             hash = "30c276c333f116fd2e847681298aa65c",
             name = "spell_shadow_unsummonbuilding",
@@ -18786,6 +21317,7 @@ return {
             type = 1,
         },
         {
+            id   = 136231,
             file = 136231,
             hash = "7b1f322e08129b22a5e524031ed4a42c",
             name = "spell_shadow_vampiricaura",
@@ -18793,6 +21325,7 @@ return {
             type = 1,
         },
         {
+            id   = 136232,
             file = 136232,
             hash = "d9c1e86732488f4226aa406779bfee6c",
             name = "spell_totem_wardofdraining",
@@ -18800,6 +21333,7 @@ return {
             type = 1,
         },
         {
+            id   = 136235,
             file = 136235,
             hash = "3d8880c8f482138e234166373b948c2f",
             name = "temp",
@@ -18807,6 +21341,7 @@ return {
             type = 1,
         },
         {
+            id   = 136240,
             file = 136240,
             hash = "756c373c1280baa815d7c72b2953b756",
             name = "trade_alchemy",
@@ -18814,6 +21349,7 @@ return {
             type = 1,
         },
         {
+            id   = 136241,
             file = 136241,
             hash = "86cb55dcd5e435781ae18b4d52bdd2d2",
             name = "trade_blacksmithing",
@@ -18821,6 +21357,7 @@ return {
             type = 1,
         },
         {
+            id   = 136242,
             file = 136242,
             hash = "291dc2cfcafc3f07347d589474879089",
             name = "trade_brewpoison",
@@ -18828,6 +21365,7 @@ return {
             type = 1,
         },
         {
+            id   = 136243,
             file = 136243,
             hash = "50afc99dcea2d42655714b30aef327ab",
             name = "trade_engineering",
@@ -18835,6 +21373,7 @@ return {
             type = 1,
         },
         {
+            id   = 136244,
             file = 136244,
             hash = "94ad6c8e4993d534914a2ff99bc01ad4",
             name = "trade_engraving",
@@ -18842,6 +21381,7 @@ return {
             type = 1,
         },
         {
+            id   = 136245,
             file = 136245,
             hash = "9a40f31204359a7ee5055352d1e4bbfc",
             name = "trade_fishing",
@@ -18849,6 +21389,7 @@ return {
             type = 1,
         },
         {
+            id   = 136246,
             file = 136246,
             hash = "5dab17d3bcdf1b3a14479bbae21761fb",
             name = "trade_herbalism",
@@ -18856,6 +21397,7 @@ return {
             type = 1,
         },
         {
+            id   = 136247,
             file = 136247,
             hash = "f41a2bedcb2284f6a05737999082d62a",
             name = "trade_leatherworking",
@@ -18863,6 +21405,7 @@ return {
             type = 1,
         },
         {
+            id   = 136248,
             file = 136248,
             hash = "be8c9bfebd1df0a8d31a1196c9cb841a",
             name = "trade_mining",
@@ -18870,6 +21413,7 @@ return {
             type = 1,
         },
         {
+            id   = 136249,
             file = 136249,
             hash = "157a9c5fe1cb940eb64758ccfae8d5cf",
             name = "trade_tailoring",
@@ -18877,20 +21421,127 @@ return {
             type = 1,
         },
         {
-            file = 2056011,
-            hash = "bfaff218a1e373a0697d0176ebb92198",
-            name = "ui_chat",
+            id   = 236444,
+            file = 236444,
+            hash = "f1b9afcb827dd2dcaf6425930d8f9c2b",
+            name = "achievement_character_dwarf_male",
             size = { h = 64, w = 64 },
             type = 1,
         },
         {
-            file = 1530081,
-            hash = "cb5192f1cd588fc310a28b94a695434e",
-            name = "vas_charactertransfer",
+            id   = 236449,
+            file = 236449,
+            hash = "c75dae0bf3380aa7ea5dc6facaf94679",
+            name = "achievement_character_nightelf_female",
             size = { h = 64, w = 64 },
             type = 1,
         },
         {
+            id   = 236456,
+            file = 236456,
+            hash = "e09da4c53aa432cea1dce57ad5964096",
+            name = "achievement_character_troll_male",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 413583,
+            file = 413583,
+            hash = "8ebec1a8a93edfa4f1f5e9f16b52c736",
+            name = "achievement_guildperk_havegroup willtravel",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 442272,
+            file = 442272,
+            hash = "383e5cce8e755565b32d1f51dbddcfb3",
+            name = "achievement_guildperk_everybodysfriend",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 464820,
+            file = 464820,
+            hash = "08766a9dd366031ea8d48093bb40a926",
+            name = "achievement_general_stayclassy",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 625999,
+            file = 625999,
+            hash = "8825f88cd07d0bd13acfad1151241323",
+            name = "classicon_druid",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626000,
+            file = 626000,
+            hash = "381f4fa41e171bc7088db67cbb4bb1a9",
+            name = "classicon_hunter",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626001,
+            file = 626001,
+            hash = "f795af48b5fb75a5222a9c830f245513",
+            name = "classicon_mage",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626003,
+            file = 626003,
+            hash = "bada413372556337b425f34a49e58012",
+            name = "classicon_paladin",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626004,
+            file = 626004,
+            hash = "84a51c556a7a4c1cfe20e4d18e2fbe9a",
+            name = "classicon_priest",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626005,
+            file = 626005,
+            hash = "3bfa7ca86bd6d5b963f825f570988808",
+            name = "classicon_rogue",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626006,
+            file = 626006,
+            hash = "f1ebf32ddd2b7bd2a0ae4898e93ff7a3",
+            name = "classicon_shaman",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626007,
+            file = 626007,
+            hash = "a888d617cd85828ac637fe5dc55e807f",
+            name = "classicon_warlock",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 626008,
+            file = 626008,
+            hash = "deaed333a393b37b784040561594e02f",
+            name = "classicon_warrior",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 1120721,
             file = 1120721,
             hash = "9f0fc8ccee7b2a453587edf9f14c6ab6",
             name = "wow_token01",
@@ -18898,1827 +21549,2367 @@ return {
             type = 1,
         },
         {
+            id   = 1121394,
             file = 1121394,
             hash = "18e8f2dae9ef39d89d3305efd69eae49",
             name = "wow_token02",
             size = { h = 64, w = 64 },
             type = 1,
         },
+        {
+            id   = 1530081,
+            file = 1530081,
+            hash = "cb5192f1cd588fc310a28b94a695434e",
+            name = "vas_charactertransfer",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 2056011,
+            file = 2056011,
+            hash = "bfaff218a1e373a0697d0176ebb92198",
+            name = "ui_chat",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 2241756,
+            file = 2241756,
+            hash = "86891b9f3abd7e843fdc60e3e12af8be",
+            name = "inv_scarab_ivory",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 2245030,
+            file = 2245030,
+            hash = "c328d9d695b4d5244014d641c43a3cad",
+            name = "inv_mace23",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 2245099,
+            file = 2245099,
+            hash = "ad6de524d253ebeec348dcf19176559b",
+            name = "inv_mace_22",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 2147490185,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-bloodelf-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490186,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-draenei-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490187,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-draenei-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490188,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-dwarf-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490189,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-dwarf-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490190,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-gnome-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490191,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-gnome-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490192,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-goblin-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490193,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-human-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490194,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-human-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490195,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-nightelf-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490196,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-nightelf-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490197,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-orc-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490198,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-orc-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490199,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-pandaren-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490200,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-pandaren-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490201,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-tauren-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490202,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-tauren-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490203,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-troll-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490204,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-troll-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490205,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-undead-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490206,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-undead-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490207,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-worgen-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490208,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-worgen-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490668,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-voidelf-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490669,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-goblin-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490670,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-nightborne-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490671,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-lightforged-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490672,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-nightborne-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490673,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-highmountain-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490674,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-voidelf-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490675,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-lightforged-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490676,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-bloodelf-female",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
+        {
+            id   = 2147490677,
+            file = 1662186,
+            hash = "d04e581b728fea7103967425e94adf2d",
+            name = "raceicon-highmountain-male",
+            size = { h = 64, w = 64 },
+            type = 2,
+        },
     },
     music = {
         {
+            file = 53183,
             hash = "d16f830d4c8fec254b41b03a91224540",
-            id = 53183,
-            kits = {
-                "menu-credits01_02_01",
-                "moment-darnassus intro_01",
+            name = {
+                "sound/music/citymusic/darnassus/darnassus intro.mp3",
+                "darnassus_intro",
+                "moment_darnassus_intro",
             },
-            name = "citymusic/darnassus/darnassus intro",
+            path = "sound/music/citymusic/darnassus/darnassus intro.mp3",
             time = 39.923125,
         },
         {
+            file = 53184,
             hash = "866b1773a5ce7de891b09110aa1a6d42",
-            id = 53184,
-            kits = {
-                "zone-darnassus_01",
+            name = {
+                "sound/music/citymusic/darnassus/darnassus walking 1.mp3",
+                "zone_darnassus",
             },
-            name = "citymusic/darnassus/darnassus walking 1",
+            path = "sound/music/citymusic/darnassus/darnassus walking 1.mp3",
             time = 85.010438,
         },
         {
+            file = 53185,
             hash = "4bc10c16046fc30a8c99d7cae776e1d7",
-            id = 53185,
-            kits = {
-                "zone-darnassus_02",
+            name = {
+                "sound/music/citymusic/darnassus/darnassus walking 2.mp3",
+                "zone_darnassus_02",
             },
-            name = "citymusic/darnassus/darnassus walking 2",
+            path = "sound/music/citymusic/darnassus/darnassus walking 2.mp3",
             time = 69.493688,
         },
         {
+            file = 53186,
             hash = "e0903ecb327a5b80492791b3777524e2",
-            id = 53186,
-            kits = {
-                "moment-darnassus walking03_01",
-                "zone-darnassus_03",
+            name = {
+                "sound/music/citymusic/darnassus/darnassus walking 3.mp3",
+                "moment_darnassus_walking",
+                "zone_darnassus_03",
             },
-            name = "citymusic/darnassus/darnassus walking 3",
+            path = "sound/music/citymusic/darnassus/darnassus walking 3.mp3",
             time = 67.639,
         },
         {
+            file = 53187,
             hash = "95cf3cde49fb9b0032f0e132cf183f0b",
-            id = 53187,
-            kits = {
-                "moment-druidgrove_01",
+            name = {
+                "sound/music/citymusic/darnassus/druid grove.mp3",
+                "druid_grove",
+                "moment_druidgrove",
             },
-            name = "citymusic/darnassus/druid grove",
+            path = "sound/music/citymusic/darnassus/druid grove.mp3",
             time = 44.886375,
         },
         {
+            file = 53188,
             hash = "de2db6a16983cdbd301b5545704d39f0",
-            id = 53188,
-            kits = {
-                "moment-warriorterrace_01",
+            name = {
+                "sound/music/citymusic/darnassus/warrior terrace.mp3",
+                "moment_warriorterrace",
+                "raid_warrior_terrace",
+                "warrior_terrace",
             },
-            name = "citymusic/darnassus/warrior terrace",
+            path = "sound/music/citymusic/darnassus/warrior terrace.mp3",
             time = 53.4545,
         },
         {
+            file = 53189,
             hash = "35aafedaa7f6aeb415bdb0fb03f7dcdd",
-            id = 53189,
-            kits = {
-                "zone-gnomeragon_01",
+            name = {
+                "sound/music/citymusic/gnomeragon/gnomeragon01-zone.mp3",
+                "zone_gnomeragon_day",
             },
-            name = "citymusic/gnomeragon/gnomeragon01-zone",
+            path = "sound/music/citymusic/gnomeragon/gnomeragon01-zone.mp3",
             time = 64.556563,
         },
         {
+            file = 53190,
             hash = "9f302b3b1f2b3183cbc758e46f51b1a5",
-            id = 53190,
-            kits = {
-                "zone-gnomeragon_02",
+            name = {
+                "sound/music/citymusic/gnomeragon/gnomeragon02-zone.mp3",
+                "zone_gnomeragon_day_02",
             },
-            name = "citymusic/gnomeragon/gnomeragon02-zone",
+            path = "sound/music/citymusic/gnomeragon/gnomeragon02-zone.mp3",
             time = 64.81775,
         },
         {
+            file = 53191,
             hash = "515e825ad2f2dde6a940e97a9ea01d73",
-            id = 53191,
-            kits = {
-                "ironforge intro_01",
-                "menu-credits01_04_01",
-                "zone-ironforge intro_01",
+            name = {
+                "sound/music/citymusic/ironforge/ironforge intro.mp3",
+                "ironforge_city_intro",
+                "zone_ironforge_intro",
             },
-            name = "citymusic/ironforge/ironforge intro",
+            path = "sound/music/citymusic/ironforge/ironforge intro.mp3",
             time = 86.159813,
         },
         {
+            file = 53192,
             hash = "6b1dcaa4e4ef0a6c27d90286ebcdc37e",
-            id = 53192,
-            kits = {
-                "zone-ironforge_01",
+            name = {
+                "sound/music/citymusic/ironforge/ironforge walking 01.mp3",
+                "zone_ironforge",
             },
-            name = "citymusic/ironforge/ironforge walking 01",
+            path = "sound/music/citymusic/ironforge/ironforge walking 01.mp3",
             time = 123.410438,
         },
         {
+            file = 53193,
             hash = "71509e54801b28a4296183f251923e21",
-            id = 53193,
-            kits = {
-                "moment-kingstheme_01",
+            name = {
+                "sound/music/citymusic/ironforge/ironforge walking 02.mp3",
+                "ironforge_king",
+                "moment_kingstheme",
             },
-            name = "citymusic/ironforge/ironforge walking 02",
+            path = "sound/music/citymusic/ironforge/ironforge walking 02.mp3",
             time = 50.476563,
         },
         {
+            file = 53194,
             hash = "05b0e47408d1691a715ada58e2a341ae",
-            id = 53194,
-            kits = {
-                "moment-monestery_01",
-                "zone-dwarf outpost_01",
-                "zone-ironforge_02",
+            name = {
+                "sound/music/citymusic/ironforge/ironforge walking 03 (glenn).mp3",
+                "zone_dwarf_outpost_day",
+                "zone_dwarf_outpost_night",
+                "zone_ironforge_02",
+                "zone_monestery",
             },
-            name = "citymusic/ironforge/ironforge walking 03 (glenn)",
+            path = "sound/music/citymusic/ironforge/ironforge walking 03 (glenn).mp3",
             time = 81.196563,
         },
         {
+            file = 53195,
             hash = "632967d506404135a0ca07b641cfab8b",
-            id = 53195,
-            kits = {
-                "moment-monestery_02",
-                "zone-dwarf outpost_02",
-                "zone-ironforge_03",
+            name = {
+                "sound/music/citymusic/ironforge/ironforge walking 04.mp3",
+                "zone_dwarf_outpost_day_02",
+                "zone_dwarf_outpost_night_02",
+                "zone_ironforge_03",
+                "zone_monestery_02",
             },
-            name = "citymusic/ironforge/ironforge walking 04",
+            path = "sound/music/citymusic/ironforge/ironforge walking 04.mp3",
             time = 70.277375,
         },
         {
+            file = 53196,
             hash = "901a1ced7c8859aeef1c5620c072c947",
-            id = 53196,
-            kits = {
-                "menu-credits01_06_01",
-                "zone-tinkertown intro_01",
+            name = {
+                "sound/music/citymusic/ironforge/tinkertownintro_moment.mp3",
+                "zone_tinkertown_intro",
             },
-            name = "citymusic/ironforge/tinkertownintro_moment",
+            path = "sound/music/citymusic/ironforge/tinkertownintro_moment.mp3",
             time = 51.91325,
         },
         {
+            file = 53197,
             hash = "86cc7f744da85c686250b4c3981c4335",
-            id = 53197,
-            kits = {
-                "moment-orgrimmar01_01",
-                "moment-orgrimmar_01",
-                "zone music day orgrimmar city_01",
+            name = {
+                "sound/music/citymusic/orgrimmar/orgrimmar01-moment.mp3",
+                "moment_orgrimmar",
+                "moment_orgrimmar_02",
+                "orgrimmar_walking",
             },
-            name = "citymusic/orgrimmar/orgrimmar01-moment",
+            path = "sound/music/citymusic/orgrimmar/orgrimmar01-moment.mp3",
             time = 68.8849,
         },
         {
+            file = 53198,
             hash = "ac4f30558a634ce42fd507ac7489a267",
-            id = 53198,
-            kits = {
-                "zone-crossroads_01",
-                "zone-orgrimmar_01",
+            name = {
+                "sound/music/citymusic/orgrimmar/orgrimmar01-zone.mp3",
+                "zone_crossroads",
+                "zone_orgrimmar",
             },
-            name = "citymusic/orgrimmar/orgrimmar01-zone",
+            path = "sound/music/citymusic/orgrimmar/orgrimmar01-zone.mp3",
             time = 68.8913,
         },
         {
+            file = 53199,
             hash = "f92492a732057d609134034b9689d798",
-            id = 53199,
-            kits = {
-                "moment - orgrimmar02_01",
-                "moment-orgrimmar_02",
+            name = {
+                "sound/music/citymusic/orgrimmar/orgrimmar02-moment.mp3",
+                "moment_orgrimmar_03",
+                "moment_orgrimmar_04",
             },
-            name = "citymusic/orgrimmar/orgrimmar02-moment",
+            path = "sound/music/citymusic/orgrimmar/orgrimmar02-moment.mp3",
             time = 62.33455,
         },
         {
+            file = 53200,
             hash = "e8ead28536b6841c29dc1238cbb7aa05",
-            id = 53200,
-            kits = {
-                "zone - orgrimmar02_01",
-                "zone-crossroads_02",
-                "zone-orgrimmar_02",
+            name = {
+                "sound/music/citymusic/orgrimmar/orgrimmar02-zone.mp3",
+                "zone_crossroads_02",
+                "zone_orgrimmar_02",
+                "zone_orgrmmar",
             },
-            name = "citymusic/orgrimmar/orgrimmar02-zone",
+            path = "sound/music/citymusic/orgrimmar/orgrimmar02-zone.mp3",
             time = 62.33455,
         },
         {
+            file = 53201,
             hash = "458a60708f4d381fe0534dedf47a6c8e",
-            id = 53201,
-            kits = {
-                "menu-credits01_01_01",
-                "moment-orgrimmar intro_01",
+            name = {
+                "sound/music/citymusic/orgrimmar/orgrimmar_intro-moment.mp3",
+                "moment_orgrimmar_intro",
+                "orgrimmar_intro",
             },
-            name = "citymusic/orgrimmar/orgrimmar_intro-moment",
+            path = "sound/music/citymusic/orgrimmar/orgrimmar_intro-moment.mp3",
             time = 40.1827,
         },
         {
+            file = 53202,
             hash = "d951841cd82fa59baffb2e31134ca29c",
-            id = 53202,
-            kits = {
-                "moment-stormwind01_01",
-                "zone-stormwind_01",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind01-moment.mp3",
+                "moment_stormwind",
+                "stormwind",
+                "zone_stormwind",
             },
-            name = "citymusic/stormwind/stormwind01-moment",
+            path = "sound/music/citymusic/stormwind/stormwind01-moment.mp3",
             time = 54.8049,
         },
         {
+            file = 53203,
             hash = "dda800e88442a0e4c28837bbb34f8a60",
-            id = 53203,
-            kits = {
-                "moment-stormwind02_01",
-                "zone-stormwind_02",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind02-moment.mp3",
+                "moment_stormwind_02",
+                "stormwind_02",
+                "zone_stormwind_02",
             },
-            name = "citymusic/stormwind/stormwind02-moment",
+            path = "sound/music/citymusic/stormwind/stormwind02-moment.mp3",
             time = 35.55265,
         },
         {
+            file = 53204,
             hash = "0d23be1e0e07a1eb5e959a00f4703a57",
-            id = 53204,
-            kits = {
-                "moment-stormwind03_01",
-                "zone-stormwind_03",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind03-moment.mp3",
+                "moment_stormwind_03",
+                "stormwind_03",
+                "zone_stormwind_03",
             },
-            name = "citymusic/stormwind/stormwind03-moment",
+            path = "sound/music/citymusic/stormwind/stormwind03-moment.mp3",
             time = 69.91005,
         },
         {
+            file = 53205,
             hash = "7e4270f27e980a335c803fe1952e4ead",
-            id = 53205,
-            kits = {
-                "zone-stormwind_04",
-                "zone-stormwindcave_01",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind04-zone.mp3",
+                "zone_stormwind_04",
             },
-            name = "citymusic/stormwind/stormwind04-zone",
+            path = "sound/music/citymusic/stormwind/stormwind04-zone.mp3",
             time = 62.30205,
         },
         {
+            file = 53206,
             hash = "457fac0107d71e54034e81e826f82ef0",
-            id = 53206,
-            kits = {
-                "zone-stormwind_05",
-                "zone-stormwindcave_02",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind05-zone.mp3",
+                "zone_stormwind_05",
             },
-            name = "citymusic/stormwind/stormwind05-zone",
+            path = "sound/music/citymusic/stormwind/stormwind05-zone.mp3",
             time = 61.0023,
         },
         {
+            file = 53207,
             hash = "221f86f2d2b70782d7a7fc9735dd8223",
-            id = 53207,
-            kits = {
-                "zone-stormwind_06",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind06-zone.mp3",
+                "zone_stormwind_06",
             },
-            name = "citymusic/stormwind/stormwind06-zone",
+            path = "sound/music/citymusic/stormwind/stormwind06-zone.mp3",
             time = 53.6555,
         },
         {
+            file = 53208,
             hash = "c3fb75934e43bd90be55acad9c57293a",
-            id = 53208,
-            kits = {
-                "moment-stormwind07_01",
-                "zone-stormwind_07",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind07-zone.mp3",
+                "moment_stormwind_04",
+                "stormwind_04",
+                "zone_stormwind_07",
             },
-            name = "citymusic/stormwind/stormwind07-zone",
+            path = "sound/music/citymusic/stormwind/stormwind07-zone.mp3",
             time = 86.98775,
         },
         {
+            file = 53209,
             hash = "2a9189b41124018e4de8a03873cfb91f",
-            id = 53209,
-            kits = {
-                "moment-stormwind08_01",
-                "zone-stormwind_08",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind08-zone.mp3",
+                "moment_stormwind_05",
+                "stormwind_05",
+                "zone_stormwind_08",
             },
-            name = "citymusic/stormwind/stormwind08-zone",
+            path = "sound/music/citymusic/stormwind/stormwind08-zone.mp3",
             time = 77.304313,
         },
         {
+            file = 53210,
             hash = "62ea50da18db419eb0bd497c3a03fe34",
-            id = 53210,
-            kits = {
-                "moment-stormwindsouthseas_01",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind_highseas-moment.mp3",
+                "moment_stormwindsouthseas",
+                "stormwind_southseas",
             },
-            name = "citymusic/stormwind/stormwind_highseas-moment",
+            path = "sound/music/citymusic/stormwind/stormwind_highseas-moment.mp3",
             time = 133.06775,
         },
         {
+            file = 53211,
             hash = "cb8bcaab572436ebb5800722322cba68",
-            id = 53211,
-            kits = {
-                "menu-credits01_00_01",
-                "moment-valleyofheros intro_01",
+            name = {
+                "sound/music/citymusic/stormwind/stormwind_intro-moment.mp3",
+                "moment_valleyofheros",
+                "valley_of_heroes",
             },
-            name = "citymusic/stormwind/stormwind_intro-moment",
+            path = "sound/music/citymusic/stormwind/stormwind_intro-moment.mp3",
             time = 66.74285,
         },
         {
+            file = 53212,
             hash = "fcce0f1094439c8f37e333dfa856ef01",
-            id = 53212,
-            kits = {
-                "menu-credits01_05_01",
-                "zone-thunderbluff intro_01",
+            name = {
+                "sound/music/citymusic/thunderbluff/thunderbluff intro.mp3",
+                "thunderbluff_intro",
+                "zone_thunderbluff_intro",
             },
-            name = "citymusic/thunderbluff/thunderbluff intro",
+            path = "sound/music/citymusic/thunderbluff/thunderbluff intro.mp3",
             time = 46.088,
         },
         {
+            file = 53213,
             hash = "5a79c2b9256f92910cce05043fed08d5",
-            id = 53213,
-            kits = {
-                "zone-thunderbluff_01",
+            name = {
+                "sound/music/citymusic/thunderbluff/thunderbluff walking 01.mp3",
+                "zone_thunderbluff",
             },
-            name = "citymusic/thunderbluff/thunderbluff walking 01",
+            path = "sound/music/citymusic/thunderbluff/thunderbluff walking 01.mp3",
             time = 117.480625,
         },
         {
+            file = 53214,
             hash = "c83aa9481e614e76f97242f1e0420b6e",
-            id = 53214,
-            kits = {
-                "zone-thunderbluff_02",
+            name = {
+                "sound/music/citymusic/thunderbluff/thunderbluff walking 02.mp3",
+                "zone_thunderbluff_02",
             },
-            name = "citymusic/thunderbluff/thunderbluff walking 02",
+            path = "sound/music/citymusic/thunderbluff/thunderbluff walking 02.mp3",
             time = 116.33125,
         },
         {
+            file = 53215,
             hash = "2454dd78a5d99e88ab57ea49a8d82cdd",
-            id = 53215,
-            kits = {
-                "zone-crossroads_03",
-                "zone-thunderbluff_03",
+            name = {
+                "sound/music/citymusic/thunderbluff/thunderbluff walking 03.mp3",
+                "zone_crossroads_03",
+                "zone_thunderbluff_03",
             },
-            name = "citymusic/thunderbluff/thunderbluff walking 03",
+            path = "sound/music/citymusic/thunderbluff/thunderbluff walking 03.mp3",
             time = 121.55575,
         },
         {
+            file = 53216,
             hash = "9029f8766a103374b3562c15ca817b8f",
-            id = 53216,
-            kits = {
-                "zone-undercity_01",
+            name = {
+                "sound/music/citymusic/undercity/undercity01-zone.mp3",
+                "zone_undercity",
             },
-            name = "citymusic/undercity/undercity01-zone",
+            path = "sound/music/citymusic/undercity/undercity01-zone.mp3",
             time = 67.038188,
         },
         {
+            file = 53217,
             hash = "1aa9bfc76b86979a55777be024782253",
-            id = 53217,
-            kits = {
-                "zone-undercity_02",
+            name = {
+                "sound/music/citymusic/undercity/undercity02-zone.mp3",
+                "zone_undercity_02",
             },
-            name = "citymusic/undercity/undercity02-zone",
+            path = "sound/music/citymusic/undercity/undercity02-zone.mp3",
             time = 85.637375,
         },
         {
+            file = 53218,
             hash = "f70ef7b8879696c580595cd084a9c396",
-            id = 53218,
-            kits = {
-                "zone-undercity_03",
+            name = {
+                "sound/music/citymusic/undercity/undercity03-zone.mp3",
+                "zone_undercity_03",
             },
-            name = "citymusic/undercity/undercity03-zone",
+            path = "sound/music/citymusic/undercity/undercity03-zone.mp3",
             time = 75.4235,
         },
         {
+            file = 53219,
             hash = "2da90eb4a1b87ba96b9e03beee561f91",
-            id = 53219,
-            kits = {
-                "menu-credits01_03_01",
-                "zone - undercity intro_01",
+            name = {
+                "sound/music/citymusic/undercity/undercityintro-moment.mp3",
+                "undercity",
+                "zone_undercity_intro",
             },
-            name = "citymusic/undercity/undercityintro-moment",
+            path = "sound/music/citymusic/undercity/undercityintro-moment.mp3",
             time = 28.847125,
         },
         {
+            file = 53223,
             hash = "6859c435f00eb1b1b73361e2318bef6a",
-            id = 53223,
-            kits = {
-                "mus_1.0_maintitle_original_01",
+            name = {
+                "sound/music/gluescreenmusic/wow_main_theme.mp3",
             },
-            name = "gluescreenmusic/wow_main_theme",
+            path = "sound/music/gluescreenmusic/wow_main_theme.mp3",
             time = 161.2864,
         },
         {
+            file = 53224,
             hash = "87226504a8b91db205dfa01d6db988e0",
-            id = 53224,
-            kits = {
-                "moment-angelic01_01",
+            name = {
+                "sound/music/musical moments/angelic/angelic01.mp3",
+                "angelic",
+                "moment_angelic",
             },
-            name = "musical moments/angelic/angelic01",
+            path = "sound/music/musical moments/angelic/angelic01.mp3",
             time = 47.91495,
         },
         {
+            file = 53225,
             hash = "fc6e8b16d930ae9d3dbd41060c3b1bcc",
-            id = 53225,
-            kits = {
-                "moment - battle01_01",
-                "moment-battle02_01",
+            name = {
+                "sound/music/musical moments/battle/battle01.mp3",
+                "battle",
+                "moment_battle",
+                "raid_battle",
             },
-            name = "musical moments/battle/battle01",
+            path = "sound/music/musical moments/battle/battle01.mp3",
             time = 48.22845,
         },
         {
+            file = 53226,
             hash = "f92492a732057d609134034b9689d798",
-            id = 53226,
-            kits = {
-                "moment - battle02_01",
-                "moment-battle02_02",
+            name = {
+                "sound/music/musical moments/battle/battle02.mp3",
+                "battle_02",
+                "moment_battle_02",
+                "raid_battle_02",
             },
-            name = "musical moments/battle/battle02",
+            path = "sound/music/musical moments/battle/battle02.mp3",
             time = 62.33455,
         },
         {
+            file = 53227,
             hash = "3f066646380abce043dc68402f2e533e",
-            id = 53227,
-            kits = {
-                "moment - battle03_01",
-                "moment-battle02_03",
+            name = {
+                "sound/music/musical moments/battle/battle03.mp3",
+                "battle_03",
+                "moment_battle_03",
+                "raid_battle_03",
             },
-            name = "musical moments/battle/battle03",
+            path = "sound/music/musical moments/battle/battle03.mp3",
             time = 27.27825,
         },
         {
+            file = 53228,
             hash = "b1a7c0645a2767b88fbbd3e0e1133a7e",
-            id = 53228,
-            kits = {
-                "moment - battle04_01",
-                "moment-battle02_04",
+            name = {
+                "sound/music/musical moments/battle/battle04.mp3",
+                "battle_04",
+                "moment_battle_04",
+                "raid_battle_04",
             },
-            name = "musical moments/battle/battle04",
+            path = "sound/music/musical moments/battle/battle04.mp3",
             time = 36.2905,
         },
         {
+            file = 53229,
             hash = "eaff6ad4c7d40842955a87d230aab501",
-            id = 53229,
-            kits = {
-                "moment - battle05_01",
+            name = {
+                "sound/music/musical moments/battle/battle05.mp3",
+                "battle_05",
+                "moment_battle_05",
+                "raid_battle_05",
             },
-            name = "musical moments/battle/battle05",
+            path = "sound/music/musical moments/battle/battle05.mp3",
             time = 44.75415,
         },
         {
+            file = 53230,
             hash = "90bc6d2601c9a3dafe1b6ba98bd31c91",
-            id = 53230,
-            kits = {
-                "moment - battle06_01",
+            name = {
+                "sound/music/musical moments/battle/battle06.mp3",
+                "battle_06",
+                "moment_battle_06",
+                "raid_battle_06",
             },
-            name = "musical moments/battle/battle06",
+            path = "sound/music/musical moments/battle/battle06.mp3",
             time = 62.41295,
         },
         {
+            file = 53231,
             hash = "214d6d7a4b9f72f4312b4c8dbe8f4502",
-            id = 53231,
-            kits = {
-                "moment - gloomy01_01",
+            name = {
+                "sound/music/musical moments/gloomy/gloomy01.mp3",
+                "gloomy",
+                "moment_gloomy",
             },
-            name = "musical moments/gloomy/gloomy01",
+            path = "sound/music/musical moments/gloomy/gloomy01.mp3",
             time = 36.2905,
         },
         {
+            file = 53232,
             hash = "05c5d5428a6cf6d34a7649e41dc125be",
-            id = 53232,
-            kits = {
-                "moment - gloomy02_01",
+            name = {
+                "sound/music/musical moments/gloomy/gloomy02.mp3",
+                "gloomy_02",
+                "moment_gloomy_02",
             },
-            name = "musical moments/gloomy/gloomy02",
+            path = "sound/music/musical moments/gloomy/gloomy02.mp3",
             time = 39.7125,
         },
         {
+            file = 53234,
             hash = "b5420cad8222da6d7fcbd83f27c1dc27",
-            id = 53234,
-            kits = {
-                "zone-haunted_01",
-                "zone-hauntedcombo_01",
+            name = {
+                "sound/music/musical moments/haunted/haunted01.mp3",
+                "zone_haunted",
             },
-            name = "musical moments/haunted/haunted01",
+            path = "sound/music/musical moments/haunted/haunted01.mp3",
             time = 62.101063,
         },
         {
+            file = 53235,
             hash = "cc55cd87d2bf25c4e1771e3906ecf42b",
-            id = 53235,
-            kits = {
-                "moment-haunted02_01",
-                "zone-hauntedcombo_02",
+            name = {
+                "sound/music/musical moments/haunted/haunted02.mp3",
+                "haunted",
+                "moment_haunted",
             },
-            name = "musical moments/haunted/haunted02",
+            path = "sound/music/musical moments/haunted/haunted02.mp3",
             time = 60.00325,
         },
         {
+            file = 53236,
             hash = "c1b927e03d57a79d6d33dabc72bc4ffd",
-            id = 53236,
-            kits = {
-                "moment-magic_01",
+            name = {
+                "sound/music/musical moments/magic/magic01-moment.mp3",
+                "magic",
+                "moment_magic",
             },
-            name = "musical moments/magic/magic01-moment",
+            path = "sound/music/musical moments/magic/magic01-moment.mp3",
             time = 63.97385,
         },
         {
+            file = 53237,
             hash = "626f67c4a622ecd29e750b88184eb82c",
-            id = 53237,
-            kits = {
-                "zone-magic_01",
+            name = {
+                "sound/music/musical moments/magic/magic01-zone1.mp3",
+                "zone_magic",
             },
-            name = "musical moments/magic/magic01-zone1",
+            path = "sound/music/musical moments/magic/magic01-zone1.mp3",
             time = 33.22775,
         },
         {
+            file = 53238,
             hash = "dc8d8870258d7b383cbb2061a2b7a8db",
-            id = 53238,
-            kits = {
-                "zone-magic_02",
+            name = {
+                "sound/music/musical moments/magic/magic01-zone2.mp3",
+                "zone_magic_02",
             },
-            name = "musical moments/magic/magic01-zone2",
+            path = "sound/music/musical moments/magic/magic01-zone2.mp3",
             time = 39.3404,
         },
         {
+            file = 53239,
             hash = "94b8018da200346955ed28e0e6179c0c",
-            id = 53239,
-            kits = {
-                "moment - ahnqirajintro1_01",
+            name = {
+                "sound/music/musical moments/mystery/ahnqirajintro1.mp3",
+                "moment_ahnqiraj_intro",
             },
-            name = "musical moments/mystery/ahnqirajintro1",
+            path = "sound/music/musical moments/mystery/ahnqirajintro1.mp3",
             time = 143.62925,
         },
         {
+            file = 53240,
             hash = "1ab2177e0f23f0f0aef8d11f56d97b36",
-            id = 53240,
-            kits = {
-                "zone-mystery_01",
+            name = {
+                "sound/music/musical moments/mystery/mystery01-zone.mp3",
+                "zone_mystery",
             },
-            name = "musical moments/mystery/mystery01-zone",
+            path = "sound/music/musical moments/mystery/mystery01-zone.mp3",
             time = 60.79335,
         },
         {
+            file = 53241,
             hash = "94cc7bfb3b05cb658fa2f8a015908d38",
-            id = 53241,
-            kits = {
-                "zone-mystery_02",
+            name = {
+                "sound/music/musical moments/mystery/mystery02-zone.mp3",
+                "zone_mystery_02",
             },
-            name = "musical moments/mystery/mystery02-zone",
+            path = "sound/music/musical moments/mystery/mystery02-zone.mp3",
             time = 53.58355,
         },
         {
+            file = 53242,
             hash = "6a6ef190fe8b2bc5f95159c9c7482fd9",
-            id = 53242,
-            kits = {
-                "zone-mystery_03",
+            name = {
+                "sound/music/musical moments/mystery/mystery03-zone.mp3",
+                "zone_mystery_03",
             },
-            name = "musical moments/mystery/mystery03-zone",
+            path = "sound/music/musical moments/mystery/mystery03-zone.mp3",
             time = 60.8653,
         },
         {
+            file = 53243,
             hash = "0a9e36d84b2b8a20237f1c132e0828e1",
-            id = 53243,
-            kits = {
-                "zone-mystery_04",
+            name = {
+                "sound/music/musical moments/mystery/mystery04-zone.mp3",
+                "zone_mystery_04",
             },
-            name = "musical moments/mystery/mystery04-zone",
+            path = "sound/music/musical moments/mystery/mystery04-zone.mp3",
             time = 64.4505,
         },
         {
+            file = 53244,
             hash = "ec1f9dfaf43b27c39b8ae0e4ed09579a",
-            id = 53244,
-            kits = {
-                "zone-mystery_05",
+            name = {
+                "sound/music/musical moments/mystery/mystery05-zone.mp3",
+                "zone_mystery_05",
             },
-            name = "musical moments/mystery/mystery05-zone",
+            path = "sound/music/musical moments/mystery/mystery05-zone.mp3",
             time = 81.797375,
         },
         {
+            file = 53245,
             hash = "d5459edc6b72cf2790d1fa9274fd4f62",
-            id = 53245,
-            kits = {
-                "zone-mystery_06",
+            name = {
+                "sound/music/musical moments/mystery/mystery06-zone.mp3",
+                "zone_mystery_06",
             },
-            name = "musical moments/mystery/mystery06-zone",
+            path = "sound/music/musical moments/mystery/mystery06-zone.mp3",
             time = 65.44475,
         },
         {
+            file = 53246,
             hash = "cadf4fd2178dbe55a674dcb4828d334b",
-            id = 53246,
-            kits = {
-                "zone-mystery_07",
+            name = {
+                "sound/music/musical moments/mystery/mystery07-zone.mp3",
+                "zone_mystery_07",
             },
-            name = "musical moments/mystery/mystery07-zone",
+            path = "sound/music/musical moments/mystery/mystery07-zone.mp3",
             time = 83.286375,
         },
         {
+            file = 53247,
             hash = "55a65f7a42ced3236716a1f2488f0df0",
-            id = 53247,
-            kits = {
-                "zone-mystery_08",
+            name = {
+                "sound/music/musical moments/mystery/mystery08-zone.mp3",
+                "zone_mystery_08",
             },
-            name = "musical moments/mystery/mystery08-zone",
+            path = "sound/music/musical moments/mystery/mystery08-zone.mp3",
             time = 83.338625,
         },
         {
+            file = 53248,
             hash = "5efde28316e73fab9f493ebaabb1b1e0",
-            id = 53248,
-            kits = {
-                "zone-mystery_09",
+            name = {
+                "sound/music/musical moments/mystery/mystery09-zone.mp3",
+                "zone_mystery_09",
             },
-            name = "musical moments/mystery/mystery09-zone",
+            path = "sound/music/musical moments/mystery/mystery09-zone.mp3",
             time = 82.0325,
         },
         {
+            file = 53249,
             hash = "547ad54e214e6cb6b27bc23e8488a80d",
-            id = 53249,
-            kits = {
-                "zone-mystery_10",
+            name = {
+                "sound/music/musical moments/mystery/mystery10-zone.mp3",
+                "zone_mystery_10",
             },
-            name = "musical moments/mystery/mystery10-zone",
+            path = "sound/music/musical moments/mystery/mystery10-zone.mp3",
             time = 62.46675,
         },
         {
+            file = 53250,
             hash = "dff4b6f491d82b45f8f14d5fa4e90283",
-            id = 53250,
-            kits = {
-                "moment-sacred01_01",
+            name = {
+                "sound/music/musical moments/sacred/sacred01.mp3",
+                "moment_sacred",
+                "sacred",
             },
-            name = "musical moments/sacred/sacred01",
+            path = "sound/music/musical moments/sacred/sacred01.mp3",
             time = 16.3068,
         },
         {
+            file = 53251,
             hash = "3c972a6d7a42871d7c971ec18e7caf5f",
-            id = 53251,
-            kits = {
-                "moment - sacred02_01",
+            name = {
+                "sound/music/musical moments/sacred/sacred02.mp3",
+                "moment_sacred_02",
+                "sacred_02",
             },
-            name = "musical moments/sacred/sacred02",
+            path = "sound/music/musical moments/sacred/sacred02.mp3",
             time = 19.1019,
         },
         {
+            file = 53252,
             hash = "7d2ad478c369963985ad394542429a91",
-            id = 53252,
-            kits = {
-                "moment-spooky01_01",
+            name = {
+                "sound/music/musical moments/spooky/spooky01-moment.mp3",
+                "moment_spooky",
+                "spooky",
             },
-            name = "musical moments/spooky/spooky01-moment",
+            path = "sound/music/musical moments/spooky/spooky01-moment.mp3",
             time = 25.8351,
         },
         {
+            file = 53253,
             hash = "49915d1bacb4dbdac8d7ee6102b52d6f",
-            id = 53253,
-            kits = {
-                "moment-swamp01_01",
+            name = {
+                "sound/music/musical moments/swamp/swamp01.mp3",
+                "moment_swamp",
+                "swamp",
             },
-            name = "musical moments/swamp/swamp01",
+            path = "sound/music/musical moments/swamp/swamp01.mp3",
             time = 34.568,
         },
         {
+            file = 53254,
             hash = "6948233d350ed430d011528725ff7c5e",
-            id = 53254,
-            kits = {
-                "moment - zul gurub_01",
+            name = {
+                "sound/music/musical moments/zulgurubvoodoo.mp3",
+                "moment_zulgurub",
             },
-            name = "musical moments/zulgurubvoodoo",
+            path = "sound/music/musical moments/zulgurubvoodoo.mp3",
             time = 84.357375,
         },
         {
+            file = 53256,
             hash = "57401ac753ccf29d7c929ed830e9dac1",
-            id = 53256,
-            kits = {},
-            name = "worldevents/darkmoonfaire_1",
+            name = {
+                "sound/music/worldevents/darkmoonfaire_1.mp3",
+            },
+            path = "sound/music/worldevents/darkmoonfaire_1.mp3",
             time = 28.578,
         },
         {
+            file = 53257,
             hash = "7017ddaf4957b0dcb10a154474183f14",
-            id = 53257,
-            kits = {
-                "darkmoon_faire_music_01",
+            name = {
+                "sound/music/worldevents/darkmoonfaire_2.mp3",
+                "darkmoon_faire_music",
             },
-            name = "worldevents/darkmoonfaire_2",
+            path = "sound/music/worldevents/darkmoonfaire_2.mp3",
             time = 74.057188,
         },
         {
+            file = 53258,
             hash = "b08c2b2afbc2ca16170abba82f07d751",
-            id = 53258,
-            kits = {},
-            name = "worldevents/darkmoonfaire_3",
+            name = {
+                "sound/music/worldevents/darkmoonfaire_3.mp3",
+            },
+            path = "sound/music/worldevents/darkmoonfaire_3.mp3",
             time = 58.566563,
         },
         {
+            file = 53259,
             hash = "2140a65d84f756908ca3f99f19a8cf1d",
-            id = 53259,
-            kits = {},
-            name = "worldevents/darkmoonfaire_4",
+            name = {
+                "sound/music/worldevents/darkmoonfaire_4.mp3",
+            },
+            path = "sound/music/worldevents/darkmoonfaire_4.mp3",
             time = 37.564125,
         },
         {
+            file = 53261,
             hash = "91f267e49910bc8c43050a9413e40760",
-            id = 53261,
-            kits = {
-                "zone - ahnqirajexterior_01",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking1.mp3",
+                "ahnqirajexteriorwalking",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking1",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking1.mp3",
             time = 67.456188,
         },
         {
+            file = 53262,
             hash = "98f39db55ed2398fcc3045cd0456a843",
-            id = 53262,
-            kits = {
-                "zone - ahnqirajexterior_02",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking2.mp3",
+                "ahnqirajexteriorwalking_02",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking2",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking2.mp3",
             time = 84.618625,
         },
         {
+            file = 53263,
             hash = "f01c9231469b9133da7180c04e25e0fb",
-            id = 53263,
-            kits = {
-                "zone - ahnqirajexterior_03",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking3.mp3",
+                "ahnqirajexteriorwalking_03",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking3",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking3.mp3",
             time = 57.9215,
         },
         {
+            file = 53264,
             hash = "1f4f285c18624bd9982d638429920107",
-            id = 53264,
-            kits = {
-                "zone - ahnqirajexterior_04",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking4.mp3",
+                "ahnqirajexteriorwalking_04",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajexteriorwalking4",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajexteriorwalking4.mp3",
             time = 59.018625,
         },
         {
+            file = 53265,
             hash = "e348399d7b6e2c415647db0570c6f5a3",
-            id = 53265,
-            kits = {
-                "zone music - ahnqirajinteriorwa_01",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajinterior1.mp3",
+                "ahnqirajwalking",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajinterior1",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajinterior1.mp3",
             time = 52.0098,
         },
         {
+            file = 53266,
             hash = "b84243ae5de1b505f8d6eca1d8daba7c",
-            id = 53266,
-            kits = {
-                "zone music - ahnqirajinteriorwa_02",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajinterior2.mp3",
+                "ahnqirajwalking_02",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajinterior2",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajinterior2.mp3",
             time = 81.37145,
         },
         {
+            file = 53267,
             hash = "f554ae8ac8b68b1a5703a108e585ce45",
-            id = 53267,
-            kits = {
-                "zone music - ahnqirajinteriorwa_03",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajinterior3.mp3",
+                "ahnqirajwalking_03",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajinterior3",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajinterior3.mp3",
             time = 67.29145,
         },
         {
+            file = 53268,
             hash = "9b0e39fd8206db4ecc633892802d6da3",
-            id = 53268,
-            kits = {
-                "ahnqirajinteriorcenterroom_01",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajinteriorcenterroom1.mp3",
+                "ahnqirajinteriorcenterroom",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajinteriorcenterroom1",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajinteriorcenterroom1.mp3",
             time = 69.676563,
         },
         {
+            file = 53269,
             hash = "b7a66dcd657bce7471d9d4e3cffc6e42",
-            id = 53269,
-            kits = {
-                "zone music - ahnqirajinteriorin_01",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajinteriorintromain.mp3",
+                "ahnqirajinteriormainentrance",
+                "intro_ahnqirajinterior",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajinteriorintromain",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajinteriorintromain.mp3",
             time = 69.3551,
         },
         {
+            file = 53270,
             hash = "81307c20886f4d02c00fd5635fe006e8",
-            id = 53270,
-            kits = {
-                "ahnqirajkingroom_01",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajkingroom.mp3",
+                "ahnqirajkingroom",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajkingroom",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajkingroom.mp3",
             time = 73.0645,
         },
         {
+            file = 53271,
             hash = "5c6e8ec37190cad0fec4470b4c1687f1",
-            id = 53271,
-            kits = {
-                "ahnqirajtriangleroomwalking_01",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom1.mp3",
+                "ahnqirajtriangleroom",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajtriangleroom1",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom1.mp3",
             time = 23.40575,
         },
         {
+            file = 53272,
             hash = "eb18f97f5439f5b7d5b445867a181073",
-            id = 53272,
-            kits = {
-                "ahnqirajtriangleroomwalking_02",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom2.mp3",
+                "ahnqirajtriangleroom_02",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajtriangleroom2",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom2.mp3",
             time = 17.483938,
         },
         {
+            file = 53273,
             hash = "108ce128bbc0ff0018870d9e3b48e64c",
-            id = 53273,
-            kits = {
-                "ahnqirajtriangleroomwalking_03",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom3.mp3",
+                "ahnqirajtriangleroom_03",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajtriangleroom3",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom3.mp3",
             time = 15.786,
         },
         {
+            file = 53274,
             hash = "82fc79a0bf8e2e785818966bfba6c732",
-            id = 53274,
-            kits = {
-                "ahnqirajtriangleroomwalking_04",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom4.mp3",
+                "ahnqirajtriangleroom_04",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajtriangleroom4",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom4.mp3",
             time = 19.704375,
         },
         {
+            file = 53275,
             hash = "3654a7129bc59e7fd6eeb0fd7cf9fcd1",
-            id = 53275,
-            kits = {
-                "ahnqirajtriangleroomwalking_05",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom5.mp3",
+                "ahnqirajtriangleroom_05",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajtriangleroom5",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom5.mp3",
             time = 31.537813,
         },
         {
+            file = 53276,
             hash = "67d04e2c5b5e47c37bfbef360b7b785b",
-            id = 53276,
-            kits = {
-                "ahnqirajtriangleroomwalking_06",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom6.mp3",
+                "ahnqirajtriangleroom_06",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajtriangleroom6",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom6.mp3",
             time = 20.043938,
         },
         {
+            file = 53277,
             hash = "e61e84365bef21c60f55931381103a03",
-            id = 53277,
-            kits = {
-                "ahnqirajtriangleroomwalking_07",
+            name = {
+                "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom7.mp3",
+                "ahnqirajtriangleroom_07",
             },
-            name = "zonemusic/ahnqiraj/ahnqirajtriangleroom7",
+            path = "sound/music/zonemusic/ahnqiraj/ahnqirajtriangleroom7.mp3",
             time = 17.692938,
         },
         {
+            file = 53299,
             hash = "4151d7bec2dad80939d1270198f842d3",
-            id = 53299,
-            kits = {
-                "zone-barrendry day_01",
-                "zone-barrendry night_01",
+            name = {
+                "sound/music/zonemusic/barrendry/daybarrendry01.mp3",
+                "zone_barrendry",
             },
-            name = "zonemusic/barrendry/daybarrendry01",
+            path = "sound/music/zonemusic/barrendry/daybarrendry01.mp3",
             time = 64.138625,
         },
         {
+            file = 53300,
             hash = "c45a2c4407a414e0483571a47d236651",
-            id = 53300,
-            kits = {
-                "zone-barrendry day_02",
-                "zone-barrendry night_02",
+            name = {
+                "sound/music/zonemusic/barrendry/daybarrendry02.mp3",
+                "zone_barrendry_02",
             },
-            name = "zonemusic/barrendry/daybarrendry02",
+            path = "sound/music/zonemusic/barrendry/daybarrendry02.mp3",
             time = 64.190875,
         },
         {
+            file = 53301,
             hash = "214e93deaa145ff3a601e3ba11453745",
-            id = 53301,
-            kits = {
-                "moment-orc barren_01",
-                "zone-barrendry night_03",
-                "zone-crossroads_04",
+            name = {
+                "sound/music/zonemusic/barrendry/daybarrendry03.mp3",
+                "moment_orc_barren",
+                "orc_barren",
+                "zone_barrendry_03",
+                "zone_crossroads_04",
             },
-            name = "zonemusic/barrendry/daybarrendry03",
+            path = "sound/music/zonemusic/barrendry/daybarrendry03.mp3",
             time = 55.361438,
         },
         {
+            file = 53302,
             hash = "6a4dd0235289f2ac7f3d167571a52957",
-            id = 53302,
-            kits = {
-                "zone-barrendry day_03",
-                "zone-barrendry night_04",
+            name = {
+                "sound/music/zonemusic/barrendry/nightbarrendry01.mp3",
+                "zone_barrendry_04",
             },
-            name = "zonemusic/barrendry/nightbarrendry01",
+            path = "sound/music/zonemusic/barrendry/nightbarrendry01.mp3",
             time = 67.403938,
         },
         {
+            file = 53303,
             hash = "d59f46e4efb1d570776416b8df208257",
-            id = 53303,
-            kits = {
-                "zone-barrendry day_04",
-                "zone-barrendry night_05",
+            name = {
+                "sound/music/zonemusic/barrendry/nightbarrendry02.mp3",
+                "zone_barrendry_05",
             },
-            name = "zonemusic/barrendry/nightbarrendry02",
+            path = "sound/music/zonemusic/barrendry/nightbarrendry02.mp3",
             time = 40.91575,
         },
         {
+            file = 53304,
             hash = "bd7fea828bbe4613e2bd604f9c2e4f21",
-            id = 53304,
-            kits = {
-                "zone-barrendry day_05",
-                "zone-barrendry night_06",
+            name = {
+                "sound/music/zonemusic/barrendry/nightbarrendry03.mp3",
+                "zone_barrendry_06",
             },
-            name = "zonemusic/barrendry/nightbarrendry03",
+            path = "sound/music/zonemusic/barrendry/nightbarrendry03.mp3",
             time = 47.4725,
         },
         {
+            file = 53426,
             hash = "bb8aaaaa9328dfea68f035dcd9a55bcd",
-            id = 53426,
-            kits = {
-                "altervac valley_pvp_01",
-                "zone-cursed land felwood_01",
+            name = {
+                "sound/music/zonemusic/cursedland/cursedland01.mp3",
+                "zone_alterac_valley_pvp",
+                "zone_cursedland_felwood",
             },
-            name = "zonemusic/cursedland/cursedland01",
+            path = "sound/music/zonemusic/cursedland/cursedland01.mp3",
             time = 54.78675,
         },
         {
+            file = 53427,
             hash = "bd35ee914f44de6a4c66ac9ffac97135",
-            id = 53427,
-            kits = {
-                "altervac valley_pvp_02",
-                "moment-cursed land_01",
-                "zone-cursedlandfelwoodfurbolg_01",
+            name = {
+                "sound/music/zonemusic/cursedland/cursedland02.mp3",
+                "zone_alterac_valley_pvp_02",
+                "zone_cursedlandfelwoodfurbolg",
             },
-            name = "zonemusic/cursedland/cursedland02",
+            path = "sound/music/zonemusic/cursedland/cursedland02.mp3",
             time = 58.757375,
         },
         {
+            file = 53428,
             hash = "c3a0514ecc10a2b651c84d37408aa151",
-            id = 53428,
-            kits = {
-                "altervac valley_pvp_03",
-                "zone-cursed land felwood_02",
-                "zone-cursedlandfelwoodfurbolg_02",
+            name = {
+                "sound/music/zonemusic/cursedland/cursedland03.mp3",
+                "zone_alterac_valley_pvp_03",
+                "zone_cursedland_felwood_02",
+                "zone_cursedlandfelwoodfurbolg_02",
             },
-            name = "zonemusic/cursedland/cursedland03",
+            path = "sound/music/zonemusic/cursedland/cursedland03.mp3",
             time = 64.321438,
         },
         {
+            file = 53429,
             hash = "2352b042e7bb96ce514359cca623736b",
-            id = 53429,
-            kits = {
-                "altervac valley_pvp_04",
-                "zone - plaguelands_01",
+            name = {
+                "sound/music/zonemusic/cursedland/cursedland04.mp3",
+                "zone_alterac_valley_pvp_04",
+                "zone_plaguelands",
             },
-            name = "zonemusic/cursedland/cursedland04",
+            path = "sound/music/zonemusic/cursedland/cursedland04.mp3",
             time = 79.31575,
         },
         {
+            file = 53430,
             hash = "af573a03e8e075b08b94a78cabd1ab5a",
-            id = 53430,
-            kits = {
-                "altervac valley_pvp_05",
-                "moment-cursed land_02",
-                "zone - plaguelands_02",
+            name = {
+                "sound/music/zonemusic/cursedland/cursedland05.mp3",
+                "zone_alterac_valley_pvp_05",
+                "zone_plaguelands_02",
             },
-            name = "zonemusic/cursedland/cursedland05",
+            path = "sound/music/zonemusic/cursedland/cursedland05.mp3",
             time = 82.476563,
         },
         {
+            file = 53431,
             hash = "95ae6bf3b2ef36959dab1226ae5553b2",
-            id = 53431,
-            kits = {
-                "altervac valley_pvp_06",
-                "zone - plaguelands_03",
+            name = {
+                "sound/music/zonemusic/cursedland/cursedland06.mp3",
+                "zone_alterac_valley_pvp_06",
+                "zone_plaguelands_03",
             },
-            name = "zonemusic/cursedland/cursedland06",
+            path = "sound/music/zonemusic/cursedland/cursedland06.mp3",
             time = 74.169625,
         },
         {
+            file = 53432,
             hash = "ca8e5456060cfa60674bc553b0481f1d",
-            id = 53432,
-            kits = {
-                "zone-desert day_01",
+            name = {
+                "sound/music/zonemusic/desert/daydesert01.mp3",
+                "zone_desert_day",
             },
-            name = "zonemusic/desert/daydesert01",
+            path = "sound/music/zonemusic/desert/daydesert01.mp3",
             time = 65.732063,
         },
         {
+            file = 53433,
             hash = "46d68788de176e47a9494ac0e2229162",
-            id = 53433,
-            kits = {
-                "zone-desert day_02",
+            name = {
+                "sound/music/zonemusic/desert/daydesert02.mp3",
+                "zone_desert_day_02",
             },
-            name = "zonemusic/desert/daydesert02",
+            path = "sound/music/zonemusic/desert/daydesert02.mp3",
             time = 81.039813,
         },
         {
+            file = 53434,
             hash = "86113089d25bb55e1386d6b9de00cb56",
-            id = 53434,
-            kits = {
-                "moment-desert03_01",
-                "zone-desert day_03",
+            name = {
+                "sound/music/zonemusic/desert/daydesert03.mp3",
+                "desert",
+                "moment_desert",
+                "raid_desert",
+                "zone_desert_day_03",
             },
-            name = "zonemusic/desert/daydesert03",
+            path = "sound/music/zonemusic/desert/daydesert03.mp3",
             time = 54.212063,
         },
         {
+            file = 53435,
             hash = "7db5d07b27e3beb38d982edc5d7cf2ce",
-            id = 53435,
-            kits = {
-                "zone-desert cave_01",
-                "zone-desert night_01",
+            name = {
+                "sound/music/zonemusic/desert/nightdesert01.mp3",
+                "zone_desert_cave",
+                "zone_desert_night",
             },
-            name = "zonemusic/desert/nightdesert01",
+            path = "sound/music/zonemusic/desert/nightdesert01.mp3",
             time = 77.696188,
         },
         {
+            file = 53436,
             hash = "90a173cf1ecdaa023457a50b40b29429",
-            id = 53436,
-            kits = {
-                "zone-desert cave_02",
-                "zone-desert night_02",
+            name = {
+                "sound/music/zonemusic/desert/nightdesert02.mp3",
+                "zone_desert_cave_02",
+                "zone_desert_night_02",
             },
-            name = "zonemusic/desert/nightdesert02",
+            path = "sound/music/zonemusic/desert/nightdesert02.mp3",
             time = 62.46675,
         },
         {
+            file = 53437,
             hash = "7bf084f779e2b99f726b6bc17e152b84",
-            id = 53437,
-            kits = {
-                "moment-desert03_02",
-                "zone-desert cave_03",
-                "zone-desert night_03",
+            name = {
+                "sound/music/zonemusic/desert/nightdesert03.mp3",
+                "desert_02",
+                "moment_desert_02",
+                "raid_desert_02",
+                "zone_desert_cave_03",
+                "zone_desert_night_03",
             },
-            name = "zonemusic/desert/nightdesert03",
+            path = "sound/music/zonemusic/desert/nightdesert03.mp3",
             time = 57.738625,
         },
         {
+            file = 53453,
             hash = "12362fb9b3f3ae8b234e0338a9f53dc6",
-            id = 53453,
-            kits = {
-                "zone-enchantedforest day_01",
-                "zone-enchantedforest night_01",
+            name = {
+                "sound/music/zonemusic/enchantedforest/enchantedforest01.mp3",
+                "zone_enchantedforest_day",
+                "zone_enchantedforest_night",
             },
-            name = "zonemusic/enchantedforest/enchantedforest01",
+            path = "sound/music/zonemusic/enchantedforest/enchantedforest01.mp3",
             time = 49.9461,
         },
         {
+            file = 53454,
             hash = "46bf25b567f4c70b70651ae100d7da4a",
-            id = 53454,
-            kits = {
-                "zone-enchantedforest day_02",
-                "zone-enchantedforest night_02",
+            name = {
+                "sound/music/zonemusic/enchantedforest/enchantedforest02.mp3",
+                "zone_enchantedforest_day_02",
+                "zone_enchantedforest_night_02",
             },
-            name = "zonemusic/enchantedforest/enchantedforest02",
+            path = "sound/music/zonemusic/enchantedforest/enchantedforest02.mp3",
             time = 67.0041,
         },
         {
+            file = 53455,
             hash = "382c816e60addbb4a8c8661fa454da85",
-            id = 53455,
-            kits = {
-                "zone-enchantedforest day_03",
-                "zone-enchantedforest night_03",
+            name = {
+                "sound/music/zonemusic/enchantedforest/enchantedforest03.mp3",
+                "zone_enchantedforest_day_03",
+                "zone_enchantedforest_night_03",
             },
-            name = "zonemusic/enchantedforest/enchantedforest03",
+            path = "sound/music/zonemusic/enchantedforest/enchantedforest03.mp3",
             time = 234.770438,
         },
         {
+            file = 53456,
             hash = "d5d245bfb47923cca590fbbf86e1e250",
-            id = 53456,
-            kits = {
-                "zone-enchantedforest day_04",
-                "zone-enchantedforest night_04",
+            name = {
+                "sound/music/zonemusic/enchantedforest/enchantedforest04.mp3",
+                "zone_enchantedforest_day_04",
+                "zone_enchantedforest_night_04",
             },
-            name = "zonemusic/enchantedforest/enchantedforest04",
+            path = "sound/music/zonemusic/enchantedforest/enchantedforest04.mp3",
             time = 60.71495,
         },
         {
+            file = 53457,
             hash = "dbf669636d5795cefaf9eb771529a2a6",
-            id = 53457,
-            kits = {
-                "zone-enchantedforest day_05",
-                "zone-enchantedforest night_05",
+            name = {
+                "sound/music/zonemusic/enchantedforest/enchantedforest05.mp3",
+                "zone_enchantedforest_day_05",
+                "zone_enchantedforest_night_05",
             },
-            name = "zonemusic/enchantedforest/enchantedforest05",
+            path = "sound/music/zonemusic/enchantedforest/enchantedforest05.mp3",
             time = 70.6676,
         },
         {
+            file = 53486,
             hash = "57983398072f4126544322bb34066156",
-            id = 53486,
-            kits = {
-                "zone-evilforest day_01",
+            name = {
+                "sound/music/zonemusic/evilforest/dayevilforest01.mp3",
+                "zone_evilforest",
             },
-            name = "zonemusic/evilforest/dayevilforest01",
+            path = "sound/music/zonemusic/evilforest/dayevilforest01.mp3",
             time = 70.7396,
         },
         {
+            file = 53487,
             hash = "8112e9f4e7e24c89cf67a45b03440139",
-            id = 53487,
-            kits = {
-                "zone-evilforest day_02",
+            name = {
+                "sound/music/zonemusic/evilforest/dayevilforest02.mp3",
+                "zone_evilforest_02",
             },
-            name = "zonemusic/evilforest/dayevilforest02",
+            path = "sound/music/zonemusic/evilforest/dayevilforest02.mp3",
             time = 72.1502,
         },
         {
+            file = 53488,
             hash = "ee09022dc249cbb2837cb2a8dc3555f4",
-            id = 53488,
-            kits = {
-                "zone-evilforest day_03",
+            name = {
+                "sound/music/zonemusic/evilforest/dayevilforest03.mp3",
+                "zone_evilforest_03",
             },
-            name = "zonemusic/evilforest/dayevilforest03",
+            path = "sound/music/zonemusic/evilforest/dayevilforest03.mp3",
             time = 70.6612,
         },
         {
+            file = 53489,
             hash = "5e262666053b4e9bee5ce8c0a04ecc9a",
-            id = 53489,
-            kits = {
-                "zone-evil forest night_01",
-                "zone-evilforest day_04",
+            name = {
+                "sound/music/zonemusic/evilforest/nightevilforest01.mp3",
+                "zone_evil_forest_night",
+                "zone_evilforest_04",
             },
-            name = "zonemusic/evilforest/nightevilforest01",
+            path = "sound/music/zonemusic/evilforest/nightevilforest01.mp3",
             time = 57.28655,
         },
         {
+            file = 53490,
             hash = "7d31112636b1c423b1449913d1703c8d",
-            id = 53490,
-            kits = {
-                "zone-evil forest night_02",
-                "zone-evilforest day_05",
+            name = {
+                "sound/music/zonemusic/evilforest/nightevilforest02.mp3",
+                "zone_evil_forest_night_02",
+                "zone_evilforest_05",
             },
-            name = "zonemusic/evilforest/nightevilforest02",
+            path = "sound/music/zonemusic/evilforest/nightevilforest02.mp3",
             time = 75.49385,
         },
         {
+            file = 53491,
             hash = "142fe65ffabfd69312f79e6ccd421eef",
-            id = 53491,
-            kits = {
-                "moment-evil forest night3_01",
-                "zone-evil forest night_03",
-                "zone-evilforest day_06",
+            name = {
+                "sound/music/zonemusic/evilforest/nightevilforest03.mp3",
+                "moment_evil_forest_night",
+                "zone_evil_forest_night_03",
+                "zone_evilforest_06",
             },
-            name = "zonemusic/evilforest/nightevilforest03",
+            path = "sound/music/zonemusic/evilforest/nightevilforest03.mp3",
             time = 70.55675,
         },
         {
+            file = 53492,
             hash = "ba4ac2711681b1508221c0140e38df8e",
-            id = 53492,
-            kits = {
-                "zone-forest day_01",
+            name = {
+                "sound/music/zonemusic/forest/dayforest01.mp3",
+                "zone_forest",
             },
-            name = "zonemusic/forest/dayforest01",
+            path = "sound/music/zonemusic/forest/dayforest01.mp3",
             time = 55.69305,
         },
         {
+            file = 53493,
             hash = "7378307b27bee744ab18563169fec57c",
-            id = 53493,
-            kits = {
-                "zone-forest day_02",
+            name = {
+                "sound/music/zonemusic/forest/dayforest02.mp3",
+                "zone_forest_02",
             },
-            name = "zonemusic/forest/dayforest02",
+            path = "sound/music/zonemusic/forest/dayforest02.mp3",
             time = 72.5159,
         },
         {
+            file = 53494,
             hash = "e0bbaba1ce11243ec42e0325ccfe7e1d",
-            id = 53494,
-            kits = {
-                "zone-forest day_03",
+            name = {
+                "sound/music/zonemusic/forest/dayforest03.mp3",
+                "zone_forest_03",
             },
-            name = "zonemusic/forest/dayforest03",
+            path = "sound/music/zonemusic/forest/dayforest03.mp3",
             time = 64.7053,
         },
         {
+            file = 53495,
             hash = "d4354200edac2e392ebcf9e505581445",
-            id = 53495,
-            kits = {
-                "zone-darkforest_01",
-                "zone-night forest_01",
+            name = {
+                "sound/music/zonemusic/forest/nightforest01.mp3",
+                "zone_darkforest",
             },
-            name = "zonemusic/forest/nightforest01",
+            path = "sound/music/zonemusic/forest/nightforest01.mp3",
             time = 53.1853,
         },
         {
+            file = 53496,
             hash = "c958349b956764dd3e752baee9fa003c",
-            id = 53496,
-            kits = {
-                "zone-darkforest_02",
-                "zone-night forest_02",
+            name = {
+                "sound/music/zonemusic/forest/nightforest02.mp3",
+                "zone_darkforest_02",
             },
-            name = "zonemusic/forest/nightforest02",
+            path = "sound/music/zonemusic/forest/nightforest02.mp3",
             time = 42.97145,
         },
         {
+            file = 53497,
             hash = "a4d33f4c0d027877d69614614486f17c",
-            id = 53497,
-            kits = {
-                "zone-darkforest_03",
-                "zone-night forest_03",
+            name = {
+                "sound/music/zonemusic/forest/nightforest03.mp3",
+                "zone_darkforest_03",
             },
-            name = "zonemusic/forest/nightforest03",
+            path = "sound/music/zonemusic/forest/nightforest03.mp3",
             time = 59.3241,
         },
         {
+            file = 53498,
             hash = "d5dab27a4dfcd4cba7fb70b3545933e1",
-            id = 53498,
-            kits = {
-                "zone-darkforest_04",
-                "zone-night forest_04",
+            name = {
+                "sound/music/zonemusic/forest/nightforest04.mp3",
+                "zone_darkforest_04",
             },
-            name = "zonemusic/forest/nightforest04",
+            path = "sound/music/zonemusic/forest/nightforest04.mp3",
             time = 54.30855,
         },
         {
+            file = 53519,
             hash = "567bcb9019ce2483dda75d807e29ee6e",
-            id = 53519,
-            kits = {
-                "zone music day ghost_01",
-                "zone music night ghost_01",
+            name = {
+                "sound/music/zonemusic/ghostmusic/ghostmusic03.mp3",
+                "ghostmusic_donotrename_day",
+                "ghostmusic_donotrename_night",
             },
-            name = "zonemusic/ghostmusic/ghostmusic03",
+            path = "sound/music/zonemusic/ghostmusic/ghostmusic03.mp3",
             time = 62.101063,
         },
         {
+            file = 53541,
             hash = "e9d424eed1ff865ef0b50c480a7f8459",
-            id = 53541,
-            kits = {
-                "zone-jungle day_01",
-                "zone-jungle night_01",
-                "zone-junglevary_01",
+            name = {
+                "sound/music/zonemusic/jungle/dayjungle01.mp3",
+                "jungle",
+                "zone_jungle_day",
+                "zone_jungle_night",
             },
-            name = "zonemusic/jungle/dayjungle01",
+            path = "sound/music/zonemusic/jungle/dayjungle01.mp3",
             time = 46.13225,
         },
         {
+            file = 53542,
             hash = "91217210c4ab8ca876dbaa5e3056cef3",
-            id = 53542,
-            kits = {
-                "zone-jungle day_02",
-                "zone-jungle night_02",
-                "zone-junglevary_02",
+            name = {
+                "sound/music/zonemusic/jungle/dayjungle02.mp3",
+                "jungle_02",
+                "zone_jungle_day_02",
+                "zone_jungle_night_02",
             },
-            name = "zonemusic/jungle/dayjungle02",
+            path = "sound/music/zonemusic/jungle/dayjungle02.mp3",
             time = 98.71675,
         },
         {
+            file = 53543,
             hash = "2618bb53e41e911d6675222de0c2179a",
-            id = 53543,
-            kits = {
-                "zone-jungle day_03",
-                "zone-jungle night_03",
-                "zone-junglevary_03",
+            name = {
+                "sound/music/zonemusic/jungle/dayjungle03.mp3",
+                "jungle_03",
+                "zone_jungle_day_03",
+                "zone_jungle_night_03",
             },
-            name = "zonemusic/jungle/dayjungle03",
+            path = "sound/music/zonemusic/jungle/dayjungle03.mp3",
             time = 48.2743,
         },
         {
+            file = 53544,
             hash = "e68e1fd9717d60280273c13ea6c4c3ff",
-            id = 53544,
-            kits = {
-                "zone-jungle day_04",
-                "zone-jungle night_04",
-                "zone-junglevary_04",
+            name = {
+                "sound/music/zonemusic/jungle/nightjungle01.mp3",
+                "jungle_04",
+                "zone_jungle_day_04",
+                "zone_jungle_night_04",
             },
-            name = "zonemusic/jungle/nightjungle01",
+            path = "sound/music/zonemusic/jungle/nightjungle01.mp3",
             time = 54.6743,
         },
         {
+            file = 53545,
             hash = "54ea3529212f5904b8e6801e9a9670ce",
-            id = 53545,
-            kits = {
-                "zone-jungle day_05",
-                "zone-jungle night_05",
-                "zone-junglevary_05",
+            name = {
+                "sound/music/zonemusic/jungle/nightjungle02.mp3",
+                "jungle_05",
+                "zone_jungle_day_05",
+                "zone_jungle_night_05",
             },
-            name = "zonemusic/jungle/nightjungle02",
+            path = "sound/music/zonemusic/jungle/nightjungle02.mp3",
             time = 53.36815,
         },
         {
+            file = 53546,
             hash = "bd262b6b59197a11a290406bd399e2c7",
-            id = 53546,
-            kits = {
-                "zone-jungle day_06",
-                "zone-jungle night_06",
-                "zone-junglevary_06",
+            name = {
+                "sound/music/zonemusic/jungle/nightjungle03.mp3",
+                "jungle_06",
+                "zone_jungle_day_06",
+                "zone_jungle_night_06",
             },
-            name = "zonemusic/jungle/nightjungle03",
+            path = "sound/music/zonemusic/jungle/nightjungle03.mp3",
             time = 89.1298,
         },
         {
+            file = 53577,
             hash = "c3c668491fad6707368d025a0249bd52",
-            id = 53577,
-            kits = {
-                "zone-mountain day_01",
-                "zone-mountain night_01",
+            name = {
+                "sound/music/zonemusic/mountain/daymountain01.mp3",
+                "zone_mountain_day",
+                "zone_mountain_night",
             },
-            name = "zonemusic/mountain/daymountain01",
+            path = "sound/music/zonemusic/mountain/daymountain01.mp3",
             time = 120.119,
         },
         {
+            file = 53578,
             hash = "02e72119cd1366358456ac33948a14ce",
-            id = 53578,
-            kits = {
-                "zone-mountain day_02",
-                "zone-mountain night_02",
+            name = {
+                "sound/music/zonemusic/mountain/daymountain02.mp3",
+                "zone_mountain_day_02",
+                "zone_mountain_night_02",
             },
-            name = "zonemusic/mountain/daymountain02",
+            path = "sound/music/zonemusic/mountain/daymountain02.mp3",
             time = 66.985938,
         },
         {
+            file = 53579,
             hash = "b03babf50eb7ecec552e565fff356889",
-            id = 53579,
-            kits = {
-                "zone-mountain day_03",
-                "zone-mountain night_03",
+            name = {
+                "sound/music/zonemusic/mountain/daymountain03.mp3",
+                "zone_mountain_day_03",
+                "zone_mountain_night_03",
             },
-            name = "zonemusic/mountain/daymountain03",
+            path = "sound/music/zonemusic/mountain/daymountain03.mp3",
             time = 80.308438,
         },
         {
+            file = 53580,
             hash = "91b6897e3a1229c90a157e68dd9babf4",
-            id = 53580,
-            kits = {
-                "zone-mountain night_04",
+            name = {
+                "sound/music/zonemusic/mountain/nightmountain01.mp3",
+                "zone_mountain_night_04",
             },
-            name = "zonemusic/mountain/nightmountain01",
+            path = "sound/music/zonemusic/mountain/nightmountain01.mp3",
             time = 64.3396,
         },
         {
+            file = 53581,
             hash = "61ba06d1f51669ebb04374a8d1173f4c",
-            id = 53581,
-            kits = {
-                "zone-mountain night_05",
+            name = {
+                "sound/music/zonemusic/mountain/nightmountain02.mp3",
+                "zone_mountain_night_05",
             },
-            name = "zonemusic/mountain/nightmountain02",
+            path = "sound/music/zonemusic/mountain/nightmountain02.mp3",
             time = 63.03345,
         },
         {
+            file = 53582,
             hash = "59cb7de39b38401afce430b4997ed506",
-            id = 53582,
-            kits = {
-                "zone-mountain day_04",
-                "zone-mountain night_06",
+            name = {
+                "sound/music/zonemusic/mountain/nightmountain03.mp3",
+                "zone_mountain_day_04",
+                "zone_mountain_night_06",
             },
-            name = "zonemusic/mountain/nightmountain03",
+            path = "sound/music/zonemusic/mountain/nightmountain03.mp3",
             time = 69.17225,
         },
         {
+            file = 53583,
             hash = "dcd6a4ed162b146ef4b4488873c1e485",
-            id = 53583,
-            kits = {
-                "zone-mountain day_05",
-                "zone-mountain night_07",
+            name = {
+                "sound/music/zonemusic/mountain/nightmountain04.mp3",
+                "zone_mountain_day_05",
+                "zone_mountain_night_07",
             },
-            name = "zonemusic/mountain/nightmountain04",
+            path = "sound/music/zonemusic/mountain/nightmountain04.mp3",
             time = 63.97385,
         },
         {
+            file = 53591,
             hash = "7c63748b41b474c0301b918074c95dc8",
-            id = 53591,
-            kits = {
-                "zone-naxxramasabominationboss_01",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasabominationboss1.mp3",
+                "zone_naxxramasabominationboss",
             },
-            name = "zonemusic/naxxramas/naxxramasabominationboss1",
+            path = "sound/music/zonemusic/naxxramas/naxxramasabominationboss1.mp3",
             time = 61.448,
         },
         {
+            file = 53592,
             hash = "6caf100b3f5f99ed274f0c775203b9eb",
-            id = 53592,
-            kits = {
-                "zone-naxxramasabominationboss_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasabominationboss2.mp3",
+                "zone_naxxramasabominationboss_02",
             },
-            name = "zonemusic/naxxramas/naxxramasabominationboss2",
+            path = "sound/music/zonemusic/naxxramas/naxxramasabominationboss2.mp3",
             time = 67.064375,
         },
         {
+            file = 53593,
             hash = "3d0912a74d35556dba0cac31e45e2910",
-            id = 53593,
-            kits = {
-                "zone-naxxramasabomination_01",
-                "zone-naxxramasabominationboss_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasabominationwing1.mp3",
+                "zone_naxxramasabomination",
+                "zone_naxxramasabominationboss_03",
             },
-            name = "zonemusic/naxxramas/naxxramasabominationwing1",
+            path = "sound/music/zonemusic/naxxramas/naxxramasabominationwing1.mp3",
             time = 61.317438,
         },
         {
+            file = 53594,
             hash = "144f1ab6793e42278b4ed995a8aaa103",
-            id = 53594,
-            kits = {
-                "zone-naxxramasabomination_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasabominationwing2.mp3",
+                "zone_naxxramasabomination_02",
             },
-            name = "zonemusic/naxxramas/naxxramasabominationwing2",
+            path = "sound/music/zonemusic/naxxramas/naxxramasabominationwing2.mp3",
             time = 66.690625,
         },
         {
+            file = 53595,
             hash = "8846d652adc06621aed2ba2bd340b7d1",
-            id = 53595,
-            kits = {
-                "zone-naxxramasabomination_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasabominationwing3.mp3",
+                "zone_naxxramasabomination_03",
             },
-            name = "zonemusic/naxxramas/naxxramasabominationwing3",
+            path = "sound/music/zonemusic/naxxramas/naxxramasabominationwing3.mp3",
             time = 61.309438,
         },
         {
+            file = 53596,
             hash = "e3d22cd7c91d87943eee2c758e57ef4d",
-            id = 53596,
-            kits = {
-                "zone-naxxramasfrostwyrm_01",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm1.mp3",
+                "zone_naxxramasfrostwyrm",
             },
-            name = "zonemusic/naxxramas/naxxramasfrostwyrm1",
+            path = "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm1.mp3",
             time = 57.9135,
         },
         {
+            file = 53597,
             hash = "20b795a6203bc2206b0e621490982079",
-            id = 53597,
-            kits = {
-                "zone-naxxramasfrostwyrm_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm2.mp3",
+                "zone_naxxramasfrostwyrm_02",
             },
-            name = "zonemusic/naxxramas/naxxramasfrostwyrm2",
+            path = "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm2.mp3",
             time = 81.815563,
         },
         {
+            file = 53598,
             hash = "48461de3b9c2d685063097d678eb80d9",
-            id = 53598,
-            kits = {
-                "zone-naxxramasfrostwyrm_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm3.mp3",
+                "zone_naxxramasfrostwyrm_03",
             },
-            name = "zonemusic/naxxramas/naxxramasfrostwyrm3",
+            path = "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm3.mp3",
             time = 61.831875,
         },
         {
+            file = 53599,
             hash = "e3c66d17625210f98832db7870b1c2bd",
-            id = 53599,
-            kits = {
-                "zone-naxxramasfrostwyrm_04",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm4.mp3",
+                "zone_naxxramasfrostwyrm_04",
             },
-            name = "zonemusic/naxxramas/naxxramasfrostwyrm4",
+            path = "sound/music/zonemusic/naxxramas/naxxramasfrostwyrm4.mp3",
             time = 60.055563,
         },
         {
+            file = 53600,
             hash = "0263eb52fe0462804a929a6124e2fb9b",
-            id = 53600,
-            kits = {},
-            name = "zonemusic/naxxramas/naxxramashubbase1",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramashubbase1.mp3",
+            },
+            path = "sound/music/zonemusic/naxxramas/naxxramashubbase1.mp3",
             time = 72.594313,
         },
         {
+            file = 53601,
             hash = "14ab81a0440ac18ff5a0ed4c1165442e",
-            id = 53601,
-            kits = {},
-            name = "zonemusic/naxxramas/naxxramashubbase2",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramashubbase2.mp3",
+            },
+            path = "sound/music/zonemusic/naxxramas/naxxramashubbase2.mp3",
             time = 81.606563,
         },
         {
+            file = 53602,
             hash = "ab534a95fce6ea635629847a3ee612d8",
-            id = 53602,
-            kits = {
-                "zone-naxxramaskelthuzad_01",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaskelthuzad1.mp3",
+                "zone_naxxramaskelthuzad",
             },
-            name = "zonemusic/naxxramas/naxxramaskelthuzad1",
+            path = "sound/music/zonemusic/naxxramas/naxxramaskelthuzad1.mp3",
             time = 94.720063,
         },
         {
+            file = 53603,
             hash = "37fb79f0017d9e5a050e6f51a7a54339",
-            id = 53603,
-            kits = {
-                "zone-naxxramaskelthuzad_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaskelthuzad2.mp3",
+                "zone_naxxramaskelthuzad_02",
             },
-            name = "zonemusic/naxxramas/naxxramaskelthuzad2",
+            path = "sound/music/zonemusic/naxxramas/naxxramaskelthuzad2.mp3",
             time = 97.227813,
         },
         {
+            file = 53604,
             hash = "8f38d705783e11ea8150355c9f81bb68",
-            id = 53604,
-            kits = {
-                "zone-naxxramaskelthuzad_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaskelthuzad3.mp3",
+                "zone_naxxramaskelthuzad_03",
             },
-            name = "zonemusic/naxxramas/naxxramaskelthuzad3",
+            path = "sound/music/zonemusic/naxxramas/naxxramaskelthuzad3.mp3",
             time = 75.67675,
         },
         {
+            file = 53605,
             hash = "cac6eaf3c214ddad5e4b1591a8631710",
-            id = 53605,
-            kits = {
-                "zone-naxxramasplagueboss_01",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasplagueboss1.mp3",
+                "zone_naxxramasplagueboss",
             },
-            name = "zonemusic/naxxramas/naxxramasplagueboss1",
+            path = "sound/music/zonemusic/naxxramas/naxxramasplagueboss1.mp3",
             time = 86.969688,
         },
         {
+            file = 53606,
             hash = "13f41c73559b226774319de82a622a00",
-            id = 53606,
-            kits = {
-                "zone-naxxramasplague_01",
-                "zone-naxxramasplagueboss_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasplaguewing1.mp3",
+                "zone_naxxramasplague",
+                "zone_naxxramasplagueboss_02",
             },
-            name = "zonemusic/naxxramas/naxxramasplaguewing1",
+            path = "sound/music/zonemusic/naxxramas/naxxramasplaguewing1.mp3",
             time = 87.753313,
         },
         {
+            file = 53607,
             hash = "2a7648980a56ef6b3c43975449c48cf4",
-            id = 53607,
-            kits = {
-                "zone-naxxramasplague_02",
-                "zone-naxxramasplagueboss_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasplaguewing2.mp3",
+                "zone_naxxramasplague_02",
+                "zone_naxxramasplagueboss_03",
             },
-            name = "zonemusic/naxxramas/naxxramasplaguewing2",
+            path = "sound/music/zonemusic/naxxramas/naxxramasplaguewing2.mp3",
             time = 71.758375,
         },
         {
+            file = 53608,
             hash = "2cb9dff05d4da7cd60153436ea974155",
-            id = 53608,
-            kits = {
-                "zone-naxxramasplague_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasplaguewing3.mp3",
+                "zone_naxxramasplague_03",
             },
-            name = "zonemusic/naxxramas/naxxramasplaguewing3",
+            path = "sound/music/zonemusic/naxxramas/naxxramasplaguewing3.mp3",
             time = 76.747813,
         },
         {
+            file = 53609,
             hash = "e88aedbf54cea8682da94c1cc0d2719f",
-            id = 53609,
-            kits = {
-                "zone-naxxramasspiderboss_01",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasspiderboss1.mp3",
+                "zone_naxxramasspiderboss",
             },
-            name = "zonemusic/naxxramas/naxxramasspiderboss1",
+            path = "sound/music/zonemusic/naxxramas/naxxramasspiderboss1.mp3",
             time = 60.16,
         },
         {
+            file = 53610,
             hash = "752b97e827630e48408961fa6c6972dc",
-            id = 53610,
-            kits = {
-                "zone-naxxramasspiderboss_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasspiderboss2.mp3",
+                "zone_naxxramasspiderboss_02",
             },
-            name = "zonemusic/naxxramas/naxxramasspiderboss2",
+            path = "sound/music/zonemusic/naxxramas/naxxramasspiderboss2.mp3",
             time = 63.981938,
         },
         {
+            file = 53611,
             hash = "0b01ee58d1563306792b23ee66fa1789",
-            id = 53611,
-            kits = {
-                "zone-naxxramasspider_01",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasspiderwing1.mp3",
+                "zone_naxxramasspider",
             },
-            name = "zonemusic/naxxramas/naxxramasspiderwing1",
+            path = "sound/music/zonemusic/naxxramas/naxxramasspiderwing1.mp3",
             time = 88.58125,
         },
         {
+            file = 53612,
             hash = "eddf0f087c905ced4b3e5a513d21ccd6",
-            id = 53612,
-            kits = {
-                "zone-naxxramasspider_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasspiderwing2.mp3",
+                "zone_naxxramasspider_02",
             },
-            name = "zonemusic/naxxramas/naxxramasspiderwing2",
+            path = "sound/music/zonemusic/naxxramas/naxxramasspiderwing2.mp3",
             time = 67.500438,
         },
         {
+            file = 53613,
             hash = "745d97c0e69d16997dad6df59a5e2377",
-            id = 53613,
-            kits = {
-                "zone-naxxramasspider_03",
-                "zone-naxxramasspiderboss_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramasspiderwing3.mp3",
+                "zone_naxxramasspider_03",
+                "zone_naxxramasspiderboss_03",
             },
-            name = "zonemusic/naxxramas/naxxramasspiderwing3",
+            path = "sound/music/zonemusic/naxxramas/naxxramasspiderwing3.mp3",
             time = 47.046563,
         },
         {
+            file = 53614,
             hash = "544789d1d10c3ab7d64dbbb9bea2a1be",
-            id = 53614,
-            kits = {
-                "zone - naxxramsdeathknight_01",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaswalking1.mp3",
+                "naxxramasdeathknight",
+                "zone_naxxramas",
             },
-            name = "zonemusic/naxxramas/naxxramaswalking1",
+            path = "sound/music/zonemusic/naxxramas/naxxramaswalking1.mp3",
             time = 101.963938,
         },
         {
+            file = 53615,
             hash = "a232533f68c0643d9992d7f654001118",
-            id = 53615,
-            kits = {
-                "zone - naxxramsdeathknight_02",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaswalking2.mp3",
+                "naxxramasdeathknight_02",
+                "zone_naxxramas_02",
             },
-            name = "zonemusic/naxxramas/naxxramaswalking2",
+            path = "sound/music/zonemusic/naxxramas/naxxramaswalking2.mp3",
             time = 72.105938,
         },
         {
+            file = 53616,
             hash = "fcf80ada6a29951b43f1a7eee8009a39",
-            id = 53616,
-            kits = {
-                "zone - naxxramsdeathknight_03",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaswalking3.mp3",
+                "naxxramasdeathknight_03",
+                "zone_naxxramas_03",
             },
-            name = "zonemusic/naxxramas/naxxramaswalking3",
+            path = "sound/music/zonemusic/naxxramas/naxxramaswalking3.mp3",
             time = 86.969625,
         },
         {
+            file = 53617,
             hash = "617cee9abb2faa48a734ceb44df55fd8",
-            id = 53617,
-            kits = {
-                "zone - naxxramsdeathknight_04",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaswalking4.mp3",
+                "naxxramasdeathknight_04",
+                "zone_naxxramas_04",
             },
-            name = "zonemusic/naxxramas/naxxramaswalking4",
+            path = "sound/music/zonemusic/naxxramas/naxxramaswalking4.mp3",
             time = 82.058625,
         },
         {
+            file = 53618,
             hash = "21b77fb6f4cc2990741b8d702473bb04",
-            id = 53618,
-            kits = {
-                "zone - naxxramsdeathknight_05",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaswalking5.mp3",
+                "naxxramasdeathknight_05",
+                "zone_naxxramas_05",
             },
-            name = "zonemusic/naxxramas/naxxramaswalking5",
+            path = "sound/music/zonemusic/naxxramas/naxxramaswalking5.mp3",
             time = 99.79575,
         },
         {
+            file = 53619,
             hash = "36db4873c3c7d65fda88d1a4dd2953fc",
-            id = 53619,
-            kits = {
-                "zone - naxxramsdeathknight_06",
+            name = {
+                "sound/music/zonemusic/naxxramas/naxxramaswalking6.mp3",
+                "naxxramasdeathknight_06",
+                "zone_naxxramas_06",
             },
-            name = "zonemusic/naxxramas/naxxramaswalking6",
+            path = "sound/music/zonemusic/naxxramas/naxxramaswalking6.mp3",
             time = 99.403938,
         },
         {
+            file = 53680,
             hash = "6e8660d0021ad29b7b2f2942f62976c6",
-            id = 53680,
-            kits = {
-                "zone-plains day_01",
-                "zoneplains night_01",
+            name = {
+                "sound/music/zonemusic/plains/dayplains01.mp3",
+                "zone_plains_day",
+                "zone_plains_night",
             },
-            name = "zonemusic/plains/dayplains01",
+            path = "sound/music/zonemusic/plains/dayplains01.mp3",
             time = 53.76,
         },
         {
+            file = 53681,
             hash = "0131e186fb5fae9a0ec23b352855d81d",
-            id = 53681,
-            kits = {
-                "zone-plains day_02",
-                "zoneplains night_02",
+            name = {
+                "sound/music/zonemusic/plains/dayplains02.mp3",
+                "zone_plains_day_02",
+                "zone_plains_night_02",
             },
-            name = "zonemusic/plains/dayplains02",
+            path = "sound/music/zonemusic/plains/dayplains02.mp3",
             time = 76.53875,
         },
         {
+            file = 53682,
             hash = "6a486541cafe0f35b80d3a0863e00a98",
-            id = 53682,
-            kits = {
-                "zone-plains day_03",
-                "zoneplains night_03",
+            name = {
+                "sound/music/zonemusic/plains/nightplains01.mp3",
+                "zone_plains_day_03",
+                "zone_plains_night_03",
             },
-            name = "zonemusic/plains/nightplains01",
+            path = "sound/music/zonemusic/plains/nightplains01.mp3",
             time = 58.38365,
         },
         {
+            file = 53683,
             hash = "2af7896262390f2feaae0d37c5c6ea5d",
-            id = 53683,
-            kits = {
-                "zone-plains day_04",
-                "zoneplains night_04",
+            name = {
+                "sound/music/zonemusic/plains/nightplains02.mp3",
+                "zone_plains_day_04",
+                "zone_plains_night_04",
             },
-            name = "zonemusic/plains/nightplains02",
+            path = "sound/music/zonemusic/plains/nightplains02.mp3",
             time = 68.62365,
         },
         {
+            file = 53684,
             hash = "9a42b62410c2064184705ef9d8a3fd7a",
-            id = 53684,
-            kits = {
-                "pvp-battle grounds_01",
+            name = {
+                "sound/music/zonemusic/pvp/pvp1.mp3",
+                "pvp_battlegrounds",
             },
-            name = "zonemusic/pvp/pvp1",
+            path = "sound/music/zonemusic/pvp/pvp1.mp3",
             time = 46.688813,
         },
         {
+            file = 53685,
             hash = "238c92c6fac1e8fa2619c4eecc6aa945",
-            id = 53685,
-            kits = {
-                "pvp-battle grounds_02",
+            name = {
+                "sound/music/zonemusic/pvp/pvp2.mp3",
+                "pvp_battlegrounds_02",
             },
-            name = "zonemusic/pvp/pvp2",
+            path = "sound/music/zonemusic/pvp/pvp2.mp3",
             time = 52.566313,
         },
         {
+            file = 53686,
             hash = "d346dca692ef1f2b88654f33551b72f7",
-            id = 53686,
-            kits = {
-                "pvp-battle grounds_03",
+            name = {
+                "sound/music/zonemusic/pvp/pvp3.mp3",
+                "pvp_battlegrounds_03",
             },
-            name = "zonemusic/pvp/pvp3",
+            path = "sound/music/zonemusic/pvp/pvp3.mp3",
             time = 40.419375,
         },
         {
+            file = 53687,
             hash = "6f7f07429b5a71416f17a5cc5e4ba015",
-            id = 53687,
-            kits = {
-                "pvp-battle grounds_04",
+            name = {
+                "sound/music/zonemusic/pvp/pvp4.mp3",
+                "pvp_battlegrounds_04",
             },
-            name = "zonemusic/pvp/pvp4",
+            path = "sound/music/zonemusic/pvp/pvp4.mp3",
             time = 62.910813,
         },
         {
+            file = 53688,
             hash = "257c3818fc768cb276677f4ce42fb4f1",
-            id = 53688,
-            kits = {
-                "pvp-battle grounds_05",
+            name = {
+                "sound/music/zonemusic/pvp/pvp5.mp3",
+                "pvp_battlegrounds_05",
             },
-            name = "zonemusic/pvp/pvp5",
+            path = "sound/music/zonemusic/pvp/pvp5.mp3",
             time = 61.761438,
         },
         {
+            file = 53695,
             hash = "4ef9a406a4fbf49bf6d7f91929c837c3",
-            id = 53695,
-            kits = {
-                "zone-soggy night_01",
+            name = {
+                "sound/music/zonemusic/soggyplace/soggyplace-zone1.mp3",
+                "zone_soggy_night",
+                "zone_soggy_swamp",
             },
-            name = "zonemusic/soggyplace/soggyplace-zone1",
+            path = "sound/music/zonemusic/soggyplace/soggyplace-zone1.mp3",
             time = 97.1835,
         },
         {
+            file = 53696,
             hash = "d9a0d55b3cb065ecac23aa86e98cd350",
-            id = 53696,
-            kits = {
-                "zone-soggy day_01",
+            name = {
+                "sound/music/zonemusic/soggyplace/soggyplace-zone2.mp3",
+                "zone_soggy_day",
             },
-            name = "zonemusic/soggyplace/soggyplace-zone2",
+            path = "sound/music/zonemusic/soggyplace/soggyplace-zone2.mp3",
             time = 97.418563,
         },
         {
+            file = 53697,
             hash = "6bb15802625c3f51fe257c97d53f2466",
-            id = 53697,
-            kits = {
-                "zone-soggy night_02",
+            name = {
+                "sound/music/zonemusic/soggyplace/soggyplace-zone3.mp3",
+                "zone_soggy_night_02",
+                "zone_soggy_swamp_02",
             },
-            name = "zonemusic/soggyplace/soggyplace-zone3",
+            path = "sound/music/zonemusic/soggyplace/soggyplace-zone3.mp3",
             time = 90.52225,
         },
         {
+            file = 53698,
             hash = "d27c20c85820a6260dd6624d303695bd",
-            id = 53698,
-            kits = {
-                "zone-soggy night_03",
+            name = {
+                "sound/music/zonemusic/soggyplace/soggyplace-zone4.mp3",
+                "zone_soggy_night_03",
+                "zone_soggy_swamp_03",
             },
-            name = "zonemusic/soggyplace/soggyplace-zone4",
+            path = "sound/music/zonemusic/soggyplace/soggyplace-zone4.mp3",
             time = 89.372875,
         },
         {
+            file = 53699,
             hash = "f1985997b34aeb5b4a036869c188ff38",
-            id = 53699,
-            kits = {
-                "zone-soggy day_02",
+            name = {
+                "sound/music/zonemusic/soggyplace/soggyplace-zone5.mp3",
+                "zone_soggy_day_02",
             },
-            name = "zonemusic/soggyplace/soggyplace-zone5",
+            path = "sound/music/zonemusic/soggyplace/soggyplace-zone5.mp3",
             time = 70.35575,
         },
         {
+            file = 53737,
             hash = "c1d56d91c803e7c3ea0d6d4a0dabe952",
-            id = 53737,
-            kits = {
-                "zone-tavernalliance_01",
+            name = {
+                "sound/music/zonemusic/tavernalliance/tavernalliance01.mp3",
+                "zone_tavernalliance",
             },
-            name = "zonemusic/tavernalliance/tavernalliance01",
+            path = "sound/music/zonemusic/tavernalliance/tavernalliance01.mp3",
             time = 47.43835,
         },
         {
+            file = 53738,
             hash = "9c5f348bdc8945621e03d3ebadc30c7b",
-            id = 53738,
-            kits = {
-                "zone-tavernalliance_02",
+            name = {
+                "sound/music/zonemusic/tavernalliance/tavernalliance02.mp3",
+                "zone_tavernalliance_02",
             },
-            name = "zonemusic/tavernalliance/tavernalliance02",
+            path = "sound/music/zonemusic/tavernalliance/tavernalliance02.mp3",
             time = 51.4415,
         },
         {
+            file = 53744,
             hash = "f2ef9bfa986b0eb3f0a8ab0d46a541f7",
-            id = 53744,
-            kits = {
-                "zone-tavernhorde_01",
+            name = {
+                "sound/music/zonemusic/tavernhorde/tavernhorde01.mp3",
+                "zone_tavernhorde",
             },
-            name = "zonemusic/tavernhorde/tavernhorde01",
+            path = "sound/music/zonemusic/tavernhorde/tavernhorde01.mp3",
             time = 48.46355,
         },
         {
+            file = 53745,
             hash = "862e5e0acf33d04db051b1ead13fdc5f",
-            id = 53745,
-            kits = {
-                "zone-tavernhorde_02",
+            name = {
+                "sound/music/zonemusic/tavernhorde/tavernhorde02.mp3",
+                "zone_tavernhorde_02",
             },
-            name = "zonemusic/tavernhorde/tavernhorde02",
+            path = "sound/music/zonemusic/tavernhorde/tavernhorde02.mp3",
             time = 39.3404,
         },
         {
+            file = 53746,
             hash = "a9850472f798078fa4923c0359e4b74f",
-            id = 53746,
-            kits = {
-                "zone-tavernhorde01_01",
+            name = {
+                "sound/music/zonemusic/tavernhorde/tavernhorde03.mp3",
+                "zone_tavernhorde_03",
             },
-            name = "zonemusic/tavernhorde/tavernhorde03",
+            path = "sound/music/zonemusic/tavernhorde/tavernhorde03.mp3",
             time = 47.185125,
         },
         {
+            file = 53747,
             hash = "69a5fdc39480aa32fd4d909766237a3f",
-            id = 53747,
-            kits = {
-                "zone-undead dance_01",
+            name = {
+                "sound/music/zonemusic/tavernhorde/undead_dance.mp3",
+                "zone_bone_party",
             },
-            name = "zonemusic/tavernhorde/undead_dance",
+            path = "sound/music/zonemusic/tavernhorde/undead_dance.mp3",
             time = 25.268375,
         },
         {
+            file = 53812,
             hash = "3761d841b0f39c98f2ddbdff28d0dbf3",
-            id = 53812,
-            kits = {
-                "zone-volcanic day_01",
-                "zone-volcanic night_01",
+            name = {
+                "sound/music/zonemusic/volcanic/dayvolcanic01.mp3",
+                "zone_volcanic_day",
+                "zone_volcanic_night",
+                "zone_volcaniccave",
             },
-            name = "zonemusic/volcanic/dayvolcanic01",
+            path = "sound/music/zonemusic/volcanic/dayvolcanic01.mp3",
             time = 72.88165,
         },
         {
+            file = 53813,
             hash = "ecf3046d8322e212f1e4b2a2b410e19d",
-            id = 53813,
-            kits = {
-                "zone-volcanic day_02",
-                "zone-volcanic night_02",
+            name = {
+                "sound/music/zonemusic/volcanic/dayvolcanic02.mp3",
+                "zone_volcanic_day_02",
+                "zone_volcanic_night_02",
+                "zone_volcaniccave_02",
             },
-            name = "zonemusic/volcanic/dayvolcanic02",
+            path = "sound/music/zonemusic/volcanic/dayvolcanic02.mp3",
             time = 87.32735,
         },
         {
+            file = 53814,
             hash = "a8eecf40bde0b72f142c6e4bf94738cf",
-            id = 53814,
-            kits = {
-                "zone-volcanic day_03",
-                "zone-volcanic night_03",
+            name = {
+                "sound/music/zonemusic/volcanic/nightvolcanic01.mp3",
+                "zone_volcanic_day_03",
+                "zone_volcanic_night_03",
+                "zone_volcaniccave_03",
             },
-            name = "zonemusic/volcanic/nightvolcanic01",
+            path = "sound/music/zonemusic/volcanic/nightvolcanic01.mp3",
             time = 71.2098,
         },
         {
+            file = 53815,
             hash = "a9bea7f0efeaca8a8d8b3b1e70cafa00",
-            id = 53815,
-            kits = {
-                "zone-volcanic day_04",
-                "zone-volcanic night_04",
+            name = {
+                "sound/music/zonemusic/volcanic/nightvolcanic02.mp3",
+                "zone_volcanic_day_04",
+                "zone_volcanic_night_04",
+                "zone_volcaniccave_04",
             },
-            name = "zonemusic/volcanic/nightvolcanic02",
+            path = "sound/music/zonemusic/volcanic/nightvolcanic02.mp3",
             time = 64.41795,
         },
     },
