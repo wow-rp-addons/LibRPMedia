@@ -6,15 +6,7 @@ LibRPMedia provides a common database of in-game resources for use by RP addons.
 
 LibRPMedia uses [LibStub](https://www.curseforge.com/wow/addons/libstub) as its versioning mechanism, so the existing documentation with regards to embedding and loading the library applies here.
 
-You can import this repository as a Git submodule, or just download a release and copy the folder into your own project as needed.
-
-To load the library, include a reference to any of the following files within your addon:
-
- * `LibRPMedia-1.0.xml`
- * `LibRPMedia-Classic-1.0.xml`
- * `LibRPMedia-Retail-1.0.xml`
-
-The `LibRPMedia-1.0.xml` file includes all references to databases for both Retail and Classic, whereas the other files only include script references to files specific to their targetted product. Use of the product-specific XML files is recommended when you have control of the packaging process.
+You can import this repository as a Git submodule, or just download a release and copy the folder into your own project as needed. To load the library, include a reference to the `LibRPMedia-1.0.xml` file within your addon.
 
 ### Dependencies
 
@@ -484,7 +476,7 @@ In addition, you must ensure that [cURL](https://curl.haxx.se/) and [ffmpeg](htt
 
 The exporter script makes use of [LuaCasc](https://www.townlong-yak.com/casc/) which is included in the repository (`Exporter/casc`).
 
-Running `make` will regenerate the data for both Classic and Retail versions of the game, downloading data from the CDN and various external services and caching them the `.cache` directory. The generated databases will be stored within the `LibRPMedia-{Classic,Retail}-1.0.lua` files.
+Running `make` will regenerate the data for both Classic and Retail versions of the game, downloading data from the CDN and various external services and caching them the `.cache` directory. The generated databases will be stored within the `LibRPMedia-{Classic,BCC,Retail}-1.0.lua` files.
 
 ## License
 

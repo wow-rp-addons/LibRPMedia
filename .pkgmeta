@@ -1,5 +1,5 @@
 ---
-package-as: LibRPMedia-1.0
+package-as: LibRPMedia
 enable-nolib-creation: no
 
 license-output: LICENSE
@@ -15,3 +15,7 @@ ignore:
   - Libs/LibStub/LibStub.toc
   - Makefile
   - UI
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown

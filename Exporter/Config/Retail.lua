@@ -2,7 +2,7 @@ return {
     -- Project token for this game variant.
     project = "WOW_PROJECT_MAINLINE",
     -- Product name for obtaining data from the patch/CDN servers.
-    product = "wowt",
+    product = "wow",
     -- Region to use when connecting to patch/CDN server.
     region = "eu",
 
@@ -53,6 +53,10 @@ return {
             "^inv_hand_1h_naga_c_01 %- copy$",
             "^inv_%a+_armor_faeriedragon_d_01$",
             "^inv_ratmount2$",
+            "^inv_ancientmount$",
+            "^inv_bearmountblizzard$",
+            "^inv_oxmount$",
+            "^inv_slothpet$",
 
             -- Encrypted icon files (these *may* work with file IDs):
             "^inv_.*encrypted%d+",

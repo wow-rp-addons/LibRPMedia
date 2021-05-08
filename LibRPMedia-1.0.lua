@@ -2,7 +2,7 @@
 assert(LibStub, "Missing dependency: LibStub");
 
 local MODULE_MAJOR = "LibRPMedia-1.0";
-local MODULE_MINOR = 9;
+local MODULE_MINOR = 10;
 
 local LibRPMedia = LibStub:NewLibrary(MODULE_MAJOR, MODULE_MINOR);
 if not LibRPMedia then
@@ -212,8 +212,7 @@ function LibRPMedia:GetNativeMusicFile(musicFile)
     if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
         -- Classic doesn't support file IDs, so we need to use paths.
         local musicName = self:GetMusicNameByFile(musicFile);
-        return strjoin("\\", "Sound", "Music", strsplit("/", musicName))
-            .. ".mp3";
+        return strjoin("\\", "Sound", "Music", strsplit("/", musicName)) .. ".mp3";
     end
 
     -- Default to returning the file ID otherwise.
@@ -941,8 +940,7 @@ end
 --@do-not-package@
 -- Only execute the below if loaded in standalone, non-packaged mode, and
 -- if we're ingame.
-local ADDON_NAME = ...;
-if ADDON_NAME == MODULE_MAJOR and UIParent ~= nil then
+if (...) == "LibRPMedia" and UIParent ~= nil then
     -- Register the browser frame as a UI panel.
     UIPanelWindows["LibRPMedia_BrowserFrame"] = {
         area = "doublewide",
@@ -962,7 +960,14 @@ if ADDON_NAME == MODULE_MAJOR and UIParent ~= nil then
             else
                 ShowUIPanel(LibRPMedia_BrowserFrame);
             end
+        elseif subcommand == "bad-icons" then
+            for _, name in LibRPMedia:FindAllIcons() do
+                if not GetFileIDFromPath([[Interface\Icons\]] .. name) then
+                    print("Bad icon found: " .. name);
+                end
+            end
         end
     end
 end
+
 --@end-do-not-package@
