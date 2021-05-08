@@ -812,11 +812,9 @@ end
 LibRPMedia_BrowserTabMixin = {};
 
 function LibRPMedia_BrowserTabMixin:OnLoad()
-    if IsClassicClient() then
-        -- The template in Classic lacks the .Text parentkey, and so the
-        -- various tab functions used in the browser break.
-        self.Text = _G[self:GetName() .. "Text"];
-    end
+    -- The template in Classic/BCC lacks the .Text parentkey, and so the
+    -- various tab functions used in the browser break.
+    self.Text = _G[self:GetName() .. "Text"];
 end
 
 function LibRPMedia_BrowserTabMixin:OnClick()
