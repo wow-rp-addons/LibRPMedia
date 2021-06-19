@@ -25,8 +25,6 @@ read_globals = {
     "ColumnDisplayMixin",
     "CreateFramePool",
     "CreateFromMixins",
-    "debugprofilestop",
-    "debugstack",
     "FauxScrollFrame_GetOffset",
     "FauxScrollFrame_OnVerticalScroll",
     "FauxScrollFrame_SetOffset",
@@ -39,7 +37,8 @@ read_globals = {
     "GetMouseFocus",
     "GREEN_FONT_COLOR",
     "HideUIPanel",
-    "LibRPMedia_BrowserFrame",
+    "LibStub.GetLibrary",
+    "LibStub.NewLibrary",
     "Mixin",
     "PanelTemplates_ResizeTabsToFit",
     "PanelTemplates_SetNumTabs",
@@ -59,6 +58,7 @@ read_globals = {
     "UIDropDownMenu_CreateInfo",
     "UIDropDownMenu_Initialize",
     "UIParent",
+    "WOW_PROJECT_BURNING_CRUSADE_CLASSIC",
     "WOW_PROJECT_CLASSIC",
     "WOW_PROJECT_ID",
     "WOW_PROJECT_MAINLINE",
@@ -67,6 +67,7 @@ read_globals = {
 
 -- The following globals are only written in non-packaged releases.
 globals = {
+    "LibRPMedia_BrowserFrame",
     "LibRPMedia_BrowserMixin",
     "LibRPMedia_BrowserTabMixin",
     "LibRPMedia_IconBrowserMixin",
