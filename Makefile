@@ -12,7 +12,7 @@ PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/ma
 .PHONY: check bcc build classic release retail
 .FORCE:
 
-build: classic retail
+build: classic bcc retail
 
 check:
 	@$(LUACHECK) . -q

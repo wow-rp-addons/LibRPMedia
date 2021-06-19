@@ -2,7 +2,7 @@ return {
     -- Project token for this game variant.
     project = "WOW_PROJECT_BURNING_CRUSADE_CLASSIC",
     -- Product name for obtaining data from the patch/CDN servers.
-    product = "wow_classic_beta",
+    product = "wow_classic",
     -- Region to use when connecting to patch/CDN server.
     region = "eu",
 

@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 2.5.1.38598
--- Build Config: 197e75987ebb10b02f44ec85db21a400
+-- Client Version: 2.5.1.38988
+-- Build Config: c1f9b166a584be66939897dc75a6ab6a
 if WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
     return;
 end
@@ -17,7 +17,7 @@ if not LibRPMedia then
 end
 
 -- Minor version number of the database.
-local DATABASE_VERSION = 10;
+local DATABASE_VERSION = 11;
 
 -- Icon database.
 local icons = LibRPMedia:NewDatabase("icons", DATABASE_VERSION);

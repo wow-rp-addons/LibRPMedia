@@ -1,5 +1,5 @@
 ## Interface: 90005
-## Interface-BC: 20501
+## Interface-BCC: 20501
 ## Interface-Classic: 11307
 ## Title: Lib: RP Media
 ## Notes: LibRPMedia provides a common database of in-game resources for use by RP addons.
