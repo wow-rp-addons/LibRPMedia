@@ -2,7 +2,7 @@ return {
     -- Project token for this game variant.
     project = "WOW_PROJECT_MAINLINE",
     -- Product name for obtaining data from the patch/CDN servers.
-    product = "wowt",
+    product = "wow",
     -- Region to use when connecting to patch/CDN server.
     region = "eu",
 
@@ -36,8 +36,7 @@ return {
             "^mail_gmicon$",
             "^ui_shop_bcv$",
 
-            -- The following files require file ID support, since the client
-            -- doesn't accept their paths.
+            -- Encrypted files; these require file ID support.
             "^inv_redbird$",
             "^inv_snowkid$",
             "^inv_skiff$",
@@ -58,8 +57,10 @@ return {
             "^inv_oxmount$",
             "^inv_slothpet$",
             "^inv_warpstalkermount$",
-
-            -- Encrypted icon files (these *may* work with file IDs):
+            "^inv_bookmount$",
+            "^inv_catmount$",
+            "^inv_phoenix2mount_%a+$",
+            "^inv_ratmounthearthstone$",
             "^inv_.*encrypted%d+",
         },
 

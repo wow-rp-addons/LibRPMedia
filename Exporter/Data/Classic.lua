@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "30daec22777cbe6ab7a0aa31ce621f1b",
-        version = "1.13.7.38704",
+        bkey = "64a44ad0ceeb7d537bc3c164b739e05c",
+        version = "1.14.0.40618",
     },
     icons = {
         {
@@ -239,6 +239,13 @@ return {
             file = 132127,
             hash = "c2f7844efb3f9814b222e4eb87095113",
             name = "ability_druid_ferociousbite",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 132132,
+            hash = "02676e7a092c5da09d72da61adb0245f",
+            name = "ability_druid_lunarguidance",
             size = { h = 64, w = 64 },
             type = 1,
         },
@@ -1163,6 +1170,13 @@ return {
             file = 132363,
             hash = "933a206225dcc202aceaa7cf2da92fa6",
             name = "ability_warrior_sunder",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 132365,
+            hash = "273459896961ec9c69e5d5661c1ff0e8",
+            name = "ability_warrior_victoryrush",
             size = { h = 64, w = 64 },
             type = 1,
         },
