@@ -1,7 +1,5 @@
-## v1.1.9
-### Added
-- Added 21 new icons for BCC.
-- Added 2 new icons for Classic Era.
-- Added 32 new icons and 7 new music files for Retail.
-### Changed
-- Updated for patches 1.14.0, 2.5.2, and 9.1.5.
+## v1.1.10
+
+- Added 438 new icons and 127 new music files for Retail (9.2.0).
+- Added 2 new icons for Burning Crusade Classic (2.5.3).
+- Added 3 new icons for Classic Era (1.14.2).
