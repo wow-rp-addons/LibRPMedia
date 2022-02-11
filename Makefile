@@ -7,7 +7,7 @@ RELEASE_DIR := .release
 
 # Path and URL to the packager script.
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
-PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh
+PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/multitoc/release.sh
 
 .PHONY: check bcc build classic release retail
 .FORCE:
@@ -22,7 +22,7 @@ bcc: LibRPMedia-BCC-1.0.lua
 retail: LibRPMedia-Retail-1.0.lua
 
 release: $(PACKAGER_SCRIPT)
-	@bash $(PACKAGER_SCRIPT) -l
+	@bash $(PACKAGER_SCRIPT) -l -S
 
 LibRPMedia-%-1.0.lua: .FORCE
 	@echo Generating $(@)...

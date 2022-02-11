@@ -1,6 +1,6 @@
 ---
 name: Pull Request
-on:   pull_request
+on: pull_request
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
       - name: Create Package
         uses: BigWigsMods/packager@master
         with:
-          args: -d -z
+          args: -d -S -z
 
       - uses: actions/upload-artifact@v2
         with:

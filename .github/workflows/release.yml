@@ -15,7 +15,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create Package
-        uses: BigWigsMods/packager@master
+        uses: BigWigsMods/packager@multitoc
+        with:
+          args: -S
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
