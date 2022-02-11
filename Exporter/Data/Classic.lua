@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "64a44ad0ceeb7d537bc3c164b739e05c",
-        version = "1.14.0.40618",
+        bkey = "26f1c63a8e010ae237c34fc0d9faeece",
+        version = "1.14.2.42214",
     },
     icons = {
         {
@@ -1062,6 +1062,20 @@ return {
             type = 1,
         },
         {
+            file = 4352492,
+            hash = "71aa5ae2bfe204b65a7a6429f669816f",
+            name = "ability_warlock_incubus",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 4352493,
+            hash = "f7fb07369c49c10ce30e4925103b3f96",
+            name = "ability_warlock_randomizesuccubusincubus",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             file = 132333,
             hash = "3eb0e2de3aefb3ef767f841e6b6bc66d",
             name = "ability_warrior_battleshout",
@@ -1198,6 +1212,13 @@ return {
             file = 132369,
             hash = "0039815df49febda2537ea28adfdb32d",
             name = "ability_whirlwind",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 254652,
+            hash = "53554f9ed2dc07ea8430a5c67324bf92",
+            name = "achievement_boss_ragnaros",
             size = { h = 64, w = 64 },
             type = 1,
         },

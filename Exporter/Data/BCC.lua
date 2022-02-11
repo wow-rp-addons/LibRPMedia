@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "45f53cdda050261fc3f6a5ee2aa3024d",
-        version = "2.5.2.40892",
+        bkey = "48c70b711ce7bd99605a70c9972980e5",
+        version = "2.5.3.42083",
     },
     icons = {
         {
@@ -1709,6 +1709,20 @@ return {
             file = 132332,
             hash = "f40c757d79674b0f22e4a5c6033b11a8",
             name = "ability_warlock_avoidance",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 4352492,
+            hash = "71aa5ae2bfe204b65a7a6429f669816f",
+            name = "ability_warlock_incubus",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            file = 4352493,
+            hash = "f7fb07369c49c10ce30e4925103b3f96",
+            name = "ability_warlock_randomizesuccubusincubus",
             size = { h = 64, w = 64 },
             type = 1,
         },
