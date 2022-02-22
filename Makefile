@@ -7,7 +7,7 @@ RELEASE_DIR := .release
 
 # Path and URL to the packager script.
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
-PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/multitoc/release.sh
+PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/v2/release.sh
 
 .PHONY: check bcc build classic release retail
 .FORCE:
