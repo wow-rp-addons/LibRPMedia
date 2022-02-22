@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 2.5.3.42083
--- Build Config: 48c70b711ce7bd99605a70c9972980e5
+-- Client Version: 2.5.3.42328
+-- Build Config: 0113033a5771dabbe6b8f44916b57dd9
 if WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
     return;
 end
