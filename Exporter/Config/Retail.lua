@@ -62,6 +62,9 @@ return {
             "^inv_phoenix2mount_%a+$",
             "^inv_ratmounthearthstone$",
             "^inv_.*encrypted%d+",
+            "^inv_armor_murlocbackpack_cape_392289[7-9]",
+            "^inv_babyfaeriedragon",
+            "^inv_tigermount",
         },
 
         -- List of atlas name patterns to include.

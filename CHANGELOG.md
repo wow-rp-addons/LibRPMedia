@@ -1,5 +1,3 @@
-## v1.1.10
+## v1.1.11
 
-- Added 438 new icons and 133 new music files for Retail (9.2.0).
-- Added 2 new icons for Burning Crusade Classic (2.5.3).
-- Added 3 new icons for Classic Era (1.14.2).
+- Removed 5 unusable encrypted icons from Retail (9.2.0).
