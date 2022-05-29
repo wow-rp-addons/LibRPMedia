@@ -25,7 +25,7 @@ local PATCH_SERVER_URL = "http://%s.patch.battle.net:1119/%s/";
 -- Base URL for database requests.
 local DATABASE_URL = "https://wow.tools/api/export/?name=%s&build=%s";
 -- Base URL for filelist requests.
-local FILELIST_URL = "https://wow.tools/casc/listfile/download/csv/build?buildConfig=%s";
+local FILELIST_URL = "https://wow.tools/casc/listfile/download/csv/unverified";
 -- Base URL for TACT keys.
 local TACTKEYS_URL = "https://raw.githubusercontent.com/wowdev/TACTKeys/master/WoW.txt";
 
