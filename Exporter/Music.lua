@@ -145,10 +145,15 @@ function Music.GetNameFromFilePath(filePath)
     return name;
 end
 
+local SeenMusicNames = {};
+
 -- Returns a name for a music file derived from a soundkit name and the
 -- index of the file entry for the soundkit.
-function Music.GetNameForSoundKit(soundkitName, fileIndex)
-    local name = strformat("%s_%02d", soundkitName, fileIndex);
+function Music.GenerateNameForSoundKit(soundkitName)
+    local count = SeenMusicNames[soundkitName] or 0;
+    local index = count + 1;
+    local name = strformat("%s_%02d", soundkitName, index);
+    SeenMusicNames[soundkitName] = index;
     return Music.NormalizeName(name);
 end
 
@@ -414,8 +419,8 @@ function Music.GetManifest(cache)
 
     for _, soundkit in pairs(soundkits) do
         for fileIndex, fileID in ipairs(soundkit.files) do
-            -- Get the combined name for this entry.
-            local name = Music.GetNameForSoundKit(soundkit.name, fileIndex);
+            -- Get the generated name for this entry.
+            local name = Music.GenerateNameForSoundKit(soundkit.name);
             if not Music.IsNameExcluded(name) then
                 -- Get the music file from the manifest if one was inserted.
                 local music = GetMusicFileFromManifest(fileID, manifest);
