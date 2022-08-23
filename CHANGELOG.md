@@ -1,4 +1,5 @@
-## v1.1.12
+## v1.1.13
 
-- Added 3 new icons and 4 new music files for Retail (9.2.5).
-- Bumped interface version for compatibility with Classic (1.14.3) and BCC (2.5.4).
+- Added 5 new music files for Retail (9.2.7).
+- Added Wrath Classic (3.4.0) support with 6273 icons and 1184 music files.
+- Removed database support for TBC Classic.
