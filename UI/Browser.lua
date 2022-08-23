@@ -15,11 +15,6 @@ local tinsert = table.insert;
 local tsort = table.sort;
 local twipe = table.wipe;
 
---- Returns true if running in the classic client.
-local function IsClassicClient()
-    return WOW_PROJECT_ID == WOW_PROJECT_CLASSIC;
-end
-
 --- Wraps the given iterator in a protected version which will return nil
 --  if an error is raised.
 local function SafeIterator(source, ...)
@@ -839,7 +834,7 @@ function LibRPMedia_BrowserMixin:OnLoad()
 
     self:SetTab(self.TAB_ICONS);
 
-    if IsClassicClient() then
+    if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then
         local asset = [[Interface\Icons\INV_Box_04]];
         SetPortraitToTexture(self.portrait, asset);
     else
