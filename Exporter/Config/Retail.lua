@@ -65,6 +65,16 @@ return {
             "^inv_armor_murlocbackpack_cape_392289[7-9]",
             "^inv_babyfaeriedragon",
             "^inv_tigermount",
+            "^inv_%w+_armor_celestial$",
+            "^inv_cape_special_dragon_d_02_%w+$",
+            "^inv_catslimemount$",
+            "^inv_drakemountemerald$",
+            "^inv_drakonidpet$",
+            "^inv_helm_cloth_sindragosa_d_01$",
+            "^inv_murkyalexstrasza$",
+            "^inv_murlocbabyblueblack$",
+            "^inv_nethergorgedgreatwyrm$",
+            "^inv_ursocpet$",
         },
 
         -- List of atlas name patterns to include.
