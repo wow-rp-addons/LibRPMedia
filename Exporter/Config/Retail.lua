@@ -1,6 +1,6 @@
 return {
-    -- Project token for this game variant.
-    project = "WOW_PROJECT_MAINLINE",
+    -- Expression that must evaluate to true for the generated file to load.
+    loadexpr = "WOW_PROJECT_ID == WOW_PROJECT_MAINLINE",
     -- Product name for obtaining data from the patch/CDN servers.
     product = "wow",
     -- Region to use when connecting to patch/CDN server.

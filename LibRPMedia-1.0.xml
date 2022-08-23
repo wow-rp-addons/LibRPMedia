@@ -6,6 +6,6 @@
 
     <Script file="LibRPMedia-1.0.lua"/>
     <Script file="LibRPMedia-Classic-1.0.lua"/>
-    <Script file="LibRPMedia-BCC-1.0.lua"/>
+    <Script file="LibRPMedia-Wrath-1.0.lua"/>
     <Script file="LibRPMedia-Retail-1.0.lua"/>
 </Ui>

@@ -1,6 +1,6 @@
 return {
-    -- Project token for this game variant.
-    project = "WOW_PROJECT_CLASSIC",
+    -- Expression that must evaluate to true for the generated file to load.
+    loadexpr = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC",
     -- Product name for obtaining data from the patch/CDN servers.
     product = "wow_classic_era",
     -- Region to use when connecting to patch/CDN server.

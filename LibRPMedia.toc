@@ -1,5 +1,5 @@
 ## Interface: 90207
-## Interface-TBC: 20504
+## Interface-Wrath: 30400
 ## Interface-Vanilla: 11403
 ## Title: Lib: RP Media
 ## Notes: LibRPMedia provides a common database of in-game resources for use by RP addons.

@@ -7,7 +7,7 @@
 --
 -- Client Version: <%- build.version %>
 -- Build Config: <%- build.bkey %>
-if WOW_PROJECT_ID ~= <%- config.project %> then
+if not (<%- config.loadexpr %>) then
     return;
 end
 

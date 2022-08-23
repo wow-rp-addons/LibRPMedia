@@ -60,8 +60,8 @@ end
 -- Product configuration table. This represents the default configuration of
 -- the exporter and is merged into by the user-specific config.
 local config = {
-    -- Project token for this game variant.
-    project = nil,
+    -- Expression that must evaluate to true for the generated file to load.
+    loadexpr = "true",
     -- Product name for obtaining data from the patch/CDN servers.
     product = nil,
     -- Region to use when connecting to patch/CDN server.
