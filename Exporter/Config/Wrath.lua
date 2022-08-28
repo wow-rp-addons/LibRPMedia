@@ -1,6 +1,6 @@
 return {
     -- Expression that must evaluate to true for the generated file to load.
-    loadexpr = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING",
+    loadexpr = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE or LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING",
     -- Product name for obtaining data from the patch/CDN servers.
     product = "wow_classic_beta",
     -- Region to use when connecting to patch/CDN server.

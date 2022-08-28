@@ -1,5 +1,4 @@
-## v1.1.13
+## v1.1.14
 
-- Added 5 new music files for Retail (9.2.7).
-- Added Wrath Classic (3.4.0) support with 6273 icons and 1184 music files.
-- Removed database support for TBC Classic.
+- Temporarily make TBC Classic use Wrath Classic data set.
+  - This is to resolve patch day errors if someone updates to a Wrath version of an embedding addon while still on a TBC client.

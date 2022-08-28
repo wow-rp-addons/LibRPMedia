@@ -5,9 +5,9 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 3.4.0.45264
--- Build Config: 73fefa43b593bb8b373362b93f5525fc
-if not (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING) then
+-- Client Version: 3.4.0.45327
+-- Build Config: 75501c0e630bb8586bb7f1e796f7125b
+if not (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE or LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING) then
     return;
 end
 
@@ -17,7 +17,7 @@ if not LibRPMedia then
 end
 
 -- Minor version number of the database.
-local DATABASE_VERSION = 15;
+local DATABASE_VERSION = 16;
 
 -- Icon database.
 local icons = LibRPMedia:NewDatabase("icons", DATABASE_VERSION);
