@@ -2,7 +2,7 @@ return {
     -- Expression that must evaluate to true for the generated file to load.
     loadexpr = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING",
     -- Product name for obtaining data from the patch/CDN servers.
-    product = "wow_classic_beta",
+    product = "wow_classic",
     -- Region to use when connecting to patch/CDN server.
     region = "us",
 
@@ -37,23 +37,11 @@ return {
             "^ability_blackhand_",
             "^ability_deathwing_",
             "^ability_racial_viciousness",
-            "^achievement_character_human_",
-            "^achievement_dungeon_naxxramas",
             "^garr_currencyicon",
             "^inv_drink_31_embalmingfluid$",
-            "^inv_misc_bone_humanskull_02$",
-            "^inv_misc_bone_skull_01$",
-            "^inv_misc_eye_02$",
-            "^inv_misc_eye_04$",
-            "^inv_misc_firedancer_01$",
             "^inv_misc_food_meat_raw_07$",
-            "^inv_misc_head_nerubian_01$",
-            "^quest_12252_icon$",
             "^sha_inv_misc_",
             "^spell_arcane_teleporthalloftheguardian",
-            "^spell_deathknight_",
-            "^spell_shadow_brainwash",
-            "^xp_icon$",
             "^xpbonus_icon$",
         },
     },
