@@ -1,4 +1,4 @@
-## v1.1.14
+## v1.1.16
 
-- Temporarily make TBC Classic use Wrath Classic data set.
-  - This is to resolve patch day errors if someone updates to a Wrath version of an embedding addon while still on a TBC client.
+- Add 50 missing icons for Wrath Classic.
+- Remove TBC compatibility.
