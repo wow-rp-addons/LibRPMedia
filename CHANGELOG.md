@@ -1,4 +1,3 @@
-## v1.1.16
+## v1.1.17
 
-- Add 50 missing icons for Wrath Classic.
-- Remove TBC compatibility.
+- Add 2246 new icons for retail patch 10.0.0.
