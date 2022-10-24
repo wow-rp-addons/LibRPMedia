@@ -75,6 +75,7 @@ return {
             "^inv_murlocbabyblueblack$",
             "^inv_nethergorgedgreatwyrm$",
             "^inv_ursocpet$",
+            "^inv_frostbroodprotowyrm$",
         },
 
         -- List of atlas name patterns to include.
