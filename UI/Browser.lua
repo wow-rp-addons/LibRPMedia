@@ -122,8 +122,7 @@ end
 
 --- Updates the UI for the page bar.
 function LibRPMedia_PaginationBarMixin:UpdateVisualization()
-    self.PageText:SetFormattedText("Page %d/%d",
-        self.pageNumber, self.pageCount);
+    self.PageText:SetFormattedText("Page %d/%d", self.pageNumber, self.pageCount);
 
     self.PrevButton:SetEnabled(self.pageNumber > 1);
     self.NextButton:SetEnabled(self.pageNumber < self.pageCount);
@@ -298,13 +297,10 @@ function LibRPMedia_IconContentMixin:OnLoad()
     -- Array of icon indices to display in the browser.
     self.icons = {};
     -- Pool of icon widgets to display in the UI for each index.
-    self.iconPool = CreateFramePool("Button", self.IconsFrame,
-        "LibRPMedia_IconPreviewTemplate");
+    self.iconPool = CreateFramePool("Button", self.IconsFrame, "LibRPMedia_IconPreviewTemplate");
 
     -- When the page changes, we'll need to update our icons.
-    self.PaginationBar:RegisterCallback("OnPageChanged", function()
-        self:UpdateIconVisualization();
-    end, self);
+    self.PaginationBar:RegisterCallback("OnPageChanged", function() self:UpdateIconVisualization(); end, self);
 
     -- Start by displaying all icons.
     self:SetSearchFilter("");
@@ -492,20 +488,9 @@ function LibRPMedia_MusicItemRowMixin:OnClick(button)
     StopMusic();
 
     if button == "LeftButton" and self:IsValidMusicName() then
-        -- Left button was clicked; Classic client doesn't support playing
-        -- via file IDs so we'll need to use the path instead.
-        if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
-            -- The name we might have could be an alias; we need the real one.
-            local musicIndex = LibRPMedia:GetMusicIndexByName(self.musicName);
-            local musicName = LibRPMedia:GetMusicNameByIndex(musicIndex);
-            musicName = strgsub(musicName, "/", "\\");
-
-            PlayMusic(strformat([[Sound\Music\%s.mp3]], musicName));
-        else
-            local musicFile = LibRPMedia:GetMusicFileByName(self.musicName);
-            if musicFile then
-                PlayMusic(musicFile);
-            end
+        local musicFile = LibRPMedia:GetMusicFileByName(self.musicName);
+        if musicFile then
+            PlayMusic(musicFile);
         end
     end
 
@@ -610,10 +595,8 @@ function LibRPMedia_MusicItemRowMixin:UpdateTooltipVisualization()
     GameTooltip_AddNormalLine(GameTooltip, indexLine);
     GameTooltip_AddNormalLine(GameTooltip, " ");
 
-    GameTooltip_AddInstructionLine(GameTooltip,
-        "Left-Click: |cffffffffPlay Music");
-    GameTooltip_AddInstructionLine(GameTooltip,
-        "Right-Click: |cffffffffStop Music");
+    GameTooltip_AddInstructionLine(GameTooltip, "Left-Click: |cffffffffPlay Music");
+    GameTooltip_AddInstructionLine(GameTooltip, "Right-Click: |cffffffffStop Music");
 
     GameTooltip:Show();
 end
@@ -634,8 +617,7 @@ function LibRPMedia_MusicScrollMixin:OnLoad()
     self.sortAscending = true;
 
     -- Pool of item widgets to display as rows.
-    self.itemPool = CreateFramePool("Button", self,
-        "LibRPMedia_MusicItemRowTemplate");
+    self.itemPool = CreateFramePool("Button", self, "LibRPMedia_MusicItemRowTemplate");
 end
 
 function LibRPMedia_MusicScrollMixin:OnShow()
@@ -648,9 +630,7 @@ function LibRPMedia_MusicScrollMixin:OnShow()
 end
 
 function LibRPMedia_MusicScrollMixin:OnVerticalScroll(offset)
-    FauxScrollFrame_OnVerticalScroll(self, offset, self.ROW_HEIGHT, function()
-        self:UpdateVisualization();
-    end);
+    FauxScrollFrame_OnVerticalScroll(self, offset, self.ROW_HEIGHT, function() self:UpdateVisualization(); end);
 end
 
 --- Sets the search filter used by the scroll list, refreshing the contents
@@ -766,8 +746,7 @@ function LibRPMedia_MusicScrollMixin:UpdateVisualization()
 
     -- Configure the scrollbar step and update the scrollframe.
     self.ScrollBar.scrollStep = floor(musicShown / 2) * musicRowHeight;
-    FauxScrollFrame_Update(self, musicCount, musicShown, musicRowHeight,
-        nil, nil, nil, nil, nil, nil, true);
+    FauxScrollFrame_Update(self, musicCount, musicShown, musicRowHeight, nil, nil, nil, nil, nil, nil, true);
 end
 
 --- Mixin for the music browser tab panel.
@@ -807,9 +786,6 @@ end
 LibRPMedia_BrowserTabMixin = {};
 
 function LibRPMedia_BrowserTabMixin:OnLoad()
-    -- The template in Classic/BCC lacks the .Text parentkey, and so the
-    -- various tab functions used in the browser break.
-    self.Text = _G[self:GetName() .. "Text"];
 end
 
 function LibRPMedia_BrowserTabMixin:OnClick()
@@ -842,7 +818,7 @@ function LibRPMedia_BrowserMixin:OnLoad()
         self:SetPortraitToAsset(asset);
     end
 
-    self.TitleText:SetFormattedText("%s: Media Browser", ADDON_NAME);
+    self:SetTitle(string.format("%s: Media Browser", ADDON_NAME));
 end
 
 function LibRPMedia_BrowserMixin:OnShow()

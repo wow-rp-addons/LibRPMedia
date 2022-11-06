@@ -276,7 +276,7 @@
                     <Anchor point="BOTTOMRIGHT" x="-6" y="5"/>
                 </Anchors>
                 <Frames>
-                    <ScrollFrame parentKey="ScrollFrame" inherits="ListScrollFrameTemplate" mixin="LibRPMedia_MusicScrollMixin">
+                    <ScrollFrame parentKey="ScrollFrame" inherits="FauxScrollFrameTemplate" mixin="LibRPMedia_MusicScrollMixin">
                         <Anchors>
                             <Anchor point="TOPLEFT" x="0" y="-5"/>
                             <Anchor point="BOTTOMRIGHT" x="-23" y="3"/>
@@ -295,7 +295,7 @@
         </Scripts>
     </Frame>
 
-    <Frame name="LibRPMedia_BrowserTabTemplate" virtual="true" inherits="CharacterFrameTabButtonTemplate" mixin="LibRPMedia_BrowserTabMixin">
+    <Frame name="LibRPMedia_BrowserTabTemplate" virtual="true" inherits="PanelTabButtonTemplate" mixin="LibRPMedia_BrowserTabMixin">
         <KeyValues>
             <KeyValue key="minWidth" value="57" type="number"/>
         </KeyValues>
@@ -307,12 +307,12 @@
 
     <Frame name="LibRPMedia_BrowserTemplate" virtual="true" inherits="PortraitFrameTemplate" movable="true" registerForDrag="LeftButton" mixin="LibRPMedia_BrowserMixin">
         <Frames>
-            <Button name="$parentIconsTab" parentKey="IconsTab" inherits="LibRPMedia_BrowserTabTemplate" text="Icons" id="1" frameLevel="4" parentArray="Tabs">
+            <Button name="$parentIconsTab" parentKey="IconsTab" inherits="LibRPMedia_BrowserTabTemplate" text="Icons" id="1" frameLevel="4">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOMLEFT" x="11" y="2"/>
                 </Anchors>
             </Button>
-            <Button name="$parentMusicTab" parentKey="MusicTab" inherits="LibRPMedia_BrowserTabTemplate" text="Music" id="2" frameLevel="4" parentArray="Tabs">
+            <Button name="$parentMusicTab" parentKey="MusicTab" inherits="LibRPMedia_BrowserTabTemplate" text="Music" id="2" frameLevel="4">
                 <Anchors>
                     <Anchor point="LEFT" relativeKey="$parent.IconsTab" relativePoint="RIGHT" x="-16" y="0"/>
                 </Anchors>
