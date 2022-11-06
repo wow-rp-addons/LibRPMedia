@@ -5,9 +5,7 @@ enable-nolib-creation: no
 license-output: LICENSE
 
 externals:
-  Libs/LibStub:
-    url: https://repos.wowace.com/wow/libstub/trunk
-    tag: latest
+  Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
 
 ignore:
   - Exporter

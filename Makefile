@@ -17,6 +17,11 @@ build: classic wrath retail
 check:
 	@$(LUACHECK) . -q
 
+libs: $(PACKAGER_SCRIPT)
+	@bash $(PACKAGER_SCRIPT) -- -c -d -z
+	@mkdir -p Libs/
+	@cp -a .release/LibRPMedia/Libs/* Libs/
+
 classic: LibRPMedia-Classic-1.0.lua
 wrath: LibRPMedia-Wrath-1.0.lua
 retail: LibRPMedia-Retail-1.0.lua
