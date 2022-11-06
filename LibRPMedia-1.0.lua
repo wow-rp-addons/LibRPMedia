@@ -9,26 +9,6 @@ if not LibRPMedia then
     return;
 end
 
--- Upvalues.
-local error = error;
-local floor = math.floor;
-local min = math.min;
-local select = select;
-local setmetatable = setmetatable;
-local strbyte = string.byte;
-local strfind = string.find;
-local strformat = string.format;
-local strgsub = string.gsub;
-local strjoin = string.join;
-local strlower = string.lower;
-local strsplit = string.split;
-local strsub = string.sub;
-local type = type;
-local xpcall = xpcall;
-
-local CallErrorHandler = CallErrorHandler;
-local Mixin = Mixin;
-
 -- Local declarations.
 local AssertType;
 local BinarySearch;
@@ -591,6 +571,8 @@ end
 --- Restores a string list encoded as a list of front-coded strings, returning
 --  a new table with the loaded contents.
 function LibRPMedia:LoadFrontCodedStringList(input)
+    local strsub = string.sub;
+
     local output = {};
 
     -- Iterate over the list in pairs of common prefix length and suffixes.
@@ -674,6 +656,8 @@ end
 --  This function will always return the index that is the closest to the
 --  given value if an exact match cannot be found.
 function BinarySearchPrefix(table, value, i, j)
+    local floor = math.floor;
+
     local l = i or 1;
     local r = j or #table;
 
@@ -702,6 +686,8 @@ end
 
 --- Returns the length of the longest common prefix between two strings.
 function GetCommonPrefixLength(a, b)
+    local strbyte = string.byte;
+
     if a == b then
         return #a;
     end
@@ -786,6 +772,8 @@ end
 --  given data parameter, the row index, and the matched key. The return
 --  values from this are yielded to the caller of the iterator.
 function IterIndexByPattern(index, pattern, plain, rowAccessorFunc, data)
+    local strfind = string.find;
+
     -- Map of row indices that we've already returned.
     local seen = {};
 
@@ -893,6 +881,8 @@ do
     --  icon database that match a given pattern string. If plain is true,
     --  the search will not be a pattern but rather a substring test.
     function IterIconsByPattern(icons, pattern, plain)
+        local strfind = string.find;
+
         local patternIterator = function(_, offset)
             -- Test indices until we run out of them.
             for iconIndex = offset + 1, icons.size do
