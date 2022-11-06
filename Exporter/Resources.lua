@@ -339,7 +339,7 @@ function Resources.DownloadFileContent(fileID, locale)
     local content, cerr = store:readFile(fileID, locale);
     if not content then
         -- Failed to read the file content.
-        --Utils.Errorf("error reading file from storage: %s", cerr);
+        Log.Warn("Error reading file from storage.", { file = fileID, error = cerr });
         return;
     end
 
