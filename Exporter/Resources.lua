@@ -339,7 +339,8 @@ function Resources.DownloadFileContent(fileID, locale)
     local content, cerr = store:readFile(fileID, locale);
     if not content then
         -- Failed to read the file content.
-        Utils.Errorf("error reading file from storage: %s", cerr);
+        --Utils.Errorf("error reading file from storage: %s", cerr);
+        return;
     end
 
     -- Open the file for writing and write the contents out.
