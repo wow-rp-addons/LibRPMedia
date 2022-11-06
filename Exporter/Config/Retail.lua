@@ -4,7 +4,7 @@ return {
     -- Product name for obtaining data from the patch/CDN servers.
     product = "wow",
     -- Region to use when connecting to patch/CDN server.
-    region = "eu",
+    region = "us",
 
     -- Name of the database file to generate.
     database = "LibRPMedia-Retail-1.0.lua",
