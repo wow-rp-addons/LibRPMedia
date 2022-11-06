@@ -192,7 +192,7 @@ function LibRPMedia:GetNativeMusicFile(musicFile)
     if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
         -- Classic doesn't support file IDs, so we need to use paths.
         local musicName = self:GetMusicNameByFile(musicFile);
-        return strjoin("\\", "Sound", "Music", strsplit("/", musicName)) .. ".mp3";
+        return string.join("\\", "Sound", "Music", string.split("/", musicName)) .. ".mp3";
     end
 
     -- Default to returning the file ID otherwise.
@@ -272,7 +272,7 @@ function LibRPMedia:FindMusicFiles(musicName, options)
         -- We won't normalize a pattern because it's a bit tricky.
         return IterMusicFilesByPattern(music, musicName, false);
     else
-        error(strformat(ERR_INVALID_SEARCH_METHOD, optMethod), 2);
+        error(string.format(ERR_INVALID_SEARCH_METHOD, optMethod), 2);
     end
 end
 
@@ -455,7 +455,7 @@ function LibRPMedia:FindIcons(iconName, options)
     elseif optMethod == "pattern" then
         return IterIconsByPattern(icons, iconName, false);
     else
-        error(strformat(ERR_INVALID_SEARCH_METHOD, optMethod), 2);
+        error(string.format(ERR_INVALID_SEARCH_METHOD, optMethod), 2);
     end
 end
 
@@ -513,7 +513,7 @@ end
 function LibRPMedia:GetDatabase(databaseName)
     local database = self.schema[databaseName];
     if not database then
-        error(strformat(ERR_DATABASE_NOT_FOUND, databaseName), 2);
+        error(string.format(ERR_DATABASE_NOT_FOUND, databaseName), 2);
     end
 
     return database;
@@ -624,12 +624,12 @@ function CheckType(value, name, t1, t2, ...)
     if not t2 then
         types = t1;
     elseif select("#", ...) == 0 then
-        types = strjoin(" or ", t1, t2);
+        types = string.join(" or ", t1, t2);
     else
-        types = strjoin(", ", t1, t2, ...);
+        types = string.join(", ", t1, t2, ...);
     end
 
-    return nil, strformat(ERR_INVALID_ARG_TYPE, name, tv, types);
+    return nil, string.format(ERR_INVALID_ARG_TYPE, name, tv, types);
 end
 
 --- Asserts the type of a given value as with CheckType, but raises an error
@@ -693,7 +693,7 @@ function GetCommonPrefixLength(a, b)
     end
 
     local offset = 1;
-    local length = min(#a, #b);
+    local length = math.min(#a, #b);
 
     -- The innards of the loop are manually unrolled so we can minimize calls.
     while offset <= length do
@@ -854,7 +854,7 @@ do
     --- Normalizes the given music name.
     function NormalizeMusicName(musicName)
         -- Music names are lowercased strings with / path separators.
-        return strlower(strgsub(musicName, "\\", "/"));
+        return string.lower(string.gsub(musicName, "\\", "/"));
     end
 end
 
@@ -923,7 +923,7 @@ do
     --- Normalizes the given icon name.
     function NormalizeIconName(iconName)
         -- Icon names are just lowercased strings.
-        return strlower(iconName);
+        return string.lower(iconName);
     end
 end
 
