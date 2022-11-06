@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "61038bc2516536bba0d79e1cf410210e",
-        version = "3.4.0.46248",
+        bkey = "d47185815ae55b7f7a638ca0929a78db",
+        version = "3.4.0.46368",
     },
     icons = {
         {
