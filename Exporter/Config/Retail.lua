@@ -2,7 +2,7 @@ return {
     -- Expression that must evaluate to true for the generated file to load.
     loadexpr = "WOW_PROJECT_ID == WOW_PROJECT_MAINLINE",
     -- Product name for obtaining data from the patch/CDN servers.
-    product = "wowt",
+    product = "wow_beta",
     -- Region to use when connecting to patch/CDN server.
     region = "us",
 
