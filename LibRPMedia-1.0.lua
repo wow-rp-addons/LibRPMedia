@@ -2,7 +2,7 @@
 assert(LibStub, "Missing dependency: LibStub");
 
 local MODULE_MAJOR = "LibRPMedia-1.0";
-local MODULE_MINOR = 21;
+local MODULE_MINOR = 22;
 
 local LibRPMedia = LibStub:NewLibrary(MODULE_MAJOR, MODULE_MINOR);
 if not LibRPMedia then

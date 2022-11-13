@@ -77,6 +77,7 @@ return {
             "^inv_ursocpet$",
             "^inv_frostbroodprotowyrm$",
             "^inv_murlocmount$",
+            "^inv_beetlemount$",
         },
 
         -- List of atlas name patterns to include.
