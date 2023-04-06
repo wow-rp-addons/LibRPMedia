@@ -1,0 +1,90 @@
+---
+name: Generate Media
+on:
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: '0 18 * * *'
+
+  workflow_dispatch:
+    inputs:
+      mainline_product:
+        description: 'Mainline product branch'
+        required: true
+        default: 'wow'
+        type: choice
+        options:
+          - wow
+          - wowt
+          - wowbeta
+
+      wrath_product:
+        description: 'WotLK product branch'
+        required: true
+        default: 'wow_classic'
+        type: choice
+        options:
+          - wow_classic
+          - wow_classic_ptr
+          - wow_classic_beta
+
+      vanilla_product:
+        description: 'Vanilla product branch'
+        required: true
+        default: 'wow_classic_era'
+        type: choice
+        options:
+          - wow_classic_era
+          - wow_classic_era_ptr
+          - wow_classic_era_beta
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -qqy ffmpeg
+          sudo python3 -m pip install git+https://github.com/luarocks/hererocks
+          sudo hererocks -l 5.1 -r latest /usr/local
+          sudo luarocks make
+
+      - name: Cache database
+        uses: actions/cache@v3
+        with:
+          key: database
+          path: |
+            .cache/build.*
+            .cache/cdn.*
+            .cache/encoding.*
+            .cache/index.*
+            .cache/pconf.*
+            .cache/root.*
+
+      - name: Generate Media
+        run: make ${MAINLINE_PRODUCT} ${WRATH_PRODUCT} ${VANILLA_PRODUCT}
+        env:
+          MAINLINE_PRODUCT: ${{ inputs.mainline_product }}
+          WRATH_PRODUCT: ${{ inputs.wrath_product }}
+          VANILLA_PRODUCT: ${{ inputs.vanilla_product }}
+
+      - name: Increment library version
+        run: |
+          if [[ -n "$(git status --porcelain=v1 2>/dev/null)" ]]; then
+            perl -i -pe 's/(MINOR_VERSION = )(\d+)/$1.($2+1)/e' LibRPMedia-1.2.lua
+          fi
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: actions/regenerate-databases
+          commit-message: Regenerate Databases
+          delete-branch: true
+          title: Automated regeneration of media databases
+          body: Automated regeneration of media databases.
+          author: GitHub <noreply@github.com>
+          reviewers: Meorawr

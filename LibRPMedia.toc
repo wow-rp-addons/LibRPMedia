@@ -1,10 +1,11 @@
-## Interface: 100002
-## Interface-Wrath: 30400
+## Interface: 100100
+## Interface-Wrath: 30401
 ## Interface-Vanilla: 11403
 ## Title: Lib: RP Media
 ## Notes: LibRPMedia provides a common database of in-game resources for use by RP addons.
 ## Author: Daniel "Meorawr" Yates <me@meorawr.io>
 ## Version: @project-version@
+## IconAtlas: minortalents-icon-book
 
 ## X-Category: Library
 ## X-License: Public Domain
@@ -15,7 +16,8 @@
 
 Libs\LibStub\LibStub.lua
 
-LibRPMedia-1.0.xml
+lib.xml
+
 #@do-not-package@
-UI\Browser.xml
+LibRPMedia_Browser.xml
 #@end-do-not-package@

@@ -1,0 +1,328 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
+
+    <Include file="LibRPMedia_Browser.lua"/>
+
+    <Frame name="LibRPMedia_PaginationBarTemplate" virtual="true" mixin="LibRPMedia_PaginationBarMixin">
+        <Size x="100" y="32"/>
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString parentKey="PageText" inherits="GameFontWhite" wordwrap="false" justifyH="CENTER">
+                    <Size x="150" y="0" />
+                    <Anchors>
+                        <Anchor point="CENTER" x="0" y="0"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Button parentKey="PrevButton">
+                <Size x="32" y="32"/>
+                <Anchors>
+                    <Anchor point="RIGHT" relativeKey="$parent.PageText" relativePoint="LEFT" x="-5" y="0" />
+                </Anchors>
+                <NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up"/>
+                <PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
+                <DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"/>
+                <HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+                <Scripts>
+                    <OnClick>
+                        if not IsShiftKeyDown() then
+                            CallMethodOnNearestAncestor(self, "PreviousPage");
+                        else
+                            CallMethodOnNearestAncestor(self, "AdvancePage", -10);
+                        end
+
+                        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+                    </OnClick>
+                </Scripts>
+            </Button>
+            <Button parentKey="NextButton">
+                <Size x="32" y="32"/>
+                <Anchors>
+                    <Anchor point="LEFT" relativeKey="$parent.PageText" relativePoint="RIGHT" x="5" y="0" />
+                </Anchors>
+                <NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
+                <PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+                <DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
+                <HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+                <Scripts>
+                    <OnClick>
+                        if not IsShiftKeyDown() then
+                            CallMethodOnNearestAncestor(self, "NextPage");
+                        else
+                            CallMethodOnNearestAncestor(self, "AdvancePage", 10);
+                        end
+
+                        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+                    </OnClick>
+                </Scripts>
+            </Button>
+        </Frames>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+            <OnMouseWheel method="OnMouseWheel"/>
+        </Scripts>
+    </Frame>
+
+    <Button name="LibRPMedia_IconPreviewTemplate" virtual="true" mixin="LibRPMedia_IconPreviewMixin">
+        <Layers>
+            <Layer level="BORDER" textureSubLevel="1">
+                <Texture parentKey="Icon">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="2" y="-2"/>
+                        <Anchor point="BOTTOMRIGHT" x="-2" y="2"/>
+                    </Anchors>
+                </Texture>
+            </Layer>
+        </Layers>
+        <HighlightTexture file="Interface\Buttons\ButtonHilight-Square" alphaMode="ADD" alpha="0.5"/>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+            <OnEnter method="OnEnter"/>
+            <OnLeave method="OnLeave"/>
+            <OnClick method="OnClick"/>
+        </Scripts>
+    </Button>
+
+    <Frame name="LibRPMedia_IconBrowserTemplate" virtual="true" mixin="LibRPMedia_IconBrowserMixin">
+        <Frames>
+            <EditBox parentKey="SearchBox" inherits="SearchBoxTemplate" letters="40">
+                <Size x="115" y="20"/>
+                <Anchors>
+                    <Anchor point="TOPRIGHT" x="-107" y="-35"/>
+                </Anchors>
+                <Scripts>
+                    <OnTextChanged inherit="prepend">
+                        CallMethodOnNearestAncestor(self, "UpdateVisualization");
+                    </OnTextChanged>
+                </Scripts>
+            </EditBox>
+            <Button parentKey="OptionsButton" inherits="UIMenuButtonStretchTemplate" text="Options">
+                <Size x="93" y="22"/>
+                <Anchors>
+                    <Anchor point="LEFT" relativeKey="$parent.SearchBox" relativePoint="RIGHT" x="2" y="-1"/>
+                </Anchors>
+                <Layers>
+                    <Layer level="ARTWORK">
+                        <Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+                            <Size x="10" y="12"/>
+                            <Anchors>
+                                <Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+                            </Anchors>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Scripts>
+                    <OnClick>
+                        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+                        ToggleDropDownMenu(1, nil, self:GetParent().OptionsDropDown, self, 74, 15);
+                    </OnClick>
+                    <OnEnable>
+                        self.Icon:SetDesaturated(false);
+                    </OnEnable>
+                    <OnDisable>
+                        self.Icon:SetDesaturated(true);
+                    </OnDisable>
+                </Scripts>
+            </Button>
+            <Frame parentKey="OptionsDropDown" inherits="UIDropDownMenuTemplate" mixin="LibRPMedia_SearchOptionsDropDownMixin">
+                <Scripts>
+                    <OnLoad method="OnLoad"/>
+                </Scripts>
+            </Frame>
+            <Frame parentKey="ContentFrame" inherits="InsetFrameTemplate" mixin="LibRPMedia_IconContentMixin">
+                <KeyValues>
+                    <KeyValue key="iconWidth" value="56" type="number"/>
+                    <KeyValue key="iconHeight" value="56" type="number"/>
+                </KeyValues>
+                <Anchors>
+                    <Anchor point="TOPLEFT" x="4" y="-60"/>
+                    <Anchor point="BOTTOMRIGHT" x="-6" y="5"/>
+                </Anchors>
+                <Frames>
+                    <Frame parentKey="IconsFrame">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" x="20" y="-20"/>
+                            <Anchor point="BOTTOMRIGHT" x="-20" y="52"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame parentKey="PaginationBar" inherits="LibRPMedia_PaginationBarTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeKey="$parent.IconsFrame" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+                            <Anchor point="TOPRIGHT" relativeKey="$parent.IconsFrame" relativePoint="BOTTOMRIGHT" x="0" y="0"/>
+                        </Anchors>
+                    </Frame>
+                </Frames>
+                <Scripts>
+                    <OnLoad method="OnLoad"/>
+                    <OnMouseWheel method="OnMouseWheel"/>
+                    <OnSizeChanged method="OnSizeChanged"/>
+                </Scripts>
+            </Frame>
+        </Frames>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+        </Scripts>
+    </Frame>
+
+    <Button name="LibRPMedia_MusicItemRowTemplate" virtual="true" mixin="LibRPMedia_MusicItemRowMixin" registerForClicks="LeftButtonUp, RightButtonUp">
+        <Size x="0" y="25"/>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture parentKey="Stripe" setAllPoints="true" file="Interface\GuildFrame\GuildFrame">
+                    <TexCoords left="0.36230469" right="0.38183594" top="0.95898438" bottom="0.99804688"/>
+                </Texture>
+            </Layer>
+        </Layers>
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString parentKey="FileText" inherits="GameFontNormal" wordwrap="false" justifyH="LEFT">
+                    <Size x="100" y="0"/>
+                    <Anchors>
+                        <Anchor point="TOP" x="0" y="0"/>
+                        <Anchor point="LEFT" x="10" y="0"/>
+                        <Anchor point="BOTTOM" x="0" y="0"/>
+                    </Anchors>
+                </FontString>
+                <FontString parentKey="NameText" inherits="GameFontHighlight" wordwrap="false" justifyH="LEFT">
+                    <Size x="430" y="0"/>
+                    <Anchors>
+                        <Anchor point="TOP" x="0" y="0"/>
+                        <Anchor point="LEFT" relativeKey="$parent.FileText" relativePoint="RIGHT" x="20" y="0"/>
+                        <Anchor point="BOTTOM" x="0" y="0"/>
+                    </Anchors>
+                </FontString>
+                <FontString parentKey="DurationText" inherits="GameFontHighlight" wordwrap="false" justifyH="LEFT">
+                    <Size x="0" y="0"/>
+                    <Anchors>
+                        <Anchor point="TOP" x="0" y="0"/>
+                        <Anchor point="LEFT" relativeKey="$parent.NameText" relativePoint="RIGHT" x="20" y="0"/>
+                        <Anchor point="RIGHT" x="-10" y="0"/>
+                        <Anchor point="BOTTOM" x="0" y="0"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <HighlightTexture file="Interface\FriendsFrame\UI-FriendsFrame-HighlightBar" alphaMode="ADD" setAllPoints="true"/>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+            <OnClick method="OnClick"/>
+            <OnEnter method="OnEnter"/>
+            <OnLeave method="OnLeave"/>
+        </Scripts>
+    </Button>
+
+    <Frame name="LibRPMedia_MusicBrowserTemplate" virtual="true" mixin="LibRPMedia_MusicBrowserMixin">
+        <Frames>
+            <EditBox parentKey="SearchBox" inherits="SearchBoxTemplate" letters="40">
+                <Size x="115" y="20"/>
+                <Anchors>
+                    <Anchor point="TOPRIGHT" x="-107" y="-35"/>
+                </Anchors>
+                <Scripts>
+                    <OnTextChanged inherit="prepend">
+                        CallMethodOnNearestAncestor(self, "UpdateVisualization");
+                    </OnTextChanged>
+                </Scripts>
+            </EditBox>
+            <Button parentKey="OptionsButton" inherits="UIMenuButtonStretchTemplate" text="Options">
+                <Size x="93" y="22"/>
+                <Anchors>
+                    <Anchor point="LEFT" relativeKey="$parent.SearchBox" relativePoint="RIGHT" x="2" y="-1"/>
+                </Anchors>
+                <Layers>
+                    <Layer level="ARTWORK">
+                        <Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+                            <Size x="10" y="12"/>
+                            <Anchors>
+                                <Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+                            </Anchors>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Scripts>
+                    <OnClick>
+                        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+                        ToggleDropDownMenu(1, nil, self:GetParent().OptionsDropDown, self, 74, 15);
+                    </OnClick>
+                    <OnEnable>
+                        self.Icon:SetDesaturated(false);
+                    </OnEnable>
+                    <OnDisable>
+                        self.Icon:SetDesaturated(true);
+                    </OnDisable>
+                </Scripts>
+            </Button>
+            <Frame parentKey="OptionsDropDown" inherits="UIDropDownMenuTemplate" mixin="LibRPMedia_SearchOptionsDropDownMixin">
+                <Scripts>
+                    <OnLoad method="OnLoad"/>
+                </Scripts>
+            </Frame>
+            <Frame parentKey="ColumnDisplay" mixin="LibRPMedia_MusicColumnDisplayMixin">
+                <Size x="0" y="24"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" x="3" y="-65"/>
+                    <Anchor point="TOPRIGHT" x="0" y="-65"/>
+                </Anchors>
+                <Scripts>
+                    <OnLoad method="OnLoad"/>
+                </Scripts>
+            </Frame>
+            <Frame parentKey="ContentFrame" inherits="InsetFrameTemplate">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeKey="$parent.ColumnDisplay" relativePoint="BOTTOMLEFT" x="1" y="2"/>
+                    <Anchor point="BOTTOMRIGHT" x="-6" y="5"/>
+                </Anchors>
+                <Frames>
+                    <ScrollFrame parentKey="ScrollFrame" inherits="FauxScrollFrameTemplate" mixin="LibRPMedia_MusicScrollMixin">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" x="0" y="-5"/>
+                            <Anchor point="BOTTOMRIGHT" x="-23" y="3"/>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad method="OnLoad"/>
+                            <OnShow method="OnShow"/>
+                            <OnVerticalScroll method="OnVerticalScroll"/>
+                        </Scripts>
+                    </ScrollFrame>
+                </Frames>
+            </Frame>
+        </Frames>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+        </Scripts>
+    </Frame>
+
+    <Frame name="LibRPMedia_BrowserTabTemplate" virtual="true" inherits="PanelTabButtonTemplate" mixin="LibRPMedia_BrowserTabMixin">
+        <KeyValues>
+            <KeyValue key="minWidth" value="57" type="number"/>
+        </KeyValues>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+            <OnClick method="OnClick"/>
+        </Scripts>
+    </Frame>
+
+    <Frame name="LibRPMedia_BrowserTemplate" mixin="LibRPMedia_BrowserMixin" inherits="PortraitFrameTemplate" hidden="true" movable="true" registerForDrag="LeftButton" toplevel="true" virtual="true">
+        <Frames>
+            <Button name="$parentIconsTab" parentKey="IconsTab" inherits="LibRPMedia_BrowserTabTemplate" text="Icons" id="1" frameLevel="4">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOMLEFT" x="11" y="2"/>
+                </Anchors>
+            </Button>
+            <Button name="$parentMusicTab" parentKey="MusicTab" inherits="LibRPMedia_BrowserTabTemplate" text="Music" id="2" frameLevel="4">
+                <Anchors>
+                    <Anchor point="LEFT" relativeKey="$parent.IconsTab" relativePoint="RIGHT" x="-16" y="0"/>
+                </Anchors>
+            </Button>
+            <Frame parentKey="IconsFrame" inherits="LibRPMedia_IconBrowserTemplate" setAllPoints="true"/>
+            <Frame parentKey="MusicFrame" inherits="LibRPMedia_MusicBrowserTemplate" setAllPoints="true"/>
+        </Frames>
+        <Scripts>
+            <OnLoad inherit="prepend" method="OnLoad"/>
+            <OnShow method="OnShow"/>
+            <OnHide method="OnHide"/>
+        </Scripts>
+    </Frame>
+</Ui>

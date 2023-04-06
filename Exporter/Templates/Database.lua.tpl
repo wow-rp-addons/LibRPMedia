@@ -5,51 +5,48 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: <%- build.version %>
--- Build Config: <%- build.bkey %>
-if not (<%- config.loadexpr %>) then
+-- Client Version: [[@ build.version @]]
+-- Build Config: [[@ build.bkey @]]
+
+if LE_EXPANSION_LEVEL_CURRENT ~= [[@ expansion @]] then
     return;
 end
 
-local LibRPMedia = LibStub and LibStub:GetLibrary("LibRPMedia-1.0", true);
-if not LibRPMedia then
+local LRPM12 = LibStub and LibStub:GetLibrary("LibRPMedia-1.2", true);
+
+if not LRPM12 or LRPM12.db ~= nil then
     return;
 end
 
--- Minor version number of the database.
-local DATABASE_VERSION = <%- versionMinor %>;
+local db_icons_id;
+local db_icons_name;
+local db_music_file;
+local db_music_name;
+local db_music_nkey;
+local db_music_time;
 
--- Icon database.
-local icons = LibRPMedia:NewDatabase("icons", DATABASE_VERSION);
-if icons then
-    icons.size = <%- Dump(database.icons.size) %>;
-    icons.data = LibRPMedia:CreateLazyTable(function()
-        return LibRPMedia:LoadFunctionFromString([=[return {
-            file = <%- Dump(database.icons.data.file) %>,
-            name = LibRPMedia:LoadFrontCodedStringList(<%- Dump(database.icons.data.name) %>),
-            type = setmetatable(<%- Dump(database.icons.data.type) %>, { __index = function() return LibRPMedia.IconType.Texture; end }),
-        }]=]);
-    end);
-end
-
--- Music database.
-local music = LibRPMedia:NewDatabase("music", DATABASE_VERSION);
-if music then
-    music.size = <%- Dump(database.music.size) %>;
-    music.data = LibRPMedia:CreateLazyTable(function()
-        return LibRPMedia:LoadFunctionFromString([=[return {
-            file = <%- Dump(database.music.data.file) %>,
-            name = LibRPMedia:LoadFrontCodedStringList(<%- Dump(database.music.data.name) %>),
-            time = <%- Dump(database.music.data.time) %>,
-        }]=]);
-    end);
-
-    music.index = {
-        name = LibRPMedia:CreateLazyTable(function()
-            return LibRPMedia:LoadFunctionFromString([=[return {
-                row = <%- Dump(database.music.index.name.row) %>,
-                key = LibRPMedia:LoadFrontCodedStringList(<%- Dump(database.music.index.name.key) %>),
-            }]=]);
-        end),
+local function RegisterDatabase()
+    LRPM12.db = {
+        icons = {
+            size = [[@ db.icons.size @]],
+            id   = db_icons_id,
+            name = db_icons_name,
+        },
+        music = {
+            size = [[@ db.music.size @]],
+            file = db_music_file,
+            name = db_music_name,
+            nkey = db_music_nkey,
+            time = db_music_time,
+        },
     };
 end
+
+db_icons_id = [[@ db.icons.id @]];
+db_icons_name = [[@ db.icons.name @]];
+db_music_file = [[@ db.music.file @]];
+db_music_name = [[@ db.music.name @]];
+db_music_nkey = [[@ db.music.nkey @]];
+db_music_time = [[@ db.music.time @]];
+
+RegisterDatabase();

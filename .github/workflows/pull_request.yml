@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/setup-python@v2
       - uses: actions/setup-ruby@v1
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Run Luacheck
         uses: nebularg/actions-luacheck@v1
@@ -20,7 +20,7 @@ jobs:
         uses: wow-rp-addons/actions-editorconfig-check@v1.0.1
         with:
           args: -no-color
-          files: $(git ls-files '*.lua' '*.xml' '*.toc' ':!:Exporter/casc/' ':!:Exporter/Config/' ':!:Exporter/Data/' ':!:Libs/')
+          files: $(git ls-files '*.lua' '*.xml' '*.toc' ':!:Exporter/Libs/' ':!:Exporter/Data/')
 
       - name: Create Package
         uses: BigWigsMods/packager@master
@@ -29,7 +29,7 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: LibRPMedia-1.0-PR-${{ github.event.number }}
+          name: LibRPMedia-PR-${{ github.event.number }}
           path: .release/
 
       - name: Send Webhook Notification

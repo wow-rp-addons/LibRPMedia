@@ -1,41 +1,56 @@
-# Path to a Lua interpreter.
-LUA ?= lua
-LUACHECK ?= luacheck
-
-# Directory where releases and scripts are downoaded to.
+PRODUCTS := wow_classic wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wowbeta wowt
 RELEASE_DIR := .release
 
-# Path and URL to the packager script.
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
-PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/v2/release.sh
+PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh
 
-.PHONY: check wrath build classic release retail
+.PHONY: all check dist deps libs $(PRODUCTS)
+.DEFAULT: all
+.DELETE_ON_ERROR:
 .FORCE:
 
-build: classic wrath retail
+all: wow wow_classic wow_classic_era
 
 check:
-	@$(LUACHECK) . -q
+	luacheck -q $(shell git ls-files '*.lua' ':!:Exporter/Libs/')
+
+deps: Exporter/Libs/sqlite3/csv.so
+
+dist: $(PACKAGER_SCRIPT)
+	bash $(PACKAGER_SCRIPT) -l -S
 
 libs: $(PACKAGER_SCRIPT)
-	@bash $(PACKAGER_SCRIPT) -- -c -d -z
-	@mkdir -p Libs/
-	@cp -a .release/LibRPMedia/Libs/* Libs/
+	bash $(PACKAGER_SCRIPT) -- -c -d -z
+	mkdir -p Libs/
+	cp -a .release/LibRPMedia/Libs/* Libs/
 
-classic: LibRPMedia-Classic-1.0.lua
-wrath: LibRPMedia-Wrath-1.0.lua
-retail: LibRPMedia-Retail-1.0.lua
+wow_classic: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
 
-release: $(PACKAGER_SCRIPT)
-	@bash $(PACKAGER_SCRIPT) -l -S
+wow_classic_ptr: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
 
-LibRPMedia-%-1.0.lua: .FORCE
-	@echo Generating $(@)...
-	@$(LUA) Exporter/Main.lua --config Exporter/Config/$(*).lua
+wow_classic_era: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Vanilla.lua --database=LibRPMediaData_Vanilla.lua
+
+wow_classic_era_ptr: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Vanilla.lua --database=LibRPMediaData_Vanilla.lua
+
+wow: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+
+wowbeta: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+
+wowt: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+
+Exporter/Libs/sqlite3/csv.so: Exporter/Libs/sqlite3/csv.c
+	$(CC) -fPIC -O2 -shared -Wl,--no-as-needed -lsqlite3 $< -o $@
 
 $(PACKAGER_SCRIPT): $(RELEASE_DIR) .FORCE
 	@echo Fetching packager script...
-	@curl -Ls $(PACKAGER_SCRIPT_URL) > $(@)
+	@curl -Ls $(PACKAGER_SCRIPT_URL) -o $@
 
 $(RELEASE_DIR):
 	@mkdir $(@)

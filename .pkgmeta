@@ -8,11 +8,19 @@ externals:
   Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
 
 ignore:
+  - Libs/*/*.rockspec
+  - Libs/*/*.toc
+  - Libs/*/changelog.*
+  - Libs/*/CHANGELOG.*
+  - Libs/*/docs
+  - Libs/*/examples
+  - Libs/*/README.*
+  - Libs/*/tests
   - Exporter
-  - Libs/LibStub/tests
-  - Libs/LibStub/LibStub.toc
   - Makefile
-  - UI
+  - LibRPMedia_Browser.lua
+  - LibRPMedia_Browser.xml
+  - '*.rockspec'
 
 manual-changelog:
   filename: CHANGELOG.md

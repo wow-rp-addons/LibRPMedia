@@ -1,3 +1,3 @@
-## v1.1.18
+## v1.2.0
 
-- Added 5 new icons and 218 new musics for retail patch 10.0.2.
+- Library major bumped to "1.2". The old "1.0" library is now a compatibility wrapper for the new one.

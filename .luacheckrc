@@ -6,23 +6,21 @@ max_code_line_length = 118;
 max_string_line_length = 118;
 max_comment_line_length = 118;
 
--- Ignore generated files.
 exclude_files = {
     ".release",
-    "Exporter/casc",
-    "Exporter/Config",
-    "Exporter/Data",
-    "Exporter/Templates",
-    "LibRPMedia-*-1.0.lua",
+    "LibRPMediaData_*.lua",
     "Libs",
 };
 
 read_globals = {
+    "bit.band",
+    "bit.rshift",
+    "C_Texture.GetAtlasInfo",
     "CallbackRegistryMixin",
-    "CallErrorHandler",
     "CallMethodOnNearestAncestor",
     "Clamp",
     "ColumnDisplayMixin",
+    "CreateFrame",
     "CreateFramePool",
     "CreateFromMixins",
     "FauxScrollFrame_GetOffset",
@@ -33,36 +31,28 @@ read_globals = {
     "GameTooltip_AddNormalLine",
     "GameTooltip_SetTitle",
     "GameTooltip",
+    "GetAtlasInfo",
     "GetFileIDFromPath",
     "GetMouseFocus",
     "GREEN_FONT_COLOR",
-    "HideUIPanel",
     "LibStub.GetLibrary",
     "LibStub.NewLibrary",
-    "Mixin",
     "PanelTemplates_ResizeTabsToFit",
     "PanelTemplates_SetNumTabs",
     "PanelTemplates_SetTab",
     "PlayMusic",
     "PlaySound",
+    "PlaySoundFile",
     "SecondsToTime",
     "SetPortraitToTexture",
-    "ShowUIPanel",
     "SOUNDKIT",
     "StopMusic",
-    "string.join",
-    "string.split",
     "table.wipe",
-    "tostringall",
     "UIDropDownMenu_AddButton",
-    "UIDropDownMenu_CreateInfo",
-    "UIDropDownMenu_Initialize",
+    "UIDropDownMenu_SetInitializeFunction",
     "UIParent",
-    "WOW_PROJECT_BURNING_CRUSADE_CLASSIC",
-    "WOW_PROJECT_CLASSIC",
     "WOW_PROJECT_ID",
     "WOW_PROJECT_MAINLINE",
-    "WrapTextInColorCode",
 };
 
 -- The following globals are only written in non-packaged releases.
@@ -81,5 +71,4 @@ globals = {
     "LibRPMedia_SearchOptionsDropDownMixin",
     "SLASH_LIBRPMEDIA_SLASHCMD1",
     "SlashCmdList",
-    "UIPanelWindows",
 };
