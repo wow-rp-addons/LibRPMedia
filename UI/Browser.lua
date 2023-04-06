@@ -10,7 +10,6 @@ end
 local ceil = math.ceil;
 local floor = math.floor;
 local strformat = string.format;
-local strgsub = string.gsub;
 local tinsert = table.insert;
 local tsort = table.sort;
 local twipe = table.wipe;

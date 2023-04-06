@@ -9,10 +9,7 @@ max_comment_line_length = 118;
 -- Ignore generated files.
 exclude_files = {
     ".release",
-    "Exporter/casc",
-    "Exporter/Config",
-    "Exporter/Data",
-    "Exporter/Templates",
+    "Exporter",
     "LibRPMedia-*-1.0.lua",
     "Libs",
 };
@@ -46,6 +43,7 @@ read_globals = {
     "PlayMusic",
     "PlaySound",
     "SecondsToTime",
+    "securecallfunction",
     "SetPortraitToTexture",
     "ShowUIPanel",
     "SOUNDKIT",
