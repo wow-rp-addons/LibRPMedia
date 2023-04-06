@@ -5,6 +5,7 @@
 ## Notes: LibRPMedia provides a common database of in-game resources for use by RP addons.
 ## Author: Daniel "Meorawr" Yates <me@meorawr.io>
 ## Version: @project-version@
+## IconAtlas: minortalents-icon-book
 
 ## X-Category: Library
 ## X-License: Public Domain
