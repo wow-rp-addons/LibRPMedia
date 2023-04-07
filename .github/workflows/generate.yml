@@ -1,7 +1,7 @@
 ---
 name: Generate Media
 on:
-  # push: {}
+  push: {}
   workflow_dispatch: {}
 
 jobs:
