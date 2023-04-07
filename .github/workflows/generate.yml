@@ -1,8 +1,41 @@
 ---
 name: Generate Media
 on:
-  push: {}
-  workflow_dispatch: {}
+  schedule:
+    - cron: '0 18 * * *'
+
+  workflow_dispatch:
+    inputs:
+      retail_product:
+        description: 'Retail product branch'
+        required: true
+        default: 'wow'
+        type: choice
+        options:
+          - wow
+          - wowt
+          - wowbeta
+
+      wrath_product:
+        description: 'Wrath Classic product branch'
+        required: true
+        default: 'wow_classic'
+        type: choice
+        options:
+          - wow_classic
+          - wow_classic_ptr
+          - wow_classic_beta
+
+      classic_product:
+        description: 'Classic Era product branch'
+        required: true
+        default: 'wow_classic_era'
+        type: choice
+        options:
+          - wow_classic_era
+          - wow_classic_era_ptr
+
+    push: {}
 
 jobs:
   build:
@@ -31,7 +64,11 @@ jobs:
             .cache/root.*
 
       - name: Generate Media
-        run: make wow_classic_era
+        run: make ${RETAIL_PRODUCT} ${WRATH_PRODUCT} ${CLASSIC_PRODUCT}
+        env:
+          RETAIL_PRODUCT: ${{ inputs.retail_product }}
+          WRATH_PRODUCT: ${{ inputs.wrath_product }}
+          CLASSIC_PRODUCT: ${{ inputs.classic_product }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
