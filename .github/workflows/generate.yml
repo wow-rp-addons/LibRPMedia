@@ -1,0 +1,37 @@
+---
+name: Generate Media
+on:
+  push: {}
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: sudo apt-get install -qqy lua5.1 liblua5.1-dev lua-filesystem lua-socket
+
+      - name: Cache database
+        uses: actions/cache@v3
+        with:
+          path: .cache/build.db
+          key: database
+
+      - name: Generate Media
+        run: make deps all
+        env:
+          LUA_CPATH: /usr/lib/x86_64-linux-gnu/lua/5.1/?.so
+          LUA_PATH: /usr/share/lua/5.1/?.lua
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: actions/regenerate-databases
+          commit-message: Regenerate Databases
+          delete-branch: true
+          title: Automated regeneration of media databases
+          body: Automated regeneration of media databases.
+          author: GitHub <noreply@github.com>
+          reviewers: Meorawr

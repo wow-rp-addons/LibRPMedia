@@ -7,8 +7,8 @@ EXPORTER_DIR := Exporter
 MANIFEST_DIR := $(EXPORTER_DIR)/Data
 EXPORTER_LIBS_DIR := $(EXPORTER_DIR)/Libs
 
-LUA_CPATH := ./$(EXPORTER_LIBS_DIR)/?/?.so;$(LUA_CPATH)
-LUA_PATH := ./$(EXPORTER_LIBS_DIR)/?.lua;./$(EXPORTER_LIBS_DIR)/?/init.lua;./$(EXPORTER_DIR)/?.lua;./Libs/?/?.lua;$(LUA_PATH)
+export LUA_CPATH := ./$(EXPORTER_LIBS_DIR)/?/?.so;$(LUA_CPATH)
+export LUA_PATH := ./$(EXPORTER_LIBS_DIR)/?.lua;./$(EXPORTER_LIBS_DIR)/?/init.lua;./$(EXPORTER_DIR)/?.lua;./Libs/?/?.lua;$(LUA_PATH)
 
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
 PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/v2/release.sh
