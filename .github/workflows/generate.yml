@@ -3,9 +3,6 @@ name: Generate Media
 on:
   push: {}
 
-  schedule:
-    - cron: '0 18 * * *'
-
   workflow_dispatch:
     inputs:
       retail_product:
@@ -69,6 +66,12 @@ jobs:
           RETAIL_PRODUCT: ${{ inputs.retail_product }}
           WRATH_PRODUCT: ${{ inputs.wrath_product }}
           CLASSIC_PRODUCT: ${{ inputs.classic_product }}
+
+      - name: Increment library version
+        run: |
+          if [[ -n "$(git status --porcelain=v1 2>/dev/null)" ]]; then
+            perl -i -pe 's/(VERSION = )(\d+)/$1.($2+1)/e' LibRPMedia-1.0.lua
+          fi
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
