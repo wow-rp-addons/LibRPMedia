@@ -23,6 +23,7 @@ To load the library include a reference to the `lib.xml` file either within your
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
     <Include file="Libs\LibRPMedia\lib.xml"/>
 </Ui>
+```
 
 ## License
 
