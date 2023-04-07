@@ -252,13 +252,13 @@ local function GetIconWidth(store, contentHash)
     log("Fetching icon dimensions for:", contentHash);
 
     local dimensions = GetTextureDimensions(store, contentHash);
-    return dimensions.w;
+    return dimensions and dimensions.w or 0;
 end
 
 local function GetIconHeight(store, contentHash)
     -- Don't log here since the query executes both functions for each file.
     local dimensions = GetTextureDimensions(store, contentHash);
-    return dimensions.h;
+    return dimensions and dimensions.h or 0;
 end
 
 local function GetMusicDuration(store, contentHash)
