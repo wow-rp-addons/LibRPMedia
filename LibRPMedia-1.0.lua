@@ -1,7 +1,7 @@
 -- This file is licensed under the terms expressed in the LICENSE file.
 assert(LibStub, "Missing dependency: LibStub");
 
-local VERSION = 23;
+local VERSION = 24;
 
 local LibRPMedia = LibStub:NewLibrary("LibRPMedia-1.0", VERSION);
 if not LibRPMedia then
