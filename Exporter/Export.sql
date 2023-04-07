@@ -462,6 +462,8 @@ ORDER BY
 -- attribute caches for content hashes that are needed by our manifest views.
 --
 
+BEGIN;
+
 INSERT OR REPLACE INTO MusicAttribute (ContentHash, Duration)
 SELECT
     ContentHash,
@@ -472,6 +474,10 @@ FROM
         EXCEPT
         SELECT ContentHash FROM MusicAttribute WHERE Duration <> 0
     );
+
+COMMIT;
+
+BEGIN;
 
 INSERT OR REPLACE INTO IconAttribute (ContentHash, Width, Height)
 SELECT
@@ -484,3 +490,5 @@ FROM
         EXCEPT
         SELECT ContentHash FROM IconAttribute WHERE Width <> 0 AND Height <> 0
     );
+
+COMMIT;

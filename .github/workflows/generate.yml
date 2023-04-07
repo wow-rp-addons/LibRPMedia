@@ -1,7 +1,7 @@
 ---
 name: Generate Media
 on:
-  push: {}
+  # push: {}
   workflow_dispatch: {}
 
 jobs:
@@ -11,19 +11,27 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: sudo apt-get install -qqy ffmpeg liblua5.1-dev libsqlite3-dev lua5.1 lua-filesystem lua-socket
+        run:
+          sudo apt-get install -qqy ffmpeg
+          sudo python3 -m pip install git+https://github.com/luarocks/hererocks
+          sudo hererocks -l 5.1 -r latest /usr/local
+          sudo luarocks make
 
       - name: Cache database
         uses: actions/cache@v3
         with:
-          path: .cache/build.db
           key: database
+          path: |
+            .cache/build.db
+            .cache/build.*
+            .cache/cdn.*
+            .cache/encoding.*
+            .cache/index.*
+            .cache/pconf.*
+            .cache/root.*
 
       - name: Generate Media
-        run: make all
-        env:
-          LUA_CPATH: /usr/lib/x86_64-linux-gnu/lua/5.1/?.so
-          LUA_PATH: /usr/share/lua/5.1/?.lua
+        run: make wow_classic_era
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4

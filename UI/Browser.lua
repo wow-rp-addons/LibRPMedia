@@ -131,12 +131,12 @@ end
 LibRPMedia_SearchOptionsDropDownMixin = {};
 
 function LibRPMedia_SearchOptionsDropDownMixin:OnLoad()
-    UIDropDownMenu_Initialize(self, self.Initialize, "MENU");
+    UIDropDownMenu_SetInitializeFunction(self, self.Initialize, "MENU");
 end
 
 --- Initializes the dropdown, populating it with search options.
 function LibRPMedia_SearchOptionsDropDownMixin:Initialize(level)
-    local info = UIDropDownMenu_CreateInfo();
+    local info = {};
 
     -- Search methods.
     local _, method = CallMethodOnNearestAncestor(self, "GetSearchMethod");

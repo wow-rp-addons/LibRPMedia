@@ -305,7 +305,7 @@
         </Scripts>
     </Frame>
 
-    <Frame name="LibRPMedia_BrowserTemplate" virtual="true" inherits="PortraitFrameTemplate" movable="true" registerForDrag="LeftButton" mixin="LibRPMedia_BrowserMixin">
+    <Frame name="LibRPMedia_BrowserTemplate" mixin="LibRPMedia_BrowserMixin" inherits="PortraitFrameTemplate" hidden="true" movable="true" registerForDrag="LeftButton" toplevel="true" virtual="true">
         <Frames>
             <Button name="$parentIconsTab" parentKey="IconsTab" inherits="LibRPMedia_BrowserTabTemplate" text="Icons" id="1" frameLevel="4">
                 <Anchors>
@@ -325,12 +325,5 @@
             <OnShow method="OnShow"/>
             <OnHide method="OnHide"/>
         </Scripts>
-    </Frame>
-
-    <Frame name="LibRPMedia_BrowserFrame" inherits="LibRPMedia_BrowserTemplate" parent="UIParent" toplevel="true" enableMouse="true" hidden="true">
-        <Size x="800" y="600"/>
-        <Anchors>
-            <Anchor point="TOPLEFT" x="0" y="-104"/>
-        </Anchors>
     </Frame>
 </Ui>

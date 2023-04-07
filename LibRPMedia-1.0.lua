@@ -10,7 +10,7 @@ if not LibRPMedia then
 end
 
 local BinarySearch;
-local BinarySearchPrefix;
+local BinaryIndex;
 local GetCommonPrefixLength;
 local IterIcons;
 local IterIconsByPattern;
@@ -29,11 +29,11 @@ local ERR_INVALID_SEARCH_METHOD = "LibRPMedia: Invalid search method: %q";
 --- Music Database API
 
 function LibRPMedia:IsMusicDataLoaded()
-    return self:IsDatabaseRegistered("music");
+    return self.schema and self.schema.music ~= nil;
 end
 
 function LibRPMedia:GetNumMusicFiles()
-    return self:GetNumDatabaseEntries("music");
+    return self.schema and self.schema.music.size or 0;
 end
 
 function LibRPMedia:GetMusicDataByName(musicName, target)
@@ -76,10 +76,6 @@ function LibRPMedia:GetMusicDataByIndex(musicIndex, target)
         return fieldData[musicIndex];
     elseif targetType == "table" or targetType == "nil" then
         local fieldTable = target or {};
-
-        -- The data table is lazily loaded; this breaks pairs/next iteration
-        -- until a named field is explicitly looked up.
-        local _ = music.data._;
 
         for fieldName, fieldData in pairs(music.data) do
             fieldTable[fieldName] = fieldData[musicIndex];
@@ -180,11 +176,11 @@ LibRPMedia.IconType = {
 };
 
 function LibRPMedia:IsIconDataLoaded()
-    return self:IsDatabaseRegistered("icons");
+    return self.schema and self.schema.icons ~= nil;
 end
 
 function LibRPMedia:GetNumIcons()
-    return self:GetNumDatabaseEntries("icons");
+    return self.schema and self.schema.icons.size or 0;
 end
 
 function LibRPMedia:GetIconDataByName(iconName, target)
@@ -216,10 +212,6 @@ function LibRPMedia:GetIconDataByIndex(iconIndex, target)
         return fieldData[iconIndex];
     elseif targetType == "table" or targetType == "nil" then
         local fieldTable = target or {};
-
-        -- The data table is lazily loaded; this breaks pairs/next iteration
-        -- until a named field is explicitly looked up.
-        local _ = icons.data._;
 
         for fieldName, fieldData in pairs(icons.data) do
             fieldTable[fieldName] = fieldData[iconIndex];
@@ -288,24 +280,14 @@ end
 --- Internal API
 --  The below declarations are for internal use only.
 
-LibRPMedia.schema = {};  -- We assume all minor upgrades nuke the database.
+LibRPMedia.schema = nil;  -- We assume all minor upgrades nuke the database.
 
-function LibRPMedia:NewDatabase(databaseName)
-    if self.schema[databaseName] then
-        return;  -- Database already loaded; ignore this request.
-    end
-
-    local database = {};
-    self.schema[databaseName] = database;
-    return database;
-end
-
-function LibRPMedia:IsDatabaseRegistered(databaseName)
-    return self.schema[databaseName] ~= nil;
+function LibRPMedia:NewDatabase()
+    -- No-op; required for pre-v23 compatibility.
 end
 
 function LibRPMedia:GetDatabase(databaseName)
-    local database = self.schema[databaseName];
+    local database = self.schema and self.schema[databaseName] or nil;
 
     if not database then
         error(string.format(ERR_DATABASE_NOT_FOUND, databaseName), 2);
@@ -314,59 +296,7 @@ function LibRPMedia:GetDatabase(databaseName)
     return database;
 end
 
-function LibRPMedia:GetNumDatabaseEntries(databaseName)
-    local database = self:GetDatabase(databaseName);
-    return database.size;
-end
-
-function LibRPMedia:CreateLazyTable(generatorFunc)
-    local metatable = {};
-    metatable.__index = function(proxy, key)
-        -- Unset the metatable so that loading is only tried once.
-        setmetatable(proxy, nil);
-
-        local data = securecallfunction(generatorFunc);
-
-        if not data then
-            return;
-        end
-
-        Mixin(proxy, data);
-        return proxy[key];
-    end
-
-    return setmetatable({}, metatable);
-end
-
-function LibRPMedia:LoadFrontCodedStringList(input)
-    local strsub = string.sub;
-
-    local output = {};
-
-    -- Iterate over the list in pairs of common prefix length and suffixes.
-    for i = 1, #input, 2 do
-        local commonLength = input[i];
-        local suffix = input[i + 1];
-
-        if commonLength == 0 then
-            -- No data in common; the suffix is the whole string.
-            output[#output + 1] = suffix;
-        else
-            -- Combine the suffix with the previously restored string.
-            local prefix = output[#output];
-            local restored = strsub(prefix, 1, commonLength) .. suffix;
-
-            output[#output + 1] = restored;
-        end
-    end
-
-    return output;
-end
-
---- Internal utility functions.
---  Some of these are copy/pasted from the exporter, so need keeping in sync.
-
-function BinarySearchPrefix(table, value, i, j)
+function BinaryIndex(table, value, i, j)
     local floor = math.floor;
 
     local l = i or 1;
@@ -387,7 +317,7 @@ function BinarySearchPrefix(table, value, i, j)
 end
 
 function BinarySearch(table, value, i, j)
-    local index = BinarySearchPrefix(table, value, i, j);
+    local index = BinaryIndex(table, value, i, j);
     return table[index] == value and index or nil;
 end
 
@@ -434,7 +364,7 @@ function IterIndexByPrefix(index, prefix, rowAccessorFunc, data)
     local seen = {};
 
     -- Begin iteration from the closest matching prefix.
-    local offset = BinarySearchPrefix(index.key, prefix);
+    local offset = BinaryIndex(index.key, prefix);
     local length = #index.key;
 
     local iterator = function()
@@ -582,7 +512,7 @@ do
 
         -- Start iteration from the index before the matched prefix, as our
         -- name data is stored alphabetically.
-        local startIndex = BinarySearchPrefix(icons.data.name, prefix);
+        local startIndex = BinaryIndex(icons.data.name, prefix);
         return prefixIterator, icons, startIndex - 1;
     end
 
@@ -594,26 +524,19 @@ end
 --@do-not-package@
 
 if (...) == "LibRPMedia" and UIParent ~= nil then
-    -- Register the browser frame as a UI panel.
-    UIPanelWindows["LibRPMedia_BrowserFrame"] = {
-        area = "doublewide",
-        xoffset = 80,
-        pushable = 0,
-        whileDead = 1,
-    };
-
-    -- Add in a slash command to toggle the browser.
     SLASH_LIBRPMEDIA_SLASHCMD1 = "/lrpm";
 
     SlashCmdList["LIBRPMEDIA_SLASHCMD"] = function(cmd)
         local subcommand = string.match(cmd, "^([^%s]*)%s*(.-)$");
         if subcommand == "" or subcommand == "browse" then
-            if LibRPMedia_BrowserFrame:IsShown() then
-                HideUIPanel(LibRPMedia_BrowserFrame);
-            else
-                ShowUIPanel(LibRPMedia_BrowserFrame);
+            if not LibRPMedia_BrowserFrame then
+                CreateFrame("Frame", "LibRPMedia_BrowserFrame", UIParent, "LibRPMedia_BrowserTemplate");
+                LibRPMedia_BrowserFrame:SetPoint("TOPLEFT", 80, -104);
+                LibRPMedia_BrowserFrame:SetSize(800, 600);
             end
-        elseif subcommand == "bad-icons" then
+
+            LibRPMedia_BrowserFrame:SetShown(not LibRPMedia_BrowserFrame:IsShown());
+        elseif subcommand == "validate" then
             for _, name in LibRPMedia:FindAllIcons() do
                 if not GetFileIDFromPath([[Interface\Icons\]] .. name) then
                     print("Bad icon found: " .. name);

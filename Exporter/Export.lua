@@ -1,3 +1,5 @@
+#!/usr/bin/env lua
+
 --
 -- This is free and unencumbered software released into the public domain.
 --
@@ -26,23 +28,481 @@
 --
 
 local bit = require "bit";
+local casc = require "casc";
+local cascbin = require "casc.bin";
+local lfs = require "lfs";
+local lsqlite3 = require "lsqlite3";
 
-require "ExportUtil";
+local function GetOption(name)
+    for _, option in ipairs(arg) do
+        local optname, optvalue = string.match(option, "^--(%w+)=(.+)$");
 
+        if optname == name then
+            return optvalue;
+        end
+    end
+
+    return nil;
+end
+
+local CACHE_DIR = os.getenv("LUACASC_CACHE") or ".cache";
 local REGION = os.getenv("LUACASC_REGION") or "us";
 local PRODUCT = GetOption("product") or "wow";
 local MANIFEST_PATH = GetOption("manifest") or "Manifest.lua";
 local DATABASE_PATH = GetOption("database") or "Database.lua";
 local LOCALE = os.getenv("LUACASC_LOCALE") or "US";
 
-local LOAD_EXPRESSIONS = {
-    ["wow_classic"] = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING",
-    ["wow_classic_ptr"] = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING",
-    ["wow_classic_beta"] = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING",
-    ["wow_classic_era"] = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC",
-    ["wow_classic_era_ptr"] = "LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC",
-    ["wow"] = "WOW_PROJECT_ID == WOW_PROJECT_MAINLINE",
-};
+local function assertv(result, ...)
+    if not result then
+        error("assertion failure: " .. tostring((...)), 2);
+    end
+
+    return result, ...;
+end
+
+local function tostringall(...)
+    if select("#", ...) == 0 then
+        return;
+    end
+
+    return tostring((...)), tostringall(select(2, ...));
+end
+
+local function strjoin(delimiter, ...)
+    return table.concat({ tostringall(...) }, delimiter);
+end
+
+local function errorf(format, ...)
+    error(string.format(format, ...), 2);
+end
+
+local function log(...)
+    local date = string.format("\27[90m%s\27[0m", os.date("%H:%M:%S"));
+    io.stderr:write(strjoin(" ", date, ...), "\n");
+end
+
+local REPR_ESCAPES = {}
+for i = 0, 31 do REPR_ESCAPES[string.char(i)] = string.format("\\%03d", i); end
+for i = 127, 255 do REPR_ESCAPES[string.char(i)] = string.format("\\%03d", i); end
+REPR_ESCAPES["\0"] = "\\0";
+REPR_ESCAPES["\a"] = "\\a";
+REPR_ESCAPES["\b"] = "\\b";
+REPR_ESCAPES["\f"] = "\\f";
+REPR_ESCAPES["\n"] = "\\n";
+REPR_ESCAPES["\r"] = "\\r";
+REPR_ESCAPES["\t"] = "\\t";
+REPR_ESCAPES["\v"] = "\\v";
+
+local function repr(v)
+    local tv = type(v);
+
+    if tv == "nil" then
+        return "nil";
+    elseif tv == "boolean" then
+        return v and "true" or "false";
+    elseif tv == "number" then
+        return string.format("%.14g", v);
+    elseif tv == "string" then
+        v = string.gsub(string.format("%q", v), "[^\032-\126]", REPR_ESCAPES);
+        return v;
+    elseif tv == "table" then
+        local buf    = { "{" };
+        local numarr = 0;
+
+        for k, u in pairs(v) do
+            if numarr ~= nil and k == (numarr + 1) then
+                -- Consecutive array-like entries are written as such.
+                numarr = numarr + 1;
+                buf[#buf + 1] = repr(u);
+            else
+                -- Otherwise write as a full `[key] = value` pair.
+                numarr = nil;
+
+                if type(k) == "string" and string.find(k, "^[a-zA-Z_][a-zA-Z0-9_]*$") then
+                    -- Compact key without brackets.
+                    buf[#buf + 1] = k;
+                    buf[#buf + 1] = "=";
+                else
+                    buf[#buf + 1] = "[";
+                    buf[#buf + 1] = repr(k);
+                    buf[#buf + 1] = "]=";
+                end
+
+                buf[#buf + 1] = repr(u);
+
+            end
+
+            if next(v, k) then
+                buf[#buf + 1] = ",";
+            end
+        end
+
+        buf[#buf + 1] = "}";
+        return table.concat(buf);
+    else
+        return "nil";
+    end
+end
+
+local function BinaryIndex(table, value, i, j)
+    local floor = math.floor;
+
+    local l = i or 1;
+    local r = j or #table;
+
+    while l <= r do
+        local m = floor((l + r) / 2);
+        if table[m] < value then
+            l = m + 1;
+        elseif table[m] > value then
+            r = m - 1;
+        else
+            return m;
+        end
+    end
+
+    return l;
+end
+
+local function OpenFile(path, mode)
+    local file, err = io.open(path, mode);
+
+    if not file then
+        errorf("Failed to open file %s: %s", path, err);
+    else
+        return file;
+    end
+end
+
+local function ReadFile(path, mode)
+    local file = OpenFile(path, mode or "rb");
+    local data, err = file:read("*a");
+    file:close();
+
+    if not data then
+        errorf("Failed to read file %s: %s", path, err);
+    else
+        return data;
+    end
+end
+
+local function OpenUrl(url)
+    local stream, err = io.popen(string.format("curl -sfL %q", url));
+
+    if not stream then
+        errorf("Failed to open stream for %s: %s", url, err);
+    else
+        return stream;
+    end
+end
+
+local function DownloadUrl(url, path)
+    local command = string.format("curl -sfL %q -o %q", url, path);
+    local status = os.execute(command);
+
+    if status ~= 0 then
+        errorf("Failed to execute command (exit code %d): %s", status, command);
+    else
+        return true;
+    end
+end
+
+local function GetBuildInfo(product, region)
+    product = product or "wow";
+    region = region or "us";
+
+    log("Fetching build information for", product);
+
+    local url = string.format("ribbit://%s.version.battle.net:1119/%s", region, product);
+    local info = select(5, assert(casc.cdnbuild(url, region)));
+
+    return {
+        bkey = info.buildKey,
+        number = info.build,
+        cdn = info.cdnBase,
+        ckey = info.cdnKey,
+        version = info.version,
+    };
+end
+
+local function GetTextureDimensions(store, contentHash)
+    local data, err = store:readFileByContentHash(contentHash);
+
+    if not data then
+        return nil, "failed to read file: " .. err;
+    elseif type(data) ~= "string" then
+        return nil, "blp data is incorrect type";
+    elseif string.sub(data, 1, 4) ~= "BLP2" then
+        return nil, "blp data has an invalid header";
+    elseif #data < 20 then
+        return nil, "blp data is too small";
+    end
+
+    -- The dimensions of the file can be found at these byte ranges.
+    local w1, w2, w3, w4 = string.byte(data, 13, 16);
+    local h1, h2, h3, h4 = string.byte(data, 17, 20);
+
+    return {
+        w = bit.bor(w1, bit.lshift(w2, 8), bit.lshift(w3, 16), bit.lshift(w4, 24)),
+        h = bit.bor(h1, bit.lshift(h2, 8), bit.lshift(h3, 16), bit.lshift(h4, 24)),
+    };
+end
+
+local function GetIconWidth(store, contentHash)
+    log("Fetching icon dimensions for:", contentHash);
+
+    local dimensions = GetTextureDimensions(store, contentHash);
+    return dimensions.w;
+end
+
+local function GetIconHeight(store, contentHash)
+    -- Don't log here since the query executes both functions for each file.
+    local dimensions = GetTextureDimensions(store, contentHash);
+    return dimensions.h;
+end
+
+local function GetMusicDuration(store, contentHash)
+    log("Fetching duration for music file:", contentHash);
+
+    -- A bit of a hack is needed to get the path to the luacasc cached file
+    -- path as seen below...
+
+    if not store:readFileByContentHash(contentHash) then
+        return 0;  -- Failed to grab the file.
+    end
+
+    local keys = store.encoding:getEncodingHash(#contentHash == 16 and contentHash or cascbin.to_bin(contentHash));
+    local path;
+
+	for _ = 1, keys and 2 or 0 do
+        for i = 1, #keys do
+            local keyhash = #keys[i] == 32 and keys[i]:lower() or cascbin.to_hex(keys[i]);
+            local keypath = string.format("%s/file.%s", CACHE_DIR, keyhash);
+
+            if lfs.attributes(keypath, "mode") then
+                path = keypath;
+                break;
+            end
+        end
+
+        if path then
+            break;
+        end
+    end
+
+    local command = "ffprobe -i %q -v quiet -show_entries format=duration -of csv=p=0";
+    local pipe = assert(io.popen(string.format(command, path), "r"));
+    local data = pipe:read("*a");
+    pipe:close();
+
+    return tonumber(string.match(data, "[^%s]+")) or 0;
+end
+
+local function GetTactKeys()
+    local url = "https://raw.githubusercontent.com/wowdev/TACTKeys/master/WoW.txt";
+    local path = string.format("%s/tactkeys.csv", CACHE_DIR);
+
+    log("Downloading encryption keys:", url);
+
+    if not DownloadUrl(url, path) then
+        errorf("Failed to download encryption keys: %s", url);
+    end
+
+    local tactkeys = {};
+
+    for row in OpenFile(path, "r"):lines() do
+        local lookup, hexkey = string.match(row, "([0-9A-Fa-f]+) ([0-9A-Fa-f]+)");
+        tactkeys[lookup] = hexkey;
+    end
+
+    return tactkeys;
+end
+
+local function FetchDatabase(name, build)
+    local url = string.format("https://wago.tools/db2/%s/csv?build=%s", name, build.version);
+    local path = string.format("%s/%s@%s.csv", CACHE_DIR, name, build.bkey);
+
+    log("Downloading client database:", url);
+
+    if not DownloadUrl(url, path) then
+        errorf("Failed to download database: %s", url);
+    end
+
+    return path;
+end
+
+local function FetchListfile(store, build)
+    local url = string.format("https://raw.githubusercontent.com/wowdev/wow-listfile/master/community-listfile.csv");
+    local path = string.format("%s/community-listfile.csv", CACHE_DIR);
+
+    log("Downloading listfile:", url);
+
+    -- To minimize loading time we process the listfile to remove file
+    -- extensions that we don't really care about, and to turn the
+    -- delimiter to "," for use with the CSV virtual table. We also
+    -- collect content hashes now since it's faster to write them to
+    -- the listfile once than to recalculate them on each export.
+
+    local rfile = OpenUrl(url);
+    local wfile = OpenFile(path, "w+");
+
+    -- We also include a header because we're CIVILIZED people.
+    assert(wfile:write("Id,Path,ContentHash\n"));
+
+    for line in rfile:lines() do
+        local fileId, filePath = string.match(line, "^(%d+);(.+)$");
+
+        local TEXTURE_PATTERN = "^interface/[^.]+%.blp$";
+        local SOUND_PATTERN = "^sound/[^.]+%.[ogmp3]+$";
+
+        if string.find(filePath, TEXTURE_PATTERN) or string.find(filePath, SOUND_PATTERN) then
+            local contentHash = store:getFileContentHash(tonumber(fileId));
+
+            if contentHash then
+                assert(wfile:write(fileId, ",", string.format("%q", filePath), ",", contentHash, "\n"));
+            end
+        end
+    end
+
+    rfile:close();
+    wfile:close();
+
+    return path;
+end
+
+local function OpenCascStore(build, locale)
+    if lfs.attributes(CACHE_DIR, "mode") ~= "directory" then
+        assert(lfs.mkdir(CACHE_DIR));
+    end
+
+    return assert(casc.open({
+        bkey = build.bkey,
+        ckey = build.ckey,
+        cdn = build.cdn,
+        locale = locale or "US",
+        cache = CACHE_DIR,
+        cacheFiles = true,
+        zerofillEncryptedChunks = true,
+        log = function(_, text) if text ~= "Ready" then log(text); end end,
+        keys = GetTactKeys(),
+    }));
+end
+
+local SqlDatabaseMixin = {};
+
+function SqlDatabaseMixin:Init(db, ...)
+    self.db = assertv(db, ...);
+end
+
+function SqlDatabaseMixin:CheckResult(result, ...)
+    if result ~= lsqlite3.OK then
+        error(self.db:error_message(), 2);
+    end
+
+    return ...;
+end
+
+function SqlDatabaseMixin:ExecuteScriptFile(filePath)
+    local script = ReadFile(filePath);
+    return self:CheckResult(self.db:exec(script));
+end
+
+function SqlDatabaseMixin:LoadCsv(filePath, tableName, options)
+    local args = {};
+    table.insert(args, string.format("filename=%q", filePath));
+
+    if options and options.columns then
+        table.insert(args, string.format("columns=%d", options.columns));
+    end
+
+    if options and options.header then
+        table.insert(args, "header=1");
+    end
+
+    if options and options.schema then
+        table.insert(args, string.format("schema=%s", options.schema));
+    end
+
+    local basequery = [[CREATE VIRTUAL TABLE temp.%s USING csv(%s)]];
+    local query = string.format(basequery, tableName, table.concat(args, ","));
+
+    return self:CheckResult(self.db:exec(query));
+end
+
+function SqlDatabaseMixin:NamedRows(query)
+    return assertv(self.db:nrows(query));
+end
+
+function SqlDatabaseMixin:LoadExtension(extension, entrypoint)
+    return assertv(self.db:load_extension(extension, entrypoint));
+end
+
+function SqlDatabaseMixin:RegisterFunction(name, narg, func)
+    local function EntryPoint(context, ...)
+        local ok, result = pcall(func, ...);
+
+        if not ok then
+            return context:result_error(result);
+        elseif type(result) == "number" then
+            return context:result_number(result);
+        elseif type(result) == "boolean" then
+            return context:result_int(result and 1 or 0);
+        elseif type(result) == "string" then
+            return context:result_text(result);
+        elseif result == nil then
+            return context:result_null();
+        else
+            return context:result_error(string.format("unexpected return type from %s: %s", name, type(result)));
+        end
+    end
+
+    return assertv(self.db:create_function(name, narg, EntryPoint));
+end
+
+local function OpenDatabase(path)
+    local db = {};
+
+    for k, v in pairs(SqlDatabaseMixin) do
+        db[k] = v;
+    end
+
+    db:Init(lsqlite3.open(path));
+    return db;
+end
+
+local function WriteTemplate(sourcePath, outputPath, env)
+    local source = OpenFile(sourcePath, "rb");
+    local output = OpenFile(outputPath, "w+");
+
+    local buf = { "local _OUT = ..." };
+
+    for line in source:lines() do
+        if string.find(line, "^%-%-@") then
+            buf[#buf + 1] = string.match(line, "^%-%-@%s*(.+)$");
+        else
+            local last = 1;
+            for leading, expr, pos in string.gmatch(line, "(.-)%[%[(%b@@)%]%]()") do
+                if leading ~= "" then
+                    buf[#buf + 1] = "_OUT:write(" .. string.format("%q", leading) .. ")";
+                end
+
+                buf[#buf + 1] = "_OUT:write(" .. string.sub(expr, 2, -2) .. ")";
+                last = pos;
+            end
+
+            buf[#buf + 1] = "_OUT:write(" .. string.format("%q", string.sub(line, last) .. "\n") .. ")";
+        end
+    end
+
+    local chunk = assert(loadstring(table.concat(buf, "\n")));
+    setfenv(chunk, setmetatable(env or {}, { __index = getfenv(0) }));
+    chunk(output);
+
+    source:close();
+    output:close();
+
+    return true;
+end
 
 local function GetNormalizedAtlasName(atlasName)
     return string.lower(atlasName);
@@ -195,7 +655,7 @@ end
 
 local build = GetBuildInfo(PRODUCT, REGION);
 local store = OpenCascStore(build, LOCALE);
-local db = OpenDatabase(GetCacheDirectory() .. "/build.db");
+local db = OpenDatabase(CACHE_DIR .. "/build.db");
 
 db:LoadExtension("Exporter/Libs/sqlite3/csv.so");
 
@@ -216,7 +676,7 @@ db:RegisterFunction("IsIconFileExcluded", 3, IsIconFileExcluded);
 db:RegisterFunction("IsMusicFileExcluded", 3, IsMusicFileExcluded);
 db:RegisterFunction("IsMusicKitExcluded", 2, IsMusicKitExcluded);
 
-WriteLog("Loading data sources...");
+log("Loading data sources...");
 
 db:LoadCsv(FetchListfile(store, build), "CsvFile", { header = true });
 db:LoadCsv(FetchDatabase("manifestinterfacedata", build), "CsvManifestInterfaceData", { header = true });
@@ -228,7 +688,7 @@ db:LoadCsv(FetchDatabase("uitextureatlas", build), "CsvUiTextureAtlas", { header
 db:LoadCsv(FetchDatabase("uitextureatlaselement", build), "CsvUiTextureAtlasElement", { header = true });
 db:LoadCsv(FetchDatabase("uitextureatlasmember", build), "CsvUiTextureAtlasMember", { header = true });
 
-WriteLog("Preparing database...");
+log("Preparing database...");
 
 db:ExecuteScriptFile("Exporter/Export.sql");
 
@@ -240,7 +700,7 @@ local icons = {};
 local music = {};
 
 do
-    WriteLog("Building icon manifest...");
+    log("Building icon manifest...");
 
     for row in db:NamedRows([[SELECT * FROM Icon]]) do
         table.insert(icons, {
@@ -255,7 +715,7 @@ do
 end
 
 do
-    WriteLog("Building music manifest...");
+    log("Building music manifest...");
 
     local next, vm, row = db:NamedRows([[SELECT * FROM Music]]);
     row = next(vm, row);
@@ -281,7 +741,7 @@ do
 end
 
 if MANIFEST_PATH then
-    WriteLog("Exporting build manifest...");
+    log("Exporting build manifest...");
 
     WriteTemplate("Exporter/Manifest.lua.tpl", MANIFEST_PATH, {
         build = build,
@@ -298,7 +758,7 @@ local icondb = {};
 local musicdb = {};
 
 do
-    WriteLog("Building icon database...");
+    log("Building icon database...");
 
     icondb.file = {};
     icondb.name = {};
@@ -310,7 +770,7 @@ do
 end
 
 do
-    WriteLog("Building music database...");
+    log("Building music database...");
 
     musicdb.file = {};
     musicdb.name = {};
@@ -334,24 +794,36 @@ do
 end
 
 do
-    WriteLog("Exporting build database...");
+    log("Exporting build database...");
 
     WriteTemplate("Exporter/Database.lua.tpl", DATABASE_PATH, {
         build = build,
         version = build.version,
-        loadexpr = LOAD_EXPRESSIONS[PRODUCT] or LOAD_EXPRESSIONS["wow"],
+        expansion = (string.gsub(build.version, "^(%d+)\..+$", {
+            ["1"] = "LE_EXPANSION_CLASSIC",
+            ["2"] = "LE_EXPANSION_BURNING_CRUSADE",
+            ["3"] = "LE_EXPANSION_WRATH_OF_THE_LICH_KING",
+            ["4"] = "LE_EXPANSION_CATACLYSM",
+            ["5"] = "LE_EXPANSION_MISTS_OF_PANDARIA",
+            ["6"] = "LE_EXPANSION_WARLORDS_OF_DRAENOR",
+            ["7"] = "LE_EXPANSION_LEGION",
+            ["8"] = "LE_EXPANSION_BATTLE_FOR_AZEROTH",
+            ["9"] = "LE_EXPANSION_SHADOWLANDS",
+            ["10"] = "LE_EXPANSION_DRAGONFLIGHT",
+            ["11"] = "LE_EXPANSION_11_0",
+        })),
         db = {
             icons = {
                 size = #icondb.file,
                 file = repr(icondb.file),
-                name = repr(GenerateStringDeltas(icondb.name)),
+                name = repr(icondb.name),
             },
             music = {
                 size = #musicdb.file,
                 file = repr(musicdb.file),
-                name = repr(GenerateStringDeltas(musicdb.name)),
+                name = repr(musicdb.name),
                 time = repr(musicdb.time),
-                namekeys = repr(GenerateStringDeltas(musicdb.namekeys)),
+                namekeys = repr(musicdb.namekeys),
                 namerows = repr(musicdb.namerows),
             },
         },

@@ -8,39 +8,37 @@
 -- Client Version: [[@ build.version @]]
 -- Build Config: [[@ build.bkey @]]
 
-if not ([[@ loadexpr @]]) then
+if LE_EXPANSION_LEVEL_CURRENT ~= [[@ expansion @]] then
     return;
 end
 
 local LibRPMedia = LibStub and LibStub:GetLibrary("LibRPMedia-1.0", true);
-if not LibRPMedia then
+
+if not LibRPMedia or LibRPMedia.schema then
     return;
 end
 
-local icons = LibRPMedia:NewDatabase("icons");
-icons.size = [[@ db.icons.size @]];
-icons.data = LibRPMedia:CreateLazyTable(function()
-    return {
-        file = [[@ db.icons.file @]],
-        name = LibRPMedia:LoadFrontCodedStringList([[@ db.icons.name @]]),
-    };
-end);
+LibRPMedia.schema = {
+    icons = {
+        size = [[@ db.icons.size @]],
+        data = {
+            file = [[@ db.icons.file @]],
+            name = [[@ db.icons.name @]],
+        },
+    },
 
-local music = LibRPMedia:NewDatabase("music");
-music.size = [[@ db.music.size @]];
-music.data = LibRPMedia:CreateLazyTable(function()
-    return {
-        file = [[@ db.music.file @]],
-        name = LibRPMedia:LoadFrontCodedStringList([[@ db.music.name @]]),
-        time = [[@ db.music.time @]],
-    };
-end);
-
-music.index = {
-    name = LibRPMedia:CreateLazyTable(function()
-        return {
-            row = [[@ db.music.namerows @]],
-            key = LibRPMedia:LoadFrontCodedStringList([[@ db.music.namekeys @]]),
-        };
-    end),
+    music = {
+        size = [[@ db.music.size @]],
+        data = {
+            file = [[@ db.music.file @]],
+            name = [[@ db.music.name @]],
+            time = [[@ db.music.time @]],
+        },
+        index = {
+            name = {
+                row = [[@ db.music.namerows @]],
+                key = [[@ db.music.namekeys @]],
+            },
+        },
+    },
 };
