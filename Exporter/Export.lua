@@ -402,6 +402,11 @@ function SqlDatabaseMixin:CheckResult(result, ...)
     return ...;
 end
 
+function SqlDatabaseMixin:Close()
+    self:CheckResult(self.db:close());
+    self.db = nil;
+end
+
 function SqlDatabaseMixin:ExecuteScriptFile(filePath)
     local script = ReadFile(filePath);
     return self:CheckResult(self.db:exec(script));
@@ -829,3 +834,5 @@ do
         },
     });
 end
+
+db:Close();
