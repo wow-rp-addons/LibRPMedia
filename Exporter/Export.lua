@@ -193,171 +193,167 @@ local function GetCountedNameForMusic(fileId, soundKitId, musicName, duplicateIn
     end
 end
 
-local function Export()
-    local build = GetBuildInfo(PRODUCT, REGION);
-    local store = OpenCascStore(build, LOCALE);
-    local db = OpenDatabase(GetCacheDirectory() .. "/build.db");
+local build = GetBuildInfo(PRODUCT, REGION);
+local store = OpenCascStore(build, LOCALE);
+local db = OpenDatabase(GetCacheDirectory() .. "/build.db");
 
-    db:LoadExtension("Exporter/Libs/sqlite3/csv.so");
+db:LoadExtension("Exporter/Libs/sqlite3/csv.so");
 
-    db:RegisterFunction("GetNameForMusic", 3, GetNameForMusic);
-    db:RegisterFunction("GetCountedNameForMusic", 4, GetCountedNameForMusic);
+db:RegisterFunction("GetNameForMusic", 3, GetNameForMusic);
+db:RegisterFunction("GetCountedNameForMusic", 4, GetCountedNameForMusic);
 
-    db:RegisterFunction("GetFileContentHash", 1, function(fileId) return store:getFileContentHash(fileId); end);
-    db:RegisterFunction("GetIconHeight", 1, function(...) return GetIconHeight(store, ...); end);
-    db:RegisterFunction("GetIconWidth", 1, function(...) return GetIconWidth(store, ...); end);
-    db:RegisterFunction("GetMusicDuration", 1, function(...) return GetMusicDuration(store, ...); end);
-    db:RegisterFunction("GetNameForIconAtlas", 2, GetNameForIconAtlas);
-    db:RegisterFunction("GetNameForIconFile", 2, GetNameForIconFile);
-    db:RegisterFunction("GetNormalizedAtlasName", 1, GetNormalizedAtlasName);
-    db:RegisterFunction("GetNormalizedFilePath", 1, GetNormalizedFilePath);
-    db:RegisterFunction("GetNormalizedMusicName", 1, GetNormalizedMusicName);
-    db:RegisterFunction("IsIconAtlasExcluded", 2, IsIconAtlasExcluded);
-    db:RegisterFunction("IsIconFileExcluded", 3, IsIconFileExcluded);
-    db:RegisterFunction("IsMusicFileExcluded", 3, IsMusicFileExcluded);
-    db:RegisterFunction("IsMusicKitExcluded", 2, IsMusicKitExcluded);
+db:RegisterFunction("GetFileContentHash", 1, function(fileId) return store:getFileContentHash(fileId); end);
+db:RegisterFunction("GetIconHeight", 1, function(...) return GetIconHeight(store, ...); end);
+db:RegisterFunction("GetIconWidth", 1, function(...) return GetIconWidth(store, ...); end);
+db:RegisterFunction("GetMusicDuration", 1, function(...) return GetMusicDuration(store, ...); end);
+db:RegisterFunction("GetNameForIconAtlas", 2, GetNameForIconAtlas);
+db:RegisterFunction("GetNameForIconFile", 2, GetNameForIconFile);
+db:RegisterFunction("GetNormalizedAtlasName", 1, GetNormalizedAtlasName);
+db:RegisterFunction("GetNormalizedFilePath", 1, GetNormalizedFilePath);
+db:RegisterFunction("GetNormalizedMusicName", 1, GetNormalizedMusicName);
+db:RegisterFunction("IsIconAtlasExcluded", 2, IsIconAtlasExcluded);
+db:RegisterFunction("IsIconFileExcluded", 3, IsIconFileExcluded);
+db:RegisterFunction("IsMusicFileExcluded", 3, IsMusicFileExcluded);
+db:RegisterFunction("IsMusicKitExcluded", 2, IsMusicKitExcluded);
 
-    WriteLog("Loading data sources...");
+WriteLog("Loading data sources...");
 
-    db:LoadCsv(FetchListfile(store, build), "CsvFile", { header = true });
-    db:LoadCsv(FetchDatabase("manifestinterfacedata", build), "CsvManifestInterfaceData", { header = true });
-    db:LoadCsv(FetchDatabase("soundkit", build), "CsvSoundKit", { header = true });
-    db:LoadCsv(FetchDatabase("soundkitentry", build), "CsvSoundKitEntry", { header = true });
-    db:LoadCsv(FetchDatabase("zonemusic", build), "CsvZoneMusic", { header = true });
-    db:LoadCsv(FetchDatabase("zoneintromusictable", build), "CsvZoneIntroMusic", { header = true });
-    db:LoadCsv(FetchDatabase("uitextureatlas", build), "CsvUiTextureAtlas", { header = true });
-    db:LoadCsv(FetchDatabase("uitextureatlaselement", build), "CsvUiTextureAtlasElement", { header = true });
-    db:LoadCsv(FetchDatabase("uitextureatlasmember", build), "CsvUiTextureAtlasMember", { header = true });
+db:LoadCsv(FetchListfile(store, build), "CsvFile", { header = true });
+db:LoadCsv(FetchDatabase("manifestinterfacedata", build), "CsvManifestInterfaceData", { header = true });
+db:LoadCsv(FetchDatabase("soundkit", build), "CsvSoundKit", { header = true });
+db:LoadCsv(FetchDatabase("soundkitentry", build), "CsvSoundKitEntry", { header = true });
+db:LoadCsv(FetchDatabase("zonemusic", build), "CsvZoneMusic", { header = true });
+db:LoadCsv(FetchDatabase("zoneintromusictable", build), "CsvZoneIntroMusic", { header = true });
+db:LoadCsv(FetchDatabase("uitextureatlas", build), "CsvUiTextureAtlas", { header = true });
+db:LoadCsv(FetchDatabase("uitextureatlaselement", build), "CsvUiTextureAtlasElement", { header = true });
+db:LoadCsv(FetchDatabase("uitextureatlasmember", build), "CsvUiTextureAtlasMember", { header = true });
 
-    WriteLog("Preparing database...");
+WriteLog("Preparing database...");
 
-    db:ExecuteScriptFile("Exporter/Export.sql");
+db:ExecuteScriptFile("Exporter/Export.sql");
 
-    --
-    -- Manifest Export
-    --
+--
+-- Manifest Export
+--
 
-    local icons = {};
-    local music = {};
+local icons = {};
+local music = {};
 
-    do
-        WriteLog("Building icon manifest...");
+do
+    WriteLog("Building icon manifest...");
 
-        for row in db:NamedRows([[SELECT * FROM Icon]]) do
-            table.insert(icons, {
-                id = row.Id,
-                file = row.FileId,
-                hash = row.ContentHash,
-                name = row.Name,
-                size = { w = row.Width, h = row.Height },
-                type = row.Type,
-            });
-        end
-    end
-
-    do
-        WriteLog("Building music manifest...");
-
-        local next, vm, row = db:NamedRows([[SELECT * FROM Music]]);
-        row = next(vm, row);
-
-        while row do
-            local info = {
-                file = row.FileId,
-                hash = row.ContentHash,
-                path = row.Path,
-                time = row.Duration,
-                name = {},
-            };
-
-            local fileId = row.FileId;
-
-            repeat
-                table.insert(info.name, row.Name);
-                row = next(vm, row);
-            until not row or row.FileId ~= fileId;
-
-            table.insert(music, info);
-        end
-    end
-
-    if MANIFEST_PATH then
-        WriteLog("Exporting build manifest...");
-
-        WriteTemplate("Exporter/Manifest.lua.tpl", MANIFEST_PATH, {
-            build = build,
-            icons = icons,
-            music = music,
-        });
-    end
-
-    --
-    -- Database Export
-    --
-
-    local icondb = {};
-    local musicdb = {};
-
-    do
-        WriteLog("Building icon database...");
-
-        icondb.file = {};
-        icondb.name = {};
-
-        for index, info in ipairs(icons) do
-            icondb.name[index] = info.name;
-            icondb.file[index] = info.file;
-        end
-    end
-
-    do
-        WriteLog("Building music database...");
-
-        musicdb.file = {};
-        musicdb.name = {};
-        musicdb.time = {};
-        musicdb.namekeys = {};
-        musicdb.namerows = {};
-
-        for index, info in ipairs(music) do
-            musicdb.file[index] = info.file;
-            musicdb.name[index] = info.name[1];
-            musicdb.time[index] = math.ceil(info.time);
-
-            for _, name in ipairs(info.name) do
-                local kidx = BinaryIndex(musicdb.namekeys, name);
-
-                assert(musicdb.namekeys[kidx] ~= name);
-                table.insert(musicdb.namekeys, kidx, name);
-                table.insert(musicdb.namerows, kidx, index);
-            end
-        end
-    end
-
-    do
-        WriteLog("Exporting build database...");
-
-        WriteTemplate("Exporter/Database.lua.tpl", DATABASE_PATH, {
-            build = build,
-            version = build.version,
-            loadexpr = LOAD_EXPRESSIONS[PRODUCT] or LOAD_EXPRESSIONS["wow"],
-            db = {
-                icons = {
-                    size = #icondb.file,
-                    file = repr(icondb.file),
-                    name = repr(GenerateStringDeltas(icondb.name)),
-                },
-                music = {
-                    size = #musicdb.file,
-                    file = repr(musicdb.file),
-                    name = repr(GenerateStringDeltas(musicdb.name)),
-                    time = repr(musicdb.time),
-                    namekeys = repr(GenerateStringDeltas(musicdb.namekeys)),
-                    namerows = repr(musicdb.namerows),
-                },
-            },
+    for row in db:NamedRows([[SELECT * FROM Icon]]) do
+        table.insert(icons, {
+            id = row.Id,
+            file = row.FileId,
+            hash = row.ContentHash,
+            name = row.Name,
+            size = { w = row.Width, h = row.Height },
+            type = row.Type,
         });
     end
 end
 
-xpcall(Export, function(...) WriteError("Export failed:", ...); end);
+do
+    WriteLog("Building music manifest...");
+
+    local next, vm, row = db:NamedRows([[SELECT * FROM Music]]);
+    row = next(vm, row);
+
+    while row do
+        local info = {
+            file = row.FileId,
+            hash = row.ContentHash,
+            path = row.Path,
+            time = row.Duration,
+            name = {},
+        };
+
+        local fileId = row.FileId;
+
+        repeat
+            table.insert(info.name, row.Name);
+            row = next(vm, row);
+        until not row or row.FileId ~= fileId;
+
+        table.insert(music, info);
+    end
+end
+
+if MANIFEST_PATH then
+    WriteLog("Exporting build manifest...");
+
+    WriteTemplate("Exporter/Manifest.lua.tpl", MANIFEST_PATH, {
+        build = build,
+        icons = icons,
+        music = music,
+    });
+end
+
+--
+-- Database Export
+--
+
+local icondb = {};
+local musicdb = {};
+
+do
+    WriteLog("Building icon database...");
+
+    icondb.file = {};
+    icondb.name = {};
+
+    for index, info in ipairs(icons) do
+        icondb.name[index] = info.name;
+        icondb.file[index] = info.file;
+    end
+end
+
+do
+    WriteLog("Building music database...");
+
+    musicdb.file = {};
+    musicdb.name = {};
+    musicdb.time = {};
+    musicdb.namekeys = {};
+    musicdb.namerows = {};
+
+    for index, info in ipairs(music) do
+        musicdb.file[index] = info.file;
+        musicdb.name[index] = info.name[1];
+        musicdb.time[index] = math.ceil(info.time);
+
+        for _, name in ipairs(info.name) do
+            local kidx = BinaryIndex(musicdb.namekeys, name);
+
+            assert(musicdb.namekeys[kidx] ~= name);
+            table.insert(musicdb.namekeys, kidx, name);
+            table.insert(musicdb.namerows, kidx, index);
+        end
+    end
+end
+
+do
+    WriteLog("Exporting build database...");
+
+    WriteTemplate("Exporter/Database.lua.tpl", DATABASE_PATH, {
+        build = build,
+        version = build.version,
+        loadexpr = LOAD_EXPRESSIONS[PRODUCT] or LOAD_EXPRESSIONS["wow"],
+        db = {
+            icons = {
+                size = #icondb.file,
+                file = repr(icondb.file),
+                name = repr(GenerateStringDeltas(icondb.name)),
+            },
+            music = {
+                size = #musicdb.file,
+                file = repr(musicdb.file),
+                name = repr(GenerateStringDeltas(musicdb.name)),
+                time = repr(musicdb.time),
+                namekeys = repr(GenerateStringDeltas(musicdb.namekeys)),
+                namerows = repr(musicdb.namerows),
+            },
+        },
+    });
+end
