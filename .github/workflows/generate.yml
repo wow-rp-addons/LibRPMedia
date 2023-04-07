@@ -1,41 +1,42 @@
 ---
 name: Generate Media
 on:
+  push: {}
+
   schedule:
     - cron: '0 18 * * *'
 
-  # workflow_dispatch:
-  #   inputs:
-  #     retail_product:
-  #       description: 'Retail product branch'
-  #       required: true
-  #       default: 'wow'
-  #       type: choice
-  #       options:
-  #         - wow
-  #         - wowt
-  #         - wowbeta
+  workflow_dispatch:
+    inputs:
+      retail_product:
+        description: 'Retail product branch'
+        required: true
+        default: 'wow'
+        type: choice
+        options:
+          - wow
+          - wowt
+          - wowbeta
 
-  #     wrath_product:
-  #       description: 'Wrath Classic product branch'
-  #       required: true
-  #       default: 'wow_classic'
-  #       type: choice
-  #       options:
-  #         - wow_classic
-  #         - wow_classic_ptr
-  #         - wow_classic_beta
+      wrath_product:
+        description: 'Wrath Classic product branch'
+        required: true
+        default: 'wow_classic'
+        type: choice
+        options:
+          - wow_classic
+          - wow_classic_ptr
+          - wow_classic_beta
 
-  #     classic_product:
-  #       description: 'Classic Era product branch'
-  #       required: true
-  #       default: 'wow_classic_era'
-  #       type: choice
-  #       options:
-  #         - wow_classic_era
-  #         - wow_classic_era_ptr
+      classic_product:
+        description: 'Classic Era product branch'
+        required: true
+        default: 'wow_classic_era'
+        type: choice
+        options:
+          - wow_classic_era
+          - wow_classic_era_ptr
 
-    push: {}
 
 jobs:
   build:
