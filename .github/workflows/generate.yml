@@ -20,7 +20,7 @@ jobs:
           key: database
 
       - name: Generate Media
-        run: make deps all
+        run: make all
         env:
           LUA_CPATH: /usr/lib/x86_64-linux-gnu/lua/5.1/?.so
           LUA_PATH: /usr/share/lua/5.1/?.lua
