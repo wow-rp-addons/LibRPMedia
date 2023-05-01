@@ -25,7 +25,7 @@
 
 assert(LibStub, "Missing dependency: LibStub");
 
-local MINOR_VERSION = 23;
+local MINOR_VERSION = 24;
 
 local LRPM10 = LibStub:NewLibrary("LibRPMedia-1.0", MINOR_VERSION);
 local LRPM12 = LibStub:GetLibrary("LibRPMedia-1.2", false);
@@ -133,7 +133,7 @@ function LRPM10:FindMusicFiles(musicName, options)
 end
 
 function LRPM10:FindAllMusicFiles()
-    return LRPM12:EnumerateMusic();
+    return self:FindMusicFiles();
 end
 
 function LRPM10:IsIconDataLoaded()
@@ -216,7 +216,7 @@ function LRPM10:FindIcons(iconName, options)
 end
 
 function LRPM10:FindAllIcons()
-    return LRPM12:EnumerateIcons();
+    return self:FindIcons();
 end
 
 --

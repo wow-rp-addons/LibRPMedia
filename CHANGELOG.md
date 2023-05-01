@@ -1,3 +1,3 @@
-## v1.2.0
+## v1.2.1
 
-- Library major bumped to "1.2". The old "1.0" library is now a compatibility wrapper for the new one.
+- Fixed an issue where FindAll functions in the old library interface would yield table values from their iterators.
