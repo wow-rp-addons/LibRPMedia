@@ -41,6 +41,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo apt-get update
           sudo apt-get install -qqy ffmpeg
           sudo python3 -m pip install git+https://github.com/luarocks/hererocks
           sudo hererocks -l 5.1 -r latest /usr/local
