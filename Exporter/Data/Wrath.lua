@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "b5941573a8b317c5765f041fb9cfb4cb",
-        version = "3.4.1.49345",
+        bkey = "892a7623c49cb8fa9e0b7682a465fec6",
+        version = "3.4.2.50375",
     },
     icons = {
         {
@@ -50593,6 +50593,14 @@ return {
             file = 4352493,
             hash = "f7fb07369c49c10ce30e4925103b3f96",
             name = "ability_warlock_randomizesuccubusincubus",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 4777763,
+            file = 4777763,
+            hash = "485aa76a1d43489c61a4bfafc1ff753c",
+            name = "inv_magicalfishpet",
             size = { h = 64, w = 64 },
             type = 1,
         },
