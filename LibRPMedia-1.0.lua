@@ -133,7 +133,7 @@ function LRPM10:FindMusicFiles(musicName, options)
 end
 
 function LRPM10:FindAllMusicFiles()
-    return self:FindMusicFiles();
+    return self:FindMusicFiles("", { reuseTable = {} });
 end
 
 function LRPM10:IsIconDataLoaded()
@@ -216,7 +216,7 @@ function LRPM10:FindIcons(iconName, options)
 end
 
 function LRPM10:FindAllIcons()
-    return self:FindIcons();
+    return self:FindIcons("", { reuseTable = {} });
 end
 
 --
