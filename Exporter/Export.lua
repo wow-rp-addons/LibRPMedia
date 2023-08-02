@@ -318,7 +318,7 @@ function ResourceUtil.GetDatabase(name, build)
 end
 
 function ResourceUtil.GetListfile(store, build)
-    local url = string.format("https://raw.githubusercontent.com/wowdev/wow-listfile/master/community-listfile.csv");
+    local url = string.format("https://github.com/wowdev/wow-listfile/releases/latest/download/community-listfile.csv");
     local path = string.format("%s/community-listfile.csv", CACHE_DIR);
 
     log("Downloading listfile:", url);
