@@ -11,6 +11,7 @@ on:
         options:
           - wow
           - wowt
+          - wowxptr
           - wowbeta
 
       wrath_product:

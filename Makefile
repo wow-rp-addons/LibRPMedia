@@ -1,4 +1,4 @@
-PRODUCTS := wow_classic wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wowbeta wowt
+PRODUCTS := wow_classic wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wowbeta wowt wowxptr
 RELEASE_DIR := .release
 
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
@@ -43,6 +43,9 @@ wowbeta: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
 
 wowt: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+
+wowxptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
 
 Exporter/Libs/sqlite3/csv.so: Exporter/Libs/sqlite3/csv.c
