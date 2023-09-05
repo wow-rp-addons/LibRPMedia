@@ -12,7 +12,7 @@ on:
           - wow
           - wowt
           - wowxptr
-          - wowbeta
+          - wow_beta
 
       wrath_product:
         description: 'WotLK product branch'
