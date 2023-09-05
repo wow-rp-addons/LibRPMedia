@@ -341,7 +341,7 @@ WITH MusicAll (FileId, SoundKitId, Name) AS
     SELECT
         MusicFile.Id,
         NULL,
-        COALESCE(File.Path, "unknown")
+        File.Path
     FROM
         MusicFile
     LEFT OUTER JOIN
@@ -350,7 +350,7 @@ WITH MusicAll (FileId, SoundKitId, Name) AS
     SELECT
         MusicFile.Id,
         MusicKit.Id,
-        COALESCE(MusicKit.Name, "unknown")
+        MusicKit.Name
     FROM
         MusicKit
     INNER JOIN

@@ -336,7 +336,7 @@ function ResourceUtil.GetListfile(store, build)
     assert(wfile:write("Id,Path,ContentHash\n"));
 
     for line in rfile:lines() do
-        local fileId, filePath = string.match(line, "^(%d+);(.+)$");
+        local fileId, filePath = string.match(line, "^(%d+);(.-)\r?$");
 
         local TEXTURE_PATTERN = "^interface/[^.]+%.blp$";
         local SOUND_PATTERN = "^sound/[^.]+%.[ogmp3]+$";
