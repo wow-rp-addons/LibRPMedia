@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "fb02a39d11c5943387024fb3270e1f38",
-        version = "3.4.2.50664",
+        bkey = "9f2a748e681bedc545c6f8a04f233485",
+        version = "3.4.3.51943",
     },
     icons = {
         {
@@ -50493,6 +50493,14 @@ return {
             type = 1,
         },
         {
+            id   = 1418621,
+            file = 1418621,
+            hash = "6a769cd794e5a732f93f9d6f5fdfd920",
+            name = "item_shop_giftbox01",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 1530081,
             file = 1530081,
             hash = "cb5192f1cd588fc310a28b94a695434e",
@@ -50597,10 +50605,42 @@ return {
             type = 1,
         },
         {
+            id   = 4501546,
+            file = 4501546,
+            hash = "b497928d0b0eccf93388aa42d59d28c7",
+            name = "inv_tuskarrgliderwotlk",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 4680677,
+            file = 4680677,
+            hash = "6dc8d7d0b8d5a261e6d80a7e0bac53fa",
+            name = "inv_lunarrabbitpet",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 4687496,
+            file = 4687496,
+            hash = "8bddf0521c438b5ef47bae5af79a17e8",
+            name = "inv_rabbitmountclassic",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 4777763,
             file = 4777763,
             hash = "485aa76a1d43489c61a4bfafc1ff753c",
             name = "inv_magicalfishpet",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 5279604,
+            file = 5279604,
+            hash = "0d7515d834dcf86466b9171f90acab8b",
+            name = "inv_arfuspet_classic",
             size = { h = 64, w = 64 },
             type = 1,
         },
