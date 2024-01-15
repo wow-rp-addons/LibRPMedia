@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 3.4.3.51943
--- Build Config: 9f2a748e681bedc545c6f8a04f233485
+-- Client Version: 3.4.3.52237
+-- Build Config: 268a7d2d4bd28cad7c3779a1f5d0a11d
 
 if LE_EXPANSION_LEVEL_CURRENT ~= LE_EXPANSION_WRATH_OF_THE_LICH_KING then
     return;

@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 1.15.0.52186
--- Build Config: 3d8174d90071419e6962dace46f10172
+-- Client Version: 1.15.0.52610
+-- Build Config: 3b40893c622218bf6610b3c36c796906
 
 if LE_EXPANSION_LEVEL_CURRENT ~= LE_EXPANSION_CLASSIC then
     return;
