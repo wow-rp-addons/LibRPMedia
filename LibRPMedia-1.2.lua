@@ -25,7 +25,7 @@
 
 assert(LibStub, "Missing dependency: LibStub");
 
-local MINOR_VERSION = 7;
+local MINOR_VERSION = 8;
 
 local LRPM12 = LibStub:NewLibrary("LibRPMedia-1.2", MINOR_VERSION);
 
