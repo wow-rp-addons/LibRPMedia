@@ -32,7 +32,6 @@ on:
         options:
           - wow_classic_era
           - wow_classic_era_ptr
-          - wow_classic_era_beta
 
 jobs:
   build:

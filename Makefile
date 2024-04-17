@@ -1,4 +1,4 @@
-PRODUCTS := wow_classic wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wow_beta wowt wowxptr
+PRODUCTS := wow_classic wow_classic_beta wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wow_beta wowt wowxptr
 RELEASE_DIR := .release
 
 PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
@@ -25,6 +25,9 @@ libs: $(PACKAGER_SCRIPT)
 	cp -a .release/LibRPMedia/Libs/* Libs/
 
 wow_classic: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
+
+wow_classic_beta: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
 
 wow_classic_ptr: deps
