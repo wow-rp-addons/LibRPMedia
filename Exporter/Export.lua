@@ -517,9 +517,9 @@ function ExportUtil.IsIconFileExcluded(fileId, filePath, contentHash)
     -- Older version of the Devouring Plague icon that has weird naming.
     if fileId == 252996 then return true; end
 
-    -- The following content hash is commonly used by invisible files; in
-    -- Classic this is used by the inv_mace_18 and inv_staff_37 icons.
-    if contentHash == "c45fe08ddc6ff6ec2a7233c88a360873" then return true; end
+    -- These icons (inv_mace_18 and inv_staff_37) are invisible.
+    if contentHash == "44e7c7fb2747266be133dd4ba752cd48" then return true; end
+    if contentHash == "cb98a3a3c96c951686fdb364192f9217" then return true; end
 
     -- The following "icons" aren't actually icon files.
     if string.find(filePath, "^interface/icons/6ih_ironhorde_stone_base_stonewalledge") then return true; end
