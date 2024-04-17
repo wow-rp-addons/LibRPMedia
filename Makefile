@@ -25,10 +25,10 @@ libs: $(PACKAGER_SCRIPT)
 	cp -a .release/LibRPMedia/Libs/* Libs/
 
 wow_classic: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
 
 wow_classic_ptr: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
 
 wow_classic_era: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Vanilla.lua --database=LibRPMediaData_Vanilla.lua

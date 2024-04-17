@@ -14,8 +14,8 @@ on:
           - wowxptr
           - wow_beta
 
-      wrath_product:
-        description: 'WotLK product branch'
+      classic_product:
+        description: 'Classic product branch'
         required: true
         default: 'wow_classic'
         type: choice
@@ -24,8 +24,8 @@ on:
           - wow_classic_ptr
           - wow_classic_beta
 
-      vanilla_product:
-        description: 'Vanilla product branch'
+      classic_era_product:
+        description: 'Classic Era product branch'
         required: true
         default: 'wow_classic_era'
         type: choice
@@ -61,11 +61,11 @@ jobs:
             .cache/root.*
 
       - name: Generate Media
-        run: make ${MAINLINE_PRODUCT} ${WRATH_PRODUCT} ${VANILLA_PRODUCT}
+        run: make ${MAINLINE_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_ERA_PRODUCT}
         env:
           MAINLINE_PRODUCT: ${{ inputs.mainline_product }}
-          WRATH_PRODUCT: ${{ inputs.wrath_product }}
-          VANILLA_PRODUCT: ${{ inputs.vanilla_product }}
+          CLASSIC_PRODUCT: ${{ inputs.classic_product }}
+          CLASSIC_ERA_PRODUCT: ${{ inputs.classic_era_product }}
 
       - name: Increment library version
         run: |
