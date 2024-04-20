@@ -1,3 +1,3 @@
-## v1.2.6
+## v1.2.7
 
-- Updated for patch 10.2.6 and 1.15.1.
+- Updated for patch 4.4.0 and 1.15.2.
