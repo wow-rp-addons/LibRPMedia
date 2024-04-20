@@ -25,7 +25,7 @@
 
 assert(LibStub, "Missing dependency: LibStub");
 
-local MINOR_VERSION = 8;
+local MINOR_VERSION = 9;
 
 local LRPM12 = LibStub:NewLibrary("LibRPMedia-1.2", MINOR_VERSION);
 
@@ -277,7 +277,20 @@ end
 -- Internal Functions
 --
 
-LRPM12.db = nil;  -- Minor versions are assumed to provide new data.
+LRPM12.db = LRPM12.db or {
+    icons = {
+        size = 0,
+        id   = {},
+        name = {},
+    },
+    music = {
+        size = 0,
+        file = {},
+        name = {},
+        nkey = {},
+        time = {},
+    },
+};
 
 function AlwaysTrue()
     return true;
