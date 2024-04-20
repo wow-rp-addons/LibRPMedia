@@ -277,20 +277,7 @@ end
 -- Internal Functions
 --
 
-LRPM12.db = LRPM12.db or {
-    icons = {
-        size = 0,
-        id   = {},
-        name = {},
-    },
-    music = {
-        size = 0,
-        file = {},
-        name = {},
-        nkey = {},
-        time = {},
-    },
-};
+LRPM12.db = nil;
 
 function AlwaysTrue()
     return true;
