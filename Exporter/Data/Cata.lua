@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "6daebaa9c76d01f7f645a1d2b5aa5b9f",
-        version = "4.4.0.54217",
+        bkey = "a3d1b4fea761cc53feb3babe0338c174",
+        version = "4.4.0.54377",
     },
     icons = {
         {
@@ -11201,14 +11201,6 @@ return {
             file = 133492,
             hash = "b32dbd3ab62b93eccebbff845ccd1e94",
             name = "inv_mace_17",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            id   = 133493,
-            file = 133493,
-            hash = "44e7c7fb2747266be133dd4ba752cd48",
-            name = "inv_mace_18",
             size = { h = 64, w = 64 },
             type = 1,
         },
@@ -24625,14 +24617,6 @@ return {
             file = 135173,
             hash = "5e46be6088e8c510b1c6d82ac46214c1",
             name = "inv_staff_36",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            id   = 135174,
-            file = 135174,
-            hash = "cb98a3a3c96c951686fdb364192f9217",
-            name = "inv_staff_37",
             size = { h = 64, w = 64 },
             type = 1,
         },
