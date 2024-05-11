@@ -849,19 +849,7 @@ do
     ExportUtil.WriteTemplate("Exporter/Templates/Database.lua.tpl", DATABASE_PATH, {
         build = build,
         version = build.version,
-        expansion = (string.gsub(build.version, "^(%d+).+$", {
-            ["1"] = "LE_EXPANSION_CLASSIC",
-            ["2"] = "LE_EXPANSION_BURNING_CRUSADE",
-            ["3"] = "LE_EXPANSION_WRATH_OF_THE_LICH_KING",
-            ["4"] = "LE_EXPANSION_CATACLYSM",
-            ["5"] = "LE_EXPANSION_MISTS_OF_PANDARIA",
-            ["6"] = "LE_EXPANSION_WARLORDS_OF_DRAENOR",
-            ["7"] = "LE_EXPANSION_LEGION",
-            ["8"] = "LE_EXPANSION_BATTLE_FOR_AZEROTH",
-            ["9"] = "LE_EXPANSION_SHADOWLANDS",
-            ["10"] = "LE_EXPANSION_DRAGONFLIGHT",
-            ["11"] = "LE_EXPANSION_11_0",
-        })),
+        expansion = (tonumber((string.match(build.version, "^(%d+).+$"))) - 1),
         db = {
             icons = {
                 size = #icondb.id,
