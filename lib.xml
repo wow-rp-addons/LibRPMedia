@@ -5,6 +5,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
     <Include file="LibRPMediaData_Cata.lua"/>
     <Include file="LibRPMediaData_Mainline.lua"/>
     <Include file="LibRPMediaData_Wrath.lua"/>
+    <Include file="LibRPMediaData_TWW.lua"/>
     <Include file="LibRPMediaData_Vanilla.lua"/>
     <Include file="LIbRPMediaData_Default.lua"/>
 </Ui>
