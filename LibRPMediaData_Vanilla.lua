@@ -8,7 +8,7 @@
 -- Client Version: 1.15.2.54332
 -- Build Config: f1d29e07d5a51596e8462c5a4e0c3adb
 
-if LE_EXPANSION_LEVEL_CURRENT ~= LE_EXPANSION_CLASSIC then
+if LE_EXPANSION_LEVEL_CURRENT ~= 0 then
     return;
 end
 
