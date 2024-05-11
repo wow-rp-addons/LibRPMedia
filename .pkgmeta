@@ -21,7 +21,3 @@ ignore:
   - LibRPMedia_Browser.lua
   - LibRPMedia_Browser.xml
   - '*.rockspec'
-
-manual-changelog:
-  filename: CHANGELOG.md
-  markup-type: markdown
