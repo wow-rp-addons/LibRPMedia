@@ -1,8 +1,5 @@
+PACKAGER_URL := https://raw.githubusercontent.com/BigWigsMods/packager/eca4e176cd6ae5404c66bef5c11c08200a458400/release.sh
 PRODUCTS := wow_classic wow_classic_beta wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wow_beta wowt wowxptr
-RELEASE_DIR := .release
-
-PACKAGER_SCRIPT := $(RELEASE_DIR)/release.sh
-PACKAGER_SCRIPT_URL := https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh
 
 .PHONY: all check dist deps libs $(PRODUCTS)
 .DEFAULT: all
@@ -16,13 +13,12 @@ check:
 
 deps: Exporter/Libs/sqlite3/csv.so
 
-dist: $(PACKAGER_SCRIPT)
-	bash $(PACKAGER_SCRIPT) -l -S
+dist:
+	curl -s $(PACKAGER_URL) | bash -s -- -dS
 
-libs: $(PACKAGER_SCRIPT)
-	bash $(PACKAGER_SCRIPT) -- -c -d -z
-	mkdir -p Libs/
-	cp -a .release/LibRPMedia/Libs/* Libs/
+libs:
+	curl -s $(PACKAGER_URL) | bash -s -- -cdlz
+	cp -aTv .release/LibRPMedia/Libs Libs
 
 wow_classic: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
@@ -53,10 +49,3 @@ wowxptr: deps
 
 Exporter/Libs/sqlite3/csv.so: Exporter/Libs/sqlite3/csv.c
 	$(CC) -fPIC -O2 -shared -Wl,--no-as-needed -lsqlite3 $< -o $@
-
-$(PACKAGER_SCRIPT): $(RELEASE_DIR) .FORCE
-	@echo Fetching packager script...
-	@curl -Ls $(PACKAGER_SCRIPT_URL) -o $@
-
-$(RELEASE_DIR):
-	@mkdir $(@)
