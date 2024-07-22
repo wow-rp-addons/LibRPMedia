@@ -12,7 +12,6 @@ on:
           - wow
           - wowt
           - wowxptr
-          - wow_beta
 
       classic_product:
         description: 'Classic product branch'

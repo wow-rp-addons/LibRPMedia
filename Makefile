@@ -14,7 +14,7 @@ check:
 deps: Exporter/Libs/sqlite3/csv.so
 
 dist:
-	curl -s $(PACKAGER_URL) | bash -s -- -dS
+	curl -s $(PACKAGER_URL) | bash -s -- -d
 
 libs:
 	curl -s $(PACKAGER_URL) | bash -s -- -cdlz
@@ -39,7 +39,7 @@ wow: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
 
 wow_beta: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/TWW.lua --database=LibRPMediaData_TWW.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Midnight.lua --database=LibRPMediaData_Midnight.lua
 
 wowt: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
