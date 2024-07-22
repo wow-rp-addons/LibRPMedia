@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "85c3b8ae5f6e8a85554bbf1599780546",
-        version = "4.4.0.54647",
+        bkey = "4c1f6ffb13af74e7d241af25be771a9b",
+        version = "4.4.0.55639",
     },
     icons = {
         {
@@ -72209,6 +72209,14 @@ return {
             file = 5279604,
             hash = "0d7515d834dcf86466b9171f90acab8b",
             name = "inv_arfuspet_classic",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 5373378,
+            file = 5373378,
+            hash = "8237ce25b7c7724744bac87fee5a2a90",
+            name = "inv_wooddragon_pet",
             size = { h = 64, w = 64 },
             type = 1,
         },

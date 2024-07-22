@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "f1d29e07d5a51596e8462c5a4e0c3adb",
-        version = "1.15.2.54332",
+        bkey = "2d87804732008a1e961759839ccc1d8f",
+        version = "1.15.3.55646",
     },
     icons = {
         {
@@ -50357,6 +50357,14 @@ return {
             type = 1,
         },
         {
+            id   = 413584,
+            file = 413584,
+            hash = "701f63b9291118fc5542cf805a264193",
+            name = "achievement_guildperk_honorablemention",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 442272,
             file = 442272,
             hash = "383e5cce8e755565b32d1f51dbddcfb3",
@@ -50489,6 +50497,14 @@ return {
             file = 1126585,
             hash = "59d0c5631ad85c098a07ca3e8bc5e7ee",
             name = "vas_racechange",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 1500877,
+            file = 1500877,
+            hash = "8b6f220e87012c04ffd9973494f83a8f",
+            name = "inv_misc_scrollunrolled01",
             size = { h = 64, w = 64 },
             type = 1,
         },
@@ -50634,6 +50650,22 @@ return {
             hash = "2dcd3e90f4f01332aabab8b7e2051af5",
             name = "ui_selffound",
             size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 5838262,
+            file = 5838262,
+            hash = "75d45c4563e45f8047532a257975d7da",
+            name = "inv_bracer_leather_olivescale_b_01",
+            size = { h = 128, w = 128 },
+            type = 1,
+        },
+        {
+            id   = 5838263,
+            file = 5838263,
+            hash = "f331cb0b1fbc8791f67cc53b532e1678",
+            name = "inv_shoulder_leather_olivescale_b_01",
+            size = { h = 128, w = 128 },
             type = 1,
         },
     },
