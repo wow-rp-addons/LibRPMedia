@@ -39,7 +39,7 @@ wow: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
 
 wow_beta: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Midnight.lua --database=LibRPMediaData_Midnight.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
 
 wowt: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
