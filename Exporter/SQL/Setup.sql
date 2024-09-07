@@ -423,7 +423,7 @@ SELECT
     IconFile.Id AS IconId,
     File.Id,
     File.ContentHash,
-    GetNameForIconFile(File.Id, File.Path),
+    GetNameForIconFile(File.Id, ManifestInterfaceData.FilePath),
     IconAttribute.Width,
     IconAttribute.Height,
     1
@@ -431,6 +431,8 @@ FROM
     IconFile
 INNER JOIN
     File ON File.Id = IconFile.Id
+INNER JOIN
+    ManifestInterfaceData ON ManifestInterfaceData.FileId = File.Id
 INNER JOIN
     IconAttribute ON IconAttribute.ContentHash = File.ContentHash
 UNION
