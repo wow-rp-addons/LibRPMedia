@@ -72216,7 +72216,7 @@ return {
             id   = 5373378,
             file = 5373378,
             hash = "8237ce25b7c7724744bac87fee5a2a90",
-            name = "inv_wooddragon_pet",
+            name = "inv_wooddragonpet2",
             size = { h = 64, w = 64 },
             type = 1,
         },
