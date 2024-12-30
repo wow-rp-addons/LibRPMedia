@@ -322,7 +322,7 @@ INNER JOIN
 LEFT OUTER JOIN
     File ON File.Id = SoundKitEntry.FileId
 WHERE
-    File.Path IS NULL OR (File.Path LIKE "sound/%" AND NOT IsMusicFileExcluded(File.Id, File.Path, File.ContentHash))
+    File.Path LIKE "sound/%" AND NOT IsMusicFileExcluded(File.Id, File.Path, File.ContentHash)
 ORDER BY
     SoundKitEntry.FileId;
 
