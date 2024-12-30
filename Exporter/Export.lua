@@ -614,7 +614,9 @@ function ExportUtil.GetNameForMusic(fileId, soundKitId, musicName)
     --       a path, we normalize the basename in the same way because this
     --       allows our Counted function below to apply a unique suffix since
     --       trailing numbers on normalized music names are stripped.
-
+    if musicName == nil then
+        error(string.format("Yo I just exploded while processing fileId=%s and soundKitId=%s help me out bro", fileId or "nil", soundKitId or "nil"))
+    end
     if not soundKitId then
         local baseName = string.match(musicName, "^.+/([^%.]+)%.[ogmp3]+$");
         local normName = ExportUtil.GetNormalizedMusicName(baseName);
