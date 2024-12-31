@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "3bfcb1c121ecc3fbe0c4588619f0aedf",
-        version = "4.4.0.56713",
+        bkey = "694cee226aaf48ada4ad5024064bfc88",
+        version = "4.4.1.58158",
     },
     icons = {
         {
@@ -72205,6 +72205,14 @@ return {
             type = 1,
         },
         {
+            id   = 5140791,
+            file = 5140791,
+            hash = "f7ecf2120e827ca9cdd28650888239e3",
+            name = "inv_lunardragonmount_classic",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 5279604,
             file = 5279604,
             hash = "0d7515d834dcf86466b9171f90acab8b",
@@ -72337,6 +72345,22 @@ return {
             file = 5617457,
             hash = "2952a42a88e1308a792f22470ee4bb04",
             name = "inv_parrotpiratemountclassic_red",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 6238482,
+            file = 6238482,
+            hash = "65838acdb521e27ab685f191667ee56a",
+            name = "inv_shaserpentmount",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 6243518,
+            file = 6243518,
+            hash = "0f694354722d19e9a62562ba3536f046",
+            name = "inv_shatigermount",
             size = { h = 64, w = 64 },
             type = 1,
         },
