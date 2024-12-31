@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "f1d3bf873ea7785d9c9f77f6d8163c2e",
-        version = "1.15.4.56857",
+        bkey = "46febe610077a30555618a85064e1ede",
+        version = "1.15.5.57979",
     },
     icons = {
         {
@@ -50649,6 +50649,22 @@ return {
             file = 4638724,
             hash = "011fbf5a363520cfd3c6df022b2eafc2",
             name = "inv_10_fishing_dragonislescoins_bronze",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 4638725,
+            file = 4638725,
+            hash = "0bbe8cdf74489bd9383a5ead31954b17",
+            name = "inv_10_fishing_dragonislescoins_gold",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 4638726,
+            file = 4638726,
+            hash = "6340fab6d651eea959921321c5ecfb30",
+            name = "inv_10_fishing_dragonislescoins_silver",
             size = { h = 64, w = 64 },
             type = 1,
         },
