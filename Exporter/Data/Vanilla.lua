@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "46febe610077a30555618a85064e1ede",
-        version = "1.15.5.57979",
+        bkey = "5c7a305f6e08d77895a97a234a553873",
+        version = "1.15.7.60277",
     },
     icons = {
         {
@@ -3407,7 +3407,7 @@ return {
         {
             id   = 132516,
             file = 132516,
-            hash = "5313981c97d5d6988bd110eddc9c7eb7",
+            hash = "3533458618ada9c4abf5570fa825f395",
             name = "inv_belt_27",
             size = { h = 64, w = 64 },
             type = 1,
@@ -3975,7 +3975,7 @@ return {
         {
             id   = 132587,
             file = 132587,
-            hash = "7a0c66114fae7e07d0a008b325639389",
+            hash = "3a0173585075dc1fef6849b4b555728d",
             name = "inv_boots_plate_06",
             size = { h = 64, w = 64 },
             type = 1,
@@ -4191,7 +4191,7 @@ return {
         {
             id   = 132614,
             file = 132614,
-            hash = "64c53b03197df17a916257d2400655da",
+            hash = "57a92b7b4dde0ccdeb4a43a13d3c4940",
             name = "inv_bracer_15",
             size = { h = 64, w = 64 },
             type = 1,
@@ -4895,7 +4895,7 @@ return {
         {
             id   = 132702,
             file = 132702,
-            hash = "023ce4a93c29f1842e46c4a9e6e7bc73",
+            hash = "a09c99f598b82f8bb0fc31836b42ca1b",
             name = "inv_chest_cloth_61",
             size = { h = 64, w = 64 },
             type = 1,
@@ -5335,7 +5335,7 @@ return {
         {
             id   = 132757,
             file = 132757,
-            hash = "52d015d3ee12266f7aa4dd1fa66096a2",
+            hash = "d3d29b7f4aa8a4fe61f355698cad783e",
             name = "inv_chest_plate_23",
             size = { h = 64, w = 64 },
             type = 1,
@@ -7055,7 +7055,7 @@ return {
         {
             id   = 132972,
             file = 132972,
-            hash = "f75087940c25928a2861046c3df52f92",
+            hash = "ea4508e107656f352d26777c48309d2e",
             name = "inv_gauntlets_49",
             size = { h = 64, w = 64 },
             type = 1,
@@ -7159,7 +7159,7 @@ return {
         {
             id   = 132985,
             file = 132985,
-            hash = "756044ed860c426fc608da2104456db0",
+            hash = "a49e01f9be706ffd8c73e73153a4596f",
             name = "inv_gauntlets_62",
             size = { h = 64, w = 64 },
             type = 1,
@@ -8727,7 +8727,7 @@ return {
         {
             id   = 133182,
             file = 133182,
-            hash = "00e26595549a3f7d75520b181fb4cc36",
+            hash = "3687f35cf4928b65ac49530ac87498c7",
             name = "inv_helmet_86",
             size = { h = 64, w = 64 },
             type = 1,
@@ -8823,7 +8823,7 @@ return {
         {
             id   = 133194,
             file = 133194,
-            hash = "da8bd61208daacef80291a64f319d7c5",
+            hash = "f9d80d91c80b86b5acaa9fc8caa07cd4",
             name = "inv_helmet_98",
             size = { h = 64, w = 64 },
             type = 1,
@@ -20183,7 +20183,7 @@ return {
         {
             id   = 134616,
             file = 134616,
-            hash = "04da893cabcc23f9c13bae8c3e69af92",
+            hash = "01e7713e271639298989c365b80c6932",
             name = "inv_pants_cloth_22",
             size = { h = 64, w = 64 },
             type = 1,
@@ -20879,7 +20879,7 @@ return {
         {
             id   = 134703,
             file = 134703,
-            hash = "b9e742d158f9b1732a346504064d1365",
+            hash = "735d3bf2cf27f9f145efa1aa27ce2b77",
             name = "inv_pants_plate_27",
             size = { h = 64, w = 64 },
             type = 1,
@@ -23839,7 +23839,7 @@ return {
         {
             id   = 135074,
             file = 135074,
-            hash = "32b905fcef6a08b8ac1a77e047ce7fae",
+            hash = "b810b14ce3a6e23dcf7124a7d0c5f942",
             name = "inv_shoulder_49",
             size = { h = 64, w = 64 },
             type = 1,
@@ -23943,7 +23943,7 @@ return {
         {
             id   = 135087,
             file = 135087,
-            hash = "9c905a15bee3d186a210e1ffff0760bd",
+            hash = "f769ed1acd6e82a39b1532a297e81341",
             name = "inv_shoulder_62",
             size = { h = 64, w = 64 },
             type = 1,
@@ -50461,6 +50461,14 @@ return {
             type = 1,
         },
         {
+            id   = 1109508,
+            file = 1109508,
+            hash = "cf055365fa064fd80a6fff3e34edaad1",
+            name = "inv_sword_2h_artifactashbringer_d_01",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 1120721,
             file = 1120721,
             hash = "9f0fc8ccee7b2a453587edf9f14c6ab6",
@@ -50701,6 +50709,22 @@ return {
             type = 1,
         },
         {
+            id   = 5210047,
+            file = 5210047,
+            hash = "7d6a886d5c6967c9cc903f7c2a96a01b",
+            name = "inv_shield_1h_scarletcrusade_b_01",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 5519425,
+            file = 5519425,
+            hash = "6eec1a747ac11f4b283a38aa64de40b0",
+            name = "ability_orangebirdclassic",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 5588107,
             file = 5588107,
             hash = "2dcd3e90f4f01332aabab8b7e2051af5",
@@ -50801,6 +50825,14 @@ return {
             file = 5934898,
             hash = "8af5772f761b62001c9ff54f5e9aec69",
             name = "inv_stave_2h_druid_a_02",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 6725876,
+            file = 6725876,
+            hash = "277fe8b38ffb6f5068edd785f68c5c11",
+            name = "inv_pvpwarhorse_scarlet",
             size = { h = 64, w = 64 },
             type = 1,
         },
@@ -51235,6 +51267,7 @@ return {
             file = 53225,
             hash = "fc6e8b16d930ae9d3dbd41060c3b1bcc",
             name = {
+                "1_15_7_raid_scarlet_enclave_monastery_ph",
                 "battle",
                 "battle_02",
                 "moment_battle",
@@ -51391,6 +51424,8 @@ return {
             file = 53240,
             hash = "1ab2177e0f23f0f0aef8d11f56d97b36",
             name = {
+                "1_15_7_raid_scarlet_enclave_general_walk",
+                "1_15_7_raid_scarlet_enclave_tyr_s_hand_walk",
                 "mystery01_zone",
                 "zone_mystery",
             },
@@ -51401,6 +51436,8 @@ return {
             file = 53241,
             hash = "94cc7bfb3b05cb658fa2f8a015908d38",
             name = {
+                "1_15_7_raid_scarlet_enclave_general_walk_02",
+                "1_15_7_raid_scarlet_enclave_tyr_s_hand_walk_02",
                 "mystery02_zone",
                 "zone_mystery_02",
             },
@@ -51411,6 +51448,8 @@ return {
             file = 53242,
             hash = "6a6ef190fe8b2bc5f95159c9c7482fd9",
             name = {
+                "1_15_7_raid_scarlet_enclave_general_walk_03",
+                "1_15_7_raid_scarlet_enclave_tyr_s_hand_walk_03",
                 "mystery03_zone",
                 "zone_mystery_03",
             },
@@ -51421,6 +51460,7 @@ return {
             file = 53243,
             hash = "0a9e36d84b2b8a20237f1c132e0828e1",
             name = {
+                "1_15_7_raid_scarlet_enclave_new_avalon_walk",
                 "mystery04_zone",
                 "zone_mystery_04",
             },
@@ -51431,6 +51471,7 @@ return {
             file = 53244,
             hash = "ec1f9dfaf43b27c39b8ae0e4ed09579a",
             name = {
+                "1_15_7_raid_scarlet_enclave_new_avalon_walk_02",
                 "mystery05_zone",
                 "zone_mystery_05",
             },
@@ -51441,6 +51482,7 @@ return {
             file = 53245,
             hash = "d5459edc6b72cf2790d1fa9274fd4f62",
             name = {
+                "1_15_7_raid_scarlet_enclave_new_avalon_walk_03",
                 "mystery06_zone",
                 "zone_mystery_06",
             },
@@ -51451,6 +51493,7 @@ return {
             file = 53246,
             hash = "cadf4fd2178dbe55a674dcb4828d334b",
             name = {
+                "1_15_7_raid_scarlet_enclave_chapel_walk",
                 "mystery07_zone",
                 "zone_mystery_07",
             },
@@ -51461,6 +51504,7 @@ return {
             file = 53247,
             hash = "55a65f7a42ced3236716a1f2488f0df0",
             name = {
+                "1_15_7_raid_scarlet_enclave_chapel_walk_02",
                 "mystery08_zone",
                 "zone_mystery_08",
             },
@@ -51481,6 +51525,7 @@ return {
             file = 53249,
             hash = "547ad54e214e6cb6b27bc23e8488a80d",
             name = {
+                "1_15_7_raid_scarlet_enclave_chapel_walk_03",
                 "mystery10_zone",
                 "zone_mystery_10",
             },
@@ -52784,6 +52829,7 @@ return {
             file = 53746,
             hash = "a9850472f798078fa4923c0359e4b74f",
             name = {
+                "scarabdaisarea",
                 "tavernhorde_03",
                 "zone_tavernhorde_03",
             },
@@ -52847,6 +52893,36 @@ return {
             },
             path = "sound/music/zonemusic/volcanic/nightvolcanic02.mp3",
             time = 64.41795,
+        },
+        {
+            file = 6653571,
+            hash = "09c5c2317e14079a565b0b14f3f0a7c2",
+            name = {
+                "1_15_6_dungeon_karazhan_crypts_general_walk",
+                "mus_115_karazhan_crypts",
+            },
+            path = "sound/music/classic/mus_115_karazhan_crypts_1.mp3",
+            time = 185.88575,
+        },
+        {
+            file = 6653573,
+            hash = "b164d8f6468bb09f2c74e61e7525c5fe",
+            name = {
+                "1_15_6_dungeon_karazhan_crypts_general_walk_02",
+                "mus_115_karazhan_crypts_02",
+            },
+            path = "sound/music/classic/mus_115_karazhan_crypts_2.mp3",
+            time = 181.872125,
+        },
+        {
+            file = 6653575,
+            hash = "fe60e31f3bcd100d681a0fb41b29162f",
+            name = {
+                "1_15_6_dungeon_karazhan_crypts_general_walk_03",
+                "mus_115_karazhan_crypts_03",
+            },
+            path = "sound/music/classic/mus_115_karazhan_crypts_3.mp3",
+            time = 161.517313,
         },
     },
 };
