@@ -21,13 +21,13 @@ libs:
 	cp -aTv .release/LibRPMedia/Libs Libs
 
 wow_classic: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/MoP.lua --database=LibRPMediaData_MoP.lua
 
 wow_classic_beta: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/MoP.lua --database=LibRPMediaData_MoP.lua
 
 wow_classic_ptr: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Cata.lua --database=LibRPMediaData_Cata.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/MoP.lua --database=LibRPMediaData_MoP.lua
 
 wow_classic_era: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Vanilla.lua --database=LibRPMediaData_Vanilla.lua
