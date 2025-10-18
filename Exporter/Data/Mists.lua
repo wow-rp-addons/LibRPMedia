@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "0a03542084b83d7b18d23141b8570341",
-        version = "5.5.0.62258",
+        bkey = "73e5553435d05219882566bfe97c0ef8",
+        version = "5.5.1.63698",
     },
     icons = {
         {
@@ -95623,7 +95623,7 @@ return {
         {
             id   = 3940790,
             file = 3940790,
-            hash = "4f91f982f908212b18b8b8d87f71bedf",
+            hash = "8a39f058d3a169401289ac084762f631",
             name = "inv_warpstalkermountbc",
             size = { h = 64, w = 64 },
             type = 1,
@@ -95705,6 +95705,14 @@ return {
             file = 5140791,
             hash = "f7ecf2120e827ca9cdd28650888239e3",
             name = "inv_lunardragonmount_classic",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 5260432,
+            file = 5260432,
+            hash = "1716cacd7723d2b99d69380a033acad3",
+            name = "inv_encrypted13_blue",
             size = { h = 64, w = 64 },
             type = 1,
         },
@@ -96057,6 +96065,30 @@ return {
             file = 6799143,
             hash = "b543db3e4098820c18f68ba5f2ae47af",
             name = "inv_shadrakemount",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 7307329,
+            file = 7307329,
+            hash = "eaa4b1e4e1c5a8f8532a135e2a5a99ef",
+            name = "inv_warpstalkermount_blue",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 7307358,
+            file = 7307358,
+            hash = "8d91831c7e7503546da6884df4a2378e",
+            name = "inv_warpstalkermountbc_blue",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 7310370,
+            file = 7310370,
+            hash = "9cf104995a193d5d040ffa660cb6cf49",
+            name = "inv_dimensionalshippet",
             size = { h = 64, w = 64 },
             type = 1,
         },
