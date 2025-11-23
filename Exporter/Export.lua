@@ -849,7 +849,6 @@ do
     ExportUtil.WriteTemplate("Exporter/Templates/Database.lua.tpl", DATABASE_PATH, {
         build = build,
         version = build.version,
-        expansion = (tonumber((string.match(build.version, "^(%d+).+$"))) - 1),
         db = {
             icons = {
                 size = #icondb.id,

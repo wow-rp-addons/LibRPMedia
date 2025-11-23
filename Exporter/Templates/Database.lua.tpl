@@ -8,10 +8,6 @@
 -- Client Version: [[@ build.version @]]
 -- Build Config: [[@ build.bkey @]]
 
-if LE_EXPANSION_LEVEL_CURRENT ~= [[@ expansion @]] then
-    return;
-end
-
 local LRPM12 = LibStub and LibStub:GetLibrary("LibRPMedia-1.2", true);
 
 if not LRPM12 or LRPM12.db ~= nil then
