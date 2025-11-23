@@ -24,14 +24,35 @@ on:
           - wow_classic_ptr
           - wow_classic_beta
 
-      classic_era_product:
-        description: 'Classic Era product branch'
+      classic_vanilla_product:
+        description: 'Vanilla product branch'
         required: true
         default: 'wow_classic_era'
         type: choice
         options:
           - wow_classic_era
           - wow_classic_era_ptr
+
+      classic_tbc_product:
+        description: 'TBC product branch'
+        required: true
+        default: 'wow_classic_era_ptr'
+        type: choice
+        options:
+          - wow_classic_era_ptr
+          - wow_classic_tbc
+          - wow_classic_tbc_ptr
+
+      classic_wrath_product:
+        description: 'Wrath product branch'
+        required: true
+        default: 'wow_classic_titan'
+        type: choice
+        options:
+          - wow_classic_titan
+          - wow_classic_titan_ptr
+          - wow_classic_wrath
+          - wow_classic_wrath_ptr
 
 jobs:
   build:
@@ -60,11 +81,13 @@ jobs:
             .cache/root.*
 
       - name: Generate Media
-        run: make ${MAINLINE_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_ERA_PRODUCT}
+        run: make ${MAINLINE_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT} ${CLASSIC_WRATH_PRODUCT}
         env:
           MAINLINE_PRODUCT: ${{ inputs.mainline_product }}
           CLASSIC_PRODUCT: ${{ inputs.classic_product }}
-          CLASSIC_ERA_PRODUCT: ${{ inputs.classic_era_product }}
+          CLASSIC_VANILLA_PRODUCT: ${{ inputs.classic_vanilla_product }}
+          CLASSIC_TBC_PRODUCT: ${{ inputs.classic_tbc_product }}
+          CLASSIC_WRATH_PRODUCT: ${{ inputs.classic_wrath_product }}
 
       - name: Increment library version
         run: |

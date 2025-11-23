@@ -4,6 +4,8 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
     <Include file="LibRPMedia-1.0.lua"/>
     <Include file="LibRPMediaData_Mainline.lua [AllowLoadGameType: mainline]"/>
     <Include file="LibRPMediaData_Mists.lua [AllowLoadGameType: mists]"/>
+    <Include file="LibRPMediaData_TBC.lua [AllowLoadGameType: tbc]"/>
     <Include file="LibRPMediaData_Vanilla.lua [AllowLoadGameType: vanilla]"/>
+    <Include file="LibRPMediaData_Wrath.lua [AllowLoadGameType: wrath]"/>
     <Include file="LIbRPMediaData_Default.lua"/>
 </Ui>
