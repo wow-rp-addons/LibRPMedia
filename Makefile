@@ -48,10 +48,10 @@ wow_classic_wrath_ptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
 
 wow_classic_titan: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
+	env LUACASC_REGION=cn lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
 
 wow_classic_titan_ptr: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
+	env LUACASC_REGION=cn lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
 
 wow: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
