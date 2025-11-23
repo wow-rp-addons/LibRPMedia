@@ -199,7 +199,7 @@ function ResourceUtil.GetBuildInfo(product, region)
 
     log("Fetching build information for", product);
 
-    local url = string.format("http://%s.patch.battle.net:1119/%s", region, product);
+    local url = string.format("http://us.patch.battle.net:1119/%s", product);
     local info = select(5, assert(casc.cdnbuild(url, region)));
 
     return {
