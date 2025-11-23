@@ -481,27 +481,15 @@ end
 
 --@do-not-package@
 if (...) == "LibRPMedia" and UIParent ~= nil then
-    SLASH_LIBRPMEDIA_SLASHCMD1 = "/lrpm";
 
-    SlashCmdList["LIBRPMEDIA_SLASHCMD"] = function(cmd)
-        local subcommand = string.match(cmd, "^([^%s]*)%s*(.-)$");
-        if subcommand == "" or subcommand == "browse" then
-            if not LibRPMedia_BrowserFrame then
-                CreateFrame("Frame", "LibRPMedia_BrowserFrame", UIParent, "LibRPMedia_BrowserTemplate");
-                LibRPMedia_BrowserFrame:SetPoint("TOPLEFT", 80, -104);
-                LibRPMedia_BrowserFrame:SetSize(800, 600);
-            end
-
-            LibRPMedia_BrowserFrame:SetShown(not LibRPMedia_BrowserFrame:IsShown());
-        elseif subcommand == "validate" then
-            for _, icon in LRPM12:EnumerateIcons() do
-                if icon.type == LRPM12.IconType.File and not GetFileIDFromPath([[Interface\Icons\]] .. icon.name) then
-                    print("Bad icon found: " .. icon.name);
-                end
-            end
+function LRPM12:ValidateIcons()
+    for _, icon in LRPM12:EnumerateIcons() do
+        if icon.type == LRPM12.IconType.File and not GetFileIDFromPath([[Interface\Icons\]] .. icon.name) then
+            print("Bad icon found: " .. icon.name);
         end
     end
 end
 
 _G.LRPM12 = LRPM12;
+end
 --@end-do-not-package@

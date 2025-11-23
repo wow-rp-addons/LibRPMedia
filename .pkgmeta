@@ -18,6 +18,4 @@ ignore:
   - Libs/*/tests
   - Exporter
   - Makefile
-  - LibRPMedia_Browser.lua
-  - LibRPMedia_Browser.xml
   - '*.rockspec'
