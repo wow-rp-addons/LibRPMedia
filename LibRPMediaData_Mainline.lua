@@ -5,12 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 11.2.5.63834
--- Build Config: 26d3ebac3dc3f790597a943f911d8e14
-
-if LE_EXPANSION_LEVEL_CURRENT ~= 10 then
-    return;
-end
+-- Client Version: 11.2.5.64502
+-- Build Config: 353a77846e7a5d072e954dd81d457099
 
 local LRPM12 = LibStub and LibStub:GetLibrary("LibRPMedia-1.2", true);
 
