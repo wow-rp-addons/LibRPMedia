@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 3.80.0.64393
--- Build Config: d8ac1242c2655856ef94a6410a48b70b
+-- Client Version: 3.80.0.65301
+-- Build Config: 5f6e1fa1d7391c9e7419307ce428c016
 
 local LRPM12 = LibStub and LibStub:GetLibrary("LibRPMedia-1.2", true);
 

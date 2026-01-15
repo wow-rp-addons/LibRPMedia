@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "9920dce9e7c2217f2c9b2de6449c9232",
-        version = "2.5.5.64616",
+        bkey = "1272ef5be270d8aadda6f213ee152544",
+        version = "2.5.5.65340",
     },
     icons = {
         {
@@ -31333,6 +31333,14 @@ return {
             type = 1,
         },
         {
+            id   = 236395,
+            file = 236395,
+            hash = "4e453bef2ffc576dddf8edb242f74945",
+            name = "achievement_bg_winsoa_underxminutes",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 236444,
             file = 236444,
             hash = "f1b9afcb827dd2dcaf6425930d8f9c2b",
@@ -31501,6 +31509,30 @@ return {
             type = 1,
         },
         {
+            id   = 1126583,
+            file = 1126583,
+            hash = "07641b9bb8d6c7c42a16f5cdcfc4efd3",
+            name = "vas_factionchange",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 1126584,
+            file = 1126584,
+            hash = "9002c847fb711ef407b58707f0ab2862",
+            name = "vas_namechange",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 1126585,
+            file = 1126585,
+            hash = "add2b42a859880a76f9f0b438e34a3f1",
+            name = "vas_racechange",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 1500877,
             file = 1500877,
             hash = "8b6f220e87012c04ffd9973494f83a8f",
@@ -31641,6 +31673,14 @@ return {
             file = 7317375,
             hash = "24323778549137918518b726c5cb8bd4",
             name = "inv_netherwingmount",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 7455463,
+            file = 7455463,
+            hash = "42a9abf434531d28966633a9d4bf2f96",
+            name = "ui_shop",
             size = { h = 64, w = 64 },
             type = 1,
         },
