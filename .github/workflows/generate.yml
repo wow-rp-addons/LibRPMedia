@@ -36,12 +36,11 @@ on:
       classic_tbc_product:
         description: 'TBC product branch'
         required: true
-        default: 'wow_classic_era_ptr'
+        default: 'wow_anniversary'
         type: choice
         options:
-          - wow_classic_era_ptr
-          - wow_classic_tbc
-          - wow_classic_tbc_ptr
+          - wow_anniversary
+          - wow_anniversary_ptr
 
       classic_wrath_product:
         description: 'Wrath product branch'
@@ -51,8 +50,6 @@ on:
         options:
           - wow_classic_titan
           - wow_classic_titan_ptr
-          - wow_classic_wrath
-          - wow_classic_wrath_ptr
 
 jobs:
   build:

@@ -6,7 +6,7 @@ PRODUCTS := wow_classic wow_classic_beta wow_classic_ptr wow_classic_era wow_cla
 .DELETE_ON_ERROR:
 .FORCE:
 
-all: wow wow_classic wow_classic_era wow_classic_era_ptr wow_classic_titan
+all: wow wow_anniversary wow_classic wow_classic_era wow_classic_titan
 
 check:
 	luacheck -q $(shell git ls-files '*.lua' ':!:Exporter/Libs/')
@@ -33,19 +33,13 @@ wow_classic_era: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Vanilla.lua --database=LibRPMediaData_Vanilla.lua
 
 wow_classic_era_ptr: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Vanilla.lua --database=LibRPMediaData_Vanilla.lua
+
+wow_anniversary: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/TBC.lua --database=LibRPMediaData_TBC.lua
 
-wow_classic_tbc: deps
+wow_anniversary_ptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/TBC.lua --database=LibRPMediaData_TBC.lua
-
-wow_classic_tbc_ptr: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/TBC.lua --database=LibRPMediaData_TBC.lua
-
-wow_classic_wrath: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
-
-wow_classic_wrath_ptr: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
 
 wow_classic_titan: deps
 	env LUACASC_REGION=cn lrpm-export --product=$@ --manifest=Exporter/Data/Wrath.lua --database=LibRPMediaData_Wrath.lua
