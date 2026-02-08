@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "5f6e1fa1d7391c9e7419307ce428c016",
-        version = "3.80.0.65301",
+        bkey = "8f49567e22a85dc35f5f4fa2d5fc5f40",
+        version = "3.80.0.65797",
     },
     icons = {
         {
@@ -50777,14 +50777,6 @@ return {
             file = 2245099,
             hash = "bea65f816d779d18d3877099ed2c47de",
             name = "inv_mace_22",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            id   = 2734740,
-            file = 2734740,
-            hash = "2054b432e55e61702bdfefceb969c7e8",
-            name = "inv_encrypted13",
             size = { h = 64, w = 64 },
             type = 1,
         },
