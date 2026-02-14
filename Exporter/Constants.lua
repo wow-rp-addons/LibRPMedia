@@ -162,7 +162,7 @@ Constants.IconCategoryParents = {
     [Constants.IconCategory.Mining] = Constants.IconCategory.Professions,
     [Constants.IconCategory.Skinning] = Constants.IconCategory.Professions,
     [Constants.IconCategory.Tailoring] = Constants.IconCategory.Professions,
-    [Constants.IconCategory.Fishing] = Constants.IconCategory.Fishing,
+    [Constants.IconCategory.Fishing] = Constants.IconCategory.Professions,
 };
 
 Constants.IconCategoryKeywords = {
