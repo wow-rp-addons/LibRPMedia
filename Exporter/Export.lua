@@ -840,16 +840,19 @@ do
             local tags = Constants.IconCategoryKeywords[token];
 
             if tags then
-                local idiotprotection = {};
-
                 for _, tag in ipairs(tags) do
+                    local idiotprotection = {};
+                    local firsttag = tags[1];
+
                     repeat
-                        assert(not idiotprotection[tag], "loop detected in tag parent chain");
-                        idiotprotection[tag] = true;
+                        if idiotprotection[tag] then
+                            errorf("loop detected in tag parent chain ('%s' -> '%s')", firsttag, tag);
+                        end
 
                         local bitindex = CalculateTagBitIndex(index, tag);
                         local bitflag = CalculateTagBitFlag(tag);
 
+                        idiotprotection[tag] = true;
                         icondb.tags[bitindex] = bit.bor(icondb.tags[bitindex], bitflag);
                         tag = Constants.IconCategoryParents[tag];
                     until tag == nil;
