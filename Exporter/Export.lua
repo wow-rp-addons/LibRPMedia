@@ -33,6 +33,8 @@ local cascbin = require "casc.bin";
 local lfs = require "lfs";
 local lsqlite3 = require "lsqlite3";
 
+local Constants = require "Constants";
+
 local function getopt(name)
     for _, option in ipairs(arg) do
         local optname, optvalue = string.match(option, "^--(%w+)=(.+)$");
@@ -79,6 +81,12 @@ end
 local function log(...)
     local date = string.format("\27[90m%s\27[0m", os.date("%H:%M:%S"));
     io.stderr:write(strjoin(" ", date, ...), "\n");
+end
+
+local function tcount(tbl)
+    local n = 0;
+    for k in next(tbl) do n = n + 1; end
+    return n;
 end
 
 local REPR_ESCAPES = {}
@@ -795,12 +803,54 @@ local musicdb = {};
 do
     log("Building icon database...");
 
+    local TAG_BITS = 32;
+    local TAG_COUNT = tcount(Constants.IconCategory);
+    local TAG_STRIDE = math.ceil(TAG_COUNT / TAG_BITS);
+
+    local function CalculateTagBitIndex(iconIndex, tag)
+        return ((iconIndex - 1) * TAG_STRIDE) + math.ceil(tag / TAG_BITS);
+    end
+
+    local function CalculateTagBitFlag(tag)
+        return (tag - 1) % TAG_BITS;
+    end
+
+    local function EnumerateTokens(str)
+        str = string.gsub(str, "[%p%c]+", " ");
+        str = string.lower(str);
+        str = string.gsub(str, "^%s+", "");
+        str = string.gsub(str, "%s+$", "");
+
+        return string.gmatch(str, "[^%s]+");
+    end
+
     icondb.id = {};
     icondb.name = {};
+    icondb.tags = {};
 
     for index, info in ipairs(icons) do
         icondb.id[index] = info.id;
         icondb.name[index] = info.name;
+
+        for tagindex = CalculateTagBitIndex(index, 1), CalculateTagBitIndex(index, TAG_COUNT) do
+            icondb.tags[tagindex] = 0;
+        end
+
+        for token in EnumerateTokens(info.name) do
+            local tags = Constants.IconCategoryKeywords[token];
+
+            if tags then
+                for _, tag in ipairs(tags) do
+                    repeat
+                        local bitindex = CalculateTagBitIndex(index, tag);
+                        local bitflag = CalculateTagBitFlag(tag);
+
+                        icondb.tags[bitindex] = bit.bor(icondb.tags[bitindex], bitflag);
+                        tag = Constants.IconCategoryParents[tag];
+                    until tag == nil;
+                end
+            end
+        end
     end
 end
 
@@ -854,6 +904,8 @@ do
                 size = #icondb.id,
                 id = repr(icondb.id),
                 name = repr(icondb.name),
+                tags = repr(icondb.tags),
+                categories = repr(Constants.IconCategory),
             },
             music = {
                 size = #musicdb.file,
