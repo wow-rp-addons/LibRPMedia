@@ -85,7 +85,7 @@ end
 
 local function tcount(tbl)
     local n = 0;
-    for k in next(tbl) do n = n + 1; end
+    for k in next, tbl do n = n + 1; end
     return n;
 end
 
