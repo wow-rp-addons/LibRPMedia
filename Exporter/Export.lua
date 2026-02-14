@@ -840,8 +840,13 @@ do
             local tags = Constants.IconCategoryKeywords[token];
 
             if tags then
+                local idiotprotection = {};
+
                 for _, tag in ipairs(tags) do
                     repeat
+                        assert(not idiotprotection[tag], "loop detected in tag parent chain");
+                        idiotprotection[tag] = true;
+
                         local bitindex = CalculateTagBitIndex(index, tag);
                         local bitflag = CalculateTagBitFlag(tag);
 
