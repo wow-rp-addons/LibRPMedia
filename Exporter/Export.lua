@@ -33,7 +33,7 @@ local cascbin = require "casc.bin";
 local lfs = require "lfs";
 local lsqlite3 = require "lsqlite3";
 
-local Constants = require "Constants";
+local Constants = require "Exporter.Constants";
 
 local function getopt(name)
     for _, option in ipairs(arg) do
