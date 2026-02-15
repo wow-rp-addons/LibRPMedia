@@ -848,6 +848,38 @@ do
         name = string.gsub(name, "%f[%w]%d*%f[%W]", "");
         name = string.gsub(name, "%f[%w]%a%f[%W]", "");
 
+        -- Strip color prefixes or suffixes from tokens.
+        name = string.gsub(name, "blue%f[%W]", "");
+        name = string.gsub(name, "%f[%w]blue", "");
+        name = string.gsub(name, "brown%f[%W]", "");
+        name = string.gsub(name, "%f[%w]brown", "");
+        name = string.gsub(name, "cyan%f[%W]", "");
+        name = string.gsub(name, "%f[%w]cyan", "");
+        name = string.gsub(name, "gray%f[%W]", "");
+        name = string.gsub(name, "%f[%w]gray", "");
+        name = string.gsub(name, "green%f[%W]", "");
+        name = string.gsub(name, "%f[%w]green", "");
+        name = string.gsub(name, "indigo%f[%W]", "");
+        name = string.gsub(name, "%f[%w]indigo", "");
+        name = string.gsub(name, "magenta%f[%W]", "");
+        name = string.gsub(name, "%f[%w]magenta", "");
+        name = string.gsub(name, "orange%f[%W]", "");
+        name = string.gsub(name, "%f[%w]orange", "");
+        name = string.gsub(name, "pink%f[%W]", "");
+        name = string.gsub(name, "%f[%w]pink", "");
+        name = string.gsub(name, "purple%f[%W]", "");
+        name = string.gsub(name, "%f[%w]purple", "");
+        name = string.gsub(name, "red%f[%W]", "");
+        name = string.gsub(name, "%f[%w]red", "");
+        name = string.gsub(name, "white%f[%W]", "");
+        name = string.gsub(name, "%f[%w]white", "");
+        name = string.gsub(name, "yellow%f[%W]", "");
+        name = string.gsub(name, "%f[%w]yellow", "");
+        name = string.gsub(name, "violet%f[%W]", "");
+        name = string.gsub(name, "%f[%w]violet", "");
+        -- Only strip black as a suffix ('blacksmithing' is a thing).
+        name = string.gsub(name, "black%f[%W]", "");
+
         -- Blizzard likes to typo "inv" a lot.
         name = string.gsub(name, "^ivn", "inv");
 
@@ -892,10 +924,10 @@ do
                     until tag == nil;
                 end
             end
+        end
 
-            if not iconHasAnyTags then
-                AddTag(icondb.tags, index, Constants.IconCategory.Untagged);
-            end
+        if not iconHasAnyTags then
+            AddTag(icondb.tags, index, Constants.IconCategory.Untagged);
         end
     end
 end

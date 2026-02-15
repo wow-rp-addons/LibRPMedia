@@ -131,6 +131,8 @@ Constants.IconCategory = setmetatable({
     ZandalariTroll = iota(),
     Vulpera = iota(),
     Haranir = iota(),
+    Fel = iota(),
+    Void = iota(),
 }, { __index = function(_, k) error("unknown category: " .. k); end });
 
 Constants.IconCategoryParents = {
@@ -244,28 +246,40 @@ local function Word(word)
     return "%f[%w]" .. word .. "%f[%W]";
 end
 
+local function WordStart(ste)
+    return "%f[%w]" .. ste;
+end
+
+local function WordEnd(str)
+    return str .. "%f[%W]";
+end
+
 Constants.IconCategoryPatterns = {
     -- Misc.
     { include = { Prefix "ability" }, tags = { Constants.IconCategory.Ability } },
     { include = { Prefix "achieve?ment" }, tags = { Constants.IconCategory.Achievement } },
-    { include = { Prefix "inv" }, tags = { Constants.IconCategory.Item } },
+    { include = { Prefix "inv_ability" }, tags = { Constants.IconCategory.Ability } },
+    { include = { Prefix "inv_spell" }, tags = { Constants.IconCategory.Ability } },
+    { include = { Prefix "inv" }, exclude = { Word "ability", Word "spell" }, tags = { Constants.IconCategory.Item } },
     { include = { Prefix "inv", Word "drink" }, tags = { Constants.IconCategory.Drink } },
-    { include = { Prefix "inv", Word "food" }, tags = { Constants.IconCategory.Food } },
+    { include = { Prefix "inv", Word "food" }, exclude = { Word "armor" }, tags = { Constants.IconCategory.Food } },
     { include = { Prefix "spell" }, tags = { Constants.IconCategory.Ability } },
+    { include = { Substring "mount" }, tags = { Constants.IconCategory.Mount } },
     { include = { Word "bloodknightcharger" }, tags = { Constants.IconCategory.Mount } },
     { include = { Word "endeavor" }, tags = { Constants.IconCategory.Housing } },
     { include = { Word "garrisons?" }, tags = { Constants.IconCategory.Garrisons } },
     { include = { Word "homestone" }, tags = { Constants.IconCategory.Housing } },
+    { include = { Word "house" }, tags = { Constants.IconCategory.Housing } },
     { include = { Word "housing" }, tags = { Constants.IconCategory.Housing } },
     { include = { Word "housing", Word "dye" }, tags = { Constants.IconCategory.HousingDye } },
     { include = { Word "item" }, tags = { Constants.IconCategory.Item } },
-    { include = { Word "mount" }, tags = { Constants.IconCategory.Mount } },
     { include = { Word "neighborhood" }, tags = { Constants.IconCategory.Housing } },
-    { include = { Word "pet" }, tags = { Constants.IconCategory.Pet } },
     { include = { Word "petfamily" }, tags = { Constants.IconCategory.Pet } },
     { include = { Word "raidability" }, tags = { Constants.IconCategory.Ability } },
     { include = { Word "ships" }, tags = { Constants.IconCategory.Garrisons } },
     { include = { Word "upgradestone" }, tags = { Constants.IconCategory.Pet } },
+    { include = { WordEnd "pet" }, tags = { Constants.IconCategory.Pet } },
+    { include = { WordStart "pet" }, tags = { Constants.IconCategory.Pet } },
 
     -- Armor
     { include = { Prefix "inv", Word "amulet" }, tags = { Constants.IconCategory.Necklace } },
@@ -309,6 +323,7 @@ Constants.IconCategoryPatterns = {
     { include = { Prefix "inv", Word "axe" }, tags = { Constants.IconCategory.Axe } },
     { include = { Prefix "inv", Word "bow" }, tags = { Constants.IconCategory.Bow } },
     { include = { Prefix "inv", Word "bullet" }, tags = { Constants.IconCategory.Ammo } },
+    { include = { Prefix "inv", Word "chakr[au]m" }, tags = { Constants.IconCategory.Thrown } },
     { include = { Prefix "inv", Word "crossbow" }, tags = { Constants.IconCategory.Crossbow } },
     { include = { Prefix "inv", Word "dagger" }, tags = { Constants.IconCategory.Dagger } },
     { include = { Prefix "inv", Word "firearm" }, tags = { Constants.IconCategory.Gun } },
@@ -319,7 +334,7 @@ Constants.IconCategoryPatterns = {
     { include = { Prefix "inv", Word "gun" }, tags = { Constants.IconCategory.Gun } },
     { include = { Prefix "inv", Word "halberd" }, tags = { Constants.IconCategory.Polearm } },
     { include = { Prefix "inv", Word "hands?", Word "weapon" }, tags = { Constants.IconCategory.FistWeapon } },
-    { include = { Prefix "inv", Word "knife" }, tags = { Constants.IconCategory.Dagger, Constants.IconCategory.Thrown } },
+    { include = { Prefix "inv", Word "knife" }, tags = { Constants.IconCategory.Dagger } },
     { include = { Prefix "inv", Word "pike" }, tags = { Constants.IconCategory.Polearm } },
     { include = { Prefix "inv", Word "polearm" }, tags = { Constants.IconCategory.Polearm } },
     { include = { Prefix "inv", Word "rifle" }, tags = { Constants.IconCategory.Gun } },
@@ -328,6 +343,8 @@ Constants.IconCategoryPatterns = {
     { include = { Prefix "inv", Word "staff" }, tags = { Constants.IconCategory.Staff } },
     { include = { Prefix "inv", Word "stave" }, tags = { Constants.IconCategory.Staff } },
     { include = { Prefix "inv", Word "sword" }, tags = { Constants.IconCategory.Sword } },
+    { include = { Prefix "inv", Word "throwingaxe" }, tags = { Constants.IconCategory.Thrown } },
+    { include = { Prefix "inv", Word "throwingknife" }, tags = { Constants.IconCategory.Thrown } },
     { include = { Prefix "inv", Word "thrown" }, tags = { Constants.IconCategory.Thrown } },
     { include = { Prefix "inv", Word "wand" }, tags = { Constants.IconCategory.Wand } },
     { include = { Prefix "inv", Word "warglaive" }, tags = { Constants.IconCategory.Sword, Constants.IconCategory.Warglaive } },
@@ -532,11 +549,28 @@ Constants.IconCategoryPatterns = {
     { include = { Word "shadow" }, tags = { Constants.IconCategory.Shadow } },
 
     -- Spell Themes
+    { include = { Prefix "spell", Substring "arcane" }, tags = { Constants.IconCategory.Mage } },
+    { include = { Prefix "spell", Substring "deathknight" }, tags = { Constants.IconCategory.DeathKnight } },
+    { include = { Prefix "spell", Substring "fire" }, exclude = { WordStart "fel", WordEnd "fel" }, tags = { Constants.IconCategory.Mage } },
+    { include = { Prefix "spell", Substring "fire" }, tags = { Constants.IconCategory.Warlock } },
+    { include = { Prefix "spell", Substring "frost" }, tags = { Constants.IconCategory.Mage } },
+    { include = { Prefix "spell", Substring "frostfire" }, tags = { Constants.IconCategory.Mage } },
+    { include = { Prefix "spell", Substring "holy" }, tags = { Constants.IconCategory.Priest, Constants.IconCategory.Paladin } },
+    { include = { Prefix "spell", Substring "magic" }, tags = { Constants.IconCategory.Mage, Constants.IconCategory.Paladin } },
+    { include = { Prefix "spell", Substring "nature" }, tags = { Constants.IconCategory.Druid, Constants.IconCategory.Shaman } },
+    { include = { Prefix "spell", Substring "shadow" }, tags = { Constants.IconCategory.Priest, Constants.IconCategory.Warlock, Constants.IconCategory.DeathKnight } },
+    { include = { Substring "totem" }, tags = { Constants.IconCategory.Shaman } },
     { include = { Word "brewpoison" }, tags = { Constants.IconCategory.Rogue } },
     { include = { Word "poison" }, tags = { Constants.IconCategory.Rogue } },
     { include = { Word "portal" }, tags = { Constants.IconCategory.Mage, Constants.IconCategory.Arcane } },
     { include = { Word "stealth" }, tags = { Constants.IconCategory.Rogue } },
     { include = { Word "teleport" }, tags = { Constants.IconCategory.Mage, Constants.IconCategory.Arcane } },
+    { include = { Word "void" }, tags = { Constants.IconCategory.Void } },
+    { include = { WordEnd "fel" }, tags = { Constants.IconCategory.Fel } },
+    { include = { WordEnd "void]" }, tags = { Constants.IconCategory.Void } },
+    { include = { WordStart "fel" }, tags = { Constants.IconCategory.Fel } },
+    { include = { WordStart "fel" }, tags = { Constants.IconCategory.Fel } },
+    { include = { WordStart "void" }, tags = { Constants.IconCategory.Void } },
 
     -- Professions
     { include = { Word "alchemy" }, tags = { Constants.IconCategory.Alchemy } },
@@ -568,7 +602,7 @@ Constants.IconCategoryPatterns = {
     { include = { Prefix "inv", Word "elixir" }, tags = { Constants.IconCategory.Alchemy, Constants.IconCategory.Potion } },
     { include = { Prefix "inv", Word "essence" }, tags = { Constants.IconCategory.Enchanting, Constants.IconCategory.TradeGoods } },
     { include = { Prefix "inv", Word "feather" }, tags = { Constants.IconCategory.TradeGoods } },
-    { include = { Prefix "inv", Word "fish" }, tags = { Constants.IconCategory.Fishing, Constants.IconCategory.Food } },
+    { include = { Prefix "inv", Word "fish" }, exclude = { Word "armor" }, tags = { Constants.IconCategory.Fishing, Constants.IconCategory.Food } },
     { include = { Prefix "inv", Word "gem" }, tags = { Constants.IconCategory.Jewelcrafting } },
     { include = { Prefix "inv", Word "glyph" }, tags = { Constants.IconCategory.Inscription } },
     { include = { Prefix "inv", Word "heart" }, tags = { Constants.IconCategory.TradeGoods } },
