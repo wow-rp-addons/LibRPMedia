@@ -806,21 +806,56 @@ do
     local TAG_COUNT = tcount(Constants.IconCategory);
     local TAG_STRIDE = math.ceil(TAG_COUNT / TAG_BITS);
 
-    local function CalculateTagBitIndex(iconIndex, tag)
-        return ((iconIndex - 1) * TAG_STRIDE) + math.ceil(tag / TAG_BITS);
+    local function CalculateTagBitFieldIndex(index, tag)
+        return ((index - 1) * TAG_STRIDE) + math.ceil(tag / TAG_BITS);
     end
 
     local function CalculateTagBitFlag(tag)
         return bit.lshift(1, (tag - 1) % TAG_BITS);
     end
 
-    local function EnumerateTokens(str)
-        str = string.gsub(str, "[%p%c]+", " ");
-        str = string.lower(str);
-        str = string.gsub(str, "^%s+", "");
-        str = string.gsub(str, "%s+$", "");
+    local function AddTag(tags, index, tag)
+        index = CalculateTagBitFieldIndex(index, tag);
+        tags[index] = bit.bit(tags[index], CalculateTagBitFlag(tag));
+    end
 
-        return string.gmatch(str, "[^%s]+");
+    local function EvaluateTagPattern(name, pattern)
+        for _, include in ipairs(pattern.include) do
+            if not string.find(name, include) then
+                return false;
+            end
+        end
+
+        if pattern.exclude then
+            for _, exclude in ipairs(pattern.exclude) do
+                if string.find(name, exclude) then
+                    return false;
+                end
+            end
+        end
+
+        return true;
+    end
+
+    local function GetIconNameForTagging(name)
+        name = string.lower(name);
+        name = string.gsub(name, "[%p%c]", " ");
+
+        -- Strip numeric suffixes from tokens ('helm01' -> 'helm')
+        name = string.gsub(name, "(%a+)%d+", "%1");
+
+        -- Strip individual tokens consisting of a single letter or just numbers.
+        name = string.gsub(name, "%f[%w]%d*%f[%W]", "");
+        name = string.gsub(name, "%f[%w]%a%f[%W]", "");
+
+        -- Blizzard likes to typo "inv" a lot.
+        name = string.gsub(name, "^ivn", "inv");
+
+        -- Whitespace trimming.
+        name = string.gsub(name, "%s+", " ");
+        name = string.gsub(name, "^%s+", "");
+        name = string.gsub(name, "%s+$", "");
+        return name;
     end
 
     icondb.id = {};
@@ -831,31 +866,35 @@ do
         icondb.id[index] = info.id;
         icondb.name[index] = info.name;
 
-        for tagindex = CalculateTagBitIndex(index, 1), CalculateTagBitIndex(index, TAG_COUNT) do
+        for tagindex = CalculateTagBitFieldIndex(index, 1), CalculateTagBitFieldIndex(index, TAG_COUNT) do
             icondb.tags[tagindex] = 0;
         end
 
-        for token in EnumerateTokens(info.name) do
-            local tags = Constants.IconCategoryKeywords[token];
+        local normalizedName = GetIconNameForTagging(info.name);
+        local iconHasAnyTags = false;
 
-            if tags then
-                for _, tag in ipairs(tags) do
-                    local idiotprotection = {};
-                    local firsttag = tags[1];
+        for _, pattern in ipairs(Constants.IconCategoryPatterns) do
+            if EvaluateTagPattern(normalizedName, pattern) then
+                iconHasAnyTags = true;
+
+                for _, tag in ipairs(pattern.tags) do
+                    local root = tag;
+                    local visited = {};
 
                     repeat
-                        if idiotprotection[tag] then
-                            errorf("loop detected in tag parent chain ('%s' -> '%s')", firsttag, tag);
+                        if visited[tag] then
+                            errorf("loop detected in tag parent chain ('%s' -> '%s')", root, tag);
                         end
 
-                        local bitindex = CalculateTagBitIndex(index, tag);
-                        local bitflag = CalculateTagBitFlag(tag);
-
-                        idiotprotection[tag] = true;
-                        icondb.tags[bitindex] = bit.bor(icondb.tags[bitindex], bitflag);
+                        AddTag(icondb.tags, index, tag);
+                        visited[tag] = true;
                         tag = Constants.IconCategoryParents[tag];
                     until tag == nil;
                 end
+            end
+
+            if not iconHasAnyTags then
+                AddTag(icondb.tags, index, Constants.IconCategory.Untagged);
             end
         end
     end
