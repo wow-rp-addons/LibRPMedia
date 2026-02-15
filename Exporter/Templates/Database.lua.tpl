@@ -27,6 +27,7 @@ local db_music_time;
 
 local function RegisterDatabase()
     LRPM12.IconCategory = db_icons_categories;
+    LRPM12.IconCategoryMeta = { NumValues = CountTable(LRPM12.IconCategory) };
 
     LRPM12.db = {
         icons = {
