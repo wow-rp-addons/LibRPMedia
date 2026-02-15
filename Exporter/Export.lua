@@ -816,7 +816,7 @@ do
 
     local function AddTag(tags, index, tag)
         index = CalculateTagBitFieldIndex(index, tag);
-        tags[index] = bit.bit(tags[index], CalculateTagBitFlag(tag));
+        tags[index] = bit.bor(tags[index], CalculateTagBitFlag(tag));
     end
 
     local function EvaluateTagPattern(name, pattern)
