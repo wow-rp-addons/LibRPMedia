@@ -160,18 +160,54 @@ function LRPM12:EnumerateIcons(options)
     return CreateIndexedIterator(self.db.icons, GetIconInfoByIndex, options and options.reuseTable or nil);
 end
 
+local function CreateTagPredicate(options)
+    local tags = options.tags;
+
+    if not tags then
+        return nil;
+    end
+
+    local TAG_BITS = 32;
+    local TAG_COUNT = table.count(LRPM12.IconCategory);
+    local TAG_STRIDE = math.ceil(TAG_COUNT / TAG_BITS);
+
+    local togs = {};
+    for i = 1, TAG_STRIDE do togs[i] = 0; end
+
+    for i = 1, #tags do
+        local tag = tags[i];
+        local bitindex = math.ceil(tag / TAG_BITS);
+        local bitflag = (tag - 1) % TAG_BITS;
+
+        togs[bitindex] = bit.bor(togs[bitindex], bitflag);
+    end
+
+    return function(iconTags, iconIndex)
+        for i = 1, TAG_STRIDE do
+            local bitindex = ((iconIndex - 1) * TAG_STRIDE) + i;
+
+            if bit.band(iconTags[bitindex], togs[i]) ~= 0 then
+                return true;
+            end
+        end
+
+        return false;
+    end
+end
+
 function LRPM12:FindIcons(predicate, options)
     predicate = CreateSearchPredicate(predicate, options);
 
     local iconsDB = self.db.icons;
     local iconIndex = 1;
     local iconCount = iconsDB.size;
+    local tagpredicate = CreateTagPredicate(options);
 
     local function NextMatchingIcon()
         for i = iconIndex, iconCount do
             local name = iconsDB.name[i];
 
-            if predicate(name) then
+            if (not tagpredicate or tagpredicate(iconsDB.tags, i)) and predicate(name) then
                 iconIndex = i + 1;
 
                 local iconInfo = GetIconInfoByIndex(iconsDB, i, options and options.reuseTable or nil);
