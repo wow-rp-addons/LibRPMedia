@@ -811,7 +811,7 @@ do
     end
 
     local function CalculateTagBitFlag(tag)
-        return (tag - 1) % TAG_BITS;
+        return bit.lshift(1, (tag - 1) % TAG_BITS);
     end
 
     local function EnumerateTokens(str)

@@ -163,7 +163,7 @@ end
 local function CreateTagPredicate(options)
     local tags = options.tags;
 
-    if not tags then
+    if not tags or #tags == 0 then
         return nil;
     end
 
@@ -177,7 +177,7 @@ local function CreateTagPredicate(options)
     for i = 1, #tags do
         local tag = tags[i];
         local bitindex = math.ceil(tag / TAG_BITS);
-        local bitflag = (tag - 1) % TAG_BITS;
+        local bitflag = bit.lshift(1, (tag - 1) % TAG_BITS);
 
         togs[bitindex] = bit.bor(togs[bitindex], bitflag);
     end
@@ -193,6 +193,11 @@ local function CreateTagPredicate(options)
 
         return false;
     end
+end
+
+function LRPM12:IconHack(iconIndex, tags)
+    local tagpred = CreateTagPredicate({ tags = tags });
+    return not tagpred or tagpred(self.db.icons.tags, iconIndex);
 end
 
 function LRPM12:FindIcons(predicate, options)
