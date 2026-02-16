@@ -50,6 +50,7 @@ read_globals = {
     "SOUNDKIT",
     "StopMusic",
     "table.create",
+    "table.count",
     "table.wipe",
     "UIDropDownMenu_AddButton",
     "UIDropDownMenu_SetInitializeFunction",
