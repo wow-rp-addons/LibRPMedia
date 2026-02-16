@@ -176,46 +176,6 @@ function LRPM12:EnumerateIcons(options)
     return CreateIndexedIterator(self.db.icons, GetIconInfoByIndex, options and options.reuseTable or nil);
 end
 
-local function CreateTagPredicate(options)
-    local tags = options.tags;
-
-    if not tags or #tags == 0 then
-        return nil;
-    end
-
-    local TAG_BITS = 32;
-    local TAG_COUNT = table.count(LRPM12.IconCategory);
-    local TAG_STRIDE = math.ceil(TAG_COUNT / TAG_BITS);
-
-    local togs = {};
-    for i = 1, TAG_STRIDE do togs[i] = 0; end
-
-    for i = 1, #tags do
-        local tag = tags[i];
-        local bitindex = math.ceil((tag + 1) / TAG_BITS);
-        local bitflag = bit.lshift(1, tag % TAG_BITS);
-
-        togs[bitindex] = bit.bor(togs[bitindex], bitflag);
-    end
-
-    return function(iconTags, iconIndex)
-        for i = 1, TAG_STRIDE do
-            local bitindex = ((iconIndex - 1) * TAG_STRIDE) + i;
-
-            if bit.band(iconTags[bitindex], togs[i]) ~= 0 then
-                return true;
-            end
-        end
-
-        return false;
-    end
-end
-
-function LRPM12:IconHack(iconIndex, tags)
-    local tagpred = CreateTagPredicate({ tags = tags });
-    return not tagpred or tagpred(self.db.icons.tags, iconIndex);
-end
-
 function LRPM12:FindIcons(predicate, options)
     predicate = CreateSearchPredicate(predicate, options);
 
@@ -257,8 +217,8 @@ function LRPM12:GenerateIconCategoryPredicate(categories)
     end
 
     for _, category in ipairs(categories) do
-        local index = math.ceil(category / FIELD_WIDTH);
-        local flag = bit.lshift(1, (category - 1) % FIELD_WIDTH);
+        local index = math.ceil((category + 1) / FIELD_WIDTH);
+        local flag = bit.lshift(1, category % FIELD_WIDTH);
 
         fields[index] = bit.bor(fields[index], flag);
     end
