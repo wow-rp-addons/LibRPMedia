@@ -807,11 +807,11 @@ do
     local TAG_STRIDE = math.ceil(TAG_COUNT / TAG_BITS);
 
     local function CalculateTagBitFieldIndex(index, tag)
-        return ((index - 1) * TAG_STRIDE) + math.ceil(tag / TAG_BITS);
+        return ((index - 1) * TAG_STRIDE) + math.ceil((tag + 1) / TAG_BITS);
     end
 
     local function CalculateTagBitFlag(tag)
-        return bit.lshift(1, (tag - 1) % TAG_BITS);
+        return bit.lshift(1, tag % TAG_BITS);
     end
 
     local function AddTag(tags, index, tag)

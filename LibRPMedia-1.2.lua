@@ -192,8 +192,8 @@ local function CreateTagPredicate(options)
 
     for i = 1, #tags do
         local tag = tags[i];
-        local bitindex = math.ceil(tag / TAG_BITS);
-        local bitflag = bit.lshift(1, (tag - 1) % TAG_BITS);
+        local bitindex = math.ceil((tag + 1) / TAG_BITS);
+        local bitflag = bit.lshift(1, tag % TAG_BITS);
 
         togs[bitindex] = bit.bor(togs[bitindex], bitflag);
     end
