@@ -206,12 +206,9 @@ Constants.IconCategoryParents = {
     [Constants.IconCategory.KulTiran] = Constants.IconCategory.Human,
     [Constants.IconCategory.Mechagnome] = Constants.IconCategory.Gnome,
     [Constants.IconCategory.Earthen] = Constants.IconCategory.Dwarf,
-    [Constants.IconCategory.Nightborne] = Constants.IconCategory.Race,
     [Constants.IconCategory.HighmountainTauren] = Constants.IconCategory.Tauren,
     [Constants.IconCategory.MagharOrc] = Constants.IconCategory.Orc,
     [Constants.IconCategory.ZandalariTroll] = Constants.IconCategory.Troll,
-    [Constants.IconCategory.Vulpera] = Constants.IconCategory.Race,
-    [Constants.IconCategory.Haranir] = Constants.IconCategory.Race,
 };
 
 local function Prefix(word)
