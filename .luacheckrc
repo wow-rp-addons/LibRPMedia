@@ -49,6 +49,7 @@ read_globals = {
     "SetPortraitToTexture",
     "SOUNDKIT",
     "StopMusic",
+    "table.create",
     "table.wipe",
     "UIDropDownMenu_AddButton",
     "UIDropDownMenu_SetInitializeFunction",
