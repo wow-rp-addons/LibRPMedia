@@ -819,23 +819,17 @@ do
         tags[index] = bit.bor(tags[index], CalculateTagBitFlag(tag));
     end
 
-    local function EvaluateTagPattern(name, pattern)
-        for _, include in ipairs(pattern.include) do
-            if not string.find(name, include) then
-                return false;
-            end
-        end
+    local STRIPPED_WORD_SUFFIXES = {
+        blue = "", brown = "", cyan = "", gray = "", green = "", indigo = "",
+        magenta = "", orange = "", pink = "", purple = "", red = "",
+        white = "", yellow = "", violet = "", black = "",
+    };
 
-        if pattern.exclude then
-            for _, exclude in ipairs(pattern.exclude) do
-                if string.find(name, exclude) then
-                    return false;
-                end
-            end
-        end
-
-        return true;
-    end
+    local STRIPPED_WORD_PREFIXES = {
+        blue = "", brown = "", cyan = "", gray = "", green = "", indigo = "",
+        magenta = "", orange = "", pink = "", purple = "", red = "",
+        white = "", yellow = "", violet = "",
+    };
 
     local function GetIconNameForTagging(name)
         name = string.lower(name);
@@ -848,37 +842,9 @@ do
         name = string.gsub(name, "%f[%w]%d*%f[%W]", "");
         name = string.gsub(name, "%f[%w]%a%f[%W]", "");
 
-        -- Strip color prefixes or suffixes from tokens.
-        name = string.gsub(name, "blue%f[%W]", "");
-        name = string.gsub(name, "%f[%w]blue", "");
-        name = string.gsub(name, "brown%f[%W]", "");
-        name = string.gsub(name, "%f[%w]brown", "");
-        name = string.gsub(name, "cyan%f[%W]", "");
-        name = string.gsub(name, "%f[%w]cyan", "");
-        name = string.gsub(name, "gray%f[%W]", "");
-        name = string.gsub(name, "%f[%w]gray", "");
-        name = string.gsub(name, "green%f[%W]", "");
-        name = string.gsub(name, "%f[%w]green", "");
-        name = string.gsub(name, "indigo%f[%W]", "");
-        name = string.gsub(name, "%f[%w]indigo", "");
-        name = string.gsub(name, "magenta%f[%W]", "");
-        name = string.gsub(name, "%f[%w]magenta", "");
-        name = string.gsub(name, "orange%f[%W]", "");
-        name = string.gsub(name, "%f[%w]orange", "");
-        name = string.gsub(name, "pink%f[%W]", "");
-        name = string.gsub(name, "%f[%w]pink", "");
-        name = string.gsub(name, "purple%f[%W]", "");
-        name = string.gsub(name, "%f[%w]purple", "");
-        name = string.gsub(name, "red%f[%W]", "");
-        name = string.gsub(name, "%f[%w]red", "");
-        name = string.gsub(name, "white%f[%W]", "");
-        name = string.gsub(name, "%f[%w]white", "");
-        name = string.gsub(name, "yellow%f[%W]", "");
-        name = string.gsub(name, "%f[%w]yellow", "");
-        name = string.gsub(name, "violet%f[%W]", "");
-        name = string.gsub(name, "%f[%w]violet", "");
-        -- Only strip black as a suffix ('blacksmithing' is a thing).
-        name = string.gsub(name, "black%f[%W]", "");
+        -- Strip prefixes or suffixes from tokens such as colors.
+        name = string.gsub(name, "%w+%f[%W]", STRIPPED_WORD_SUFFIXES);
+        name = string.gsub(name, "%f[%w]%w+", STRIPPED_WORD_PREFIXES);
 
         -- Blizzard likes to typo "inv" a lot.
         name = string.gsub(name, "^ivn", "inv");
@@ -906,7 +872,7 @@ do
         local iconHasAnyTags = false;
 
         for _, pattern in ipairs(Constants.IconCategoryPatterns) do
-            if EvaluateTagPattern(normalizedName, pattern) then
+            if pattern.predicate(normalizedName) then
                 iconHasAnyTags = true;
 
                 for _, tag in ipairs(pattern.tags) do
