@@ -17,7 +17,7 @@ jobs:
           annotate: warning
 
       - name: Run editorconfig-checker
-        uses: wow-rp-addons/actions-editorconfig-check@v1.0.1
+        uses: wow-rp-addons/actions-editorconfig-check@v1.0.2
         with:
           args: -no-color
           files: $(git ls-files '*.lua' '*.xml' '*.toc' ':!:Exporter/Libs/' ':!:Exporter/Data/')

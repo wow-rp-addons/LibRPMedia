@@ -33,6 +33,8 @@ local cascbin = require "casc.bin";
 local lfs = require "lfs";
 local lsqlite3 = require "lsqlite3";
 
+local Constants = require "Exporter.Constants";
+
 local function getopt(name)
     for _, option in ipairs(arg) do
         local optname, optvalue = string.match(option, "^--(%w+)=(.+)$");
@@ -79,6 +81,12 @@ end
 local function log(...)
     local date = string.format("\27[90m%s\27[0m", os.date("%H:%M:%S"));
     io.stderr:write(strjoin(" ", date, ...), "\n");
+end
+
+local function tcount(tbl)
+    local n = 0;
+    for k in next, tbl do n = n + 1; end
+    return n;
 end
 
 local REPR_ESCAPES = {}
@@ -260,7 +268,7 @@ function ResourceUtil.GetMusicDuration(store, contentHash)
     local keys = store.encoding:getEncodingHash(#contentHash == 16 and contentHash or cascbin.to_bin(contentHash));
     local path;
 
-	for _ = 1, keys and 2 or 0 do
+    for _ = 1, keys and 2 or 0 do
         for i = 1, #keys do
             local keyhash = #keys[i] == 32 and keys[i]:lower() or cascbin.to_hex(keys[i]);
             local keypath = string.format("%s/file.%s", CACHE_DIR, keyhash);
@@ -373,7 +381,6 @@ function ResourceUtil.OpenCASCStore(build, locale)
         keys = ResourceUtil.GetTACTKeys(),
     }));
 end
-
 
 ------------------------------------------------------------------------------
 -- SQLite Database Utilities
@@ -795,12 +802,92 @@ local musicdb = {};
 do
     log("Building icon database...");
 
+    local TAG_BITS = 32;
+    local TAG_COUNT = tcount(Constants.IconCategory);
+    local TAG_STRIDE = math.ceil(TAG_COUNT / TAG_BITS);
+
+    local function CalculateTagBitFieldIndex(index, tag)
+        return ((index - 1) * TAG_STRIDE) + math.ceil((tag + 1) / TAG_BITS);
+    end
+
+    local function CalculateTagBitFlag(tag)
+        return bit.lshift(1, tag % TAG_BITS);
+    end
+
+    local function AddTag(tags, index, tag)
+        index = CalculateTagBitFieldIndex(index, tag);
+        tags[index] = bit.bor(tags[index], CalculateTagBitFlag(tag));
+    end
+
+    local STRIPPED_WORD_SUFFIXES = {
+        blue = "", brown = "", cyan = "", gray = "", green = "", indigo = "",
+        magenta = "", orange = "", pink = "", purple = "", red = "",
+        white = "", yellow = "", violet = "", black = "",
+    };
+
+    local STRIPPED_WORD_PREFIXES = {
+        blue = "", brown = "", cyan = "", gray = "", green = "", indigo = "",
+        magenta = "", orange = "", pink = "", purple = "", red = "",
+        white = "", yellow = "", violet = "",
+    };
+
+    local function GetIconNameForTagging(name)
+        name = string.lower(name);
+        name = string.gsub(name, "[%p%c]", " ");
+
+        -- Strip numeric suffixes from tokens ('helm01' -> 'helm')
+        name = string.gsub(name, "(%a+)%d+", "%1");
+
+        -- Strip individual tokens consisting of a single letter or just numbers.
+        name = string.gsub(name, "%f[%w]%d*%f[%W]", "");
+        name = string.gsub(name, "%f[%w]%a%f[%W]", "");
+
+        -- Strip prefixes or suffixes from tokens such as colors.
+        name = string.gsub(name, "%w+%f[%W]", STRIPPED_WORD_SUFFIXES);
+        name = string.gsub(name, "%f[%w]%w+", STRIPPED_WORD_PREFIXES);
+
+        -- Blizzard likes to typo "inv" a lot.
+        name = string.gsub(name, "^ivn", "inv");
+
+        -- Whitespace trimming.
+        name = string.gsub(name, "%s+", " ");
+        name = string.gsub(name, "^%s+", "");
+        name = string.gsub(name, "%s+$", "");
+        return name;
+    end
+
     icondb.id = {};
     icondb.name = {};
+    icondb.tags = {};
 
     for index, info in ipairs(icons) do
         icondb.id[index] = info.id;
         icondb.name[index] = info.name;
+
+        for tagindex = CalculateTagBitFieldIndex(index, 1), CalculateTagBitFieldIndex(index, TAG_COUNT) do
+            icondb.tags[tagindex] = 0;
+        end
+
+        local normalizedName = GetIconNameForTagging(info.name);
+
+        for _, pattern in ipairs(Constants.IconCategoryPatterns) do
+            if pattern.predicate(normalizedName) then
+                for _, tag in ipairs(pattern.tags) do
+                    local root = tag;
+                    local visited = {};
+
+                    repeat
+                        if visited[tag] then
+                            errorf("loop detected in tag parent chain ('%s' -> '%s')", root, tag);
+                        end
+
+                        AddTag(icondb.tags, index, tag);
+                        visited[tag] = true;
+                        tag = Constants.IconCategoryParents[tag];
+                    until tag == nil;
+                end
+            end
+        end
     end
 end
 
@@ -854,6 +941,8 @@ do
                 size = #icondb.id,
                 id = repr(icondb.id),
                 name = repr(icondb.name),
+                tags = repr(icondb.tags),
+                categories = repr(Constants.IconCategory),
             },
             music = {
                 size = #musicdb.file,

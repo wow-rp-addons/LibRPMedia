@@ -14,6 +14,8 @@ exclude_files = {
 
 read_globals = {
     "bit.band",
+    "bit.bor",
+    "bit.lshift",
     "bit.rshift",
     "C_Texture.GetAtlasInfo",
     "CallbackRegistryMixin",
@@ -47,6 +49,8 @@ read_globals = {
     "SetPortraitToTexture",
     "SOUNDKIT",
     "StopMusic",
+    "table.create",
+    "table.count",
     "table.wipe",
     "UIDropDownMenu_AddButton",
     "UIDropDownMenu_SetInitializeFunction",

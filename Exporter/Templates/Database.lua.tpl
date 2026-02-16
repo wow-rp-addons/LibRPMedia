@@ -7,6 +7,8 @@
 --
 -- Client Version: [[@ build.version @]]
 -- Build Config: [[@ build.bkey @]]
+-- Icon count: [[@ db.icons.size @]]
+-- Music count: [[@ db.music.size @]]
 
 local LRPM12 = LibStub and LibStub:GetLibrary("LibRPMedia-1.2", true);
 
@@ -16,17 +18,23 @@ end
 
 local db_icons_id;
 local db_icons_name;
+local db_icons_tags;
+local db_icons_categories;
 local db_music_file;
 local db_music_name;
 local db_music_nkey;
 local db_music_time;
 
 local function RegisterDatabase()
+    LRPM12.IconCategory = db_icons_categories;
+    LRPM12.IconCategoryMeta = { NumValues = CountTable(LRPM12.IconCategory) };
+
     LRPM12.db = {
         icons = {
             size = [[@ db.icons.size @]],
             id   = db_icons_id,
             name = db_icons_name,
+            tags = db_icons_tags,
         },
         music = {
             size = [[@ db.music.size @]],
@@ -40,6 +48,8 @@ end
 
 db_icons_id = [[@ db.icons.id @]];
 db_icons_name = [[@ db.icons.name @]];
+db_icons_tags = [[@ db.icons.tags @]];
+db_icons_categories = [[@ db.icons.categories @]];
 db_music_file = [[@ db.music.file @]];
 db_music_name = [[@ db.music.name @]];
 db_music_nkey = [[@ db.music.nkey @]];
