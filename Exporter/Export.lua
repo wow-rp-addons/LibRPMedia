@@ -268,7 +268,7 @@ function ResourceUtil.GetMusicDuration(store, contentHash)
     local keys = store.encoding:getEncodingHash(#contentHash == 16 and contentHash or cascbin.to_bin(contentHash));
     local path;
 
-	for _ = 1, keys and 2 or 0 do
+    for _ = 1, keys and 2 or 0 do
         for i = 1, #keys do
             local keyhash = #keys[i] == 32 and keys[i]:lower() or cascbin.to_hex(keys[i]);
             local keypath = string.format("%s/file.%s", CACHE_DIR, keyhash);
