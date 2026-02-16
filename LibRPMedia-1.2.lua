@@ -73,10 +73,10 @@ function LRPM12:GetNumMusic()
 end
 
 function LRPM12:GetAllMusic()
-    local music = {};
+    local music = table.create(self:GetNumMusic());
 
-    for _, musicInfo in self:EnumerateMusic() do
-        table.insert(music, musicInfo);
+    for musicIndex, musicInfo in self:EnumerateMusic() do
+        music[musicIndex] = musicInfo;
     end
 
     return music;
@@ -135,10 +135,10 @@ function LRPM12:GetNumIcons()
 end
 
 function LRPM12:GetAllIcons()
-    local icons = {};
+    local icons = table.create(self:GetNumIcons());
 
-    for _, iconInfo in self:EnumerateIcons() do
-        table.insert(icons, iconInfo);
+    for iconIndex, iconInfo in self:EnumerateIcons() do
+        icons[iconIndex] = iconInfo;
     end
 
     return icons;
@@ -154,6 +154,22 @@ end
 
 function LRPM12:GetIconInfoByName(iconName)
     return GetIconInfoByIndex(self.db.icons, GetIconIndexByName(self.db.icons, iconName));
+end
+
+function LRPM12:GetIconIndexByID(iconID)
+    return GetIconIndexByID(self.db.icons, iconID);
+end
+
+function LRPM12:GetIconIndexByName(iconName)
+    return GetIconIndexByName(self.db.icons, iconName);
+end
+
+function LRPM12:GetIconNameByID(iconID)
+    return self:GetIconNameByIndex(GetIconIndexByID(self.db.icons, iconID));
+end
+
+function LRPM12:GetIconNameByIndex(iconIndex)
+    return self.db.icons.name[iconIndex];
 end
 
 function LRPM12:EnumerateIcons(options)
@@ -206,13 +222,12 @@ function LRPM12:FindIcons(predicate, options)
     local iconsDB = self.db.icons;
     local iconIndex = 1;
     local iconCount = iconsDB.size;
-    local tagpredicate = CreateTagPredicate(options);
 
     local function NextMatchingIcon()
         for i = iconIndex, iconCount do
             local name = iconsDB.name[i];
 
-            if (not tagpredicate or tagpredicate(iconsDB.tags, i)) and predicate(name) then
+            if predicate(name) then
                 iconIndex = i + 1;
 
                 local iconInfo = GetIconInfoByIndex(iconsDB, i, options and options.reuseTable or nil);
@@ -223,6 +238,48 @@ function LRPM12:FindIcons(predicate, options)
     end
 
     return NextMatchingIcon;
+end
+
+function LRPM12:GenerateIconCategoryPredicate(categories)
+    -- The exporter generates packed 'n' bitfields (32 bits in width) based
+    -- on the number of icon categories. These bitfields are stored
+    -- sequentially in the 'tags' table spaced with each icon having
+    -- its own category bits spaced 'FIELD_STRIDE' places apart.
+
+    local FLAG_COUNT = LRPM12.IconCategoryMeta.NumValues;
+    local FIELD_WIDTH = 32;
+    local FIELD_STRIDE = math.ceil(FLAG_COUNT / FIELD_WIDTH);
+
+    local fields = {};
+
+    for index = 1, FIELD_STRIDE do
+        fields[index] = 0;
+    end
+
+    for _, category in ipairs(categories) do
+        local index = math.ceil(category / FIELD_WIDTH);
+        local flag = bit.lshift(1, (category - 1) % FIELD_WIDTH);
+
+        fields[index] = bit.bor(fields[index], flag);
+    end
+
+    local tags = self.db.icons.tags;
+
+    local function IsInAnyCategory(iconIndex)
+        for index = 1, FIELD_STRIDE do
+            local offset = ((iconIndex - 1) * FIELD_STRIDE) + index;
+            local bits = tags[offset] or 0;
+
+            if bit.band(bits, fields[index]) ~= 0 then
+                return true;
+            end
+        end
+
+        return false;
+
+    end
+
+    return IsInAnyCategory;
 end
 
 --
@@ -427,7 +484,7 @@ function GetIconInfoByIndex(iconsDB, iconIndex, infoTable)
     local atlas = (type == LRPM12.IconType.Atlas) and bit.band(id, ICON_ID_DATA_MASK) or nil;
     local key = (type == LRPM12.IconType.Atlas or IsIconFileName(name)) and name or file;
 
-    local iconInfo = infoTable or {};
+    local iconInfo = infoTable or table.create(0, 8);
     iconInfo.index = iconIndex;
     iconInfo.id = id;
     iconInfo.key = key;
@@ -475,7 +532,7 @@ function GetMusicInfoByIndex(musicDB, musicIndex, infoTable)
     local file = musicDB.file[musicIndex];
     local duration = musicDB.time[musicIndex];
 
-    local musicInfo = infoTable or {};
+    local musicInfo = infoTable or table.create(0, 8);
     musicInfo.index = musicIndex;
     musicInfo.id = file;
     musicInfo.duration = duration;
@@ -495,7 +552,7 @@ end
 
 function GetMusicNamesByIndex(musicDB, musicIndex, namesTable)
     local first, last = GetMusicNameIndexRange(musicDB, musicIndex);
-    local names = namesTable or {};
+    local names = namesTable or table.create(last - first + 1);
 
     table.wipe(names);
 
