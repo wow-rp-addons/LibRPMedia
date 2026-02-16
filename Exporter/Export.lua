@@ -869,12 +869,9 @@ do
         end
 
         local normalizedName = GetIconNameForTagging(info.name);
-        local iconHasAnyTags = false;
 
         for _, pattern in ipairs(Constants.IconCategoryPatterns) do
             if pattern.predicate(normalizedName) then
-                iconHasAnyTags = true;
-
                 for _, tag in ipairs(pattern.tags) do
                     local root = tag;
                     local visited = {};
@@ -890,10 +887,6 @@ do
                     until tag == nil;
                 end
             end
-        end
-
-        if not iconHasAnyTags then
-            AddTag(icondb.tags, index, Constants.IconCategory.Untagged);
         end
     end
 end
