@@ -357,7 +357,7 @@ Constants.IconCategoryPatterns = {
     { predicate = ( Word "voidelf" ), tags = { Constants.IconCategory.Elven } },
     { predicate = ( Word "vulpera" ), tags = { Constants.IconCategory.Vulpera } },
     { predicate = ( Word "worgen" ), tags = { Constants.IconCategory.Worgen } },
-    { predicate = ( Word "zandalari" ), tags = { Constants.IconCategory.Troll } },
+    { predicate = ( Word "zandalari?" ), tags = { Constants.IconCategory.Troll } },
     { predicate = ( Word "zandalaritroll" ), tags = { Constants.IconCategory.Troll } },
     { predicate = ( Substring "eversong" ), tags = { Constants.IconCategory.Elven } },
     { predicate = ( WordBoundary "amani" ), tags = { Constants.IconCategory.Troll } },
