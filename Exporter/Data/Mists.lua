@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "066331608b2108511488c21d535151ae",
-        version = "5.5.3.65890",
+        bkey = "05d5c5a0f3bda2495943ab2864a3e182",
+        version = "5.5.3.66839",
     },
     icons = {
         {
@@ -92311,7 +92311,7 @@ return {
         {
             id   = 874857,
             file = 874857,
-            hash = "d9a27171597e6e5f71f9a6bfbe3e7cbe",
+            hash = "4d8b7b5a0e5dca44f7319a6d59d7551f",
             name = "inv_pet_ancientprotector",
             size = { h = 64, w = 64 },
             type = 1,
