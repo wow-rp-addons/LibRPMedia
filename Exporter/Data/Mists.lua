@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "7a50513882e105feb6241874f520c881",
-        version = "5.5.4.68077",
+        bkey = "8ca6e8ce7d7793c68237e40242347f47",
+        version = "5.5.4.69155",
     },
     icons = {
         {
@@ -89255,7 +89255,7 @@ return {
         {
             id   = 794853,
             file = 794853,
-            hash = "68624f3d266a98fbf707b433f7accb70",
+            hash = "4319beef0f2f5309641d003ba6ef53d9",
             name = "inv_misc_1h_pa_spoon_a_01",
             size = { h = 64, w = 64 },
             type = 1,
@@ -96425,6 +96425,14 @@ return {
             file = 7539422,
             hash = "05a816407c3764196989fd5a30a78d9f",
             name = "ui_transmog_showequippedgear",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 7570980,
+            file = 7570980,
+            hash = "948089a5aa1b90c38b70cd17acbb583b",
+            name = "inv_mothpet2_yellow",
             size = { h = 64, w = 64 },
             type = 1,
         },

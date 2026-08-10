@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "20e35f5a4823e522736fcb683d0f0d3d",
-        version = "1.15.8.67156",
+        bkey = "9f9686341092239cfa4812a0ba153dc6",
+        version = "1.15.9.69109",
     },
     icons = {
         {
@@ -50461,6 +50461,14 @@ return {
             type = 1,
         },
         {
+            id   = 939375,
+            file = 939375,
+            hash = "f1e776df6f486b1c07a3961348bf9920",
+            name = "wow_store",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
             id   = 1109508,
             file = 1109508,
             hash = "cf055365fa064fd80a6fff3e34edaad1",
@@ -50833,6 +50841,14 @@ return {
             file = 6725876,
             hash = "277fe8b38ffb6f5068edd785f68c5c11",
             name = "inv_pvpwarhorse_scarlet",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 7455463,
+            file = 7455463,
+            hash = "42a9abf434531d28966633a9d4bf2f96",
+            name = "ui_shop",
             size = { h = 64, w = 64 },
             type = 1,
         },
