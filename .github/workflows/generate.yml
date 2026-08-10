@@ -84,7 +84,7 @@ jobs:
           CLASSIC_PRODUCT: ${{ inputs.classic_product }}
           CLASSIC_VANILLA_PRODUCT: ${{ inputs.classic_vanilla_product }}
           CLASSIC_TBC_PRODUCT: ${{ inputs.classic_tbc_product }}
-          CLASSIC_WRATH_PRODUCT: ${{ inputs.classic_wrath_product }}
+          #CLASSIC_WRATH_PRODUCT: ${{ inputs.classic_wrath_product }}
 
       - name: Increment library version
         run: |
