@@ -99,6 +99,6 @@ jobs:
           commit-message: Regenerate Databases
           delete-branch: true
           title: Automated regeneration of media databases
-          body: Automated regeneration of media databases.
+          body-path: ${{ runner.temp }}/librpmedia-media-changes.md
           author: GitHub <noreply@github.com>
           reviewers: Meorawr

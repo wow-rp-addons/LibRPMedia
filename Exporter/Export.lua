@@ -53,6 +53,7 @@ local PRODUCT = getopt("product") or "wow";
 local MANIFEST_PATH = getopt("manifest") or "Manifest.lua";
 local DATABASE_PATH = getopt("database") or "Database.lua";
 local LOCALE = os.getenv("LUACASC_LOCALE") or "US";
+local GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true";
 
 local function assertv(result, ...)
     if not result then
@@ -650,6 +651,7 @@ end
 local build = ResourceUtil.GetBuildInfo(PRODUCT, REGION);
 local store = ResourceUtil.OpenCASCStore(build, LOCALE);
 local db = SQLUtil.OpenMemoryDatabase();
+local previousMediaCounts;
 
 SQLUtil.LoadExtension(db, "Exporter/Libs/sqlite3/csv.so");
 
@@ -701,6 +703,11 @@ if MANIFEST_PATH then
     log("Populating database with manifest data...");
 
     local manifest = dofile(MANIFEST_PATH);
+
+    previousMediaCounts = {
+        icons = #manifest.icons,
+        music = #manifest.music,
+    };
 
     do
         local stmt = db:prepare("INSERT OR REPLACE INTO MusicAttribute (ContentHash, Duration) VALUES (?, ?)");
@@ -795,6 +802,32 @@ if MANIFEST_PATH then
         icons = icons,
         music = music,
     });
+
+    if GITHUB_ACTIONS then
+        local outputPath = os.getenv("RUNNER_TEMP") .. "/librpmedia-media-changes.md";
+        local outputExists = lfs.attributes(outputPath, "mode") == "file";
+        local output = assert(io.open(outputPath, outputExists and "a" or "w"));
+        local iconDelta = #icons - previousMediaCounts.icons;
+        local musicDelta = #music - previousMediaCounts.music;
+
+        if not outputExists then
+            output:write("Automated regeneration of media databases.\n\n");
+            output:write("| Data file | Icons (total) | Music (total) |\n");
+            output:write("| --- | ---: | ---: |\n");
+        end
+
+        output:write(string.format(
+            "| `%s` | %+d (%d) | %+d (%d) |\n",
+            MANIFEST_PATH, iconDelta, #icons, musicDelta, #music
+        ));
+
+        output:close();
+
+        print(string.format(
+            "::notice title=Media changes::%s: icons %+d (total %d), music %+d (total %d)",
+            MANIFEST_PATH, iconDelta, #icons, musicDelta, #music
+        ));
+    end
 end
 
 ------------------------------------------------------------------------------
