@@ -42,15 +42,6 @@ on:
           - wow_anniversary
           - wow_anniversary_ptr
 
-      classic_wrath_product:
-        description: 'Wrath product branch'
-        required: true
-        default: 'wow_classic_titan'
-        type: choice
-        options:
-          - wow_classic_titan
-          - wow_classic_titan_ptr
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -78,13 +69,12 @@ jobs:
             .cache/root.*
 
       - name: Generate Media
-        run: make ${MAINLINE_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT} ${CLASSIC_WRATH_PRODUCT}
+        run: make ${MAINLINE_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT}
         env:
           MAINLINE_PRODUCT: ${{ inputs.mainline_product }}
           CLASSIC_PRODUCT: ${{ inputs.classic_product }}
           CLASSIC_VANILLA_PRODUCT: ${{ inputs.classic_vanilla_product }}
           CLASSIC_TBC_PRODUCT: ${{ inputs.classic_tbc_product }}
-          #CLASSIC_WRATH_PRODUCT: ${{ inputs.classic_wrath_product }}
 
       - name: Increment library version
         run: |
