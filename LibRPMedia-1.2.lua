@@ -526,10 +526,8 @@ end
 function IsAtlasName(atlasName)
     if type(atlasName) ~= "string" then
         return false;
-    elseif C_Texture then
-        return C_Texture.GetAtlasInfo(atlasName) ~= nil;
     else
-        return GetAtlasInfo(atlasName) ~= nil;
+        return C_Texture.GetAtlasInfo(atlasName) ~= nil;
     end
 end
 
