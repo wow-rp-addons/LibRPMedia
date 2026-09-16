@@ -676,6 +676,11 @@ log("Loading data sources...");
 
 local CSVOptions = { header = true };
 
+local UiTextureAtlasCSVOptions = {
+    header = true,
+    schema = [["CREATE TABLE x(ID INTEGER, FileDataID INTEGER, AtlasWidth INTEGER, AtlasHeight INTEGER, UiCanvasID INTEGER)"]],
+};
+
 -- luacheck: push ignore
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetListfile(store, build), "CsvFile", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("manifestinterfacedata", build), "CsvManifestInterfaceData", CSVOptions);
@@ -683,7 +688,7 @@ SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkit", build), "Csv
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkitentry", build), "CsvSoundKitEntry", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("zonemusic", build), "CsvZoneMusic", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("zoneintromusictable", build), "CsvZoneIntroMusic", CSVOptions);
-SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("uitextureatlas", build), "CsvUiTextureAtlas", CSVOptions);
+SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("uitextureatlas", build), "CsvUiTextureAtlas", UiTextureAtlasCSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("uitextureatlaselement", build), "CsvUiTextureAtlasElement", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("uitextureatlasmember", build), "CsvUiTextureAtlasMember", CSVOptions);
 -- luacheck: pop
