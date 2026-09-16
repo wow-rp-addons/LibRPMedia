@@ -1,5 +1,5 @@
 PACKAGER_URL := https://raw.githubusercontent.com/BigWigsMods/packager/eca4e176cd6ae5404c66bef5c11c08200a458400/release.sh
-PRODUCTS := wow_classic wow_classic_beta wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wow_beta wowt wowxptr
+PRODUCTS := wow_classic wow_classic_beta wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wow_beta wowt wowxptr wow_forever
 
 .PHONY: all check dist deps libs $(PRODUCTS)
 .DEFAULT: all
@@ -23,9 +23,6 @@ libs:
 wow_classic: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mists.lua --database=LibRPMediaData_Mists.lua
 
-wow_classic_beta: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Mists.lua --database=LibRPMediaData_Mists.lua
-
 wow_classic_ptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Mists.lua --database=LibRPMediaData_Mists.lua
 
@@ -42,16 +39,23 @@ wow_anniversary_ptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/TBC.lua --database=LibRPMediaData_TBC.lua
 
 wow: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wow_beta: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wowt: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wowxptr: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Mainline.lua --database=LibRPMediaData_Mainline.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+
+# Optimistic guess.
+wow_forever: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
+
+wow_classic_beta: deps
+	lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
 
 Exporter/Libs/sqlite3/csv.so: Exporter/Libs/sqlite3/csv.c
 	$(CC) -fPIC -O2 -shared -Wl,--no-as-needed -lsqlite3 $< -o $@
