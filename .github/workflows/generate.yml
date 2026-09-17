@@ -9,6 +9,7 @@ on:
         default: 'wow'
         type: choice
         options:
+          - none
           - wow
           - wowt
           - wowxptr
@@ -20,6 +21,7 @@ on:
         default: 'wow_forever'
         type: choice
         options:
+          - none
           - wow_forever
           - wow_classic_beta
 
@@ -29,6 +31,7 @@ on:
         default: 'wow_classic'
         type: choice
         options:
+          - none
           - wow_classic
           - wow_classic_ptr
           - wow_classic_beta
@@ -39,6 +42,7 @@ on:
         default: 'wow_classic_era'
         type: choice
         options:
+          - none
           - wow_classic_era
           - wow_classic_era_ptr
 
@@ -48,6 +52,7 @@ on:
         default: 'wow_anniversary'
         type: choice
         options:
+          - none
           - wow_anniversary
           - wow_anniversary_ptr
 
@@ -78,7 +83,21 @@ jobs:
             .cache/root.*
 
       - name: Generate Media
-        run: make ${STANDARD_PRODUCT} ${FOREVER_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT}
+        run: |
+          make_args=()
+
+          for product in "$STANDARD_PRODUCT" "$FOREVER_PRODUCT" "$CLASSIC_PRODUCT" "$CLASSIC_VANILLA_PRODUCT" "$CLASSIC_TBC_PRODUCT"; do
+            if [[ "$product" != "none" ]]; then
+              make_args+=("$product")
+            fi
+          done
+
+          if (( ${#make_args[@]} == 0 )); then
+            echo 'Select at least one product to generate.'
+            exit 1
+          fi
+
+          make "${make_args[@]}"
         env:
           STANDARD_PRODUCT: ${{ inputs.standard_product }}
           FOREVER_PRODUCT: ${{ inputs.forever_product }}
