@@ -556,10 +556,8 @@ function ExportUtil.IsIconFileExcluded(fileId, filePath, contentHash)
 end
 
 function ExportUtil.IsIconAtlasExcluded(atlasId, atlasName)
-    -- TODO: Atlas support is disabled until we can actually support atlases.
-
-    -- if string.find(atlasName, "^raceicon%-") then return false; end
-    -- if string.find(atlasName, "^classicon%-") then return false; end
+    if string.find(atlasName, "^raceicon%-") then return false; end
+    if string.find(atlasName, "^classicon%-") then return false; end
 
     -- Default reject everything else.
     return true;

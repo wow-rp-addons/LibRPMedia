@@ -17,7 +17,7 @@ read_globals = {
     "bit.bor",
     "bit.lshift",
     "bit.rshift",
-    "C_Texture.GetAtlasInfo",
+    "C_Texture.GetAtlasExists",
     "GetFileIDFromPath",
     "LibStub.GetLibrary",
     "LibStub.NewLibrary",
