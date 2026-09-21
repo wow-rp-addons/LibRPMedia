@@ -25,7 +25,7 @@
 
 assert(LibStub, "Missing dependency: LibStub");
 
-local MINOR_VERSION = 42;
+local MINOR_VERSION = 43;
 
 local LRPM12 = LibStub:NewLibrary("LibRPMedia-1.2", MINOR_VERSION);
 
@@ -52,11 +52,11 @@ local GetMusicIndexByName;
 local GetMusicInfoByIndex;
 local GetMusicNameIndexRange;
 local GetMusicNamesByIndex;
-local IsAtlasName;
 local IsIconFileName;
 
 local musicIndexByName = {};
 local iconIndexByName = {};
+local iconIndexByID = {};
 
 --
 -- Enums
@@ -162,6 +162,14 @@ end
 
 function LRPM12:GetIconIndexByName(iconName)
     return GetIconIndexByName(self.db.icons, iconName);
+end
+
+function LRPM12:GetIconIDByName(iconName)
+    return self:GetIconIDByIndex(GetIconIndexByName(self.db.icons, iconName));
+end
+
+function LRPM12:GetIconIDByIndex(iconIndex)
+    return self.db.icons.id[iconIndex];
 end
 
 function LRPM12:GetIconNameByID(iconID)
@@ -303,32 +311,41 @@ function LRPM12:GenerateIconMarkup(icon, width, height, offsetX, offsetY)
     return string.format(markupBase, iconSource, width, height, offsetX or 0, offsetY or 0);
 end
 
+---@param icon string|integer An icon ID, icon name, or atlas name.
+function LRPM12:ResolveIconID(icon)
+    local iconID = tonumber(icon);
+
+    if iconID then
+        if GetIconIndexByID(self.db.icons, iconID) then
+            return iconID;
+        end
+
+        return nil;
+    end
+
+    if type(icon) == "string" then
+        return self:GetIconIDByName(icon);
+    end
+
+    return nil;
+end
+
+---@param icon string|integer An icon ID, icon name, or atlas name.
 function LRPM12:ResolveIcon(icon)
-    -- The input icon is either an atlas name, a possibly-stringified file
-    -- ID, or an icon name.
+    local iconID = self:ResolveIconID(icon);
 
-    if IsAtlasName(icon) then
-        return icon, LRPM12.IconType.Atlas;
+    if iconID then
+        local iconType = GetIconType(iconID);
+
+        if iconType == LRPM12.IconType.Atlas then
+            return self:GetIconNameByID(iconID), iconType;
+        else
+            -- File icon IDs are raw file IDs.
+            return bit.band(iconID, ICON_ID_DATA_MASK), iconType;
+        end
     end
 
-    -- Try to coerce the token to a number, if that fails we'll attempt
-    -- to resolve a file ID from it (assuming it's a name), and finally
-    -- if that fails we'll default it to a question mark.
-
-    local file = tonumber(icon);
-
-    if not file then
-        file = GetFileIDFromPath([[Interface\ICONS\]] .. tostring(icon));
-    end
-
-    -- Checking for an index by its ID (which for files is the same as
-    -- the ID) is done here to weed out invalid file IDs for non-icons.
-
-    if not file or not GetIconIndexByID(self.db.icons, bit.band(file, ICON_ID_DATA_MASK)) then
-        file = INV_MISC_QUESTIONMARK;
-    end
-
-    return file, LRPM12.IconType.File;
+    return INV_MISC_QUESTIONMARK, LRPM12.IconType.File;
 end
 
 --
@@ -418,7 +435,14 @@ function EnumerateMusicNames(musicDB, i, j)
 end
 
 function GetIconIndexByID(iconsDB, iconID)
-    return BinarySearch(iconsDB.id, iconID, 1, iconsDB.size);
+    if not next(iconIndexByID) then
+        for index = 1, iconsDB.size do
+            local id = iconsDB.id[index];
+            iconIndexByID[id] = iconIndexByID[id] or index;
+        end
+    end
+
+    return iconIndexByID[iconID];
 end
 
 function GetIconIndexByName(iconsDB, iconName)
@@ -441,7 +465,7 @@ function GetIconInfoByIndex(iconsDB, iconIndex, infoTable)
     local name = iconsDB.name[iconIndex];
     local type = GetIconType(id);
     local file = (type == LRPM12.IconType.File) and bit.band(id, ICON_ID_DATA_MASK) or nil;
-    local atlas = (type == LRPM12.IconType.Atlas) and bit.band(id, ICON_ID_DATA_MASK) or nil;
+    local atlas = (type == LRPM12.IconType.Atlas) and name or nil;
     local key = (type == LRPM12.IconType.Atlas or IsIconFileName(name)) and name or file;
 
     local iconInfo = infoTable or table.create(0, 8);
@@ -521,14 +545,6 @@ function GetMusicNamesByIndex(musicDB, musicIndex, namesTable)
     end
 
     return names;
-end
-
-function IsAtlasName(atlasName)
-    if type(atlasName) ~= "string" then
-        return false;
-    else
-        return C_Texture.GetAtlasInfo(atlasName) ~= nil;
-    end
 end
 
 function IsIconFileName(iconName)
