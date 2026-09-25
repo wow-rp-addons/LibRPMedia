@@ -54,6 +54,7 @@ local MANIFEST_PATH = getopt("manifest") or "Manifest.lua";
 local DATABASE_PATH = getopt("database") or "Database.lua";
 local LOCALE = os.getenv("LUACASC_LOCALE") or "US";
 local GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true";
+local EXPORT_ATLASES = os.getenv("EXPORT_ATLASES") == "1";
 
 local function assertv(result, ...)
     if not result then
@@ -516,7 +517,14 @@ function ExportUtil.GetNormalizedMusicName(musicName)
     musicName = string.gsub(musicName, "[^a-z0-9]+", "_");
     musicName = string.gsub(musicName, "_+", "_");
     musicName = string.gsub(musicName, "^_+", "");
-    musicName = string.gsub(musicName, "[0-9_]+$", "");
+
+    -- The community listfile can contain entries that use the file ID as the
+    -- music name. Only strip numbers if we'd not end up with an empty name.
+
+    local strippedName = string.gsub(musicName, "[0-9_]+$", "");
+    if strippedName ~= "" then
+        musicName = strippedName;
+    end
 
     return musicName;
 end
@@ -549,10 +557,11 @@ function ExportUtil.IsIconFileExcluded(fileId, filePath, contentHash)
 end
 
 function ExportUtil.IsIconAtlasExcluded(atlasId, atlasName)
-    -- TODO: Atlas support is disabled until we can actually support atlases.
-
-    -- if string.find(atlasName, "^raceicon%-") then return false; end
-    -- if string.find(atlasName, "^classicon%-") then return false; end
+    if EXPORT_ATLASES then
+        if string.find(atlasName, "^raceicon%-") then return false; end
+        if string.find(atlasName, "^raceicon128%-") then return false; end
+        if string.find(atlasName, "^classicon%-") then return false; end
+    end
 
     -- Default reject everything else.
     return true;

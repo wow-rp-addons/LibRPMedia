@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "6ee5af3886d2eb74b2dc7b4afc6be8b3",
-        version = "12.1.0.69189",
+        bkey = "dcfc90fffd79ba00406ae46f5f657592",
+        version = "12.1.0.69933",
     },
     icons = {
         {
@@ -258201,6 +258201,14 @@ return {
             file = 7569838,
             hash = "6b5d48dc647cff966a33b61290d13308",
             name = "inv_tabard_pvp12season2_d_01_red",
+            size = { h = 64, w = 64 },
+            type = 1,
+        },
+        {
+            id   = 7570145,
+            file = 7570145,
+            hash = "19d89544a0be6096ba3e8c8b8586f6c4",
+            name = "inv_companionroc",
             size = { h = 64, w = 64 },
             type = 1,
         },

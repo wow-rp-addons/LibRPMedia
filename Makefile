@@ -52,10 +52,10 @@ wowxptr: deps
 
 # Optimistic guess.
 wow_forever: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
+	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
 
 wow_classic_beta: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
+	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
 
 Exporter/Libs/sqlite3/csv.so: Exporter/Libs/sqlite3/csv.c
 	$(CC) -fPIC -O2 -shared -Wl,--no-as-needed -lsqlite3 $< -o $@
