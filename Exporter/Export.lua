@@ -54,6 +54,7 @@ local MANIFEST_PATH = getopt("manifest") or "Manifest.lua";
 local DATABASE_PATH = getopt("database") or "Database.lua";
 local LOCALE = os.getenv("LUACASC_LOCALE") or "US";
 local GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true";
+local EXPORT_ATLASES = os.getenv("EXPORT_ATLASES") == "1";
 
 local function assertv(result, ...)
     if not result then
@@ -556,9 +557,11 @@ function ExportUtil.IsIconFileExcluded(fileId, filePath, contentHash)
 end
 
 function ExportUtil.IsIconAtlasExcluded(atlasId, atlasName)
-    if string.find(atlasName, "^raceicon%-") then return false; end
-    if string.find(atlasName, "^raceicon128%-") then return false; end
-    if string.find(atlasName, "^classicon%-") then return false; end
+    if EXPORT_ATLASES then
+        if string.find(atlasName, "^raceicon%-") then return false; end
+        if string.find(atlasName, "^raceicon128%-") then return false; end
+        if string.find(atlasName, "^classicon%-") then return false; end
+    end
 
     -- Default reject everything else.
     return true;
