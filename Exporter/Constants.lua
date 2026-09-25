@@ -348,6 +348,7 @@ Constants.IconCategoryPatterns = {
     { predicate = ( Word "mechagnome" ), tags = { Constants.IconCategory.Gnomish } },
     { predicate = ( Word "nightborne?" ), tags = { Constants.IconCategory.Elven } },
     { predicate = ( Word "nightelf" ), tags = { Constants.IconCategory.Elven } },
+    { predicate = ( Word "skyborne" ), tags = { Constants.IconCategory.Elven } },
     { predicate = ( Word "orc" ), tags = { Constants.IconCategory.Orcish } },
     { predicate = ( Word "pandaren" ), tags = { Constants.IconCategory.Pandaren } },
     { predicate = ( Word "pandaria" ), tags = { Constants.IconCategory.Pandaren } },
