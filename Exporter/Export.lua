@@ -557,6 +557,7 @@ end
 
 function ExportUtil.IsIconAtlasExcluded(atlasId, atlasName)
     if string.find(atlasName, "^raceicon%-") then return false; end
+    if string.find(atlasName, "^raceicon128%-") then return false; end
     if string.find(atlasName, "^classicon%-") then return false; end
 
     -- Default reject everything else.
