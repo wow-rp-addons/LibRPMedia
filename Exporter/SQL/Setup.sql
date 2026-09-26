@@ -56,8 +56,7 @@ CREATE TEMPORARY TABLE File
 
 CREATE TEMPORARY TABLE ManifestInterfaceData
 (
-    FileId INTEGER PRIMARY KEY,
-    FilePath TEXT NOT NULL COLLATE NOCASE
+    FileId INTEGER PRIMARY KEY
 );
 
 CREATE TEMPORARY TABLE SoundKit
@@ -133,10 +132,9 @@ SELECT
 FROM
     CsvFile;
 
-INSERT INTO ManifestInterfaceData (FileId, FilePath)
+INSERT INTO ManifestInterfaceData (FileId)
 SELECT
-    CAST(ID AS INTEGER),
-    GetNormalizedFilePath(FilePath || FileName)
+    CAST(ID AS INTEGER)
 FROM
     CsvManifestInterfaceData;
 
@@ -395,18 +393,21 @@ ORDER BY
 -- IconFile and IconAtlas act as the source collections for data that passes
 -- all basic filters, and feeds into the Icon view which exports a manifest.
 --
+-- IconFile uses paths from the community listfile, but only includes file IDs
+-- present in ManifestInterfaceData; its path and name fields may be empty.
+--
 
 CREATE TEMPORARY VIEW IconFile (Id) AS
 SELECT
-    ManifestInterfaceData.FileId AS Id
+    File.Id
 FROM
-    ManifestInterfaceData
+    File
 INNER JOIN
-    File ON File.Id = FileId
+    ManifestInterfaceData ON ManifestInterfaceData.FileId = File.Id
 WHERE
-    ManifestInterfaceData.FilePath LIKE 'interface/icons/%.blp' AND NOT IsIconFileExcluded(FileId, FilePath, File.ContentHash)
+    File.Path LIKE 'interface/icons/%.blp' AND NOT IsIconFileExcluded(File.Id, File.Path, File.ContentHash)
 ORDER BY
-    FileId ASC;
+    File.Id ASC;
 
 CREATE TEMPORARY VIEW IconAtlas (Id) AS
 SELECT
@@ -423,7 +424,7 @@ SELECT
     IconFile.Id AS IconId,
     File.Id,
     File.ContentHash,
-    GetNameForIconFile(File.Id, ManifestInterfaceData.FilePath),
+    GetNameForIconFile(File.Id, File.Path),
     IconAttribute.Width,
     IconAttribute.Height,
     1
@@ -431,8 +432,6 @@ FROM
     IconFile
 INNER JOIN
     File ON File.Id = IconFile.Id
-INNER JOIN
-    ManifestInterfaceData ON ManifestInterfaceData.FileId = File.Id
 INNER JOIN
     IconAttribute ON IconAttribute.ContentHash = File.ContentHash
 UNION
