@@ -547,8 +547,12 @@ function GetMusicNamesByIndex(musicDB, musicIndex, namesTable)
     return names;
 end
 
+local function IsIconFileAsset(iconFileAsset)
+    return C_UIFileAsset.IsKnownFile(iconFileAsset) and not C_UIFileAsset.IsLooseFile(iconFileAsset);
+end
+
 function IsIconFileName(iconName)
-    return GetFileIDFromPath([[Interface\ICONS\]] .. iconName) ~= nil;
+    return IsIconFileAsset([[Interface\ICONS\]] .. iconName);
 end
 
 --@do-not-package@
@@ -556,8 +560,8 @@ if (...) == "LibRPMedia" and UIParent ~= nil then
 
 function LRPM12:ValidateIcons()
     for _, icon in LRPM12:EnumerateIcons() do
-        if icon.type == LRPM12.IconType.File and not GetFileIDFromPath([[Interface\Icons\]] .. icon.name) then
-            print("Bad icon found: " .. icon.name);
+        if icon.type == LRPM12.IconType.File and not IsIconFileAsset(icon.file) then
+            print(string.format("Bad icon found: %s (%d)", icon.name, icon.file));
         end
     end
 end
