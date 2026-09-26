@@ -354,6 +354,112 @@ end
 
 LRPM12.db = nil;
 
+function LRPM12:CompactIcons(iconsDB)
+    local TAG_STRIDE = math.ceil(self.IconCategoryMeta.NumValues / 32);
+
+    local ids = iconsDB.id;
+    local names = iconsDB.name;
+    local tags = iconsDB.tags;
+    local size = iconsDB.size;
+    local count = 0;
+
+    local band = bit.band;
+    local IsKnownFile = C_UIFileAsset.IsKnownFile;
+    local IsLooseFile = C_UIFileAsset.IsLooseFile;
+    local GetAtlasExists = C_Texture.GetAtlasExists;
+
+    for index = 1, size do
+        local id = ids[index];
+        local valid;
+
+        if band(id, ICON_ID_TYPE_MASK) ~= 0 then
+            valid = GetAtlasExists(names[index]);
+        else
+            local fileID = band(id, ICON_ID_DATA_MASK);
+            valid = IsKnownFile(fileID) and not IsLooseFile(fileID);
+        end
+
+        if valid then
+            count = count + 1;
+
+            if count ~= index then
+                ids[count] = id;
+                names[count] = names[index];
+
+                local source = (index - 1) * TAG_STRIDE;
+                local target = (count - 1) * TAG_STRIDE;
+
+                for field = 1, TAG_STRIDE do
+                    tags[target + field] = tags[source + field];
+                end
+            end
+        end
+    end
+
+    for index = count + 1, size do
+        ids[index] = nil;
+        names[index] = nil;
+    end
+
+    for index = count * TAG_STRIDE + 1, size * TAG_STRIDE do
+        tags[index] = nil;
+    end
+
+    iconsDB.size = count;
+    return iconsDB;
+end
+
+function LRPM12:CompactMusic(musicDB)
+    local files = musicDB.file;
+    local names = musicDB.name;
+    local keys = musicDB.nkey;
+    local times = musicDB.time;
+    local size = musicDB.size;
+    local nameSize = #names;
+    local count = 0;
+    local nameCount = 0;
+
+    local band = bit.band;
+    local rshift = bit.rshift;
+    local lshift = bit.lshift;
+    local bor = bit.bor;
+    local IsKnownFile = C_UIFileAsset.IsKnownFile;
+
+    for index = 1, size do
+        local file = files[index];
+
+        if IsKnownFile(file) then
+            local key = keys[index];
+            local first = rshift(key, 5) + 1;
+            local last = first + band(key, 0x1f);
+
+            -- Rebase the packed name offset while retaining this file's name count.
+            count = count + 1;
+            files[count] = file;
+            times[count] = times[index];
+            keys[count] = bor(lshift(nameCount, 5), last - first);
+
+            for nameIndex = first, last do
+                nameCount = nameCount + 1;
+                names[nameCount] = names[nameIndex];
+            end
+        end
+    end
+
+    for index = count + 1, size do
+        files[index] = nil;
+        times[index] = nil;
+        keys[index] = nil;
+    end
+
+    for index = nameCount + 1, nameSize do
+        names[index] = nil;
+    end
+
+    musicDB.size = count;
+    return musicDB;
+end
+
 function AlwaysTrue()
     return true;
 end
@@ -547,25 +653,8 @@ function GetMusicNamesByIndex(musicDB, musicIndex, namesTable)
     return names;
 end
 
-local function IsIconFileAsset(iconFileAsset)
-    return C_UIFileAsset.IsKnownFile(iconFileAsset) and not C_UIFileAsset.IsLooseFile(iconFileAsset);
-end
-
 function IsIconFileName(iconName)
-    return IsIconFileAsset([[Interface\ICONS\]] .. iconName);
+    return C_UIFileAsset.IsKnownFile([[Interface\ICONS\]] .. iconName);
 end
 
---@do-not-package@
-if (...) == "LibRPMedia" and UIParent ~= nil then
-
-function LRPM12:ValidateIcons()
-    for _, icon in LRPM12:EnumerateIcons() do
-        if icon.type == LRPM12.IconType.File and not IsIconFileAsset(icon.file) then
-            print(string.format("Bad icon found: %s (%d)", icon.name, icon.file));
-        end
-    end
-end
-
-_G.LRPM12 = LRPM12;
-end
 --@end-do-not-package@
