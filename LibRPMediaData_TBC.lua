@@ -30,19 +30,19 @@ local function RegisterDatabase()
     LRPM12.IconCategoryMeta = { NumValues = CountTable(LRPM12.IconCategory) };
 
     LRPM12.db = {
-        icons = {
+        icons = LRPM12:CompactIcons({
             size = 3960,
             id   = db_icons_id,
             name = db_icons_name,
             tags = db_icons_tags,
-        },
-        music = {
+        }),
+        music = LRPM12:CompactMusic({
             size = 630,
             file = db_music_file,
             name = db_music_name,
             nkey = db_music_nkey,
             time = db_music_time,
-        },
+        }),
     };
 end
 
