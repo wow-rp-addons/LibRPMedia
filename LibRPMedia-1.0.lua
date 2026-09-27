@@ -236,7 +236,7 @@ function FixupIncompatibleData(iconInfo)
         iconInfo.file = 134400; -- Interface\ICONS\INV_Misc_QuestionMark
         iconInfo.key = "INV_Misc_QuestionMark";
         iconInfo.name = "INV_Misc_QuestionMark";
-    elseif not GetFileIDFromPath([[Interface\ICONS\]] .. iconInfo.name) then
+    elseif not C_UIFileAsset.IsKnownFile(iconInfo.file) or C_UIFileAsset.IsLooseFile(iconInfo.file) then
         iconInfo.atlas = nil;
         iconInfo.file = 134400; -- Interface\ICONS\INV_Misc_QuestionMark
         iconInfo.key = "INV_Misc_QuestionMark";

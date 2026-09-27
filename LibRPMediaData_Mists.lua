@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 5.5.4.69155
--- Build Config: 8ca6e8ce7d7793c68237e40242347f47
+-- Client Version: 5.5.4.69934
+-- Build Config: ad6184fe0582294d2e5faaf3598a3688
 -- Icon count: 12057
 -- Music count: 2297
 
@@ -30,19 +30,19 @@ local function RegisterDatabase()
     LRPM12.IconCategoryMeta = { NumValues = CountTable(LRPM12.IconCategory) };
 
     LRPM12.db = {
-        icons = {
+        icons = LRPM12:CompactIcons({
             size = 12057,
             id   = db_icons_id,
             name = db_icons_name,
             tags = db_icons_tags,
-        },
-        music = {
+        }),
+        music = LRPM12:CompactMusic({
             size = 2297,
             file = db_music_file,
             name = db_music_name,
             nkey = db_music_nkey,
             time = db_music_time,
-        },
+        }),
     };
 end
 
