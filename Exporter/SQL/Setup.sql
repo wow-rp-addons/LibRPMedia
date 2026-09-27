@@ -434,6 +434,8 @@ INNER JOIN
     File ON File.Id = IconFile.Id
 INNER JOIN
     IconAttribute ON IconAttribute.ContentHash = File.ContentHash
+WHERE
+    IconAttribute.Width > 0 AND IconAttribute.Height > 0
 UNION
 SELECT
     (IconAtlas.Id | 0x80000000) AS IconId,
