@@ -402,8 +402,8 @@ SELECT
     File.Id
 FROM
     File
--- INNER JOIN
-    -- ManifestInterfaceData ON ManifestInterfaceData.FileId = File.Id
+INNER JOIN
+    ManifestInterfaceData ON ManifestInterfaceData.FileId = File.Id
 WHERE
     File.Path LIKE 'interface/icons/%.blp' AND NOT IsIconFileExcluded(File.Id, File.Path, File.ContentHash)
 ORDER BY
