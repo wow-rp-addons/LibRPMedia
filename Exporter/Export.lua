@@ -516,7 +516,14 @@ function ExportUtil.GetNormalizedMusicName(musicName)
     musicName = string.gsub(musicName, "[^a-z0-9]+", "_");
     musicName = string.gsub(musicName, "_+", "_");
     musicName = string.gsub(musicName, "^_+", "");
-    musicName = string.gsub(musicName, "[0-9_]+$", "");
+
+    -- The community listfile can contain entries that use the file ID as the
+    -- music name. Only strip numbers if we'd not end up with an empty name.
+
+    local strippedName = string.gsub(musicName, "[0-9_]+$", "");
+    if strippedName ~= "" then
+        musicName = strippedName;
+    end
 
     return musicName;
 end
@@ -549,10 +556,9 @@ function ExportUtil.IsIconFileExcluded(fileId, filePath, contentHash)
 end
 
 function ExportUtil.IsIconAtlasExcluded(atlasId, atlasName)
-    -- TODO: Atlas support is disabled until we can actually support atlases.
-
-    -- if string.find(atlasName, "^raceicon%-") then return false; end
-    -- if string.find(atlasName, "^classicon%-") then return false; end
+    if string.find(atlasName, "^raceicon%-") then return false; end
+    if string.find(atlasName, "^raceicon128%-") then return false; end
+    if string.find(atlasName, "^classicon%-") then return false; end
 
     -- Default reject everything else.
     return true;
@@ -678,14 +684,13 @@ log("Loading data sources...");
 
 local CSVOptions = { header = true };
 
+-- luacheck: push ignore
 local UiTextureAtlasCSVOptions = {
     header = true,
     schema = [["CREATE TABLE x(ID INTEGER, FileDataID INTEGER, AtlasWidth INTEGER, AtlasHeight INTEGER, UiCanvasID INTEGER)"]],
 };
 
--- luacheck: push ignore
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetListfile(store, build), "CsvFile", CSVOptions);
-SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("manifestinterfacedata", build), "CsvManifestInterfaceData", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkit", build), "CsvSoundKit", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkitentry", build), "CsvSoundKitEntry", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("zonemusic", build), "CsvZoneMusic", CSVOptions);
