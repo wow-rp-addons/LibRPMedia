@@ -39,16 +39,16 @@ wow_anniversary_ptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/TBC.lua --database=LibRPMediaData_TBC.lua
 
 wow: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wow_beta: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wowt: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wowxptr: deps
-	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 # Optimistic guess.
 wow_forever: deps
