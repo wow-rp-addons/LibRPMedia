@@ -39,23 +39,23 @@ wow_anniversary_ptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/TBC.lua --database=LibRPMediaData_TBC.lua
 
 wow: deps
-	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wow_beta: deps
-	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wowt: deps
-	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 wowxptr: deps
-	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
 # Optimistic guess.
 wow_forever: deps
-	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
 
 wow_classic_beta: deps
-	EXPORT_ATLASES=1 lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
+	lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
 
 Exporter/Libs/sqlite3/csv.so: Exporter/Libs/sqlite3/csv.c
 	$(CC) -fPIC -O2 -shared -Wl,--no-as-needed -lsqlite3 $< -o $@
