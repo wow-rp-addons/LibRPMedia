@@ -54,11 +54,6 @@ CREATE TEMPORARY TABLE File
     ContentHash TEXT NOT NULL COLLATE NOCASE
 );
 
-CREATE TEMPORARY TABLE ManifestInterfaceData
-(
-    FileId INTEGER PRIMARY KEY
-);
-
 CREATE TEMPORARY TABLE SoundKit
 (
     Id INTEGER PRIMARY KEY,
@@ -131,12 +126,6 @@ SELECT
     ContentHash
 FROM
     CsvFile;
-
-INSERT INTO ManifestInterfaceData (FileId)
-SELECT
-    CAST(ID AS INTEGER)
-FROM
-    CsvManifestInterfaceData;
 
 INSERT INTO SoundKit (Id, SoundType)
 SELECT
@@ -211,7 +200,6 @@ WHERE
 -- Drop the CSV virtual tables once we're done with the import.
 
 DROP TABLE CsvFile;
-DROP TABLE CsvManifestInterfaceData;
 DROP TABLE CsvSoundKit;
 DROP TABLE CsvSoundKitEntry;
 DROP TABLE CsvUiTextureAtlas;
@@ -393,17 +381,12 @@ ORDER BY
 -- IconFile and IconAtlas act as the source collections for data that passes
 -- all basic filters, and feeds into the Icon view which exports a manifest.
 --
--- IconFile uses paths from the community listfile, but only includes file IDs
--- present in ManifestInterfaceData; its path and name fields may be empty.
---
 
 CREATE TEMPORARY VIEW IconFile (Id) AS
 SELECT
     File.Id
 FROM
     File
-INNER JOIN
-    ManifestInterfaceData ON ManifestInterfaceData.FileId = File.Id
 WHERE
     File.Path LIKE 'interface/icons/%.blp' AND NOT IsIconFileExcluded(File.Id, File.Path, File.ContentHash)
 ORDER BY

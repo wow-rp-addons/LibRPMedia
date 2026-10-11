@@ -691,7 +691,6 @@ local UiTextureAtlasCSVOptions = {
 
 -- luacheck: push ignore
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetListfile(store, build), "CsvFile", CSVOptions);
-SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("manifestinterfacedata", build), "CsvManifestInterfaceData", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkit", build), "CsvSoundKit", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkitentry", build), "CsvSoundKitEntry", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("zonemusic", build), "CsvZoneMusic", CSVOptions);
