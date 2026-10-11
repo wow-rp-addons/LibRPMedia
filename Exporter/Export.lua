@@ -684,12 +684,12 @@ log("Loading data sources...");
 
 local CSVOptions = { header = true };
 
+-- luacheck: push ignore
 local UiTextureAtlasCSVOptions = {
     header = true,
     schema = [["CREATE TABLE x(ID INTEGER, FileDataID INTEGER, AtlasWidth INTEGER, AtlasHeight INTEGER, UiCanvasID INTEGER)"]],
 };
 
--- luacheck: push ignore
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetListfile(store, build), "CsvFile", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkit", build), "CsvSoundKit", CSVOptions);
 SQLUtil.CreateTableFromCSV(db, ResourceUtil.GetDatabase("soundkitentry", build), "CsvSoundKitEntry", CSVOptions);
