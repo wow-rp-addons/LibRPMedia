@@ -19,7 +19,6 @@ read_globals = {
     "bit.rshift",
     "C_Texture.GetAtlasExists",
     "C_UIFileAsset.IsKnownFile",
-    "C_UIFileAsset.IsLooseFile",
     "LibStub.GetLibrary",
     "LibStub.NewLibrary",
     "PlayMusic",

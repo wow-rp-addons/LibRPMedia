@@ -25,7 +25,7 @@
 
 assert(LibStub, "Missing dependency: LibStub");
 
-local MINOR_VERSION = 52;
+local MINOR_VERSION = 53;
 
 local LRPM12 = LibStub:NewLibrary("LibRPMedia-1.2", MINOR_VERSION);
 
@@ -365,7 +365,6 @@ function LRPM12:CompactIcons(iconsDB)
 
     local band = bit.band;
     local IsKnownFile = C_UIFileAsset.IsKnownFile;
-    local IsLooseFile = C_UIFileAsset.IsLooseFile;
     local GetAtlasExists = C_Texture.GetAtlasExists;
 
     for index = 1, size do
@@ -376,7 +375,7 @@ function LRPM12:CompactIcons(iconsDB)
             valid = GetAtlasExists(names[index]);
         else
             local fileID = band(id, ICON_ID_DATA_MASK);
-            valid = IsKnownFile(fileID) and not IsLooseFile(fileID);
+            valid = IsKnownFile(fileID);
         end
 
         if valid then
