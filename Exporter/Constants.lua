@@ -342,7 +342,7 @@ Constants.IconCategoryPatterns = {
     { predicate = ( Substring "lightforged" ), tags = { Constants.IconCategory.Draenei } },
     { predicate = ( Substring "maghar" ), tags = { Constants.IconCategory.Orcish } },
     { predicate = ( Substring "mechagnome" ), tags = { Constants.IconCategory.Gnomish } },
-    { predicate = ( WordBoundary "elf" ), tags = { Constants.IconCategory.Human } },
+    { predicate = ( WordBoundary "elf" ), tags = { Constants.IconCategory.Elven } },
     { predicate = ( Substring "nightborne?" ), tags = { Constants.IconCategory.Elven } },
     { predicate = ( Substring "nightelf" ), tags = { Constants.IconCategory.Elven } },
     { predicate = ( Substring "skyborne" ), tags = { Constants.IconCategory.Elven } },
