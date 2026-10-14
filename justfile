@@ -1,4 +1,4 @@
-packager_url := "https://raw.githubusercontent.com/BigWigsMods/packager/eca4e176cd6ae5404c66bef5c11c08200a458400/release.sh"
+packager_url := "https://raw.githubusercontent.com/BigWigsMods/packager/v2/release.sh"
 cc := env("CC", "cc")
 
 all: wow wow_anniversary wow_classic wow_classic_era
