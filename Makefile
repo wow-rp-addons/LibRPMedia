@@ -1,5 +1,5 @@
 PACKAGER_URL := https://raw.githubusercontent.com/BigWigsMods/packager/eca4e176cd6ae5404c66bef5c11c08200a458400/release.sh
-PRODUCTS := wow_classic wow_classic_beta wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wow_beta wowt wowxptr wow_forever
+PRODUCTS := wow_classic wow_classic_beta wow_classic_ptr wow_classic_era wow_classic_era_ptr wow wow_beta wowt wowxptr wowf
 
 .PHONY: all check dist deps libs $(PRODUCTS)
 .DEFAULT: all
@@ -50,8 +50,7 @@ wowt: deps
 wowxptr: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Standard.lua --database=LibRPMediaData_Standard.lua
 
-# Optimistic guess.
-wow_forever: deps
+wowf: deps
 	lrpm-export --product=$@ --manifest=Exporter/Data/Forever.lua --database=LibRPMediaData_Forever.lua
 
 wow_classic_beta: deps

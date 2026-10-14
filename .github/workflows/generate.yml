@@ -18,11 +18,11 @@ on:
       forever_product:
         description: 'Forever product branch'
         required: true
-        default: 'wow_forever'
+        default: 'wowf'
         type: choice
         options:
           - none
-          - wow_forever
+          - wowf
           - wow_classic_beta
 
       classic_product:
