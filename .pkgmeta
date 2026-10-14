@@ -17,5 +17,5 @@ ignore:
   - Libs/*/README.*
   - Libs/*/tests
   - Exporter
-  - Makefile
+  - justfile
   - '*.rockspec'

@@ -61,6 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: extractions/setup-just@v4
 
       - name: Install dependencies
         run: |
@@ -84,20 +85,20 @@ jobs:
 
       - name: Generate Media
         run: |
-          make_args=()
+          just_args=()
 
           for product in "$STANDARD_PRODUCT" "$FOREVER_PRODUCT" "$CLASSIC_PRODUCT" "$CLASSIC_VANILLA_PRODUCT" "$CLASSIC_TBC_PRODUCT"; do
             if [[ "$product" != "none" ]]; then
-              make_args+=("$product")
+              just_args+=("$product")
             fi
           done
 
-          if (( ${#make_args[@]} == 0 )); then
+          if (( ${#just_args[@]} == 0 )); then
             echo 'Select at least one product to generate.'
             exit 1
           fi
 
-          make "${make_args[@]}"
+          just "${just_args[@]}"
         env:
           STANDARD_PRODUCT: ${{ inputs.standard_product }}
           FOREVER_PRODUCT: ${{ inputs.forever_product }}
