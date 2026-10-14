@@ -1,7 +1,7 @@
 return {
     build = {
-        bkey = "f6e309c700cea095978aeb5d85210df4",
-        version = "1.60.1.70338",
+        bkey = "25822068f8fce8b21bc714e7e3210481",
+        version = "1.60.1.70374",
     },
     icons = {
         {
@@ -159533,14 +159533,6 @@ return {
             type = 1,
         },
         {
-            id   = 2147656,
-            file = 2147656,
-            hash = "03451e957722936b1707fd429f6c1c47",
-            name = "inv_encrypted05",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
             id   = 2147912,
             file = 2147912,
             hash = "297ceb614f89d6e0669221106854eed4",
@@ -165661,14 +165653,6 @@ return {
             type = 1,
         },
         {
-            id   = 2741548,
-            file = 2741548,
-            hash = "c59a9c1fde3762ccbf3bfb4f1ce485e5",
-            name = "inv_encrypted15",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
             id   = 2741655,
             file = 2741655,
             hash = "1927759e6f7bef7347bbc77f585c63ad",
@@ -166049,14 +166033,6 @@ return {
             file = 2888529,
             hash = "21fa03e16d6fdd29cde5c5e250da103e",
             name = "inv_glaive_1h_nazjatarraid_d_01",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            id   = 2892271,
-            file = 2892271,
-            hash = "73f2f0e261031847ee4bd70c5ff9dd9f",
-            name = "inv_encrypted17",
             size = { h = 64, w = 64 },
             type = 1,
         },
@@ -225981,14 +225957,6 @@ return {
             type = 1,
         },
         {
-            id   = 5834819,
-            file = 5834819,
-            hash = "aa6d6934f3244c103484caf9b3902fe2",
-            name = "inv_babymurlocthrall",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
             id   = 5836956,
             file = 5836956,
             hash = "6d72ffc8f0abeb390c3a6dda4a9c22c7",
@@ -235821,14 +235789,6 @@ return {
             type = 1,
         },
         {
-            id   = 6123444,
-            file = 6123444,
-            hash = "6d3009cfc2d1b0cdfeaf6afed09ce93b",
-            name = "inv_mechadevilsaurmount_yellow",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
             id   = 6124221,
             file = 6124221,
             hash = "852e754147bd893ec05faa3b0acb075f",
@@ -242977,14 +242937,6 @@ return {
             file = 8101155,
             hash = "c6c9d990043dc88077a0c4896e3744be",
             name = "inv_tabard_skybornec60",
-            size = { h = 64, w = 64 },
-            type = 1,
-        },
-        {
-            id   = 8119728,
-            file = 8119728,
-            hash = "ee6b35c0f091f9904ed88fbaa5195664",
-            name = "unknown_8119728",
             size = { h = 64, w = 64 },
             type = 1,
         },

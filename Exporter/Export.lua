@@ -293,21 +293,54 @@ function ResourceUtil.GetMusicDuration(store, contentHash)
     return tonumber(string.match(data, "[^%s]+")) or 0;
 end
 
-function ResourceUtil.GetTACTKeys()
-    local url = "https://raw.githubusercontent.com/wowdev/TACTKeys/master/WoW.txt";
-    local path = string.format("%s/tactkeys.csv", CACHE_DIR);
+function ResourceUtil.GetTACTKeys(build)
+    local function ReadKeys(name, byteCount)
+        local path = ResourceUtil.GetDatabase(name, build);
+        local file = ResourceUtil.OpenFile(path, "r");
+        local keys = {};
 
-    log("Downloading encryption keys:", url);
+        assert(file:read("*l"));  -- Skip the CSV header.
 
-    if not ResourceUtil.DownloadFile(url, path) then
-        errorf("Failed to download encryption keys: %s", url);
+        for row in file:lines() do
+            local id, values = string.match(row, "^(%d+),(.+)$");
+            local bytes = {};
+
+            if not id then
+                errorf("Invalid encryption key row in %s: %s", path, row);
+            end
+
+            for value in string.gmatch(values .. ",", "(.-),") do
+                local byte = tonumber(value);
+
+                if not byte or byte < 0 or byte > 255 or byte % 1 ~= 0 then
+                    errorf("Invalid encryption key byte in %s (ID %s): %s", path, id, value);
+                end
+
+                bytes[#bytes + 1] = string.format("%02X", byte);
+            end
+
+            if #bytes ~= byteCount then
+                errorf("Invalid encryption key ID %s in %s: expected %d bytes, got %d", id, path, byteCount, #bytes);
+            end
+
+            keys[id] = table.concat(bytes);
+        end
+
+        file:close();
+        return keys;
     end
 
+    local encryptionKeys = ReadKeys("TactKey", 16);
+    local lookupKeys = ReadKeys("TactKeyLookup", 8);
     local tactkeys = {};
 
-    for row in ResourceUtil.OpenFile(path, "r"):lines() do
-        local lookup, hexkey = string.match(row, "([0-9A-Fa-f]+) ([0-9A-Fa-f]+)");
-        tactkeys[lookup] = hexkey;
+    -- Both databases share IDs; byte columns are already in key order.
+    for id, hexkey in pairs(encryptionKeys) do
+        local lookup = lookupKeys[id];
+
+        if lookup then
+            tactkeys[lookup] = hexkey;
+        end
     end
 
     return tactkeys;
@@ -379,7 +412,7 @@ function ResourceUtil.OpenCASCStore(build, locale)
         cacheFiles = true,
         zerofillEncryptedChunks = true,
         log = function(_, text) if text ~= "Ready" then log(text); end end,
-        keys = ResourceUtil.GetTACTKeys(),
+        keys = ResourceUtil.GetTACTKeys(build),
     }));
 end
 
