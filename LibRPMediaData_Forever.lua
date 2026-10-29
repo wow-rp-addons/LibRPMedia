@@ -5,8 +5,8 @@
 --
 -- This file is licensed under the terms expressed in the LICENSE file.
 --
--- Client Version: 1.60.1.70374
--- Build Config: 25822068f8fce8b21bc714e7e3210481
+-- Client Version: 1.60.1.70685
+-- Build Config: 002a8047a7c3a53de5e981936db76cce
 -- Icon count: 30550
 -- Music count: 970
 
